@@ -107,8 +107,8 @@ topnav: may1
                             <h4>Test form</h4>
                             <!-- form -->
                             <form class="button_form" method="POST">
-                                <input name="name" placeholder="Student name"><br>
-                                <input name="points" placeholder="Points"><br>
+                                <input name="test_student[name]" placeholder="Student name"><br>
+                                <input name="test_student[points]" placeholder="Points"><br>
                                 <button type="submit">Send</button>
                             </form>
 
@@ -116,9 +116,8 @@ topnav: may1
                             <script>
                                 $( ".button_form" ).submit(function( event ) {
                                     $.ajax({
-                                        url: 'https://pure-inlet-98383.herokuapp.com/test_students/create',
+                                        url: 'https://pure-inlet-98383.herokuapp.com/test_students',
                                         type : "POST",
-                                        dataType : 'json',
                                         data : JSON.parse(JSON.stringify($('.button_form').serializeArray())),
                                         success : function() {
                                             console.log("OK!");
