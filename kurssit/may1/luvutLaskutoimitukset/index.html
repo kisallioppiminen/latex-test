@@ -116,7 +116,7 @@ topnav: may1
                             <script>
                                 $( ".button_form" ).submit(function( event ) {
                                     $.ajax({
-                                        url: 'https://pure-inlet-98383.herokuapp.com/test_students',
+                                        url: 'https://pure-inlet-98383.herokuapp.com/test_students/create',
                                         type : "POST",
                                         dataType : 'json',
                                         data : JSON.parse(JSON.stringify($('.button_form').serializeArray())),
