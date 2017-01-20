@@ -99,11 +99,16 @@ topnav: may1
                         </ol>
                         </p>
 
+
+
+
                         <!-- Button div -->
                         <div class="button">
                             <!-- form -->
                             <form class="button_form" method="POST" enctype='application/json'>
-                                <input name='message' placeholder='Send something'>
+                                <input name="student_id" placeholder="Student ID"><br>
+                                <input name="problem" placeholder="Problem"><br>
+                                <input name='message' placeholder="Send a message">
                                 <button type="submit">Send</button>
                             </form>
 
@@ -111,12 +116,12 @@ topnav: may1
                             <script>
                                 $( ".button_form" ).submit(function( event ) {
                                     $.ajax({
-                                        url: 'http://localhost:3000/api',
+                                        url: 'https://powerful-beach-29272.herokuapp.com/api',
                                         type : "POST",
                                         dataType : 'json',
                                         data : JSON.parse(JSON.stringify($('.button_form').serializeArray())),
-                                        success : function(result) {
-                                            console.log(result);
+                                        success : function() {
+                                            console.log("OK!");
                                         },
                                         error: function(xhr, resp, text) {
                                             console.log(xhr, resp, text);
@@ -126,6 +131,11 @@ topnav: may1
                                 });
                             </script>
                         </div>
+
+
+
+
+
                     </div>
                 </div>
             </div>
