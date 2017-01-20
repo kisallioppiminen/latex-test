@@ -98,6 +98,34 @@ topnav: may1
                             <li> Mitä eroa b- ja c-kohtien laskuilla on? Entä mitä yhteistä niillä on?</li>
                         </ol>
                         </p>
+
+                        <!-- Button -->
+                        <div class="button">
+                            <!-- form -->
+                            <form class="button_form" method="POST" enctype='application/json'>
+                                <input name='message' value='Message'>
+                                <button type="submit">Send</button>
+                            </form>
+
+                            <!-- form script -->
+                            <script>
+                                $( ".button_form" ).submit(function( event ) {
+                                    $.ajax({
+                                        url: 'http://localhost:3000/api',
+                                        type : "POST",
+                                        dataType : 'json',
+                                        data : JSON.parse(JSON.stringify($('.button_form').serializeArray())),
+                                        success : function(result) {
+                                            console.log(result);
+                                        },
+                                        error: function(xhr, resp, text) {
+                                            console.log(xhr, resp, text);
+                                        }
+                                    });
+                                    event.preventDefault();
+                                });
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>
