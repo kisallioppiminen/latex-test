@@ -11,7 +11,8 @@ var SITE = {
             }
             
             var exCount = (index + 1);
-            var exName = "Tehtävä " + chNumber + "." + exCount + ": " + $(value).find("h1 a").text();
+            var problemNumber = chNumber + "." + exCount;
+            var exName = "Tehtävä " + problemNumber + ": " + $(value).find("h1 a").text();
 
              // add assignments to toc 
 //            $("#tehtavat-toc").append("<li><a data-toggle='collapse' href='" + $(value).find("h1 a").attr("href") + "'>" + exName + "</a></li>");
@@ -21,6 +22,18 @@ var SITE = {
 
             // relabel assignments
             $(value).find("header h1 a").text(exName);
+
+            // RegEx for finding course name from path
+            var regexp = /(?:kurssit\/)([a-z0-9]+)(?:\/)/g;
+
+            // Get path name
+            var pathname = window.location.pathname;
+
+            // Match regex
+            var course = regexp.exec(pathname);
+
+            // relabel IDs
+            $(value).attr("id", course[1] + ";" + problemNumber);
 
             // tag subassignments
             $(value).find("div h1").each(function(subIndex, value) {
