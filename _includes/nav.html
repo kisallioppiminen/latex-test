@@ -28,7 +28,7 @@
 		<li><a href="{{ site[1] | prepend: site.baseurl }}"{% if site[1] == page.url %} class="current"{% endif %} onclick="ga('send','event','navbar','click','{{site[0]}}')">{{site[0]}}</a></li>
 		{% endfor %}
 
-        <li><a href="/kurssihallinta.html">Kurssihallinta</a></li>
+        <li><a href="/kurssihallinta.html" {% if page.url == "/kurssihallinta.html" %} class="current"{% endif %}>Kurssihallinta</a></li>
     <li><a href="#" data-toggle="modal" data-target="#login-modal">Kirjautuminen</a> 
     </li>
 	</ul>
