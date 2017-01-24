@@ -20,6 +20,7 @@ var SITE = {
             // add links to assignment names
 //            $(value).attr("id", $(value).find("h1 a").attr("href").substring(1) + "-ex");
 
+
             // relabel assignments
             $(value).find("header h1 a").text(exName);
 
@@ -32,8 +33,23 @@ var SITE = {
             // Match regex
             var course = regexp.exec(pathname);
 
+            // Problem ID
+            var problemID = course[1] + ";" + problemNumber;
+
+            // Insert button group here
+            var $input = $('<div class="btn-group btn-group"><button class="problemButton btn btn-danger btn-primary" id=' + "0;" + problemID + '>:-(</button>'
+                        + '<button class="problemButton btn btn-warning btn-primary" id=' + "1;" + problemID + '>:-|</button>'
+                        + '<button class="problemButton btn btn-success btn-primary" id=' + "2;" + problemID + '>:-)</button></div>');
+            $(value).find("header").append($input);
+
+
+            // var buttonHTML = '<div class="buttons"><button type="submit" id="button1" onClick="clickButton(terve)">1</button></div>';
+
+            // $(value).find("header").append(buttonHTML);
+
+
             // relabel IDs
-            $(value).attr("id", course[1] + ";" + problemNumber);
+            $(value).attr("id", problemID);
 
             // tag subassignments
             $(value).find("div h1").each(function(subIndex, value) {
