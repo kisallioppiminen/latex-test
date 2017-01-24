@@ -16,6 +16,7 @@ navigation:
   "Materiaalit": "/"
   "Blogi": "http://blogs.helsinki.fi/kisallioppiminenlukiossa"
   "Tietoa": "/tietoa.html"
+  "Kurssihallinta": "/kurssihallinta"
 
 resources:
   css:
