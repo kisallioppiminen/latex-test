@@ -1,22 +1,27 @@
 <nav>
 
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-sm">
     <!-- <div class="loginmodal&#45;container"> -->
     <div class="modal-content">
       <div class="modal-body">
         <h3>Kirjautuminen</h3><br>
+        <p>Kirjaudu Google tunnuksilla tai omilla.</p>
+        <a href=""><img src="{{ "/img/google-login.png" | prepend: site.baseurl }}" alt="Google-nappula" /></a>
         <form>
-          <input type="text" name="user" placeholder="Username">
-          <input type="password" name="pass" placeholder="Password">
-          <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+          <div class="input-group">
+            <input class="form-control" type="text" name="user" placeholder="Käyttäjätunnus">
+            <input class="form-control" type="password" name="pass" placeholder="Salasana">
+            <input class="login loginmodal-submit btn btn-default" type="button" name="login" value="Kirjaudu">
+          </div>
         </form>
     </div>
 
-      <div class="login-help">
-        <a href="#">Rekisteröidy</a>
+    <!-- Not supported -->
+      <!-- <div class="login&#45;help"> -->
+        <!-- <a href="#">Rekisteröidy</a> -->
         <!-- &#45; <a href="#">Forgot Password</a> -->
-      </div>
+      <!-- </div> -->
     </div>
   </div>
 </div>
