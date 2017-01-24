@@ -98,6 +98,43 @@ topnav: may1
                             <li> Mitä eroa b- ja c-kohtien laskuilla on? Entä mitä yhteistä niillä on?</li>
                         </ol>
                         </p>
+
+
+
+
+                        <!-- Button div -->
+                        <div class="button">
+                            <h4>Test form</h4>
+                            <!-- form -->
+                            <form class="button_form" method="POST">
+                                <input name="test_student[name]" placeholder="Student name"><br>
+                                <input name="test_student[points]" placeholder="Points"><br>
+                                <button type="submit">Send</button>
+                            </form>
+
+                            <!-- form script -->
+                            <script>
+                                $( ".button_form" ).submit(function( event ) {
+                                    $.ajax({
+                                        url: 'https://pure-inlet-98383.herokuapp.com/test_students',
+                                        type : "POST",
+                                        data : JSON.parse(JSON.stringify($('.button_form').serializeArray())),
+                                        success : function() {
+                                            console.log("OK!");
+                                        },
+                                        error: function(xhr, resp, text) {
+                                            console.log(xhr, resp, text);
+                                        }
+                                    });
+                                    event.preventDefault();
+                                });
+                            </script>
+                        </div>
+
+
+
+
+
                     </div>
                 </div>
             </div>
