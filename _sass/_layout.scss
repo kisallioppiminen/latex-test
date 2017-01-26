@@ -98,6 +98,14 @@ main.has-atop article {
 	clear: both;
 }
 
+/**
+ * Problem buttons style
+ */
+
+.problemButtonWrap {
+	text-align: center;
+}
+
 
 /**
  * MAIN CONTENT
@@ -388,5 +396,7 @@ article ul {
 	main.has-atop article {
     		background-color: white;
 	}
+
+
 	
 }
