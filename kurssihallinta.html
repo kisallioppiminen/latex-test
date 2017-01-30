@@ -1,5 +1,6 @@
 ---
 title: Kurssihallinta
+layout: default
 ---
 <html>
 <head>
@@ -19,62 +20,5 @@ title: Kurssihallinta
     </header>
 
     <table id="table" class="table"></table>
-
-    <script>
-
-        var coursesJSON;
-
-        coursesJSON = {
-            maa1: {
-                john: {
-                    teht1: "green",
-                    teht2: "red",
-                    teht3: "grey",
-                    teht4: "grey",
-                    teht5: "grey",
-                    teht6: "green",
-                    teht7: "red",
-                    teht8: "grey",
-                    teht9: "grey",
-                    teht10: "grey"
-                    },
-                pekka: {
-                    teht1: "red",
-                    teht2: "red",
-                    teht3: "grey",
-                    teht4: "grey",
-                    teht5: "grey",
-                    teht6: "green",
-                    teht7: "red",
-                    teht8: "grey",
-                    teht9: "grey",
-                    teht10: "grey"
-                }
-            }
-
-        };
-
-
-        var courseName = "maa1";
-        var rows = '';
-        rows += '<tr class="success"><th></th>';
-        Object.keys(coursesJSON[courseName]["john"]).forEach(function(exerciseName) {
-            rows += '<th>' + exerciseName + '</th>';
-        });
-
-        rows += '</tr>';
-        Object.keys(coursesJSON[courseName]).forEach(function(studentName) {
-            rows += '<tr id = "row' + studentName + '">' +
-                    '<td>' + studentName + '</td>';
-                    Object.entries(coursesJSON[courseName][studentName]).forEach(
-                            ([key, value]) => rows += '<td>' + value + '</td>'
-                    );
-                    '</tr>';
-        });
-
-        document.getElementById( 'courseHeader1').innerHTML = courseName;
-        document.getElementById( 'table' ).innerHTML = rows;
-
-    </script>
 
 </section>
