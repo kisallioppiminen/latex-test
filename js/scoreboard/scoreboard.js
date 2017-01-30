@@ -24,7 +24,7 @@ $( document ).ready(function() {
         rows += '<tr id = "row' + studentName + '">' +
             '<td>' + studentName + '</td>';
         Object.entries(coursesJSON[courseName][studentName]).forEach(
-            ([key, value]) => rows += '<td>' + value + '</td>'
+            ([key, value]) => rows += '<td style="background-color:' + value + '">' + value + '</td>'
         );
         '</tr>';
     });
