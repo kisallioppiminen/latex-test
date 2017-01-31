@@ -24,7 +24,7 @@ $( document ).ready(function() {
         });
 
         document.getElementById( 'courseHeader').innerHTML = courseName;
-        document.getElementById( 'table' ).innerHTML = rows;
+        document.getElementById( 'courseTable' ).innerHTML = rows;
     }
 
     // GET happens here
