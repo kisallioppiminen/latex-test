@@ -4,7 +4,7 @@ $( document ).ready(function() {
     function createTable(coursesJSON) {
         var courseName = "maa1";
         var rows = '';
-        rows += '<tr class="success"><th></th>';
+        rows += '<tr><th></th>';
         Object.keys(coursesJSON[courseName]["john"]).forEach(function(exerciseName) {
             rows += '<th>' + exerciseName + '</th>';
         });
@@ -23,7 +23,7 @@ $( document ).ready(function() {
             '</tr>';
         });
 
-        document.getElementById( 'courseHeader1').innerHTML = courseName;
+        document.getElementById( 'courseHeader').innerHTML = courseName;
         document.getElementById( 'table' ).innerHTML = rows;
     }
 
