@@ -13,7 +13,28 @@ $( document ).ready(function() {
     $('.problemButton').click(function() {
         console.log("Button " + this.id + " pressed.");
         /* Send POST request here */
+        var stats = ["red", "yellow", "green"];
 
+        var checkmark = {
+            user_id: 1,
+            html_id: this.id.substr(2, this.id.length - 1),
+            status: stats[this.id.charAt(0)],
+            coursekey: "coursekey1"
+        };
+
+        $.ajax({
+            url: 'https://pure-inlet-98383.herokuapp.com/checkmarks',
+            type : "POST",
+            dataType : 'json',
+            contentType: "application/json; charset=utf-8",
+            data : JSON.stringify(checkmark),
+            success : function() {
+                console.log("OK!");
+            },
+            error: function(xhr, resp, text) {
+                console.log(xhr, resp, text);
+            }
+        });
 
         /* Change button title text */
         var text_id = 'h3[id="textbar_' + this.id.substr(2,this.id.length - 1) + '"]';
