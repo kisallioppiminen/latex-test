@@ -17,7 +17,7 @@ $( document ).ready(function() {
             var problems = coursesJSON[courseName][studentName];
             for (var key in problems) {
                 var value = problems[key];
-                rows += '<td style="background-color:' + value + '">' + value + '</td>'
+                rows += '<td style="font-size:150%;font-weight:bold;color:' + value + ';">&#10004;</td>'
             }
 
             '</tr>';
