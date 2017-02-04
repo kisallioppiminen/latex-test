@@ -1,6 +1,7 @@
 ---
 title: Kurssihallinta
 layout: default
+layout: material
 ---
 <html>
 
@@ -10,6 +11,13 @@ layout: default
         text-align: center;
     }
     tr:hover {background-color: #f5f5f5}
+</style>
+
+<style>
+    p a,
+    ul a {
+        border-bottom: 1px dotted #aaa;
+    }
 </style>
 
 <section class="panel">
@@ -23,6 +31,32 @@ layout: default
     <div id="checkmarkTable" class="collapse" style="overflow-x:auto;">
         <table id="courseTable" class="table" ></table>
     </div>
+</section>
+
+<!-- Hard coded content - to be refactored later -->
+
+<section class="panel">
+    <header>
+        <h1>
+            <a id="courseHeaderDummy1" data-toggle="collapse" class="collapsed" data-target="#checkmarkTable">MAA2 - Polynomifunktiot ja -yhtälöt - jakso 2/2016</a>
+        </h1>
+    </header>
+</section>
+
+<section class="panel">
+    <header>
+        <h1>
+            <a id="courseHeaderDummy2" data-toggle="collapse" class="collapsed" data-target="#checkmarkTable">MAA3 - Geometria - 01.09.16-31.10.16</a>
+        </h1>
+    </header>
+</section>
+
+<section class="panel">
+    <header>
+        <h1>
+            <a id="courseHeaderDummy3" data-toggle="collapse" class="collapsed" data-target="#checkmarkTable">MAY4 - Vektorit - 2016:1</a>
+        </h1>
+    </header>
 </section>
 
 <!-- jQuery and scoreboard.js -->
