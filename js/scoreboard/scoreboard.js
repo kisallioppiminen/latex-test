@@ -17,7 +17,11 @@ $( document ).ready(function() {
             var problems = coursesJSON[courseName][studentName];
             for (var key in problems) {
                 var value = problems[key];
-                rows += '<td style="font-size:150%;font-weight:bold;color:' + value + ';">&#10004;</td>'
+                if (value == "grey") {
+                    rows += '<td style="font-size:150%;font-weight:bold;color:' + value + ';">&#10007;</td>'
+                } else {
+                    rows += '<td style="font-size:150%;font-weight:bold;color:' + value + ';">&#10004;</td>'
+                }
             }
 
             '</tr>';
