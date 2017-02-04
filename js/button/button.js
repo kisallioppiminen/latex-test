@@ -2,10 +2,25 @@ function changeProblemHeaderColor(id) {
     var problemID = id.substr(2, id.length - 1);
 
     // red, yellow, green
-    var colors = ["#d9534f", "#f0ad4e", "#5cb85c"];
+    var colors = ["rgb(217, 83, 79)", "rgb(240, 173, 78)", "rgb(92, 184, 92)"];
+    var color = colors[id.charAt(0)];
 
     var header_id = 'div[id="' + problemID + '"]';
-    $(header_id + " header ").css({"background" : colors[id.charAt(0)]});
+
+    if ( $(header_id + " header ").css("background").includes(color) ) {
+        // Fallback to default
+        $(header_id + " header ").css({"background" : "background: -webkit-linear-gradient(top, #F9F8F8, #F1F1F1);" +
+        "background: -moz-linear-gradient(top, #F9F8F8, #F1F1F1);" +
+        "background: -ms-linear-gradient(top, #F9F8F8, #F1F1F1);" +
+        "background: -o-linear-gradient(top, #F9F8F8, #F1F1F1);"});
+        console.log("Change text");
+        var text_id = 'h3[id="textbar_' + id.substr(2,id.length - 1) + '"]';
+        $(text_id).html("Miten tehtävä meni?");
+    } else {
+        $(header_id + " header ").css({"background" : color});
+    }
+
+
 }
 
 $( document ).ready(function() {
