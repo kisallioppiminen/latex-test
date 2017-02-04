@@ -23,8 +23,54 @@ function changeProblemHeaderColor(id) {
 
 }
 
+function getColorID(status) {
+    var stats = ["red", "yellow", "green"];
+    for (var i = 0; i < stats.length; i++) {
+        if (stats[i] == status) {
+            return i;
+        }
+    }
+}
+
+function colorCheckmarks(jsonData) {
+
+    for (var i in jsonData) {
+        var checkmark = jsonData[i];
+        var colorID = getColorID(checkmark.status);
+        changeProblemHeaderColor(colorID + ";" + checkmark.html_id);
+    }
+
+}
+
+function getCheckmarks() {
+    var postFrame = {
+        user_id: 1,
+        coursekey: "testikurssiavain"
+    }
+
+    var checkmarks;
+
+    $.ajax({
+        url: 'https://pure-inlet-98383.herokuapp.com/checkmarks/mycheckmarks',
+        type: "POST",
+        dataType: 'json',
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(postFrame),
+        success: function(data) {
+            colorCheckmarks(data);
+        },
+        error: function(xhr, resp, text) {
+            console.log(xhr, resp, text);
+        }
+    });
+}
+
 $( document ).ready(function() {
     console.log( "Button.js ready" );
+
+    // Get checkmarks
+    getCheckmarks();
+
     $('.problemButton').click(function() {
         console.log("Button " + this.id + " pressed.");
         /* Send POST request here */
