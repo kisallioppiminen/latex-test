@@ -34,7 +34,7 @@ $( document ).ready(function() {
             user_id: 1,
             html_id: this.id.substr(2, this.id.length - 1),
             status: stats[this.id.charAt(0)],
-            coursekey: "coursekey1"
+            coursekey: "testikurssiavain"
         };
 
         $.ajax({
@@ -43,8 +43,9 @@ $( document ).ready(function() {
             dataType : 'json',
             contentType: "application/json; charset=utf-8",
             data : JSON.stringify(checkmark),
-            success : function() {
+            success : function(data) {
                 console.log("OK!");
+                console.log(data);
             },
             error: function(xhr, resp, text) {
                 console.log(xhr, resp, text);
