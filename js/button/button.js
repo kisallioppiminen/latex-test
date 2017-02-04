@@ -37,7 +37,10 @@ function colorCheckmarks(jsonData) {
     for (var i in jsonData) {
         var checkmark = jsonData[i];
         var colorID = getColorID(checkmark.status);
-        changeProblemHeaderColor(colorID + ";" + checkmark.html_id);
+        // If problem doesn't exist on the page, don't attempt to change color
+        if ($('div[id="' + checkmark.html_id + '"]').length) {
+            changeProblemHeaderColor(colorID + ";" + checkmark.html_id);
+        }
     }
 
 }
@@ -57,6 +60,7 @@ function getCheckmarks() {
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(postFrame),
         success: function(data) {
+            console.log(data);
             colorCheckmarks(data);
         },
         error: function(xhr, resp, text) {
