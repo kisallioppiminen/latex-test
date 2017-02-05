@@ -34,36 +34,29 @@ function getColorID(status) {
 
 function colorCheckmarks(jsonData) {
 
-    for (var i in jsonData) {
-        var checkmark = jsonData[i];
-        var colorID = getColorID(checkmark.status);
-        // If problem doesn't exist on the page, don't attempt to change color
-        if ($('div[id="' + checkmark.html_id + '"]').length) {
-            changeProblemHeaderColor(colorID + ";" + checkmark.html_id);
+    for (var problem in jsonData) {
+        if (jsonData.hasOwnProperty(problem)) {
+            if ($('div[id="' + problem + '"]').length) {
+                changeProblemHeaderColor(getColorID(jsonData[problem]) + ";" + problem);
+            }
         }
     }
 
 }
 
 function getCheckmarks() {
-    var postFrame = {
-        user_id: 1,
-        coursekey: "testikurssiavain"
-    }
-
-    var checkmarks;
+    var student_id = 1;
+    var course_id = 1;
+    var restfulUrl = `https://pure-inlet-98383.herokuapp.com/students/${student_id}/courses/${course_id}/checkmarks`;
 
     $.ajax({
-        url: 'https://pure-inlet-98383.herokuapp.com/checkmarks/mycheckmarks',
-        type: "POST",
+        url: restfulUrl,
         dataType: 'json',
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify(postFrame),
         success: function(data) {
-            console.log(data);
             colorCheckmarks(data);
         },
         error: function(xhr, resp, text) {
+            console.log("Error");
             console.log(xhr, resp, text);
         }
     });
@@ -76,6 +69,7 @@ $( document ).ready(function() {
     getCheckmarks();
 
     $('.problemButton').click(function() {
+        var problemId = this.id
         console.log("Button " + this.id + " pressed.");
         /* Send POST request here */
         var stats = ["red", "yellow", "green"];
@@ -95,18 +89,17 @@ $( document ).ready(function() {
             data : JSON.stringify(checkmark),
             success : function(data) {
                 console.log("OK!");
-                console.log(data);
+
+                /* Change button title text */
+                var text_id = 'h3[id="textbar_' + problemId.substr(2,problemId.length - 1) + '"]';
+                $(text_id).html("Vastauksesi on lähetetty!");
+
+                /* Change problem header color */
+                changeProblemHeaderColor(problemId);
             },
             error: function(xhr, resp, text) {
                 console.log(xhr, resp, text);
             }
         });
-
-        /* Change button title text */
-        var text_id = 'h3[id="textbar_' + this.id.substr(2,this.id.length - 1) + '"]';
-        $(text_id).html("Vastauksesi on lähetetty!");
-
-        /* Change problem header color */
-        changeProblemHeaderColor(this.id);
     });
 });
