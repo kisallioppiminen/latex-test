@@ -14,19 +14,29 @@
         display: table; }
     .panel-body:after, .tehtava > div:after {
         clear: both; }
-    
+
     .tehtava > header, .panel > header {
         padding: 10px 15px;
         border-bottom: 1px solid transparent;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px; }
+
     .panel-heading > .dropdown .dropdown-toggle, .tehtava > header > .dropdown .dropdown-toggle {
         color: inherit; }
+
     .tehtava > header > h1, .panel > header > h1 {
         margin-top: 0;
         margin-bottom: 0;
         font-size: 16px;
-        color: inherit; }
+        color: inherit;
+    }
+
+    .panel-courselisting > header > h1 {
+        margin-top: 15px;
+        display: inline-block;
+        color: #00747a;
+    }
+
     .panel-title > a, .tehtava > header > h1 > a {
         color: inherit; }
     .tehtava > .list-group, .panel > .list-group {
