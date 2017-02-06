@@ -47,6 +47,7 @@ function colorCheckmarks(jsonData) {
 function getCheckmarks() {
     var student_id = 1;
     var course_id = 1;
+    // ES6
     var restfulUrl = `https://pure-inlet-98383.herokuapp.com/students/${student_id}/courses/${course_id}/checkmarks`;
 
     $.ajax({
@@ -62,6 +63,11 @@ function getCheckmarks() {
     });
 }
 
+function changeButtonTitleText(id, message) {
+    var text_id = 'h3[id="textbar_' + id + '"]';
+    $(text_id).html(message);
+}
+
 $( document ).ready(function() {
     console.log( "Button.js ready" );
 
@@ -69,7 +75,7 @@ $( document ).ready(function() {
     getCheckmarks();
 
     $('.problemButton').click(function() {
-        var problemId = this.id
+        var problemId = this.id;
         console.log("Button " + this.id + " pressed.");
         /* Send POST request here */
         var stats = ["red", "yellow", "green"];
@@ -87,18 +93,14 @@ $( document ).ready(function() {
             dataType : 'json',
             contentType: "application/json; charset=utf-8",
             data : JSON.stringify(checkmark),
-            success : function(data) {
+            success : function() {
                 console.log("OK!");
-
-                /* Change button title text */
-                var text_id = 'h3[id="textbar_' + problemId.substr(2,problemId.length - 1) + '"]';
-                $(text_id).html("Vastauksesi on lähetetty!");
-
-                /* Change problem header color */
+                changeButtonTitleText(problemId.substr(2,problemId.length - 1), "Vastauksesi on lähetetty!");
                 changeProblemHeaderColor(problemId);
             },
             error: function(xhr, resp, text) {
                 console.log(xhr, resp, text);
+                changeButtonTitleText(problemId.substr(2,problemId.length - 1), "Virhe! Vastausta ei lähetetty!");
             }
         });
     });

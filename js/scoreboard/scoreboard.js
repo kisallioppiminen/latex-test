@@ -1,26 +1,43 @@
 $( document ).ready(function() {
 
+    function getColor(color) {
+        switch (color) {
+            case "red":
+                return 'rgb(217, 83, 79)'; break;
+            case "yellow":
+                return 'rgb(240, 173, 78)'; break;
+            case "green":
+                return 'rgb(92, 184, 92)'; break;
+        }
+    }
+
+    function getProblemName(id) {
+        var array = id.split(";");
+        return array[1];
+    }
+
     // Creates tables
     function createTable(coursesJSON) {
         var courseName = "maa1";
         var rows = '';
-        rows += '<tr><th></th>';
-        Object.keys(coursesJSON[courseName]["john"]).forEach(function(exerciseName) {
-            rows += '<th>' + exerciseName + '</th>';
-        });
+        rows += '<tr><th>Oppilas</th>';
 
+        for (var problem in coursesJSON[Object.keys(coursesJSON)[0]]) {
+            rows += '<th>' + getProblemName(problem) + '</th>';
+        }
         rows += '</tr>';
-        Object.keys(coursesJSON[courseName]).forEach(function(studentName) {
+
+        Object.keys(coursesJSON).forEach(function(studentName) {
             rows += '<tr id = "row' + studentName + '">' +
                 '<td>' + studentName + '</td>';
 
-            var problems = coursesJSON[courseName][studentName];
+            var problems = coursesJSON[studentName];
             for (var key in problems) {
                 var value = problems[key];
                 if (value == "grey") {
                     rows += '<td style="font-size:150%;font-weight:bold;color:' + value + ';">&#10007;</td>'
                 } else {
-                    rows += '<td style="font-size:150%;font-weight:bold;color:' + value + ';">&#10004;</td>'
+                    rows += '<td style="font-size:150%;font-weight:bold;color:' + getColor(value) + ';">&#10004;</td>'
                 }
             }
 
@@ -33,7 +50,7 @@ $( document ).ready(function() {
 
     // GET happens here
     $.ajax({
-        url: 'https://pure-inlet-98383.herokuapp.com/course/1/checkmarks',
+        url: 'https://pure-inlet-98383.herokuapp.com/courses/1/checkmarks',
         dataType: 'json',
         success: function(data) {
             createTable(data);
