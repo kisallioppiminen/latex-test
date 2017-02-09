@@ -10,7 +10,86 @@ layout: default
         text-align: center;
     }
     tr:hover {background-color: #f5f5f5}
+
+    .flatpickr-calendar.open {
+        z-index: 10000;
+    }
 </style>
+
+<!-- Flatpickr sources -->
+<link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+<script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/fi.js"></script>
+
+
+<div class="container">
+    <div class="text-center">
+        <button type="button" class="btn btn-info btn-lg btn-success" data-toggle="modal" data-target="#newCourseModal">Luo uusi kurssi</button>
+    </div>
+
+    <div class="modal fade" id="newCourseModal" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Luo uusi kurssi</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" data-toggle="validator">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="courseSelect">Valitse kurssi</label>
+                            <div class="col-md-4">
+                                <select id="courseSelect" name="courseSelect" class="form-control">
+                                    <option value="may1">MAY1</option>
+                                    <option value="maa2">MAA2</option>
+                                    <option value="maa3">MAA3</option>
+                                    <option value="maa4">MAA4</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="coursekey">Kurssiavain</label>
+                            <div class="col-md-4">
+                                <input id="coursekey" name="coursekey" type="text" placeholder="Kirjoita kurssiavain" class="form-control input-md" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="startDate">Kurssi alkaa</label>
+                            <div class="col-md-4">
+                                <input id="startDate" name="startDate" class="flatpickr form-control input-md" type=text required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="endDate">Kurssi loppuu</label>
+                            <div class="col-md-4">
+                                <input id="endDate" name="endDate" class="flatpickr form-control input-md" type=text required>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Luo kurssi</button>
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Peruuta</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<hr>
+
+<h1>Omat kurssit</h1>
 
 <section class="panel panel-courselisting">
     <header>
@@ -63,3 +142,9 @@ layout: default
 <!-- jQuery and scoreboard.js -->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="{{base}}/js/scoreboard/scoreboard.js"></script>
+
+<script>
+    flatpickr(".flatpickr", {
+        "locale": "fi"
+    });
+</script>
