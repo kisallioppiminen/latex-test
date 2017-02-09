@@ -24,17 +24,8 @@ var SITE = {
             // relabel assignments
             $(value).find("header h1 a").text(exName);
 
-            // RegEx for finding course name from path
-            var regexp = /(?:kurssit\/)([a-z0-9]+)(?:\/)/g;
-
-            // Get path name
-            var pathname = window.location.pathname;
-
-            // Match regex
-            var course = regexp.exec(pathname);
-
             // Problem ID
-            var problemID = course[1] + ";" + problemNumber;
+            var problemID = this.id;
 
             // Insert button group here
             var $input = $('<div class="problemButtonWrap"><h3 id="textbar_' + problemID + '">Miten tehtävä meni?</h3><div class="btn-group btn-group"><button data-toggle="tooltip" title="En osannut tehtävää. Tarvitsen apua." class="problemButton btn btn-danger btn-primary" id=' + "0;" + problemID + '><img class="face" src="/img/faces/sad.svg"></button>'
@@ -49,7 +40,7 @@ var SITE = {
 
 
             // relabel IDs
-            $(value).attr("id", problemID);
+            // $(value).attr("id", problemID);
 
             // tag subassignments
             $(value).find("div h1").each(function(subIndex, value) {
