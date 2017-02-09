@@ -1,12 +1,13 @@
 function createCoursePost(exercises) {
     var postForm = {
-        course_id: data.courseSelect,
+        html_id: data.courseSelect,
         coursekey: data.coursekey,
-        start_date: data.startDate,
-        end_date: data.endDate,
-        exercises: exercises
+        name: data.courseName,
+        exercises: exercises,
+        start: data.startDate,
+        end: data.endDate
     };
-    console.log(JSON.stringify(postForm));
+    console.log(postForm);
 }
 
 function extractExercises(pageData) {
