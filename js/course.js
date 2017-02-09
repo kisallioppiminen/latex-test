@@ -7,14 +7,13 @@ function createCoursePost(exercises) {
         exercises: exercises
     };
     console.log(JSON.stringify(postForm));
-    console.log(postForm);
 }
 
 function extractExercises(pageData) {
     regex = /(?:id="chapterNumber" value="([0-9])")|(?:<div\s+class="tehtava"\s+id="([a-zA-Z0-9ÅåÄäÖö.;:_-]+)">)/g;
     regex_array = regex.exec(pageData);
 
-    var exercises = [];
+    var exercises = {};
     var chapterNumber = 0;
     var exerciseCounter = 1;
 
