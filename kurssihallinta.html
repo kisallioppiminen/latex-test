@@ -23,7 +23,6 @@ layout: default
 
 <!-- Flatpickr sources -->
 <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/2.3.7/themes/airbnb.css" />
 <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
 <script src="https://npmcdn.com/flatpickr/dist/l10n/fi.js"></script>
 
@@ -42,17 +41,17 @@ layout: default
                     <h4 class="modal-title">Luo uusi kurssi</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal" data-toggle="validator">
+                    <form class="form-horizontal" data-toggle="validator" role="form">
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="courseName">Kurssin nimi</label>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <input id="courseName" name="courseName" type="text" placeholder="Kurssin nimi" class="form-control input-md" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="courseSelect">Kurssimateriaali</label>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <select id="courseSelect" name="courseSelect" class="form-control">
                                     <option value="may1">MAY1</option>
                                     <option value="maa2">MAA2</option>
@@ -64,27 +63,31 @@ layout: default
 
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="coursekey">Kurssiavain</label>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <input id="coursekey" name="coursekey" type="text" placeholder="Kurssiavain" class="form-control input-md" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="startDate">Kurssi alkaa</label>
-                            <div class="col-md-4">
-                                <input id="startDate" name="startDate" class="flatpickr form-control input-md" type=text required>
+                            <div class="col-md-6">
+                                <input id="startDate" name="startDate" type="text" class="flatpickr form-control input-md date" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="endDate">Kurssi loppuu</label>
-                            <div class="col-md-4">
-                                <input id="endDate" name="endDate" class="flatpickr form-control input-md" type=text required>
+                            <div class="col-md-6">
+                                <input id="endDate" name="endDate" class="flatpickr form-control input-md" type="text" required>
                             </div>
                         </div>
 
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Luo kurssi</button>
+                            <button id="submitCourse" type="submit" class="btn btn-primary" disabled="disabled">Luo kurssi</button>
+                        </div>
+
+                        <div class="text-center validationMessage">
+                            <p>Täytä kaikki kentät</p>
                         </div>
 
                     </form>
@@ -157,6 +160,9 @@ layout: default
 
 <script>
     flatpickr(".flatpickr", {
-        "locale": "fi"
+        "locale": "fi",
+        defaultDate: "a",
+        altInput: true,
+        dateFormat: "F j, Y"
     });
 </script>

@@ -4,10 +4,12 @@ function createCoursePost(exercises) {
         coursekey: data.coursekey,
         name: data.courseName,
         exercises: exercises,
-        start: data.startDate,
-        end: data.endDate
+        startdate: data.startDate,
+        enddate: data.endDate
     };
     console.log(postForm);
+
+    /* Send POST here */
 }
 
 function extractExercises(pageData) {
@@ -54,6 +56,21 @@ $( document ).ready(function() {
         }, {});
         getCourseExercises(data.courseSelect);
         e.preventDefault();
+    });
+
+    $('input').on('input',function(e){
+        var b = true;
+        if ($("#courseName").val().length == 0) { b = false };
+        if ($("#coursekey").val().length == 0) { b = false };
+        if ($("#startDate").val().length == 0) { b = false };
+        if ($("#endDate").val().length == 0) { b = false };
+        if (b) {
+            $("#submitCourse").prop("disabled", false);
+            $(".validationMessage").hide();
+        } else {
+            $("#submitCourse").prop("disabled", true);
+            $(".validationMessage").show();
+        }
     });
 
 });
