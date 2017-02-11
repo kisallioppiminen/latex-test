@@ -1,3 +1,11 @@
+// Flatpickr options
+flatpickr(".flatpickr", {
+    "locale": "fi",
+    defaultDate: "a",
+    altInput: true,
+    altFormat: "F j, Y"
+});
+
 function createCoursePost(exercises) {
     var postForm = {
         html_id: data.courseSelect,
@@ -7,9 +15,20 @@ function createCoursePost(exercises) {
         startdate: data.startDate,
         enddate: data.endDate
     };
-    console.log(postForm);
 
-    /* Send POST here */
+    $.ajax({
+        url: 'https://pure-inlet-98383.herokuapp.com/courses/newcourse',
+        type : "POST",
+        dataType : 'json',
+        contentType: "application/json; charset=utf-8",
+        data : JSON.stringify(postForm),
+        success : function(data) {
+            console.log(data);
+        },
+        error: function(xhr, resp, text) {
+            console.log(xhr, resp, text);
+        }
+    });
 }
 
 function extractExercises(pageData) {

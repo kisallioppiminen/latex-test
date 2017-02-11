@@ -15,10 +15,14 @@ layout: default
         z-index: 10000;
     }
 
-    .newCourseButtonContainer {
-        float: right;
-        margin-right: 6px;
+    .container {
+        padding-right: 0;
     }
+
+    .newCourseButtonContainer {
+        text-align: right;
+    }
+
 </style>
 
 <!-- Flatpickr sources -->
@@ -27,9 +31,9 @@ layout: default
 <script src="https://npmcdn.com/flatpickr/dist/l10n/fi.js"></script>
 
 
-<div class="container">
+<div class="container col-sm-12">
     <div class="newCourseButtonContainer">
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newCourseModal">Luo uusi kurssi</button>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newCourseModal">Uusi kurssi</button>
     </div>
 
     <div class="modal fade" id="newCourseModal" role="dialog">
@@ -157,12 +161,3 @@ layout: default
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="{{base}}/js/scoreboard/scoreboard.js"></script>
 <script src="{{base}}/js/course.js"></script>
-
-<script>
-    flatpickr(".flatpickr", {
-        "locale": "fi",
-        defaultDate: "a",
-        altInput: true,
-        altFormat: "F j, Y"
-    });
-</script>
