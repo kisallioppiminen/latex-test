@@ -34,7 +34,8 @@
 		{% endfor %}
 
         <!-- Tässä toimii highlight? <li><a href="/kurssihallinta.html" {% if page.url == "/kurssihallinta.html" %} class="current"{% endif %}>Kurssihallinta</a></li> -->
-    <li><a href="#" data-toggle="modal" data-target="#login-modal">Kirjautuminen</a> 
+    <li><a href="#" id="kirjautuminen" data-toggle="modal" data-target="#login-modal">Kirjautuminen</a> 
+    <li><a rel="nofollow" data-method="DELETE" href="http://localhost:3000/users/sign_out" id="logout">Logout</a> 
     </li>
 	</ul>
 </nav>
