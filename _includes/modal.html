@@ -1,0 +1,25 @@
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-sm">
+    <!-- <div class="loginmodal&#45;container"> -->
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3>Kirjautuminen</h3><br>
+        <p>Kirjaudu Google tunnuksilla tai omilla.</p>
+        <a href="https://pure-inlet-98383.herokuapp.com/users/auth/google_oauth2"><img src="{{ "/img/google-login.png" | prepend: site.baseurl }}" alt="Google-nappula" /></a>
+        <form id="new_user" action="https://pure-inlet-98383.herokuapp.com/users/sign_in" accept-charset="UTF8" method="post">
+          <div class="input-group">
+            <input id="user_email" value="" class="form-control" type="email" name="user[email]" placeholder="Käyttäjätunnus">
+            <input id="user_password" value="" class="form-control" type="password" name="user[password]" placeholder="Salasana">
+            <input class="login loginmodal-submit btn btn-default" type="submit" name="commit" value="Kirjaudu">
+          </div>
+        </form>
+    </div>
+
+    <!-- Not supported -->
+      <!-- <div class="login&#45;help"> -->
+        <!-- <a href="#">Rekisteröidy</a> -->
+        <!-- &#45; <a href="#">Forgot Password</a> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
