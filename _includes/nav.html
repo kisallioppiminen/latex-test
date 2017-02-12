@@ -7,8 +7,7 @@
 		{% endfor %}
 
         <!-- Tässä toimii highlight? <li><a href="/kurssihallinta.html" {% if page.url == "/kurssihallinta.html" %} class="current"{% endif %}>Kurssihallinta</a></li> -->
-    <li><a href="#" id="kirjautuminen" data-toggle="modal" data-target="#login-modal">Kirjautuminen</a> 
-    <li><a rel="nofollow" data-method="GET" href="https://pure-inlet-98383.herokuapp.com/users/sign_out" id="logout">Logout</a> 
-    </li>
+    <li><a href="#" id="kirjautuminen" data-toggle="modal" data-target="#login-modal">Kirjautuminen</a></li>
+    <li><a rel="nofollow" data-method="GET" href="{{ site.backend | append: 'users/sign_out' }}" id="logout">Logout</a></li>
 	</ul>
 </nav>
