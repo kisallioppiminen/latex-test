@@ -7,12 +7,12 @@
       <div class="modal-body">
         <h3>Kirjautuminen</h3><br>
         <p>Kirjaudu Google tunnuksilla tai omilla.</p>
-        <a href="http://localhost:3000/users/auth/google_oauth2"><img src="{{ "/img/google-login.png" | prepend: site.baseurl }}" alt="Google-nappula" /></a>
-        <form>
+        <a href="https://pure-inlet-98383.herokuapp.com/users/auth/google_oauth2"><img src="{{ "/img/google-login.png" | prepend: site.baseurl }}" alt="Google-nappula" /></a>
+        <form id="new_user" action="https://pure-inlet-98383.herokuapp.com/users/sign_in" accept-charset="UTF8" method="post">
           <div class="input-group">
-            <input class="form-control" type="text" name="user" placeholder="Käyttäjätunnus">
-            <input class="form-control" type="password" name="pass" placeholder="Salasana">
-            <input class="login loginmodal-submit btn btn-default" type="button" name="login" value="Kirjaudu">
+            <input id="user_email" value="" class="form-control" type="email" name="user[email]" placeholder="Käyttäjätunnus">
+            <input id="user_password" value="" class="form-control" type="password" name="user[password]" placeholder="Salasana">
+            <input class="login loginmodal-submit btn btn-default" type="submit" name="commit" value="Kirjaudu">
           </div>
         </form>
     </div>
@@ -35,7 +35,7 @@
 
         <!-- Tässä toimii highlight? <li><a href="/kurssihallinta.html" {% if page.url == "/kurssihallinta.html" %} class="current"{% endif %}>Kurssihallinta</a></li> -->
     <li><a href="#" id="kirjautuminen" data-toggle="modal" data-target="#login-modal">Kirjautuminen</a> 
-    <li><a rel="nofollow" data-method="DELETE" href="http://localhost:3000/users/sign_out" id="logout">Logout</a> 
+    <li><a rel="nofollow" data-method="GET" href="https://pure-inlet-98383.herokuapp.com/users/sign_out" id="logout">Logout</a> 
     </li>
 	</ul>
 </nav>
