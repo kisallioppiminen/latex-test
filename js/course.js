@@ -19,7 +19,7 @@ function createCoursePost(exercises) {
     console.log(postForm);
     /*
     $.ajax({
-        url: 'https://pure-inlet-98383.herokuapp.com/courses/newcourse',
+        url: BACKEND_BASE_URL + 'courses/newcourse',
         type : "POST",
         dataType : 'json',
         contentType: "application/json; charset=utf-8",
