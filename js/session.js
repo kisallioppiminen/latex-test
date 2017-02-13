@@ -12,13 +12,17 @@ req.onreadystatechange = function() {
     }
 
     session_user = JSON.parse(req.responseText);
-    const KIRJAUTUMINEN = document.getElementById("kirjautuminen");
-    const LOGOUT = document.getElementById("logout");
+    var LOGGEDIN = document.getElementsByClassName("logged-in");
+    var LOGGEDOUT = document.getElementsByClassName("logged-out");
 
     if (session_user.has_sign_in == null) {
-      KIRJAUTUMINEN.style.display = "initial"
+			for(i=0; i<LOGGEDOUT.length; i++) {
+				LOGGEDOUT[i].style.display = 'initial';
+			}
     } else {
-      LOGOUT.style.display = "initial"
+			for(i=0; i<LOGGEDIN.length; i++) {
+				LOGGEDIN[i].style.display = 'initial';
+			}
     }
     console.log(session_user.has_sign_in) // for debugging
 }
