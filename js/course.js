@@ -16,6 +16,8 @@ function createCoursePost(exercises) {
         enddate: data.endDate
     };
 
+    console.log(postForm);
+    /*
     $.ajax({
         url: 'https://pure-inlet-98383.herokuapp.com/courses/newcourse',
         type : "POST",
@@ -29,11 +31,12 @@ function createCoursePost(exercises) {
             console.log(xhr, resp, text);
         }
     });
+    */
 }
 
 function extractExercises(pageData) {
-    regex = /(?:id="chapterNumber" value="([0-9])")|(?:<div\s+class="tehtava"\s+id="([a-zA-Z0-9ÅåÄäÖö.;:_-]+)">)/g;
-    regex_array = regex.exec(pageData);
+    var regex = /(?:id="chapterNumber" value="([0-9])")|(?:<div\s+class="tehtava"\s+id="([a-zA-Z0-9ÅåÄäÖö.;:_-]+)">)/g;
+    var regex_array = regex.exec(pageData);
 
     var exercises = {};
     var chapterNumber = 0;
