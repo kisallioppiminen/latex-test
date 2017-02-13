@@ -1,31 +1,4 @@
 <nav>
-
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-  <div class="modal-dialog modal-sm">
-    <!-- <div class="loginmodal&#45;container"> -->
-    <div class="modal-content">
-      <div class="modal-body">
-        <h3>Kirjautuminen</h3><br>
-        <p>Kirjaudu Google tunnuksilla tai omilla.</p>
-        <a href="http://localhost:3000/users/auth/google_oauth2"><img src="{{ "/img/google-login.png" | prepend: site.baseurl }}" alt="Google-nappula" /></a>
-        <form>
-          <div class="input-group">
-            <input class="form-control" type="text" name="user" placeholder="Käyttäjätunnus">
-            <input class="form-control" type="password" name="pass" placeholder="Salasana">
-            <input class="login loginmodal-submit btn btn-default" type="button" name="login" value="Kirjaudu">
-          </div>
-        </form>
-    </div>
-
-    <!-- Not supported -->
-      <!-- <div class="login&#45;help"> -->
-        <!-- <a href="#">Rekisteröidy</a> -->
-        <!-- &#45; <a href="#">Forgot Password</a> -->
-      <!-- </div> -->
-    </div>
-  </div>
-</div>
-
 	<a id="menu_toggle">&#9776;</a>
 	<ul>
 		{% for site in site.navigation %}
@@ -34,7 +7,7 @@
 		{% endfor %}
 
         <!-- Tässä toimii highlight? <li><a href="/kurssihallinta.html" {% if page.url == "/kurssihallinta.html" %} class="current"{% endif %}>Kurssihallinta</a></li> -->
-    <li><a href="#" data-toggle="modal" data-target="#login-modal">Kirjautuminen</a> 
-    </li>
+    <li><a href="#" id="kirjautuminen" data-toggle="modal" data-target="#login-modal">Kirjautuminen</a></li>
+    <li><a rel="nofollow" data-method="GET" href="{{ site.backend | append: 'users/sign_out' }}" id="logout">Logout</a></li>
 	</ul>
 </nav>

@@ -2,6 +2,7 @@
 title: Kisallioppiminen.fi
 baseurl: ""
 url: "http://ohtukisalli.github.io"
+backend: "https://pure-inlet-98383.herokuapp.com/"
 
 # Build settings
 markdown: kramdown
