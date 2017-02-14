@@ -7,7 +7,7 @@ flatpickr(".flatpickr", {
 });
 
 function createCoursePost(exercises) {
-    var postForm = {
+    var course = {
         html_id: data.courseSelect,
         coursekey: data.coursekey,
         name: data.courseName,
@@ -16,14 +16,18 @@ function createCoursePost(exercises) {
         enddate: data.endDate
     };
 
-    console.log(postForm);
-    /*
+    console.log(course);
+
     $.ajax({
         url: BACKEND_BASE_URL + 'courses/newcourse',
-        type : "POST",
+        type : 'POST',
         dataType : 'json',
-        contentType: "application/json; charset=utf-8",
-        data : JSON.stringify(postForm),
+        contentType: 'application/json',
+        data : JSON.stringify(course),
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
         success : function(data) {
             console.log(data);
         },
@@ -31,7 +35,6 @@ function createCoursePost(exercises) {
             console.log(xhr, resp, text);
         }
     });
-    */
 }
 
 function extractExercises(pageData) {
@@ -61,7 +64,7 @@ function getCourseExercises(course_id) {
     $.ajax({
         url : course_url,
         success : function(result){
-            console.log(extractExercises(result));
+            extractExercises(result);
         },
         error: function() {
             console.log("Could not retrieve course page");
@@ -71,7 +74,7 @@ function getCourseExercises(course_id) {
 }
 
 $( document ).ready(function() {
-    $("form").on('submit', function (e) {
+    $("#newCourseForm").on('submit', function (e) {
         data = $(this).serializeArray().reduce(function(obj, item) {
             obj[item.name] = item.value;
             return obj;
