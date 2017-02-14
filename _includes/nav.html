@@ -7,6 +7,6 @@
 		<li><a href="{{ '/kurssihallinta.html' | prepend: site.baseurl }}" {% if page.url == "/kurssihallinta.html" %} class="logged-in current" {% else %} class="logged-in" {% endif %} onclick="ga('send','event','navbar','click','Kurssihallinta')">Kurssihallinta </a></li>
 		<li><a href="{{ '/omat_kurssit.html' | prepend: site.baseurl }}" {% if page.url == "/omat_kurssit.html" %} class="logged-in current" {% else %} class="logged-in" {% endif %} onclick="ga('send','event','navbar','click','omat kurssit')">Omat kurssit </a></li>
 		<li><a class="logged-out" href="#" id="kirjautuminen" data-toggle="modal" data-target="#login-modal">Kirjautuminen</a></li>
-		<li><a class="logged-in" rel="nofollow" data-method="GET" href="{{ site.backend | append: 'users/sign_out' }}" id="logout">Logout</a></li>
+		<li><a class="logged-in" rel="nofollow" data-method="GET" href="{{ site.backendbaseurl | append: 'users/sign_out' }}" id="logout">Logout</a></li>
 	</ul>
 </nav>
