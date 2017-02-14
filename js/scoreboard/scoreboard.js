@@ -50,9 +50,14 @@ $( document ).ready(function() {
 
     // GET happens here
     $.ajax({
-        url: 'https://pure-inlet-98383.herokuapp.com/courses/1/checkmarks',
+        url: BACKEND_BASE_URL + '/courses/scoreboards',
         dataType: 'json',
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
         success: function(data) {
+            console.log(data);
             createTable(data);
         },
     });

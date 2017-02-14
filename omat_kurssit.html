@@ -2,45 +2,24 @@
 title: Omat kurssit
 layout: default
 ---
-<style>
-    form {
-        padding: 15px;
-    }
-    tr:hover {background-color: #f5f5f5}
-</style>
+
 <section class="panel panel-courselisting">
     <header>
         <h1>Lisää uusi kurssi:</h1>
     </header>
-    <form id="joiningForm" method = "post">
-        <div class="input-group">
-            <input class="form-control" type="text" id="coursekey" placeholder="Kurssiavain ">
-            <input class="login loginmodal-submit btn btn-default" type="button" name="join" onclick = "sendSignUpJSON()" value="Lisää minut kurssille">
-        </div>
-    </form>
+    <div class="container">
+        <form id="joiningForm">
+            <div class="form-group">
+                <div class="input-group col-md-6">
+                    <input class="form-control input-md" type="text" name="coursekey" id="coursekey" placeholder="Kurssiavain ">
+                    <span class="input-group-btn">
+                        <button id="joinCourse" type="submit" class="btn btn-primary">Liity kurssille</button>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
 </section>
-<script>
-    function sendSignUpJSON() {
-        var key = document.getElementById("coursekey").value;
-        console.log(key);
-        $.ajax({
-            url: 'https://pure-inlet-98383.herokuapp.com/courses/join',
-            type : "POST",
-            dataType : 'json',
-            contentType: "application/json; charset=utf-8",
-            data : JSON.stringify({coursekey: key}),
-            success : function() {
-                console.log("OK");
-                alert("Kurssi-ilmoittautminen lisätty!");
-            },
-            error: function(xhr, resp, text) {
-                alert("noup, ei onnistu.");
-                console.log(xhr, resp, text);
-            }
-        });
-    }
-</script>
-
 
 <section class="panel panel-courselisting">
     <header>
@@ -48,3 +27,6 @@ layout: default
         <h2 style="display: inline-block; color: #666666">jakso 1 / 2016</h2>
     </header>
 </section>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="{{base}}/js/join_course.js"></script>

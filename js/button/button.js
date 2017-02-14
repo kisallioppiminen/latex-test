@@ -48,7 +48,7 @@ function getCheckmarks() {
     var student_id = 1;
     var course_id = 1;
     // ES6
-    var restfulUrl = `https://pure-inlet-98383.herokuapp.com/students/${student_id}/courses/${course_id}/checkmarks`;
+    var restfulUrl = BACKEND_BASE_URL + `students/${student_id}/courses/${course_id}/checkmarks`;
 
     $.ajax({
         url: restfulUrl,
@@ -88,7 +88,7 @@ $( document ).ready(function() {
         };
 
         $.ajax({
-            url: 'https://pure-inlet-98383.herokuapp.com/checkmarks',
+            url: BACKEND_BASE_URL+ 'checkmarks',
             type : "POST",
             dataType : 'json',
             contentType: "application/json; charset=utf-8",
