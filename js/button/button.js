@@ -46,13 +46,17 @@ function colorCheckmarks(jsonData) {
 
 function getCheckmarks() {
     var student_id = 1;
-    var course_id = 1;
+    var course_id = 27;
     // ES6
     var restfulUrl = BACKEND_BASE_URL + `students/${student_id}/courses/${course_id}/checkmarks`;
 
     $.ajax({
         url: restfulUrl,
         dataType: 'json',
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
         success: function(data) {
             colorCheckmarks(data);
         },
@@ -81,7 +85,6 @@ $( document ).ready(function() {
         var stats = ["red", "yellow", "green"];
 
         var checkmark = {
-            user_id: 1,
             html_id: this.id.substr(2, this.id.length - 1),
             status: stats[this.id.charAt(0)],
             coursekey: "testikurssiavain"
@@ -89,9 +92,13 @@ $( document ).ready(function() {
 
         $.ajax({
             url: BACKEND_BASE_URL+ 'checkmarks',
-            type : "POST",
+            type : 'POST',
             dataType : 'json',
-            contentType: "application/json; charset=utf-8",
+            contentType: 'application/json',
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
             data : JSON.stringify(checkmark),
             success : function() {
                 console.log("OK!");
