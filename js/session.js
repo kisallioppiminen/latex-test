@@ -1,4 +1,3 @@
-const BACKEND_BASE_URL = "https://pure-inlet-98383.herokuapp.com/"
 var session_user;
 
 var req = new XMLHttpRequest();
