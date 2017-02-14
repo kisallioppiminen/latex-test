@@ -54,8 +54,15 @@
 		});
 	</script>
 
-  <script src="{{base}}/js/session.js"></script>
+  <script>
+    {% if jekyll.environment == "local" %}
+    const BACKEND_BASE_URL = "http://localhost:3000/";
+    {% else %}
+    const BACKEND_BASE_URL = "https://pure-inlet-98383.herokuapp.com/";
+    {% endif %}
+  </script>
 
+  <script src="{{base}}/js/session.js"></script>
 	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 
 </head>
