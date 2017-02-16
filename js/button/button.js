@@ -60,9 +60,8 @@ function getCheckmarks() {
         success: function(data) {
             colorCheckmarks(data);
         },
-        error: function(xhr, resp, text) {
-            console.log("Error");
-            console.log(xhr, resp, text);
+        error: function(data) {
+            console.warn("Could not retrieve checkmarks. Message: " + JSON.parse(data.responseText).error);
         }
     });
 }
@@ -105,9 +104,8 @@ $( document ).ready(function() {
                 changeButtonTitleText(problemId.substr(2,problemId.length - 1), "Vastauksesi on lähetetty!");
                 changeProblemHeaderColor(problemId);
             },
-            error: function(xhr, resp, text) {
-                console.log(xhr, resp, text);
-                changeButtonTitleText(problemId.substr(2,problemId.length - 1), "Virhe! Vastausta ei lähetetty!");
+            error: function(data) {
+                changeButtonTitleText(problemId.substr(2,problemId.length - 1), "Virhe! " + JSON.parse(data.responseText).error);
             }
         });
     });
