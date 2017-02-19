@@ -24,12 +24,8 @@ function changeProblemHeaderColor(id) {
 }
 
 function getColorID(status) {
-    var stats = ["red", "yellow", "green"];
-    for (var i = 0; i < stats.length; i++) {
-        if (stats[i] == status) {
-            return i;
-        }
-    }
+    var colors = { "red": 0, "yellow": 1, "green": 2 };
+    return colors[status];
 }
 
 function colorCheckmarks(jsonData) {
@@ -46,8 +42,7 @@ function colorCheckmarks(jsonData) {
 
 function getCheckmarks() {
     var student_id = 1;
-    var course_id = 27;
-    // ES6
+    var course_id = 6; // HARDCODED
     var restfulUrl = BACKEND_BASE_URL + `students/${student_id}/courses/${course_id}/checkmarks`;
 
     $.ajax({
@@ -71,22 +66,21 @@ function changeButtonTitleText(id, message) {
     $(text_id).html(message);
 }
 
-$( document ).ready(function() {
-    console.log( "Button.js ready" );
+$(document).ready(function() {
+    console.log("Button.js ready");
 
     // Get checkmarks
     getCheckmarks();
 
     $('.problemButton').click(function() {
         var problemId = this.id;
-        console.log("Button " + this.id + " pressed.");
-        /* Send POST request here */
+
         var stats = ["red", "yellow", "green"];
 
         var checkmark = {
             html_id: this.id.substr(2, this.id.length - 1),
             status: stats[this.id.charAt(0)],
-            coursekey: "testikurssiavain"
+            coursekey: "geometriatestiavain" // HARDCODED
         };
 
         $.ajax({

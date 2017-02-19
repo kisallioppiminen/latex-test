@@ -30,9 +30,15 @@ function createCoursePost(exercises) {
         crossDomain: true,
         success : function(data) {
             console.log(data);
+            var alert = '<div id="join_course_alert" class="alert alert-success" role="alert">' + data.message + '</div>';
+            $('#validationMessage').html(alert);
+            $('#validationMessage').show();
         },
-        error: function(xhr, resp, text) {
-            console.log(xhr, resp, text);
+        error: function(data) {
+            console.log(data);
+            var alert = '<div id="join_course_alert" class="alert alert-danger" role="alert">' + JSON.parse(data.responseText).error + '</div>';
+            $('#validationMessage').html(alert);
+            $('#validationMessage').show();
         }
     });
 }
@@ -73,8 +79,9 @@ function getCourseExercises(course_id) {
 
 }
 
-$( document ).ready(function() {
+$(document).ready(function() {
     $("#newCourseForm").on('submit', function (e) {
+        $('#validationMessage').hide();
         data = $(this).serializeArray().reduce(function(obj, item) {
             obj[item.name] = item.value;
             return obj;
@@ -83,7 +90,8 @@ $( document ).ready(function() {
         e.preventDefault();
     });
 
-    $('input').on('input',function(e){
+    // Form validation
+    $('input').on('input',function(){
         var b = true;
         if ($("#courseName").val().length == 0) { b = false };
         if ($("#coursekey").val().length == 0) { b = false };
@@ -91,10 +99,10 @@ $( document ).ready(function() {
         if ($("#endDate").val().length == 0) { b = false };
         if (b) {
             $("#submitCourse").prop("disabled", false);
-            $(".validationMessage").hide();
+            $("#validationMessage").hide();
         } else {
             $("#submitCourse").prop("disabled", true);
-            $(".validationMessage").show();
+            $("#validationMessage").show();
         }
     });
 
