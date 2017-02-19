@@ -5,8 +5,13 @@
       <div class="modal-body">
         <h3>Kirjautuminen</h3><br>
         <p>Kirjaudu Google tunnuksilla tai omilla.</p>
-        <a href="{{ site.backend | append: 'users/auth/google_oauth2' }}"><img src="{{ "/img/google-login.png" | prepend: site.baseurl }}" alt="Google-nappula" /></a>
-        <form id="new_user" action="{{ site.backend | append: '/users/sign_in' }}" accept-charset="UTF8" method="post">
+        {% if jekyll.environment == "local" %}
+        <a href="http://localhost:3000/users/auth/google_oauth2"><img src="{{ "/img/google-login.png" | prepend: site.baseurl }}" alt="Google-nappula" /></a>
+        <form id="new_user" action="http://localhost:3000/users/sign_in" accept-charset="UTF8" method="post">
+        {% else %}
+        <a href="{{ site.backendbaseurl | append: 'users/auth/google_oauth2' }}"><img src="{{ "/img/google-login.png" | prepend: site.baseurl }}" alt="Google-nappula" /></a>
+        <form id="new_user" action="{{ site.backendbaseurl | append: '/users/sign_in' }}" accept-charset="UTF8" method="post">
+        {% endif %}
           <div class="input-group">
             <input id="user_email" value="" class="form-control" type="email" name="user[email]" placeholder="Käyttäjätunnus">
             <input id="user_password" value="" class="form-control" type="password" name="user[password]" placeholder="Salasana">
