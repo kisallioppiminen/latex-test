@@ -38,7 +38,9 @@ function createCourseView(data) {
 }
 
 function getMyCourses() {
-    var restfulURL = 'students/' + session_user.has_sign_in.id + '/courses';
+    var user_id = 1; // HARDCODED
+    // var user_id = session_user.has_sign_in.id
+    var restfulURL = `students/${user_id}/courses`;
 
     $.ajax({
         url: BACKEND_BASE_URL + restfulURL,

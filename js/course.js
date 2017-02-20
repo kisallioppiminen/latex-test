@@ -31,14 +31,12 @@ function createCoursePost(exercises) {
         success : function(data) {
             console.log(data);
             var alert = '<div id="join_course_alert" class="alert alert-success" role="alert">' + data.message + '</div>';
-            $('#validationMessage').html(alert);
-            $('#validationMessage').show();
+            $('#validationMessage').html(alert).show();
         },
         error: function(data) {
             console.log(data);
             var alert = '<div id="join_course_alert" class="alert alert-danger" role="alert">' + JSON.parse(data.responseText).error + '</div>';
-            $('#validationMessage').html(alert);
-            $('#validationMessage').show();
+            $('#validationMessage').html(alert).show();
         }
     });
 }
