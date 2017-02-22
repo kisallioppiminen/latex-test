@@ -161,12 +161,14 @@ Session.prototype.isLogged = function() {
 // -------------
 
 var session;
+
+session = new Session();
+session.init();
+
 /** 
  * Käynnistetään sessio. Sessio olio on globaali.
  */
 window.onload = function() {
-  session = new Session();
-  session.init();
 
   var a = document.getElementById("logout");
 
