@@ -25,17 +25,13 @@ Session.prototype.init = function () {
   } 
 }
 
-
-// Useful API
-// ----------
-
 /**
  * Palauttaa evästeistä käyttäjän ID:n.
  *
  * @returns {Number} Käyttäjän ID.
  */
 Session.prototype.getUserId = function() {
-  return this.getCookie('userId');
+  return document.getCookie('userId');
 }
 
 /**
@@ -44,7 +40,7 @@ Session.prototype.getUserId = function() {
  * @returns {String} Käyttäjän etunimi.
  */
 Session.prototype.getUserFirstName = function() {
-  return this.getCookie('userFirstName');
+  return document.getCookie('userFirstName');
 }
 
 /**
@@ -52,8 +48,8 @@ Session.prototype.getUserFirstName = function() {
  *
  */
 Session.prototype.logout = function() {
-  this.deleteCookie('userId');
-  this.deleteCookie('userFirstName');
+  document.deleteCookie('userId');
+  document.deleteCookie('userFirstName');
 }
 
 /**
@@ -78,30 +74,6 @@ Session.prototype.showNav = function() {
       LOGGEDOUT[i].style.display = 'initial';
     }
   }
-}
-
-
-// Helper functions
-// ----------------
-
-/**
- * Hakee evästeen avaimen mukaan.
- *
- * @param {String} key
- */
-Session.prototype.getCookie = function(key) {
-  var value = '; ' + document.cookie;
-  var parts = value.split('; ' + key + '=');
-  if (parts.length == 2) return parts.pop().split(';').shift();
-}
-
-/**
- * Tuhoaa evästeen avaimen mukaan.
- *
- * @param {String} key
- */
-Session.prototype.deleteCookie = function(key) {
-  document.cookie = key + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
 /**
@@ -149,7 +121,7 @@ Session.prototype.getSession = function() {
  * kirjautunut. Todennus tapahtuu evästeiden avulla.
  */
 Session.prototype.isLogged = function() {
-  if (this.getCookie('userId') !== undefined && this.getCookie('userFirstName') !== undefined) {
+  if (document.getCookie('userId') !== undefined && document.getCookie('userFirstName') !== undefined) {
     return true;
   } else {
     return false;
