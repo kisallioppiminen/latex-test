@@ -1,8 +1,18 @@
+/**
+ * Returns RGB value for color
+ * @param color {String} "red", "yellow" or "green"
+ * @returns {String} RGB value for input color
+ */
 function getColor(color) {
     var colors = {"red": "rgb(217, 83, 79)", "yellow": "rgb(240, 173, 78)", "green": "rgb(92, 184, 92)" };
     return colors[color];
 }
 
+/**
+ * Creates HTML table from exercises and course data
+ * @param exercises {Object} Exercises and their corresponsing IDs
+ * @param coursesJSON {JSON} Course data
+ */
 function createTable(exercises, coursesJSON) {
     var courseName = "maa3";
 
@@ -37,14 +47,22 @@ function createTable(exercises, coursesJSON) {
     document.getElementById( 'courseTable' ).innerHTML = rows;
 }
 
+/**
+ * Connects exercise IDs to exercise numbers
+ * @param pageData
+ * @param data
+ */
 function getExerciseNumbers(pageData, data) {
+    // Match either chapter number or exercise ID
     var regex = /(?:id="chapterNumber" value="([0-9])")|(?:<div\s+class="tehtava"\s+id="([a-zA-Z0-9ÅåÄäÖö.;:_-]+)">)/g;
     var regex_array = regex.exec(pageData);
 
+    // Initialize variables
     var exercises = {};
     var chapterNumber = 0;
     var exerciseCounter = 1;
 
+    // While matches are found
     while (regex_array != null) {
         if (regex_array[1] == null) {
             exercises[regex_array[2]] = chapterNumber + "." + exerciseCounter;
@@ -58,6 +76,11 @@ function getExerciseNumbers(pageData, data) {
     createTable(exercises, data);
 }
 
+/**
+ * Gets print.html page as raw HTML data
+ * @param course_id {String} html_id, for example 'may1'
+ * @param data JSON data
+ */
 function generateExerciseNumbers(course_id, data) {
     var course_url = "/kurssit/" + course_id + "/print.html";
 
@@ -73,17 +96,22 @@ function generateExerciseNumbers(course_id, data) {
 
 }
 
+/**
+ * Creates groups of tables
+ * @param data {JSON}
+ */
 function createTables(data) {
     // Hardcoded, only creates one table for now
-    var courseJSON = data.geometriatestiavain;
+
     generateExerciseNumbers("maa3", courseJSON);
 }
 
+/**
+ * Execute when DOM has loaded, get teacher's scoreboards
+ */
 $(document).ready(function() {
-
-    // GET happens here
     $.ajax({
-        url: BACKEND_BASE_URL + '/courses/scoreboards',
+        url: BACKEND_BASE_URL + `teachers/${session.getUserId()}/scoreboards`,
         dataType: 'json',
         xhrFields: {
             withCredentials: true

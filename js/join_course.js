@@ -29,7 +29,7 @@ function createCourseView(data) {
         var name = course.coursename;
         var sd = new Date(course.startdate);
         var ed = new Date(course.enddate);
-        var formattedTime = `${sd.getDate()}.${sd.getMonth() + 1} – ${ed.getDate()}.${ed.getMonth() + 1}`;
+        var formattedTime = `${sd.getDate()}.${sd.getMonth() + 1}.${sd.getFullYear().toString().substr(2,2)} – ${ed.getDate()}.${ed.getMonth() + 1}-${ed.getFullYear().toString().substr(2,2)}`;
 
         var template = `<header><h1>${name}</h1><h2 style="display: inline-block; color: #666666">${formattedTime}</h2></header>`;
 
@@ -38,8 +38,7 @@ function createCourseView(data) {
 }
 
 function getMyCourses() {
-    var user_id = 1; // HARDCODED
-    // var user_id = session_user.has_sign_in.id
+    var user_id = session.getUserId();
     var restfulURL = `students/${user_id}/courses`;
 
     $.ajax({
