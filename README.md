@@ -29,13 +29,13 @@ You can use Front Matter's site variable `site.backendbaseurl` and javascript gl
 
 Example on how to build html page based on an environment variable with Liquid:
 ```html
-    {% if jekyll.environment == "local" %}
-    <p>Hello world from local!</p>
-    <p>This section exist only if Jekyll has been started with JEKYLL_ENV=local.</p>
-    {% else %}
-    <p>Hello world from production!</p>
-    <p>This section is availiable if Jekyll was started normal way.</p>
-    {% endif %}
+{% if jekyll.environment == "local" %}
+<p>Hello world from local!</p>
+<p>This section exist only if Jekyll has been started with JEKYLL_ENV=local.</p>
+{% else %}
+<p>Hello world from production!</p>
+<p>This section is availiable if Jekyll was started normal way.</p>
+{% endif %}
 ```
 
 ## Testing with Selenium
