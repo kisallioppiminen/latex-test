@@ -38,9 +38,23 @@ Example on how to build html page based on an environment variable with Liquid:
     {% endif %}
 ```
 
-## Testing
+## Testing with Selenium
 
-To run tests, execute
+To run Selenium tests, execute
 ```bash
 bundle exec rspec
 ```
+
+## Unit testing
+
+Unit tests are run with Karma, Jasmin and Phantomjs. Node and npm has to be installed in your system. Npm usually comes with node, but if not, it has to be installed manually.
+
+To install everything you need to run the test suite, execute in the project root
+```bash
+npm install
+```
+After that you should be able to run tests
+```bash
+npm test
+```
+Karma is configured to execute tests everytime a change is made. Check if you have to make some changes in karma.conf.js when you add new js files.
