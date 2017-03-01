@@ -67,7 +67,7 @@ Session.prototype.showNav = function() {
 
   if (this.isLogged()) {
 
-  /* Create navigation link */
+  // Create navigation link
   var li = document.createElement('li');
   li.setAttribute('role', 'presentation');
   li.setAttribute('class', 'dropdown');
@@ -89,22 +89,25 @@ Session.prototype.showNav = function() {
   aNav.appendChild(spanCaret);
   li.appendChild(aNav);
 
-  /* Create dropdown links */
+  // Create dropdown links
   var dropdownMenu = document.createElement('ul');
   dropdownMenu.setAttribute('class', 'dropdown-menu');
 
+  // Create kurssihallinta
   var liKurssihallinta = document.createElement('li');
   var aKurssihallinta = document.createElement('a');
   aKurssihallinta.setAttribute('href', FRONTEND_BASE_URL + 'kurssihallinta.html');
   aKurssihallinta.innerHTML = 'Kurssihallinta';
   liKurssihallinta.appendChild(aKurssihallinta);
 
+  // Create Omat Kurssit
   var liOmatKurssit = document.createElement('li');
   var aOmatKurssit = document.createElement('a');
   aOmatKurssit.setAttribute('href', FRONTEND_BASE_URL + 'omat_kurssit.html');
   aOmatKurssit.innerHTML = 'Omat kurssit';
   liOmatKurssit.appendChild(aOmatKurssit);
 
+  // Create Kirjaudu Ulos
   var liKirjauduUlos = document.createElement('li');
   var aKirjauduUlos = document.createElement('a');
 
@@ -119,13 +122,13 @@ Session.prototype.showNav = function() {
   aKirjauduUlos.innerHTML = 'Kirjaudu ulos';
   liKirjauduUlos.appendChild(aKirjauduUlos);
 
+  // Append everything to dropdown menu
   dropdownMenu.appendChild(liKurssihallinta);
   dropdownMenu.appendChild(liOmatKurssit);
   dropdownMenu.appendChild(liKirjauduUlos);
   li.appendChild(dropdownMenu);
 
-  /* Add everything to navigation bar */
-  var nav = $('nav>ul')[0];
+  // Append everything to navigation bar
   nav.appendChild(li);
 
   } else {
@@ -208,10 +211,10 @@ window.onload = function() {
   session.showNav();
 
   // Let logout also handle cookies
-  var a = document.getElementById('logout');
-
-  a.onclick = function() {
-    session.logout();
-  }
+  // var a = document.getElementById('logout');
+  //
+  // a.onclick = function() {
+  //   session.logout();
+  // }
 
 }
