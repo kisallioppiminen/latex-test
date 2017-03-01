@@ -188,9 +188,7 @@ Session.prototype.isLogged = function() {
 // Start session
 // -------------
 
-var session;
-
-session = new Session();
+var session = new Session();
 session.init();
 
 /** 
