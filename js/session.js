@@ -97,19 +97,24 @@ Session.prototype.showNav = function() {
 
   var liKurssihallinta = document.createElement('li');
   var aKurssihallinta = document.createElement('a');
-  aKurssihallinta.setAttribute('href', FRONTEND_BASE_URL + '/kurssihallinta.html');
+  aKurssihallinta.setAttribute('href', FRONTEND_BASE_URL + 'kurssihallinta.html');
   aKurssihallinta.innerHTML = 'Kurssihallinta';
   liKurssihallinta.appendChild(aKurssihallinta);
 
   var liOmatKurssit = document.createElement('li');
   var aOmatKurssit = document.createElement('a');
-  aOmatKurssit.setAttribute('href', FRONTEND_BASE_URL + '/omat_kurssit.html');
+  aOmatKurssit.setAttribute('href', FRONTEND_BASE_URL + 'omat_kurssit.html');
   aOmatKurssit.innerHTML = 'Omat kurssit';
   liOmatKurssit.appendChild(aOmatKurssit);
 
   var liKirjauduUlos = document.createElement('li');
   var aKirjauduUlos = document.createElement('a');
-  aKirjauduUlos.setAttribute('href', BACKEND_BASE_URL + '/users/sign_out');
+
+  aKirjauduUlos.onclick = function() {
+    this.session.logout();
+  }
+
+  aKirjauduUlos.setAttribute('href', BACKEND_BASE_URL + 'users/sign_out');
   aKirjauduUlos.setAttribute('rel', 'nofollow');
   aKirjauduUlos.setAttribute('data-method', 'GET');
   aKirjauduUlos.setAttribute('id', 'logout');
