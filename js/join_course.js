@@ -24,9 +24,9 @@ function sendSignUpJSON(coursekey) {
 }
 
 function createCourseView(data) {
-    Object.keys(data).forEach(function(courseName) {
-        var course = data[courseName];
-        var name = course.coursename;
+    for (i in data) {
+        var course = data[i];
+        var name = course.name;
         var sd = new Date(course.startdate);
         var ed = new Date(course.enddate);
         var formattedTime = `${sd.getDate()}.${sd.getMonth() + 1}.${sd.getFullYear().toString().substr(2,2)} – ${ed.getDate()}.${ed.getMonth() + 1}-${ed.getFullYear().toString().substr(2,2)}`;
@@ -34,7 +34,7 @@ function createCourseView(data) {
         var template = `<header><h1>${name}</h1><h2 style="display: inline-block; color: #666666">${formattedTime}</h2></header>`;
 
         $('#courseList').append(template);
-    });
+    }
 }
 
 function getMyCourses() {

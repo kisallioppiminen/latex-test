@@ -40,22 +40,64 @@ function getColorID(status) {
  * @param jsonData
  */
 function colorCheckmarks(jsonData) {
-    for (var problem in jsonData) {
-        if (jsonData.hasOwnProperty(problem)) {
-            if ($('div[id="' + problem + '"]').length) {
-                changeProblemHeaderColor(getColorID(jsonData[problem]) + ";" + problem);
-            }
+    for (i in jsonData.exercises) {
+        var exercise = jsonData.exercises[i];
+        if ($('div[id="' + exercise.id + '"]').length) {
+            changeProblemHeaderColor(getColorID(exercise.status) + ";" + exercise.id);
         }
     }
+}
+
+/**
+ * Returns current course html_id
+ * @returns {String} for example 'may1'
+ */
+function getHTMLID() {
+    var regexp = /(?:kurssit\/)([a-z0-9]+)(?:\/)/g;
+    var pathname = window.location.pathname;
+    return regexp.exec(pathname)[1];
+}
+
+/**
+ * Extracts course key and course id and sets them as global variables
+ * @param data
+ * @returns {*|Document.coursekey}
+ */
+function extractCourseData(data) {
+    var html_id = getHTMLID();
+    for (var i in data) {
+        if (data[i].html_id == html_id) {
+            coursekey = data[i].coursekey;
+            course_id = data[i].id;
+            break;
+        }
+    }
+    return coursekey;
+}
+
+/**
+ * Gets current course key
+ * @returns {String} course key
+ */
+function getCourseKey() {
+    return $.ajax({
+        url: BACKEND_BASE_URL + `students/${session.getUserId()}/courses`,
+        dataType: 'json',
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true
+    })
+    .done(function(e) {
+        extractCourseData(e);
+    });
 }
 
 /**
  * Requests student's checkmarks and proceeds to color them if request is successful.
  */
 function getCheckmarks() {
-    var student_id = 1;
-    var course_id = 6; // HARDCODED
-    var restfulUrl = BACKEND_BASE_URL + `students/${student_id}/courses/${course_id}/checkmarks`;
+    var restfulUrl = BACKEND_BASE_URL + `students/${session.getUserId()}/courses/${course_id}/checkmarks`;
 
     $.ajax({
         url: restfulUrl,
@@ -88,8 +130,9 @@ function changeButtonTitleText(id, message) {
  */
 $(document).ready(function() {
 
-    // Get checkmarks
-    getCheckmarks();
+    getCourseKey().done(function() {
+        getCheckmarks();
+    });
 
     // Triggers when student sends a checkmark
     $('.problemButton').click(function() {
@@ -100,7 +143,7 @@ $(document).ready(function() {
         var checkmark = {
             html_id: this.id.substr(2, this.id.length - 1),
             status: stats[this.id.charAt(0)],
-            coursekey: "geometriatestiavain" // HARDCODED
+            coursekey: coursekey
         };
 
         $.ajax({
@@ -114,7 +157,6 @@ $(document).ready(function() {
             crossDomain: true,
             data : JSON.stringify(checkmark),
             success : function() {
-                console.log("OK!");
                 changeButtonTitleText(problemId.substr(2,problemId.length - 1), "Vastauksesi on lähetetty!");
                 changeProblemHeaderColor(problemId);
             },

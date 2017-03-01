@@ -96,32 +96,58 @@ function generateExerciseNumbers(course_id, data) {
 
 }
 
-/**
- * Creates groups of tables
- * @param data {JSON}
- */
-function createTables(data) {
-    // Hardcoded, only creates one table for now
+function createListItem(courseData) {
+    var sd = new Date(courseData.startdate);
+    var ed = new Date(courseData.enddate);
+    var formattedTime = `${sd.getDate()}.${sd.getMonth() + 1}.${sd.getFullYear().toString().substr(2,2)} – ${ed.getDate()}.${ed.getMonth() + 1}-${ed.getFullYear().toString().substr(2,2)}`;
+    var html_boilerplate = `<section class="panel panel-courselisting">
+        <header>
+        <h1 id="courseHeader">${courseData.name}
+        </h1>
+        <h2 style="display: inline-block; color: #666666">${formattedTime}</h2>
+        <h1 style="float: right;">
+            <a id="courseHeader${courseData.coursekey}" data-toggle="collapse" class="collapsed" data-target="#checkmarkTable${courseData.coursekey}"></a>
+        </h1>
+        </header>
 
-    generateExerciseNumbers("maa3", courseJSON);
+        <div id="checkmarkTable${courseData.coursekey}" class="collapse" style="overflow-x:auto;">
+            <table id="courseTable${courseData.coursekey}" class="table" ></table>
+        </div></section>`;
+
+    console.log(html_boilerplate)
+
+    $(".courseList").append(html_boilerplate);
 }
 
-/**
- * Execute when DOM has loaded, get teacher's scoreboards
- */
-$(document).ready(function() {
+function createCourseList(JSONdata) {
+    for (i in JSONdata) {
+        createListItem(JSONdata[i]);
+    }
+}
+
+function getCourses() {
     $.ajax({
-        url: BACKEND_BASE_URL + `teachers/${session.getUserId()}/scoreboards`,
+        url: BACKEND_BASE_URL + `teachers/${session.getUserId()}/courses`,
         dataType: 'json',
         xhrFields: {
             withCredentials: true
         },
         crossDomain: true,
         success: function(data) {
-            console.log(data);
-            createTables(data);
+            createCourseList(data);
         },
+        error: function() {
+            console.warn("Could not retrieve course keys");
+        }
     });
+}
+
+/**
+ * Execute when DOM has loaded, get teacher's scoreboards
+ */
+$(document).ready(function() {
+
+    getCourses();
 
 });
 
