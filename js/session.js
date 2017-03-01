@@ -112,13 +112,13 @@ Session.prototype.showNav = function() {
   var aKirjauduUlos = document.createElement('a');
 
   aKirjauduUlos.onclick = function() {
-    this.session.logout();
+    // can't do with this.session because out of scope
+    session.logout();
   }
 
   aKirjauduUlos.setAttribute('href', BACKEND_BASE_URL + 'users/sign_out');
   aKirjauduUlos.setAttribute('rel', 'nofollow');
   aKirjauduUlos.setAttribute('data-method', 'GET');
-  aKirjauduUlos.setAttribute('id', 'logout');
   aKirjauduUlos.innerHTML = 'Kirjaudu ulos';
   liKirjauduUlos.appendChild(aKirjauduUlos);
 
@@ -209,12 +209,5 @@ session.init();
 window.onload = function() {
 
   session.showNav();
-
-  // Let logout also handle cookies
-  // var a = document.getElementById('logout');
-  //
-  // a.onclick = function() {
-  //   session.logout();
-  // }
 
 }
