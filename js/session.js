@@ -142,6 +142,25 @@ session.init();
  */
 window.onload = function() {
 
+  var li = document.createElement("li");                 // Create a <li> node
+  li.setAttribute("id", "userButton");
+
+
+  var a = document.createElement("a");                 // Create a <li> node
+  var br = document.createElement("br");
+  
+  var userFirstName = document.createTextNode(session.getUserFirstName());
+  var hiMessage = document.createTextNode("Hei,");
+
+  a.appendChild(hiMessage);                              // Append the text to <li>
+  a.appendChild(br);
+  a.appendChild(userFirstName);
+  // a.appendChild(session.getUserFirstName());
+  li.appendChild(a);
+
+  var nav = $("nav>ul")[ 0 ];
+  nav.appendChild(li);
+
   var a = document.getElementById("logout");
 
   a.onclick = function() {
