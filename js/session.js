@@ -63,11 +63,9 @@ Session.prototype.logout = function() {
  * käynnistämällä Jekyll sopivalla ympäristömuuttujalla.
  */
 Session.prototype.showNav = function() {
-  var LOGGEDIN = document.getElementsByClassName('logged-in');
-  var LOGGEDOUT = document.getElementsByClassName('logged-out');
-  if (this.isLogged()) {
+  var nav = $('nav>ul')[0];
 
-  // $('body > nav ul').css('margin-top', '0');
+  if (this.isLogged()) {
 
   /* Create navigation link */
   var li = document.createElement('li');
@@ -131,9 +129,15 @@ Session.prototype.showNav = function() {
   nav.appendChild(li);
 
   } else {
-    for(var i=0; i < LOGGEDOUT.length; i++) {
-      LOGGEDOUT[i].style.display = 'initial';
-    }
+    var liKirjautuminen = document.createElement('li');
+    var aKirjautuminen = document.createElement('a');
+    aKirjautuminen.setAttribute('href', '#');
+    aKirjautuminen.setAttribute('id', 'kirjautuminen');
+    aKirjautuminen.setAttribute('data-toggle', 'modal');
+    aKirjautuminen.setAttribute('data-target', '#login-modal');
+    aKirjautuminen.innerHTML = 'Kirjautuminen';
+    liKirjautuminen.appendChild(aKirjautuminen);
+    nav.appendChild(liKirjautuminen);
   }
 }
 
