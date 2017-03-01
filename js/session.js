@@ -111,7 +111,7 @@ Session.prototype.getSession = function() {
     }
   }
 
-  req.open("GET", BACKEND_BASE_URL + "user/get_session_user", true);
+  req.open('GET', BACKEND_BASE_URL + 'user/get_session_user', true);
   req.withCredentials = true;
   req.send();
 }
