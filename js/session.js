@@ -66,9 +66,65 @@ Session.prototype.showNav = function() {
   var LOGGEDIN = document.getElementsByClassName('logged-in');
   var LOGGEDOUT = document.getElementsByClassName('logged-out');
   if (this.isLogged()) {
-    for(var i=0; i < LOGGEDIN.length; i++) {
-      LOGGEDIN[i].style.display = 'initial';
-    }
+
+  // $('body > nav ul').css('margin-top', '0');
+
+  /* Create navigation link */
+  var li = document.createElement('li');
+  li.setAttribute('role', 'presentation');
+  li.setAttribute('class', 'dropdown');
+  li.style.textTransform = 'none';
+
+  var aNav = document.createElement('a');
+  aNav.setAttribute('role', 'button');
+  aNav.setAttribute('href', '#');
+  aNav.setAttribute('data-toggle', 'dropdown');
+  aNav.setAttribute('class', 'dropdown-toggle');
+
+  var span = document.createElement('span');
+  span.innerHTML = 'Hei, '+ session.getUserFirstName();
+
+  var spanCaret = document.createElement('span');
+  spanCaret.setAttribute('class', 'caret');
+  
+  aNav.appendChild(span);
+  aNav.appendChild(spanCaret);
+  li.appendChild(aNav);
+
+  /* Create dropdown links */
+  var dropdownMenu = document.createElement('ul');
+  dropdownMenu.setAttribute('class', 'dropdown-menu');
+
+  var liKurssihallinta = document.createElement('li');
+  var aKurssihallinta = document.createElement('a');
+  aKurssihallinta.setAttribute('href', FRONTEND_BASE_URL + '/kurssihallinta.html');
+  aKurssihallinta.innerHTML = 'Kurssihallinta';
+  liKurssihallinta.appendChild(aKurssihallinta);
+
+  var liOmatKurssit = document.createElement('li');
+  var aOmatKurssit = document.createElement('a');
+  aOmatKurssit.setAttribute('href', FRONTEND_BASE_URL + '/omat_kurssit.html');
+  aOmatKurssit.innerHTML = 'Omat kurssit';
+  liOmatKurssit.appendChild(aOmatKurssit);
+
+  var liKirjauduUlos = document.createElement('li');
+  var aKirjauduUlos = document.createElement('a');
+  aKirjauduUlos.setAttribute('href', BACKEND_BASE_URL + '/users/sign_out');
+  aKirjauduUlos.setAttribute('rel', 'nofollow');
+  aKirjauduUlos.setAttribute('data-method', 'GET');
+  aKirjauduUlos.setAttribute('id', 'logout');
+  aKirjauduUlos.innerHTML = 'Kirjaudu ulos';
+  liKirjauduUlos.appendChild(aKirjauduUlos);
+
+  dropdownMenu.appendChild(liKurssihallinta);
+  dropdownMenu.appendChild(liOmatKurssit);
+  dropdownMenu.appendChild(liKirjauduUlos);
+  li.appendChild(dropdownMenu);
+
+  /* Add everything to navigation bar */
+  var nav = $('nav>ul')[0];
+  nav.appendChild(li);
+
   } else {
     for(var i=0; i < LOGGEDOUT.length; i++) {
       LOGGEDOUT[i].style.display = 'initial';
@@ -142,30 +198,13 @@ session.init();
  */
 window.onload = function() {
 
-  var li = document.createElement("li");                 // Create a <li> node
-  li.setAttribute("id", "userButton");
+  session.showNav();
 
-
-  var a = document.createElement("a");                 // Create a <li> node
-  var br = document.createElement("br");
-  
-  var userFirstName = document.createTextNode(session.getUserFirstName());
-  var hiMessage = document.createTextNode("Hei,");
-
-  a.appendChild(hiMessage);                              // Append the text to <li>
-  a.appendChild(br);
-  a.appendChild(userFirstName);
-  // a.appendChild(session.getUserFirstName());
-  li.appendChild(a);
-
-  var nav = $("nav>ul")[ 0 ];
-  nav.appendChild(li);
-
-  var a = document.getElementById("logout");
+  // Let logout also handle cookies
+  var a = document.getElementById('logout');
 
   a.onclick = function() {
     session.logout();
   }
 
-  session.showNav();
 }
