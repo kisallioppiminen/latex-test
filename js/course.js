@@ -1,4 +1,6 @@
-// Flatpickr options
+/**
+ * Flatpickr options
+ */
 flatpickr(".flatpickr", {
     "locale": "fi",
     defaultDate: "a",
@@ -6,6 +8,10 @@ flatpickr(".flatpickr", {
     altFormat: "F j, Y"
 });
 
+/**
+ * Sends new course information to backend.
+ * @param  {Object} exercises Exercises as a JavaScript object
+ */
 function createCoursePost(exercises) {
     var course = {
         html_id: data.courseSelect,
@@ -41,6 +47,10 @@ function createCoursePost(exercises) {
     });
 }
 
+/**
+ * Extracts exercises from raw HTML data
+ * @param  {String} pageData page as HTML file
+ */
 function extractExercises(pageData) {
     var regex = /(?:id="chapterNumber" value="([0-9])")|(?:<div\s+class="tehtava"\s+id="([a-zA-Z0-9ÅåÄäÖö.;:_-]+)">)/g;
     var regex_array = regex.exec(pageData);
@@ -62,6 +72,10 @@ function extractExercises(pageData) {
     createCoursePost(exercises);
 }
 
+/**
+ * Gets course exercises from print.html page
+ * @param  {String} course_id course HTML id
+ */
 function getCourseExercises(course_id) {
     var course_url = "/kurssit/" + course_id + "/print.html";
 
@@ -77,6 +91,9 @@ function getCourseExercises(course_id) {
 
 }
 
+/**
+ * Executes as soon as DOM has loaded
+ */
 $(document).ready(function() {
     $("#newCourseForm").on('submit', function (e) {
         $('#validationMessage').hide();

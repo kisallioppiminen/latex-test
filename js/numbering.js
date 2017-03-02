@@ -25,16 +25,15 @@ var SITE = {
             $(value).find("header h1 a").text(exName);
 
             // Problem ID
-            var problemID = this.id;
+            /*var problemID = this.id;
 
-            // Insert button group here
-            var $input = $('<div class="problemButtonWrap"><h3 id="textbar_' + problemID + '">Miten tehtävä meni?</h3><div class="btn-group btn-group"><button data-toggle="tooltip" title="En osannut tehtävää. Tarvitsen apua." class="problemButton btn btn-danger btn-primary" id=' + "0;" + problemID + '><img class="face" src="/img/faces/sad.svg"></button>'
+            if (session.getUserId() !== undefined) {
+                // Insert button group here
+                var $input = $('<div class="problemButtonWrap"><h3 id="textbar_' + problemID + '">Miten tehtävä meni?</h3><div class="btn-group btn-group"><button data-toggle="tooltip" title="En osannut tehtävää. Tarvitsen apua." class="problemButton btn btn-danger btn-primary" id=' + "0;" + problemID + '><img class="face" src="/img/faces/sad.svg"></button>'
                         + '<button data-toggle="tooltip" title="Ratkaisin tehtävän, mutta olen epävarma vastauksesta." class="problemButton btn btn-warning btn-primary" id=' + "1;" + problemID + '><img class="face" src="/img/faces/meh.svg"></button>'
                         + '<button data-toggle="tooltip" title="Ratkaisin tehtävän ja osaan tämän." class="problemButton btn btn-success btn-primary" id=' + "2;" + problemID + '><img class="face" src="/img/faces/happy.svg"></button></div></div>');
-            $(value).find("div:first").append($input);
-
-
-            // var buttonHTML = '<div class="buttons"><button type="submit" id="button1" onClick="clickButton(terve)">1</button></div>';
+                $(value).find("div:first").append($input);
+            }*/
 
             // $(value).find("header").append(buttonHTML);
 

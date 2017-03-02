@@ -1,3 +1,7 @@
+/**
+ * Sends new course signup information to backend.
+ * @param  {String} coursekey Course key
+ */
 function sendSignUpJSON(coursekey) {
     $.ajax({
         url: BACKEND_BASE_URL + 'courses/join',
@@ -23,13 +27,17 @@ function sendSignUpJSON(coursekey) {
     });
 }
 
+/**
+ * Creates course list view.
+ * @param  {Object} data Course data
+ */
 function createCourseView(data) {
     for (i in data) {
         var course = data[i];
         var name = course.name;
         var sd = new Date(course.startdate);
         var ed = new Date(course.enddate);
-        var formattedTime = `${sd.getDate()}.${sd.getMonth() + 1}.${sd.getFullYear().toString().substr(2,2)} – ${ed.getDate()}.${ed.getMonth() + 1}-${ed.getFullYear().toString().substr(2,2)}`;
+        var formattedTime = `${sd.getDate()}.${sd.getMonth() + 1}.${sd.getFullYear().toString().substr(2,2)} – ${ed.getDate()}.${ed.getMonth() + 1}.${ed.getFullYear().toString().substr(2,2)}`;
 
         var template = `<header><h1>${name}</h1><h2 style="display: inline-block; color: #666666">${formattedTime}</h2></header>`;
 
@@ -37,6 +45,9 @@ function createCourseView(data) {
     }
 }
 
+/**
+ * Gets student's courses from backend.
+ */
 function getMyCourses() {
     var user_id = session.getUserId();
     var restfulURL = `students/${user_id}/courses`;
@@ -56,6 +67,9 @@ function getMyCourses() {
 
 }
 
+/**
+ * Execute when DOM has loaded
+ */
 $( document ).ready(function() {
 
     getMyCourses();

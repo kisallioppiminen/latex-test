@@ -26,6 +26,31 @@ function changeProblemHeaderColor(id) {
 }
 
 /**
+ * Adds button group to each exercise
+ */
+function addButtons() {
+    $(".tehtava").each(function(index, value) {
+        var problemID = this.id;
+        var input = $('<div class="problemButtonWrap"><h3 id="textbar_' + problemID + '">Miten tehtävä meni?</h3><div class="btn-group btn-group"><button data-toggle="tooltip" title="En osannut tehtävää. Tarvitsen apua." class="problemButton btn btn-danger btn-primary" id=' + "0;" + problemID + '><img class="face" src="/img/faces/sad.svg"></button>'
+                + '<button data-toggle="tooltip" title="Ratkaisin tehtävän, mutta olen epävarma vastauksesta." class="problemButton btn btn-warning btn-primary" id=' + "1;" + problemID + '><img class="face" src="/img/faces/meh.svg"></button>'
+                + '<button data-toggle="tooltip" title="Ratkaisin tehtävän ja osaan tämän." class="problemButton btn btn-success btn-primary" id=' + "2;" + problemID + '><img class="face" src="/img/faces/happy.svg"></button></div></div>');
+        $(value).find("div:first").append(input);
+    });
+
+    // Add listener
+    $('.problemButton').click(function() {
+        console.log(this.id);
+        var problemId = this.id;
+
+        if (typeof coursekey === 'undefined') {
+            changeButtonTitleText(problemId.substr(2,problemId.length - 1), "Liity ensin kurssille!");
+        } else {
+            sendCheckmark(this.id);
+        }
+    });
+}
+
+/**
  * Returns integer based on input color
  * @param status {String} color (red, yellow, green)
  * @returns {Integer} (0: red, 1: yellow, 2: green)
@@ -40,9 +65,10 @@ function getColorID(status) {
  * @param jsonData
  */
 function colorCheckmarks(jsonData) {
-    for (i in jsonData.exercises) {
+    console.log(jsonData);
+    for (var i in jsonData.exercises) {
         var exercise = jsonData.exercises[i];
-        if ($('div[id="' + exercise.id + '"]').length) {
+        if ($('div[id="' + exercise.id + '"]').length && exercise.status !== 'gray') {
             changeProblemHeaderColor(getColorID(exercise.status) + ";" + exercise.id);
         }
     }
@@ -70,9 +96,11 @@ function extractCourseData(data) {
             coursekey = data[i].coursekey;
             course_id = data[i].id;
             break;
-        }
+            }
     }
-    return coursekey;
+    if (typeof coursekey === 'undefined') {
+        console.warn("No coursekey for this material.");
+    }
 }
 
 /**
@@ -125,44 +153,46 @@ function changeButtonTitleText(id, message) {
     $(text_id).html(message);
 }
 
+function sendCheckmark(id) {
+    var stats = ["red", "yellow", "green"];
+
+    var checkmark = {
+        html_id: id.substr(2, id.length - 1),
+        status: stats[id.charAt(0)],
+        coursekey: coursekey
+    };
+
+    $.ajax({
+        url: BACKEND_BASE_URL+ 'checkmarks',
+        type : 'POST',
+        dataType : 'json',
+        contentType: 'application/json',
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
+        data : JSON.stringify(checkmark),
+        success : function() {
+            changeButtonTitleText(id.substr(2,id.length - 1), "Vastauksesi on lähetetty!");
+            changeProblemHeaderColor(id);
+        },
+        error: function(data) {
+            changeButtonTitleText(id.substr(2,id.length - 1), "Virhe! " + JSON.parse(data.responseText).error);
+        }
+    });
+}
+
 /**
  * Execute when DOM has loaded
  */
 $(document).ready(function() {
 
-    getCourseKey().done(function() {
-        getCheckmarks();
-    });
-
-    // Triggers when student sends a checkmark
-    $('.problemButton').click(function() {
-        var problemId = this.id;
-
-        var stats = ["red", "yellow", "green"];
-
-        var checkmark = {
-            html_id: this.id.substr(2, this.id.length - 1),
-            status: stats[this.id.charAt(0)],
-            coursekey: coursekey
-        };
-
-        $.ajax({
-            url: BACKEND_BASE_URL+ 'checkmarks',
-            type : 'POST',
-            dataType : 'json',
-            contentType: 'application/json',
-            xhrFields: {
-                withCredentials: true
-            },
-            crossDomain: true,
-            data : JSON.stringify(checkmark),
-            success : function() {
-                changeButtonTitleText(problemId.substr(2,problemId.length - 1), "Vastauksesi on lähetetty!");
-                changeProblemHeaderColor(problemId);
-            },
-            error: function(data) {
-                changeButtonTitleText(problemId.substr(2,problemId.length - 1), "Virhe! " + JSON.parse(data.responseText).error);
+    if (window.location.pathname.includes("/kurssit") && session.getUserId() !== undefined) {
+        getCourseKey().done(function() {
+            if (typeof coursekey !== 'undefined') {
+                addButtons();
+                getCheckmarks();
             }
         });
-    });
+    }
 });
