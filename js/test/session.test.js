@@ -1,5 +1,5 @@
 /**
- * @file Unit tests for Session class in file jsUsession.js.
+ * @file Unit tests for Session class in file session.js.
  * @license GPL v2
  * @version 1.00
  */
