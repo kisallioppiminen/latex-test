@@ -48,9 +48,8 @@ function createTable(courseData) {
 }
 
 /**
- * Connects exercise IDs to exercise numbers
- * @param pageData
- * @param data
+ * Connects exercise IDs to exercise numbers. Sets exercises as a global variable.
+ * @param  {String} pageData print.html HTML data
  */
 function getExerciseNumbers(pageData) {
     // Match either chapter number or exercise ID
@@ -79,9 +78,9 @@ function getExerciseNumbers(pageData) {
 }
 
 /**
- * Gets print.html page as raw HTML data
- * @param course_id {String} html_id, for example 'may1'
- * @param data JSON data
+ * Gets print.html as raw HTML data
+ * @param  {Integer} course_id Course ID
+ * @return {Object} Exercises as JavaScript object
  */
 function generateExerciseNumbers(course_id) {
     return $.ajax({
