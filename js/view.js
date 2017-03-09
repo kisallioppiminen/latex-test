@@ -7,16 +7,16 @@ view.navigation = (function() {
   function addUser() {
 
   // Create navigation link
-  var li = document.createElement('li');
-  li.setAttribute('role', 'presentation');
-  li.setAttribute('class', 'dropdown');
-  li.style.textTransform = 'none';
+  var liDropdown = document.createElement('li');
+  liDropdown.setAttribute('role', 'presentation');
+  liDropdown.setAttribute('class', 'dropdown');
+  liDropdown.style.textTransform = 'none';
 
-  var aNav = document.createElement('a');
-  aNav.setAttribute('role', 'button');
-  aNav.setAttribute('href', '#');
-  aNav.setAttribute('data-toggle', 'dropdown');
-  aNav.setAttribute('class', 'dropdown-toggle');
+  var aDropdown = document.createElement('a');
+  aDropdown.setAttribute('role', 'button');
+  aDropdown.setAttribute('href', '#');
+  aDropdown.setAttribute('data-toggle', 'dropdown');
+  aDropdown.setAttribute('class', 'dropdown-toggle');
 
   var span = document.createElement('span');
   span.innerHTML = 'Hei, '+ session.getUserFirstName();
@@ -24,64 +24,63 @@ view.navigation = (function() {
   var spanCaret = document.createElement('span');
   spanCaret.setAttribute('class', 'caret');
   
-  aNav.appendChild(span);
-  aNav.appendChild(spanCaret);
-  li.appendChild(aNav);
+  aDropdown.appendChild(span);
+  aDropdown.appendChild(spanCaret);
+  liDropdown.appendChild(aDropdown);
 
   // Create dropdown links
   var dropdownMenu = document.createElement('ul');
   dropdownMenu.setAttribute('class', 'dropdown-menu');
 
-  // Create kurssihallinta
-  var liKurssihallinta = document.createElement('li');
-  var aKurssihallinta = document.createElement('a');
-  aKurssihallinta.setAttribute('href', FRONTEND_BASE_URL + 'kurssihallinta.html');
-  aKurssihallinta.innerHTML = 'Kurssihallinta';
-  liKurssihallinta.appendChild(aKurssihallinta);
+  // Create links for dropdow menu
+  var kurssihallinta = [{key: 'href', value: FRONTEND_BASE_URL + 'kurssihallinta.html'}];
+  var omatKurssit = [{key: 'href', value: FRONTEND_BASE_URL + 'omat_kurssit.html'}];
 
-  // Create Omat Kurssit
-  var liOmatKurssit = document.createElement('li');
-  var aOmatKurssit = document.createElement('a');
-  aOmatKurssit.setAttribute('href', FRONTEND_BASE_URL + 'omat_kurssit.html');
-  aOmatKurssit.innerHTML = 'Omat kurssit';
-  liOmatKurssit.appendChild(aOmatKurssit);
-
-  // Create Kirjaudu Ulos
-  var liKirjauduUlos = document.createElement('li');
-  var aKirjauduUlos = document.createElement('a');
-
-  aKirjauduUlos.onclick = function() {
-    // can't do with this.session because out of scope
+  var kirjauduUlos = [
+  {key: 'href', value: BACKEND_BASE_URL + 'users/sign_out.html'},
+  {key: 'rel', value: 'nofollow'},
+  {key: 'data-method', value: 'GET'}
+  ];
+  var kirjauduUlosClickEvent = function () {
     session.logout();
   }
 
-  aKirjauduUlos.setAttribute('href', BACKEND_BASE_URL + 'users/sign_out');
-  aKirjauduUlos.setAttribute('rel', 'nofollow');
-  aKirjauduUlos.setAttribute('data-method', 'GET');
-  aKirjauduUlos.innerHTML = 'Kirjaudu ulos';
-  liKirjauduUlos.appendChild(aKirjauduUlos);
-
   // Append everything to dropdown menu
-  dropdownMenu.appendChild(liKurssihallinta);
-  dropdownMenu.appendChild(liOmatKurssit);
-  dropdownMenu.appendChild(liKirjauduUlos);
-  li.appendChild(dropdownMenu);
+  dropdownMenu.appendChild(createLink(kurssihallinta, 'Kurssihallinta'));
+  dropdownMenu.appendChild(createLink(omatKurssit, 'Omat kurssit'));
+  dropdownMenu.appendChild(createLink(kirjauduUlos, 'Kirjaudu ulos', kirjauduUlosClickEvent));
+  liDropdown.appendChild(dropdownMenu);
 
   // Append everything to navigation bar
-  nav.appendChild(li);
+  nav.appendChild(liDropdown);
 
   }
 
   function addGuest() {
-    var liKirjautuminen = document.createElement('li');
-    var aKirjautuminen = document.createElement('a');
-    aKirjautuminen.setAttribute('href', '#');
-    aKirjautuminen.setAttribute('id', 'kirjautuminen');
-    aKirjautuminen.setAttribute('data-toggle', 'modal');
-    aKirjautuminen.setAttribute('data-target', '#login-modal');
-    aKirjautuminen.innerHTML = 'Kirjautuminen';
-    liKirjautuminen.appendChild(aKirjautuminen);
-    nav.appendChild(liKirjautuminen);
+    var kirjautuminen = [
+    {key: 'href', value: '#'}, 
+    {key: 'id', value: 'kirjautuminen'}, 
+    {key: 'data-toggle', value: 'modal'},
+    {key: 'data-target', value: '#login-modal'},
+    ];
+
+    nav.appendChild(createLink(kirjautuminen, 'Kirjautuminen'));
+  }
+
+  function createLink(att, text, clickEvent) {
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    att.forEach(function(conf) {
+      a.setAttribute(conf.key, conf.value);
+    });
+    a.innerHTML = text;
+
+    if (clickEvent instanceof Function) {
+      a.onclick = clickEvent;
+    } 
+
+    li.appendChild(a);
+    return li;
   }
 
   return {

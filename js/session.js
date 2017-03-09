@@ -101,7 +101,6 @@ Session.prototype.getSession = function() {
     if (session_user.has_sign_in !== null && session_user.has_sign_in !== undefined) {
       document.cookie = 'userId=' + session_user.has_sign_in.id;
       document.cookie = 'userFirstName=' + session_user.has_sign_in.first_name;
-      session.showNav();
     }
   }
 
