@@ -64,9 +64,9 @@ Session.prototype.logout = function() {
  */
 Session.prototype.showNav = function() {
   if (this.isLogged()) {
-    view.navigation.addUser();
+    view.navigation.buildUser();
   } else {
-    view.navigation.addGuest();
+    view.navigation.buildGuest();
   }
 }
 

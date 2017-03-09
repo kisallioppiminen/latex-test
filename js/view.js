@@ -4,7 +4,7 @@ view.navigation = (function() {
 
   var nav = $('nav>ul')[0];
 
-  function addUser() {
+  function buildUser() {
 
   // Create navigation link
   var liDropdown = document.createElement('li');
@@ -56,7 +56,7 @@ view.navigation = (function() {
 
   }
 
-  function addGuest() {
+  function buildGuest() {
     var kirjautuminen = [
     {key: 'href', value: '#'}, 
     {key: 'id', value: 'kirjautuminen'}, 
@@ -84,8 +84,8 @@ view.navigation = (function() {
   }
 
   return {
-    addUser : addUser,
-    addGuest : addGuest
+    buildUser : buildUser,
+    buildGuest : buildGuest
   };
 
 })();
