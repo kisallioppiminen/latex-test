@@ -6,13 +6,6 @@
 
 
  describe('Cookie manager', function() {
-   beforeEach(function() {
-     session = new Session();
-   });
-   afterEach(function() {
-     session = undefined;
-   });
-
    it('should try to ask backend if current user is logged in', function() {
      spyOn(session, "getSession");
      session.init();
