@@ -18,6 +18,7 @@ module.exports = function(config) {
       'js/test/karma_init.js',
       'js/common.js',
       'js/session.js',
+      'js/view.js',
       'js/test/*.js'
     ],
 
