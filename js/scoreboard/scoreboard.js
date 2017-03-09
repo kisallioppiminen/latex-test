@@ -9,17 +9,39 @@ function getColor(color) {
 }
 
 /**
+ * Comparator to sort objects in alphabetical order
+ */
+function compare(a, b) {
+    if (a.user < b.user)
+        return -1;
+    if (a.user > b.user)
+        return 1;
+    return 0;
+}
+
+/**
  * Creates HTML table from exercises and course data
  * @param exercises {Object} Exercises and their corresponsing IDs
  * @param coursesJSON {JSON} Course data
  */
 function createTable(courseData) {
-    console.log(courseData);
-    var table = '<table class="scoreboard"><th class="nameColumn"></th>';
+    courseData.sort(compare);
+
+    var keys = {
+        "green": 0,
+        "yellow": 1,
+        "red": 2,
+        "gray": 3
+    };
+
+    var id = Math.random().toString(36).substring(7);
+
+    var table = `<table class="sortable" id="${id}"><th class="nameColumn"></th>`;
 
     for (var i in exercises) {
+        
         var exercise = exercises[i];
-        table += '<th class="numberHeader">' + exercise.number + '</th>';
+        table += `<th class="numberHeader sortable">${exercise.number}</th>`;
     }
 
     table += '</tr><tr>';
@@ -32,7 +54,7 @@ function createTable(courseData) {
             exercise = student.exercises.filter(function(obj) {
                 return obj.id == correct_exercise.id;
             });
-            table += '<td id="status"><div class="' + exercise[0].status + '" data-toggle="tooltip" title="' + student.user + " - " + correct_exercise.number + '"></div></td>';
+            table += '<td id="status" sorttable_customkey="' + keys[exercise[0].status] +'"><div class="' + exercise[0].status + '" data-toggle="tooltip" title="' + student.user + " - " + correct_exercise.number + '"></div></td>';
         }
         table += '</tr><tr>';
     }
@@ -45,6 +67,10 @@ function createTable(courseData) {
     $(alertID).hide();
 
     $('[data-toggle="tooltip"]').tooltip(); 
+
+    // make table sortable
+    var nto = document.getElementById(id);
+    sorttable.makeSortable(nto);
 }
 
 /**
