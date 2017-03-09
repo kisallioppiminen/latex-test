@@ -2,9 +2,9 @@ var view = {}
 
 view.navigation = (function() {
 
-  var nav = document.querySelector('nav>ul');
 
   function buildUser() {
+    var nav = document.querySelector('nav>ul');
 
     // Create navigation link
     var liDropdown = document.createElement('li');
@@ -57,6 +57,7 @@ view.navigation = (function() {
   }
 
   function buildGuest() {
+    var nav = document.querySelector('nav>ul');
     var kirjautuminen = [
     {key: 'href', value: '#'}, 
     {key: 'id', value: 'kirjautuminen'}, 
