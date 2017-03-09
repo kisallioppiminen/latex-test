@@ -2,7 +2,7 @@ var view = {}
 
 view.navigation = (function() {
 
-  var nav = $('nav>ul')[0];
+  var nav = document.querySelector('nav>ul');
 
   function buildUser() {
 
