@@ -172,10 +172,11 @@ function createListItem(courseData) {
         <header>
         <h1>${courseData.name}
         </h1>
-        <h2 style="display: inline-block; color: #666666">${formattedTime}</h2>
+        <h2 style="display: inline-block; color: #888888">${formattedTime}</h2>
         <h1 style="float: right;">
             <a id="${courseData.coursekey}" data-toggle="collapse" class="collapsed" data-target="#checkmarkTable${courseData.coursekey}"></a>
         </h1>
+        <h3 style="font-family: monospace; float: right; display: inline-block; color: #666666">${courseData.coursekey}</h3>
         </header>
 
         <div id="checkmarkTable${courseData.coursekey}" class="collapse" style="overflow-x:auto;">
