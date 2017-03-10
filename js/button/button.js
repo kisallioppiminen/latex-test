@@ -125,8 +125,18 @@ function getCourseKey() {
  * Requests student's checkmarks and proceeds to color them if request is successful.
  */
 function getCheckmarks() {
-    var restfulUrl = BACKEND_BASE_URL + `students/${session.getUserId()}/courses/${course_id}/checkmarks`;
+    var restfulUrl = `students/${session.getUserId()}/courses/${course_id}/checkmarks`;
 
+    backend.get(restfulUrl)
+    .then(
+        function fulfilled(data) {
+            colorCheckmarks(data);
+        },
+        function rejected(data) {
+            console.warn("Could not retrieve checkmarks. Message: " + JSON.parse(data.responseText).error);
+        }
+    );
+/*
     $.ajax({
         url: restfulUrl,
         dataType: 'json',
@@ -141,6 +151,7 @@ function getCheckmarks() {
             console.warn("Could not retrieve checkmarks. Message: " + JSON.parse(data.responseText).error);
         }
     });
+    */
 }
 
 /**
@@ -162,6 +173,18 @@ function sendCheckmark(id) {
         coursekey: coursekey
     };
 
+    backend.post('checkmarks', checkmark)
+    .then(
+        function fulfilled() {
+         changeButtonTitleText(id.substr(2,id.length - 1), "Vastauksesi on lähetetty!");
+         changeProblemHeaderColor(id);   
+        },
+        function rejected(data) {
+            changeButtonTitleText(id.substr(2,id.length - 1), "Virhe! " + JSON.parse(data.responseText).error);
+        }
+    );
+
+/*
     $.ajax({
         url: BACKEND_BASE_URL+ 'checkmarks',
         type : 'POST',
@@ -174,18 +197,21 @@ function sendCheckmark(id) {
         data : JSON.stringify(checkmark),
         success : function() {
             changeButtonTitleText(id.substr(2,id.length - 1), "Vastauksesi on lähetetty!");
-            changeProblemHeaderColor(id);
+            changeProblemHeaderColor(id); 
         },
         error: function(data) {
             changeButtonTitleText(id.substr(2,id.length - 1), "Virhe! " + JSON.parse(data.responseText).error);
         }
     });
+    */
 }
 
 /**
  * Execute when DOM has loaded
  */
 $(document).ready(function() {
+
+    backend = new Backend(BACKEND_BASE_URL);
 
     if (window.location.pathname.includes("/kurssit") && session.getUserId() !== undefined) {
         getCourseKey().done(function() {
