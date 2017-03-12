@@ -69,6 +69,7 @@ class NavigationView {
     // Append everything to navigation bar
     nav.appendChild(liDropdown);
   }
+
   buildGuest(){
     var nav = document.querySelector('nav>ul');
     var kirjautuminen = [
