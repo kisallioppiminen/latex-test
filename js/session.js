@@ -102,19 +102,3 @@ Session.prototype.isLogged = function() {
     return false;
   }
 }
-
-
-// Start session
-// -------------
-
-var session = new Session();
-session.init();
-
-/** 
- * Käynnistetään sessio. Sessio olio on globaali.
- */
-window.onload = function() {
-
-  session.showNav();
-
-}
