@@ -27,9 +27,11 @@ resources:
     - "//code.jquery.com/jquery-2.2.4.min.js"
     - "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
     - "/js/session.js"
+    - "/js/navigationView.js"
     - "/js/mooc.js"
     - "/js/numbering.js"
     - "/js/button/button.js"
+    - "/js/init.js"
 
 exclude: [vendor]
 

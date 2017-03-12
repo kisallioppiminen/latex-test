@@ -53,98 +53,6 @@ Session.prototype.logout = function() {
 }
 
 /**
- * Näyttää navigaatiopalkissa linkit sen mukaan, onko kirjautunut vai ei
- * muuttamalla CSS:n display arvoa. Kirjautuminen todetaan evästeiden
- * avulla.
- *
- * @TODO Voi olla, että näyttäminen kannattaa ehkä tehdä DOM rakenteen
- * manipuloinnilla, koska silloin voin olla helpompaa käyttää
- * globaalimuuttujaa BACKEND_BASE_URL. Sen arvoa on helppo muuttaa
- * käynnistämällä Jekyll sopivalla ympäristömuuttujalla.
- */
-Session.prototype.showNav = function() {
-  var nav = $('nav>ul')[0];
-
-  if (this.isLogged()) {
-
-  // Create navigation link
-  var li = document.createElement('li');
-  li.setAttribute('role', 'presentation');
-  li.setAttribute('class', 'dropdown');
-  li.style.textTransform = 'none';
-
-  var aNav = document.createElement('a');
-  aNav.setAttribute('role', 'button');
-  aNav.setAttribute('href', '#');
-  aNav.setAttribute('data-toggle', 'dropdown');
-  aNav.setAttribute('class', 'dropdown-toggle');
-
-  var span = document.createElement('span');
-  span.innerHTML = 'Hei, '+ session.getUserFirstName();
-
-  var spanCaret = document.createElement('span');
-  spanCaret.setAttribute('class', 'caret');
-  
-  aNav.appendChild(span);
-  aNav.appendChild(spanCaret);
-  li.appendChild(aNav);
-
-  // Create dropdown links
-  var dropdownMenu = document.createElement('ul');
-  dropdownMenu.setAttribute('class', 'dropdown-menu');
-
-  // Create kurssihallinta
-  var liKurssihallinta = document.createElement('li');
-  var aKurssihallinta = document.createElement('a');
-  aKurssihallinta.setAttribute('href', FRONTEND_BASE_URL + 'kurssihallinta.html');
-  aKurssihallinta.innerHTML = 'Kurssihallinta';
-  liKurssihallinta.appendChild(aKurssihallinta);
-
-  // Create Omat Kurssit
-  var liOmatKurssit = document.createElement('li');
-  var aOmatKurssit = document.createElement('a');
-  aOmatKurssit.setAttribute('href', FRONTEND_BASE_URL + 'omat_kurssit.html');
-  aOmatKurssit.innerHTML = 'Omat kurssit';
-  liOmatKurssit.appendChild(aOmatKurssit);
-
-  // Create Kirjaudu Ulos
-  var liKirjauduUlos = document.createElement('li');
-  var aKirjauduUlos = document.createElement('a');
-
-  aKirjauduUlos.onclick = function() {
-    // can't do with this.session because out of scope
-    session.logout();
-  }
-
-  aKirjauduUlos.setAttribute('href', BACKEND_BASE_URL + 'users/sign_out');
-  aKirjauduUlos.setAttribute('rel', 'nofollow');
-  aKirjauduUlos.setAttribute('data-method', 'GET');
-  aKirjauduUlos.innerHTML = 'Kirjaudu ulos';
-  liKirjauduUlos.appendChild(aKirjauduUlos);
-
-  // Append everything to dropdown menu
-  dropdownMenu.appendChild(liKurssihallinta);
-  dropdownMenu.appendChild(liOmatKurssit);
-  dropdownMenu.appendChild(liKirjauduUlos);
-  li.appendChild(dropdownMenu);
-
-  // Append everything to navigation bar
-  nav.appendChild(li);
-
-  } else {
-    var liKirjautuminen = document.createElement('li');
-    var aKirjautuminen = document.createElement('a');
-    aKirjautuminen.setAttribute('href', '#');
-    aKirjautuminen.setAttribute('id', 'kirjautuminen');
-    aKirjautuminen.setAttribute('data-toggle', 'modal');
-    aKirjautuminen.setAttribute('data-target', '#login-modal');
-    aKirjautuminen.innerHTML = 'Kirjautuminen';
-    liKirjautuminen.appendChild(aKirjautuminen);
-    nav.appendChild(liKirjautuminen);
-  }
-}
-
-/**
  * Jos evästeitä ei ole asetettu, käy kysymässä palvelimelta onko kyseinen
  * käyttäjä kirjautunut. Jos on, asettaa evästeet, eikä kyselyä enää tehdä,
  * vaan luotetaan siihen, että evästeiden olemassaolo riittää todisteeksi, että
@@ -175,7 +83,6 @@ Session.prototype.getSession = function() {
     if (session_user.has_sign_in !== null && session_user.has_sign_in !== undefined) {
       document.cookie = 'userId=' + session_user.has_sign_in.id;
       document.cookie = 'userFirstName=' + session_user.has_sign_in.first_name;
-      session.showNav();
     }
   }
 
@@ -194,20 +101,4 @@ Session.prototype.isLogged = function() {
   } else {
     return false;
   }
-}
-
-
-// Start session
-// -------------
-
-var session = new Session();
-session.init();
-
-/** 
- * Käynnistetään sessio. Sessio olio on globaali.
- */
-window.onload = function() {
-
-  session.showNav();
-
 }
