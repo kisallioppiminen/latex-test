@@ -53,24 +53,6 @@ Session.prototype.logout = function() {
 }
 
 /**
- * Näyttää navigaatiopalkissa linkit sen mukaan, onko kirjautunut vai ei
- * muuttamalla CSS:n display arvoa. Kirjautuminen todetaan evästeiden
- * avulla.
- *
- * @TODO Voi olla, että näyttäminen kannattaa ehkä tehdä DOM rakenteen
- * manipuloinnilla, koska silloin voin olla helpompaa käyttää
- * globaalimuuttujaa BACKEND_BASE_URL. Sen arvoa on helppo muuttaa
- * käynnistämällä Jekyll sopivalla ympäristömuuttujalla.
- */
-Session.prototype.showNav = function() {
-  if (this.isLogged()) {
-    view.navigation.buildUser();
-  } else {
-    view.navigation.buildGuest();
-  }
-}
-
-/**
  * Jos evästeitä ei ole asetettu, käy kysymässä palvelimelta onko kyseinen
  * käyttäjä kirjautunut. Jos on, asettaa evästeet, eikä kyselyä enää tehdä,
  * vaan luotetaan siihen, että evästeiden olemassaolo riittää todisteeksi, että
