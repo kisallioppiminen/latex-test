@@ -14,6 +14,9 @@ describe('View', function() {
       var ul = document.createElement('ul');
       nav.appendChild(ul);
       document.body.appendChild(nav);
+      
+      var session = new Session();
+      var navigationview = new NavigationView();
     });
     afterEach(function() {
       var navs = document.getElementsByTagName('nav');
