@@ -32,6 +32,7 @@ resources:
     - "/js/mooc.js"
     - "/js/numbering.js"
     - "/js/button/button.js"
+    - "/js/init.js"
 
 exclude: [vendor]
 
