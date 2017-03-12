@@ -18,8 +18,8 @@ module.exports = function(config) {
       'js/test/karma_init.js',
       'js/test/jquery-2.2.4.min.js',
       'js/common.js',
-      'js/view.js',
       'js/session.js',
+      'js/navigationView.js',
       'js/test/*.js'
     ],
 
