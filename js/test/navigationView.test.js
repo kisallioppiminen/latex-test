@@ -28,11 +28,11 @@ describe('Navigation view', function() {
     expect(links[0].innerHTML).toBe('Kirjautuminen');
   });
   it('Should have User view when User view has been build', function() {
-    // var session = new Session();
-    // var navigationview = new NavigationView(session);
-    // navigationview.buildUser();
-    // var links = document.getElementsByTagName('a');
-    // expect(links.length).toBe(3);
+    session = new Session();
+    var navigationview = new NavigationView(session);
+    navigationview.buildUser();
+    var links = document.getElementsByTagName('a');
+    expect(links.length).toBe(4);
   });
 
 });
