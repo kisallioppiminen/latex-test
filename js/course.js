@@ -77,7 +77,7 @@ function extractExercises(pageData) {
  * @param  {String} course_id course HTML id
  */
 function getCourseExercises(course_id) {
-    var course_url = "/kurssit/" + course_id + "/print.html";
+    var course_url = FRONTEND_BASE_URL + "kurssit/" + course_id + "/print.html";
 
     $.ajax({
         url : course_url,

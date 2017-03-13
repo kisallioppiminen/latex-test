@@ -110,7 +110,7 @@ function getExerciseNumbers(pageData) {
  */
 function generateExerciseNumbers(course_id) {
     return $.ajax({
-        url : `/kurssit/${course_id}/print.html`,
+        url : FRONTEND_BASE_URL + `kurssit/${course_id}/print.html`,
         success : function(result){
             return getExerciseNumbers(result);
         },
