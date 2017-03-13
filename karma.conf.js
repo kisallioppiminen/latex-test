@@ -20,7 +20,7 @@ module.exports = function(config) {
       'js/common.js',
       'js/session.js',
       'js/navigationView.js',
-      'js/test/*.js'
+      'js/_test/*.js'
     ],
 
 
