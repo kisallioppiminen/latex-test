@@ -1,6 +1,5 @@
 # Student application Kisallioppiminen.fi with marking system
 
-This is the development repository of beta.kisallioppiminen.fi frontend
 * Development/Staging version: [https://ohtukisalli.github.io/dev-frontend/](https://ohtukisalli.github.io/dev-frontend/)
 * Production version: [http://beta.kisallioppiminen.fi/](http://beta.kisallioppiminen.fi/)
 
