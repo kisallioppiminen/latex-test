@@ -167,7 +167,7 @@ function loadScoreboard(coursekey) {
 function createListItem(courseData) {
     var sd = new Date(courseData.startdate);
     var ed = new Date(courseData.enddate);
-    var formattedTime = `${sd.getDate()}.${sd.getMonth() + 1}.${sd.getFullYear().toString().substr(2,2)} – ${ed.getDate()}.${ed.getMonth() + 1}-${ed.getFullYear().toString().substr(2,2)}`;
+    var formattedTime = `${sd.getDate()}.${sd.getMonth() + 1}.${sd.getFullYear().toString().substr(2,2)} – ${ed.getDate()}.${ed.getMonth() + 1}.${ed.getFullYear().toString().substr(2,2)}`;
     var html_boilerplate = `<section class="panel panel-courselisting">
         <header>
         <h1>${courseData.name}
