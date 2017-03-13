@@ -1,7 +1,8 @@
 # Student application Kisallioppiminen.fi with marking system
 
-View courses with marking system on [kisallioppiminen v2 beta](https://ohtukisalli.github.io/).
-
+This is the development repository of beta.kisallioppiminen.fi frontend
+* Development/Staging version: [https://ohtukisalli.github.io/dev-frontend/](https://ohtukisalli.github.io/dev-frontend/)
+* Production version: [http://beta.kisallioppiminen.fi/](http://beta.kisallioppiminen.fi/)
 
 ## Setting up Kisallioppiminen.fi site locally with Jekyll
 
