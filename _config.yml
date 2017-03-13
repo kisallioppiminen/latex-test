@@ -4,6 +4,9 @@ baseurl: ""
 url: "http://ohtukisalli.github.io"
 backendbaseurl: "https://pure-inlet-98383.herokuapp.com/"
 
+# Github pages
+repository: OhtuKisalli/dev-frontend
+
 # Build settings
 markdown: kramdown
 gems:
