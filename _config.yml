@@ -1,7 +1,7 @@
 # Site settings
 title: Kisallioppiminen.fi
 baseurl: ""
-url: "http://ohtukisalli.github.io"
+url: "http://ohtukisalli.github.io/dev-frontend"
 backendbaseurl: "https://pure-inlet-98383.herokuapp.com/"
 
 # Build settings
