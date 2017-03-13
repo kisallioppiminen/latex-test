@@ -104,24 +104,6 @@ function extractCourseData(data) {
 }
 
 /**
- * Gets current course key
- * @returns {String} course key
- */
-function getCourseKey() {
-    return $.ajax({
-        url: BACKEND_BASE_URL + `students/${session.getUserId()}/courses`,
-        dataType: 'json',
-        xhrFields: {
-            withCredentials: true
-        },
-        crossDomain: true
-    })
-    .done(function(e) {
-        extractCourseData(e);
-    });
-}
-
-/**
  * Requests student's checkmarks and proceeds to color them if request is successful.
  */
 function getCheckmarks() {
@@ -136,22 +118,6 @@ function getCheckmarks() {
             console.warn("Could not retrieve checkmarks. Message: " + JSON.parse(data.responseText).error);
         }
     );
-/*
-    $.ajax({
-        url: restfulUrl,
-        dataType: 'json',
-        xhrFields: {
-            withCredentials: true
-        },
-        crossDomain: true,
-        success: function(data) {
-            colorCheckmarks(data);
-        },
-        error: function(data) {
-            console.warn("Could not retrieve checkmarks. Message: " + JSON.parse(data.responseText).error);
-        }
-    });
-    */
 }
 
 /**
@@ -183,27 +149,6 @@ function sendCheckmark(id) {
             changeButtonTitleText(id.substr(2,id.length - 1), "Virhe! " + JSON.parse(data.responseText).error);
         }
     );
-
-/*
-    $.ajax({
-        url: BACKEND_BASE_URL+ 'checkmarks',
-        type : 'POST',
-        dataType : 'json',
-        contentType: 'application/json',
-        xhrFields: {
-            withCredentials: true
-        },
-        crossDomain: true,
-        data : JSON.stringify(checkmark),
-        success : function() {
-            changeButtonTitleText(id.substr(2,id.length - 1), "Vastauksesi on lähetetty!");
-            changeProblemHeaderColor(id); 
-        },
-        error: function(data) {
-            changeButtonTitleText(id.substr(2,id.length - 1), "Virhe! " + JSON.parse(data.responseText).error);
-        }
-    });
-    */
 }
 
 /**
@@ -214,11 +159,17 @@ $(document).ready(function() {
     backend = new Backend(BACKEND_BASE_URL);
 
     if (window.location.pathname.includes("/kurssit") && session.getUserId() !== undefined) {
-        getCourseKey().done(function() {
-            if (typeof coursekey !== 'undefined') {
-                addButtons();
-                getCheckmarks();
-            }
-        });
+        backend.get(`students/${session.getUserId()}/courses`)
+        .then(
+            function fulfilled(data) {
+                extractCourseData(data);
+                if (typeof coursekey !== 'undefined') {
+                    addButtons();
+                    getCheckmarks();
+                }
+            },
+            function rejected() {
+                console.warn("Error, could not get coursekey");
+            });
     }
 });
