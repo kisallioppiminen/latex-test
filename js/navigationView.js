@@ -13,8 +13,7 @@ class NavigationView {
       this.buildUser();
       // view.navigation.buildUser();
     } else {
-      this.buildGuest();
-      // view.navigation.buildGuest();
+      this._buildGuest();
     }
   }
   
@@ -70,7 +69,7 @@ class NavigationView {
     nav.appendChild(liDropdown);
   }
 
-  buildGuest(){
+  _buildGuest(){
     var nav = document.querySelector('nav>ul');
     var kirjautuminen = [
     {key: 'href', value: '#'}, 

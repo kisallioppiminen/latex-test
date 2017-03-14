@@ -23,7 +23,7 @@ describe('Navigation view', function() {
     expect(nav.length).toBe(1);
   })
   it("should have 'Kirjautuminen' in the nav after Guest view has been built", function() {
-    navigationview.buildGuest();
+    navigationview._buildGuest();
     let links = document.getElementsByTagName('a');
     expect(links.length).toBe(1);
     expect(links[0].innerHTML).toBe('Kirjautuminen');
