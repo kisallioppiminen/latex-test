@@ -69,6 +69,22 @@ Session.prototype.logout = function() {
  * ennen kuin palvelimelta on tullut kirjautumisvarmistus.
  */
 Session.prototype.getSession = function() {
+  backend.get('user/get_session_user')
+  .then(
+    function fulfilled(data) {
+      const session_user = data;
+
+      if (session_user.has_sign_in !== null && session_user.has_sign_in !== undefined) {
+        document.cookie = 'userId=' + session_user.has_sign_in.id;
+        document.cookie = 'userFirstName=' + session_user.has_sign_in.first_name;
+      }
+    },
+    function rejected() {
+      console.warn('Could not retrieve session');
+    }
+  );
+
+/*
   var req = new XMLHttpRequest();
   req.onreadystatechange = function() {
     if (req.readyState !== this.DONE) {
@@ -89,6 +105,7 @@ Session.prototype.getSession = function() {
   req.open('GET', BACKEND_BASE_URL + 'user/get_session_user', true);
   req.withCredentials = true;
   req.send();
+  */
 }
 
 /** 

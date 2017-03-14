@@ -3,21 +3,15 @@
  */
 
 class Backend {
-
-  constructor(baseURL) {
-    this.baseURL = baseURL;
-  }
-
   /**
    * Performs a GET request to a specified URL
    * @param  {String} url RESTful URL (without the base URL)
    * @return {JSON} Server response
    */
   get(url) {
-    const baseURL = this.baseURL;
     return new Promise((resolve, reject) => {
       const request = new XMLHttpRequest();
-      request.open('GET', baseURL + url, true);
+      request.open('GET', BACKEND_BASE_URL + url, true);
       request.withCredentials = true;
       request.onload = () => {
         if (request.status >= 200 && request.status < 400) {
@@ -37,10 +31,9 @@ class Backend {
    * @return {[type]}      [description]
    */
   post(url, data) {
-    const baseURL = this.baseURL;
     return new Promise((resolve, reject) => {
       const request = new XMLHttpRequest();
-      request.open('POST', baseURL + url, true);
+      request.open('POST', BACKEND_BASE_URL + url, true);
       request.withCredentials = true;
 
       request.onload = () => {

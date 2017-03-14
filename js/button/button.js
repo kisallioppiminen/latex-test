@@ -155,9 +155,6 @@ function sendCheckmark(id) {
  * Execute when DOM has loaded
  */
 $(document).ready(function() {
-
-    backend = new Backend(BACKEND_BASE_URL);
-
     if (window.location.pathname.includes("/kurssit") && session.getUserId() !== undefined) {
         backend.get(`students/${session.getUserId()}/courses`)
         .then(
