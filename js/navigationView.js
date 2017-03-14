@@ -61,9 +61,9 @@ class NavigationView {
     }
 
     // Append everything to dropdown menu
-    dropdownMenu.appendChild(this.createLink(kurssihallinta, 'Kurssihallinta'));
-    dropdownMenu.appendChild(this.createLink(omatKurssit, 'Omat kurssit'));
-    dropdownMenu.appendChild(this.createLink(kirjauduUlos, 'Kirjaudu ulos', kirjauduUlosClickEvent));
+    dropdownMenu.appendChild(this._createLink(kurssihallinta, 'Kurssihallinta'));
+    dropdownMenu.appendChild(this._createLink(omatKurssit, 'Omat kurssit'));
+    dropdownMenu.appendChild(this._createLink(kirjauduUlos, 'Kirjaudu ulos', kirjauduUlosClickEvent));
     liDropdown.appendChild(dropdownMenu);
 
     // Append everything to navigation bar
@@ -78,10 +78,10 @@ class NavigationView {
     {key: 'data-toggle', value: 'modal'},
     {key: 'data-target', value: '#login-modal'},
     ];
-    this.nav.appendChild(this.createLink(kirjautuminen, 'Kirjautuminen'));
+    this.nav.appendChild(this._createLink(kirjautuminen, 'Kirjautuminen'));
   }
 
-  createLink(att, text, clickEvent) {
+  _createLink(att, text, clickEvent) {
     var li = document.createElement('li');
     var a = document.createElement('a');
     att.forEach(function(conf) {
