@@ -96,9 +96,5 @@ Session.prototype.getSession = function() {
  * kirjautunut. Todennus tapahtuu evästeiden avulla.
  */
 Session.prototype.isLogged = function() {
-  if (document.getCookie('userId') !== undefined && document.getCookie('userFirstName') !== undefined) {
-    return true;
-  } else {
-    return false;
-  }
+  return document.getCookie('userId') !== undefined && document.getCookie('userFirstName') !== undefined
 }
