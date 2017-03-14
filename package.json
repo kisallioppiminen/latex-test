@@ -12,5 +12,29 @@
     "karma-firefox-launcher": "^1.0.1",
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.2"
-  }
+  },
+  "name": "ohtukisalli.github.io",
+  "description": "* Development/Staging version: [https://ohtukisalli.github.io/dev-frontend/](https://ohtukisalli.github.io/dev-frontend/) * Production version: [http://beta.kisallioppiminen.fi/](http://beta.kisallioppiminen.fi/)",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-config-standard": "^7.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "karma-chrome-launcher": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OhtuKisalli/dev-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OhtuKisalli/dev-frontend/issues"
+  },
+  "homepage": "https://github.com/OhtuKisalli/dev-frontend#readme"
 }
