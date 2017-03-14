@@ -96,7 +96,8 @@ function getCourseExercises(course_id) {
  */
 $(document).ready(function() {
     $("#newCourseForm").on('submit', function (e) {
-        $('#validationMessage').hide();
+        var alert = '<div id="join_course_alert" class="alert alert-info" role="alert">Kurssia luodaan...</div>';
+        $('#validationMessage').html(alert).show();
         data = $(this).serializeArray().reduce(function(obj, item) {
             obj[item.name] = item.value;
             return obj;

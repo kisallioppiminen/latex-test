@@ -34,7 +34,7 @@ console.log(document.domain);
 //if in localhost
 if (document.domain == "localhost") {
     console.log("settign local urls!")
-    temp_backend_base_url = "http://localhost:3000/";
+    temp_backend_base_url = "https://pure-inlet-98383.herokuapp.com/";
     temp_frontend_base_url = "http://localhost:4000/";
     console.log(temp_backend_base_url);
 } else if (document.domain == "ohtukisalli.github.io") {
