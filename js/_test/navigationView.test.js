@@ -33,7 +33,7 @@ describe('Navigation view', function() {
     beforeEach(function() {
       session = new Session();
       document.cookie = 'userFirstName=Testaaja';
-      navigationview.buildUser();
+      navigationview._buildUser();
       links = document.getElementsByTagName('a');
     });
     afterEach(function() {

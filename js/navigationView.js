@@ -10,14 +10,13 @@ class NavigationView {
   
   showNavigation() {
     if (session.isLogged()) {
-      this.buildUser();
-      // view.navigation.buildUser();
+      this._buildUser();
     } else {
       this._buildGuest();
     }
   }
   
-  buildUser() {
+  _buildUser() {
     var nav = document.querySelector('nav>ul');
 
     // Create navigation link
