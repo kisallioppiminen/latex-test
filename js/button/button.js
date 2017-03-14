@@ -104,43 +104,20 @@ function extractCourseData(data) {
 }
 
 /**
- * Gets current course key
- * @returns {String} course key
- */
-function getCourseKey() {
-    return $.ajax({
-        url: BACKEND_BASE_URL + `students/${session.getUserId()}/courses`,
-        dataType: 'json',
-        xhrFields: {
-            withCredentials: true
-        },
-        crossDomain: true
-    })
-    .done(function(e) {
-        extractCourseData(e);
-    });
-}
-
-/**
  * Requests student's checkmarks and proceeds to color them if request is successful.
  */
 function getCheckmarks() {
-    var restfulUrl = BACKEND_BASE_URL + `students/${session.getUserId()}/courses/${course_id}/checkmarks`;
+    var restfulUrl = `students/${session.getUserId()}/courses/${course_id}/checkmarks`;
 
-    $.ajax({
-        url: restfulUrl,
-        dataType: 'json',
-        xhrFields: {
-            withCredentials: true
-        },
-        crossDomain: true,
-        success: function(data) {
+    backend.get(restfulUrl)
+    .then(
+        function fulfilled(data) {
             colorCheckmarks(data);
         },
-        error: function(data) {
+        function rejected(data) {
             console.warn("Could not retrieve checkmarks. Message: " + JSON.parse(data.responseText).error);
         }
-    });
+    );
 }
 
 /**
@@ -162,24 +139,16 @@ function sendCheckmark(id) {
         coursekey: coursekey
     };
 
-    $.ajax({
-        url: BACKEND_BASE_URL+ 'checkmarks',
-        type : 'POST',
-        dataType : 'json',
-        contentType: 'application/json',
-        xhrFields: {
-            withCredentials: true
+    backend.post('checkmarks', checkmark)
+    .then(
+        function fulfilled() {
+         changeButtonTitleText(id.substr(2,id.length - 1), "Vastauksesi on lähetetty!");
+         changeProblemHeaderColor(id);   
         },
-        crossDomain: true,
-        data : JSON.stringify(checkmark),
-        success : function() {
-            changeButtonTitleText(id.substr(2,id.length - 1), "Vastauksesi on lähetetty!");
-            changeProblemHeaderColor(id);
-        },
-        error: function(data) {
+        function rejected(data) {
             changeButtonTitleText(id.substr(2,id.length - 1), "Virhe! " + JSON.parse(data.responseText).error);
         }
-    });
+    );
 }
 
 /**
@@ -187,12 +156,20 @@ function sendCheckmark(id) {
  */
 $(document).ready(function() {
 
+    backend = new Backend(BACKEND_BASE_URL);
+
     if (window.location.pathname.includes("/kurssit") && session.getUserId() !== undefined) {
-        getCourseKey().done(function() {
-            if (typeof coursekey !== 'undefined') {
-                addButtons();
-                getCheckmarks();
-            }
-        });
+        backend.get(`students/${session.getUserId()}/courses`)
+        .then(
+            function fulfilled(data) {
+                extractCourseData(data);
+                if (typeof coursekey !== 'undefined') {
+                    addButtons();
+                    getCheckmarks();
+                }
+            },
+            function rejected() {
+                console.warn("Error, could not get coursekey");
+            });
     }
 });
