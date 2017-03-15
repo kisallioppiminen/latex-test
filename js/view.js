@@ -163,6 +163,65 @@ class View {
     return element;
   }
 
+  createButtonDiv(id) {
+    let buttonDiv = document.createElement('div');
+    buttonDiv.setAttribute('class', 'problemButtonWrap');
+
+    let buttonHeader = document.createElement('h3');
+    buttonHeader.setAttribute('id', `textbar_${id}`);
+    buttonHeader.innerHTML = 'Miten tehtävä meni?';
+
+    buttonDiv.appendChild(buttonHeader);
+
+    return buttonDiv;
+  }
+
+  createButtonGroup() {
+    let buttonGroup = document.createElement('div');
+    buttonGroup.setAttribute('class', 'btn-group');
+
+    return buttonGroup;
+  }
+
+  createButton(status, id) {
+    const messages = [
+      {
+        tooltipText: 'En osannut tehtävää. Tarvitsen apua.',
+        status: '0',
+        filename: 'sad',
+        buttonClass: 'danger'
+      },
+      {
+        tooltipText: 'Ratkaisin tehtävän, mutta olen epävarma vastauksesta.',
+        status: '1',
+        filename: 'meh',
+        buttonClass: 'warning'
+      },
+      {
+        tooltipText: 'Ratkaisin tehtävän ja osaan tämän.',
+        status: '2',
+        filename: 'happy',
+        buttonClass: 'success'
+      }
+    ];
+
+    let button = document.createElement('button');
+    let face = document.createElement('img');
+    face.setAttribute('src', `/img/faces/${messages[status].filename}.svg`);
+    
+    let attributes = [
+    {key: 'data-toggle', value: 'tooltip'}, 
+    {key: 'id', value: `${status};${id}`}, 
+    {key: 'title', value: messages[status].tooltipText},
+    {key: 'class', value: `problemButton btn btn-${messages[status].buttonClass} btn-primary`}
+    ];
+
+    button = this._addAttributesToElement(attributes, button);
+    button.appendChild(face);
+
+    return button;
+  }
+
 }
 
 
