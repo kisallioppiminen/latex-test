@@ -1,10 +1,10 @@
 var session = new Session();
-var navigationview = new NavigationView();
+var view = new View();
 const backend = new Backend();
 session.init();
 window.onload = function() {
 
   // session.showNav();
-  navigationview.showNavigation();
+  view.showNavigation();
 
 }
