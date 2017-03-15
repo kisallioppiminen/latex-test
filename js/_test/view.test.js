@@ -1,8 +1,10 @@
 /**
- * @file Unit tests for view module in file navigationView.js.
+ * @file Unit tests for view module in file view.js.
  * @license GPL v2
  * @version 1.00
  */
+
+let view;
 
 describe('Navigation view', function() {
   beforeEach(function() {
@@ -10,12 +12,12 @@ describe('Navigation view', function() {
     let ul = document.createElement('ul');
     nav.appendChild(ul);
     document.body.appendChild(nav);
-    navigationview = new NavigationView();
+    view = new View();
   });
   afterEach(function() {
     let navs = document.getElementsByTagName('nav');
     document.body.removeChild(navs[0]);
-    navigationview = undefined;
+    view = undefined;
   });
 
   it('should be empty if nothing has been built', function() {
@@ -23,7 +25,7 @@ describe('Navigation view', function() {
     expect(nav.length).toBe(1);
   })
   it("should have 'Kirjautuminen' in the nav after Guest view has been built", function() {
-    navigationview._buildGuest();
+    view._buildGuest();
     let links = document.getElementsByTagName('a');
     expect(links.length).toBe(1);
     expect(links[0].innerHTML).toBe('Kirjautuminen');
@@ -33,7 +35,7 @@ describe('Navigation view', function() {
     beforeEach(function() {
       session = new Session();
       document.cookie = 'userFirstName=Testaaja';
-      navigationview._buildUser();
+      view._buildUser();
       links = document.getElementsByTagName('a');
     });
     afterEach(function() {
@@ -74,17 +76,17 @@ describe('Login modal', function() {
     let div = document.createElement('div');
     div.setAttribute('id', 'login-modal-body');
     document.body.appendChild(div);
-    navigationview = new NavigationView();
+    view = new View();
   });
   afterEach(() => {
     let div = document.getElementById('login-modal-body')
     document.body.removeChild(div);
-    navigationview = undefined;
+    view = undefined;
   });
 
   describe('form', () => {
     beforeEach(() => {
-      navigationview._buildModal();
+      view._buildModal();
     });
     // afterEach(() => {
     // });
@@ -97,7 +99,7 @@ describe('Login modal', function() {
   describe('Google link', () => {
     beforeEach(() => {
       a = document.getElementsByTagName('a');
-      navigationview._buildModal();
+      view._buildModal();
     });
     afterEach(() => {
       a = undefined;

@@ -2,7 +2,7 @@
   * @class
   */
 
-class NavigationView {
+class View {
 
   constructor() {
     this.nav = document.querySelector('nav>ul');

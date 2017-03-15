@@ -19,7 +19,7 @@ module.exports = function(config) {
       'js/_test/jquery-2.2.4.min.js',
       'js/common.js',
       'js/session.js',
-      'js/navigationView.js',
+      'js/view.js',
       'js/_test/*.js'
     ],
 
