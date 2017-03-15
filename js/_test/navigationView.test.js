@@ -23,7 +23,7 @@ describe('Navigation view', function() {
     expect(nav.length).toBe(1);
   })
   it("should have 'Kirjautuminen' in the nav after Guest view has been built", function() {
-    navigationview.buildGuest();
+    navigationview._buildGuest();
     let links = document.getElementsByTagName('a');
     expect(links.length).toBe(1);
     expect(links[0].innerHTML).toBe('Kirjautuminen');
@@ -33,7 +33,7 @@ describe('Navigation view', function() {
     beforeEach(function() {
       session = new Session();
       document.cookie = 'userFirstName=Testaaja';
-      navigationview.buildUser();
+      navigationview._buildUser();
       links = document.getElementsByTagName('a');
     });
     afterEach(function() {
@@ -66,6 +66,50 @@ describe('Navigation view', function() {
     it('should have "Kirjaudu ulos" pointing to the correct URL', function() {
       expect(links[3].href).toBe(BACKEND_BASE_URL + 'users/sign_out.html');
     })
+  });
+});
+
+describe('Login modal', function() {
+  beforeEach(() => {
+    let div = document.createElement('div');
+    div.setAttribute('id', 'login-modal-body');
+    document.body.appendChild(div);
+    navigationview = new NavigationView();
+  });
+  afterEach(() => {
+    let div = document.getElementById('login-modal-body')
+    document.body.removeChild(div);
+    navigationview = undefined;
+  });
+
+  describe('form', () => {
+    beforeEach(() => {
+      navigationview._buildModal();
+    });
+    // afterEach(() => {
+    // });
+    it('should have three input field', () => {
+      let inputs = document.getElementsByTagName('input');
+      expect(inputs.length).toBe(3);
+    });
+  });
+
+  describe('Google link', () => {
+    beforeEach(() => {
+      a = document.getElementsByTagName('a');
+      navigationview._buildModal();
+    });
+    afterEach(() => {
+      a = undefined;
+    });
+
+    it('should exist', () => {
+      expect(a.length).toBe(1);
+    });
+    it('should point to URL where BACKEND_BASE_URL is pointing for authenticating', () => {
+      let a = document.getElementsByTagName('a');
+      expect(a[0].href).toBe(BACKEND_BASE_URL + 'users/auth/google_oauth2');
+    });
 
   });
 });
