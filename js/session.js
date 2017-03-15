@@ -23,7 +23,7 @@ Session.prototype.init = function () {
   if (!this.isLogged()) {
     this.getSession();
   } 
-}
+};
 
 /**
  * Palauttaa evästeistä käyttäjän ID:n.
@@ -32,7 +32,7 @@ Session.prototype.init = function () {
  */
 Session.prototype.getUserId = function() {
   return document.getCookie('userId');
-}
+};
 
 /**
  * Palauttaa evästeistä käyttäjän etunimen.
@@ -41,7 +41,7 @@ Session.prototype.getUserId = function() {
  */
 Session.prototype.getUserFirstName = function() {
   return document.getCookie('userFirstName');
-}
+};
 
 /**
  * Poistaa evästeet, joilla kirjautumista tarkkaillaan.
@@ -50,7 +50,7 @@ Session.prototype.getUserFirstName = function() {
 Session.prototype.logout = function() {
   document.deleteCookie('userId');
   document.deleteCookie('userFirstName');
-}
+};
 
 /**
  * Jos evästeitä ei ole asetettu, käy kysymässä palvelimelta onko kyseinen
@@ -106,12 +106,12 @@ Session.prototype.getSession = function() {
   req.withCredentials = true;
   req.send();
   */
-}
+};
 
 /** 
  * Palauttaa True jos käyttäjä on kirjautunut ja False, jos käyttäjä ei ole
  * kirjautunut. Todennus tapahtuu evästeiden avulla.
  */
 Session.prototype.isLogged = function() {
-  return document.getCookie('userId') !== undefined && document.getCookie('userFirstName') !== undefined
-}
+  return document.getCookie('userId') !== undefined && document.getCookie('userFirstName') !== undefined;
+};
