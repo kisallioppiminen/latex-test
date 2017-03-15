@@ -5,6 +5,12 @@ module.exports = {
         "es6": true,
         "jasmine": true
     },
+    "globals": {
+      "backend": true,
+      "view": true,
+      "session": true,
+      "module": true
+    },
     "extends": "eslint:recommended",
     "parserOptions": {
         "sourceType": "module"
