@@ -1,6 +1,6 @@
 class CourseList {
 
-  createCourseList(data) {
+  static createCourseList(data) {
     for (let i in data) {
       this._createListItem(data[i]);
     }
@@ -11,7 +11,7 @@ class CourseList {
     });
   }
 
-  _createListItem(data) {
+  static _createListItem(data) {
     const sd = new Date(data.startdate);
     const ed = new Date(data.enddate);
     const formattedTime = `${sd.getDate()}.${sd.getMonth() + 1}.${sd.getFullYear().toString().substr(2,2)} – ${ed.getDate()}.${ed.getMonth() + 1}.${ed.getFullYear().toString().substr(2,2)}`;
@@ -35,6 +35,23 @@ class CourseList {
     $(".courseList").append(html_boilerplate);
   }
 
+  init() {
+    let role = 'teachers';
+    if (window.location.pathname.includes("/omat_kurssit")) {
+      role = 'students';
+    }
+
+    backend.get(`${role}/${session.getUserId()}/courses`)
+      .then(
+        function fulfilled(data) {
+          CourseList.createCourseList(data);
+        },
+        function rejected() {
+          console.warn("Could not retrieve course keys");
+        }
+      );
+  }
+
 }
 
 /**
@@ -42,14 +59,6 @@ class CourseList {
  */
 $(document).ready(function () {
   const courselist = new CourseList();
+  courselist.init();
 
-  backend.get(`teachers/${session.getUserId()}/courses`)
-    .then(
-      function fulfilled(data) {
-        courselist.createCourseList(data);
-      },
-      function rejected() {
-        console.warn("Could not retrieve course keys");
-      }
-    );
 });

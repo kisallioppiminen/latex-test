@@ -3,6 +3,79 @@ title: Omat kurssit
 layout: default
 ---
 
+<style>
+/* Table style */
+/* TODO: refactor this */
+table {
+    border-spacing: 0 0;
+    table-layout: fixed;
+
+}
+
+td {
+    white-space: nowrap;
+}
+
+th {
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    min-width: 24px;
+    max-width: 24px;
+}
+
+.name {
+    text-align: right;
+    font-size: 11pt;
+    font-family: sans-serif;
+    font-weight: 400;
+    padding-right: 8px;
+}
+
+.red {
+    margin: 1px;
+    width: 24px;
+    height: 24px;
+    background: rgb(217, 83, 79);
+}
+
+.yellow {
+    margin: 1px;
+    width: 24px;
+    height: 24px;
+    background: rgb(240, 173, 78);
+}
+
+.green { 
+    margin: 1px;
+    width: 24px;
+    height: 24px;
+    background: rgb(92, 184, 92);
+}
+
+.gray {
+    margin: 1px;
+    width: 24px;
+    height: 24px;
+    background: rgb(105,105,105);
+}
+
+.numberHeader {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+    font-size: 11pt;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: left;
+    
+    padding: 8px 0;
+}
+</style>
+
 <section class="panel panel-courselisting">
     <header>
         <h1>Lisää uusi kurssi:</h1>
@@ -21,8 +94,9 @@ layout: default
     </div>
 </section>
 
-<section class="panel panel-courselisting" id="courseList">
-</section>
+<div class="courseList"></div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="{{site.url}}/js/scoreboard.js"></script>
+<script src="{{site.url}}/js/courselist.js"></script>
 <script src="{{site.url}}/js/join_course.js"></script>

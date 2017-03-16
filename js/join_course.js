@@ -70,7 +70,7 @@ function getMyCourses() {
 /**
  * Execute when DOM has loaded
  */
-$( document ).ready(function() {
+$(document).ready(function() {
 
     getMyCourses();
 

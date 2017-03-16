@@ -4,7 +4,7 @@
 
 class Scoreboard {
 
-  _compare(a, b) {
+  static _compare(a, b) {
     if (a.user < b.user)
       return -1;
     if (a.user > b.user)
@@ -13,7 +13,8 @@ class Scoreboard {
   }
 
   static createTable(courseData, exercises, table_id) {
-    courseData.sort(this._compare);
+    console.log(courseData);
+    courseData.sort(Scoreboard._compare);
 
     const keys = {
       "green": 0,
@@ -82,18 +83,20 @@ class Scoreboard {
     $('[data-toggle="tooltip"]').tooltip();
 
     // make table sortable
-    let nto = document.getElementById(id);
-    sorttable.makeSortable(nto);
+    if (courseData.length > 1) {
+      let nto = document.getElementById(id);
+      sorttable.makeSortable(nto);
+    }
   }
 
   getPageData(course_id) {
     // Using jQuery AJAX because backend.js can only communicate with backend URL
     return $.ajax({
-      url : FRONTEND_BASE_URL + `kurssit/${course_id}/print.html`,
-      success : function(result){
+      url: FRONTEND_BASE_URL + `kurssit/${course_id}/print.html`,
+      success: function (result) {
         return result;
       },
-      error: function() {
+      error: function () {
         console.warn("Could not retrieve course page");
       }
     });
@@ -128,8 +131,16 @@ class Scoreboard {
 
   static createScoreboard(pageData, data) {
     let exercises = this.getExerciseNumbers(pageData);
-    this.createTable(data.students, exercises, data.coursekey);
-
+    console.log(data);
+    if (data.exercises) {
+      let studentData = [{
+        user: session.getUserFirstName(),
+        exercises: data.exercises
+      }];
+      this.createTable(studentData, exercises, data.coursekey);
+    } else {
+      this.createTable(data.students, exercises, data.coursekey);
+    }
   }
 
   init(data, key) {
@@ -141,10 +152,16 @@ class Scoreboard {
       }
     }
 
+    let url = `courses/${course.id}/scoreboard`;
+
+    if (window.location.pathname.includes("/omat_kurssit")) {
+      url = `students/${session.getUserId()}/courses/${course.id}/scoreboard`;
+    }
+
     this.getPageData(course.html_id)
       .then(
         function fulfilled(pageData) {
-          backend.get(`courses/${course.id}/scoreboard`)
+          backend.get(url)
             .then(
               function fulfilled(data) {
                 Scoreboard.createScoreboard(pageData, data);
