@@ -8,10 +8,6 @@ flatpickr(".flatpickr", {
   altFormat: "F j, Y"
 });
 
-/**
- * Sends new course information to backend.
- * @param  {Object} exercises Exercises as a JavaScript object
- */
 class Course {
 
   static createCoursePost(data, exercises) {

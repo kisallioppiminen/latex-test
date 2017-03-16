@@ -1,7 +1,3 @@
-/**
- * Changes exercise header color based on color and exercise ID.
- * @param id {String} 'COLOR_ID;EXERCISE_ID' for example '0;e56f54a7-3619-4cf8-bb6c-00ab8243b818'
- */
 class Button {
 
   constructor() {
