@@ -40,7 +40,7 @@ class Backend {
         if (request.status >= 200 && request.status < 400) {
           resolve(JSON.parse(request.responseText));
         } else {
-          reject(JSON.parse(request));
+          reject(JSON.parse(request.responseText));
         }
       };
       request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');

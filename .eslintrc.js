@@ -9,7 +9,10 @@ module.exports = {
       "backend": true,
       "view": true,
       "session": true,
-      "module": true
+      "module": true,
+      "Scoreboard": true,
+      "sorttable": true,
+      "Exercises": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {

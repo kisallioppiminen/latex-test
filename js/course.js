@@ -31,38 +31,18 @@ class Course {
           $('#validationMessage').html(alert).show();
         },
         function rejected(data) {
-          const alert = '<div id="join_course_alert" class="alert alert-danger" role="alert">' + JSON.parse(data.responseText).error + '</div>';
+          const alert = '<div id="join_course_alert" class="alert alert-danger" role="alert">' + data.error + '</div>';
           $('#validationMessage').html(alert).show();
         }
       );
-  }
-
-  static extractExercises(data, pageData) {
-    const regex = /(?:id="chapterNumber" value="([0-9])")|(?:<div\s+class="tehtava"\s+id="([a-zA-Z0-9ÅåÄäÖö.;:_-]+)">)/g;
-    let regex_array = regex.exec(pageData);
-
-    let exercises = {};
-    let chapterNumber = 0;
-    let exerciseCounter = 1;
-
-    while (regex_array != null) {
-      if (regex_array[1] == null) {
-        exercises[chapterNumber + "." + exerciseCounter] = regex_array[2];
-        exerciseCounter++;
-      } else if (regex_array[2] == null) {
-        chapterNumber = regex_array[1];
-        exerciseCounter = 1;
-      }
-      regex_array = regex.exec(pageData);
-    }
-    Course.createCoursePost(data, exercises);
   }
 
   static getCourseExercises(data) {
     $.ajax({
       url: FRONTEND_BASE_URL + `kurssit/${data.courseSelect}/print.html`,
       success: function (pageData) {
-        Course.extractExercises(data, pageData);
+        let exercises = Exercises.extractExercises(pageData);
+        Course.createCoursePost(data, exercises);
       },
       error: function () {
         console.log("Could not retrieve course page");

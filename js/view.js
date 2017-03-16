@@ -222,6 +222,105 @@ class View {
     return button;
   }
 
+  createScoreboardFrame(id) {
+    let scoreboard = document.createElement('table');
+    scoreboard.setAttribute('class', 'sortable');
+    scoreboard.setAttribute('id', id);
+
+    let head = document.createElement('thead');
+    scoreboard.appendChild(head);
+
+    let column = document.createElement('th');
+    column.setAttribute('class', 'nameColumn');
+
+    scoreboard.querySelector('thead').appendChild(column);
+
+    return scoreboard;
+  }
+
+  createExercise(number) {
+    let item = document.createElement('th');
+    item.setAttribute('class', 'numberHeader sortable');
+    item.innerHTML = number;
+    return item;
+  }
+
+  createName(name) {
+    let row = document.createElement('tr');
+    let item = document.createElement('td');
+    item.setAttribute('class', 'name');
+    item.innerHTML = name;
+    row.appendChild(item);
+    return row;
+  }
+
+  createCheckmark(key, status, name, exercise) {
+    let mark = document.createElement('td');
+    mark.setAttribute('id', 'status');
+    mark.setAttribute('sorttable_customkey', key);
+    let color = document.createElement('div');
+    color.setAttribute('class', status);
+    color.setAttribute('data-toggle', 'tooltip');
+    color.setAttribute('title', `${name} - ${exercise}`);
+    mark.appendChild(color);
+    return mark;
+  }
+
+  createListItem(data, formattedTime) {
+    let listItem = document.createElement('section');
+    listItem.setAttribute('class', 'panel panel-courselisting');
+
+    let header = document.createElement('header');
+    let nameH1 = document.createElement('h1');
+    nameH1.innerHTML = data.name;
+
+    let h2 = document.createElement('h2');
+    h2.style = "display: inline-block; color: #888888";
+    h2.innerHTML = formattedTime;
+
+    let coursekeyH1 = document.createElement('h1');
+    coursekeyH1.style = "float: right";
+
+    let collapseAttributes = [
+      { key: 'id', value: data.coursekey },
+      { key: 'data-toggle', value: 'collapse' },
+      { key: 'class', value: 'collapsed' },
+      { key: 'data-target', value: `#checkmarkTable${data.coursekey}` }
+    ];
+
+    let collapseLink = document.createElement('a');
+    collapseLink = this._addAttributesToElement(collapseAttributes, collapseLink);
+
+    coursekeyH1.appendChild(collapseLink);
+
+    let coursekeyH3 = document.createElement('h3');
+    coursekeyH3.style = "font-family: monospace; float: right; display: inline-block; color: #666666";
+
+    header.appendChild(nameH1);
+    header.appendChild(h2);
+    header.appendChild(coursekeyH1);
+    header.append(coursekeyH3);
+    listItem.appendChild(header);
+
+    let courseDiv = document.createElement('div');
+    courseDiv.setAttribute('id', `checkmarkTable${data.coursekey}`);
+    courseDiv.setAttribute('class', 'collapse');
+    courseDiv.style = "overflow-x:auto;";
+
+    let alertDiv = document.createElement('div');
+    alertDiv.setAttribute('class', "alert alert-info");
+    alertDiv.setAttribute('id', `loadingAlert${data.coursekey}`);
+
+    let message = document.createElement('strong');
+    message.innerHTML = "Ladataan tulostaulua...";
+
+    alertDiv.appendChild(message);
+    courseDiv.appendChild(alertDiv);
+    listItem.appendChild(courseDiv);
+
+    return listItem;
+  }
+
 }
 
 

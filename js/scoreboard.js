@@ -13,7 +13,6 @@ class Scoreboard {
   }
 
   static createTable(courseData, exercises, table_id) {
-    console.log(courseData);
     courseData.sort(Scoreboard._compare);
 
     const keys = {
@@ -25,23 +24,10 @@ class Scoreboard {
 
     let id = Math.random().toString(36).substring(7);
 
-    let scoreboard = document.createElement('table');
-    scoreboard.setAttribute('class', 'sortable');
-    scoreboard.setAttribute('id', id);
-
-    let head = document.createElement('thead');
-    scoreboard.appendChild(head);
-
-    let column = document.createElement('th');
-    column.setAttribute('class', 'nameColumn');
-
-    scoreboard.querySelector('thead').appendChild(column);
+    let scoreboard = view.createScoreboardFrame(id);
 
     for (let i in exercises) {
-      let exercise = exercises[i];
-      let item = document.createElement('th');
-      item.setAttribute('class', 'numberHeader sortable');
-      item.innerHTML = exercise.number;
+      let item = view.createExercise(exercises[i].number);
       scoreboard.querySelector('thead').appendChild(item);
     }
 
@@ -49,31 +35,19 @@ class Scoreboard {
     scoreboard.appendChild(body);
 
     for (let j in courseData) {
-      let row = document.createElement('tr');
       let student = courseData[j];
-      let item = document.createElement('td');
-      item.setAttribute('class', 'name');
-      item.innerHTML = student.user;
-      row.appendChild(item);
+      let row = view.createName(student.user);
+
       for (let k in student.exercises) {
-        let correct_exercise = exercises[k];
+        let correctExercise = exercises[k];
         let exercise = student.exercises.filter(function (obj) {
-          return obj.id == correct_exercise.id;
+          return obj.id == correctExercise.id;
         });
-        let mark = document.createElement('td');
-        mark.setAttribute('id', 'status');
-        mark.setAttribute('sorttable_customkey', keys[exercise[0].status]);
-        let color = document.createElement('div');
-        color.setAttribute('class', exercise[0].status);
-        color.setAttribute('data-toggle', 'tooltip');
-        color.setAttribute('title', `${student.user} - ${correct_exercise.number}`);
-        mark.appendChild(color);
-        row.appendChild(mark);
+        let checkmark = view.createCheckmark(keys[exercise[0].status], exercise[0].status, student.user, correctExercise.number);
+        row.appendChild(checkmark);
       }
       scoreboard.querySelector('tbody').appendChild(row);
     }
-
-    console.log(scoreboard);
 
     $('div[id=checkmarkTable' + table_id + ']').html(scoreboard);
 
@@ -102,36 +76,8 @@ class Scoreboard {
     });
   }
 
-  static getExerciseNumbers(pageData) {
-    // Match either chapter number or exercise ID
-    const regex = /(?:id="chapterNumber" value="([0-9])")|(?:<div\s+class="tehtava"\s+id="([a-zA-Z0-9ÅåÄäÖö.;:_-]+)">)/g;
-    let regex_array = regex.exec(pageData);
-
-    // Initialize variables
-    let exercises = [];
-    let chapterNumber = 0;
-    let exerciseCounter = 1;
-
-    // While matches are found
-    while (regex_array != null) {
-      if (regex_array[1] == null) {
-        exercises.push({
-          id: regex_array[2],
-          number: chapterNumber + "." + exerciseCounter
-        });
-        exerciseCounter++;
-      } else if (regex_array[2] == null) {
-        chapterNumber = regex_array[1];
-        exerciseCounter = 1;
-      }
-      regex_array = regex.exec(pageData);
-    }
-    return exercises;
-  }
-
   static createScoreboard(pageData, data) {
-    let exercises = this.getExerciseNumbers(pageData);
-    console.log(data);
+    let exercises = Exercises.extractExercises(pageData);
     if (data.exercises) {
       let studentData = [{
         user: session.getUserFirstName(),

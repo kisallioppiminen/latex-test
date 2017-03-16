@@ -28,6 +28,7 @@ resources:
     - "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
     - "/js/session.js"
     - "/js/view.js"
+    - "/js/exercises.js"
     - "/js/backend.js"
     - "/js/mooc.js"
     - "/js/numbering.js"
