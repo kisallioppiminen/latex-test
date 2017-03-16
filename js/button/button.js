@@ -12,6 +12,7 @@ class Button {
   }
 
   _changeProblemHeaderColor(id) {
+    const obj = this;
     const problemID = id.substr(2, id.length - 1);
 
     // RGB values for red, yellow and green
@@ -24,6 +25,7 @@ class Button {
     if ($(header_id + " header").css("background").includes(color)) {
       $(header_id + " header").attr("style", "");
       const text_id = 'h3[id="textbar_' + id.substr(2, id.length - 1) + '"]';
+      obj.sendCheckmark(`3;${problemID}`);
       // Restore text
       $(text_id).html("Miten tehtävä meni?");
     } else {
@@ -134,7 +136,7 @@ class Button {
 
   sendCheckmark(id) {
     const obj = this;
-    const stats = ["red", "yellow", "green"];
+    const stats = ["red", "yellow", "green", "gray"];
 
     const checkmark = {
       html_id: id.substr(2, id.length - 1),
@@ -145,8 +147,10 @@ class Button {
     backend.post('checkmarks', checkmark)
       .then(
         function fulfilled() {
-          obj._changeButtonTitleText(id.substr(2, id.length - 1), "Vastauksesi on lähetetty!");
-          obj._changeProblemHeaderColor(id);
+          if(checkmark.status !== 'gray') {
+            obj._changeButtonTitleText(id.substr(2, id.length - 1), "Vastauksesi on lähetetty!");
+            obj._changeProblemHeaderColor(id);
+          }
         },
         function rejected(data) {
           obj._changeButtonTitleText(id.substr(2, id.length - 1), "Virhe! " + JSON.parse(data.responseText).error);
