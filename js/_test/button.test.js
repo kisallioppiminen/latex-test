@@ -58,8 +58,7 @@ describe('Button class', function () {
     button._changeProblemHeaderColor('0;123');
     let element = document.getElementById('header123');
     let style = window.getComputedStyle(element);
-    background = style.getPropertyValue('background');
-    expect(background.includes('rgb(217, 83, 79)')).toBe(true);
+    expect(style.backgroundColor).toBe('rgb(217, 83, 79)');
   });
 
 });
