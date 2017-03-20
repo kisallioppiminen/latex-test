@@ -19,6 +19,7 @@ module.exports = function(config) {
       'js/common.js',
       'js/session.js',
       'js/view.js',
+      'js/button/button.js',
       'js/_test/*.js'
     ],
 

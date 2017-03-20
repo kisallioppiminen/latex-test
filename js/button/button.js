@@ -80,10 +80,9 @@ class Button {
    * Returns current course html_id
    * @returns {String} for example 'may1'
    */
-  _getHTMLID() {
+  _getHTMLID(path) {
     const regexp = /(?:kurssit\/)([a-z0-9]+)(?:\/)/g;
-    const pathname = window.location.pathname;
-    return regexp.exec(pathname)[1];
+    return regexp.exec(path)[1];
   }
 
   /**
@@ -91,8 +90,8 @@ class Button {
    * @param data
    * @returns {*|Document.coursekey}
    */
-  _extractCourseData(data) {
-    const html_id = this._getHTMLID();
+  _extractCourseData(data, path) {
+    const html_id = path;
     for (let i in data) {
       if (data[i].html_id == html_id) {
         this.courseData.coursekey = data[i].coursekey;
@@ -155,7 +154,7 @@ class Button {
   }
 
   init(data) {
-    this._extractCourseData(data);
+    this._extractCourseData(data, this._getHTMLID(window.location.pathname));
     if (this.courseData.coursekey !== '') {
       this._addButtons();
       this._getCheckmarks();
