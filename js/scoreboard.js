@@ -112,8 +112,11 @@ class Scoreboard {
               function fulfilled(data) {
                 Scoreboard.createScoreboard(pageData, data);
               },
-              function rejected() {
-                console.warn("Could not get scoreboard.");
+              function rejected(data) {
+                console.log(course.coursekey);
+                $(`#loadingAlert${course.coursekey}`).removeClass('alert-info').addClass('alert-danger');
+                $(`#loadingAlert${course.coursekey} strong`).html('Virhe! Tulostaulua ei pystytty lataamaan.');
+                console.warn(data + ": Could not get scoreboard.");
               }
             );
         },

@@ -16,6 +16,8 @@ class Backend {
       request.onload = () => {
         if (request.status >= 200 && request.status < 400) {
           resolve(JSON.parse(request.responseText));
+        } else if (request.status === 404) {
+          reject('404');
         } else {
           reject(JSON.parse(request.responseText).error);
         }
