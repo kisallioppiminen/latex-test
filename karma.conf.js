@@ -20,6 +20,7 @@ module.exports = function (config) {
       'js/session.js',
       'js/view.js',
       'js/button/button.js',
+      'js/exercises.js',
       'js/_test/*.js'
     ],
 
@@ -34,7 +35,8 @@ module.exports = function (config) {
       'js/common.js': ['coverage'],
       'js/session.js': ['coverage'],
       'js/view.js': ['coverage'],
-      'js/button/button.js': ['coverage']
+      'js/button/button.js': ['coverage'],
+      'js/exercises.js': ['coverage'],
     },
 
     // optionally, configure the reporter
