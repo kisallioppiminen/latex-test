@@ -18,6 +18,7 @@ module.exports = function (config) {
       'js/_test/jquery-2.2.4.min.js',
       'js/common.js',
       'js/session.js',
+      'js/backend.js',
       'js/view.js',
       'js/button/button.js',
       'js/exercises.js',
@@ -34,6 +35,7 @@ module.exports = function (config) {
     preprocessors: {
       'js/common.js': ['coverage'],
       'js/session.js': ['coverage'],
+      'js/backend.js': ['coverage'],
       'js/view.js': ['coverage'],
       'js/button/button.js': ['coverage'],
       'js/exercises.js': ['coverage'],
