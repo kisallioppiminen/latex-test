@@ -26,14 +26,13 @@ describe('Session manager', function() {
     expect(this.session.getSession).toHaveBeenCalled();
     expect(this.session.getUserFirstName()).toBe(undefined);
   });
+
   it('should set cookies if getSession() returns current user with values', function() {
 
     class Backend {
       get() {
-        return new Promise((resolve, reject) => {
-          console.warn('Mocking');
+        return new Promise((resolve) => {
           resolve({"has_sign_in": { "id": 1234, "first_name": "Weirdoman"}});
-          reject(console.log('Something bad happened'));
         });
       }
     }
@@ -44,32 +43,28 @@ describe('Session manager', function() {
       let forCookies = new Session();
       expect(forCookies.getUserId()).toBe('1234');
       expect(forCookies.getUserFirstName()).toBe('Weirdoman');
-    }, 1);
+    }, 100);
 
-    // waitsFor(function() {
-    //   this.session.getSession();
-    // }, "Cookies should be set after promise is resolved", 1000);
+  });
 
-    // runs(function() {
-    //   expect(document.cookie).toBe('Something else');
-    // });
+  it('should not set cookies, if session call to backend does not return user', function() {
 
-    // while (document.cookie == '') {
-    //   console.warn('Documents are not set!' + document.cookie);
-    // } 
+    class Backend {
+      get() {
+        return new Promise((resolve) => {
+          resolve({"has_sign_in": "null"});
+        });
+      }
+    }
 
-    // expect(document.cookie).toBe('Something else');
+    backend = new Backend();
+    this.session.getSession();
+    setTimeout(function() {
+      let forCookies = new Session();
+      expect(forCookies.getUserId()).toBe(undefined);
+      expect(forCookies.getUserFirstName()).toBe(undefined);
+    }, 100);
 
-    // expect(document.cookie).toBe('Something else');
-    // expect(this.session.getUserFirstName()).toBe('Weirdoman');
-    // expect(this.session.getUserId()).toBe(1234);
-    // let userId = this.session.getUserId();
-    // let userFirstName = session.getUserFirstName('userFirstName');
-    // expect(document.cookie).toBe('something else');
-//     expect(session.getUserId()).toBe('45');
-//     expect(session.getUserFirstName()).toBe('Testaaja');
-//     document.cookie = "";
-//     backend = undefined;
   });
 
   describe('with a user session cookies', function() {
@@ -133,46 +128,3 @@ describe('Session manager', function() {
 
   });
 });
-
-
-//
-// describe('Session manager mocking', function() {
-//   beforeEach(function() {
-//     // this.session = new Session();
-//   });
-//   afterEach(function() {
-//     // this.session = undefined;
-//     // backend = undefined;
-//   });
-//   it('should set cookies if getSession() returns current user with values', () => {
-//     // class Backend {
-//     //   get(url) {
-//     //     return new Promise((resolve, reject) => {
-//     //       resolve({"has_sign_in": null});
-//     //       reject();
-//     //     });
-//     //   }
-//     // }
-//
-//     class Backend {
-//       get(url) {
-//         return new Promise((resolve, reject) => {
-//           resolve({"has_sign_in": { "id": 45, "first_name": "Weirdoman"}});
-//           reject(console.log('Something bad happened'));
-//         });
-//       }
-//     }
-//
-//     let session = new Session();
-//     let backend = new Backend();
-//     this.session.getUserFirstName();
-//     // let userId = this.session.getUserId();
-//     // let userFirstName = session.getUserFirstName('userFirstName');
-//     // expect(document.cookie).toBe('something else');
-// //     expect(session.getUserId()).toBe('45');
-// //     expect(session.getUserFirstName()).toBe('Testaaja');
-// //     document.cookie = "";
-// //     backend = undefined;
-//   });
-// //   it('should not set cookies if getSession() returns current user with key "has_sign_in" with value null', () => {
-// });
