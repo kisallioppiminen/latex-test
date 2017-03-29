@@ -25,7 +25,7 @@ class CourseList {
       role = 'students';
     }
 
-    backend.get(`${role}/${session.getUserId()}/courses`)
+    backend.get(`${role}/${Session.getUserId()}/courses`)
       .then(
         function fulfilled(data) {
           CourseList.createCourseList(data);

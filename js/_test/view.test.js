@@ -33,13 +33,13 @@ describe('Navigation view', function() {
 
   describe('when user has logged in', function() {
     beforeEach(function() {
-      session = new Session();
+      // session = new Session();
       document.cookie = 'userFirstName=Testaaja';
       view._buildUser();
       links = document.getElementsByTagName('a');
     });
     afterEach(function() {
-      session = undefined;
+      // session = undefined;
       links = undefined;
       document.cookie = "";
     });

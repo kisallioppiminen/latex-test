@@ -9,7 +9,7 @@ class View {
   }
   
   showNavigation() {
-    if (session.isLogged()) {
+    if (Session.isLogged()) {
       this._buildUser();
     } else {
       this._buildGuest();
@@ -96,7 +96,7 @@ class View {
     aDropdown.setAttribute('class', 'dropdown-toggle');
 
     let span = document.createElement('span');
-    span.innerHTML = 'Hei, '+ session.getUserFirstName();
+    span.innerHTML = 'Hei, '+ Session.getUserFirstName();
 
     let spanCaret = document.createElement('span');
     spanCaret.setAttribute('class', 'caret');
@@ -119,7 +119,7 @@ class View {
     {key: 'data-method', value: 'GET'}
     ];
     let kirjauduUlosClickEvent = function () {
-      session.logout();
+      Session.logout();
     }
 
     // Append everything to dropdown menu
