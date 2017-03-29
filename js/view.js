@@ -81,24 +81,24 @@ class View {
   }
   
   _buildUser() {
-    var nav = document.querySelector('nav>ul');
+    let nav = document.querySelector('nav>ul');
 
     // Create navigation link
-    var liDropdown = document.createElement('li');
+    let liDropdown = document.createElement('li');
     liDropdown.setAttribute('role', 'presentation');
     liDropdown.setAttribute('class', 'dropdown');
     liDropdown.style.textTransform = 'none';
 
-    var aDropdown = document.createElement('a');
+    let aDropdown = document.createElement('a');
     aDropdown.setAttribute('role', 'button');
     aDropdown.setAttribute('href', '#');
     aDropdown.setAttribute('data-toggle', 'dropdown');
     aDropdown.setAttribute('class', 'dropdown-toggle');
 
-    var span = document.createElement('span');
+    let span = document.createElement('span');
     span.innerHTML = 'Hei, '+ session.getUserFirstName();
 
-    var spanCaret = document.createElement('span');
+    let spanCaret = document.createElement('span');
     spanCaret.setAttribute('class', 'caret');
 
     aDropdown.appendChild(span);
@@ -106,19 +106,19 @@ class View {
     liDropdown.appendChild(aDropdown);
 
     // Create dropdown links
-    var dropdownMenu = document.createElement('ul');
+    let dropdownMenu = document.createElement('ul');
     dropdownMenu.setAttribute('class', 'dropdown-menu');
 
     // Create links for dropdow menu
-    var kurssihallinta = [{key: 'href', value: FRONTEND_BASE_URL + 'kurssihallinta.html'}];
-    var omatKurssit = [{key: 'href', value: FRONTEND_BASE_URL + 'omat_kurssit.html'}];
+    let kurssihallinta = [{key: 'href', value: FRONTEND_BASE_URL + 'kurssihallinta.html'}];
+    let omatKurssit = [{key: 'href', value: FRONTEND_BASE_URL + 'omat_kurssit.html'}];
 
-    var kirjauduUlos = [
+    let kirjauduUlos = [
     {key: 'href', value: BACKEND_BASE_URL + 'users/sign_out.html'},
     {key: 'rel', value: 'nofollow'},
     {key: 'data-method', value: 'GET'}
     ];
-    var kirjauduUlosClickEvent = function () {
+    let kirjauduUlosClickEvent = function () {
       session.logout();
     }
 
@@ -133,8 +133,8 @@ class View {
   }
 
   _buildGuest() {
-    var nav = document.querySelector('nav>ul');
-    var kirjautuminen = [
+    let nav = document.querySelector('nav>ul');
+    let kirjautuminen = [
     {key: 'href', value: '#'}, 
     {key: 'id', value: 'kirjautuminen'}, 
     {key: 'data-toggle', value: 'modal'},
@@ -144,7 +144,7 @@ class View {
   }
 
   _createLink(att, text, clickEvent) {
-    var li = document.createElement('li');
+    let li = document.createElement('li');
     let a = this._addAttributesToElement(att, document.createElement('a'));
     a.innerHTML = text;
 
