@@ -1,7 +1,7 @@
 # Student application Kisallioppiminen.fi with marking system
 
-* Development/Staging version: [https://ohtukisalli.github.io/dev-frontend/](https://ohtukisalli.github.io/dev-frontend/)
-* Production version: [http://beta.kisallioppiminen.fi/](http://beta.kisallioppiminen.fi/)
+* Development/Staging version: [https://ohtukisalli.github.io/dev-frontend/]
+* Production version: [http://beta.kisallioppiminen.fi/]
 
 ## Setting up Kisallioppiminen.fi site locally with Jekyll
 
