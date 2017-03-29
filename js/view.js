@@ -19,7 +19,6 @@ class View {
 
   _buildModal() {
     const AUTHURL = 'users/auth/google_oauth2';
-    let attributes;
 
     let divBody = document.getElementById('login-modal-body');
     let a = document.createElement('a');
@@ -34,50 +33,64 @@ class View {
     divBody.append(a);
 
     if (FRONTEND_BASE_URL == "http://localhost:4000/") {
-
-      let input;
-      let formDiv = document.createElement('div');
-
-      attributes = [
-        {key: 'id', value: 'new_user'},
-        {key: 'action', value: BACKEND_BASE_URL + 'users/sign_in'},
-        {key: 'accept-charset', value: 'UTF8'},
-        {key: 'method', value: 'post'}];
-
-      let form = this._addAttributesToElement(attributes, document.createElement('form'));
-
-      attributes = [
-        {key: 'id', value: 'user_email'}, 
-        {key: 'class', value: 'form-control'},
-        {key: 'type', value: 'email'},
-        {key: 'name', value: 'user[email]'},
-        {key: 'placeholder', value: 'Käyttäjätunnus'}];
-
-      input = this._addAttributesToElement(attributes, document.createElement('input'));
-      formDiv.append(input);
-
-      attributes = [
-        {key: 'id', value: 'user_password'}, 
-        {key: 'class', value: 'form-control'},
-        {key: 'type', value: 'password'},
-        {key: 'name', value: 'user[password]'},
-        {key: 'placeholder', value: 'Salasana'}]; 
-
-      input = this._addAttributesToElement(attributes, document.createElement('input'));
-      formDiv.append(input);
-
-      attributes = [
-        {key: 'class', value: 'login loginmodal-submit btn btn-default'},
-        {key: 'type', value: 'submit'},
-        {key: 'name', value: 'commit'},
-        {key: 'value', value: 'Kirjaudu'}];
-
-      input = this._addAttributesToElement(attributes, document.createElement('input'));
-      formDiv.append(input);
-
-      form.append(formDiv);
-      divBody.append(form);
+      this._addNormalLoginToModal(FRONTEND_BASE_URL);
     }
+
+  }
+
+  _addNormalLoginToModal(backendUrl) {
+
+    let input, attributes;
+    let formDiv = document.createElement('div');
+
+    if (backendUrl === undefined) {
+      attributes = [
+      {key: 'id', value: 'new_user'},
+      {key: 'action', value: BACKEND_BASE_URL + 'users/sign_in'},
+      {key: 'accept-charset', value: 'UTF8'},
+      {key: 'method', value: 'post'}];
+    } else {
+      attributes = [
+      {key: 'id', value: 'new_user'},
+      {key: 'action', value: backendUrl + 'users/sign_in'},
+      {key: 'accept-charset', value: 'UTF8'},
+      {key: 'method', value: 'post'}];
+    }
+
+    let form = this._addAttributesToElement(attributes, document.createElement('form'));
+
+    attributes = [
+    {key: 'id', value: 'user_email'}, 
+    {key: 'class', value: 'form-control'},
+    {key: 'type', value: 'email'},
+    {key: 'name', value: 'user[email]'},
+    {key: 'placeholder', value: 'Käyttäjätunnus'}];
+
+    input = this._addAttributesToElement(attributes, document.createElement('input'));
+    formDiv.append(input);
+
+    attributes = [
+    {key: 'id', value: 'user_password'}, 
+    {key: 'class', value: 'form-control'},
+    {key: 'type', value: 'password'},
+    {key: 'name', value: 'user[password]'},
+    {key: 'placeholder', value: 'Salasana'}]; 
+
+    input = this._addAttributesToElement(attributes, document.createElement('input'));
+    formDiv.append(input);
+
+    attributes = [
+    {key: 'class', value: 'login loginmodal-submit btn btn-default'},
+    {key: 'type', value: 'submit'},
+    {key: 'name', value: 'commit'},
+    {key: 'value', value: 'Kirjaudu'}];
+
+    input = this._addAttributesToElement(attributes, document.createElement('input'));
+    formDiv.append(input);
+
+    form.append(formDiv);
+    document.getElementById('login-modal-body').append(form);
+
   }
   
   _buildUser() {
