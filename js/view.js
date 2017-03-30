@@ -249,20 +249,23 @@ class View {
     scoreboard.setAttribute('class', 'sortable');
     scoreboard.setAttribute('id', id);
 
-    let head = document.createElement('thead');
-    scoreboard.appendChild(head);
+    let body = document.createElement('tbody');
+
+    let item = document.createElement('tr');
+    body.appendChild(item);
+    scoreboard.appendChild(body);
 
     let column = document.createElement('th');
     column.setAttribute('class', 'nameColumn');
 
-    scoreboard.querySelector('thead').appendChild(column);
+    scoreboard.querySelector('tr').appendChild(column);
 
     return scoreboard;
   }
 
   createExercise(number) {
     let item = document.createElement('th');
-    item.setAttribute('class', 'numberHeader sortable');
+    item.setAttribute('class', 'numberHeader');
     item.innerHTML = number;
     return item;
   }

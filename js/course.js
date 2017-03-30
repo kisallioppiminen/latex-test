@@ -1,4 +1,4 @@
-.js/**
+/**
  * Flatpickr options
  */
 flatpickr(".flatpickr", {

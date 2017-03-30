@@ -32,13 +32,13 @@ class Scoreboard {
 
     for (let i in exercises) {
       let item = view.createExercise(exercises[i].number);
-      scoreboard.querySelector('thead').appendChild(item);
+      scoreboard.querySelector('tr').appendChild(item);
     }
 
-    let body = document.createElement('tbody');
-    scoreboard.appendChild(body);
+    //let body = document.createElement('tbody');
+    //scoreboard.appendChild(body);
 
-    for (let j in courseData) {
+    for (let j in courseData) {      
       let student = courseData[j];
       let row = view.createName(student.user);
 
@@ -53,14 +53,14 @@ class Scoreboard {
       scoreboard.querySelector('tbody').appendChild(row);
     }
 
+    $('div[id=checkmarkTable' + table_id + ']').html(scoreboard);
+
     if (window.location.pathname.includes("/kurssihallinta.html")) {
       let fullScreenLink = Scoreboard.getFullScreenLink(course.id, course.html_id, course.coursekey);
-      $('div[id=checkmarkTable' + table_id + ']').append(view.createFullScreenButton('id', fullScreenLink));
+      $('div[id=checkmarkTable' + table_id + ']').prepend(view.createFullScreenButton('id', fullScreenLink));
     } else {
-      $('div[id=checkmarkTable' + table_id + ']').append(view.createCloseButton());
+      $('div[id=checkmarkTable' + table_id + ']').prepend(view.createCloseButton());
     }
-
-    $('div[id=checkmarkTable' + table_id + ']').append(scoreboard);
 
     let alertID = "#loadingAlert" + table_id;
     $(alertID).hide();
@@ -69,7 +69,9 @@ class Scoreboard {
 
     // make table sortable
     if (table_id.length > 1) {
+      console.log(id);
       let nto = document.getElementById(id);
+      console.log(nto);
       sorttable.makeSortable(nto);
     }
   }
