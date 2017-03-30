@@ -24,7 +24,14 @@ class View {
     let a = document.createElement('a');
     let img = document.createElement('img');
 
-    img.setAttribute('src', '/img/google-login.png');
+    let ddomain;
+    if (document.domain == 'ohtukisalli.github.io') {
+      ddomain = '/dev-frontend';
+    } else {
+      ddomain = '';
+    }
+
+    img.setAttribute('src', ddomain + '/img/google-login.png');
     img.setAttribute('alt', 'Google-nappula');
 
     a.setAttribute('href', BACKEND_BASE_URL + AUTHURL);
