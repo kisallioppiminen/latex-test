@@ -353,6 +353,14 @@ class View {
     return button;
   }
 
+  createCloseButton() {
+    let button = document.createElement('button');
+    button.innerHTML = "Sulje";
+    button.setAttribute('class', 'btn btn-info');
+    button.setAttribute('onClick', 'self.close()');
+    return button;
+  }
+
 }
 
 

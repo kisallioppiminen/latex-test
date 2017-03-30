@@ -56,6 +56,8 @@ class Scoreboard {
     if (window.location.pathname.includes("/kurssihallinta.html")) {
       let fullScreenLink = Scoreboard.getFullScreenLink(course.id, course.html_id, course.coursekey);
       $('div[id=checkmarkTable' + table_id + ']').append(view.createFullScreenButton('id', fullScreenLink));
+    } else {
+      $('div[id=checkmarkTable' + table_id + ']').append(view.createCloseButton());
     }
 
     $('div[id=checkmarkTable' + table_id + ']').append(scoreboard);
