@@ -13,6 +13,7 @@ class Scoreboard {
   }
 
   static createTable(courseData, exercises, table_id) {
+    console.log(courseData);
     courseData.sort(Scoreboard._compare);
 
     const keys = {

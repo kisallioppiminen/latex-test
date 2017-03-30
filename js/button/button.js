@@ -148,7 +148,7 @@ class Button {
           }
         },
         function rejected(data) {
-          obj._changeButtonTitleText(id.substr(2, id.length - 1), "Virhe! " + JSON.parse(data.responseText).error);
+          obj._changeButtonTitleText(id.substr(2, id.length - 1), "Virhe! " + data.error);
         }
       );
   }

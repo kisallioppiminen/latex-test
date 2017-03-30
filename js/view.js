@@ -310,6 +310,7 @@ class View {
 
     let coursekeyH3 = document.createElement('h3');
     coursekeyH3.style = "font-family: monospace; float: right; display: inline-block; color: #666666";
+    coursekeyH3.innerHTML = data.coursekey;
 
     header.appendChild(nameH1);
     header.appendChild(h2);
