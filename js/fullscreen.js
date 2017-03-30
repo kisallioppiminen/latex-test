@@ -59,7 +59,10 @@ let id = getQueryVariable('id');
 let html_id = getQueryVariable('html_id');
 let coursekey = getQueryVariable('coursekey');
 $('.scoreboard').attr("id", `checkmarkTable${coursekey}`);
+$('.alert').attr('id', `loadingAlert${coursekey}`);
 let backend = new Backend();
 let view = new View();
 
-getData(id, html_id);
+$(document).ready(function() {
+  getData(id, html_id);
+});

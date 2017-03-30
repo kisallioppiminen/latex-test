@@ -348,6 +348,7 @@ class View {
     let button = document.createElement('a');
     button.innerHTML = "Avaa koko ruudulla";
     button.setAttribute('class', 'btn btn-info');
+    button.setAttribute('target', '_blank');
     button.setAttribute('href', link);
     return button;
   }

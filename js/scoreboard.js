@@ -53,9 +53,11 @@ class Scoreboard {
       scoreboard.querySelector('tbody').appendChild(row);
     }
 
-    var fullScreenLink = Scoreboard.getFullScreenLink(course.id, course.html_id, course.coursekey);
+    if (window.location.pathname.includes("/kurssihallinta.html")) {
+      let fullScreenLink = Scoreboard.getFullScreenLink(course.id, course.html_id, course.coursekey);
+      $('div[id=checkmarkTable' + table_id + ']').append(view.createFullScreenButton('id', fullScreenLink));
+    }
 
-    $('div[id=checkmarkTable' + table_id + ']').append(view.createFullScreenButton('id', fullScreenLink));
     $('div[id=checkmarkTable' + table_id + ']').append(scoreboard);
 
     let alertID = "#loadingAlert" + table_id;
