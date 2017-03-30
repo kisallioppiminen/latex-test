@@ -123,8 +123,10 @@ class View {
     dropdownMenu.setAttribute('class', 'dropdown-menu');
 
     // Create links for dropdow menu
-    let kurssihallinta = [{key: 'href', value: FRONTEND_BASE_URL + 'kurssihallinta.html'}];
-    let omatKurssit = [{key: 'href', value: FRONTEND_BASE_URL + 'omat_kurssit.html'}];
+
+    let kurssihallinta = [{key: 'href', value: FRONTEND_BASE_URL + 'omat/kurssihallinta.html'}];
+    let omatKurssit = [{key: 'href', value: FRONTEND_BASE_URL + 'omat/omat_kurssit.html'}];
+
 
     let kirjauduUlos = [
     {key: 'href', value: BACKEND_BASE_URL + 'users/sign_out.html'},
