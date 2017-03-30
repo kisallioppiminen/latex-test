@@ -8,7 +8,7 @@ module.exports = {
     "globals": {
       "backend": true,
       "view": true,
-      "session": true,
+      "Session": true,
       "module": true,
       "Scoreboard": true,
       "sorttable": true,

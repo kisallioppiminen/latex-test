@@ -33,13 +33,13 @@ describe('Navigation view', function() {
 
   describe('when user has logged in', function() {
     beforeEach(function() {
-      session = new Session();
+      // session = new Session();
       document.cookie = 'userFirstName=Testaaja';
       view._buildUser();
       links = document.getElementsByTagName('a');
     });
     afterEach(function() {
-      session = undefined;
+      // session = undefined;
       links = undefined;
       document.cookie = "";
     });
@@ -54,13 +54,13 @@ describe('Navigation view', function() {
       expect(links[1].innerHTML).toBe('Kurssihallinta');
     });
     it('should have "Kurssihallinta" pointing to the correct URL', function() {
-      expect(links[1].href).toBe(FRONTEND_BASE_URL + 'kurssihallinta.html');
+      expect(links[1].href).toBe(FRONTEND_BASE_URL + 'omat/kurssihallinta.html');
     })
     it('should display a link named "Omat kurssit"', function() {
       expect(links[2].innerHTML).toBe('Omat kurssit');
     });
     it('should have "Omat kurssit" pointing to the correct URL', function() {
-      expect(links[2].href).toBe(FRONTEND_BASE_URL + 'omat_kurssit.html');
+      expect(links[2].href).toBe(FRONTEND_BASE_URL + 'omat/omat_kurssit.html');
     })
     it('should display a link named "Kirjaudu ulos"', function() {
       expect(links[3].innerHTML).toBe('Kirjaudu ulos');

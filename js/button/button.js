@@ -106,7 +106,7 @@ class Button {
    */
   _getCheckmarks() {
     const obj = this;
-    const restfulUrl = `students/${session.getUserId()}/courses/${this.courseData.course_id}/checkmarks`;
+    const restfulUrl = `students/${Session.getUserId()}/courses/${this.courseData.course_id}/checkmarks`;
 
     backend.get(restfulUrl)
       .then(
@@ -169,9 +169,9 @@ class Button {
  * Execute when DOM has loaded
  */
 $(document).ready(function () {
-  if (window.location.pathname.includes("/kurssit") && session.getUserId() !== undefined) {
+  if (window.location.pathname.includes("/kurssit") && Session.getUserId() !== undefined) {
     const button = new Button();
-    backend.get(`students/${session.getUserId()}/courses`)
+    backend.get(`students/${Session.getUserId()}/courses`)
       .then(
         function fulfilled(data) {
           button.init(data);
