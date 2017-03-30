@@ -337,6 +337,14 @@ class View {
     return listItem;
   }
 
+  createFullScreenButton(courseId, link) {
+    let button = document.createElement('a');
+    button.innerHTML = "Avaa koko ruudulla";
+    button.setAttribute('class', 'btn btn-info');
+    button.setAttribute('href', link);
+    return button;
+  }
+
 }
 
 

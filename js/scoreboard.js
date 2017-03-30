@@ -12,8 +12,11 @@ class Scoreboard {
     return 0;
   }
 
-  static createTable(courseData, exercises, table_id) {
-    console.log(courseData);
+  static getFullScreenLink(id, html_id, coursekey) {
+    return `scoreboard.html?id=${encodeURIComponent(id)}&html_id=${encodeURIComponent(html_id)}&coursekey=${coursekey}`;
+  }
+
+  static createTable(courseData, exercises, table_id, course) {
     courseData.sort(Scoreboard._compare);
 
     const keys = {
@@ -50,15 +53,18 @@ class Scoreboard {
       scoreboard.querySelector('tbody').appendChild(row);
     }
 
-    $('div[id=checkmarkTable' + table_id + ']').html(scoreboard);
+    var fullScreenLink = Scoreboard.getFullScreenLink(course.id, course.html_id, course.coursekey);
 
-    let alertID = "#loadingAlert" + courseData.coursekey;
+    $('div[id=checkmarkTable' + table_id + ']').append(view.createFullScreenButton('id', fullScreenLink));
+    $('div[id=checkmarkTable' + table_id + ']').append(scoreboard);
+
+    let alertID = "#loadingAlert" + table_id;
     $(alertID).hide();
 
     $('[data-toggle="tooltip"]').tooltip();
 
     // make table sortable
-    if (courseData.length > 1) {
+    if (table_id.length > 1) {
       let nto = document.getElementById(id);
       sorttable.makeSortable(nto);
     }
@@ -77,16 +83,16 @@ class Scoreboard {
     });
   }
 
-  static createScoreboard(pageData, data) {
+  static createScoreboard(pageData, data, course) {
     let exercises = Exercises.extractExercises(pageData);
     if (data.exercises) {
       let studentData = [{
         user: session.getUserFirstName(),
         exercises: data.exercises
       }];
-      this.createTable(studentData, exercises, data.coursekey);
+      this.createTable(studentData, exercises, data.coursekey, course);
     } else {
-      this.createTable(data.students, exercises, data.coursekey);
+      this.createTable(data.students, exercises, data.coursekey, course);
     }
   }
 
@@ -111,7 +117,7 @@ class Scoreboard {
           backend.get(url)
             .then(
               function fulfilled(data) {
-                Scoreboard.createScoreboard(pageData, data);
+                Scoreboard.createScoreboard(pageData, data, course);
               },
               function rejected(data) {
                 console.log(course.coursekey);
