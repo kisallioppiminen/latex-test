@@ -15,10 +15,10 @@ class Session {
    * Ei kysele palvelimelta kirjautumista, jos eväste on asetettu.
    */
   static init() {
-    if (this.isLogged()) {
+    if (!this.isLogged()) {
       this.getSession();
     } 
-  }
+  } 
 
   /**
    * Jos evästeitä ei ole asetettu, käy kysymässä palvelimelta onko kyseinen
