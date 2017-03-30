@@ -1,7 +1,7 @@
 # Student application Kisallioppiminen.fi with marking system
 
-* Development/Staging version: [https://ohtukisalli.github.io/dev-frontend/](https://ohtukisalli.github.io/dev-frontend/)
-* Production version: [http://beta.kisallioppiminen.fi/](http://beta.kisallioppiminen.fi/)
+* Development/Staging version: https://ohtukisalli.github.io/dev-frontend/
+* Production version: http://beta.kisallioppiminen.fi/
 
 ## Setting up Kisallioppiminen.fi site locally with Jekyll
 
@@ -21,22 +21,16 @@ More detailed instructions can be found [here](https://help.github.com/articles/
 
 ## Run Jekyll with a local backend
 
-To use Jekyll with local backend, execute
-```bash
-JEKYLL_ENV=local bundle exec jekyll serve
-```
-You can use Front Matter's site variable `site.backendbaseurl` and javascript global variable `BACKEND_BASE_URL`. Both will point to `http://localhost:3000/`, which is the default location of local backend.
+Backend is being automatically detected. For more details look at the common.js file in js folder to see how this happens. A normal login (not the Google one), will only appear if Jekyll is being run locally. Sometimes this might not be the behavior you want, but there is a way to bypass it.
 
-Example on how to build html page based on an environment variable with Liquid:
-```html
-{% if jekyll.environment == "local" %}
-<p>Hello world from local!</p>
-<p>This section exist only if Jekyll has been started with JEKYLL_ENV=local.</p>
-{% else %}
-<p>Hello world from production!</p>
-<p>This section is availiable if Jekyll was started normal way.</p>
-{% endif %}
+If you want to have a normal login, run this command in the browser's console:
+```javascript
+view._addNormalLoginToModal(backendUrl)
 ```
+And replace `backendUrl` with the base of the backend location (You don't need to append "users/sign_in" to it). If you leave method without parameters, then the backendUrl will BACKEND_BASE_URL, which is spesified in common.js file.
+
+Note that backend forward after login does not work yet, so you might need to manually return to your frontend.
+
 
 ## Testing with Selenium
 

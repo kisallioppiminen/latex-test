@@ -9,7 +9,7 @@ class View {
   }
   
   showNavigation() {
-    if (session.isLogged()) {
+    if (Session.isLogged()) {
       this._buildUser();
     } else {
       this._buildGuest();
@@ -19,7 +19,6 @@ class View {
 
   _buildModal() {
     const AUTHURL = 'users/auth/google_oauth2';
-    let attributes;
 
     let divBody = document.getElementById('login-modal-body');
     let a = document.createElement('a');
@@ -34,71 +33,85 @@ class View {
     divBody.append(a);
 
     if (FRONTEND_BASE_URL == "http://localhost:4000/") {
-
-      let input;
-      let formDiv = document.createElement('div');
-
-      attributes = [
-        {key: 'id', value: 'new_user'},
-        {key: 'action', value: BACKEND_BASE_URL + 'users/sign_in'},
-        {key: 'accept-charset', value: 'UTF8'},
-        {key: 'method', value: 'post'}];
-
-      let form = this._addAttributesToElement(attributes, document.createElement('form'));
-
-      attributes = [
-        {key: 'id', value: 'user_email'}, 
-        {key: 'class', value: 'form-control'},
-        {key: 'type', value: 'email'},
-        {key: 'name', value: 'user[email]'},
-        {key: 'placeholder', value: 'Käyttäjätunnus'}];
-
-      input = this._addAttributesToElement(attributes, document.createElement('input'));
-      formDiv.append(input);
-
-      attributes = [
-        {key: 'id', value: 'user_password'}, 
-        {key: 'class', value: 'form-control'},
-        {key: 'type', value: 'password'},
-        {key: 'name', value: 'user[password]'},
-        {key: 'placeholder', value: 'Salasana'}]; 
-
-      input = this._addAttributesToElement(attributes, document.createElement('input'));
-      formDiv.append(input);
-
-      attributes = [
-        {key: 'class', value: 'login loginmodal-submit btn btn-default'},
-        {key: 'type', value: 'submit'},
-        {key: 'name', value: 'commit'},
-        {key: 'value', value: 'Kirjaudu'}];
-
-      input = this._addAttributesToElement(attributes, document.createElement('input'));
-      formDiv.append(input);
-
-      form.append(formDiv);
-      divBody.append(form);
+      this._addNormalLoginToModal(FRONTEND_BASE_URL);
     }
+
+  }
+
+  _addNormalLoginToModal(backendUrl) {
+
+    let input, attributes;
+    let formDiv = document.createElement('div');
+
+    if (backendUrl === undefined) {
+      attributes = [
+      {key: 'id', value: 'new_user'},
+      {key: 'action', value: BACKEND_BASE_URL + 'users/sign_in'},
+      {key: 'accept-charset', value: 'UTF8'},
+      {key: 'method', value: 'post'}];
+    } else {
+      attributes = [
+      {key: 'id', value: 'new_user'},
+      {key: 'action', value: backendUrl + 'users/sign_in'},
+      {key: 'accept-charset', value: 'UTF8'},
+      {key: 'method', value: 'post'}];
+    }
+
+    let form = this._addAttributesToElement(attributes, document.createElement('form'));
+
+    attributes = [
+    {key: 'id', value: 'user_email'}, 
+    {key: 'class', value: 'form-control'},
+    {key: 'type', value: 'email'},
+    {key: 'name', value: 'user[email]'},
+    {key: 'placeholder', value: 'Käyttäjätunnus'}];
+
+    input = this._addAttributesToElement(attributes, document.createElement('input'));
+    formDiv.append(input);
+
+    attributes = [
+    {key: 'id', value: 'user_password'}, 
+    {key: 'class', value: 'form-control'},
+    {key: 'type', value: 'password'},
+    {key: 'name', value: 'user[password]'},
+    {key: 'placeholder', value: 'Salasana'}]; 
+
+    input = this._addAttributesToElement(attributes, document.createElement('input'));
+    formDiv.append(input);
+
+    attributes = [
+    {key: 'class', value: 'login loginmodal-submit btn btn-default'},
+    {key: 'type', value: 'submit'},
+    {key: 'name', value: 'commit'},
+    {key: 'value', value: 'Kirjaudu'}];
+
+    input = this._addAttributesToElement(attributes, document.createElement('input'));
+    formDiv.append(input);
+
+    form.append(formDiv);
+    document.getElementById('login-modal-body').append(form);
+
   }
   
   _buildUser() {
-    var nav = document.querySelector('nav>ul');
+    let nav = document.querySelector('nav>ul');
 
     // Create navigation link
-    var liDropdown = document.createElement('li');
+    let liDropdown = document.createElement('li');
     liDropdown.setAttribute('role', 'presentation');
     liDropdown.setAttribute('class', 'dropdown');
     liDropdown.style.textTransform = 'none';
 
-    var aDropdown = document.createElement('a');
+    let aDropdown = document.createElement('a');
     aDropdown.setAttribute('role', 'button');
     aDropdown.setAttribute('href', '#');
     aDropdown.setAttribute('data-toggle', 'dropdown');
     aDropdown.setAttribute('class', 'dropdown-toggle');
 
-    var span = document.createElement('span');
-    span.innerHTML = 'Hei, '+ session.getUserFirstName();
+    let span = document.createElement('span');
+    span.innerHTML = 'Hei, '+ Session.getUserFirstName();
 
-    var spanCaret = document.createElement('span');
+    let spanCaret = document.createElement('span');
     spanCaret.setAttribute('class', 'caret');
 
     aDropdown.appendChild(span);
@@ -106,20 +119,22 @@ class View {
     liDropdown.appendChild(aDropdown);
 
     // Create dropdown links
-    var dropdownMenu = document.createElement('ul');
+    let dropdownMenu = document.createElement('ul');
     dropdownMenu.setAttribute('class', 'dropdown-menu');
 
     // Create links for dropdow menu
-    var kurssihallinta = [{key: 'href', value: FRONTEND_BASE_URL + 'omat/kurssihallinta.html'}];
-    var omatKurssit = [{key: 'href', value: FRONTEND_BASE_URL + 'omat/omat_kurssit.html'}];
 
-    var kirjauduUlos = [
+    let kurssihallinta = [{key: 'href', value: FRONTEND_BASE_URL + 'omat/kurssihallinta.html'}];
+    let omatKurssit = [{key: 'href', value: FRONTEND_BASE_URL + 'omat/omat_kurssit.html'}];
+
+
+    let kirjauduUlos = [
     {key: 'href', value: BACKEND_BASE_URL + 'users/sign_out.html'},
     {key: 'rel', value: 'nofollow'},
     {key: 'data-method', value: 'GET'}
     ];
-    var kirjauduUlosClickEvent = function () {
-      session.logout();
+    let kirjauduUlosClickEvent = function () {
+      Session.logout();
     }
 
     // Append everything to dropdown menu
@@ -133,8 +148,8 @@ class View {
   }
 
   _buildGuest() {
-    var nav = document.querySelector('nav>ul');
-    var kirjautuminen = [
+    let nav = document.querySelector('nav>ul');
+    let kirjautuminen = [
     {key: 'href', value: '#'}, 
     {key: 'id', value: 'kirjautuminen'}, 
     {key: 'data-toggle', value: 'modal'},
@@ -144,7 +159,7 @@ class View {
   }
 
   _createLink(att, text, clickEvent) {
-    var li = document.createElement('li');
+    let li = document.createElement('li');
     let a = this._addAttributesToElement(att, document.createElement('a'));
     a.innerHTML = text;
 
