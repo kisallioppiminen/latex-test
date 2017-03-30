@@ -12,7 +12,6 @@ class CourseList {
   }
 
   static _createListItem(data) {
-    console.log(data);
     const sd = new Date(data.startdate);
     const ed = new Date(data.enddate);
     const formattedTime = `${sd.getDate()}.${sd.getMonth() + 1}.${sd.getFullYear().toString().substr(2,2)} – ${ed.getDate()}.${ed.getMonth() + 1}.${ed.getFullYear().toString().substr(2,2)}`;
