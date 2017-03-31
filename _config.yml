@@ -22,11 +22,11 @@ resources:
     - "//fonts.googleapis.com/css?family=Alegreya+Sans:400|Noto+Sans:400,700|Open+Sans+Condensed:300,700"
     - "/css/main.css"
   js:
-    - "//code.jquery.com/jquery-1.11.0.min.js"
-    - "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    - "/js/mooc.js"
     - "/js/jquery.js"
     - "/js/jquery-ui.js"
+    - "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    - "/js/mooc.js"
+
 
 exclude: [vendor]
 
