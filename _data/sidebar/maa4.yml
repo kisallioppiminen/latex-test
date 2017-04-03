@@ -3,5 +3,8 @@ header: Ohjeita
 path: 
 navigation:
   -
-    name: Opiskelun ohjeet
-    path: opiskelunOhjeet.html
+    name: Kurssin materiaali esitettynä yhdellä sivulla
+    path: print.html
+  -  
+    name: Kurssin määritelmät ja teoreemat koottuna
+    path: maaritelmat.html
