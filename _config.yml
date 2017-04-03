@@ -1,7 +1,7 @@
 # Site settings
 title: Kisallioppiminen.fi
 baseurl: ""
-url: "https://ruumis.github.io"
+url: "https://kisallioppiminen.github.io"
 
 # Build settings
 markdown: kramdown
