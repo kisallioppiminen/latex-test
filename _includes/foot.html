@@ -1,7 +1,1 @@
 
-{% for src in site.resources.js %}
-	<script src="{% if src contains '//' %}{{ src }}{% else %}{{ src | prepend: site.baseurl }}{% endif %}"></script>{% endfor %}
-{% for src in page.resources.js %}
-	<script src="{% if src contains '//' %}{{ src }}{% else %}{{ src | prepend: site.baseurl }}{% endif %}"></script>{% endfor %}
-{% for script in page.resources.script %}
-	<script>{{script}}</script>{% endfor %}
