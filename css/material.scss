@@ -1,89 +1,12 @@
 ---
 # Compiled by jekyll
 ---
-@charset "utf-8";
-
-@import 
-    "variables"
-    ,"widgets/exercise"
-    ,"widgets/week-selector"
-    ;
-
-html {
-    background: $page-bg;
-}
-
-.organiser,
-.mooc {
-    height: 130px;
-    width: 130px;
-
-    &:hover {
-        background: none;
-    }
-}
-
-.organiser {
-    float: right;
-    margin-left: 10px;
-}
-
-.mooc {
-    margin-right: 10px;
-    float: left;
-}
-
-#by-line {
-    font-style: italic;
-    float: left;
-}
-
-#material-license {
-    float: right;
-}
-
-article, 
-section {
-    padding: 10px;
-}
-
-article > header h1,
-section > header h1 {
-    font-size: 45px;
-    display: block;
-    border-radius: 7px;
-    padding: 10px 20px;
-    color: #FFF;
-    text-shadow: 1px 1px 1px #D48E0C;
-    background: linear-gradient(to right, #FFAB0E 58%, #FF960E 100%) repeat scroll 0% 0% transparent;
-}
-
-article > nav ol ol li {
-    list-style: outside none none;
-}
 
 section > header h1 {
                 font-size: 2.75em;
                 padding-top: 15px;
         }
 
-section > h1 {
-    font-size: 40px;
-}
-
-section > h3 {
-    font-size: 25px; 
-    font-weight: 700;
-}
-
-section > h4 {
-    font-size: 30px;
-}
-
-table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
 th {
         padding: 5px;
     }
@@ -91,28 +14,5 @@ th {
 p a,
 ul a {
         border-bottom: 1px dotted #aaa;
-    }
-
-@media all and (max-width: 760px) {
-
-    .mooc,
-    .organiser {
-        clear: none;
-    }
-}
-
-@media all and (max-width: 500px) {
-
-    .mooc + p {
-        clear: both;
-    }
-}
-
-
-@media all and (max-width: 300px) {
-    .mooc,
-    .organiser {
-        width: 49%;
-        margin: 0;
     }
 }
