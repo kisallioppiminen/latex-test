@@ -6,16 +6,6 @@ main-class: has-atop
 topnav: maa5
 ---
 
-<style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    th {
-        padding: 5px;
-    }
-</style>
-
 <input type="hidden" id="chapterNumber" value="4"/>
 <input type="hidden" id="theoremStart" value="16"/>
 
@@ -38,12 +28,12 @@ topnav: maa5
             <div class="objective">
                 <p> 
                     Tämän luvun tavoitteena on, että syvennät edellisissä luvuissa käsiteltyjen asioiden osaamista ja sovellat oppimaasi muihin yhtälön avulla määriteltyihin pistejoukkoihin. Osaat
-                    <ul>
-                        <li> käyttää paraabeliin liittyviä käsitteitä polttopiste, johtosuora, akseli ja huippu </li>
-                        <li> muodostaa paraabelin yhtälön, jos paraabelin akseli on koordinaattiakselien suuntainen </li>
-                        <li> piirtää koordinaatistoon suoran, ympyrän ja paraabelin lisäksi muitakin yhtälön avulla määriteltyjä pistejoukkoja </li>
-                        <li> tutkia, kuuluuko annettu piste pistejoukkoon, jonka yhtälö tunnetaan. </li>
-                    </ul> 
+                <ul>
+                    <li> käyttää paraabeliin liittyviä käsitteitä polttopiste, johtosuora, akseli ja huippu </li>
+                    <li> muodostaa paraabelin yhtälön, jos paraabelin akseli on koordinaattiakselien suuntainen </li>
+                    <li> piirtää koordinaatistoon suoran, ympyrän ja paraabelin lisäksi muitakin yhtälön avulla määriteltyjä pistejoukkoja </li>
+                    <li> tutkia, kuuluuko annettu piste pistejoukkoon, jonka yhtälö tunnetaan. </li>
+                </ul> 
                 </p>
             </div>
         </div>
@@ -64,7 +54,7 @@ topnav: maa5
                 Alla on esimerkiksi näkyvissä funktion $\,f(x) = x^2 - 2x - 3 \,$ kuvaaja.
                 <br>
                 <img src="/kurssit/maa5/kuvat/k038.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
+                     <br>
                 Ylöspäin ja alaspäin aukeavien paraabelien lisäksi on olemassa muihin suuntiin aukeavia paraabeleja. Yleisesti paraabeli määritellään etäisyyden avulla seuraavasti: 
             </p>
 
@@ -79,9 +69,9 @@ topnav: maa5
 
             <p>
                 Alla on näkyvissä funktion $g(x) = -0{,}25x^2 + 2$ kuvaaja. Se on paraabeli, jonka johtosuora on $y = 3$ ja polttopiste $(0,1)$. Siniset janat havainnollistavat etäisyyksiä paraabelin pisteistä polttopisteeseen ja johtosuoraan:
-            <br>
-            <img src="/kurssit/maa5/kuvat/k040.png" max-width: 100%; width: auto; height: auto;/>
-            <br>
+                <br>
+                <img src="/kurssit/maa5/kuvat/k040.png" max-width: 100%; width: auto; height: auto;/>
+                     <br>
                 Piste $(0,2)$ on tämän paraabelin huippu ja $y$-akseli on tässä tapauksessa paraabelin akseli. Nämä <a href="http://kisallioppiminen.fi/kurssit/maa2/luku3/">MAA2-kurssista</a> tutut käsitteet voidaan määritellä paraabelin polttopisteen ja johtosuoran avulla seuraavasti:
             </p>
 
@@ -100,11 +90,11 @@ topnav: maa5
                 ja etäisyys johtosuorasta on 
                 $$\left| x-(-2)\right| = \left| x+2\right|.$$
                 <img src="/kurssit/maa5/kuvat/k042.png" max-width: 100%; width: auto; height: auto;/>
-                Piste $(x,y)$ on paraabelin piste, jos ja vain jos sen etäisyydet polttopisteeseen ja johtosuoraan ovat yhtä suuret eli yhtälö
-                $$
-                \sqrt{(x-4)^2 + y^2} = \left| x+2\right| \tag{A}
-                $$
-                toteutuu.
+                     Piste $(x,y)$ on paraabelin piste, jos ja vain jos sen etäisyydet polttopisteeseen ja johtosuoraan ovat yhtä suuret eli yhtälö
+                     $$
+                     \sqrt{(x-4)^2 + y^2} = \left| x+2\right| \tag{A}
+                     $$
+                     toteutuu.
             </p>
             <p>
                 Yhtälön (A) vasen ja oikea puoli ovat yhtä suuret, ja yhtäsuuruus säilyy toiseen potenssiin korotuksessa. Näin saadaan yhtälö
@@ -126,37 +116,37 @@ topnav: maa5
                 x &= \frac{1}{12}y^2 + 1.
                 \end{align*}
             </p>
-                <!-- voidaan ratkaista $y^2$: 
-                \begin{align*}
-                x^2 - 8x + 16 + y^2 &= x^2 + 4x + 4 \\
-                y^2 &= 12x - 12.
-                \end{align*}
-                Tämä päättely osoittaa, että jos $(x,y)$ on paraabelin piste, niin sen koordinaatit toteuttavat yhtälön 
-                $y^2 = 12x - 12$. 
-            </p>
-            <p>
-                Tutkitaan sitten tilannetta, jossa pisteen $(x,y)$ koordinaatit toteuttavat yhtälön 
-                $y^2 = 12x - 12$. Lasketaan pisteen $(x,y)$ etäisyys paraabelin polttopisteestä:
-                \begin{align*}
-                \sqrt{(x-4)^2 + y^2} &= \sqrt{(x-4)^2 + 12x - 12} \\
-                &= \sqrt{x^2 - 8x + 16 + 12x - 12} \\
-                &= \sqrt{x^2 + 4x + 4} \\
-                &= \sqrt{(x+2)^2} \\
-                &= \left|x+2\right| \\
-                &= \left|x- (-2)\right|
-                \end{align*}
-                Havaitaan, että pisteen $(x,y)$ etäisyys polttopisteestä on yhtä suuri kuin sen etäisyys johtosuorasta.
-                Siis piste $(x,y)$ on paraabelin piste.
-            </p>
+            <!-- voidaan ratkaista $y^2$: 
+            \begin{align*}
+            x^2 - 8x + 16 + y^2 &= x^2 + 4x + 4 \\
+            y^2 &= 12x - 12.
+            \end{align*}
+            Tämä päättely osoittaa, että jos $(x,y)$ on paraabelin piste, niin sen koordinaatit toteuttavat yhtälön 
+            $y^2 = 12x - 12$. 
+        </p>
+        <p>
+            Tutkitaan sitten tilannetta, jossa pisteen $(x,y)$ koordinaatit toteuttavat yhtälön 
+            $y^2 = 12x - 12$. Lasketaan pisteen $(x,y)$ etäisyys paraabelin polttopisteestä:
+            \begin{align*}
+            \sqrt{(x-4)^2 + y^2} &= \sqrt{(x-4)^2 + 12x - 12} \\
+            &= \sqrt{x^2 - 8x + 16 + 12x - 12} \\
+            &= \sqrt{x^2 + 4x + 4} \\
+            &= \sqrt{(x+2)^2} \\
+            &= \left|x+2\right| \\
+            &= \left|x- (-2)\right|
+            \end{align*}
+            Havaitaan, että pisteen $(x,y)$ etäisyys polttopisteestä on yhtä suuri kuin sen etäisyys johtosuorasta.
+            Siis piste $(x,y)$ on paraabelin piste.
+        </p>
 
-            <p>
-                Etsitty paraabelin yhtälö on siis $y^2 = 12x - 12$. Tästä yhtälöstä voidaan vielä ratkaista $x$. Aloitetaan vaihtamalla yhtälön vasen ja oikea puoli keskenään:
-                \begin{align*}
-                12x - 12 &= y^2 \\
-                12x &= y^2 + 12 \\
-                x &= \frac{1}{12}y^2 + 1.
-                \end{align*}
-            </p> -->
+        <p>
+            Etsitty paraabelin yhtälö on siis $y^2 = 12x - 12$. Tästä yhtälöstä voidaan vielä ratkaista $x$. Aloitetaan vaihtamalla yhtälön vasen ja oikea puoli keskenään:
+            \begin{align*}
+            12x - 12 &= y^2 \\
+            12x &= y^2 + 12 \\
+            x &= \frac{1}{12}y^2 + 1.
+            \end{align*}
+        </p> -->
 
             <p>
                 Mille tahansa paraabelille, jonka johtosuora on $x$- tai $y$-akselin suuntainen, voidaan johtaa yhtälö samaan tapaan kuin edellä tehtiin. Tällä tavalla voitaisiin todistaa oikeaksi myös seuraava teoreema:
@@ -168,19 +158,19 @@ topnav: maa5
                     Jos paraabelin akseli on $y$-akselin suuntainen, niin paraabelin yhtälö on muotoa
                     $$y = ax^2 + bx + c,$$
                     missä $a\neq 0$. Paraabeli aukeaa
-                    <ul>
-                        <li>ylöspäin, jos $a > 0$</li>
-                        <li>alaspäin, jos $a < 0$.</li>
-                    </ul>
+                <ul>
+                    <li>ylöspäin, jos $a > 0$</li>
+                    <li>alaspäin, jos $a < 0$.</li>
+                </ul>
                 </p>
                 <p>
                     Jos paraabelin akseli on $x$-akselin suuntainen, niin paraabelin yhtälö on muotoa
                     $$x = ay^2 + by + c,$$
                     missä $a\neq 0$. Paraabeli aukeaa
-                    <ul>
-                        <li>oikealle, jos $a > 0$</li>
-                        <li>vasemmalle, jos $a < 0$.</li>
-                    </ul>
+                <ul>
+                    <li>oikealle, jos $a > 0$</li>
+                    <li>vasemmalle, jos $a < 0$.</li>
+                </ul>
                 </p>
             </div>
 
@@ -256,9 +246,9 @@ topnav: maa5
                         </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t201_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t201_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="t201_v" class="collapse">
                             <ol class="a">
@@ -277,29 +267,29 @@ topnav: maa5
                 Paraabelin yhtälö voidaan muodostaa myös tilanteessa, jossa tunnetaan paraabelin kolme pistettä. Esimerkiksi alla olevasta kuvasta nähdään, että paraabeli kulkee pisteiden $(-1,2)$, $(3,1)$ ja $(4,4)$ kautta. 
                 <br>
                 <img src="/kurssit/maa5/kuvat/k070.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
+                     <br>
                 Ylöspäin aukeavan paraabelin yhtälö on muotoa $y = ax^2 + bx + c$. Edellä mainitut kolme pistettä toteuttavat tämä yhtälön, joten saadaan yhtälöryhmä
                 $$
                 \left\{\begin{aligned}
-                    2 &= a\cdot (-1)^2 + b \cdot (-1) + c \\
-                    1 &= a\cdot 3^2 + b \cdot 3 + c \\
-                    4 &= a\cdot 4^2 + b \cdot 4 + c.
+                2 &= a\cdot (-1)^2 + b \cdot (-1) + c \\
+                1 &= a\cdot 3^2 + b \cdot 3 + c \\
+                4 &= a\cdot 4^2 + b \cdot 4 + c.
                 \end{aligned}\right.
                 $$
                 Tämä yhtälöryhmä voidaan kirjoittaa myös muodossa
                 $$
                 \left\{\begin{aligned}
-                    a - \phantom{4}b + c &= 2 \\
-                    9a + 3b + c &= 1 \\
-                    16a + 4b + c &= 4.
+                a - \phantom{4}b + c &= 2 \\
+                9a + 3b + c &= 1 \\
+                16a + 4b + c &= 4.
                 \end{aligned}\right.
                 $$
                 Kun se ratkaistaan käsin tai koneella kuten kurssilla <a href="http://kisallioppiminen.fi/kurssit/maa4/xyz-koordinaatisto/">MAA4</a>, saadaan ratkaisuksi 
                 $$
                 \left\{\begin{aligned}
-                    a &= 0{,}65 \\
-                    b &= -1{,}55 \\
-                    c &= -0{,}2.
+                a &= 0{,}65 \\
+                b &= -1{,}55 \\
+                c &= -0{,}2.
                 \end{aligned}\right.
                 $$
                 Paraabelin yhtälö on siis $y = 0{,}65x^2 - 1{,}55x - 0{,}2$.
@@ -319,9 +309,9 @@ topnav: maa5
                             Alaspäin aukeava paraabeli kulkee pisteiden $(0,1)$, $(1,-1)$ ja $(-2,-1)$ kautta. Määritä paraabelin yhtälö. 
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t201b_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t201b_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="t201b_v" class="collapse">
                             <p>
@@ -349,13 +339,13 @@ topnav: maa5
                 Suoran yhtälö, ympyrän yhtälö ja paraabelin yhtälö ovat kaikki esimerkkejä pistejoukon yhtälöstä. Esimerkiksi ne pisteet, jotka toteuttavat yhtälön $y = 1{,}5x - 2$, muodostavat koordinaatistoon suoran. 
                 <br>
                 <img src="/kurssit/maa5/kuvat/k045.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
+                     <br>
                 Ylla olevaan kuvaan on merkitty myös ne pisteet, jotka toteuttavat yhtälön $(x-1)^2 + (y-1)^2 = 3$, sekä ne pisteet, jotka toteuttavat yhtälön $x = -y^2 + 6$.
             </p>
             <p>
                 Yleisesti tason pistejoukon yhtälö määritellään seuraavasti:
             </p>
-            
+
             <div class="definition">
                 <h3>MÄÄRITELMÄ: PISTEJOUKON YHTÄLÖ</h3>
                 <p>
@@ -452,17 +442,17 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t203_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="t203_v" class="collapse">
-                        <ol class="a">
-                        <li> Ei. </li>
-                        <li> Kyllä. </li>
-                        <li> Ei. </li>
-                        </ol>
-                    </div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t203_v">
+                                Vastaus
+                            </a>
+                        </h2>
+                        <div id="t203_v" class="collapse">
+                            <ol class="a">
+                                <li> Ei. </li>
+                                <li> Kyllä. </li>
+                                <li> Ei. </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -470,7 +460,7 @@ topnav: maa5
         </div>
     </section>
 
-            
+
     <section class="panel">
         <header>
             <h1>
@@ -760,9 +750,9 @@ topnav: maa5
                     </h2>
                     <div id="s2t315_v" class="collapse">
                         <ol class="a">
-                        <li> $y = x^2$ </li>
-                        <li> Polttopiste on $\left(0, -\frac{3}{4}\right)$ ja johtosuora $y = \frac{3}{4}$.</li>
-                    </ol>
+                            <li> $y = x^2$ </li>
+                            <li> Polttopiste on $\left(0, -\frac{3}{4}\right)$ ja johtosuora $y = \frac{3}{4}$.</li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -792,10 +782,10 @@ topnav: maa5
                     </h2>
                     <div id="s2t305_v" class="collapse">
                         <ol class="a">
-                        <li> Suorat $y = -2x$ ja $y = x-1$. </li>
-                        <li> Suorat $y = 2$ ja $y = -2$. </li>
-                        <li> Suorat $y = x$ ja $y = -x$. </li>
-                    </ol>
+                            <li> Suorat $y = -2x$ ja $y = x-1$. </li>
+                            <li> Suorat $y = 2$ ja $y = -2$. </li>
+                            <li> Suorat $y = x$ ja $y = -x$. </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -823,8 +813,8 @@ topnav: maa5
                     </h2>
                     <div id="s2t306_v" class="collapse">
                         <ol class="a">
-                        <li> Pisteissä $\ (1,0)$, $\ (2,0)$, $\ \left(0, -\frac{1}{2}\right)\ $ ja $\ (0,-2)$. </li>
-                    </ol>
+                            <li> Pisteissä $\ (1,0)$, $\ (2,0)$, $\ \left(0, -\frac{1}{2}\right)\ $ ja $\ (0,-2)$. </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -854,10 +844,10 @@ topnav: maa5
                     </h2>
                     <div id="s2t307_v" class="collapse">
                         <ol class="a">
-                        <li> Ylöspäin aukeava paraabeli. </li>
-                        <li> Ympyrä, jonka keskipiste on origo ja säde on $2$.</li>
-                        <li> Oikealle aukeava paraabeli. </li>
-                        <li> Suorat $y = 2x$ ja $y = -2x$.</li>
+                            <li> Ylöspäin aukeava paraabeli. </li>
+                            <li> Ympyrä, jonka keskipiste on origo ja säde on $2$.</li>
+                            <li> Oikealle aukeava paraabeli. </li>
+                            <li> Suorat $y = 2x$ ja $y = -2x$.</li>
                         </ol>
                     </div>
                 </div>
@@ -887,9 +877,9 @@ topnav: maa5
                     </h2>
                     <div id="s2t309_v" class="collapse">
                         <ol class="a">
-                        <li> $x^2 - 3y^2 + 12 = 0$ </li>
-                        <li> </li>
-                        <li> Käyrä on hyperbeli. </li>
+                            <li> $x^2 - 3y^2 + 12 = 0$ </li>
+                            <li> </li>
+                            <li> Käyrä on hyperbeli. </li>
                         </ol>
                     </div>
                 </div>
@@ -919,9 +909,9 @@ topnav: maa5
                     </h2>
                     <div id="s2t310_v" class="collapse">
                         <ol class="a">
-                        <li> $4x^2 + 3y^2 - 12 = 0$ </li>
-                        <li> </li>
-                        <li> Käyrä on ellipsi. </li>
+                            <li> $4x^2 + 3y^2 - 12 = 0$ </li>
+                            <li> </li>
+                            <li> Käyrä on ellipsi. </li>
                         </ol>
                     </div>
                 </div>
@@ -951,9 +941,9 @@ topnav: maa5
                     </h2>
                     <div id="s2t311_v" class="collapse">
                         <ol class="a">
-                        <li> </li>
-                        <li> </li>
-                        <li> Paraabeli $y = \frac{1}{12}x^2 - 3$ </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> Paraabeli $y = \frac{1}{12}x^2 - 3$ </li>
                         </ol>
                     </div>
                 </div>
@@ -982,8 +972,8 @@ topnav: maa5
                     </h2>
                     <div id="s2t312_v" class="collapse">
                         <ol class="a">
-                        <li> Käyrä on hyperbeli. </li>
-                        <li> $-4 < b < 4$ </li>
+                            <li> Käyrä on hyperbeli. </li>
+                            <li> $-4 < b < 4$ </li>
                         </ol>
                     </div>
                 </div>
@@ -1018,7 +1008,7 @@ topnav: maa5
 
         </div>
     </section>
-            
+
 
     <section class="panel">
         <header>
@@ -1053,7 +1043,7 @@ topnav: maa5
                     </h2>
                     <div id="s3t301_v" class="collapse">
                         <p>
-                        $y = -\frac{1}{4}x^2 + 1$
+                            $y = -\frac{1}{4}x^2 + 1$
                         </p>
                     </div>
                 </div>
@@ -1086,10 +1076,10 @@ topnav: maa5
                     </h2>
                     <div id="s3t302_v" class="collapse">
                         <ol class="a">
-                        <li> Ratkaistussa muodossa $y = \frac{4}{3}x$ tai normaalimuodossa $4x - 3y = 0$. </li>
-                        <li> $x^2 + y^2 = 25$ </li>
-                        <li> $y = \frac{4}{9}x^2$ </li>
-                    </ol>
+                            <li> Ratkaistussa muodossa $y = \frac{4}{3}x$ tai normaalimuodossa $4x - 3y = 0$. </li>
+                            <li> $x^2 + y^2 = 25$ </li>
+                            <li> $y = \frac{4}{9}x^2$ </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -1137,11 +1127,11 @@ topnav: maa5
                     <p>
                         Paraabelin $y = x^2$ jokaista pistettä siirretään vektorin $\vv$ verran. Määritä näin syntyvän käyrän yhtälö muodossa $y = f(x)$, kun
                     </p>
-                        <ol class="a">
-                            <li> $\vv = 2\vj$ </li>
-                            <li> $\vv = 3\vi$ </li>
-                            <li> $\vv = 3\vi + 2\vj$. </li>
-                        </ol>
+                    <ol class="a">
+                        <li> $\vv = 2\vj$ </li>
+                        <li> $\vv = 3\vi$ </li>
+                        <li> $\vv = 3\vi + 2\vj$. </li>
+                    </ol>
                     <p>
                         [Pitkä S2014/4]
                     </p>
@@ -1172,11 +1162,11 @@ topnav: maa5
                     <p>
                         Tarkastellaan tasokäyrää, jonka yhtälö on $2x^2 + 2y^2 - 3xy - 2x + 2y - 4 = 0$.
                     </p>
-                        <ol class="a">
-                            <li> Määritä käyrän ja koordinaattiakselien leikkauspisteet. </li>
-                            <li> Osoita, että kaikki leikkauspisteet ovat saman ympyrän kehällä, ja määritä tämän ympyrän yhtälö. </li>
-                            <li> Suora kulkee origon ja b-kohdan ympyrän keskipisteen kautta. Missä pisteissä tämä suora leikkaa alkuperäisen käyrän? </li>
-                        </ol>
+                    <ol class="a">
+                        <li> Määritä käyrän ja koordinaattiakselien leikkauspisteet. </li>
+                        <li> Osoita, että kaikki leikkauspisteet ovat saman ympyrän kehällä, ja määritä tämän ympyrän yhtälö. </li>
+                        <li> Suora kulkee origon ja b-kohdan ympyrän keskipisteen kautta. Missä pisteissä tämä suora leikkaa alkuperäisen käyrän? </li>
+                    </ol>
                     <p>
                         [Pitkä S2013/14]
                     </p>
@@ -1206,7 +1196,7 @@ topnav: maa5
                 <div id="s3t306">
                     <p>
                         Funktion $f(x) = ax^2 + bx + c$ kuvaaja kulkee pisteiden $\ (-1,12)$, $\ (0,5)\ $ ja $\ (2,-3)\ $ kautta. Määritä lausekkeen $a + b + c$ arvo.
-                    <br>
+                        <br>
                         [Pitkä S2010/4]
                     </p>
                     <h2>
