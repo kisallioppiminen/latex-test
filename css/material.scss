@@ -75,6 +75,19 @@ section > h4 {
     font-size: 30px;
 }
 
+table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+th {
+        padding: 5px;
+    }
+
+p a,
+ul a {
+        border-bottom: 1px dotted #aaa;
+    }
+
 @media all and (max-width: 760px) {
 
     .mooc,

@@ -6,16 +6,6 @@ main-class: has-atop
 topnav: maa5
 ---
 
-<style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    th {
-        padding: 5px;
-    }
-</style>
-
 <input type="hidden" id="chapterNumber" value="5"/>
 <input type="hidden" id="theoremStart" value="3"/>
 
@@ -38,30 +28,30 @@ topnav: maa5
             <div class="objective">
                 <p> 
                     Tämän luvun tavoitteena on, että vahvistat itseisarvon käsitteeseen liittyvää osaamistasi ja ratkaiset sujuvasti erilaisia itseisarvoyhtälöitä ja -epäyhtälöitä. Osaat
-                    <ul>
-                        <li> 
-                            ratkaista muotoa $\left| x - a \right| = t$ olevia yhtälöitä tutkimalla, mitkä luvut ovat etäisyydellä $t$ luvusta $a$ 
-                        </li>
-                        <li> 
-                            ratkaista muotoa $\left| x - a \right| = \left| x - b \right|$ olevia yhtälöitä tutkimalla, mitkä luvut ovat yhtä kaukana luvuista $a$ ja $b$
-                        </li>
-                        <li> ratkaista erilaisia itseisarvoyhtälöitä ja -epäyhtälöitä eri tavoin:
-                            <ul>
-                                <li> etäisyystulkinnan avulla päättelemällä </li>
-                                <li> muodostamalla kaksi tavallista yhtälöä tai epäyhtälöä </li>
-                                <li> graafisesti koordinaatistossa </li>
-                            </ul>
-                        </li>
-<!--                         <li>
-                            ratkaista yksinkertaisia itseisarvoepäyhtälöitä etäisyystulkinnan avulla päättelemällä
-                        </li>
-                        <li>
-                            ratkaista monimutkaisempia itseisarvoyhtälöitä ja -epäyhtälöitä muodostamalla niistä kaksi tavallista yhtälöä tai epäyhtälöä
-                        </li> -->
-                        <li>
-                            havainnollistaa ratkaisuja lukusuoralla ja koordinaatistossa.
-                        </li>
-                    </ul> 
+                <ul>
+                    <li> 
+                        ratkaista muotoa $\left| x - a \right| = t$ olevia yhtälöitä tutkimalla, mitkä luvut ovat etäisyydellä $t$ luvusta $a$ 
+                    </li>
+                    <li> 
+                        ratkaista muotoa $\left| x - a \right| = \left| x - b \right|$ olevia yhtälöitä tutkimalla, mitkä luvut ovat yhtä kaukana luvuista $a$ ja $b$
+                    </li>
+                    <li> ratkaista erilaisia itseisarvoyhtälöitä ja -epäyhtälöitä eri tavoin:
+                        <ul>
+                            <li> etäisyystulkinnan avulla päättelemällä </li>
+                            <li> muodostamalla kaksi tavallista yhtälöä tai epäyhtälöä </li>
+                            <li> graafisesti koordinaatistossa </li>
+                        </ul>
+                    </li>
+                    <!--                         <li>
+                                                ratkaista yksinkertaisia itseisarvoepäyhtälöitä etäisyystulkinnan avulla päättelemällä
+                                            </li>
+                                            <li>
+                                                ratkaista monimutkaisempia itseisarvoyhtälöitä ja -epäyhtälöitä muodostamalla niistä kaksi tavallista yhtälöä tai epäyhtälöä
+                                            </li> -->
+                    <li>
+                        havainnollistaa ratkaisuja lukusuoralla ja koordinaatistossa.
+                    </li>
+                </ul> 
                 </p>
             </div>
 
@@ -165,7 +155,7 @@ topnav: maa5
                 Useilla itseisarvoyhtälöillä on kaksi ratkaisua. Esimerkiksi yhtälön $\left|x - 7 \right| = 2$ toteuttavat ne luvut, joiden etäisyys luvusta $7$ on kaksi:
                 <br>
                 <img src="/kurssit/maa5/kuvat/k051.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
+                     <br>
                 Yhtälöllä $\left|x - 7 \right| = 2$ on siis kaksi ratkaisua: $x_1 = 5$ ja $x_2 = 9$.
             </p>
 
@@ -231,9 +221,9 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t403_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t403_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t403_v" class="collapse">
                             <ol class="a">
@@ -252,31 +242,31 @@ topnav: maa5
                 $$\left|2x - 3 \right| = 4.$$ 
                 Se toteutuu, jos ja vain jos lausekkeen $2x + 3$ arvo on $4$ tai $-4$. Tutkitaan kumpikin vaihtoehto:
             </p>
-                <ol>
-                    <li> 
-                        vaihtoehto (lausekkeen arvo on $4$):
-                        \begin{align*}
-                            2x-3 &= 4 \\
-                            2x &= 7 \\
-                            x &= \frac{7}{2}
-                        \end{align*}
-                        Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön:
-                        $$\left|2\cdot \frac{7}{2} - 3 \right| = \left|4 \right| =4.$$
-                    </li>
-                    <li> vaihtoehto (lausekkeen arvo on $-4$):
-                        \begin{align*}
-                            2x-3 &= -4 \\
-                            2x &= -1 \\
-                            x &= -\frac{1}{2}
-                        \end{align*}
-                        Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön:
-                        $$\left|2\cdot \left(-\frac{1}{2}\right) - 3 \right| = \left|-4 \right| = 4.$$
-                    </li>
-                </ol>
+            <ol>
+                <li> 
+                    vaihtoehto (lausekkeen arvo on $4$):
+                    \begin{align*}
+                    2x-3 &= 4 \\
+                    2x &= 7 \\
+                    x &= \frac{7}{2}
+                    \end{align*}
+                    Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön:
+                    $$\left|2\cdot \frac{7}{2} - 3 \right| = \left|4 \right| =4.$$
+                </li>
+                <li> vaihtoehto (lausekkeen arvo on $-4$):
+                    \begin{align*}
+                    2x-3 &= -4 \\
+                    2x &= -1 \\
+                    x &= -\frac{1}{2}
+                    \end{align*}
+                    Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön:
+                    $$\left|2\cdot \left(-\frac{1}{2}\right) - 3 \right| = \left|-4 \right| = 4.$$
+                </li>
+            </ol>
             <p>
                 Yhtälöllä $\left|2x - 3 \right| = 4$ on siis kaksi ratkaisua:
                 $$x_1 = \frac{7}{2} \ \text{ ja } \ x_2 = -\frac{1}{2}.$$
-                
+
             </p>
 
             <div class="tehtavat">
@@ -332,9 +322,9 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t405_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t405_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t405_v" class="collapse">
                             <ol class="a">
@@ -401,9 +391,9 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t407_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t407_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t407_v" class="collapse">
                             <ol class="a">
@@ -420,34 +410,34 @@ topnav: maa5
                 $$\left|2x - 3 \right| = \left|5x + 4 \right|.$$ 
                 Se toteutuu, jos ja vain jos itseisarvojen sisällä olevat lausekkeet ovat samat tai toistensa vastalausekkeet. Tutkitaan kumpikin vaihtoehto:
             </p>
-                <ol>
-                    <li> 
-                        vaihtoehto (lausekkeet ovat samat):
-                        \begin{align*}
-                            2x-3 &= 5x + 4 \\
-                            -3x &= 7 \\
-                            x &= -\frac{7}{3}
-                        \end{align*}
-                        Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön. Vasemmaksi puoleksi saadaan
-                        $$\left|2\cdot \left(-\frac{7}{3}\right) - 3 \right| = \left|-\frac{23}{3} \right| = \frac{23}{3}.$$
-                        Oikeaksi puoleksi saadaan
-                        $$\left|5\cdot \left(-\frac{7}{3}\right) + 4 \right| = \left|-\frac{23}{3} \right| = \frac{23}{3}.$$
-                        Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.
-                    </li>
-                    <li> vaihtoehto (lausekkeet ovat toistensa vastalausekkeet):
-                        \begin{align*}
-                            2x - 3 &= -(5x + 4) \\
-                            2x - 3 &= -5x - 4 \\
-                            7x  &= -1 \\
-                            x &= -\frac{1}{7}
-                        \end{align*}
-                        Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön. Vasemmaksi puoleksi saadaan
-                        $$\left|2\cdot \left(-\frac{1}{7}\right) - 3 \right| = \left|-\frac{23}{7} \right| = \frac{23}{7}.$$
-                        Oikeaksi puoleksi saadaan
-                        $$\left|5\cdot \left(-\frac{1}{7}\right) + 4 \right| = \left|\frac{23}{7} \right| = \frac{23}{7}.$$
-                        Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.
-                    </li>
-                </ol>
+            <ol>
+                <li> 
+                    vaihtoehto (lausekkeet ovat samat):
+                    \begin{align*}
+                    2x-3 &= 5x + 4 \\
+                    -3x &= 7 \\
+                    x &= -\frac{7}{3}
+                    \end{align*}
+                    Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön. Vasemmaksi puoleksi saadaan
+                    $$\left|2\cdot \left(-\frac{7}{3}\right) - 3 \right| = \left|-\frac{23}{3} \right| = \frac{23}{3}.$$
+                    Oikeaksi puoleksi saadaan
+                    $$\left|5\cdot \left(-\frac{7}{3}\right) + 4 \right| = \left|-\frac{23}{3} \right| = \frac{23}{3}.$$
+                    Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.
+                </li>
+                <li> vaihtoehto (lausekkeet ovat toistensa vastalausekkeet):
+                    \begin{align*}
+                    2x - 3 &= -(5x + 4) \\
+                    2x - 3 &= -5x - 4 \\
+                    7x  &= -1 \\
+                    x &= -\frac{1}{7}
+                    \end{align*}
+                    Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön. Vasemmaksi puoleksi saadaan
+                    $$\left|2\cdot \left(-\frac{1}{7}\right) - 3 \right| = \left|-\frac{23}{7} \right| = \frac{23}{7}.$$
+                    Oikeaksi puoleksi saadaan
+                    $$\left|5\cdot \left(-\frac{1}{7}\right) + 4 \right| = \left|\frac{23}{7} \right| = \frac{23}{7}.$$
+                    Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.
+                </li>
+            </ol>
             <p>
                 Yhtälöllä $\left|2x - 3 \right| = \left|5x + 4 \right|$ on siis kaksi ratkaisua:
                 $$x_1 = -\frac{7}{3} \ \text{ ja } \ x_2 = -\frac{1}{7}.$$
@@ -506,9 +496,9 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t409_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t409_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t409_v" class="collapse">
                             <ol class="a">
@@ -626,10 +616,10 @@ topnav: maa5
                 $$\left| x - 2 \right| < 6$$
                 ratkaisuja ovat kaikki luvut, joiden etäisyys luvusta $2$ on pienempi kuin $6$:
                 <img src="/kurssit/maa5/kuvat/k047.png" max-width: 100%; width: auto; height: auto;/>
-                Yhtälö siis toteutuu, jos ja vain jos
-                $$-4 < x \quad \textbf{ ja } \quad x < 8.$$
-                Tämä voidaan ilmaista myös kaksoisepäyhtälönä
-                $-4 < x < 8$.
+                     Yhtälö siis toteutuu, jos ja vain jos
+                     $$-4 < x \quad \textbf{ ja } \quad x < 8.$$
+                     Tämä voidaan ilmaista myös kaksoisepäyhtälönä
+                     $-4 < x < 8$.
             </p>
 
             <div class="tehtavat">
@@ -665,8 +655,8 @@ topnav: maa5
                 $$\left| x - 2 \right| > 4$$
                 ratkaisuja ovat kaikki luvut, joiden etäisyys luvusta $2$ on suurempi kuin $4$:
                 <img src="/kurssit/maa5/kuvat/k048.png" max-width: 100%; width: auto; height: auto;/>
-                Yhtälö siis toteutuu, jos ja vain jos
-                $$x < -2 \quad \textbf{ tai } \quad x > 6.$$
+                     Yhtälö siis toteutuu, jos ja vain jos
+                     $$x < -2 \quad \textbf{ tai } \quad x > 6.$$
             </p>
 
             <div class="tehtavat">
@@ -725,9 +715,9 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t413_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t413_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t413_v" class="collapse">
                             <ol class="a">
@@ -748,32 +738,32 @@ topnav: maa5
                 $$-4 < 2x - 3 < 4.$$ 
                 Ratkaistaan kumpikin epäyhtälö:
             </p>
-                <ol>
-                    <li> 
-                        epäyhtälö:
-                        \begin{align*}
-                            2x-3 &> -4 \\
-                            2x &> -1 \\
-                            x &> -\frac{1}{2}
-                        \end{align*}
-                        <img src="/kurssit/maa5/kuvat/k052.png" max-width: 100%; width: auto; height: auto;/>
-                    </li>
-                    <li> epäyhtälö:
-                        \begin{align*}
-                            2x-3 &< 4 \\
-                            2x &< 7 \\
-                            x &< \frac{7}{2}
-                        \end{align*}
-                        <img src="/kurssit/maa5/kuvat/k053.png" max-width: 100%; width: auto; height: auto;/>
-                    </li>
-                </ol>
+            <ol>
+                <li> 
+                    epäyhtälö:
+                    \begin{align*}
+                    2x-3 &> -4 \\
+                    2x &> -1 \\
+                    x &> -\frac{1}{2}
+                    \end{align*}
+                    <img src="/kurssit/maa5/kuvat/k052.png" max-width: 100%; width: auto; height: auto;/>
+                </li>
+                <li> epäyhtälö:
+                    \begin{align*}
+                    2x-3 &< 4 \\
+                    2x &< 7 \\
+                    x &< \frac{7}{2}
+                    \end{align*}
+                    <img src="/kurssit/maa5/kuvat/k053.png" max-width: 100%; width: auto; height: auto;/>
+                </li>
+            </ol>
             <p>
                 Epäyhtälö $\left|2x - 3 \right| < 4$ toteutuu, jos ja vain jos kumpikin näistä epäyhtälöistä toteutuu eli
                 $$-\frac{1}{2} < x \quad \textbf{ ja } \quad x < \frac{7}{2}.$$
                 <img src="/kurssit/maa5/kuvat/k049.png" max-width: 100%; width: auto; height: auto;/>
-                Epäyhtälön $\left|2x - 3 \right| < 4$ ratkaisujoukko on siis lukusuoran väli 
-                $$\left] -\frac{1}{2}, \frac{7}{2}\right[.$$
-                Hakasulkujen suunnasta näkyy, että välin päätepisteet eivät kuulu ratkaisujoukkoon.
+                     Epäyhtälön $\left|2x - 3 \right| < 4$ ratkaisujoukko on siis lukusuoran väli 
+                     $$\left] -\frac{1}{2}, \frac{7}{2}\right[.$$
+                     Hakasulkujen suunnasta näkyy, että välin päätepisteet eivät kuulu ratkaisujoukkoon.
             </p>
 
             <div class="tehtavat">
@@ -817,32 +807,32 @@ topnav: maa5
                 $$6x + 7 \leq -5 \quad \textbf{ tai } \quad 6x + 7 \geq 5.$$ 
                 Ratkaistaan kumpikin epäyhtälö:
             </p>
-                <ol>
-                    <li> epäyhtälö:
-                        \begin{align*}
-                            6x + 7 &\leq -5 \\
-                            6x &\leq -12 \\
-                            x &\leq -2
-                        \end{align*}
-                        <img src="/kurssit/maa5/kuvat/k054.png" max-width: 100%; width: auto; height: auto;/>
-                    </li>
-                    <li> 
-                        epäyhtälö:
-                        \begin{align*}
-                            6x + 7 &\geq 5 \\
-                            6x &\geq -2 \\
-                            x &\geq -\frac{1}{3}
-                        \end{align*}
-                        <img src="/kurssit/maa5/kuvat/k055.png" max-width: 100%; width: auto; height: auto;/>
-                    </li>
-                </ol>
+            <ol>
+                <li> epäyhtälö:
+                    \begin{align*}
+                    6x + 7 &\leq -5 \\
+                    6x &\leq -12 \\
+                    x &\leq -2
+                    \end{align*}
+                    <img src="/kurssit/maa5/kuvat/k054.png" max-width: 100%; width: auto; height: auto;/>
+                </li>
+                <li> 
+                    epäyhtälö:
+                    \begin{align*}
+                    6x + 7 &\geq 5 \\
+                    6x &\geq -2 \\
+                    x &\geq -\frac{1}{3}
+                    \end{align*}
+                    <img src="/kurssit/maa5/kuvat/k055.png" max-width: 100%; width: auto; height: auto;/>
+                </li>
+            </ol>
             <p>
                 Epäyhtälö $\left|6x + 7 \right| \geq 5$ siis toteutuu, jos ja vain jos 
                 $$x \leq -2  \quad \textbf{ tai } \quad x \geq -\frac{1}{3}.$$
                 <img src="/kurssit/maa5/kuvat/k050.png" max-width: 100%; width: auto; height: auto;/>
-                Kaksiosainen ratkaisujoukko voidaan merkitä yhdisteen merkin $\displaystyle \cup$ avulla seuraavasti: 
-                $$\left] -\infty, -2\right] \cup \left[-\frac{1}{3}, \infty\right[.$$
-                Hakasulkujen suunnasta näkyy, että päätepisteet $-2$ ja $-\frac{1}{3}$ kuuluvat ratkaisujoukkoon.
+                     Kaksiosainen ratkaisujoukko voidaan merkitä yhdisteen merkin $\displaystyle \cup$ avulla seuraavasti: 
+                     $$\left] -\infty, -2\right] \cup \left[-\frac{1}{3}, \infty\right[.$$
+                     Hakasulkujen suunnasta näkyy, että päätepisteet $-2$ ja $-\frac{1}{3}$ kuuluvat ratkaisujoukkoon.
             </p>
 
             <div class="tehtavat">
@@ -898,9 +888,9 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t415_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t415_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t415_v" class="collapse">
                             <ol class="a">
@@ -934,17 +924,17 @@ topnav: maa5
                 Aloitetaan tarkastelemalla yhtälöä $y = x$. Tämä yhtälö määrittelee pistejoukon, joka on origon kautta kulkeva suora:
                 <br>
                 <img src="/kurssit/maa5/kuvat/k058.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
+                     <br>
                 Luvun itseisarvo on aina epänegatiivinen ja ilmaisee luvun etäisyyden nollasta. Tästä tiedosta voidaan päätellä, että yhtälö $y = \left|x\right|$ määrittelee koordinaatistossa seuraavan pistejoukon:
                 <br>
                 <img src="/kurssit/maa5/kuvat/k059.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
+                     <br>
                 Yhtälön $y = \left|x\right|$ määrittelemä pistejoukko saadaan siis suorasta $y = x$ peilaamalla $x$-akselin alapuolelle jäävä osa $x$-akselin suhteen. Kuvasta näkyy myös havainnollisesti teoreeman 1 tulos: 
                 $$
-                    \left|x\right| = \left\{\begin{aligned}
-                    &x, \quad \text{ jos $x \geq 0$} \\
-                   -&x, \quad \text{ jos $x < 0$.}
-                    \end{aligned}\right.
+                \left|x\right| = \left\{\begin{aligned}
+                &x, \quad \text{ jos $x \geq 0$} \\
+                -&x, \quad \text{ jos $x < 0$.}
+                \end{aligned}\right.
                 $$
                 Yhtälön $y = \left|x\right|$ määrittelemä pistejoukko saadaan siis suorista $y = x$ ja $y = -x$ jättämällä pois $x$-akselin alapuoliset osat.
                 <br>
@@ -970,7 +960,7 @@ topnav: maa5
                 </div>
             </div>
 
-             <div class="tehtavat">
+            <div class="tehtavat">
                 <div class="tehtava" id="t417-ex">
 
                     <header>
@@ -991,12 +981,12 @@ topnav: maa5
                             <li> $\ y = \left|3x + 2\right|$ </li>
                         </ul>
                         <p>
-                        <img src="/kurssit/maa5/kuvat/k062.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
-                        <img src="/kurssit/maa5/kuvat/k063.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa5/kuvat/k062.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
+                            <img src="/kurssit/maa5/kuvat/k063.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">
                         <p style="clear: both;"></p>
                         <p>
-                        <img src="/kurssit/maa5/kuvat/k064.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
-                        <img src="/kurssit/maa5/kuvat/k065.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">  </p>
+                            <img src="/kurssit/maa5/kuvat/k064.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
+                            <img src="/kurssit/maa5/kuvat/k065.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">  </p>
                         <p style="clear: both;"></p>
                     </div>
                 </div>
@@ -1006,13 +996,13 @@ topnav: maa5
                 Koordinaatistoa ja graafista esitystä voidaan käyttää apuna myös tilanteessa, jossa halutaan ilmaista itseisarvolauseke ilman itseisarvomerkkejä. Esimerkiksi alla on näkyvissä pistejoukko, jonka yhtälö on $y = \left|3-2x\right|$.
                 <br>
                 <img src="/kurssit/maa5/kuvat/k073.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
+                     <br>
                 Kuvasta voidaan päätellä, että 
                 $$
-                    \left|3-2x\right| = \left\{\begin{aligned}
-                    &\textcolor{blue}{3-2x}, \  \text{ jos $x \leq \tfrac{3}{2}$} \\
-                   &\textcolor{red}{2x-3}, \  \text{ jos $x > \tfrac{3}{2}$.}
-                    \end{aligned}\right.
+                \left|3-2x\right| = \left\{\begin{aligned}
+                &\textcolor{blue}{3-2x}, \  \text{ jos $x \leq \tfrac{3}{2}$} \\
+                &\textcolor{red}{2x-3}, \  \text{ jos $x > \tfrac{3}{2}$.}
+                \end{aligned}\right.
                 $$
                 <img src="/kurssit/maa5/kuvat/k074.png" max-width: 100%; width: auto; height: auto;/>
             </p>
@@ -1036,9 +1026,9 @@ topnav: maa5
                             <li> Ilmaise lauseke $\left|\frac{4}{3}x + 2\right|$ ilman itseisarvomerkkejä. Tarkista vastauksesi järkevyys vertaamalla sitä b-kohdan piirrokseen. </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t416b_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t416b_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t416b_v" class="collapse">
                             <ol class="a">
@@ -1064,7 +1054,7 @@ topnav: maa5
                 voidaan ratkaista piirtämällä koordinaatistoon pistejoukot $y = \left|2x + 2\right|$ ja $y = 3$:
                 <br>
                 <img src="/kurssit/maa5/kuvat/k066.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
+                     <br>
                 Kuvasta havaitaan, että yhtälöllä 
                 $$\left|2x + 2\right| = 3$$ 
                 on kaksi ratkaisua: $x_1 = -0{,}5$ ja $x_2 = 2{,}5$.
@@ -1147,7 +1137,7 @@ topnav: maa5
                 on tasan yksi ratkaisu:
                 <br>
                 <img src="/kurssit/maa5/kuvat/k069.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
+                     <br>
                 Ratkaisun tarkan arvon selvittämiseen on useita tapoja. Voidaan esimerkiksi korottaa yhtälön molemmat puolet toiseen potenssiin, jolloin saadaan yhtälö
                 $$(2x + 1)^2 = \left|x\right|^2. \tag{1}$$
                 Tätä yhtälöä voidaan sieventää edelleen:
@@ -1181,20 +1171,20 @@ topnav: maa5
             <p>
                 Edellä löydettiin ratkaisuehdokkaat $x_1 = -\frac{1}{3}$ ja $x_2 = -1$. Tutkitaan, toteuttaako $x_1 = -\frac{1}{3}$ alkuperäisen yhtälön:
             </p>
-                <ul>
-                    <li> Yhtälön vasen puoli: $2\cdot \left(-\frac{1}{3}\right) + 1 = \frac{1}{3}$.</li>
-                    <li> Yhtälön oikea puoli: $\left|-\frac{1}{3}\right| = \frac{1}{3}$.</li>
-                </ul>
+            <ul>
+                <li> Yhtälön vasen puoli: $2\cdot \left(-\frac{1}{3}\right) + 1 = \frac{1}{3}$.</li>
+                <li> Yhtälön oikea puoli: $\left|-\frac{1}{3}\right| = \frac{1}{3}$.</li>
+            </ul>
             <p>
                 Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten $x_1 = -\frac{1}{3}$ on yhtälön ratkaisu. 
             </p>
             <p>
                 Tutkitaan vielä, toteuttaako $x_2 = -1$ alkuperäisen yhtälön:
             </p>
-                <ul>
-                    <li> Yhtälön vasen puoli: $2\cdot \left(-1\right) + 1 = -1$.</li>
-                    <li> Yhtälön oikea puoli: $\left|-1\right| = 1$.</li>
-                </ul>
+            <ul>
+                <li> Yhtälön vasen puoli: $2\cdot \left(-1\right) + 1 = -1$.</li>
+                <li> Yhtälön oikea puoli: $\left|-1\right| = 1$.</li>
+            </ul>
             <p>
                 Yhtälön vasen ja oikea puoli eivät ole yhtä suuret, joten $x_2 = -1$ ei ole yhtälön ratkaisu.
             </p>
@@ -1220,10 +1210,10 @@ topnav: maa5
                 </div>
             </div>
 
-       </div>
+        </div>
     </section>
 
-            
+
     <section class="panel">
         <header>
             <h1>
@@ -1502,7 +1492,7 @@ topnav: maa5
                         Alla on näkyvissä osa paraabelista, jonka yhtälö on $y = x^2 -2x - 1$. Hahmottele sen avulla koordinaatistoon pistejoukko, jonka yhtälö on $y = \left| x^2 - 2 - 1\right|$. 
                         <br>
                         <img src="/kurssit/maa5/kuvat/k071.png" max-width: 100%; width: auto; height: auto;/>
-                        <br>
+                             <br>
                         Muista, että voit tarkistaa vastauksesi piirtämällä pistejoukon tietokoneella tai laskimella.
                     </p>
                 </div>
@@ -1604,7 +1594,7 @@ topnav: maa5
 
         </div>
     </section>
-            
+
 
     <section class="panel">
         <header>

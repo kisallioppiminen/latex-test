@@ -6,15 +6,6 @@ main-class: has-atop
 topnav: maa5
 ---
 
-<style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    th {
-        padding: 5px;
-    }
-</style>
 
 <input type="hidden" id="chapterNumber" value="1"/>
 
@@ -38,13 +29,13 @@ topnav: maa5
             <div class="objective">
                 <p> 
                     Tämän luvun tavoitteena on, että pystyt määrittämään pisteiden välisiä etäisyyksiä sekä lukusuoralla että tasossa. Osaat
-                    <ul>
-                        <li> päätellä luvun itseisarvon </li>
-                        <li> ilmaista itseisarvon avulla kahden luvun välisen etäisyyden lukusuoralla </li>
-                        <li> käyttää tulon ja osamäärän itseisarvoihin liittyviä laskusääntöjä </li>
-                        <li> laskea tason kahden pisteen välisen etäisyyden </li>
-                        <li> määrittää janan keskipisteen koordinaatit.</li>
-                    </ul> 
+                <ul>
+                    <li> päätellä luvun itseisarvon </li>
+                    <li> ilmaista itseisarvon avulla kahden luvun välisen etäisyyden lukusuoralla </li>
+                    <li> käyttää tulon ja osamäärän itseisarvoihin liittyviä laskusääntöjä </li>
+                    <li> laskea tason kahden pisteen välisen etäisyyden </li>
+                    <li> määrittää janan keskipisteen koordinaatit.</li>
+                </ul> 
                 </p>
             </div>
 
@@ -65,8 +56,8 @@ topnav: maa5
                 Lukusuoraan tutustuttiin jo kurssilla <a href="http://kisallioppiminen.fi/kurssit/may1/luvutLaskutoimitukset/">MAY1</a>. Jokaista lukusuoran pistettä vastaa reaaliluku, ja jokaista reaalilukua vastaa lukusuoran piste. 
                 <br>
                 <img src="/kurssit/may1/kuvat/reaaliK2.png" max-width: 100%; width: auto; height: auto;/> 
-                <!-- <br>
-                Tässä kappaleessa tutkitaan lukusuoran pisteiden välisiä etäisyyksiä. -->
+                     <!-- <br>
+                     Tässä kappaleessa tutkitaan lukusuoran pisteiden välisiä etäisyyksiä. -->
             </p>
 
             <!-- <div class="tehtavat">
@@ -128,9 +119,9 @@ topnav: maa5
                             <img src="/kurssit/maa5/kuvat/k029.png" max-width: 100%; width: auto; height: auto;/>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t002_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t002_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t002_v" class="collapse">
                             <ol class="a">
@@ -173,20 +164,20 @@ topnav: maa5
                 <p>
                     Luvun $a$ itseisarvolle pätee
                     $$
-                        \left|a\right| = \left\{\begin{aligned}
-                                &a, \quad \text{ jos $a \geq 0$} \\
-                                -&a, \quad \text{ jos $a < 0$.}
-                            \end{aligned}\right.
+                    \left|a\right| = \left\{\begin{aligned}
+                    &a, \quad \text{ jos $a \geq 0$} \\
+                    -&a, \quad \text{ jos $a < 0$.}
+                    \end{aligned}\right.
                     $$
                 </p>
                 <div class="proof">
                     <p>
-                       Perustelu: 
-                       <ul>
-                            <li> Jos luku $a$ on positiivinen tai nolla, on sen etäisyys luvusta nolla yhtä suuri kuin luku $a$. Esimerkiksi luvun $5$ etäisyys luvusta nolla on $5$. </li>
-                            <li> Jos luku $a$ on negatiivinen, saadaan sen etäisyys luvusta nolla ilmaistua vastaluvun avulla. Esimerkiksi luvun $-9$ etäisyys luvusta nolla on $9 = -(-9)$.</li>
-                       </ul>
-                        
+                        Perustelu: 
+                    <ul>
+                        <li> Jos luku $a$ on positiivinen tai nolla, on sen etäisyys luvusta nolla yhtä suuri kuin luku $a$. Esimerkiksi luvun $5$ etäisyys luvusta nolla on $5$. </li>
+                        <li> Jos luku $a$ on negatiivinen, saadaan sen etäisyys luvusta nolla ilmaistua vastaluvun avulla. Esimerkiksi luvun $-9$ etäisyys luvusta nolla on $9 = -(-9)$.</li>
+                    </ul>
+
                     </p>
                 </div>
             </div>
@@ -227,16 +218,16 @@ topnav: maa5
                 </p>
                 <div class="proof">
                     <p>
-                       Perustelu: 
-                       <ul>
-                            <li> Oletetaan, että $\left|a\right| = \left|b\right|$ eli lukujen $a$ ja $b$ itseisarvot ovat samat. Luvut $a$ ja $b$ ovat siten lukusuoralla yhtä kaukana luvusta nolla. Ne ovat siis samat tai toistensa vastaluvut. Toisin sanottuna $a = b$ tai $a = -b$. </li>
-                            <li> Oletetaan, että $a = b$ tai $a = -b$. Tutkitaan kumpikin tapaus:
-                                <ul>
-                                    <li> Jos $a = b$ eli luvut ovat samat, myös niiden itseisarvot ovat samat eli $\left|a\right| = \left|b\right|$.</li>
-                                    <li> Jos $a = -b$ eli luvut ovat toistensa vastaluvut, ne ovat lukusuoralla kuitenkin yhtä kaukana luvusta nolla. Siten niillä on sama itseisarvo eli $\left|a\right| = \left|b\right|$.</li>
-                                </ul>
-                            </li>
-                       </ul>
+                        Perustelu: 
+                    <ul>
+                        <li> Oletetaan, että $\left|a\right| = \left|b\right|$ eli lukujen $a$ ja $b$ itseisarvot ovat samat. Luvut $a$ ja $b$ ovat siten lukusuoralla yhtä kaukana luvusta nolla. Ne ovat siis samat tai toistensa vastaluvut. Toisin sanottuna $a = b$ tai $a = -b$. </li>
+                        <li> Oletetaan, että $a = b$ tai $a = -b$. Tutkitaan kumpikin tapaus:
+                            <ul>
+                                <li> Jos $a = b$ eli luvut ovat samat, myös niiden itseisarvot ovat samat eli $\left|a\right| = \left|b\right|$.</li>
+                                <li> Jos $a = -b$ eli luvut ovat toistensa vastaluvut, ne ovat lukusuoralla kuitenkin yhtä kaukana luvusta nolla. Siten niillä on sama itseisarvo eli $\left|a\right| = \left|b\right|$.</li>
+                            </ul>
+                        </li>
+                    </ul>
                     </p>
                 </div>
             </div>
@@ -281,35 +272,35 @@ topnav: maa5
                 </p>
                 <div class="proof">
                     <p>
-                       Perustelu: Tutkitaan erikseen kolme mahdollista tapausta:
-                   </p>
-                       <ol>
-                            <li> 
-                                Oletetaan, että $a > b$. Lukujen $a$ ja $b$ välinen etäisyys on $a-b$: 
-                                <br>
-                                <img src="/kurssit/maa5/kuvat/k030.png" max-width: 100%; width: auto; height: auto;/>
-                                Toisaalta erotus $a-b$ on positiivinen, joten $\left|a-b\right| = a-b$. 
-                                <br>
-                            </li>
-                            <li> 
-                                Oletetaan, että $a = b$. Lukujen $a$ ja $b$ välinen etäisyys on $0$: 
-                                <br>
-                                <img src="/kurssit/maa5/kuvat/k032.png" max-width: 100%; width: auto; height: auto;/>
-                                Toisaalta erotus $a - b = 0$, joten $\left|a-b\right| = \left|0\right| = 0$. 
-                                <br>
-                            </li>
-                            <li> 
-                                Oletetaan, että $a < b$. Lukujen $a$ ja $b$ välinen etäisyys on $b-a$:
-                                <br>
-                                <img src="/kurssit/maa5/kuvat/k031.png" max-width: 100%; width: auto; height: auto;/>
-                                Toisaalta erotus $a-b$ on negatiivinen, joten 
-                                \begin{align*}
-                                \left|a-b\right| &= -(a-b) \\
-                                &= -a+b \\
-                                &= b-a.
-                                \end{align*}
-                            </li>
-                       </ol>
+                        Perustelu: Tutkitaan erikseen kolme mahdollista tapausta:
+                    </p>
+                    <ol>
+                        <li> 
+                            Oletetaan, että $a > b$. Lukujen $a$ ja $b$ välinen etäisyys on $a-b$: 
+                            <br>
+                            <img src="/kurssit/maa5/kuvat/k030.png" max-width: 100%; width: auto; height: auto;/>
+                                 Toisaalta erotus $a-b$ on positiivinen, joten $\left|a-b\right| = a-b$. 
+                                 <br>
+                        </li>
+                        <li> 
+                            Oletetaan, että $a = b$. Lukujen $a$ ja $b$ välinen etäisyys on $0$: 
+                            <br>
+                            <img src="/kurssit/maa5/kuvat/k032.png" max-width: 100%; width: auto; height: auto;/>
+                                 Toisaalta erotus $a - b = 0$, joten $\left|a-b\right| = \left|0\right| = 0$. 
+                                 <br>
+                        </li>
+                        <li> 
+                            Oletetaan, että $a < b$. Lukujen $a$ ja $b$ välinen etäisyys on $b-a$:
+                            <br>
+                            <img src="/kurssit/maa5/kuvat/k031.png" max-width: 100%; width: auto; height: auto;/>
+                                 Toisaalta erotus $a-b$ on negatiivinen, joten 
+                                 \begin{align*}
+                                 \left|a-b\right| &= -(a-b) \\
+                                 &= -a+b \\
+                                 &= b-a.
+                                 \end{align*}
+                        </li>
+                    </ol>
                     <p>
                         Havaitaan, että kaikissa tapaukissa lukujen $a$ ja $b$ välinen etäisyys on yhtä suuri kuin erotuksen $a-b$ itseisarvo $\left|a-b\right|$.
                     </p>
@@ -334,9 +325,9 @@ topnav: maa5
                             <li> lukujen $-\dfrac{3}{8}$ ja $\dfrac{7}{10}$ välinen etäisyys. </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t005_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t005_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t005_v" class="collapse">
                             <ol class="a">
@@ -372,9 +363,9 @@ topnav: maa5
                             <li> Mikä on lukujen $a$ ja $b$ välisen etäisyyden tarkka arvo? Entä likiarvo? </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t006_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t006_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t006_v" class="collapse">
                             <ol class="a">
@@ -407,17 +398,17 @@ topnav: maa5
                 </p>
                 <div class="proof">
                     <p>
-                       Perustelu: Molemmat yhtälöt voidaan perustella teoreeman 1 avulla tutkimalla neljä mahdollista tapausta:
-                   </p>
-                       <ol>
-                            <li> $a \geq 0$ ja $b \geq 0$ </li>
-                            <li> $a \geq 0$ ja $b < 0$ </li>
-                            <li> $a < 0$ ja $b \geq 0$ </li>
-                            <li> $a < 0$ ja $b < 0$. </li>
-                       </ol>
+                        Perustelu: Molemmat yhtälöt voidaan perustella teoreeman 1 avulla tutkimalla neljä mahdollista tapausta:
+                    </p>
+                    <ol>
+                        <li> $a \geq 0$ ja $b \geq 0$ </li>
+                        <li> $a \geq 0$ ja $b < 0$ </li>
+                        <li> $a < 0$ ja $b \geq 0$ </li>
+                        <li> $a < 0$ ja $b < 0$. </li>
+                    </ol>
                     <p>
                         Huomaa, että osamäärää koskevassa yhtälössä $b \neq 0$, sillä muuten osamäärä ei ole määritelty.
-                   </p>
+                    </p>
                     <p>
                         Tarkastellaan malliksi tulon itseisarvon tapaus 2: 
                         <br>
@@ -452,9 +443,9 @@ topnav: maa5
                             Kuinka suuri tämä etäisyys on verrattuna lukujen $k$ ja $n$ väliseen etäisyyteen $\left|k-n\right|$? Hyödynnä teoreemaa 4.
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t006b_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t006b_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t006b_v" class="collapse">
                             <p>
@@ -464,7 +455,7 @@ topnav: maa5
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -527,7 +518,7 @@ topnav: maa5
                         $$
                         \left|\pv{PQ}\right| = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}.
                         $$
-                   </p>
+                    </p>
                 </div>
             </div>
 
@@ -550,9 +541,9 @@ topnav: maa5
                             <li> $A = (-18,-2)\ $ ja $\ B = (-21,4)$. </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t008_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t008_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t008_v" class="collapse">
                             <ol class="a">
@@ -585,9 +576,9 @@ topnav: maa5
                             <li> Tarkista vastauksesi järkevyys hahmottelemalla tilanteesta kuva. Löysitkö kaikki sopivat pisteet?</li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t009_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t009_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t009_v" class="collapse">
                             <ol class="a">
@@ -642,20 +633,20 @@ topnav: maa5
                         \pv{OC} &= \pv{OP} + \frac{1}{2}\pv{PQ}.
                         \end{align*}
                         <img src="/kurssit/maa5/kuvat/k056.png" max-width: 100%; width: auto; height: auto;/>
-                        Kun siihen sijoitetaan 
-                        \begin{align*}
-                        \pv{OP} &= x_1\vi + y_1\vj \\
-                        \pv{PQ} &= (x_2-x_1)\vi + (y_2-y_1)\vj,
-                        \end{align*}
-                        paikkavektoriksi saadaan sievennyksen jälkeen 
-                        \begin{align*}
-                        \pv{OC} &= \frac{1}{2}(x_1+x_2)\vi + \frac{1}{2}(y_1 + y_2)\vj.
-                        \end{align*}
-                        Paikkavektorista voidaan lukea pisteen $C$ koordinaatit. Siis 
-                        $$
-                        C = \left(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2}\right).
-                        $$
-                   </p>
+                             Kun siihen sijoitetaan 
+                             \begin{align*}
+                             \pv{OP} &= x_1\vi + y_1\vj \\
+                             \pv{PQ} &= (x_2-x_1)\vi + (y_2-y_1)\vj,
+                             \end{align*}
+                             paikkavektoriksi saadaan sievennyksen jälkeen 
+                             \begin{align*}
+                             \pv{OC} &= \frac{1}{2}(x_1+x_2)\vi + \frac{1}{2}(y_1 + y_2)\vj.
+                             \end{align*}
+                             Paikkavektorista voidaan lukea pisteen $C$ koordinaatit. Siis 
+                             $$
+                             C = \left(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2}\right).
+                             $$
+                    </p>
                 </div>
             </div>
 
@@ -677,9 +668,9 @@ topnav: maa5
                             <li> $A = (-3\sqrt{2},-1)\ $ ja $\ B = (9\sqrt{2},5)$. </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t011_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t011_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t011_v" class="collapse">
                             <ol class="a">
@@ -694,7 +685,7 @@ topnav: maa5
         </div>
     </section>
 
-            
+
     <section class="panel">
         <header>
             <h1>
@@ -932,13 +923,13 @@ topnav: maa5
                     </h2>
                     <div id="s2t003c_v" class="collapse">
                         <ol class="a">
-                        <li> $\left| x - 17 \right| = 13$, $\quad x = 4$ tai $x = 30$ 
-                        </li>
-                        <li> $\left| x - (-4) \right| > 3$, $\quad x > -1$ tai $x < -7$ 
-                        </li>
-                        <li> $\left| x - 9 \right| \leq 10$, $\quad -1 < x < 19$  
-                        </li>
-                    </ol>
+                            <li> $\left| x - 17 \right| = 13$, $\quad x = 4$ tai $x = 30$ 
+                            </li>
+                            <li> $\left| x - (-4) \right| > 3$, $\quad x > -1$ tai $x < -7$ 
+                            </li>
+                            <li> $\left| x - 9 \right| \leq 10$, $\quad -1 < x < 19$  
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -1020,7 +1011,7 @@ topnav: maa5
 
         </div>
     </section>
-            
+
 
     <section class="panel">
         <header>
@@ -1058,10 +1049,10 @@ topnav: maa5
                     </h2>
                     <div id="s3t001_v" class="collapse">
                         <ol class="a">
-                        <li> $\sqrt{(-3)^2} = \left|-3\right|$ </li>
-                        <li> $\sqrt{(2-\sqrt{5})^2} = \left|2-\sqrt{5}\right|$ </li>
-                        <li> $\sqrt{(a+b)^2} = \left|a + b\right|$ </li>
-                    </ol>
+                            <li> $\sqrt{(-3)^2} = \left|-3\right|$ </li>
+                            <li> $\sqrt{(2-\sqrt{5})^2} = \left|2-\sqrt{5}\right|$ </li>
+                            <li> $\sqrt{(a+b)^2} = \left|a + b\right|$ </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -1095,7 +1086,7 @@ topnav: maa5
                 <header>
                     <h1>
                         <a data-target="#s2t008">
-                    
+
                         </a>
                     </h1>
                 </header>
@@ -1120,7 +1111,7 @@ topnav: maa5
                 <header>
                     <h1>
                         <a data-target="#s2t009">
-                         
+
                         </a>
                     </h1>
                 </header>
