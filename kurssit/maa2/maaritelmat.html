@@ -4,54 +4,8 @@ layout: print
 sitemap: true
 main-class: has-atop
 topnav: maa2
+resources:
+  css:
+    - "/css/definitions_page.css"
 ---
 
-<style>
-  .tehtava .collapse,
-  .panel .collapse {
-		display: block;
-	}
-	
-  section .tehtava>header a[data-toggle="collapse"].collapsed:after, 
-  section.panel>header a[data-toggle="collapse"].collapsed:after {
-  content: none;
-  }
-  
-  body div > p,
-  blockquote,
-  div#Reaaliluvut > ol,
-  div#Reaaliluvut > ul,
-  .tehtavat,
-  .tehtava,
-  article section.panel>header,
-  #tavoitteet,
-  .objective,
-  section > header,
-	section > div > ul,
-	section > div > ol {
-    display: none;
-  }
-  
-  main.has-atop article,
-  body .tehtava, 
-  body .panel {
-    border: 0;
-    border-bottom-width: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-bottom: 0;
-    background-color: transparent;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.05);
-}
-.tehtava>div, .panel>div {
-    padding: 0;
-}
-  
-  .definition,
-  .theorem {
-    display: block;
-    box-shadow: 0 3px 3px rgba(0,0,0,0.05);
-    margin: 10px;
-  }
-  
-</style>

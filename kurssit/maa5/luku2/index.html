@@ -6,15 +6,6 @@ main-class: has-atop
 topnav: maa5
 ---
 
-<style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    th {
-        padding: 5px;
-    }
-</style>
 
 <input type="hidden" id="chapterNumber" value="3"/>
 <input type="hidden" id="theoremStart" value="14"/>
@@ -38,16 +29,16 @@ topnav: maa5
             <div class="objective">
                 <p> 
                     Tämän luvun tavoitteena on, että pystyt hyödyntämään koordinaatistoa erilaisten ympyröihin liittyvien ongelmien ratkaisemisessa. Osaat
-                    <ul>
-                        <li> muodostaa ympyrän yhtälön </li>
-                        <li> piirtää ympyrän koordinaatistoon </li>
-                        <li> muokata ympyrän yhtälön muotoon, josta ympyrän keskipiste ja säde voidaan päätellä </li>
-                        <li> tutkia, onko piste ympyrällä </li>
-                        <li> laskea pisteen etäisyyden ympyrästä </li>
-                        <li> etsiä kahden ympyrän tai suoran ja ympyrän leikkauspisteet </li>
-                        <li> tutkia, onko annettu suora ympyrän tangentti</li>
-                        <li> muodostaa ympyrän tangentin yhtälön.</li>  
-                    </ul> 
+                <ul>
+                    <li> muodostaa ympyrän yhtälön </li>
+                    <li> piirtää ympyrän koordinaatistoon </li>
+                    <li> muokata ympyrän yhtälön muotoon, josta ympyrän keskipiste ja säde voidaan päätellä </li>
+                    <li> tutkia, onko piste ympyrällä </li>
+                    <li> laskea pisteen etäisyyden ympyrästä </li>
+                    <li> etsiä kahden ympyrän tai suoran ja ympyrän leikkauspisteet </li>
+                    <li> tutkia, onko annettu suora ympyrän tangentti</li>
+                    <li> muodostaa ympyrän tangentin yhtälön.</li>  
+                </ul> 
                 </p>
             </div>
 
@@ -123,39 +114,39 @@ topnav: maa5
                     <p>
                         Perustelu: 
                     </p>
-                        <ol>
-                            <li> 
-                                Oletetaan aluksi, että $(x,y)$ on ympyrän piste. Tällöin sen etäisyys ympyrän keskipisteestä $(a,b)$ on $r$. Tämä voidaan ilmaista yhtälönä
-                                $$
-                                \sqrt{(x-a)^2 + (y-b)^2} = r.
-                                $$
-                                Tästä seuraa, että 
-                                $$
-                                (x-a)^2 + (y-b)^2 = r^2.
-                                $$
-                            </li>
-                            <li>
-                                Oletetaan, että piste $(x,y)$ toteuttaa yhtälön 
-                                $$
-                                (x-a)^2 + (y-b)^2 = r^2.
-                                $$
-                                Yhtälön kumpikin puoli on epänegatiivinen, joten voidaan ottaa neliöjuuri:
-                                $$
-                                \sqrt{(x-a)^2 + (y-b)^2} = \sqrt{r^2}.
-                                $$
-                                Koska luku $r$ on ympyrän säde, sekin on epänegatiivinen: $r \geq 0$. Tästä seuraa, että $\sqrt{r^2} = r$. Yhtälö voidaan siis kirjoittaa muodossa
-                                $$
-                                \sqrt{(x-a)^2 + (y-b)^2} = r.
-                                $$
-                                Tästä nähdään, että pisteen $(x,y)$ etäisyys ympyrän keskipisteestä $(a,b)$ on $r$. Siis piste $(x,y)$ on ympyrällä.
-                            </li>
-                        </ol>
+                    <ol>
+                        <li> 
+                            Oletetaan aluksi, että $(x,y)$ on ympyrän piste. Tällöin sen etäisyys ympyrän keskipisteestä $(a,b)$ on $r$. Tämä voidaan ilmaista yhtälönä
+                            $$
+                            \sqrt{(x-a)^2 + (y-b)^2} = r.
+                            $$
+                            Tästä seuraa, että 
+                            $$
+                            (x-a)^2 + (y-b)^2 = r^2.
+                            $$
+                        </li>
+                        <li>
+                            Oletetaan, että piste $(x,y)$ toteuttaa yhtälön 
+                            $$
+                            (x-a)^2 + (y-b)^2 = r^2.
+                            $$
+                            Yhtälön kumpikin puoli on epänegatiivinen, joten voidaan ottaa neliöjuuri:
+                            $$
+                            \sqrt{(x-a)^2 + (y-b)^2} = \sqrt{r^2}.
+                            $$
+                            Koska luku $r$ on ympyrän säde, sekin on epänegatiivinen: $r \geq 0$. Tästä seuraa, että $\sqrt{r^2} = r$. Yhtälö voidaan siis kirjoittaa muodossa
+                            $$
+                            \sqrt{(x-a)^2 + (y-b)^2} = r.
+                            $$
+                            Tästä nähdään, että pisteen $(x,y)$ etäisyys ympyrän keskipisteestä $(a,b)$ on $r$. Siis piste $(x,y)$ on ympyrällä.
+                        </li>
+                    </ol>
                     <p>
                         Näin on näytetty, että piste $(x,y)$ on ympyrällä, jos ja vain jos se toteuttaa yhtälön 
                         $$
                         \sqrt{(x-a)^2 + (y-b)^2} = r.
                         $$
-                   </p>                
+                    </p>                
                 </div>
             </div>
 
@@ -178,20 +169,20 @@ topnav: maa5
                         </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t202_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t202_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t202_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                
-                            </li>  
-                            <li> 
-                                $(x-5)^2 + (y+3)^2 = 16$
-                            </li>
-                            <li> Etäisyys on $\sqrt{\frac{29}{2}}$. </li>
-                        </ol>
+                                <li>
+
+                                </li>  
+                                <li> 
+                                    $(x-5)^2 + (y+3)^2 = 16$
+                                </li>
+                                <li> Etäisyys on $\sqrt{\frac{29}{2}}$. </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -216,20 +207,20 @@ topnav: maa5
                         </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t203_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t203_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t203_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                Keskipiste $(8,-4)$, säde $6$.
-                            </li>  
-                            <li> 
-                                Keskipiste $(14,0)$, säde $2\sqrt{2}$.
-                            </li>
-                            <li> Keskipiste $(0,0)$, säde $2\sqrt{5}$. </li>
-                        </ol>
+                                <li>
+                                    Keskipiste $(8,-4)$, säde $6$.
+                                </li>  
+                                <li> 
+                                    Keskipiste $(14,0)$, säde $2\sqrt{2}$.
+                                </li>
+                                <li> Keskipiste $(0,0)$, säde $2\sqrt{5}$. </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -260,19 +251,19 @@ topnav: maa5
                             Vinkki: alkuun pääset esimerkiksi piirtämällä tilanteesta kuvan.
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t204_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t204_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t204_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                $(x+2)^2 + (y-3)^2 = 10$
-                            </li>  
-                            <li> 
-                                $(x-2)^2 + (y-1)^2 = 4$
-                            </li>
-                        </ol>
+                                <li>
+                                    $(x+2)^2 + (y-3)^2 = 10$
+                                </li>  
+                                <li> 
+                                    $(x-2)^2 + (y-1)^2 = 4$
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -306,19 +297,19 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t204b_v">
-                            Vinkki
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t204b_v">
+                                Vinkki
+                            </a>
                         </h2>
                         <div id="t204b_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                $13 = 3^2 + 2^2$
-                            </li>  
-                            <li> 
-                                $10 = 3^2 + 1^2$
-                            </li>
-                        </ol>
+                                <li>
+                                    $13 = 3^2 + 2^2$
+                                </li>  
+                                <li> 
+                                    $10 = 3^2 + 1^2$
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -349,16 +340,16 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t204c_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t204c_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t204c_v" class="collapse">
                             <ol class="a">
-                            <li> </li>  
-                            <li> $3\sqrt{2}$ </li>
-                            <li> $2\sqrt{2}$ </li>
-                        </ol>
+                                <li> </li>  
+                                <li> $3\sqrt{2}$ </li>
+                                <li> $2\sqrt{2}$ </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -378,10 +369,10 @@ topnav: maa5
 
             <div class="theorem" id="SUMMAN JA EROTUKSEN NELIÖT">
                 <h3>TEOREEMA</h3>
-                    <ol>
-                        <li> $\quad a^2 + 2ab + b^2 = (a+b)^2$</li>
-                        <li> $\quad a^2 - 2ab + b^2 = (a-b)^2$</li>
-                    </ol>
+                <ol>
+                    <li> $\quad a^2 + 2ab + b^2 = (a+b)^2$</li>
+                    <li> $\quad a^2 - 2ab + b^2 = (a-b)^2$</li>
+                </ol>
             </div>
 
             <p>
@@ -409,11 +400,11 @@ topnav: maa5
                 \end{align*}
                 Havaitaan, että tämän yhtälön vasen puoli on aina epänegatiivinen, koska se on kahden neliölausekkeen summa. Se, mitä käyrää yhtälö esittää, riippuu nyt yhtälön oikeasta puolesta. 
             </p>
-                <ul>
-                    <li> Jos $5-c > 0$, kysymyksessä on ympyrä, jonka keskipiste on $(2,-1)$ ja säde $\sqrt{5-c}$.</li>
-                    <li> Jos $5-c = 0$, yhtälön toteuttaa ainoastaan piste $(2,-1)$. </li>
-                    <li> Jos $5-c < 0$, mikään tason piste ei toteuta yhtälöä. </li>
-                </ul>
+            <ul>
+                <li> Jos $5-c > 0$, kysymyksessä on ympyrä, jonka keskipiste on $(2,-1)$ ja säde $\sqrt{5-c}$.</li>
+                <li> Jos $5-c = 0$, yhtälön toteuttaa ainoastaan piste $(2,-1)$. </li>
+                <li> Jos $5-c < 0$, mikään tason piste ei toteuta yhtälöä. </li>
+            </ul>
             <p>
                 Vastaavalla tavalla voidaan osoittaa yleisesti, että yhtälön 
                 $$x^2 + y^2 + ax + by + c = 0$$
@@ -442,15 +433,15 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t205_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t205_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t205_v" class="collapse">
                             <ol class="a">
-                            <li> Keskipiste $(-1,0)$ ja säde $r = 2$.</li>  
-                            <li> Keskipiste $(-5,3)$ ja säde $r = 10$. </li>
-                        </ol>
+                                <li> Keskipiste $(-1,0)$ ja säde $r = 2$.</li>  
+                                <li> Keskipiste $(-5,3)$ ja säde $r = 10$. </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -481,21 +472,21 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t206_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t206_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t206_v" class="collapse">
                             <ol class="a">
-                            <li> Yksittäinen piste $(8,-1)$. </li>  
-                            <li> Mikään tason piste ei toteuta yhtälöä. </li>
-                            <li> Ympyrä, jonka keskipiste on $(0,-11)$ ja säde $15$. </li>
-                        </ol>
+                                <li> Yksittäinen piste $(8,-1)$. </li>  
+                                <li> Mikään tason piste ei toteuta yhtälöä. </li>
+                                <li> Ympyrä, jonka keskipiste on $(0,-11)$ ja säde $15$. </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-        
+
         </div>
     </section>
 
@@ -527,8 +518,8 @@ topnav: maa5
                             Tehtävänä on ratkaista alla oleva yhtälöpari graafisesti eli piirroksen avulla. 
                             $$
                             \left\{\begin{aligned}
-                                (x+3)^2 + (y-1)^2 &= 20 \\
-                                (x-2)^2 + (y-6)^2 &= 10.
+                            (x+3)^2 + (y-1)^2 &= 20 \\
+                            (x-2)^2 + (y-6)^2 &= 10.
                             \end{aligned}\right.
                             $$
                         </p>
@@ -547,30 +538,30 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t209_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t209_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t209_v" class="collapse">
                             <ol class="a">
-                            <li>  </li>  
-                            <li>  </li>
-                            <li>  </li>
-                            <li> Yhtälöpari toteutuu, jos ja vain jos 
-                                $$
-                            \left\{\begin{aligned}
-                                x &= -1 \\
-                                y &= 5
-                            \end{aligned}\right.
-                            $$
-                            tai
-                            $$
-                            \left\{\begin{aligned}
-                                x &= 1 \\
-                                y &= 3.
-                            \end{aligned}\right.
-                            $$ </li>
-                        </ol>
+                                <li>  </li>  
+                                <li>  </li>
+                                <li>  </li>
+                                <li> Yhtälöpari toteutuu, jos ja vain jos 
+                                    $$
+                                    \left\{\begin{aligned}
+                                    x &= -1 \\
+                                    y &= 5
+                                    \end{aligned}\right.
+                                    $$
+                                    tai
+                                    $$
+                                    \left\{\begin{aligned}
+                                    x &= 1 \\
+                                    y &= 3.
+                                    \end{aligned}\right.
+                                    $$ </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -584,30 +575,30 @@ topnav: maa5
                 Tarkastellaan edellisen tehtävän yhtälöparia
                 $$
                 \left\{\begin{aligned}
-                    (x+3)^2 + (y-1)^2 &= 20 \\
-                    (x-2)^2 + (y-6)^2 &= 10
+                (x+3)^2 + (y-1)^2 &= 20 \\
+                (x-2)^2 + (y-6)^2 &= 10
                 \end{aligned}\right.
                 $$
                 Tehdään yhtälöiden vasemmalla puolella toiseen potenssiin korotukset, jolloin yhtälöpari saadaan sievennysten jälkeen muotoon
                 $$
                 \left\{\begin{aligned}
-                    x^2 + y^2 + 6x - 2y &= 10 \\
-                    x^2 + y^2 - 4x - 12y &= -30.
+                x^2 + y^2 + 6x - 2y &= 10 \\
+                x^2 + y^2 - 4x - 12y &= -30.
                 \end{aligned}\right.
                 $$
                 Ratkaistaan tämä yhtälöpari soveltamalla yhteenlaskumenetelmää.
                 Kerrotaan toinen yhtälö luvulla $-1$:
                 $$
                 \left\{\begin{aligned}
-                    \textcolor{red}{x^2 + y^2} + 6x - 2y &= 10  \\
-                    \textcolor{red}{x^2 + y^2} - 4x - 12y &= -30 \mid \, \textcolor{red}{\cdot \, (-1)}
+                \textcolor{red}{x^2 + y^2} + 6x - 2y &= 10  \\
+                \textcolor{red}{x^2 + y^2} - 4x - 12y &= -30 \mid \, \textcolor{red}{\cdot \, (-1)}
                 \end{aligned}\right.
                 $$
                 Yhtälöpari saa näin muodon
                 $$
                 \left\{\begin{aligned}
-                    \textcolor{red}{x^2 + y^2} + 6x - 2y &= 10 \\
-                    \textcolor{red}{-x^2 - y^2} \textcolor{blue}{+ 4x + 12y} &= \textcolor{blue}{30}.
+                \textcolor{red}{x^2 + y^2} + 6x - 2y &= 10 \\
+                \textcolor{red}{-x^2 - y^2} \textcolor{blue}{+ 4x + 12y} &= \textcolor{blue}{30}.
                 \end{aligned}\right.
                 $$
                 Lasketaan yhtälöt yhteen, jolloin saadaan yksi yhtälö. Nyt tuloksena on yhtälö
@@ -617,7 +608,7 @@ topnav: maa5
                 Ympyröiden leikkauspisteet sijaitsevat tätä yhtälöä vastaavalla suoralla:
                 <br>
                 <img src="/kurssit/maa5/kuvat/k037.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
+                     <br>
                 Sijoitetaan saatu lauseke jompaan kumpaan alkuperäisistä yhtälöistä, esimerkiksi ensimmäiseen ja sievennetään:
                 \begin{align*}
                 x^2 + (4-x)^2 + 6x - 2(4-x) &= 10 \\
@@ -627,11 +618,11 @@ topnav: maa5
                 \end{align*}
                 Tämä yhtälö toteutuu, jos ja vain jos $x = 1$ tai $x = -1$.
                 Leikkauspisteiden $y$-koordinaatit voidaan ratkaista esimerkiksi kohdassa 2 johdetusta yhtälöstä $y = 4-x$:
-                <ul>
-                    <li> Jos $x = 1$, niin $y = 4-1 = 3$.</li>
-                    <li> Jos $x = -1$, niin $y = 4-(-1) = 5$.</li>
-                </ul>
-                Leikkauspisteet ovat siis $(1,3)$ ja $(-1,5)$.
+            <ul>
+                <li> Jos $x = 1$, niin $y = 4-1 = 3$.</li>
+                <li> Jos $x = -1$, niin $y = 4-(-1) = 5$.</li>
+            </ul>
+            Leikkauspisteet ovat siis $(1,3)$ ja $(-1,5)$.
             </p>
 
             <div class="tehtavat">
@@ -648,9 +639,9 @@ topnav: maa5
                             Määritä ympyröiden $(x-9)^2 + (y-1)^2 = 40$ ja $(x+3)^2 + (y+5)^2 = 100$ leikkauspisteet ratkaisemalla yhtälöpari samaan tapaan kuin edellä tehtiin. Voit tarkistaa ratkaisun järkevyyden hahmottelemalla ympyrät koordinaatistoon.           
                         </p> 
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t210_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t210_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t210_v" class="collapse">
                             <p> Leikkauspisteet ovat $(3,3)$ ja $(7,-5)$. </p>
@@ -662,7 +653,7 @@ topnav: maa5
             <p>
                 Siirrytään seuraavaksi tutkimaan suoran ja ympyrän leikkauspisteitä.
             </p>
-          
+
             <div class="tehtavat">
                 <div class="tehtava" id="t207-ex">
                     <header>
@@ -677,8 +668,8 @@ topnav: maa5
                             Tehtävänä on ratkaista alla oleva yhtälöpari graafisesti eli piirroksen avulla.
                             $$
                             \left\{\begin{aligned}
-                                x  + y - 5 &= 0 \\
-                                (x-3)^2 + (y-1)^2 &= 13.
+                            x  + y - 5 &= 0 \\
+                            (x-3)^2 + (y-1)^2 &= 13.
                             \end{aligned}\right.
                             $$
                         </p>
@@ -697,45 +688,45 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t207_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t207_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t207_v" class="collapse">
                             <ol class="a">
-                            <li>  </li>  
-                            <li>  </li>
-                            <li>  </li>
-                            <li> Yhtälöpari toteutuu, jos ja vain jos 
-                                $$
-                            \left\{\begin{aligned}
-                                x &= 1 \\
-                                y &= 4
-                            \end{aligned}\right.
-                            $$
-                            tai
-                            $$
-                            \left\{\begin{aligned}
-                                x &= 6 \\
-                                y &= -1.
-                            \end{aligned}\right.
-                            $$ </li>
-                        </ol>
+                                <li>  </li>  
+                                <li>  </li>
+                                <li>  </li>
+                                <li> Yhtälöpari toteutuu, jos ja vain jos 
+                                    $$
+                                    \left\{\begin{aligned}
+                                    x &= 1 \\
+                                    y &= 4
+                                    \end{aligned}\right.
+                                    $$
+                                    tai
+                                    $$
+                                    \left\{\begin{aligned}
+                                    x &= 6 \\
+                                    y &= -1.
+                                    \end{aligned}\right.
+                                    $$ </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
 
             <p>
-                 Suoran ja ympyrän yhtälöistä muodostuva yhtälöpari on kätevintä ratkaista sijoitusmenetelmällä, jota käytettiin jo kurssissa <a href="http://kisallioppiminen.fi/kurssit/maa4/xyz-koordinaatisto/">MAA4</a>. Havainnollistetaan menetelmää seuraavan esimerkin avulla.
+                Suoran ja ympyrän yhtälöistä muodostuva yhtälöpari on kätevintä ratkaista sijoitusmenetelmällä, jota käytettiin jo kurssissa <a href="http://kisallioppiminen.fi/kurssit/maa4/xyz-koordinaatisto/">MAA4</a>. Havainnollistetaan menetelmää seuraavan esimerkin avulla.
             </p>
 
             <p>
                 Etsitään suoran $x + 2y - 11 = 0$ ja ympyrän $x^2+y^2 + 4x - 8y + 10 = 0$ leikkauspisteet ratkaisemalla yhtälöpari 
                 $$
                 \left\{\begin{aligned}
-                    x + 2y - 11 &= 0 \\
-                    x^2+y^2 + 4x - 8y + 10 &= 0.
+                x + 2y - 11 &= 0 \\
+                x^2+y^2 + 4x - 8y + 10 &= 0.
                 \end{aligned}\right.
                 $$
                 Ratkaistaan suoran yhtälöstä jompi kumpi tuntemattomista. Esimerkiksi
@@ -749,7 +740,7 @@ topnav: maa5
                 \end{align*}
                 Saatu toisen asteen yhtälö voidaan ratkaista toisen asteen yhtälön ratkaisukaavan avulla (<a href="http://kisallioppiminen.fi/kurssit/maa2/luku3/">MAA2</a>, teoreema 5). 
                 $$
-                    y = \frac{12\pm \sqrt{12^2 - 4\cdot 35}}{2\cdot 1} = 6 \pm 1.
+                y = \frac{12\pm \sqrt{12^2 - 4\cdot 35}}{2\cdot 1} = 6 \pm 1.
                 $$
                 Siis $y = 7$ tai $y = 5$.
                 Toinen tuntematon saadaan nyt selville sijoittamalla äsken saatu ratkaisu suoran yhtälöön:
@@ -781,19 +772,19 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t208_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t208_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t208_v" class="collapse">
                             <ol class="a">
-                            <li> 
-                                Leikkauspisteet ovat $(1,2)$ ja $\left(\frac{18}{5}, -\frac{29}{5}\right)$.
-                            </li>
-                            <li>
-                                Keskipiste $(5,-1)$ ja säde $r = 5$.
-                            </li>
-                        </ol>
+                                <li> 
+                                    Leikkauspisteet ovat $(1,2)$ ja $\left(\frac{18}{5}, -\frac{29}{5}\right)$.
+                                </li>
+                                <li>
+                                    Keskipiste $(5,-1)$ ja säde $r = 5$.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -839,9 +830,9 @@ topnav: maa5
                             Onko suora $3x - y - 5 = 0$ ympyrän $x^2 + y^2 + 4x + 2y - 5 = 0$ tangentti? Ratkaise tehtävä selvittämällä suoran ja ympyrän leikkauspisteet. Tarkista vastauksesi järkevyys piirtämällä tilanteesta kuva.
                         </p> 
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t211_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t211_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t211_v" class="collapse">
                             <p>
@@ -855,7 +846,7 @@ topnav: maa5
             <p>
                 Ympyrän tangenttiin tutustuttiin jo kurssilla <a href="http://kisallioppiminen.fi/kurssit/maa3/luku2/">MAA3</a>. Siellä osoitettiin muun muassa, että ympyrän tangetti on aina kohtisuorassa sivuamispisteeseen piirrettyä sädettä vastaan (teoreema 15). Tämän tiedon avulla voidaan määrittää ympyrän tietyn pisteen kautta kulkevan tangentin yhtälö. 
             </p>
-          
+
             <div class="tehtavat">
                 <div class="tehtava" id="t212-ex">
                     <header>
@@ -882,22 +873,22 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t212_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t212_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t212_v" class="collapse">
                             <ol class="a">
-                            <li>  </li>
-                            <li> Kyllä, piste on ympyrällä. </li>
-                            <li>  </li>
-                            <li> $y = -\frac{1}{2}x - \frac{9}{2}$ </li>
-                        </ol>
+                                <li>  </li>
+                                <li> Kyllä, piste on ympyrällä. </li>
+                                <li>  </li>
+                                <li> $y = -\frac{1}{2}x - \frac{9}{2}$ </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-           
+
             <p>
                 Tutkitaan seuraavaksi, miten löydetään yhtälö tietyn pisteen kautta kulkevalle tangentille tapauksessa, jossa piste ei ole ympyrällä. Tässä tilanteessa oleellista on, että ympyrän keskipisteen etäisyys tangenttisuorasta on yhtä suuri kuin ympyrän säde. Näin voidaan hyödyntää <a href="http://kisallioppiminen.fi/kurssit/maa5/luku1/">edellisen luvun</a> Pisteen etäisyys suorasta -teoreemaa.  
             </p>
@@ -935,18 +926,18 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t213_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t213_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t213_v" class="collapse">
                             <ol class="a">
-                            <li>  </li>
-                            <li> $y-5 = k(x-5)$ </li>
-                            <li>  </li>
-                            <li> $\dfrac{\left|6-2k\right|}{\sqrt{k^2+1}} = \sqrt{20}$ </li>
-                            <li> Tangentteja on kaksi: $y = -2x + 15$ ja $y = -\frac{1}{2}x + \frac{5}{2}$.</li>
-                        </ol>
+                                <li>  </li>
+                                <li> $y-5 = k(x-5)$ </li>
+                                <li>  </li>
+                                <li> $\dfrac{\left|6-2k\right|}{\sqrt{k^2+1}} = \sqrt{20}$ </li>
+                                <li> Tangentteja on kaksi: $y = -2x + 15$ ja $y = -\frac{1}{2}x + \frac{5}{2}$.</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -971,14 +962,14 @@ topnav: maa5
                 $$(6-2k)^2 = 20(k^2 + 1).$$
                 Nyt vasemmalla voidaan tehdä toiseen potenssiin korotukset ja muokata yhtälöä:
                 \begin{align*}
-                    36-24k + 4k^2 &= 20k^2 + 20 \\
-                    -16k^2-24k + 16 &= 0 \ \mid \, : (-8)\\
-                    2k^2 + 3k - 2 &= 0
+                36-24k + 4k^2 &= 20k^2 + 20 \\
+                -16k^2-24k + 16 &= 0 \ \mid \, : (-8)\\
+                2k^2 + 3k - 2 &= 0
                 \end{align*}
                 Tämä yhtälö toteutuu, jos ja vain jos 
                 \begin{align*}
-                    k &= \frac{-3 \pm \sqrt{3^2 - 4\cdot 2\cdot (-2)}}{2\cdot 2} \\
-                    &= \frac{-3 \pm 5}{4}.
+                k &= \frac{-3 \pm \sqrt{3^2 - 4\cdot 2\cdot (-2)}}{2\cdot 2} \\
+                &= \frac{-3 \pm 5}{4}.
                 \end{align*}
                 Ratkaisuiksi saadaan näin $k_1 = \frac{1}{2}$ ja $k_2 = -2$. Ovatko nämä myös alkuperäisen yhtälön 
                 $$\frac{\left|6-2k\right|}{\sqrt{k^2+1}} = \sqrt{20}$$
@@ -990,15 +981,15 @@ topnav: maa5
             <p>
                 Tällä kertaa kumpikin ratkaisuehdokas on alkuperäisen yhtälön ratkaisu, sillä
                 \begin{align*}
-                    \frac{\left|6-2 \cdot \frac{1}{2}\right|}{\sqrt{\left(\frac{1}{2}\right)^2+1}} &= \frac{5}{\sqrt{\frac{5}{4}}} = \frac{5}{\frac{\sqrt{5}}{\sqrt{4}}} \\[1mm]
-                    &= 5 \cdot \frac{\sqrt{4}}{\sqrt{5}} \\[1mm]
-                    &= \sqrt{5}\cdot \sqrt{4} = \sqrt{20}
+                \frac{\left|6-2 \cdot \frac{1}{2}\right|}{\sqrt{\left(\frac{1}{2}\right)^2+1}} &= \frac{5}{\sqrt{\frac{5}{4}}} = \frac{5}{\frac{\sqrt{5}}{\sqrt{4}}} \\[1mm]
+                &= 5 \cdot \frac{\sqrt{4}}{\sqrt{5}} \\[1mm]
+                &= \sqrt{5}\cdot \sqrt{4} = \sqrt{20}
                 \end{align*}
                 ja
                 \begin{align*}
-                    \frac{\left|6-2\cdot (-2)\right|}{\sqrt{(-2)^2+1}} &= \frac{10}{\sqrt{5}} = \frac{\sqrt{100}}{\sqrt{5}} \\[1mm]
-                    &= \sqrt{\frac{100}{5}} \\[1mm]
-                    &= \sqrt{20}.
+                \frac{\left|6-2\cdot (-2)\right|}{\sqrt{(-2)^2+1}} &= \frac{10}{\sqrt{5}} = \frac{\sqrt{100}}{\sqrt{5}} \\[1mm]
+                &= \sqrt{\frac{100}{5}} \\[1mm]
+                &= \sqrt{20}.
                 \end{align*}
                 Tässä käytettiin <a href="http://kisallioppiminen.fi/kurssit/maa2/luku2/">MAA2-kurssissa</a> opiskeltuja neliöjuuren laskusääntöjä.
             </p>
@@ -1040,18 +1031,18 @@ topnav: maa5
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#t214_v">
-                            Vastaus
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t214_v">
+                                Vastaus
+                            </a>
                         </h2>
                         <div id="t214_v" class="collapse">
                             <ol class="a">
-                            <li>  </li>
-                            <li> $y = 2x + h$ </li>
-                            <li>  </li>
-                            <li> $\dfrac{\left|7+h\right|}{\sqrt{5}} = \sqrt{20}$ </li>
-                            <li> Tangentteja on kaksi: $y = 2x + 3$ ja $y = 2x - 17$.</li>
-                        </ol>
+                                <li>  </li>
+                                <li> $y = 2x + h$ </li>
+                                <li>  </li>
+                                <li> $\dfrac{\left|7+h\right|}{\sqrt{5}} = \sqrt{20}$ </li>
+                                <li> Tangentteja on kaksi: $y = 2x + 3$ ja $y = 2x - 17$.</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -1060,7 +1051,7 @@ topnav: maa5
         </div>
     </section>
 
-            
+
     <section class="panel">
         <header>
             <h1>
@@ -1431,10 +1422,10 @@ topnav: maa5
                     </h2>
                     <div id="s2t211_v" class="collapse">
                         <ol class="a">
-                        <li> Vinkki: Ympyrän säde on tietyn suorakulmaisen kolmion hypotenuusa; vrt. esimerkki ennen tehtävää 3.5. </li>
-                        <li> Tangentteja on kaksi. </li>
-                        <li> Tangetteja on kaksi: $y = \frac{1}{2}x$ ja $y = 2x$. (Vinkki: Origon kautta kulkeva suora on muotoa $y = kx$. Ympyrän keskipisteen etäisyys tangenttisuorasta on yhtä suuri kuin ympyrän säde.) </li>
-                    </ol>
+                            <li> Vinkki: Ympyrän säde on tietyn suorakulmaisen kolmion hypotenuusa; vrt. esimerkki ennen tehtävää 3.5. </li>
+                            <li> Tangentteja on kaksi. </li>
+                            <li> Tangetteja on kaksi: $y = \frac{1}{2}x$ ja $y = 2x$. (Vinkki: Origon kautta kulkeva suora on muotoa $y = kx$. Ympyrän keskipisteen etäisyys tangenttisuorasta on yhtä suuri kuin ympyrän säde.) </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -1525,7 +1516,7 @@ topnav: maa5
 
         </div>
     </section>
-            
+
 
     <section class="panel">
         <header>
