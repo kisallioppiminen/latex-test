@@ -1,14 +1,29 @@
 ---
 layout: default
 resources:
-  js:
-    - "/js/numbering.js"
+js:
+- "/js/numbering.js"
 ---
 
 <script src="/js/numbering.js"></script>
+<style>
+    section > header h1 {
+        font-size: 2.75em;
+        padding-top: 15px;
+    }
+
+    th {
+        padding: 5px;
+    }
+
+    p a,
+    ul a {
+        border-bottom: 1px dotted #aaa;
+    }
+</style>
 
 {% if page.sidenav %}
-	{% include sidenav.html %}
+{% include sidenav.html %}
 {% endif %}
 <article>
     {{ content }}
