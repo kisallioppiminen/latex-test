@@ -11,7 +11,7 @@ Rekisteröinin yhteydessä kerätään nimi ja sähköpostiosoite.
 
 Rekisteröityneen käyttäjän nimi näkyy palvelun toiselle käyttäjälle käyttäjän tallentamia tehtäviin liittyviä osaamistietoja, osallistuessaan toisen käyttäjän kurssille. Muita käyttäjistä tallennettuja tietoja ei välitetä ulkopuolisille. Ylläpito voi käyttää käyttäjärekisterissä olevia tietoja palvelun kehittämiseen liittyvään tiedottamiseen. Ylläpito ei luovuta tietoja ulkopuolisille.
 
-Käyttäjällä on oikeus poistaa omia tehtäviin liittyviä osaamistietoja. Käyttäjällä on oikeus tarkistaa ja harkintansa mukaan poistaa kurssisnsa opiskelijan tuottamaa tietoa. Ylläpitäjillä on oikeus poistaa käyttäjän tiedot, mikäli Käyttäjä toimii käyttöehtojen, lain tai hyvän tavan vastaisesti.
+Käyttäjällä on oikeus poistaa omia tehtäviin liittyviä osaamistietoja. Käyttäjällä on oikeus tarkistaa ja harkintansa mukaan poistaa kurssinsa opiskelijan tuottamaa tietoa. Ylläpitäjillä on oikeus poistaa käyttäjän tiedot, mikäli käyttäjä toimii käyttöehtojen, lain tai hyvän tavan vastaisesti.
 
 ## Ylläpitäjän vastuu ja oikeudet
 Palvelun ylläpitäjä ei takaa palvelun häiriötöntä toimivuutta ja saatavuutta eikä ole velvollinen korvaamaan käyttäjille palvelun käytön keskeytymisestä mahdollisesti aiheutuneita kuluja, menetyksiä tai vahinkoja. Palvelun ylläpitäjä ei vastaa verkkosivujen ja niiden sisällön oikeellisuudesta, täsmällisyydestä tai luotettavuudesta eikä tietojen käytön välittömästi tai välillisesti aiheuttamista vahingoista.
