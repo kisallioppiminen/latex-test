@@ -1,5 +1,6 @@
 # Rekisteriseloste
 Henkilötietolain (22.4.1999/523) 10 § edellyttämä rekisteriseloste.
+
 Viimeisin muutos: 11.04.2017
 
 ## 1. Rekisterin nimi
@@ -7,9 +8,13 @@ Kisällioppiminen.fi kurssihallinta-palvelun, siihen liittyen ohjelmien sekä si
 
 ## 2. Rekisterinpitäjä
 Thomas Vikberg
+
 Matematiikan ja tilastotieteen laitos
+
 PL 68
+
 00014 Helsingin yliopisto
+
 kisalli-oppiminen@helsinki.fi
 
 ## 4. Henkilötietojen käsittelyn tarkoitus
