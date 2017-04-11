@@ -2,14 +2,14 @@
  
 
 ## Palvelun yleiskuvaus
-Palvelu on Kisällioppiminen.fi kurssihallinta-palvelu. Palvelu on käyttäjilleen maksuton. 
+Palvelu on Kisallioppiminen.fi kurssihallinta-palvelu. Palvelu on käyttäjilleen maksuton. 
 
 ## Rekisteröityminen ja käyttäjäroolit
 Kisällioppiminen.fi kurssihallinta-palvelun käyttö vaatii rekisteröitymistä. Rekisteröinnin yhteydessä kerätään henkilötietoja palvelun käyttäjärekisteriin.
 
 Rekisteröinin yhteydessä kerätään nimi ja sähköpostiosoite.
 
-Rekisteröityneen käyttäjän nimi näkyy palvelun muille käyttäjille käyttäjän tallentamia tehtäviin liittyviä osaamistietoja. Muita käyttäjistä tallennettuja tietoja ei välitetä ulkopuolisille. Ylläpito voi käyttää käyttäjärekisterissä olevia tietoja palvelun kehittämiseen liittyvään tiedottamiseen. Ylläpito ei luovuta tietoja ulkopuolisille.
+Rekisteröityneen käyttäjän nimi näkyy palvelun toiselle käyttäjälle käyttäjän tallentamia tehtäviin liittyviä osaamistietoja, osallistuessaan toisen käyttäjän kurssille. Muita käyttäjistä tallennettuja tietoja ei välitetä ulkopuolisille. Ylläpito voi käyttää käyttäjärekisterissä olevia tietoja palvelun kehittämiseen liittyvään tiedottamiseen. Ylläpito ei luovuta tietoja ulkopuolisille.
 
 Käyttäjällä on oikeus poistaa omia tehtäviin liittyviä osaamistietoja. Käyttäjällä on oikeus tarkistaa ja harkintansa mukaan poistaa kurssisnsa opiskelijan tuottamaa tietoa. Ylläpitäjillä on oikeus poistaa käyttäjän tiedot, mikäli Käyttäjä toimii käyttöehtojen, lain tai hyvän tavan vastaisesti.
 
