@@ -4,7 +4,7 @@ Henkilötietolain (22.4.1999/523) 10 § edellyttämä rekisteriseloste.
 Viimeisin muutos: 11.04.2017
 
 ## 1. Rekisterin nimi
-Kisällioppiminen.fi kurssihallinta-palvelun, siihen liittyen ohjelmien sekä sivustojen käyttäjärekisteri
+Kisallioppiminen.fi kurssihallinta-palvelun, siihen liittyen ohjelmien sekä sivustojen käyttäjärekisteri
 
 ## 2. Rekisterinpitäjä
 Thomas Vikberg
