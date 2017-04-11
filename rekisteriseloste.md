@@ -21,7 +21,7 @@ kisalli-oppiminen@helsinki.fi
 Rekisterin tarkoitus on palveluun rekisteröityneiden käyttäjien tunnistaminen ja käyttäjien palvelussa tapahtuvien opintojen seuraaminen. Lisäksi kerättyä dataa käytetään palvelun kehittämiseen ja tutkimustyöhön.
 
 ## 5. Rekisterin tietosisältö
-Rekisteri sisältää tiedot käyttäjän nimestä, sähköpostiosoitteesta sekä tietoa siitä mitä tehtäviä käyttäjä on tehnyt. Järjestelmään sisältää myös tiedot käyttäjien luomista kursseista, niiden aloitus- ja päättymispäivät, kurssiavaimet, tehtävien tavoiteaikataulut ja kursseihin liittyneiden opiskelijoiden tietdot.
+Rekisteri sisältää tiedot käyttäjän nimestä, sähköpostiosoitteesta sekä tietoa siitä mitä tehtäviä käyttäjä on tehnyt. Järjestelmä sisältää myös tiedot käyttäjien luomista kursseista, niiden aloitus- ja päättymispäivät, kurssiavaimet, tehtävien tavoiteaikataulut ja kursseihin liittyneiden opiskelijoiden tiedot.
 
 ## 6. Säännönmukaiset tietolähteet
 Käyttäjän nimi sekä sähköpostiosoite kerätään rekisteröitymisen yhteydessä.
