@@ -24,8 +24,8 @@ article section.panel>header,
 #tavoitteet,
 .objective,
 section > header,
-section > div > ol,
-section > div > ul{
+.panel > div > ol,
+.panel > div > ul{
     display: none;
 }
 
