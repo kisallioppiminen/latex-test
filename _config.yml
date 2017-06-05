@@ -24,7 +24,7 @@ resources:
   js:
     - "/js/jquery.js"
     - "/js/jquery-ui.js"
-    - "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    - "//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
     - "//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
     - "/js/mooc.js"
 
