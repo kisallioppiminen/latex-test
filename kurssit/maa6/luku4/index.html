@@ -1,61 +1,41 @@
 ---
-title: MAA5 - Analyyttinen geometria 
+title: MAA6 - Derivaatta
 layout: material
 sitemap: true
 main-class: has-atop
-topnav: maa5
+topnav: maa6
 ---
 
-<input type="hidden" id="chapterNumber" value="5"/>
-<input type="hidden" id="theoremStart" value="3"/>
+<input type="hidden" id="chapterNumber" value="1"/>
+<input type="hidden" id="theoremStart" value="1"/>
 
 <article>
     <section>
         <header>
-            <h1>Itseisarvoyhtälö ja -epäyhtälö</h1>
+            <h1>Suora</h1>
         </header>
     </section>
     <section class="panel">
         <header>
             <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#luvun4-tavoitteet">
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun1-tavoitteet">
                     Luvun tavoitteet
                 </a>
             </h1>
         </header>
-        <div id="luvun4-tavoitteet" class="collapse">
+        <div id="luvun1-tavoitteet" class="collapse">
 
             <div class="objective">
                 <p> 
-                    Tämän luvun tavoitteena on, että vahvistat itseisarvon käsitteeseen liittyvää osaamistasi ja ratkaiset sujuvasti erilaisia itseisarvoyhtälöitä ja -epäyhtälöitä. Osaat
+                    Tämän luvun tavoitteena on, että ... Osaat
                 <ul>
-                    <li> 
-                        ratkaista muotoa $\left| x - a \right| = t$ olevia yhtälöitä tutkimalla, mitkä luvut ovat etäisyydellä $t$ luvusta $a$ 
-                    </li>
-                    <li> 
-                        ratkaista muotoa $\left| x - a \right| = \left| x - b \right|$ olevia yhtälöitä tutkimalla, mitkä luvut ovat yhtä kaukana luvuista $a$ ja $b$
-                    </li>
-                    <li> ratkaista erilaisia itseisarvoyhtälöitä ja -epäyhtälöitä eri tavoin:
-                        <ul>
-                            <li> etäisyystulkinnan avulla päättelemällä </li>
-                            <li> muodostamalla kaksi tavallista yhtälöä tai epäyhtälöä </li>
-                            <li> graafisesti koordinaatistossa </li>
-                        </ul>
-                    </li>
-                    <!--                         <li>
-                                                ratkaista yksinkertaisia itseisarvoepäyhtälöitä etäisyystulkinnan avulla päättelemällä
-                                            </li>
-                                            <li>
-                                                ratkaista monimutkaisempia itseisarvoyhtälöitä ja -epäyhtälöitä muodostamalla niistä kaksi tavallista yhtälöä tai epäyhtälöä
-                                            </li> -->
-                    <li>
-                        havainnollistaa ratkaisuja lukusuoralla ja koordinaatistossa.
-                    </li>
+                    <li> </li>
+                    
                 </ul> 
                 </p>
             </div>
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#luvun4-tavoitteet">
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun1-tavoitteet">
                     Sulje kappale
                 </a>
             </div>
@@ -65,1164 +45,108 @@ topnav: maa5
     <section class="panel">
         <header>
             <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#itseisarvo1">
-                    Itseisarvoyhtälö
+                <a data-toggle="collapse" class="collapsed" data-target="#suora1">
+                    Erilaisia suoran yhtälöitä
                 </a>
             </h1>
         </header>
-        <div id="itseisarvo1" class="collapse">
+        <div id="suora1" class="collapse">
 
             <p>
-                Kurssin ensimmäisessä luvussa <a href="http://kisallioppiminen.fi/kurssit/maa5/luku0/">Etäisyys</a> opittiin, miten itseisarvon avulla voidaan ilmaista etäisyyksiä lukusuoralla. Itseisarvoa tarvittiin myös, kun määritettiin tason pisteen etäisyys suorasta (<a href="http://kisallioppiminen.fi/kurssit/maa5/luku1/">teoreema 13</a>). Kun määritettiin yhtälö ympyrän tangetille tai paraabelille, ratkaistiin yhtälö, jossa esiintyi itseisarvo. Tässä kappaleessa syvennytään tarkemmin itseisarvoyhtälöiden ratkaisemiseen. 
-            </p>
-            <p>
-                Aloitetaan palauttamalla mieleen itseisarvon määritelmä:
+                Kurssissa MAA4 opittiin muodostamaan suoralle niin sanottu vektorimuotoinen parametriesitys.
             </p>
 
             <div class="definition">
-                <h3>MÄÄRITELMÄ: ITSEISARVO</h3>
+                <h3>MÄÄRITELMÄ: SUORAN VEKTORIMUOTOINEN PARAMETRIESITYS</h3>
                 <p>
-                    Luvun $a$ <em>itseisarvo</em> $\left|a\right|$ ilmaisee luvun $a$ etäisyyden luvusta nolla lukusuoralla.
+                    Oletetaan, että $A$ on suoran $L$ piste ja $\vv$ on suoran $L$ suuntavektori. Yhtälö
+                    $$\pv{OP} = \pv{OA} + t\vv$$
+                    on suoran $L$ <em>vektorimuotoinen parametriesitys</em>. 
                     <br>
+                    Tässä esiintyvä kerroin $t$ on <em>parametri</em> ja vektori $\pv{OA}$ on <em>suoran paikkavektori</em>.
                 </p>
             </div>
 
             <p>
-                Luvussa <a href="http://kisallioppiminen.fi/kurssit/maa5/luku0/">Etäisyys</a> johdettiin seuraava teoreema, jonka mukaan erotuksen itseisarvo ilmaisee etäisyyden lukusuoralla:
+                <img src="/kurssit/maa5/kuvat/k001.png" max-width: 100%; width: auto; height: auto;/>
+                     <br>
+                Esimerkiksi yllä näkyvän suoran yksi vektorimuotoinen parametriesitys on $\pv{OP} = \vi + 3\vj + t(\vi - 2\vj)$.
             </p>
 
-            <div class="theorem" id="ETÄISYYS LUKUSUORALLA">
-                <h3>TEOREEMA</h3>
+            <p>
+                MAA4-kurssissa opittiin lisäksi, että jos $xy$-tason suoran jokin normaalivektori tunnetaan, voidaan suoralle muodostaa niin sanottu normaalimuotoinen yhtälö:
+            </p>
+
+            <div class="definition">
+                <h3>MÄÄRITELMÄ: SUORAN NORMAALIMUOTOINEN YHTÄLÖ</h3>
                 <p>
-                    Lukujen $a$ ja $b$ välinen etäisyys lukusuoralla on $\left|a-b\right|$.
+                    Oletetaan, että $L$ on $xy$-tason suora ja $\vn = a\vi + b\vj$ on sen normaalivektori. 
+                    Yhtälö
+                    $$ax + by + c = 0$$
+                    on suoran $L$ <em>normaalimuotoinen yhtälö</em>.
                 </p>
             </div>
 
             <p>
-                Yksinkertaisimmat itseisarvoyhtälöt on mahdollista ratkaista tämän teoreeman avulla päättelemällä. Tätä harjoitellaan seuraavissa tehtävissä.
+                Vektoria sanotaan suoran normaalivektoriksi, jos se on suoraa vastaan kohtisuorassa. Esimerkiksi edellä tarkastellun suoran yksi normaalivektori on $\vn = 2\vi + \vj$:
+                <br>
+                <img src="/kurssit/maa5/kuvat/k002.png" max-width: 100%; width: auto; height: auto;/>
+                     <br>
+                Tämän suoran normaalimuotoiseksi yhtälöksi saadaan
+                $$2x + y + c = 0,$$
+                missä vakion $c$ arvo määräytyy tiedosta, että suora kulkee pisteen $(1,3)$ kautta. Siten
+                $$2\cdot 1 + 3 + c = 0$$
+                eli $c = -5$. Normaalimuotoisesta yhtälöstä $2x + y - 5 = 0$ voidaan ratkaista $y$:
+                $$y = - 2x + 5.$$
+                Tällaista yhtälöä sanotaan suoran yhtälön ratkaistuksi muodoksi.
             </p>
+
+            <div class="definition">
+                <h3>MÄÄRITELMÄ: SUORAN YHTÄLÖN RATKAISTU MUOTO JA KULMAKERROIN</h3>
+                <p>
+                    Yhtälö $y = kx + h$ on suoran yhtälön <em>ratkaistu muoto</em>. Tässä esiintyvä kerroin $k$ on suoran <em>kulmakerroin</em>.
+                </p>
+            </div>
 
             <div class="tehtavat">
                 <div class="tehtava" id="firstEx">
                     <header>
                         <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t401">
-                                Itseisarvoyhtälö
+                            <a data-toggle="collapse" class="collapsed" data-target="#t101">
+                                Suora
                             </a>
                         </h1>
                     </header>
-                    <div id="t401" class="collapse">
+                    <div id="t101" class="collapse">
                         <p>
-                            Tehtävänä on ratkaista yhtälö $\left|x - 8\right| = 3$.
-                        <ol class="a">
-                            <li> 
-                                Piirrä lukusuora ja merkitse siihen luku $8$. Merkitse näkyviin myös ne luvut, joiden etäisyys luvusta $8$ on kolme. 
-                            </li>
-                            <li> 
-                                Mitkä luvut toteuttavat yhtälön $\left|x - 8\right| = 3$?
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t402-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t402">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t402" class="collapse">
-                        <p>
-                            Tehtävänä on ratkaista yhtälö $\left|x + 6 \right| = 4$.
-                        <ol class="a">
-                            <li>
-                                Kirjoita summa $x + 6$ erotuksena.
-                            </li>
-                            <li> 
-                                Piirrä lukusuora ja merkitse siihen luku $-6$. Merkitse näkyviin myös ne luvut, joiden etäisyys luvusta $-6$ on neljä. 
-                            </li>
-                            <li> 
-                                Mitkä luvut toteuttavat yhtälön $\left|x + 6 \right| = 4$?
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Useilla itseisarvoyhtälöillä on kaksi ratkaisua. Esimerkiksi yhtälön $\left|x - 7 \right| = 2$ toteuttavat ne luvut, joiden etäisyys luvusta $7$ on kaksi:
-                <br>
-                <img src="/kurssit/maa5/kuvat/k051.png" max-width: 100%; width: auto; height: auto;/>
-                     <br>
-                Yhtälöllä $\left|x - 7 \right| = 2$ on siis kaksi ratkaisua: $x_1 = 5$ ja $x_2 = 9$.
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t402b-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t402b">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t402b" class="collapse">
-                        <p>
-                            Keksi jokin sellainen vakion $a$ arvo, että yhtälöllä $\left|x - 5 \right| = a$ 
+                            Tutki alla näkyvää suoraa $L$.
                         </p>
                         <ol class="a">
-                            <li>
-                                on tasan kaksi ratkaisua
-                            </li>
-                            <li> 
-                                on tasan yksi ratkaisu
-                            </li>
-                            <li> 
-                                ei ole yhtään ratkaisua.
-                            </li>
+                            <li> Valitse suoralle $L$ jokin suuntavektori. </li>
+                            <li> Valitse suoralle $L$ jokin normaalivektori. Tarkista pistetulon avulla, että se on todella kohtisuorassa suoraa $L$ vastaan. </li>
+                            <li> Valitse jokin piste, jonka kautta suora $L$ kulkee. Muodosta sen ja b-kohdan avulla suoralle $L$ normaalimuotoinen yhtälö. </li>
+                            <li> Muokkaa suoran $L$ normaalimuotoinen yhtälö ratkaistuun muotoon. Mikä on suoran $L$ kulmakerroin? </li>
+                            <li> Miten kulmakerroin näkyy alla olevassa kuvassa?</li>
                         </ol>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Joillakin itseisarvoyhtälöillä ei ole lainkaan ratkaisua. Esimerkiksi yhtälö 
-                $$\left|x - 10 \right| = -3$$
-                on aina epätosi, sillä sen oikea puoli on negatiivinen mutta vasen puoli on itseisarvon määritelmän perusteella aina suurempi tai yhtä suuri kuin nolla. Ennen itseisarvoyhtälön ratkaisemista kannattaakin ensin miettiä, voiko yhtälöllä ylipäätään olla ratkaisuja. 
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t403-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t403">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t403" class="collapse">
-                        <p>
-                            Ratkaise seuraavat yhtälöt päättelemällä. Voit käyttää piirrosta apuna, jos haluat.
-                        </p>
-                        <ol class="a">
-                            <li>
-                                $\left|x\right| = 7$
-                            </li>
-                            <li> 
-                                $\left|x - 5 \right| = 9$ 
-                            </li>
-                            <li> 
-                                $\left|1 + x \right| = 8$
-                            </li>
-                            <li> 
-                                $\left|4 - x \right| = -6$
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t403_v">
-                                Vastaus
+                        <img src="/kurssit/maa5/kuvat/k003.png" max-width: 100%; width: auto; height: auto;/>
+                             <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t101_v">
+                                VASTAUS
                             </a>
                         </h2>
-                        <div id="t403_v" class="collapse">
+                        <div id="t101_v" class="collapse">
                             <ol class="a">
-                                <li> $x = 7$ tai $x = -7$ </li>
-                                <li> $x = 14$ tai $x = -4$ </li>
-                                <li> $x = 7$ tai $x = -9$ </li>
-                                <li> Ei ratkaisuja. </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Monimutkaisemmat itseisarvoyhtälöt on mahdollista ratkaista muodostamalla kaksi tavallista yhtälöä. Tarkastellaan esimerkiksi yhtälöä 
-                $$\left|2x - 3 \right| = 4.$$ 
-                Se toteutuu, jos ja vain jos lausekkeen $2x + 3$ arvo on $4$ tai $-4$. Tutkitaan kumpikin vaihtoehto:
-            </p>
-            <ol>
-                <li> 
-                    vaihtoehto (lausekkeen arvo on $4$):
-                    \begin{align*}
-                    2x-3 &= 4 \\
-                    2x &= 7 \\
-                    x &= \frac{7}{2}
-                    \end{align*}
-                    Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön:
-                    $$\left|2\cdot \frac{7}{2} - 3 \right| = \left|4 \right| =4.$$
-                </li>
-                <li> vaihtoehto (lausekkeen arvo on $-4$):
-                    \begin{align*}
-                    2x-3 &= -4 \\
-                    2x &= -1 \\
-                    x &= -\frac{1}{2}
-                    \end{align*}
-                    Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön:
-                    $$\left|2\cdot \left(-\frac{1}{2}\right) - 3 \right| = \left|-4 \right| = 4.$$
-                </li>
-            </ol>
-            <p>
-                Yhtälöllä $\left|2x - 3 \right| = 4$ on siis kaksi ratkaisua:
-                $$x_1 = \frac{7}{2} \ \text{ ja } \ x_2 = -\frac{1}{2}.$$
-
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t404-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t404">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t404" class="collapse">
-                        <p>
-                            Tehtävänä on ratkaista yhtälö $\left|3x + 1 \right| = 5$.
-                        <ol class="a">
-                            <li>
-                                Luettele luvut, joiden itseisarvo on $5$.
-                            </li>
-                            <li> 
-                                Muodosta a-kohdan avulla alkuperäisestä yhtälöstä kaksi tavallista yhtälöä.
-                            </li>
-                            <li> 
-                                Ratkaise muodostamasi yhtälöt. Tarkista, että saamasi ratkaisut todella toteuttavat alkuperäisen yhtälön.
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t405-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t405">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t405" class="collapse">
-                        <p>
-                            Ratkaise seuraavat itseisarvoyhtälöt:
-                        </p>
-                        <ol class="a">
-                            <li>
-                                $\left|8x - 11 \right| = 3$
-                            </li>
-                            <li> 
-                                $\left|5x - 30\right| = -10$
-                            </li>
-                            <li> 
-                                $\left|7 - 6x \right| = 9$
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t405_v">
-                                Vastaus
-                            </a>
-                        </h2>
-                        <div id="t405_v" class="collapse">
-                            <ol class="a">
-                                <li> $x = \frac{7}{4}$ tai $x = 1$ </li>
-                                <li> Ei ratkaisuja. </li>
-                                <li> $x = -\frac{1}{3}$ tai $x = \frac{8}{3}$ </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Tarkastellaan seuraavaksi yhtälöitä, joissa esiintyy kaksi itseisarvoa. Niiden ratkaisemiseen voidaan käyttää samoja menetelmiä kuin edellä. Yksinkertaisimmat yhtälöt voidaan ratkaista päättelemällä, kun muistetaan, että erotuksen itseisarvo ilmaisee lukujen etäisyyden lukusuoralla. 
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t406-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t406">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t406" class="collapse">
-                        <p>
-                            Tehtävänä on ratkaista yhtälö $\left|x - 3 \right| = \left|x + 5 \right|$.
-                        <ol class="a">
-                            <li>
-                                Kirjoita summa $x + 5$ erotuksena.
-                            </li>
-                            <li> 
-                                Piirrä lukusuora ja merkitse siihen luvut $3$ ja $-5$. Mitkä luvut ovat yhtä kaukana luvuista $3$ ja $-5$?
-                            </li>
-                            <li> 
-                                Mitkä luvut toteuttavat yhtälön $\left|x - 3 \right| = \left|x + 5 \right|\,$?
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t407-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t407">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t407" class="collapse">
-                        <p>
-                            Ratkaise seuraavat yhtälöt päättelemällä. Voit käyttää piirrosta apuna, jos haluat.
-                        </p>
-                        <ol class="a">
-                            <li>
-                                $\left|x - 1 \right| = \left|x - 9 \right|$
-                            </li>
-                            <li> 
-                                $\left|x + 2 \right| = \left|7 - x \right|$ 
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t407_v">
-                                Vastaus
-                            </a>
-                        </h2>
-                        <div id="t407_v" class="collapse">
-                            <ol class="a">
-                                <li> $x = 5$ </li>
-                                <li> $x = \frac{5}{2}$ </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Monimutkaisemmat tapaukset on mahdollista ratkaista muodostamalla kaksi tavallista yhtälöä. Menetelmä perustuu <a href="http://kisallioppiminen.fi/kurssit/maa5/luku0/">Etäisyys</a>-luvussa perusteltuun teoreemaan 2. Tarkastellaan esimerkiksi yhtälöä 
-                $$\left|2x - 3 \right| = \left|5x + 4 \right|.$$ 
-                Se toteutuu, jos ja vain jos itseisarvojen sisällä olevat lausekkeet ovat samat tai toistensa vastalausekkeet. Tutkitaan kumpikin vaihtoehto:
-            </p>
-            <ol>
-                <li> 
-                    vaihtoehto (lausekkeet ovat samat):
-                    \begin{align*}
-                    2x-3 &= 5x + 4 \\
-                    -3x &= 7 \\
-                    x &= -\frac{7}{3}
-                    \end{align*}
-                    Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön. Vasemmaksi puoleksi saadaan
-                    $$\left|2\cdot \left(-\frac{7}{3}\right) - 3 \right| = \left|-\frac{23}{3} \right| = \frac{23}{3}.$$
-                    Oikeaksi puoleksi saadaan
-                    $$\left|5\cdot \left(-\frac{7}{3}\right) + 4 \right| = \left|-\frac{23}{3} \right| = \frac{23}{3}.$$
-                    Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.
-                </li>
-                <li> vaihtoehto (lausekkeet ovat toistensa vastalausekkeet):
-                    \begin{align*}
-                    2x - 3 &= -(5x + 4) \\
-                    2x - 3 &= -5x - 4 \\
-                    7x  &= -1 \\
-                    x &= -\frac{1}{7}
-                    \end{align*}
-                    Ratkaisun voi tarkistaa sijoittamalla alkuperäiseen yhtälöön. Vasemmaksi puoleksi saadaan
-                    $$\left|2\cdot \left(-\frac{1}{7}\right) - 3 \right| = \left|-\frac{23}{7} \right| = \frac{23}{7}.$$
-                    Oikeaksi puoleksi saadaan
-                    $$\left|5\cdot \left(-\frac{1}{7}\right) + 4 \right| = \left|\frac{23}{7} \right| = \frac{23}{7}.$$
-                    Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.
-                </li>
-            </ol>
-            <p>
-                Yhtälöllä $\left|2x - 3 \right| = \left|5x + 4 \right|$ on siis kaksi ratkaisua:
-                $$x_1 = -\frac{7}{3} \ \text{ ja } \ x_2 = -\frac{1}{7}.$$
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t408-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t408">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t408" class="collapse">
-                        <p>
-                            Tehtävänä on ratkaista yhtälö $\left|2 - 7x \right| = \left|3x + 6 \right|$.
-                        <ol class="a">
-                            <li>
-                                Oletetaan, että itseisarvojen sisällä olevat lausekkeet ovat samat. Muodosta tästä yhtälö ja ratkaise se.
-                            </li>
-                            <li> 
-                                Oletetaan, että itseisarvojen sisällä olevat lausekkeet ovat toistensa vastalausekkeet. Muodosta tästä yhtälö ja ratkaise se.
-                            </li>
-                            <li> 
-                                Onko mahdollista, että yhtälö toteutuu, jos itseisarvojen sisällä olevat lausekkeet eivät ole samoja eivätkä toistensa vastalausekkeita? Selitä omin sanoin.  
-                            </li>
-                            <li>
-                                Mitkä luvut toteuttavat yhtälön $\left|2 - 7x \right| = \left|3x + 6 \right|\,$? 
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t409-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t409">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t409" class="collapse">
-                        <p>
-                            Ratkaise seuraavat itseisarvoyhtälöt:
-                        </p>
-                        <ol class="a">
-                            <li> 
-                                $\left|x - 2 \right| = \left|3x + 1 \right|$ 
-                            </li>
-                            <li>
-                                $\left|2x - 3 \right| = \left|4x - 2 \right|$
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t409_v">
-                                Vastaus
-                            </a>
-                        </h2>
-                        <div id="t409_v" class="collapse">
-                            <ol class="a">
-                                <li> $x = -\frac{3}{2}$ tai $x = \frac{1}{4}$ </li>
-                                <li> $x = -\frac{1}{2}$ tai $x = \frac{5}{6}$ </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t410-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t410">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t410" class="collapse">
-                        <p>
-                            Selitä omin sanoin, miten ratkaiset seuraavan tyyppiset itseisarvoyhtälöt. Voit myös havainnollistaa ratkaisuja lukusuoralla piirroksen avulla.
-                        <ol class="a">
-                            <li> 
-                                $\left|x - a \right| = t$ 
-                            </li>
-                            <li>
-                                $\left|x - a \right| = \left|x - b \right|$
-                            </li>
-                            <li> 
-                                $\left|kx + h \right| = t$ 
-                            </li>
-                            <li>
-                                $\left|kx + h \right| = \left|cx + d \right|$
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#itseisarvo1">
-                    Sulje kappale
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="panel">
-        <header>
-            <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#itseisarvo2">
-                    Itseisarvoepäyhtälö
-                </a>
-            </h1>
-        </header>
-        <div id="itseisarvo2" class="collapse">
-
-            <p>
-                Tässä kappaleessa harjoitellaan itseisarvoepäyhtälöiden ratkaisemista. Osa niistä voidaan ratkaista päättelemällä, kun muistetaan, että erotuksen itseisarvo ilmaisee etäisyyden lukusuoralla.
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t411-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t411">
-                                Itseisarvoepäyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t411" class="collapse">
-                        <p>
-                            Tehtävänä on ratkaista epäyhtälö $\left|x - 5\right| < 2$.
-                        <ol class="a">
-                            <li> 
-                                Piirrä lukusuora ja merkitse siihen luku $5$. Merkitse näkyviin myös ne luvut, joiden etäisyys luvusta $5$ on pienempi kuin kaksi. 
-                            </li>
-                            <li> 
-                                Mitkä luvut toteuttavat epäyhtälön $\left|x - 5\right| < 2$?
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t412-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t412">
-                                Itseisarvoepäyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t412" class="collapse">
-                        <p>
-                            Tehtävänä on ratkaista epäyhtälö $\left|x + 1 \right| > 3$.
-                        <ol class="a">
-                            <li>
-                                Kirjoita summa $x + 1$ erotuksena.
-                            </li>
-                            <li> 
-                                Piirrä lukusuora ja merkitse siihen luku $-1$. Merkitse näkyviin myös ne luvut, joiden etäisyys luvusta $-1$ on suurempi kuin kolme. 
-                            </li>
-                            <li> 
-                                Mitkä luvut toteuttavat yhtälön $\left|x + 1 \right| > 3$?
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Edellisistä tehtävistä voi havaita, että itseisarvoepäyhtälön vastaus riippuu huomattavasti siitä, esiintyykö epäyhtälössä pienempi kuin -merkki vai suurempi kuin -merkki. Esimerkiksi epäyhtälön 
-                $$\left| x - 2 \right| < 6$$
-                ratkaisuja ovat kaikki luvut, joiden etäisyys luvusta $2$ on pienempi kuin $6$:
-                <img src="/kurssit/maa5/kuvat/k047.png" max-width: 100%; width: auto; height: auto;/>
-                     Yhtälö siis toteutuu, jos ja vain jos
-                     $$-4 < x \quad \textbf{ ja } \quad x < 8.$$
-                     Tämä voidaan ilmaista myös kaksoisepäyhtälönä
-                     $-4 < x < 8$.
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t413a-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t413a">
-                                Itseisarvoepäyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t413a" class="collapse">
-                        <p>
-                            Jatketaan edellisen esimerkin tarkastelua.
-                        <ol class="a">
-                            <li>
-                                Keksi luku, joka toteuttaa ehdon $x < 8$ mutta ei toteuta epäyhtälöä $\left| x - 2 \right| < 6$.
-                            </li>
-                            <li> 
-                                Keksi luku, joka toteuttaa ehdon $x > -4$ mutta ei toteuta epäyhtälöä $\left| x - 2 \right| < 6$.
-                            </li>
-                            <li> 
-                                Toteuttaako kumpikaan edellisten kohtien esimerkeistäsi ehtoa $-4 < x\ $ <b>ja</b> $\ x < 8$?
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Epäyhtälön 
-                $$\left| x - 2 \right| > 4$$
-                ratkaisuja ovat kaikki luvut, joiden etäisyys luvusta $2$ on suurempi kuin $4$:
-                <img src="/kurssit/maa5/kuvat/k048.png" max-width: 100%; width: auto; height: auto;/>
-                     Yhtälö siis toteutuu, jos ja vain jos
-                     $$x < -2 \quad \textbf{ tai } \quad x > 6.$$
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t413b-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t413b">
-                                Itseisarvoepäyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t413b" class="collapse">
-                        <p>
-                            Jatketaan äskeisen esimerkin tarkastelua.
-                        <ol class="a">
-                            <li>
-                                Keksi luku, joka toteuttaa ehdon $x < -2$. Toteuttaako se epäyhtälön $\left| x - 2 \right| > 4$?
-                            </li>
-                            <li> 
-                                Keksi luku, joka toteuttaa ehdon $x > 6$. Toteuttaako se epäyhtälön $\left| x - 2 \right| > 4$?
-                            </li>
-                            <li> 
-                                Keksi luku, joka toteuttaa ehdon $x < -2\ $ <b>ja</b> $\ x > 6$, tai selitä omin sanoin, miksi tällaisen luvun keksiminen on mahdotonta. 
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>            
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t413-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t413">
-                                Itseisarvoepäyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t413" class="collapse">
-                        <p>
-                            Ratkaise seuraavat yhtälöt päättelemällä. Voit käyttää piirrosta apuna, jos haluat. Kirjoita vastaus huolellisesti ja kiinnitä erityistä huomioita siihen, esiintyykö vastauksessa sana "ja" vai sana "tai".
-                        </p>
-                        <ol class="a">
-                            <li>
-                                $\left|x\right| < 7$
-                            </li>
-                            <li> 
-                                $\left|x - 5 \right| \geq 9$ 
-                            </li>
-                            <li> 
-                                $\left|x + 1 \right| > 8$
-                            </li>
-                            <li> 
-                                $\left|4 - x \right| \leq -6$
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t413_v">
-                                Vastaus
-                            </a>
-                        </h2>
-                        <div id="t413_v" class="collapse">
-                            <ol class="a">
-                                <li> $x > -7$ ja $x < 7$ </li>
-                                <li> $x \leq -4$ tai $x \geq 14$ </li>
-                                <li> $x < -9$ tai $x > 7$ </li>
-                                <li> Ei ratkaisuja. </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Monimutkaisemmat itseisarvoepäyhtälöt on mahdollista ratkaista muodostamalla kaksi tavallista epäyhtälöä samalla periaatteella kuin edellä. Tarkastellaan esimerkiksi epäyhtälöä 
-                $$\left|2x - 3 \right| < 4.$$ 
-                Se toteutuu, jos ja vain jos lausekkeen $2x - 3$ arvo on lukujen $-4$ ja $4$ välissä eli 
-                $$-4 < 2x - 3 < 4.$$ 
-                Ratkaistaan kumpikin epäyhtälö:
-            </p>
-            <ol>
-                <li> 
-                    epäyhtälö:
-                    \begin{align*}
-                    2x-3 &> -4 \\
-                    2x &> -1 \\
-                    x &> -\frac{1}{2}
-                    \end{align*}
-                    <img src="/kurssit/maa5/kuvat/k052.png" max-width: 100%; width: auto; height: auto;/>
-                </li>
-                <li> epäyhtälö:
-                    \begin{align*}
-                    2x-3 &< 4 \\
-                    2x &< 7 \\
-                    x &< \frac{7}{2}
-                    \end{align*}
-                    <img src="/kurssit/maa5/kuvat/k053.png" max-width: 100%; width: auto; height: auto;/>
-                </li>
-            </ol>
-            <p>
-                Epäyhtälö $\left|2x - 3 \right| < 4$ toteutuu, jos ja vain jos kumpikin näistä epäyhtälöistä toteutuu eli
-                $$-\frac{1}{2} < x \quad \textbf{ ja } \quad x < \frac{7}{2}.$$
-                <img src="/kurssit/maa5/kuvat/k049.png" max-width: 100%; width: auto; height: auto;/>
-                     Epäyhtälön $\left|2x - 3 \right| < 4$ ratkaisujoukko on siis lukusuoran väli 
-                     $$\left] -\frac{1}{2}, \frac{7}{2}\right[.$$
-                     Hakasulkujen suunnasta näkyy, että välin päätepisteet eivät kuulu ratkaisujoukkoon.
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t414-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t414">
-                                Itseisarvoepäyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t414" class="collapse">
-                        <p>
-                            Tehtävänä on ratkaista epäyhtälö $\left|3x + 1 \right| < 5$.
-                        <ol class="a">
-                            <li>
-                                Minkä lukujen välissä lausekkeen $3x + 1$ arvon on oltava, jotta sen itseisarvo on pienempi kuin $5$? Muodosta kaksi epäyhtälöä.
-                            </li>
-                            <li> 
-                                Ratkaise muodostamasi epäyhtälöt. 
-                            </li>
-                            <li>
-                                Mikä ehto muuttujan $x$ pitää toteuttaa, jotta se on epäyhtälön $\left|3x + 1 \right| < 5$ ratkaisu? Havainnollista ratkaisujoukkoa lukusuoralla.
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Kun ratkaistaan itseisarvoepäyhtälöä, täytyy heti alussa ottaa huomioon, onko epäyhtälössä pienempi kuin -merkki vai suurempi kuin -merkki. Edellisessä esimerkissä ja tehtävässä tarkasteltiin itseisarvoepäyhtälöitä, joissa esiintyi pienempi kuin -merkki. Siirrytään nyt tutkimaan tapausta, jossa epäyhtälössä esiintyy suurempi kuin -merkki. 
-            </p>
-            <p>
-                Tarkalleen ottaen seuraavassa epäyhtälössä esiintyy suurempi tai yhtä suuri kuin -merkki, mutta tämä ei haittaa, sillä päättelyaskeleet ovat samat riippumatta siitä, esiintyykö epäyhtälössä merkki $>$ vai merkki $\geq$.
-            </p>
-            <p>
-                Tarkastellaan epäyhtälöä
-                $$\left|6x + 7 \right| \geq 5.$$ 
-                Se toteutuu, jos ja vain jos lausekkeen $6x + 7$ arvo on enintään $-5$ tai vähintään $5$: 
-                $$6x + 7 \leq -5 \quad \textbf{ tai } \quad 6x + 7 \geq 5.$$ 
-                Ratkaistaan kumpikin epäyhtälö:
-            </p>
-            <ol>
-                <li> epäyhtälö:
-                    \begin{align*}
-                    6x + 7 &\leq -5 \\
-                    6x &\leq -12 \\
-                    x &\leq -2
-                    \end{align*}
-                    <img src="/kurssit/maa5/kuvat/k054.png" max-width: 100%; width: auto; height: auto;/>
-                </li>
-                <li> 
-                    epäyhtälö:
-                    \begin{align*}
-                    6x + 7 &\geq 5 \\
-                    6x &\geq -2 \\
-                    x &\geq -\frac{1}{3}
-                    \end{align*}
-                    <img src="/kurssit/maa5/kuvat/k055.png" max-width: 100%; width: auto; height: auto;/>
-                </li>
-            </ol>
-            <p>
-                Epäyhtälö $\left|6x + 7 \right| \geq 5$ siis toteutuu, jos ja vain jos 
-                $$x \leq -2  \quad \textbf{ tai } \quad x \geq -\frac{1}{3}.$$
-                <img src="/kurssit/maa5/kuvat/k050.png" max-width: 100%; width: auto; height: auto;/>
-                     Kaksiosainen ratkaisujoukko voidaan merkitä yhdisteen merkin $\displaystyle \cup$ avulla seuraavasti: 
-                     $$\left] -\infty, -2\right] \cup \left[-\frac{1}{3}, \infty\right[.$$
-                     Hakasulkujen suunnasta näkyy, että päätepisteet $-2$ ja $-\frac{1}{3}$ kuuluvat ratkaisujoukkoon.
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t414b-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t414b">
-                                Itseisarvoepäyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t414b" class="collapse">
-                        <p>
-                            Tehtävänä on ratkaista epäyhtälö $\left|2x - 5 \right| > 3$.
-                        <ol class="a">
-                            <li>
-                                Missä tilanteissa lausekkeen $2x - 5$ itseisarvo on suurempi kuin $3$? Muodosta kaksi epäyhtälöä.
-                            </li>
-                            <li> 
-                                Ratkaise muodostamasi epäyhtälöt. 
-                            </li>
-                            <li>
-                                Mikä ehto muuttujan $x$ pitää toteuttaa, jotta se on epäyhtälön $\left|2x - 5 \right| > 3$ ratkaisu? Havainnollista ratkaisujoukkoa lukusuoralla.
-                            </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t415-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t415">
-                                Itseisarvoepäyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t415" class="collapse">
-                        <p>
-                            Ratkaise seuraavat epäyhtälöt:
-                        </p>
-                        <ol class="a">
-                            <li>
-                                $\left|8x - 20 \right| > 4$
-                            </li>
-                            <li> 
-                                $\left|5x + 20\right| < 10$
-                            </li>
-                            <li> 
-                                $\left|7 - 6x \right| \geq 11$
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t415_v">
-                                Vastaus
-                            </a>
-                        </h2>
-                        <div id="t415_v" class="collapse">
-                            <ol class="a">
-                                <li> $x < 2$ tai $x > 3$ </li>
-                                <li> $-6 < x < -2$ </li>
-                                <li> $x \leq -\frac{2}{3}$ tai $x \geq 3$ </li>
+                                <li> Esimerkiksi $\vi + 3\vj$. </li>
+                                <li> Esimerkiksi $3\vi - \vj$. </li>
+                                <li> Esimerkiksi $(1,1)$. Yhtälö on $3x-y-2 = 0$. </li>
+                                <li> Ratkaistu muoto on $y = 3x-2$ ja suoran $L$ kulmakerroin $3$.</li>
                             </ol>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#itseisarvo2">
-                    Sulje kappale
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="panel">
-        <header>
-            <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#itseisarvo3">
-                    Itseisarvo koordinaatistossa
-                </a>
-            </h1>
-        </header>
-        <div id="itseisarvo3" class="collapse">
-
-            <p>
-                Tässä kappaleessa tutkitaan itseisarvon avulla määriteltyjä koordinaatiston pistejoukkoja ja opetellaan ratkaisemaan itseisarvoyhtälöitä ja -epäyhtälöitä graafisesti.
-            </p>
-
-            <p>
-                Aloitetaan tarkastelemalla yhtälöä $y = x$. Tämä yhtälö määrittelee pistejoukon, joka on origon kautta kulkeva suora:
-                <br>
-                <img src="/kurssit/maa5/kuvat/k058.png" max-width: 100%; width: auto; height: auto;/>
-                     <br>
-                Luvun itseisarvo on aina epänegatiivinen ja ilmaisee luvun etäisyyden nollasta. Tästä tiedosta voidaan päätellä, että yhtälö $y = \left|x\right|$ määrittelee koordinaatistossa seuraavan pistejoukon:
-                <br>
-                <img src="/kurssit/maa5/kuvat/k059.png" max-width: 100%; width: auto; height: auto;/>
-                     <br>
-                Yhtälön $y = \left|x\right|$ määrittelemä pistejoukko saadaan siis suorasta $y = x$ peilaamalla $x$-akselin alapuolelle jäävä osa $x$-akselin suhteen. Kuvasta näkyy myös havainnollisesti teoreeman 1 tulos: 
-                $$
-                \left|x\right| = \left\{\begin{aligned}
-                &x, \quad \text{ jos $x \geq 0$} \\
-                -&x, \quad \text{ jos $x < 0$.}
-                \end{aligned}\right.
-                $$
-                Yhtälön $y = \left|x\right|$ määrittelemä pistejoukko saadaan siis suorista $y = x$ ja $y = -x$ jättämällä pois $x$-akselin alapuoliset osat.
-                <br>
-                <img src="/kurssit/maa5/kuvat/k060.png" max-width: 100%; width: auto; height: auto;/>
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t416-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t416">
-                                Itseisarvo koordinaatistossa
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t416" class="collapse">
-                        <p>
-                            Alla on näkyvissä suora $y = x-2$. Päättele sen avulla, millainen on yhtälön $y = \left|x-2\right|$ määrittelemä pistejoukko. Piirrä se omaan vihkoosi.
-                            <br>
-                            <img src="/kurssit/maa5/kuvat/k061.png" max-width: 100%; width: auto; height: auto;/>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t417-ex">
-
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t417">
-                                Itseisarvo koordinaatistossa
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t417" class="collapse">
-                        <p>
-                            Yhdistä oikea pistejoukko ja yhtälö:
-                        </p>
-                        <ul>
-                            <li> $\ y = \left|5 - \frac{5}{2}x\right|$ </li>
-                            <li> $\ y = \left|x\right| + 1$ </li>
-                            <li> $\ y = \left|2x - 2\right|$ </li>
-                            <li> $\ y = \left|3x + 2\right|$ </li>
-                        </ul>
-                        <p>
-                            <img src="/kurssit/maa5/kuvat/k062.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
-                            <img src="/kurssit/maa5/kuvat/k063.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">
-                        <p style="clear: both;"></p>
-                        <p>
-                            <img src="/kurssit/maa5/kuvat/k064.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
-                            <img src="/kurssit/maa5/kuvat/k065.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">  </p>
-                        <p style="clear: both;"></p>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Koordinaatistoa ja graafista esitystä voidaan käyttää apuna myös tilanteessa, jossa halutaan ilmaista itseisarvolauseke ilman itseisarvomerkkejä. Esimerkiksi alla on näkyvissä pistejoukko, jonka yhtälö on $y = \left|3-2x\right|$.
-                <br>
-                <img src="/kurssit/maa5/kuvat/k073.png" max-width: 100%; width: auto; height: auto;/>
-                     <br>
-                Kuvasta voidaan päätellä, että 
-                $$
-                \left|3-2x\right| = \left\{\begin{aligned}
-                &\textcolor{blue}{3-2x}, \  \text{ jos $x \leq \tfrac{3}{2}$} \\
-                &\textcolor{red}{2x-3}, \  \text{ jos $x > \tfrac{3}{2}$.}
-                \end{aligned}\right.
-                $$
-                <img src="/kurssit/maa5/kuvat/k074.png" max-width: 100%; width: auto; height: auto;/>
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t416b-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t416b">
-                                Itseisarvo koordinaatistossa
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t416b" class="collapse">
-                        <p>
-                            Tehtävänä on ilmaista lauseke $\left|\frac{4}{3}x + 2\right|$ ilman itseisarvomerkkejä. 
-                        </p>
-                        <ol class="a">
-                            <li> Piirrä koordinaatistoon suora $y = \frac{4}{3}x + 2$. Selvitä laskemalla, missä kohdassa se leikkaa $x$-akselin.</li>
-                            <li> Piirrä koordinaatistoon pistejoukko $y = \left|\frac{4}{3}x + 2\right|$. Huomaa, että voit hyödyntää a-kohtaa.</li>
-                            <li> Ilmaise lauseke $\left|\frac{4}{3}x + 2\right|$ ilman itseisarvomerkkejä. Tarkista vastauksesi järkevyys vertaamalla sitä b-kohdan piirrokseen. </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t416b_v">
-                                Vastaus
-                            </a>
-                        </h2>
-                        <div id="t416b_v" class="collapse">
-                            <ol class="a">
-                                <li> </li>
-                                <li> </li>
-                                <li> 
-                                    $$
-                                    \left|\tfrac{4}{3}x + 2\right| = \left\{\begin{aligned}
-                                    &\tfrac{4}{3}x + 2, \text{ jos $x \geq -\tfrac{3}{2}$} \\
-                                    -&\tfrac{4}{3}x - 2, \text{ jos $x < -\tfrac{3}{2}$.}
-                                    \end{aligned}\right.
-                                    $$ 
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Itseisarvoyhtälöitä voidaan ratkaista graafisesti samaan tapaan kuin <a href="http://kisallioppiminen.fi/kurssit/maa2/luku1/">MAA2-kurssissa</a> ratkaistiin ensimmäisen ja toisen asteen yhtälöitä. Esimerkiksi yhtälö 
-                $$\left|2x + 2\right| = 3$$ 
-                voidaan ratkaista piirtämällä koordinaatistoon pistejoukot $y = \left|2x + 2\right|$ ja $y = 3$:
-                <br>
-                <img src="/kurssit/maa5/kuvat/k066.png" max-width: 100%; width: auto; height: auto;/>
-                     <br>
-                Kuvasta havaitaan, että yhtälöllä 
-                $$\left|2x + 2\right| = 3$$ 
-                on kaksi ratkaisua: $x_1 = -0{,}5$ ja $x_2 = 2{,}5$.
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t418-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t418">
-                                Graafinen ratkaisu
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t418" class="collapse">
-                        <p>
-                            Päättele alla olevan kuvan avulla seuraavien itseisarvoyhtälöiden ja -epäyhtälöiden ratkaisut:
-                        </p>
-                        <ol class="a">
-                            <li> $\left|1-2x\right| = 4$ </li>
-                            <li> $\left|1-2x\right| < 4$ </li>
-                            <li> $\left|1-2x\right| > 4$ </li>
-                        </ol>
-                        <img src="/kurssit/maa5/kuvat/k067.png" max-width: 100%; width: auto; height: auto;/>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Monimutkaisempiakin itseisarvoyhtälöitä voidaan tutkia graafisesti. Esimerkiksi alla olevasta kuvasta voidaan päätellä, että yhtälöllä 
-                $$\left|2x + 2\right| = \left|1-2x\right|$$
-                on tasan yksi ratkaisu:
-                <br>
-                <img src="/kurssit/maa5/kuvat/k068.png" max-width: 100%; width: auto; height: auto;/>
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t419-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t419">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t419" class="collapse">
-                        <p>
-                            Ratkaise edellisen esimerkin yhtälö 
-                            $$\left|2x + 2\right| = \left|1-2x\right|$$
-                            kynän ja paperin avulla. Tarkista tuloksesi järkevyys vertaamalla sitä esimerkin piirrokseen.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t420-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t420">
-                                Graafinen ratkaisu
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t420" class="collapse">
-                        <p>
-                            Ratkaise seuraavat yhtälöt ja epäyhtälöt graafisesti:
-                        </p>
-                        <ol class="a">
-                            <li> $\left|2x-1\right| = \left|2 - x\right|$ </li>
-                            <li> $\left|2x-1\right| < \left|2 - x\right|$ </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Graafisesti voidaan tutkia sellaisiakin yhtälöitä, joissa tuntematon esiintyy sekä itseisarvomerkkien sisällä että ulkopuolella. Esimerkiksi alla olevasta kuvasta voidaan päätellä, että yhtälöllä
-                $$2x + 1 = \left|x\right|$$
-                on tasan yksi ratkaisu:
-                <br>
-                <img src="/kurssit/maa5/kuvat/k069.png" max-width: 100%; width: auto; height: auto;/>
-                     <br>
-                Ratkaisun tarkan arvon selvittämiseen on useita tapoja. Voidaan esimerkiksi korottaa yhtälön molemmat puolet toiseen potenssiin, jolloin saadaan yhtälö
-                $$(2x + 1)^2 = \left|x\right|^2. \tag{1}$$
-                Tätä yhtälöä voidaan sieventää edelleen:
-                \begin{align*}
-                4x^2 + 4x + 1 &= x^2 \\
-                3x^2 + 4x + 1 &= 0
-                \end{align*}
-                Toisen asteen yhtälön ratkaisukaavalla saadaan
-                \begin{align*}
-                x &= \frac{-4 \pm \sqrt{4^2-4\cdot 3 \cdot 1}}{2\cdot 3} \\
-                &= \frac{-4 \pm 2}{6} \\
-                &= \frac{-2 \pm 1}{3}
-                \end{align*}
-                Siis $x = -\frac{1}{3}$ tai $x = -1$.
-                Kuvasta kuitenkin nähtiin jo aikaisemmin, että ratkaisuja on tasan yksi eikä kaksi. Mistä on kysymys?
-            </p>
-            <p>
-                Ilmiö johtuu toiseen potenssiin korotuksesta. Sen avulla saatu yhtälö (1) kyllä seuraa alkuperäisestä yhtälöstä, mutta yhtälöstä (1) ei päästä takaisin alkuperäiseen yhtälöön. Jos yritetään ottaa yhtälöstä (1) neliöjuuri, tuloksena on yhtälö
-                \begin{align*}
-                \sqrt{(2x + 1)^2} &= \sqrt{\left|x\right|^2}. 
-                \end{align*}
-                Se sievenee vain muotoon
-                $$
-                \left|2x + 1\right| = \left|x\right|.
-                $$
-                Itseisarvoja ei voida poistaa vasemmalta, koska lauseke $2x+1$ saa myös negatiivisia arvoja, mutta neliöjuuren tulos on määritelmän mukaan aina epänegatiivinen.
-            </p>
-            <p>
-                Toiseen potenssiin korotusta voi tästä ilmiöstä huolimatta käyttää yhtälöiden ratkaisemisessa, kunhan muistaa lopuksi tarkistaa, ovatko kaikki löydetyt ratkaisuehdokkaat todella ratkaisuja. 
-            </p>
-            <p>
-                Edellä löydettiin ratkaisuehdokkaat $x_1 = -\frac{1}{3}$ ja $x_2 = -1$. Tutkitaan, toteuttaako $x_1 = -\frac{1}{3}$ alkuperäisen yhtälön:
-            </p>
-            <ul>
-                <li> Yhtälön vasen puoli: $2\cdot \left(-\frac{1}{3}\right) + 1 = \frac{1}{3}$.</li>
-                <li> Yhtälön oikea puoli: $\left|-\frac{1}{3}\right| = \frac{1}{3}$.</li>
-            </ul>
-            <p>
-                Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten $x_1 = -\frac{1}{3}$ on yhtälön ratkaisu. 
-            </p>
-            <p>
-                Tutkitaan vielä, toteuttaako $x_2 = -1$ alkuperäisen yhtälön:
-            </p>
-            <ul>
-                <li> Yhtälön vasen puoli: $2\cdot \left(-1\right) + 1 = -1$.</li>
-                <li> Yhtälön oikea puoli: $\left|-1\right| = 1$.</li>
-            </ul>
-            <p>
-                Yhtälön vasen ja oikea puoli eivät ole yhtä suuret, joten $x_2 = -1$ ei ole yhtälön ratkaisu.
-            </p>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t421-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t421">
-                                Itseisarvoyhtälö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t421" class="collapse">
-                        <p>
-                            Tehtävänä on ratkaista yhtälö $\left| 2x + 3 \right| = 2-x$.
-                        </p>
-                        <ol class="a">
-                            <li> Selvitä yhtälön ratkaisujen lukumäärä graafisesti samaan tapaan kuin edellä. </li>
-                            <li> Selvitä ratkaisujen tarkat arvot kynän ja paperin avulla. </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-            <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#itseisarvo3">
+                <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja2">
                     Sulje kappale
                 </a>
             </div>
@@ -1233,382 +157,48 @@ topnav: maa5
     <section class="panel">
         <header>
             <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#luku4-tehtavasarja2">
+                <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja2">
                     TEHTÄVÄSARJA II
                 </a>
             </h1>
         </header>
 
-        <div id="luku4-tehtavasarja2" class="collapse">
+        <div id="luku1-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="s2t405-ex">
+            <div class="tehtava" id="s2t101-ex">
                 <header>
                     <h1>
-                        <a data-target="#s2t405">
-                            Itseisarvoyhtälö
+                        <a data-target="#s2t101">
+                            Suoran yhtälö
                         </a>
                     </h1>
                 </header>
-                <div id="s2t405">
-                    <p> 
-                        Ratkaise seuraavat yhtälöt:
+                <div id="s2t101">
+                    <p>
+                        Määritä yhtälö suoralle, joka kulkee seuraavien pisteiden kautta:
                     </p>
                     <ol class="a">
-                        <li> $6|x| - 10 = 0$ </li>
-                        <li> $\left|x - 5\right|  + 1 = 0$ </li>
+                        <li> $(-1,4)\ $ ja $\ (5,-1)$</li>
+                        <li> $\left(-\frac{5}{3}, \frac{1}{2}\right)\ $ ja $\ \left(\frac{1}{3}, \frac{5}{6}\right)$.</li>
                     </ol>
                     <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t405_v">
+                        <a data-toggle="collapse" class="collapsed" data-target="#s2t101_v">
                             Vastaus
                         </a>
                     </h2>
-                    <div id="s2t405_v" class="collapse">
+                    <div id="s2t101_v" class="collapse">
                         <p>
                         <ol class="a">
-                            <li> $x = \frac{5}{3}$ tai $x = -\frac{5}{3}$</li>
-                            <li> Ei ratkaisuja. </li>
+                            <li> $y = -\frac{5}{6}x + \frac{19}{6}$ </li>
+                            <li> $y = \frac{1}{6}x + \frac{7}{9}$ </li>
                         </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s2t406-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s2t406">
-                            Itseisarvoyhtälö
-                        </a>
-                    </h1>
-                </header>
-                <div id="s2t406">
-                    <p> 
-                        Ratkaise seuraavat yhtälöt:
-                    </p>
-                    <ol class="a">
-                        <li> $\left|x^2 + 1\right| = 3$ </li>
-                        <li> $\left|x^2 - 3\right| = 1$ </li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t406_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s2t406_v" class="collapse">
-                        <p>
-                        <ol class="a">
-                            <li> $x = \pm\sqrt{2}$</li>
-                            <li> $x = \pm 2$ tai $x = \pm\sqrt{2}$ </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s2t407-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s2t407">
-                            Itseisarvoyhtälö
-                        </a>
-                    </h1>
-                </header>
-                <div id="s2t407">
-                    <p> 
-                        Ratkaise seuraavat yhtälöt:
-                    </p>
-                    <ol class="a">
-                        <li> $\left|3x-2\right| = \left|4x\right|$ </li>
-                        <li> $\left|1-2x\right| = \left|x-1\right|$ </li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t407_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s2t407_v" class="collapse">
-                        <p>
-                        <ol class="a">
-                            <li> $x = -2$ tai $x = \frac{2}{7}$</li>
-                            <li> $x = 0$ tai $x = \frac{2}{3}$ </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s2t401-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s2t401">
-                            Itseisarvoepäyhtälö
-                        </a>
-                    </h1>
-                </header>
-                <div id="s2t401">
-                    <p> 
-                        Ratkaise seuraavat epäyhtälöt:
-                    </p>
-                    <ol class="a">
-                        <li> $\left|x - 2 \right| < 3$ </li>
-                        <li> $\left|x + 3 \right| > 4$ </li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t401_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s2t401_v" class="collapse">
-                        <p>
-                        <ol class="a">
-                            <li> $-1 < x < 5$ </li>
-                            <li> $x < -7$ tai $x > 1$</li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s2t402-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s2t402">
-                            Itseisarvoepäyhtälö
-                        </a>
-                    </h1>
-                </header>
-                <div id="s2t402">
-                    <p> 
-                        Ratkaise seuraavat epäyhtälöt:
-                    </p>
-                    <ol class="a">
-                        <li> $\left|2x \right| < 6$ </li>
-                        <li> $\left|5x \right| > 7$ </li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t402_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s2t402_v" class="collapse">
-                        <p>
-                        <ol class="a">
-                            <li> $-3 < x < 3$ </li>
-                            <li> $x < -\frac{7}{5}$ tai $x > \frac{7}{5}$</li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s2t403-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s2t403">
-                            Itseisarvoepäyhtälö
-                        </a>
-                    </h1>
-                </header>
-                <div id="s2t403">
-                    <p> 
-                        Ratkaise seuraavat epäyhtälöt:
-                    </p>
-                    <ol class="a">
-                        <li> $\left|2x - 1\right| \geq 1$ </li>
-                        <li> $\left|3 - 4x \right| \leq 1$ </li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t403_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s2t403_v" class="collapse">
-                        <p>
-                        <ol class="a">
-                            <li> $x \leq 0$ tai $x \geq 1$</li>
-                            <li> $\frac{1}{2} \leq x \leq 1$ </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s2t404-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s2t404">
-                            Itseisarvoepäyhtälö
-                        </a>
-                    </h1>
-                </header>
-                <div id="s2t404">
-                    <p> 
-                        Ratkaise seuraavat epäyhtälöt:
-                    </p>
-                    <ol class="a">
-                        <li> $2|x| - 6 \leq 0$ </li>
-                        <li> $\left|3x \right|  + 2 \geq 0$ </li>
-                        <li> $\left|\dfrac{x}{2}\right| - 1 > 0$ </li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t404_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s2t404_v" class="collapse">
-                        <p>
-                        <ol class="a">
-                            <li> $-3 \leq x \leq 3$</li>
-                            <li> Epäyhtälön toteuttavat kaikki reaaliluvut. </li>
-                            <li> $x < -2$ tai $x > 2$</li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s2t425-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s2t425">
-                            Itseisarvo koordinaatistossa
-                        </a>
-                    </h1>
-                </header>
-                <div id="s2t425">
-                    <p> 
-                        Päättele, mikä on alla näkyvän pistejoukon yhtälö 
-                        <br>
-                        <img src="/kurssit/maa5/kuvat/k072.png" max-width: 100%; width: auto; height: auto;/>
-                    </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t425_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s2t425_v" class="collapse">
-                        <p>
-                            $y = \left|\frac{1}{2}x -\frac{3}{2} \right|$ tai yhtä hyvin $y = \left|-\frac{1}{2}x + \frac{3}{2} \right|$
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s2t424-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s2t424">
-                            Itseisarvo koordinaatistossa
-                        </a>
-                    </h1>
-                </header>
-                <div id="s2t424">
-                    <p> 
-                        Alla on näkyvissä osa paraabelista, jonka yhtälö on $y = x^2 -2x - 1$. Hahmottele sen avulla koordinaatistoon pistejoukko, jonka yhtälö on $y = \left| x^2 - 2 - 1\right|$. 
-                        <br>
-                        <img src="/kurssit/maa5/kuvat/k071.png" max-width: 100%; width: auto; height: auto;/>
-                             <br>
-                        Muista, että voit tarkistaa vastauksesi piirtämällä pistejoukon tietokoneella tai laskimella.
-                    </p>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s2t426-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s2t426">
-                            Itseisarvo koordinaatistossa
-                        </a>
-                    </h1>
-                </header>
-                <div id="s2t426">
-                    <p> 
-                        Ilmaise seuraavat lausekkeet ilman itseisarvomerkkejä:
-                    </p>
-                    <ol class="a">
-                        <li> $\left|4-x\right|$ </li>
-                        <li> $\left|\frac{1}{3}x - 1\right|$ </li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t426_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s2t426_v" class="collapse">
-                        <ol class="a">
-                            <li> 
-                                $$
-                                \left\{\begin{aligned}
-                                &4-x, \text{ jos $x \leq 4$} \\
-                                &x-4, \text{ jos $x > 4$.}
-                                \end{aligned}\right.
-                                $$ 
-                            </li>
-                            <li> 
-                                $$
-                                \left\{\begin{aligned}
-                                &\tfrac{1}{3}x - 1, \text{ jos $x \geq 3$} \\
-                                -&\tfrac{1}{3}x + 1, \text{ jos $x < 3$.}
-                                \end{aligned}\right.
-                                $$ 
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s2t422-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s2t422">
-                            Itseisarvo koordinaatistossa
-                        </a>
-                    </h1>
-                </header>
-                <div id="s2t422">
-                    <p> 
-                        Ratkaise graafisesti yhtälö $\left|2x + 5 \right| = 3x - 1$. 
-                    </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t422_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s2t422_v" class="collapse">
-                        <p>
-                            $x = 6$
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s2t423-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s2t423">
-                            Itseisarvo koordinaatistossa
-                        </a>
-                    </h1>
-                </header>
-                <div id="s2t423">
-                    <p> 
-                        Ratkaise yhtälö $\left|x + 5 \right| = 3x$. Voit tutkia ratkaisujen lukumäärän graafisesti, mutta selvitä tarkat arvot laskemalla.
-                    </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t423_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s2t423_v" class="collapse">
-                        <p>
-                            $x = \frac{5}{2}$
                         </p>
                     </div>
                 </div>
             </div>
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#luku4-tehtavasarja2">
+                <a data-toggle="collapse" class="collapsed" data-target="#suora1">
                     Sulje kappale
                 </a>
             </div>
@@ -1619,103 +209,42 @@ topnav: maa5
     <section class="panel">
         <header>
             <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#luku4-tehtavasarja3">
+                <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja3">
                     TEHTÄVÄSARJA III
                 </a>
             </h1>
         </header>
 
-        <div id="luku4-tehtavasarja3" class="collapse">
+        <div id="luku1-tehtavasarja3" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="s3t401-ex">
+            <div class="tehtava" id="s2t112-ex">
                 <header>
                     <h1>
-                        <a data-target="#s3t401">
+                        <a data-target="#s2t112">
 
                         </a>
                     </h1>
                 </header>
-                <div id="s3t401">
+                <div id="s2t112">
                     <p>
-                        Ratkaise yhtälö
-                    </p>
-                    <ol class="a">
-                        <li> $\left|\frac{3}{2}x - 6 \right| = 6$.</li>
-                        <li> $\left|3x - 2\right| = 5$.</li>
-                    </ol>
-                    <p>
-                        [Pitkä K2011/1c &amp; K2008/2c]
+                        Määritä vakio $a$ siten, että suorat $\ ax + 1 = 0$, $\ x - 2y = 0\ $ ja $\ x + y + 3 = 0\ $ kulkevat saman pisteen kautta.                 
                     </p>
                     <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s3t401_v">
+                        <a data-toggle="collapse" class="collapsed" data-target="#s2t112_v">
                             Vastaus
                         </a>
                     </h2>
-                    <div id="s3t401_v" class="collapse">
-                        <ol class="a">
-                            <li> $x = 0$ tai $x = 8$ </li>
-                            <li> $x = \frac{7}{3}$ tai $x = -1$ </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="s3t402-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s3t402">
-
-                        </a>
-                    </h1>
-                </header>
-                <div id="s3t402">
-                    <p>
-                        Ratkaise yhtälö $\left|x\right| = 1 + x$.
-                        <br>
-                        [Pitkä S2012/1b]
-                    </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s3t402_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s3t402_v" class="collapse">
+                    <div id="s2t112_v" class="collapse">
                         <p>
-                            $x = -\frac{1}{2}$
+                            $a = \frac{1}{2}$.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="s3t403-ex">
-                <header>
-                    <h1>
-                        <a data-target="#s3t403">
-
-                        </a>
-                    </h1>
-                </header>
-                <div id="s3t403">
-                    <p>
-                        Ratkaise epäyhtälö $\left|3x - 2 \right| < 4$.
-                        <br>
-                        [Pitkä K2007/1b]
-                    </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s3t403_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="s3t403_v" class="collapse">
-                        <ol class="a">
-                            <li> $-\frac{2}{3} < x < 2$ </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#luku4-tehtavasarja3">
+                <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja3">
                     Sulje kappale
                 </a>
             </div>
@@ -1725,17 +254,17 @@ topnav: maa5
     <section class="panel">
         <header>
             <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#L4itsearviointi">
+                <a data-toggle="collapse" class="collapsed" data-target="#L1itsearviointi">
                     Itsearviointitehtävät
                 </a>
             </h1>
         </header>
-        <div id="L4itsearviointi" class="collapse">
+        <div id="L1itsearviointi" class="collapse">
             <p>
-                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/2006">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
             </p>
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#L4itsearviointi">
+                <a data-toggle="collapse" class="collapsed" data-target="#L1itsearviointi">
                     Sulje kappale
                 </a>
             </div>
