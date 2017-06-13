@@ -1,0 +1,18 @@
+header: 
+path: 
+navigation:
+  -
+    name: Kurssin etusivu
+    path: /kurssit/maa6/
+  -
+    name: Derivaatta
+    path: /kurssit/maa6/luku1/
+  -
+    name: Raja-arvot ja jatkuvuus
+    path: /kurssit/maa6/luku2/
+  -
+    name: Rationaalifunktiot
+    path: /kurssit/maa6/luku3/
+  -
+    name: Ääriarvot
+    path: /kurssit/maa6/luku4/
