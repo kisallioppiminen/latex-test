@@ -14,5 +14,8 @@ navigation:
     name: Rationaalifunktiot
     path: /kurssit/maa6/luku3/
   -
-    name: Ääriarvot
+    name: Derivointisääntöjä
     path: /kurssit/maa6/luku4/
+  -
+    name: Ääriarvot
+    path: /kurssit/maa6/luku5/
