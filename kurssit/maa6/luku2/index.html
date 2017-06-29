@@ -89,17 +89,26 @@ topnav: maa6
                     </header>
                     <div id="t201" class="collapse">
                         <p>
-                            Tutki alla olevaa kuvaa. Onko funktiolla $f$ raja-arvo kohdassa 
+                            Tutki alla olevaa kuvaa. 
+                            <br>
+                            <img src="/kurssit/maa6/kuvat/kuva16.png" max-width: 100%; width: auto; height: auto;/>
+                            <br>                     
                         </p>
                         <ol class="a">
-                            <li> $x = -2$ </li>
-                            <li> $x = -2$  </li>
-                            <li> $x = 1$? </li>
+                            <li> Onko funktiolla $f$ raja-arvo kohdassa</li>
+                            <ul>
+                                <li> $x = -1$ </li>
+                                <li> $x = 0$ </li>
+                                <li> $x = 2$  </li>
+                                <li> $x = 3$? </li>
+                            </ul>
+                            <li>
+                                Jos raja-arvo on olemassa, mikä se on? 
+                            </li>
+                            <li>
+                                Onko välillä $[-3, 5]$ jokin kohta, jossa funktio $f$ ei ole määritelty?
+                            </li>
                         </ol>
-                        <p>
-                            Jos raja-arvo on olemassa, mikä se on?
-                        </p>
-                        <img src="/kurssit/maa6/kuvat/kuva03.png" max-width: 100%; width: auto; height: auto;/>
                              <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t201_v">
                                 VASTAUS
@@ -107,9 +116,15 @@ topnav: maa6
                         </h2>
                         <div id="t201_v" class="collapse">
                             <ol class="a">
-                                <li> $f(-2) = 1$ </li>
-                                <li> $f'(-2) = \frac{3}{2}$ </li>
-                                <li> $f'(1) = 0$. </li>
+                                <li> Funktiolla $f$ on raja-arvo kohdissa $x = -1$, $x = 0$ ja $x = 3$. Funktiolla $f$ ei ole raja-arvoa kohdassa $x = 2$. </li>
+                                <li> 
+                                    \begin{align*}
+                                    \lim_{x \rightarrow -1} f(x) &= 1 \\
+                                    \lim_{x \rightarrow 0} f(x) &= 3 \\
+                                    \lim_{x \rightarrow 3} f(x) &= 2
+                                    \end{align*}
+                                </li>
+                                <li> Funktio $f$ ei ole määritelty kohdassa $x = -1$. </li>
                             </ol>
                         </div>
                     </div>
