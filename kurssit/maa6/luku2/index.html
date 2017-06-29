@@ -57,13 +57,13 @@ topnav: maa6
                 <br>
                 <img src="/kurssit/maa6/kuvat/kuva14.png" max-width: 100%; width: auto; height: auto;/> 
                 <br>
-                Tutkitaan funktion $f$ arvoja kohdan $x = 1$ eri puolilla. Huomataan, että funktion $f$ arvot lähestyvät lukua 2, kun lähestytään kohtaa $x = 1$ vasemmalta. Jos kohtaa $x = 1$ lähestytään oikelta, funktion $f$ arvot lähestyvät lukua $0$. Tällaisessa tilanteessa sanotaan, että funktiolla $f$ ei ole raja-arvoa kohdassa $x = 1$. 
+                Tutkitaan funktion $f$ arvoja kohdan $x = 1$ eri puolilla. Huomataan, että funktion $f$ arvot lähestyvät lukua 2, kun lähestytään kohtaa $x = 1$ vasemmalta. Jos kohtaa $x = 1$ lähestytään oikelta, funktion $f$ arvot lähestyvät lukua $0$. Koska funktion arvot lähestyvät eri lukua riippuen siitä, kummalta puolelta kohtaa $x = 1$ lähestytään, ei funktiolla $f$ ole raja-arvoa kohdassa $x = 1$.
             </p>
 
             <div class="definition">
                 <h3>MÄÄRITELMÄ: FUNKTION RAJA-ARVO</h3>
                 <p>
-                    Oletetaan, että funktio $f$ on määritelty kohdan $a$ läheisyydessä sen molemmilla puolilla. Funktiolla $f$ on kohdassa $a$ <em>raja-arvo</em> $b$, jos muuttujan arvojen lähestyessä lukua $a$ kummalta puolelta tahansa, funktion $f$ arvot lähestyvät lukua $b$.  
+                    Oletetaan, että funktio $f$ on määritelty kohdan $a$ läheisyydessä sen molemmilla puolilla. Funktiolla $f$ on kohdassa $a$ <em>raja-arvo</em> $b$, jos muuttujan arvojen lähestyessä lukua $a$ kummalta puolelta tahansa, funktion $f$ arvot lähestyvät lukua $b$. Lähestymisen pitää olla sellaista, että tulemalla tarpeeksi lähelle kohtaa $a$ funktion $f$ arvot saadaan niin lähelle lukua $b$ kuin vain halutaan.
                     <br>
                     <img src="/kurssit/maa6/kuvat/kuva15.png" max-width: 100%; width: auto; height: auto;/>
                     <br>
@@ -72,6 +72,48 @@ topnav: maa6
                     Voidaan myös käyttää merkintää
                     $$f(x) \rightarrow b, \ \text{ kun } \ x \rightarrow a.$$
                 </p>
+            </div>
+
+            <p>
+                Raja-arvon kannalta ei ole mitään merkitystä sillä, onko funktio määritelty tarkasteltavassa kohdassa vai ei. Oleellista on vain se, lähestyvätkö funktion arvot jotain tiettyä arvoa, kun tarkastelukohtaa lähestytään kummasta suunnasta tahansa.
+            </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="firstEx">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t201">
+                                Funktion raja-arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t201" class="collapse">
+                        <p>
+                            Tutki alla olevaa kuvaa. Onko funktiolla $f$ raja-arvo kohdassa 
+                        </p>
+                        <ol class="a">
+                            <li> $x = -2$ </li>
+                            <li> $x = -2$  </li>
+                            <li> $x = 1$? </li>
+                        </ol>
+                        <p>
+                            Jos raja-arvo on olemassa, mikä se on?
+                        </p>
+                        <img src="/kurssit/maa6/kuvat/kuva03.png" max-width: 100%; width: auto; height: auto;/>
+                             <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t201_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t201_v" class="collapse">
+                            <ol class="a">
+                                <li> $f(-2) = 1$ </li>
+                                <li> $f'(-2) = \frac{3}{2}$ </li>
+                                <li> $f'(1) = 0$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="close-section">
