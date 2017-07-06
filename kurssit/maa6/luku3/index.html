@@ -732,15 +732,15 @@ topnav: maa6
             </ol>
             <p>
                 Esimerkiksi yhtälö
-                $$\frac{x}{1-x} = \frac{2}{2-x}$$
+                $$\frac{x}{1-x} + 3= \frac{2}{2-x}$$
                 voidaan ratkaista kummalla tahansa tavalla. Ennen ratkaisua kannattaa kuitenkin huomata, että yhtälö ei ole määritelty nimittäjien nollakohdissa eli jos $x = 1$ tai $x = 2$. Nämä luvut eivät siis missään tapauksessa kelpaa yhtälön ratkaisuksi.
             </p>
             <ol>
                 <li> Ratkaisutapa: Yhtälössä esiintyvät nimittäjät $1-x$ ja $2-x$, joten kerrotaan yhtälön molemmat puolet tulolla $(1-x)(2-x)$ ja tehdään mahdolliset supistukset sen jälkeen:
                     \begin{align*}
-                        \frac{x}{1-x} &= \frac{2}{2-x} \\[2mm]
-                        \frac{x\textcolor{red}{(1-x)(2-x)}}{1-x} &= \frac{2\textcolor{red}{(1-x)(2-x)}}{2-x} \\[2mm]
-                        x\textcolor{red}{(2-x)} &= 2\textcolor{red}{(1-x)}\\[2mm]
+                        \frac{x}{\textcolor{red}{1-x}} + 3 &= \frac{2}{\textcolor{blue}{2-x}} \\[2mm]
+                        \frac{x\textcolor{red}{(1-x)}\textcolor{blue}{(2-x)}}{\textcolor{red}{1-x}} + 3\textcolor{red}{(1-x)}\textcolor{blue}{(2-x)}} &= \frac{2\textcolor{red}{(1-x)}\textcolor{blue}{(2-x)}}{\textcolor{blue}{2-x}} \\[2mm]
+                        x\textcolor{blue}{(2-x)} + 3\textcolor{red}{(1-x)}\textcolor{blue}{(2-x)}} &= 2\textcolor{red}{(1-x)}\\[2mm]
                     \end{align*}
                 </li>
                 <li> Muokataan yhtälön kumpikin puoli samannimisiksi murtolausekkeiksi sopivasti laventamalla. Tällöin voidaan päätellä, että yhtälö toteutuu, jos ja vain jos osoittajat ovat yhtä suuria.</li>
