@@ -702,7 +702,7 @@ topnav: maa6
                         </p>
                         <ol class="a">
                             <li> Missä kohdissa funktio $f$ ei ole määritelty? </li>
-                            <li> Ratkaise funktion $f$ nollakohdat. Aloita sieventämällä funktion lauseke yhdeksi murtolausekkeeksi. </li>
+                            <li> Ratkaise funktion $f$ nollakohdat. Aloita esimerkiksi sieventämällä funktion lauseke yhdeksi murtolausekkeeksi. </li>
                             <li> Tarkista vastauksesi piirtämällä funktion $f$ kuvaaja laskimella tai tietokoneella. </li>
                         </ol>
                         <h2>
@@ -719,6 +719,33 @@ topnav: maa6
                     </div>
                 </div>
             </div>
+
+            <p>
+                Kun tutkitaan, missä kohdassa jokin rationaalifunktio saa tietyn arvon, päädytään ratkaisemaan niin sanottu rationaaliyhtälö. Esimerkiksi rationaalifunktion $f$ nollakohdat voidaan löytää ratkaisemalla yhtälö $f(x) = 0$.
+            </p>
+            <p>
+                Rationaaliyhtälöiden ratkaisussa ensimmäinen tavoite on päästä eroon nimittäjistä. Tämä voidaan tehdä ainakin kahdella tavalla:
+            </p>
+            <ol>
+                <li> Kerrotaan yhtälön kumpikin puoli kaikkien yhtälössä esiintyvien nimittäjien tulolla, jolloin nimittäjät voidaan supistaa pois.</li>
+                <li> Muokataan yhtälön kumpikin puoli samannimisiksi murtolausekkeiksi sopivasti laventamalla. Tällöin voidaan päätellä, että yhtälö toteutuu, jos ja vain jos osoittajat ovat yhtä suuria.</li>
+            </ol>
+            <p>
+                Esimerkiksi yhtälö
+                $$\frac{x}{1-x} = \frac{2}{2-x}$$
+                voidaan ratkaista kummalla tahansa tavalla. Ennen ratkaisua kannattaa kuitenkin huomata, että yhtälö ei ole määritelty nimittäjien nollakohdissa eli jos $x = 1$ tai $x = 2$. Nämä luvut eivät siis missään tapauksessa kelpaa yhtälön ratkaisuksi.
+            </p>
+            <ol>
+                <li> Ratkaisutapa: Yhtälössä esiintyvät nimittäjät $1-x$ ja $2-x$, joten kerrotaan yhtälön molemmat puolet tulolla $(1-x)(2-x)$ ja tehdään mahdolliset supistukset sen jälkeen:
+                    \begin{align*}
+                        \frac{x}{1-x} &= \frac{2}{2-x} \\[2mm]
+                        \frac{x\textcolor{red}{(1-x)(2-x)}}{1-x} &= \frac{2\textcolor{red}{(1-x)(2-x)}}{2-x} \\[2mm]
+                        x\textcolor{red}{(2-x)} &= 2\textcolor{red}{(1-x)}\\[2mm]
+                    \end{align*}
+                </li>
+                <li> Muokataan yhtälön kumpikin puoli samannimisiksi murtolausekkeiksi sopivasti laventamalla. Tällöin voidaan päätellä, että yhtälö toteutuu, jos ja vain jos osoittajat ovat yhtä suuria.</li>
+            </ol>
+            
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#rationaali2">
