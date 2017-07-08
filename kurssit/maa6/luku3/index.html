@@ -1044,17 +1044,37 @@ topnav: maa6
                         </h2>
                         <div id="t320_v" class="collapse">
                             <ol class="a">
-                            <li> $\lim_{x\rightarrow -5} f(x) = 25$. </li>
-                            <li> $\lim_{x\rightarrow 3} f(x) = 9$. 
+                            <li> ${\displaystyle\lim_{x\rightarrow -5} f(x) = 25}$. </li>
+                            <li> ${\displaystyle\lim_{x\rightarrow 3} f(x) = 9}$. 
                                 <br>
                                 (Osoittajassa ja nimittäjässä on tekijänä $x-3$, joten sen voi supistaa pois.)
                             </li>
-                            <li> $\lim_{x\rightarrow 11} f(x) = 121.$ </li>
+                            <li> ${\displaystyle\lim_{x\rightarrow 11} f(x) = 121}$. </li>
                         </ol>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <p>
+                Tutkitaan seuraavaksi funktiota
+                $$g(x) = \frac{x^2-16}{x^2 - 8x + 16}$$
+                kohdassa $x = 4$. 
+            </p>
+            <p> 
+                Havaitaan, että jos $x = 4$, niin nimittäjä $x^2 - 8x + 16 = 0$, joten funktio $g$ ei ole määritelty tässä kohdassa. Muistikaavojen 
+                \begin{align*}
+                (a+b)(a-b) &= a^2 + b^2  \ \text{ ja}\\
+                (a-b)^2 &= a^2 -2ab + b^2
+                \end{align*}
+                avulla funktion laukseke saadaan muotoon, jossa supistaminen on mahdollista:
+                \begin{align*}
+                g(x) &= \frac{x^2-16}{x^2 - 8x + 16} \\[2mm]
+                &= \frac{(x+4)(x-4)}{(x-4)^2} \\[2mm]
+                &= \frac{x+4}{x-4}
+                \end{align*}
+                Huomataan, että tulos ei sekään ole määritelty kohdassa $x = 4$. Jos $x \rightarrow 4$, niin osoittaja $x + 4$ lähestyy lukua $8$, mutta nimittäjä $x-4$ lähestyy nollaa. Tällaisessa tilanteessa, jossa osoittajan raja-arvo on nollasta poikkeava mutta nimittäjän raja-arvo on nolla, ei raja-arvoa ole olemassa, vaan funktion arvot kasvavat tai pienenevät rajatta tarkastelukohdan läheisyydessä.
+            </p>
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#rationaali3">
