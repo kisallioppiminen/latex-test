@@ -354,12 +354,12 @@ topnav: maa6
                         Se supistuu muotoon
                         $$x^{n-1} + x^{n-2}a + \cdots + xa^{n-2} + a^{n-1}.$$
                         Tässä summassa muuttujan $x$ eksponentti saa kaikki kokonaislukuarvot $n-1$, \ldots, $1$, $0$, joten yhteenlaskettavia on $n$ kappaletta. Vakion $a$ eksponentti saa vastaavat arvot niin, että jokaisessa yhteenlaskettavassa eksponenttien summa on aina $n-1$. Raja-arvoksi saadaan näin $na^{n-1}$:
-                        \begin{multline*}
-                        \lim_{x \rightarrow a} \frac{x^n-a^n}{x-a} \\
-                        = \lim_{x \rightarrow a} \left(x^{n-1} + x^{n-2}a + \cdots + xa^{n-2} + a^{n-1}\right) \\
-                        = a^{n-1} + a^{n-2}a + \cdots + aa^{n-2} + a^{n-1} \\
-                        = na^{n-1}
-                        \end{multline*}
+                        \begin{align*}
+                        &\phantom{={}}\lim_{x \rightarrow a} \frac{x^n-a^n}{x-a} \\
+                        &= \lim_{x \rightarrow a} \left(x^{n-1} + x^{n-2}a + \cdots + xa^{n-2} + a^{n-1}\right) \\
+                        &= a^{n-1} + a^{n-2}a + \cdots + aa^{n-2} + a^{n-1} \\
+                        &= na^{n-1}
+                        \end{align*}
                         Koska raja-arvo on olemassa, potenssifunktio $f(x) = x^n$ on derivoituva ja sen derivaattafunktio on $f'(x) = nx^{n-1}$.
                     </p>      
                 </div>
