@@ -437,15 +437,48 @@ topnav: maa6
         <div id="saantoja2" class="collapse">
 
             <p>
-                Edellisessä kappaleessa tutkitiin potenssifunktioita ja vakiofunktioita. Polynomifunktiot saadaan muodostettua niistä yhteenlaskun ja vakiolla kertomisen avulla. Esimerkiksi funktioista $f(x) = x^2$, $g(x) = x$ ja $h(x) = -3$ saadaan muodostettua polynomifunktio 
+                Edellisessä kappaleessa tutkitiin potenssifunktioita ja vakiofunktioita. Polynomifunktiot saadaan muodostettua niistä yhteenlaskun ja vakiolla kertomisen avulla. Esimerkiksi polynomifunktio
                 $$
-                p = -1\cdot f + 2\cdot g + h
+                p(x) = -3x^2 + 5x - 4
                 $$
-                jolle pätee
+                voidaan muodostaa funktioista $f(x) = x^2$, $g(x) = x$ ja $h(x) = 1$:
                 $$
-                p(x) = -x^2 + 2x - 3
+                p(x) = -3f(x) + 5g(x) - 4h(x).
+                $$
+                Tässä kappaleessa osoitetaan, että derivaattafunktio on vastaava yhdistelmä potenssi- ja vakiofunktioiden derivaatoista:
+                $$
+                p'(x) = -3f'(x) + 5g'(x) - 4h'(x).
                 $$
             </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t407-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t407">
+                                Derivaattafunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t407" class="collapse">
+                        <p>
+                            Jatkoa yllä olevaan esimerkkiin. Sievennä funktion $p(x) = -3x^2 + 5x - 4$ derivaattafunktio
+                            $$p'(x) = -3f'(x) + 5g'(x) - 4h'(x),$$
+                            missä $f(x) = x^2$, $g(x) = x$ ja $h(x) = 1$.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t407_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t407_v" class="collapse">
+                            <p>
+                                $f'(x)= -6x + 5$
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#saantoja2">
