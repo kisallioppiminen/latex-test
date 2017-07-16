@@ -7,7 +7,7 @@ topnav: maa6
 ---
 
 <input type="hidden" id="chapterNumber" value="4"/>
-<input type="hidden" id="theoremStart" value="1"/>
+<input type="hidden" id="theoremStart" value="2"/>
 
 <article>
     <section>
@@ -348,7 +348,10 @@ topnav: maa6
                 </p>
                 <div class="proof">
                     <p>
-                        Perustelu: Funktion $f(x) = x^n$ erotusosamäärä kohdassa $a$ on
+                        Perustelu: Aikaisemmin on osoitettu, että funktion $f(x) = x$ derivaattafunktio on $f'(x) = 1$. Koska $1 \cdot x^0 = 1$, teoreeman tulos pätee tapauksessa $n = 1$. 
+                        <br>
+                        Oletetaan seuraavaksi, että $n \geq 2$.
+                        Funktion $f(x) = x^n$ erotusosamäärä kohdassa $a$ on
                         $$
                         \frac{x^n-a^n}{x-a}.
                         $$
@@ -373,7 +376,47 @@ topnav: maa6
                 \mathop{\mathrm{D}} x^2 &= 2x \\
                 \mathop{\mathrm{D}} x^3 &= 3x^2
                 \end{align*}
+                Seuraavassa tehtävässä harjoitellaan teoreeman 2 soveltamista. 
             </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t406-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t406">
+                                Derivaattafunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t406" class="collapse">
+                        <p>
+                            Määritä seuraavat derivaattafunktiot: 
+                        </p>
+                        <ol class="a">
+                            <li> $\mathop{\mathrm{D}} x^5$ </li>
+                            <li> $\mathop{\mathrm{D}} x^9$ </li>
+                            <li> $\mathop{\mathrm{D}} x^14$ </li>
+                            <li> $\mathop{\mathrm{D}} 9$ </li>
+                        </ol>
+                        <p>
+                            Kertaa tarvittaessa tehtävä 4.3.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t406_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t406_v" class="collapse">
+                            <ol class="a">
+                                <li> $\mathop{\mathrm{D}} x^5 = 5x^4$ </li>
+                                <li> $\mathop{\mathrm{D}} x^9 = 9x^8$ </li>
+                                <li> $\mathop{\mathrm{D}} x^14 = 14x^13$ </li>
+                                <li> $\mathop{\mathrm{D}} 9 = 0$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#saantoja1">
