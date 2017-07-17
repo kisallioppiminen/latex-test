@@ -484,10 +484,10 @@ topnav: maa6
                 Seuraavassa teoreemassa osoitetaan, että funktioiden summan derivaatta saadaan laskemalla funktioiden derivaatat yhteen. Lue teoreema ja sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
             </p>
 
-            <div class="theorem" id="SUMMAN DERIVAATTA">
+            <div class="theorem" id="FUNKTIOIDEN SUMMAN DERIVAATTA">
                 <h3>TEOREEMA</h3>
                 <p>
-                    Oletetaan, että funktiot $f$ ja $g$ ovat derivoituvia. Summan $f+g$ on derivaatta on funktioiden $f$ ja $g$ derivaattojen summa:
+                    Oletetaan, että funktiot $f$ ja $g$ ovat derivoituvia. Summan $f+g$ derivaatta on funktioiden $f$ ja $g$ derivaattojen summa:
                     $$(f + g)'(x) = f'(x) + g'(x).$$ 
                 </p>
                 <div class="proof">
@@ -519,7 +519,7 @@ topnav: maa6
                     <header>
                         <h1>
                             <a data-toggle="collapse" class="collapsed" data-target="#t408">
-                                Summan derivaatta
+                                Funktioiden summan derivaatta
                             </a>
                         </h1>
                     </header>
@@ -545,7 +545,84 @@ topnav: maa6
                     </div>
                 </div>
             </div>
+
+            <p>
+                Seuraavaksi tarkastellaan vakiolla kerrotun funktion derivaattaa. Kun funktio kerrotaan vakiolla, tulee sen arvo jokaisessa kohdassa kerrotuksi tällä vakiolla:
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva48.png" max-width: 100%; width: auto; height: auto;/>
+            </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t409-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t409">
+                                Vakiolla kerrottu funktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t409" class="collapse">
+                        <p>
+                            Funktioiden $f$ ja $kf$ kuvaajat näkyvät yllä olevassa kuvassa. Mikä on vakion $k$ arvo?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t409_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t409_v" class="collapse">
+                            <p>
+                                $k = 2$
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
+            <div class="tehtavat">
+                <div class="tehtava" id="t410-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t410">
+                                Vakiolla kerrotun funktion derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t410" class="collapse">
+                        <p>
+                            Oletetaan, että funktio $f$ on derivoituva. Tehtävänä on määrittää vakiolla kerrotun funktion $kf$ derivaatta.
+                        </p>
+                        <ol class="a">
+                            <li> Muodosta funktion $kf$ erotusosamäärä kohdassa $a$.  </li>
+                            <li> Muokkaa erotusosamäärää niin, että siitä erottuu funktion $f$ erotusosamäärä. </li>
+                            <li> Mikä on funktion $kf$ erotusosamäärän raja-arvo, kun $x \rightarrow a$?</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t410_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t410_v" class="collapse">
+                            <ol class="a">
+                            <li> $\dfrac{kf(x) - kf(a)}{x-a}$ </li>
+                            <li> $k\dfrac{f(x) - f(a)}{x-a}$ </li>
+                            <li> $kf'(a)$ </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>Tehtävän ?? tuloksena saadaan seuraava teoreema:</p>
+
+            <div class="theorem" id="VAKIOLLA KERROTUN FUNKTION DERIVAATTA">
+                <h3>TEOREEMA</h3>
+                <p>
+                    Oletetaan, että funktio $f$ on derivoituva. Vakiolla kerrotun funktion $kf$ on derivaatta on funktion $f$ derivaatta kerrottuna samalla vakiolla:
+                    $$(kf)'(x) = kf'(x).$$ 
+                </p>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#saantoja2">
                     Sulje kappale
