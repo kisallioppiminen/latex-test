@@ -479,6 +479,35 @@ topnav: maa6
                     </div>
                 </div>
             </div>
+
+            <p>
+                Seuraavassa teoreemassa osoitetaan, että funktioiden summan derivaatta saadaan laskemalla funktioiden derivaatat yhteen.
+            </p>
+
+            <div class="theorem" id="SUMMAN DERIVAATTA">
+                <h3>TEOREEMA</h3>
+                <p>
+                    Oletetaan, että funktiot $f$ ja $g$ ovat derivoituvia. Summan $f+g$ on derivaatta on funktioiden $f$ ja $g$ derivaattojen summa:
+                    $$(f + g)'(x) = f'(x) + g'(x).$$ 
+                </p>
+                <div class="proof">
+                    <p>
+                        Perustelu: Summan $f+g$ erotusosamäärä kohdassa $a$ on
+                        $$
+                        \frac{(f(x) + g(x)) - (f(a) + g(a))}{x-a}.
+                        $$
+                        Muokataan erotusmäärää:
+                        \begin{align*}
+                        \frac{(f(x) + g(x)) - (f(a) + g(a))}{x-a} \\[2mm]
+                        &= \frac{f(x) + g(x) - f(a) - g(a)}{x-a} \\[2mm]
+                        &= \frac{f(x) - f(a) + g(x) - g(a)}{x-a} \\[2mm]
+                        &= \frac{f(x) - f(a)}{x-a} + \frac{g(x) - g(a)}{x-a}
+                        \end{align*}
+                        Havaitaan, että summan erotusosamäärä on funktioiden $f$ ja $g$ erotusosamäärien summa. Koska funktiot $f$ ja $g$ ovat derivoituvia
+
+                    </p>      
+                </div>
+            </div>
         
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#saantoja2">
