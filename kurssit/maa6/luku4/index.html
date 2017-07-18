@@ -840,12 +840,15 @@ topnav: maa6
                         Joku on onnistunut keksimään, että osoittaja voidaan kirjoittaa monimutkaisemmassa muodossa
                         \begin{multline*}
                         f(x)g(x) - f(a)g(a) \\
-                        = (f(x) - f(a))(g(x) - g(a)) + f(a)(g(x) - g(a)) \\
+                        = (f(x) - f(a))(g(x) - g(a)) \\
+                        + f(a)(g(x) - g(a)) \\
                         + (f(x) - f(a))g(a)
                         \end{multline*}
                         Kun tämä lauseke jaetaan erotuksella $x-a$, erotusosamäärä tulee muotoon
                         \begin{multline*}
-                        \frac{f(x) - f(a)}{x-a}(g(x) - g(a)) + f(a)\frac{g(x) - g(a)}{x-a} + \frac{f(x) - f(a)}{x-a} g(a)
+                        \frac{f(x) - f(a)}{x-a}(g(x) - g(a)) \\
+                        + f(a)\frac{g(x) - g(a)}{x-a} \\
+                        + \frac{f(x) - f(a)}{x-a} g(a)
                         \end{multline*}
                         Määritetään jokaisen yhteenlaskettavan raja-arvo kohdassa $a$:
                         $$
