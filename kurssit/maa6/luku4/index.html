@@ -1164,9 +1164,10 @@ topnav: maa6
                 <div class="proof">
                     <p>
                         Perustelu: Oletetaan, että $f$ on derivoituva funktio. Tapaus, jossa kokonaisluku $n$ on positiivinen, on käsitelty teoreemassa 6. Jos $n = 0$, funktio $(f(x))^n$ on vakiofunktio, ja sen derivaatta on nolla. Toisaalta tässä tapauksessa myös 
-                        $$
-                        n(f(x))^{n-1}f'(x) = 0 \cdot (f(x))^{-1}f'(x) = 0,
-                        $$
+                        \begin{align*}
+                        n(f(x))^{n-1}f'(x) &= 0 \cdot (f(x))^{-1}f'(x) \\
+                        &= 0,
+                        \end{align*}
                         joten derivointisääntö antaa oikean tuloksen myös tässä tapauksessa. 
                         <br>
                         Tutkitaan vielä tapaus, jossa kokonaisluku $n$ on negatiivinen. Merkitään sen vastalukua kirjaimella $k$, jolloin $k$ on positiivinen. (Siis $k = -n$.) Sovelletaan potenssien laskusääntöjä (<a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1</a>) sekä teoreemoja 6 ja 7:
@@ -1175,8 +1176,8 @@ topnav: maa6
                         &= \mathop{\mathrm{D}} \frac{1}{(f(x))^{k}} \\[2mm]
                         &= \frac{0 - k(f(x))^{k-1}f'(x)}{(f(x))^{2k}} \\[2mm]
                         &=  -\frac{k(f(x))^{k-1}f'(x)}{(f(x))^{2k}} \\[2mm]
-                        &= -k(f(x))^{k-1-2k}f'(x) \\[1mm]
-                        &= -k(f(x))^{-k-1}f'(x) \\[1mm]
+                        &= -k(f(x))^{k-1-2k}f'(x) \\[2mm]
+                        &= -k(f(x))^{-k-1}f'(x) \\[2mm]
                         &= n(f(x))^{n-1}f'(x)
                         \end{align*}
                     </p>      
