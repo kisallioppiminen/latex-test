@@ -827,9 +827,9 @@ topnav: maa6
                 <h3>TEOREEMA</h3>
                 <p>
                     Oletetaan, että funktio $f$ ja $g$ ovat derivoituvia. Tulofunktion $fg$ derivaattafunktio on 
-                    $$(fg)'(x) = f(x)g'(x) + f'(x)g(x)$$
+                    $$(fg)'(x) = f'(x)g(x) + f(x)g'(x)$$
                     eli
-                    $$\mathop{\mathrm{D}} f(x)g(x) = f(x)g'(x) + f'(x)g(x).$$ 
+                    $$\mathop{\mathrm{D}} f(x)g(x) = f'(x)g(x) + f(x)g'(x).$$ 
                 </p>
                 <div class="proof">
                     <p>
@@ -839,7 +839,7 @@ topnav: maa6
                         $$
                         Joku on keksinyt, että osoittajassa kannattaa lisätä ja vähentää sama termi $\textcolor{red}{f(a)g(x)}$:
                         \begin{align*}
-                        &\phantom{=} f(x)g(x) - f(a)g(a) \\
+                        &\phantom{= {} } f(x)g(x) - f(a)g(a) \\
                         &= f(x)g(x) \textcolor{red}{ - f(a)g(x) + f(a)g(x)} - f(a)g(a) \\
                         &= (f(x)-f(a))g(x) + f(a)(g(x)-g(a))
                         \end{align*}
@@ -850,7 +850,7 @@ topnav: maa6
                         \end{multline*}
                         Koska funktiot $f$ ja $g$ ovat derivoituvia, niiden erotusosamäärillä on raja-arvot. Lisäksi funktio $g$ on jatkuva, joten $g(x) \rightarrow g(a)$, kun $x \rightarrow a$. 
                         Siis
-                        $$(fg)'(a) = f(a)g'(a) + f'(a)g(a).$$
+                        $$(fg)'(a) = f'(a)g(a) + f(a)g'(a).$$
                     </p>      
                 </div>
             </div>
