@@ -894,8 +894,8 @@ topnav: maa6
             </div>
 
             <p>
-                Funktioiden tulon yksi erikoistapaus on funktion potenssi. Esimerkiksi funktio $g(x) = (x^2 + 3x)^8$ voidaan tulkita funktion $f(x) = x^2 + 3x$ kahdeksanneksi potenssiksi:
-                $$g(x) = (f(x))^8.$$
+                Funktioiden tulon yksi erikoistapaus on funktion potenssi. Esimerkiksi funktio $g(x) = (x^2 + 9x)^4$ voidaan tulkita funktion $f(x) = x^2 + 9x$ neljänneksi potenssiksi:
+                $$g(x) = (f(x))^4.$$
                 Funktioiden tulon derivointisääntöä voidaan soveltaa funktion $f$ toiseen potenssiin:
                 \begin{align*}
                 \mathop{\mathrm{D}} (f(x))^2 &= \mathop{\mathrm{D}}f(x)f(x) \\
@@ -911,6 +911,65 @@ topnav: maa6
                 &= 3(f(x))^2f'(x)
                 \end{align*}
             </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t415-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t415">
+                                Funktion potenssin derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t415" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Määritä funktion $f$ neljännen potenssin derivaatta $\mathop{\mathrm{D}} (f(x))^4$. 
+                                <br>
+                                Vinkki: Tulkitse funktion $f$ neljäs potenssi kahden funktion tulona. Hyödynnä teoreemaa 5 ja edellä johdettuja derivaattoja.
+                            </li>
+                            <li>
+                                Määritä funktion $g(x) = (x^2 + 9x)^4$ derivaatta a-kohdan tuloksen avulla.
+                            </li>
+                        </ol>
+                        <p>
+                            
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t415_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t415_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $\mathop{\mathrm{D}} (f(x))^4 = 4(f(x))^3f'(x)$.
+                                </li>
+                                <li>
+                                    $g'(x) = 4(x^2 + 9x)^3(2x + 9)$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                On mahdollista osoittaa, että vastaava derivointisääntö pätee kaikilla positiivisilla kokonaislukueksponenteilla:
+            </p>
+
+            <div class="theorem" id="FUNKTIOIDEN POTENSSIN DERIVAATTA">
+                <h3>TEOREEMA</h3>
+                <p>
+                    Oletetaan, että funktio $f$ on derivoituva. Olkoon $n$ on positiivinen kokonaisluku. Tällöin
+                    $$\mathop{\mathrm{D}} (f(x))^n = n(f(x))^{n-1}f'(x).$$ 
+                </p>
+                <div class="proof">
+                    <p>
+                        Teoreema voidaan perustella esimerkiksi matemaattisella induktiolla, johon tutustutaan kurssissa MAA11.
+                    </p>      
+                </div>
+            </div>
         
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#saantoja3">
