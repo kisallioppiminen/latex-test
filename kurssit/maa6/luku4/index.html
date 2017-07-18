@@ -820,8 +820,47 @@ topnav: maa6
                     <li> Funktioiden tulon derivaatta voidaan määrittää, kunhan funktion lauseke sievennetään ensin yhdeksi polynomiksi. </li>
                     <li> Funktioiden tulon derivaatta <b>ei ole</b> sama kuin derivaattojen tulo.</li>
                 </ul>
-
+                Seuraavassa teoreemassa johdetaan lauseke tulofunktion derivaatalle. 
             </p>
+
+            <div class="theorem" id="FUNKTIOIDEN TULON DERIVAATTA">
+                <h3>TEOREEMA</h3>
+                <p>
+                    Oletetaan, että funktio $f$ ja $g$ ovat derivoituvia. Tulofunktion $fg$ derivaattafunktio on 
+                    $$(fg)'(x) = f(x)g'(x) + f'(x)g(x)$$
+                    eli
+                    $$\mathop{\mathrm{D}} f(x)g(x) = f(x)g'(x) + f'(x)g(x).$$ 
+                </p>
+                <div class="proof">
+                    <p>
+                        Perustelu: Tulon $fg$ erotusosamäärä kohdassa $a$ on
+                        $$
+                        \frac{f(x)g(x) - f(a)g(a)}{x-a}.
+                        $$
+                        Joku on onnistunut keksimään, että osoittaja voidaan kirjoittaa monimutkaisemmassa muodossa
+                        \begin{multline*}
+                        f(x)g(x) - f(a)g(a) \\
+                        = (f(x) - f(a))(g(x) - g(a)) + f(a)(g(x) - g(a)) \\
+                        + (f(x) - f(a))g(a)
+                        \end{multline*}
+                        Kun tämä lauseke jaetaan erotuksella $x-a$, erotusosamäärä tulee muotoon
+                        \begin{multline*}
+                        \frac{f(x) - f(a)}{x-a}(g(x) - g(a)) + f(a)\frac{g(x) - g(a)}{x-a} + \frac{f(x) - f(a)}{x-a} g(a)
+                        \end{multline*}
+                        Määritetään jokaisen yhteenlaskettavan raja-arvo kohdassa $a$:
+                        $$
+                        \frac{f(x) - f(a)}{x-a}(g(x) - g(a)) \xrightarrow[x\rightarrow a]{} f'(a)\cdot (g(a)-g(a)) = 0
+                        $$
+                        Summan erotusosamäärä on siis funktioiden $f$ ja $g$ erotusosamäärien summa. Koska funktiot $f$ ja $g$ ovat derivoituvia, näillä erotusosamäärillä on raja-arvot:
+                        \begin{multline*}
+                        \frac{f(x) - f(a)}{x-a} + \frac{g(x) - g(a)}{x-a} \\
+                        \xrightarrow[x \rightarrow a]{} f'(a) + g'(a) 
+                        \end{multline*}
+                        Näin on osoitettu, että 
+                        $$(f+g)'(a) = f'(a) + g'(a).$$
+                    </p>      
+                </div>
+            </div>
         
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#saantoja3">
