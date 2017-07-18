@@ -840,18 +840,16 @@ topnav: maa6
                         Joku on keksinyt, että osoittajaan kannattaa lisätä ja vähentää sama termi $\textcolor{red}{f(a)g(x)}$:
                         \begin{multline*}
                         f(x)g(x) - f(a)g(a) \\
-                        = f(x)g(x) \textcolor{red}{ - f(a)g(x) + f(a)g(x)} - f(a)g(a) \\
+                        = f(x)g(x) \textcolor{red}{ - f(a)g(x)} \\
+                        \textcolor{red}{+ f(a)g(x)} - f(a)g(a) \\
                         = (f(x)-f(a))g(x) + f(a)(g(x)-g(a))
                         \end{multline*}
                         Kun tämä lauseke jaetaan erotuksella $x-a$, erotusosamäärä tulee muotoon
                         \begin{multline*}
-                        \frac{f(x) - f(a)}{x-a}g(x) \\
-                        + f(a)\frac{g(x) - g(a)}{x-a} 
+                        \frac{f(x) - f(a)}{x-a}g(x) + f(a)\frac{g(x) - g(a)}{x-a} \\
+                        \xrightarrow[x \rightarrow a]{} f'(a)g(a) + f(a)g'(a)
                         \end{multline*}
-                        Koska funktiot $f$ ja $g$ ovat derivoituvia, niiden erotusosamäärillä on raja-arvot. Lisäksi funktio $g$ on jatkuva, joten $g(x) \rightarrow g(a)$, kun $x \rightarrow a$. Näin erotusosamäärälle saadaan raja-arvo, kun $x \rightarrow a$:
-                        \begin{multline*}
-                        f'(a)g(a) + f(a)g'(a) 
-                        \end{multline*}
+                        Koska funktiot $f$ ja $g$ ovat derivoituvia, niiden erotusosamäärillä on raja-arvot. Lisäksi funktio $g$ on jatkuva, joten $g(x) \rightarrow g(a)$, kun $x \rightarrow a$. 
                         Näin on osoitettu, että 
                         $$(fg)'(a) = f(a)g'(a) + f'(a)g(a).$$
                     </p>      
