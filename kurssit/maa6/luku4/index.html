@@ -850,23 +850,9 @@ topnav: maa6
                         + f(a)\frac{g(x) - g(a)}{x-a} \\
                         + \frac{f(x) - f(a)}{x-a} g(a)
                         \end{multline*}
-                        Määritetään jokaisen yhteenlaskettavan raja-arvo kohdassa $a$:
+                        Koska funktiot $f$ ja $g$ ovat derivoituvia, niiden erotusosamäärillä on raja-arvot. Lisäksi funktio $g$ on jatkuva, joten $g(x) \rightarrow g(a)$, kun $x \rightarrow a$. Näin erotusosamäärälle saadaan raja-arvo, kun $x \rightarrow a$:
                         \begin{multline*}
-                        \frac{f(x) - f(a)}{x-a}(g(x) - g(a)) \\
-                        \xrightarrow[x\rightarrow a]{} f'(a)\cdot (g(a)-g(a)) = 0
-                        \end{multline*}
-                        \begin{multline*}
-                        f(a)\frac{g(x) - g(a)}{x-a} \\
-                        \xrightarrow[x\rightarrow a]{} f(a)g'(a) 
-                        \end{multline*}
-                        \begin{multline*}
-                        \frac{f(x) - f(a)}{x-a} g(a) \\
-                        \xrightarrow[x\rightarrow a]{} f'(a)g(a)
-                        \end{multline*}
-                        Alkuperäisen erotusosamäärän raja-arvoksi saadaan näin
-                        \begin{multline*}
-                        \frac{f(x)g(x) - f(a)g(a)}{x-a} \\
-                        \xrightarrow[x \rightarrow a]{} f(a)g'(a) + f'(a)g(a)
+                        f'(a)\cdot (g(a)-g(a)) + f(a)g'(a) + f'(a)g(a) = f'(a) \cdot 0 + f(a)g'(a) + f'(a)g(a) = 0 + f(a)g'(a) + f'(a)g(a) = f(a)g'(a) + f'(a)g(a)
                         \end{multline*}
                         Näin on osoitettu, että 
                         $$(fg)'(a) = f(a)g'(a) + f'(a)g(a).$$
