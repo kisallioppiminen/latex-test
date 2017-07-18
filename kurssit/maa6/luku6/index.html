@@ -1,0 +1,619 @@
+---
+title: MAA6 - Derivaatta
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: maa6
+---
+
+<input type="hidden" id="chapterNumber" value="6"/>
+<input type="hidden" id="theoremStart" value="1"/>
+
+<article>
+    <section>
+        <header>
+            <h1>Derivointisääntöjä II</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun6-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="luvun6-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p> 
+                    Tämän luvun tavoitteena on, että ... Osaat
+                <ul>
+                    <li> </li>
+                    
+                </ul> 
+                </p>
+            </div>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun6-tavoitteet">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+        <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#saantoja3">
+                    Tulo, potenssi ja osamäärä
+                </a>
+            </h1>
+        </header>
+        <div id="saantoja3" class="collapse">
+
+            <p>
+                Tässä kappaleessa johdetaan derivointisäännöt funktioiden tulolle ja osamäärälle sekä funktion potenssille. Tulon derivointisääntöä tarvitaan toden teolla vasta seuraavassa kurssissa MAA7, mutta sen avulla saadaan johdettua muut edellä mainitut derivointisäännöt. Funktioiden osamäärän derivointisäännön avulla saadaan määritettyä muun muassa rationaalifunktioiden derivaatat.
+            </p>
+
+            <p>
+                Aloitetaan sopimalla, mitä funktioiden tulolla tarkoitetaan:
+            </p>
+
+            <div class="definition">
+                <h3>MÄÄRITELMÄ: FUNKTIOIDEN TULO</h3>
+                <p>
+                    Funktioiden $f$ ja $g$ <em>tulo</em> tarkoittaa funktiota $fg$, jonka arvo kohdassa $x$ on funktioiden $f$ ja $g$ arvojen tulo:
+                    $$(fg)(x) = f(x)g(x).$$
+                </p>
+            </div>
+
+            <p>
+                Esimerkiksi funktio 
+                $$h(x) = x^2(0{,}5x-1)$$ 
+                voidaan tulkita funktioiden $f(x) = x^2$ ja $g(x) = 0{,}5x-1$ tuloksi:
+                $$h(x) = f(x)g(x).$$
+                <img src="/kurssit/maa6/kuvat/kuva49.png" max-width: 100%; width: auto; height: auto;/>
+            </p>
+
+            <p>
+                Jos funktioiden tulon lauseke voidaan sieventää yhdeksi polynomiksi, saadaan derivaatta määritettyä aiemmin opitulla tavalla. Tätä harjoitellaan seuraavassa tehtävässä.   
+            </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t413-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t413">
+                                Funktioiden tulon derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t413" class="collapse">
+                        <p>
+                            Tutkitaan funktioiden $f(x) = x^3-5$ ja $g(x) = 4x^2+7$ tulon derivaattaa. 
+                        </p>
+                        <ol class="a">
+                            <li> Muodosta ja sievennä tulofunktion $(fg)(x)$ lauseke. </li>
+                            <li> Määritä derivaattafunktio $(fg)'(x)$.  </li>
+                            <li> Määritä derivaatafunktiot $f'(x)$ ja $g'(x)$.</li>
+                            <li> Laske derivaattojen $f'(x)$ ja $g'(x)$ tulo.</li>
+                            <li> Vertaa tulon derivaattaa $(fg)'(x)$ ja derivaattojen tuloa $f'(x)g'(x)$. Mitä huomaat?</li>
+                        </ol>
+                        <p>
+                            Vinkki: kertaa tarvittaessa teoreemat 3 ja 4.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t413_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t413_v" class="collapse">
+                        <ol class="a">
+                            <li> $(fg)(x) = 4x^5 + 7x^3 - 20x^2 - 35$ </li>
+                            <li> $(fg)'(x) = 20x^4 + 21x^2 - 40x$ </li>
+                            <li> $f'(x) = 3x^2$ ja $g(x) = 8x$ </li>
+                            <li> $f'(x)g'(x) = 24x^3$ </li>
+                            <li> Tulon derivaatta ei ole derivaattojen tulo. (Tulon derivaatta kohdassa $x = 1$ on $(fg)'(1) = 1$ mutta derivaattojen tulo on $f'(1)g'(1) = 24$.)</li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Edellinen tehtävä osoittaa, että funktioiden tulon derivaatta <b>ei ole</b> sama kuin derivaattojen tulo. Yleispätevä sääntö on monimutkaisempi ja se todistetaan seuraavassa teoreemassa. Lue teoreema ja sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa. Jos sievennyksen yksityiskohdat tuntuvat kovin hankalilta, keskity aluksi tunnistamaan perustelusta kolme vaihetta ja vertaa niitä teoreeman 3 perusteluun.
+            </p>
+
+            <div class="theorem" id="FUNKTIOIDEN TULON DERIVAATTA">
+                <h3>TEOREEMA</h3>
+                <p>
+                    Oletetaan, että funktio $f$ ja $g$ ovat derivoituvia. Tulofunktion $fg$ derivaattafunktio on 
+                    $$(fg)'(x) = f'(x)g(x) + f(x)g'(x)$$
+                    eli
+                    $$\mathop{\mathrm{D}} f(x)g(x) = f'(x)g(x) + f(x)g'(x).$$ 
+                </p>
+                <div class="proof">
+                    <p>
+                        Perustelu: Tulon $fg$ erotusosamäärä kohdassa $a$ on
+                        $$
+                        \frac{f(x)g(x) - f(a)g(a)}{x-a}.
+                        $$
+                        Joku on keksinyt, että osoittajassa kannattaa lisätä ja vähentää sama termi $\textcolor{red}{f(a)g(x)}$:
+                        \begin{align*}
+                        &\phantom{ {} = {} } f(x)g(x) - f(a)g(a) \\[2mm]
+                        &= f(x)g(x) \textcolor{red}{ - f(a)g(x)} \\
+                        &\phantom{ {} = f(x)g(x) {} } \textcolor{red}{ + f(a)g(x)} - f(a)g(a) \\[2mm]
+                        &= (f(x)-f(a))g(x) + f(a)(g(x)-g(a))
+                        \end{align*}
+                        Erotusosamäärä saadaan näin muotoon
+                        \begin{multline*}
+                        \frac{f(x) - f(a)}{x-a}g(x) + f(a)\frac{g(x) - g(a)}{x-a}
+                        \end{multline*}
+                        Koska funktiot $f$ ja $g$ ovat derivoituvia, niiden erotusosamäärillä on raja-arvot. Lisäksi funktio $g$ on jatkuva, joten $g(x) \rightarrow g(a)$, kun $x \rightarrow a$. 
+                        Siis
+                        \begin{multline*}
+                        \frac{f(x) - f(a)}{x-a}g(x) + f(a)\frac{g(x) - g(a)}{x-a} \\[2mm]
+                        \xrightarrow[x \rightarrow a]{} f'(a)g(a) + f(a)g'(a)
+                        \end{multline*}
+                        Näin on osoitettu, että
+                        $$(fg)'(a) = f'(a)g(a) + f(a)g'(a).$$
+                    </p>      
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t414-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t414">
+                                Funktioiden tulon derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t414" class="collapse">
+                        <p>
+                            Tehtävänä on määrittää funktion $h(x) = (x^2-4x)(x^3+6x)$ arvojen kasvunopeus kohdassa $x = 3$.  
+                        </p>
+                        <ol class="a">
+                            <li> Määritä derivaattafunktio $h'(x)$ teoreeman 5 avulla.  </li>
+                            <li> Mikä on funktion $h$ arvojen kasvunopeus kohdassa $x = 3$? </li>
+                            <li> Kasvavatko vai pienenevätkö funktion $h$ arvot kohdassa $x = 3$? </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t414_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t414_v" class="collapse">
+                        <ol class="a">
+                            <li> $h'(x) = (2x-4)(x^3 + 6x) + (x^2-4x)(3x^2+6)$ </li>
+                            <li> $h'(3) = -9$ </li>
+                            <li> Funktion $h$ arvot pienenevät kohdassa $x = 3$, koska kasvunopeus on negatiivinen. </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Funktioiden tulon yksi erikoistapaus on funktion potenssi. Esimerkiksi funktio $g(x) = (x^2 + 9x)^4$ voidaan tulkita funktion $f(x) = x^2 + 9x$ neljänneksi potenssiksi:
+                $$g(x) = (f(x))^4.$$
+                Funktioiden tulon derivointisääntöä voidaan soveltaa funktion $f$ toiseen potenssiin:
+                \begin{align*}
+                \mathop{\mathrm{D}} (f(x))^2 &= \mathop{\mathrm{D}}f(x)f(x) \\[1mm]
+                &= f'(x)f(x) + f(x)f'(x) \\[1mm]
+                &= 2f(x)f'(x)
+                \end{align*}
+                Tämän tiedon ja tulon derivointisäännön avulla saadaan määritettyä funktion $f$ kolmannen potenssin derivaatta:
+                \begin{align*}
+                \mathop{\mathrm{D}} (f(x))^3 &= \mathop{\mathrm{D}}f(x)(f(x))^2 \\[1mm]
+                &= f'(x)(f(x))^2 + f(x)\mathop{\mathrm{D}}(f(x))^2 \\[1mm]
+                &= f'(x)(f(x))^2 + f(x)\cdot 2f(x)f'(x) \\[1mm]
+                &= (f(x))^2f'(x) + 2(f(x))^2f'(x) \\[1mm]
+                &= 3(f(x))^2f'(x)
+                \end{align*}
+            </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t415-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t415">
+                                Funktion potenssin derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t415" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Määritä funktion $f$ neljännen potenssin derivaatta $\mathop{\mathrm{D}} (f(x))^4$ samaan tapaan kuin edellä. 
+                                <br>
+                                Vinkki: Tulkitse funktion $f$ neljäs potenssi kahden funktion tulona. Hyödynnä teoreemaa 5 ja edellä johdettuja derivaattoja.
+                            </li>
+                            <li>
+                                Määritä funktion $g(x) = (x^2 + 9x)^4$ derivaatta a-kohdan tuloksen avulla.
+                            </li>
+                        </ol>
+                        <p>
+                            
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t415_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t415_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $\mathop{\mathrm{D}} (f(x))^4 = 4(f(x))^3f'(x)$.
+                                </li>
+                                <li>
+                                    $g'(x) = 4(x^2 + 9x)^3(2x + 9)$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                On mahdollista osoittaa, että vastaava funktion potenssin derivointisääntö pätee kaikilla positiivisilla kokonaislukueksponenteilla:
+            </p>
+
+            <div class="theorem" id="FUNKTION POTENSSIN DERIVAATTA">
+                <h3>TEOREEMA</h3>
+                <p>
+                    Oletetaan, että funktio $f$ on derivoituva. Olkoon $n$ on positiivinen kokonaisluku. Tällöin
+                    $$\mathop{\mathrm{D}} (f(x))^n = n(f(x))^{n-1}f'(x).$$ 
+                </p>
+                <div class="proof">
+                    <p>
+                        Teoreema voidaan perustella esimerkiksi matemaattisella induktiolla, johon tutustutaan kurssissa MAA11.
+                    </p>      
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t416-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t416">
+                                Funktion potenssin derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t416" class="collapse">
+                        <p>
+                            Tutkitaan funktiota $f(x) = (2x^2 - 8x)^4$.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Määritä derivaattafunktio $f'(x)$. 
+                            </li>
+                            <li>
+                                Määritä funktion kuvaajalle kohtaan $x = 1$ piirretyn tangentin kulmakerroin. 
+                            </li>
+                            <li>
+                                Mikä on funktion kuvaajalle kohtaan $x = 1$ piirretyn tangentin yhtälö?
+                            </li>
+                            <li>
+                                Missä kohdissa funktion kuvaajalle piirretty tangetti on vaakasuora?
+                            </li>
+                        </ol>
+                        <p>
+                            
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t416_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t416_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                                $f'(x) = 4(2x^2 - 8x)^3(4x-8)$. 
+                            </li>
+                            <li>
+                                $f'(1) = 3456$ 
+                            </li>
+                            <li>
+                                $y = 3456x - 2160$
+                            </li>
+                            <li>
+                                Derivaattafunktion nollakohdissa $x = 0$, $x = 2$, $x = 4$.
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Siirrytään nyt tarkastelemaan funktioiden osamäärää. Aloitetaan sopimalla, mitä funktioiden osamäärällä tarkoitetaan:
+            </p>
+
+            <div class="definition">
+                <h3>MÄÄRITELMÄ: FUNKTIOIDEN OSAMÄÄRÄ</h3>
+                <p>
+                    Funktioiden $f$ ja $g$ <em>osamäärä</em> tarkoittaa funktiota,
+                    jonka arvo kohdassa $x$ on funktioiden $f$ ja $g$ arvojen osamäärä:
+                    $$\left(\frac{f}{g}\right)(x) = \frac{f(x)}{g(x)}.$$
+                </p>
+            </div>
+        
+            <p>
+                Esimerkiksi rationaalifunktio 
+                $$h(x) = \frac{5x-2}{x^2+5}$$
+                voidaan tulkita funktioiden $f(x) = 5x-2$ ja $g(x) = x^2+5$ osamääräksi:
+                $$h(x) = \frac{f(x)}{g(x)}.$$ 
+                Funktioiden osamäärän derivointisääntö saadaan johdettua tulon derivointisäännön avulla:
+            </p>
+
+            <div class="theorem" id="FUNKTIOIDEN OSAMÄÄRÄN DERIVAATTA">
+                <h3>TEOREEMA</h3>
+                <p>
+                    Oletetaan, että funktiot $f$ ja $g$ ovat derivoituvia. Niiden osamäärän derivaattafunktio on
+                    $$\mathop{\mathrm{D}} \frac{f(x)}{g(x)} = \frac{f'(x)g(x)- f(x)g'(x)}{(g(x))^2}$$ 
+                </p>
+                <div class="proof">
+                    <p>
+                        Perustelu: Merkitään
+                        $$h(x) = \frac{f(x)}{g(x)},$$
+                        jolloin $f(x) = h(x)g(x)$. Funktion $f$ derivaatta saadaan tulon derivointisäännöllä:
+                        $$
+                        f'(x) = h'(x)g(x) + h(x)g'(x).
+                        $$
+                        Tästä yhtälöstä voidaan ratkaista funktion $h$ derivaatta:
+                        \begin{align*}
+                        h'(x)g(x) &= f'(x) - h(x)g'(x) \\[2mm]
+                        h'(x) &= \frac{1}{g(x)}\left(f'(x) - h(x)g'(x) \right)
+                        \end{align*}
+                        Kun funktion $h$ paikalle sijoitetaan funktioiden $f$ ja $g$ osamäärä, saadaan lauseke sievennettyä:
+                        \begin{align*}
+                        h'(x) &= \frac{1}{g(x)}\left(f'(x) - \frac{f(x)}{g(x)}g'(x) \right) \\[2mm]
+                        &= \frac{f'(x)}{g(x)} - \frac{f(x)g'(x)}{(g(x))^2} \\[2mm]
+                        &= \frac{f'(x)g(x)}{(g(x))^2} - \frac{f(x)g'(x)}{(g(x))^2} \\[2mm]
+                        &= \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2}
+                        \end{align*}
+                    </p>      
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t417-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t417">
+                                Funktioiden osamäärän derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t417" class="collapse">
+                        <p>
+                            Tutkitaan funktiota $h(x) = \dfrac{5x^2+1}{x}$.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Missä kohdassa funktio $h$ ei ole määritelty?
+                            </li>
+                            <li>
+                                Määritä derivaattafunktio $h'(x)$. Missä kohdassa derivaattafunktio ei ole määritelty?
+                            </li>
+                            <li>
+                                Missä kohdissa funktion $h$ kuvaajalle piirretty tangetti on yhdensuuntainen suoran $y = 4x - 1$ kanssa? 
+                            </li>
+                            <li>
+                                Mitkä ovat b-kohdan tangenttien yhtälöt?
+                            </li>
+                        </ol>
+                        <p>
+                            
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t417_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t417_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                                Funktio $h$ ei ole määritelty kohdassa $x = 0$. 
+                            </li>
+                            <li>
+                                Derivaattafunktio on $h'(x) = \dfrac{5x^2-1}{x^2}$. Se ole määritelty kohdassa $x = 0$.
+                            </li>
+                            <li>
+                                Kohdissa $x = -1$ ja $x = 1$. 
+                            </li>
+                            <li>
+                                $y = 4x - 2$ ja $y = 4x + 2$.
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Osamäärän derivointisäännön avulla saadaan yleistettyä potenssifunktion derivointisääntö sekä funktion potenssin derivointisääntö myös negatiivisten eksponenttien tapaukseen:
+            </p>
+
+            <div class="theorem" id="POTENSSIEN DERIVOINTI">
+                <h3>TEOREEMA</h3>
+                <p>
+                    Olkoon $n$ mikä tahansa kokonaisluku. Jos $f$ on derivoituva funktio, niin
+                    $$\mathop{\mathrm{D}} (f(x))^n = n(f(x))^{n-1}f'(x).$$
+                    Erityisesti potenssifunktion $g(x) = x^n$ derivaattafunktio on 
+                    $$g'(x) = nx^{n-1}.$$
+                </p>
+                <div class="proof">
+                    <p>
+                        Perustelu: Oletetaan, että $f$ on derivoituva funktio. Tapaus, jossa kokonaisluku $n$ on positiivinen, on käsitelty teoreemassa 6. Jos $n = 0$, funktio $(f(x))^n$ on vakiofunktio, ja sen derivaatta on nolla. Toisaalta tässä tapauksessa myös 
+                        \begin{align*}
+                        n(f(x))^{n-1}f'(x) &= 0 \cdot (f(x))^{-1}f'(x) \\
+                        &= 0,
+                        \end{align*}
+                        joten derivointisääntö antaa oikean tuloksen. 
+                        <br>
+                        Tutkitaan vielä tapaus, jossa kokonaisluku $n$ on negatiivinen. Merkitään sen vastalukua kirjaimella $k$, jolloin $k$ on positiivinen. (Siis $k = -n$ eli $n = -k$.) Sovelletaan potenssien laskusääntöjä kurssilta <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1</a> sekä teoreemoja 6 ja 7:
+                        \begin{align*}
+                        \mathop{\mathrm{D}} (f(x))^n &= \mathop{\mathrm{D}} \frac{1}{(f(x))^{-n}} \\[2mm]
+                        &= \mathop{\mathrm{D}} \frac{1}{(f(x))^{k}} \\[2mm]
+                        &= \frac{0 - k(f(x))^{k-1}f'(x)}{(f(x))^{2k}} \\[2mm]
+                        &=  -\frac{k(f(x))^{k-1}f'(x)}{(f(x))^{2k}} \\[2mm]
+                        &= -k(f(x))^{k-1-2k}f'(x) \\[2mm]
+                        &= -k(f(x))^{-k-1}f'(x) \\[2mm]
+                        &= n(f(x))^{n-1}f'(x)
+                        \end{align*}
+                        Huomaa, että teoreemaa 6 voidaan käyttää yllä olevassa päättelyssä, koska $k$ on positiivinen. 
+                    </p>      
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#saantoja3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section> 
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#aari2">
+                    Funktion suurin ja pienin arvo
+                </a>
+            </h1>
+        </header>
+        <div id="aari2" class="collapse">
+
+            
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#aari2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku5-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku5-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="s2t101-ex">
+                <header>
+                    <h1>
+                        <a data-target="#s2t101">
+                            Suoran yhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="s2t101">
+                    <p>
+                        Määritä yhtälö suoralle, joka kulkee seuraavien pisteiden kautta:
+                    </p>
+                    <ol class="a">
+                        <li> $(-1,4)\ $ ja $\ (5,-1)$</li>
+                        <li> $\left(-\frac{5}{3}, \frac{1}{2}\right)\ $ ja $\ \left(\frac{1}{3}, \frac{5}{6}\right)$.</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#s2t101_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="s2t101_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $y = -\frac{5}{6}x + \frac{19}{6}$ </li>
+                            <li> $y = \frac{1}{6}x + \frac{7}{9}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#luku5-tehtavasarja2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku5-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku5-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="s2t112-ex">
+                <header>
+                    <h1>
+                        <a data-target="#s2t112">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="s2t112">
+                    <p>
+                        Määritä vakio $a$ siten, että suorat $\ ax + 1 = 0$, $\ x - 2y = 0\ $ ja $\ x + y + 3 = 0\ $ kulkevat saman pisteen kautta.                 
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#s2t112_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="s2t112_v" class="collapse">
+                        <p>
+                            $a = \frac{1}{2}$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#luku5-tehtavasarja3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#L5itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="L4itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+            </p>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#L5itsearviointi">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+</article>
