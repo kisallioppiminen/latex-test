@@ -898,8 +898,17 @@ topnav: maa6
                 $$g(x) = (f(x))^8.$$
                 Funktioiden tulon derivointisääntöä voidaan soveltaa funktion $f$ toiseen potenssiin:
                 \begin{align*}
-                \mathop{\mathrm{D}}f(x)f(x) &= f'(x)f(x) + f(x)f'(x) \\
+                \mathop{\mathrm{D}} (f(x))^2 &= \mathop{\mathrm{D}}f(x)f(x) \\
+                &= f'(x)f(x) + f(x)f'(x) \\
                 &= 2f(x)f'(x)
+                \end{align*}
+                Tämän tiedon avulla saadaan määritettyä funktion $f$ kolmannen potenssin derivaatta:
+                \begin{align*}
+                \mathop{\mathrm{D}} (f(x))^3 &= \mathop{\mathrm{D}}f(x)(f(x))^2 \\
+                &= f'(x)(f(x))^2 + f(x)\mathop{\mathrm{D}}(f(x))^2 \\
+                &= f'(x)(f(x))^2 + f(x)\cdot 2f(x)f'(x) \\
+                &= (f(x))^2f'(x) + 2(f(x))^2f'(x) \\
+                &= 3(f(x))^2f'(x)
                 \end{align*}
             </p>
         
