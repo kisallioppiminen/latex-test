@@ -1109,7 +1109,10 @@ topnav: maa6
                         </p>
                         <ol class="a">
                             <li>
-                                Määritä derivaattafunktio $h'(x)$. 
+                                Missä kohdassa funktio $h$ ei ole määritelty?
+                            </li>
+                            <li>
+                                Määritä derivaattafunktio $h'(x)$. Missä kohdassa derivaattafunktio ei ole määritelty?
                             </li>
                             <li>
                                 Missä kohdissa funktion $h$ kuvaajalle piirretty tangetti on yhdensuuntainen suoran $y = 4x - 1$ kanssa? 
@@ -1129,7 +1132,10 @@ topnav: maa6
                         <div id="t417_v" class="collapse">
                             <ol class="a">
                             <li>
-                                $h'(x) = \dfrac{5x^2-1}{x^2}$. 
+                                Funktio $h$ ei ole määritelty kohdassa $x = 0$. 
+                            </li>
+                            <li>
+                                Derivaattafunktio on $h'(x) = \dfrac{5x^2-1}{x^2}$. Se ole määritelty kohdassa $x = 0$.
                             </li>
                             <li>
                                 Kohdissa $x = -1$ ja $x = 1$. 
@@ -1143,26 +1149,47 @@ topnav: maa6
                 </div>
             </div>
 
+            <p>
+                Osamäärän derivointisäännön avulla saadaan yleistettyä potenssifunktion derivointisääntö sekä funktion potenssin derivointisääntö myös negatiivisten eksponenttien tapaukseen:
+            </p>
+
+            <div class="theorem" id="POTENSSIEN DERIVOINTI">
+                <h3>TEOREEMA</h3>
+                <p>
+                    Olkoon $n$ mikä tahansa kokonaisluku. Jos $f$ on derivoituva funktio, niin
+                    $$\mathop{\mathrm{D}} (f(x))^n = n(f(x))^{n-1}f'(x).$$
+                    Erityisesti potenssifunktion $g(x) = x^n$ derivaattafunktio on 
+                    $$g'(x) = nx^{n-1}.$$
+                </p>
+                <div class="proof">
+                    <p>
+                        Perustelu: Oletetaan, että $f$ on derivoituva funktio. Tapaus, jossa kokonaisluku $n$ on positiivinen, on käsitelty teoreemassa 6. Jos $n = 0$, funktio $(f(x))^n$ on vakiofunktio, ja sen derivaatta on nolla. Toisaalta tässä tapauksessa myös 
+                        $$
+                        n(f(x))^{n-1}f'(x) = 0 \cdot (f(x))^{-1}f'(x) = 0,
+                        $$
+                        joten derivointisääntö antaa oikean tuloksen myös tässä tapauksessa. 
+                        <br>
+                        Tutkitaan vielä tapaus, jossa kokonaisluku $n$ on negatiivinen. Merkitään sen vastalukua kirjaimella $k$, jolloin $k$ on positiivinen. (Siis $k = -n$.) Sovelletaan osamäärän derivointisääntöä:
+                        \begin{align*}
+                        \mathop{\mathrm{D}} (f(x))^n &= \mathop{\mathrm{D}} \frac{1}{(f(x))^{-n}} \\[2mm]
+                        &= \mathop{\mathrm{D}} \frac{1}{(f(x))^{k}} \\[2mm]
+                        &= \frac{0 - k(f(x))^{k-1}f'(x)}{(f(x))^{2k}} \\[2mm]
+                        &=  -\frac{k(f(x))^{k-1}f'(x)}{(f(x))^{2k}} \\[2mm]
+                        &= -k(f(x))^{k-1-2k}f'(x) \\[1mm]
+                        &= -k(f(x))^{-k-1}f'(x) \\[1mm]
+                        &= n(f(x))^{n-1}f'(x)
+                        \end{align*}
+                    </p>      
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#saantoja3">
                     Sulje kappale
                 </a>
             </div>
         </div>
-    </section>
-
-    <section class="panel">
-        <header>
-            <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#saantoja4">
-                    Osamäärä ja negatiivinen potenssi
-                </a>
-            </h1>
-        </header>
-        <div id="saantoja4" class="collapse">
-
-         </div>
-    </section>   
+    </section> 
 
     <section class="panel">
         <header>
