@@ -53,11 +53,11 @@ topnav: maa6
         <div id="aari1" class="collapse">
 
             <p>
-                Monien funktioiden käyttäytymistä voidaan tutkia niiden kuvaajien avulla. Kuvaajasta saatava tieto on kuitenkin monesti likimääräistä eikä sopivan kuvaajan piirtäminen välttämättä aina onnistu. (Tietokonesovellukset kuten <a href="https://www.wolframalpha.com">Wolfram|Alpha</a> kyllä helpottavat kuvaajien piirtämistä huomattavasti.) Derivaatan avulla voidaan saada tarkka käsitys sellaistenkin funktioiden käyttäytymisestä, joiden tutkiminen pelkän kuvaajan avulla ei ole mahdollista.
+                Funktioiden käyttäytymistä voidaan tutkia niiden kuvaajien avulla. Kuvaajasta saatava tieto on kuitenkin monesti likimääräistä eikä sopivan kuvaajan piirtäminen välttämättä aina onnistu. (Tietokonesovellukset kuten <a href="https://www.wolframalpha.com">Wolfram|Alpha</a> kyllä helpottavat kuvaajien piirtämistä huomattavasti.) Derivaatan avulla voidaan saada tarkka käsitys sellaistenkin funktioiden käyttäytymisestä, joiden tutkiminen pelkän kuvaajan avulla ei ole mahdollista.
             </p>
 
             <p>
-                Tässä kappaleessa tutkitaan derivaatan avulla funktion kasvamista ja vähenemistä. Aloitetaan määrittelemällä nämä käsitteet tarkasti.
+                Tässä kappaleessa tutkitaan derivaatan avulla funktion kasvamista ja vähenemistä. Aloitetaan sopimalla, mitä tarkoitetaan, kun sanotaan funktion olevan aidosti kasvava tai aidosti vähenevä.
             </p>
 
             <div class="definition">
@@ -70,7 +70,54 @@ topnav: maa6
                     Funktio $f$ on <em>aidosti vähenevä</em> lukusuoran välillä, jos tällä välillä muuttujan arvon kasvaessa funktion arvo pienee eli ehdosta $x_1 < x_2$ seuraa aina $f(x_1) > f(x_2)$.
                     <br>
                     <img src="/kurssit/maa6/kuvat/kuva51.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Jollakin välillä <em>aidosti monotoninen</em> funktio tarkoittaa funktiota, joka on tällä välillä aidosti kasvava tai aidosti vähenevä.
                 </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="firstEx">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t501">
+                                Aidosti kasvava ja aidosti vähenevä funktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t401" class="collapse">
+                        <p>
+                            Tutki alla olevaa funktion $f$ kuvaajaa.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Onko funktio $f$ aidosti kasvava
+                                <ul>
+                                    <li> välillä $[1,3]$ </li>
+                                    <li> välillä $[-3,0]$? </li>
+                                </ul>
+                            </li>
+                            <li> 
+                                Onko funktio $f$ aidosti vähenevä 
+                                <ul>
+                                    <li> välillä $[-6,-2]$ </li>
+                                    <li> välillä $[3,5]$? </li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <img src="/kurssit/maa6/kuvat/kuva52.png" max-width: 100%; width: auto; height: auto;/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t401_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t401_v" class="collapse">
+                            <ol class="a">
+                                <li> Funktio $f$ on aidosti kasvava välillä $[1,3]$. Funktio $f$ ei ole aidosti kasvava välillä $[-3,0]$, sillä $f(-1) = f(0)$ vaikka $-1 < 0$. </li>
+                                <li> Funktio $f$ ei ole aidosti vähenevä välillä $[-6,-2]$, sillä $f(-3) < f(-2)$. Funktio $f$ on aidosti vähenevä välillä $[3,5]$.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="close-section">
