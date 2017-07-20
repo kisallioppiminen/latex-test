@@ -214,6 +214,50 @@ topnav: maa6
                 </ul>
                 </p>
             </div>
+
+            <p>
+                Tarkastellaan esimerkiksi funktiota $f(x) = 2x^2(75-x) + 50$. Sen kuvaajan piirtäminen käsin on hankalaa, koska funktio saa kohdan $x = 0$ lähellä melko suuria arvoja. Tietokoneella piirretty kuvaaja näyttää kohdan $x = 0$ ympäristössä tältä:
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuvaWA1.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Näyttää siltä, että funktio on aidosti vähenevä, kun $x \leq 0$ ja aidosti kasvava, kun $x \geq 0$. Kuvaajasta on kuitenkin näkyvissä vain melko pieni osa. Muuttuisiko tilanne, jos kuvaaja piirretään laajemmalta alueelta? Alla olevasta kuvasta näkyy, että kuvaajan muoto ei juurikaan muutu:
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuvaWA2.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Varmistetaan vielä derivaatan avulla, että johtopäätökset ovat oikeita. Funktion $f$ derivaattafunktio saadaan määritettyä, kun funktion lauseke sievennetään ensin kertomalla sulut auki:
+                \begin{align*}
+                f(x) &= 2x^2(75-x) + 50 \\
+                &= 150x^2 - 2x^3 + 50
+                \end{align*}
+                Derivaattafunktio on 
+                $$
+                f'(x) = 300x - 6x^2.
+                $$
+                Tutkitaan, missä derivaattafunktion arvot ovat positiivisia ja missä negatiivisia. Aloitetaan etsimällä derivaattafunktion nollakohdat:
+                \begin{align*}
+                f'(x) &= 0 \\
+                300x - 6x^2 &= 0 \\
+                x(300 - 6x) &= 0
+                \end{align*}
+                Tulon nollasäännön mukaan alin yhtälö toteutuu, jos ja vain jos $x = 0$ tai $300 - 6x = 0$. Ratkaistaan vielä näistä yhtälöistä jälkimmäinen:
+                \begin{align*}
+                300 - 6x &= 0 \\
+                300 &= 6x \\
+                6x &= 300 \\[2mm]
+                x = \frac{300}{6} = 50
+                \end{align*}
+                Derivaattafunktiolla on siis kaksi nollakohtaa: $x_1 = 0$ ja $x_2 = 50$. Tutkitaan derivaattafunktion merkkiä laskemalla derivaattafunktion arvo näiden nollakohtien eri puolilla, esimerkiksi kohdissa $x = -1$, $x = 1$ ja $x = 51$:
+                \begin{align*}
+                f'(-1) &= 300 \cdot (-1) - 6\cdot (-1)^2 = -306 \\
+                f'(1) &= 300 \cdot 1 - 6\cdot 1^2 = 294 \\
+                f'(51) &= 300 \cdot 51 - 6 \cdot 51^2 = -306.
+                \end{align*}
+                Kootaan tiedot merkkikaavioon:
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva55.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Derivaattafunktion merkkikaaviosta nähdään, että aiemmat funktion $f$ kuvaajan perusteella tehdyt päätelmät ovat osittain vääriä. Funktio $f$ on kyllä aidosti kasvava, kun $x \leq 0$, mutta se on aidosti kasvava myös silloin, kun $x \geq 50$, ja aidosti vähenevä välillä $[0,50]$.
+            </p>
             
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#aari1">
