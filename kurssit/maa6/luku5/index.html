@@ -216,15 +216,20 @@ topnav: maa6
             </div>
 
             <p>
-                Tarkastellaan esimerkiksi funktiota $f(x) = 2x^2(75-x) + 50$. Sen kuvaajan piirtäminen käsin on hankalaa, koska funktio saa kohdan $x = 0$ lähellä melko suuria arvoja. Tietokoneella piirretty kuvaaja näyttää kohdan $x = 0$ ympäristössä tältä:
+                Tarkastellaan funktiota 
+                $$f(x) = 2x^2(75-x) + 50.$$ 
+                Sen kuvaajan piirtäminen käsin on hankalaa, koska funktio saa kohdan $x = 0$ lähellä melko suuria arvoja. Tietokoneella piirretty kuvaaja näyttää kohdan $x = 0$ ympäristössä tältä:
                 <br>
                 <img src="/kurssit/maa6/kuvat/kuvaWA1.png" max-width: 100%; width: auto; height: auto;/>
                 <br>
-                Näyttää siltä, että funktio on aidosti vähenevä, kun $x \leq 0$ ja aidosti kasvava, kun $x \geq 0$. Kuvaajasta on kuitenkin näkyvissä vain melko pieni osa. Muuttuisiko tilanne, jos kuvaaja piirretään laajemmalta alueelta? Alla olevasta kuvasta näkyy, että kuvaajan muoto ei juurikaan muutu:
+                Näyttää siltä, että funktio on aidosti vähenevä, kun $x \leq 0$ ja aidosti kasvava, kun $x \geq 0$. Kuvaajasta on kuitenkin näkyvissä vain melko pieni osa. Muuttuisiko tilanne, jos kuvaaja piirretään laajemmalta alueelta? 
+            </p>
+            <p>
+                Alla olevasta kuvasta näkyy, että kuvaajan muoto ei juurikaan muutu, vaikka kuvaaja piirretään pidemmältä väliltä:
                 <br>
                 <img src="/kurssit/maa6/kuvat/kuvaWA2.png" max-width: 100%; width: auto; height: auto;/>
                 <br>
-                Varmistetaan vielä derivaatan avulla, että johtopäätökset ovat oikeita. Funktion $f$ derivaattafunktio saadaan määritettyä, kun funktion lauseke sievennetään ensin kertomalla sulut auki:
+                Varmistetaan vielä derivaatan ja teoreeman 7 avulla, että johtopäätökset ovat oikeita. Funktion $f$ derivaattafunktio saadaan määritettyä, kun funktion lauseke sievennetään ensin kertomalla sulut auki:
                 \begin{align*}
                 f(x) &= 2x^2(75-x) + 50 \\
                 &= 150x^2 - 2x^3 + 50
@@ -244,7 +249,7 @@ topnav: maa6
                 \begin{align*}
                 300 - 6x &= 0 \\
                 -6x &= -300 \\
-                6x &= 300 \\[2mm]
+                6x &= 300 \\[1mm]
                 x &= \frac{300}{6} = 50
                 \end{align*}
                 Derivaattafunktiolla on siis kaksi nollakohtaa: $x_1 = 0$ ja $x_2 = 50$. Tutkitaan derivaattafunktion merkkiä laskemalla derivaattafunktion arvo näiden nollakohtien eri puolilla, esimerkiksi kohdissa $x = -1$, $x = 1$ ja $x = 51$:
