@@ -566,9 +566,18 @@ topnav: maa6
             </p>
 
             <p>
-                Tarkastellaan esimerkiksi tilannetta, jossa pakkausvalmistaja suunnittelee leipomoiden käyttöön uutta pahvista rasiaa. Rasia taitellaan alla olevan kuvan mukaisesti pahvineliöstä, jonka sivun pituus on 30 cm. Mitkä pitää valita rasian mitoiksi, jotta rasian tilavuus olisi mahdollisimman suuri?
+                Tarkastellaan esimerkiksi tilannetta, jossa pakkausvalmistaja suunnittelee leipomoiden käyttöön uutta pahvista rasiaa. Rasia muotoillaan alla olevan kuvan mukaisesti pahvineliöstä, jonka sivun pituus on 30 cm. Mitkä pitää valita rasian mitoiksi, jotta rasian tilavuus olisi mahdollisimman suuri?
                 <br>
                 <img src="/kurssit/maa6/kuvat/kuva71b.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Valitaan muuttujaksi esimerkiksi rasian korkeus, ja ilmaistaan rasian muut mitat sen avulla. (Tämä ei ole ainoa vaihtoehto, yhtä hyvin muuttujaksi voi valita vaikkapa rasian leveyden. Siinä tapauksessa ratkaisun idea on sama, mutta yksityiskohdista tulee vähän erinäköisiä.)
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva73b.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Kuvioista voidaan päätellä, että rasian korkeus vaihtelee välillä $0--15$ cm. Itse asiassa näissä ääritapauksissa mitään varsinaista rasiaa ei muodostu, koska jokin rasian mitoista on nolla. Korkeuden mahdolliset arvot ovat kuitenkin tuolla välillä. Rasian tilavuus riippuu rasian korkeudesta eli tilavuus on korkeuden funktio:
+                $$
+                V(x) = (15-x)(30-2x)x.
+                $$
             </p>
 
             <p>
