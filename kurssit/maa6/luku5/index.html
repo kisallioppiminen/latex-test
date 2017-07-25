@@ -574,11 +574,75 @@ topnav: maa6
                 <br>
                 <img src="/kurssit/maa6/kuvat/kuva73b.png" max-width: 100%; width: auto; height: auto;/>
                 <br>
-                Kuvioista voidaan päätellä, että rasian korkeus vaihtelee välillä $0-15$ cm. Itse asiassa näissä ääritapauksissa mitään varsinaista rasiaa ei muodostu, koska jokin rasian mitoista on nolla. Korkeuden mahdolliset arvot ovat kuitenkin tuolla välillä. Rasian tilavuus riippuu rasian korkeudesta eli tilavuus on korkeuden funktio:
+                Kuvioista voidaan päätellä, että rasian korkeus vaihtelee välillä 0-15 cm. Itse asiassa näissä ääritapauksissa mitään varsinaista rasiaa ei muodostu, koska jokin rasian mitoista on nolla.
+            </p>
+            <p> 
+                Rasian tilavuus riippuu rasian korkeudesta eli tilavuus on korkeuden funktio:
                 $$
                 V(x) = (15-x)(30-2x)x.
                 $$
+                Ongelma on nyt saatu mallinnettua matemaattisesti: tehtävänä on etsiä funktion $V$ suurin arvo välillä $[0,15]$.
             </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t507-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t507">
+                                Funktion suurin ja pienin arvo suljetulla välillä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t507" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Määritä funktion $V(x) = (15-x)(30-2x)x$ suurin arvo välillä $[0,15]$. 
+                            </li>
+                            <li> 
+                                Mitkä pitää valita edellisen esimerkin pahvirasian mitoiksi, jotta rasian tilavuus olisi mahdollisimman suuri? 
+                            </li>
+                            <li>
+                                Mikä on rasian suurin mahdollinen tilavuus?
+                            </li>
+                        </ol>
+                        <p>
+                            
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t507_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t507_v" class="collapse">
+                            <ol class="a">
+                            <li> 
+                                Funktion $V$ suurin arvo välillä $[0,15]$ on $V(5) = 1000$.
+                            </li>
+                            <li> 
+                                Korkeus 5 cm, leveys 20 cm ja syvyys 10 cm.
+                            </li>
+                            <li>
+                                Suurin mahdollinen tilavuus on $1000 \text{ cm}^3 = 1 \text{ dm}^3 = 1 \text{ l}$.
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--             <p>
+                Muokataan funktion $V$ lauseke helpommin derivoitavaan muotoon kertomalla sulut auki:
+                \begin{align*}
+                V(x) &= (450 - 30x - 30x + 2x^2)x \\
+                &= (450 - 60x + 2x^2)x \\
+                &= 450x - 60x^2 + 2x^3
+                \end{align*}
+                Funktion $V$ derivaattafunktio on 
+                \begin{align*}
+                V'(x) &= 450 - 60 \cdot 2x + 2 \cdot 3x^2 \\
+                &= 450 - 120x + 6x^2
+                \end{align*}
+                Ratkaistaan der
+            </p> -->
 
             <p>
                 Joskus on tarpeen tutkia funktion suurimman ja pienimmän arvon olemassaoloa koko reaaliakselilla. Tällöin tarvitaan tietoa siitä, miten funktion arvot käyttäytyvät, kun muuttujan arvot kasvavat tai pienenevät rajatta. Pelkän kulkukaavion perusteella ei varmoja johtopäätöksiä ole mahdollista tehdä, vaan tarvitaan myös muunlaista tietoa funktion käyttäytymisestä. Tästä ovat osoituksena esimerkiksi funktiot $f(x) = x^3 + 3x$ ja  
