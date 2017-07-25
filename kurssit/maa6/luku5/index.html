@@ -581,7 +581,7 @@ topnav: maa6
                 $$
                 V(x) = (15-x)(30-2x)x.
                 $$
-                Ongelma on nyt saatu mallinnettua matemaattisesti: tehtävänä on etsiä funktion $V$ suurin arvo välillä $[0,15]$.
+                Ongelma on nyt saatu mallinnettua matemaattisesti: tehtävänä on etsiä funktion $V$ suurin arvo välillä $[0,15]$. Tämä tehdään seuraavassa tehtävässä.
             </p>
 
             <div class="tehtavat">
@@ -596,7 +596,9 @@ topnav: maa6
                     <div id="t507" class="collapse">
                         <ol class="a">
                             <li> 
-                                Määritä funktion $V(x) = (15-x)(30-2x)x$ suurin arvo välillä $[0,15]$. 
+                                Määritä funktion 
+                                $$V(x) = (15-x)(30-2x)x$$ 
+                                suurin arvo välillä $[0,15]$. 
                             </li>
                             <li> 
                                 Mitkä pitää valita edellisen esimerkin pahvirasian mitoiksi, jotta rasian tilavuus olisi mahdollisimman suuri? 
@@ -629,20 +631,39 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-<!--             <p>
-                Muokataan funktion $V$ lauseke helpommin derivoitavaan muotoon kertomalla sulut auki:
-                \begin{align*}
-                V(x) &= (450 - 30x - 30x + 2x^2)x \\
-                &= (450 - 60x + 2x^2)x \\
-                &= 450x - 60x^2 + 2x^3
-                \end{align*}
-                Funktion $V$ derivaattafunktio on 
-                \begin{align*}
-                V'(x) &= 450 - 60 \cdot 2x + 2 \cdot 3x^2 \\
-                &= 450 - 120x + 6x^2
-                \end{align*}
-                Ratkaistaan der
-            </p> -->
+
+            <p>
+                Ongelman mallintamista matemaattiseen muotoon voi helpottaa esimerkiksi seuraavilla keinoilla:
+                <ul>
+                    <li> Piirrä tilanteesta kuva tai laadi annetuista tiedoista taulukko. </li>
+                    <li> Kokeile laskea kysytty asia joillakin itse keksimilläsi luvuilla. Tutki, mitä laskutoimituksia käytit, ja korvaa sitten luvut kirjainsymboleilla. (Usein yksi kirjain riittää samaan tapaan kuin edellisessä esimerkikssä.)  </li>
+                </ul>
+            </p>
+
+            <p>
+                Tarkastellaan vielä seuraavaa ongelmaa: Kauppias on havainnut, että 10 sentin korotus tomaattien kilohinnassa laskee päivittäistä myyntiä noin 4 kg. Kun hinta on 2,20 €/kg, tomaatteja myydään päivässä 50 kg. Millä kilohinnalla kauppiaan voitto on suurin, jos hän joutuu maksamaan tomaateista 1,00 €/kg? 
+            </p>
+
+            <p>
+                Ongelmaan liittyy paljon tietoja: tomaattien kilohinta, myytyjen tomaattien määrä, tomaateista saatu myyntitulo ja kauppiaan saama voitto. Laaditaan näistä taulukko: 
+            </p>
+
+            <div align="center">
+                <table style="width = 75%"> 
+                    <tr>
+                        <th> Myynti (kg) </th>
+                        <th> Hinta (€/kg)</th>
+                        <th> Tulo (€) </th>
+                        <th> Voitto (€) </th>
+                    </tr>
+                    <tr>
+                        <td> 50 </td>
+                        <td> 2,20 </td>
+                        <td> $50 \cdot 2{,}20 = 110$ </td>
+                        <td> $110 - 50 = 60$ </td>
+                    </tr>
+                </table> 
+            </div>
 
             <p>
                 Joskus on tarpeen tutkia funktion suurimman ja pienimmän arvon olemassaoloa koko reaaliakselilla. Tällöin tarvitaan tietoa siitä, miten funktion arvot käyttäytyvät, kun muuttujan arvot kasvavat tai pienenevät rajatta. Pelkän kulkukaavion perusteella ei varmoja johtopäätöksiä ole mahdollista tehdä, vaan tarvitaan myös muunlaista tietoa funktion käyttäytymisestä. Tästä ovat osoituksena esimerkiksi funktiot $f(x) = x^3 + 3x$ ja  
