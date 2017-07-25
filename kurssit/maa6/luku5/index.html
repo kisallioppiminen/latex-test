@@ -641,7 +641,7 @@ topnav: maa6
             </p>
 
             <p>
-                Tarkastellaan vielä seuraavaa ongelmaa: Kauppias on havainnut, että 10 sentin korotus tomaattien kilohinnassa laskee päivittäistä myyntiä noin 2 kg. Kun hinta on 2,20 €/kg, tomaatteja myydään päivässä 70 kg. Millä kilohinnalla kauppiaan voitto on suurin, jos hän joutuu maksamaan tomaateista 1,00 €/kg? 
+                Tarkastellaan vielä seuraavaa ongelmaa: Kauppias on havainnut, että 10 sentin korotus tomaattien kilohinnassa laskee päivittäistä myyntiä noin 2 kg. Kun hinta on 2,20 €/kg, tomaatteja myydään päivässä 70 kg. Millä kilohinnalla kauppiaan voitto on suurin, jos hän joutuu maksamaan tomaateista 1,05 €/kg? 
             </p>
 
             <p>
@@ -651,31 +651,89 @@ topnav: maa6
             <div align="center">
                 <table style="width = 95%"> 
                     <tr>
-                        <th> Myynti (kg)</th>
                         <th> Hinta (€/kg) </th>
+                        <th> Myynti (kg)</th>
                         <th> Myyntitulo (€)</th>
                     </tr>
                     <tr>
-                        <td> $70$  </td>
                         <td> $2{,}20$  </td>
+                        <td> $70$  </td>
                         <td> $70 \cdot 2{,}20 = 154$ </td>
                     </tr>
                     <tr>
-                        <td> $70-2x$ </td>
                         <td> $2{,}20 + 0{,}10x$ </td>
+                        <td> $70-2x$ </td>
                         <td> $154 + 2{,}6x - 0{,}2x^2$ </td>
                     </tr>
                 </table> 
             </div>
 
             <p>
-                Taulukon viimeiselle riville on muotoiltu tieto siitä, että jokainen 10 sentin korotus hinnassa laskee myyntiä 2 kg. Tässäkin tapauksessa myyntitulo $M(x)$ saadaan kertolaskulla:
+                Taulukon viimeiselle riville on muotoiltu tieto siitä, että jokainen 10 sentin korotus hinnassa laskee myyntiä 2 kg. Kahdesta ensimmäisestä sarakkeesta voidaan päätellä, että 10 sentin korotusten määrä $x$ on välillä $[-22, 35]$. Näissä ääritilanteissa joko kilohinta tai myyntimäärä menee nollaksi. 
+            </p>
+            <p>
+                Myyntitulo $M(x)$ on myyntimäärän ja kilohinnan tulo:
                 \begin{align*}
                 M(x)&= (70 - 2x)(2{,}2 + 0{,}1x) \\
                 &= 154 + 7x - 4{,}4x - 0{,}2x^2 \\
                 &= 154 + 2{,}6x - 0{,}2x^2
                 \end{align*}
+                Kauppiaan voitto saadaan tästä, kun huomioidaan, että hän joutuu itse maksamaan tomaateista 1,05 €/kg. Voitto on siten
+                \begin{align*}
+                V(x) &= M(x) - 1{,}05(70 - 2x) \\
+                &= 154 + 2{,}6x - 0{,}2x^2 - 73{,}5 + 2{,}1x \\
+                &= 80{,}5 + 4{,}7x - 0{,}2x^2
+                \end{align*}
+                Ongelma on nyt saatu mallinnettua matemaattisesti: tehtävänä on etsiä funktion $V$ suurin arvo välillä $[-22,35]$. Tämä tehdään seuraavassa tehtävässä.
             </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t508-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t508">
+                                Funktion suurin ja pienin arvo suljetulla välillä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t508" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Määritä funktion 
+                                $$V(x) = 80{,}5 + 4{,}7x - 0{,}2x^2$$ 
+                                suurin arvo välillä $[-22,35]$. 
+                            </li>
+                            <li> 
+                                Mikä kauppiaan kannattaa asettaa tomaattien kilohinnaksi, jos hän haluaa mahdollisimman suuren voiton? 
+                            </li>
+                            <li>
+                                Mikä on päivittäisen myynnin arvo tällä kilohinnalla? Entä kuinka suuri on kauppiaan saama voitto?
+                            </li>
+                        </ol>
+                        <p>
+                            
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t507_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t507_v" class="collapse">
+                            <ol class="a">
+                            <li> 
+                                Funktion $V$ suurin arvo välillä $[-22,35]$ on $V(11{,}75) = 108{,}1125$.
+                            </li>
+                            <li> 
+                                Kilohinnaksi kannattaa asettaa $2{,}20 + 11{,}75 \cdot 0{,}1 \approx 3{,}38$ €/kg.
+                            </li>
+                            <li>
+                                Päivittäisen myynnin arvo on 157,17 € ja kauppiaan saama voitto noin 108,35 €.
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <p>
                 Joskus on tarpeen tutkia funktion suurimman ja pienimmän arvon olemassaoloa koko reaaliakselilla. Tällöin tarvitaan tietoa siitä, miten funktion arvot käyttäytyvät, kun muuttujan arvot kasvavat tai pienenevät rajatta. Pelkän kulkukaavion perusteella ei varmoja johtopäätöksiä ole mahdollista tehdä, vaan tarvitaan myös muunlaista tietoa funktion käyttäytymisestä. Tästä ovat osoituksena esimerkiksi funktiot $f(x) = x^3 + 3x$ ja  
