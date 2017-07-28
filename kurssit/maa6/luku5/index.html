@@ -348,10 +348,60 @@ topnav: maa6
                 <br>
                 <img src="/kurssit/maa6/kuvat/kuva83.png" max-width: 100%; width: auto; height: auto;/>
                 <br>
-                Funktio $f$ on polynomifunktio, joten se on jatkuva. Nollakohtia funktiolla näyttäisi olevan ainakin kaksi. Tutkitaan asiaa muodostamalla funktion $f$ kulkukaavio.
+                Nollakohtia funktiolla näyttäisi olevan ainakin kaksi. Tutkitaan asiaa tarkemmin funktion kulkukaavion avulla.
             </p>
 
-            <p>
+            <div class="tehtavat">
+                <div class="tehtava" id="t510-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t510">
+                                Funktion kulku
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t510" class="collapse">
+                        <p>
+                            Tehtävänä on muodostaa funktion 
+                            $$
+                            f(x) = \frac{2}{15}x^3 - \frac{3}{10}x^2 + \frac{1}{8}x + \frac{1}{25}
+                            $$
+                            kulkukaavio.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Määritä derivaattafunktio $f'(x)$ ja etsi sen nollakohdat.
+                            </li>
+                            <li>
+                                Laske derivaattafunktion arvo nollakohtien eri puolilla ja muodosta derivaattafunktion merkkikaavio.
+                            </li>
+                            <li> 
+                                Muodosta funktion $f$ kulkukaavio.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t510_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t510_v" class="collapse">
+                            <ol class="a">
+                            <li> 
+                                Derivaattafunktio on $f'(x) = \frac{2}{5}x^2 - \frac{3}{5}x + \frac{1}{8}$. Sen nollakohdat ovat $x_1 = \frac{1}{4}$ ja $x_2 = \frac{5}{4}$.
+                            </li>
+                            <li> 
+                                
+                            </li>
+                            <li>
+                                
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--             <p>
                 Funktion $f$ derivaattafunktio on 
                 $$
                 f'(x) = \frac{2}{5}x^2 - \frac{3}{5}x + \frac{1}{8}
@@ -364,7 +414,71 @@ topnav: maa6
                 &= \frac{3\pm 2}{4} \\[2mm]
                 \end{align*}
                 Derivaattafunktion nollakohdat ovat siis $x_1 = \frac{1}{4}$ ja $x_2 = \frac{5}{4}$.
+            </p> -->
+
+            <p>
+                Funktio 
+                $$
+                f(x) = \frac{2}{15}x^3 - \frac{3}{10}x^2 + \frac{1}{8}x + \frac{1}{25}
+                $$
+                on polynomifunktio, joten se on jatkuva. Bolzanon lausetta (teoreema 1) voidaan nyt soveltaa väleille, joissa funktion kuvaajan ja kulkukaavion perusteella vaikuttaa olevan funktion nollakohta.
             </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t511-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t511">
+                                Nollakohtien määrä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t511" class="collapse">
+                        <p>
+                            Tarkastellaan funktiota 
+                            $$
+                            f(x) = \frac{2}{15}x^3 - \frac{3}{10}x^2 + \frac{1}{8}x + \frac{1}{25}
+                            $$
+                            välillä $\left[\frac{1}{4}, \frac{5}{4}\right]$, jossa se on edellisen tehtävän kulkukaavion mukaan aidosti vähenevä.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Laske funktion arvo välin $\left[\frac{1}{4}, \frac{5}{4}\right]$ kummassakin päätepisteessä.  
+                            </li>
+                            <li>
+                                Mitä voit a-kohdan ja Bolzanon lauseen (<a href="http://kisallioppiminen.fi/kurssit/maa6/luku2/">luvun 2</a> teoreema 1) perusteella päätellä funktion $f$ nollakohtien määrästä välillä $\left]\frac{1}{4}, \frac{5}{4}\right[$?
+                            </li>
+                            <li> 
+                                Mitä voit päätellä funktion $f$ nollakohtien määrästä välillä $\left]\frac{1}{4}, \frac{5}{4}\right[$, kun funktio on kulkukaavion mukaan aidosti vähenevä?
+                            </li>
+                            <li>
+                                Kuinka monta nollakohtaa funktiolla $f$ on välillä $\left]\frac{1}{4}, \frac{5}{4}\right[$?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t511_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t511_v" class="collapse">
+                            <ol class="a">
+                            <li> 
+                                $f\left(\frac{1}{4}\right) = \frac{131}{2400}$ ja $f\left(\frac{5}{4}\right) = -\frac{29}{2400}$
+                            </li>
+                            <li> 
+                                Koska $f\left(\frac{1}{4}\right) > 0$ ja $f\left(\frac{5}{4}\right) < 0$ ja funktio $f$ on polynomifunktiona jatkuva kaikkialla, on funktiolla $f$ Bolzanon lauseen mukaan ainakin yksi nollakohta välillä $\left]\frac{1}{4}, \frac{5}{4}\right[$.
+                            </li>
+                            <li>
+                                Koska $f$ on aidosti vähenevä välillä $\left[\frac{1}{4}, \frac{5}{4}\right]$, se ei saa mitään arvoa tällä välillä kahta kertaa. Näin ollen funktiolla $f$ on enintään yksi nollakohta välillä $\left]\frac{1}{4}, \frac{5}{4}\right[$.
+                            </li>
+                            <li>
+                                Edellisistä kohdista voidaan päätellä, että funktiolla $f$ on tasan yksi nollakohta välillä $\left]\frac{1}{4}, \frac{5}{4}\right[$.
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#aari1">
