@@ -551,28 +551,80 @@ topnav: maa6
             </div>
 
             <p>
-                Edellisen teoreeman avulla saadaan yleistettyä potenssifunktion derivointisääntö negatiivisten eksponenttien tapaukseen:
+                Seuraavassa tehtävässä yleistetään potenssifunktion derivointisääntö myös negatiivisille eksponenteille.
+            </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t607-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t607">
+                                Funktion potenssin derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t607" class="collapse">
+                        <p>
+                            Olkoon $n$ kokonaisluku. Tarkastellaan funktiota $g(x) = x^n$.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Mikä on sellainen funktio $f$, että $g(x) = \left(f(x)\right)^n$?
+                            </li>
+                            <li>
+                                Mikä on derivaattafunktio $f'(x)$?
+                            </li>
+                            <li>
+                                Määritä funktion $g$ derivaattafunktio teoreeman 16 avulla.
+                                <br>
+                                Vinkki: hyödynnä a- ja b-kohtien tuloksia.
+                            </li>
+                        </ol>
+                        <p>
+                            
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t607_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t607_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                                $f(x) = x$
+                            </li>
+                            <li>
+                                $f'(x) = 1$
+                            </li>
+                            <li>
+                                \begin{align*}
+                                g'(x) &= \mathop{\mathrm{D}} \left(f(x)\right)^n \\
+                                &= n\left(f(x)\right)^{n-1}f'(x) \\
+                                &= nx^{n-1}\cdot 1 \\
+                                &= nx^{n-1}
+                                \end{align*}
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Edellisen tehtävän tuloksena saadaan seuraava teoreema:
             </p>
 
             <div class="theorem" id="POTENSSIFUNKTION DERIVOINTISÄÄNNÖN YLEISTYS">
                 <h3>TEOREEMA</h3>
                 <p>
                     Olkoon $n$ mikä tahansa kokonaisluku. Funktion $g(x) = x^n$ derivaattafunktio on 
-                    $$g'(x) = nx^{n-1}.$$
+                    $$g'(x) = nx^{n-1}$$
+                    eli
+                    $$\mathop{\mathrm{D}} x^n = nx^{n-1}.$$
                 </p>
                 <div class="proof">
                     <p>
-                        Perustelu: Merkitään $f(x) = x$, jolloin funktio $g$ on funktion $f$ potenssi:
-                        $$
-                        g(x) = x^n = \left(f(x)\right)^n.
-                        $$
-                        Sovelletaan funktion potenssin derivointisääntöä:
-                        \begin{align*}
-                        g'(x) &= D\left(f(x)\right)^n \\
-                        &= n\left(f(x)\right)^{n-1}f'(x) \\
-                        &= nx^{n-1}\cdot 1 \\
-                        &= nx^{n-1}
-                        \end{align*}
+                        Perustelu tehtävässä 6.7.
                     </p>      
                 </div>
             </div>
