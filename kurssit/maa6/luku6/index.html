@@ -461,20 +461,18 @@ topnav: maa6
             </div>
 
             <p>
-                Osamäärän derivointisäännön avulla saadaan yleistettyä potenssifunktion derivointisääntö sekä funktion potenssin derivointisääntö myös negatiivisten eksponenttien tapaukseen:
+                Osamäärän derivointisäännön avulla saadaan yleistettyä funktion potenssin derivointisääntö myös negatiivisten eksponenttien tapaukseen:
             </p>
 
-            <div class="theorem" id="POTENSSIEN DERIVOINTI">
+            <div class="theorem" id="FUNKTION POTENSSIN DERIVAATTA">
                 <h3>TEOREEMA</h3>
                 <p>
                     Olkoon $n$ mikä tahansa kokonaisluku. Jos $f$ on derivoituva funktio, niin
                     $$\mathop{\mathrm{D}} (f(x))^n = n(f(x))^{n-1}f'(x).$$
-                    Erityisesti potenssifunktion $g(x) = x^n$ derivaattafunktio on 
-                    $$g'(x) = nx^{n-1}.$$
                 </p>
                 <div class="proof">
                     <p>
-                        Perustelu: Oletetaan, että $f$ on derivoituva funktio. Tapaus, jossa kokonaisluku $n$ on positiivinen, on käsitelty teoreemassa 6. Jos $n = 0$, funktio $(f(x))^n$ on vakiofunktio, ja sen derivaatta on nolla. Toisaalta tässä tapauksessa myös 
+                        Perustelu: Oletetaan, että $f$ on derivoituva funktio. Tapaus, jossa kokonaisluku $n$ on positiivinen, on käsitelty teoreemassa 14. Jos $n = 0$, funktio $(f(x))^n$ on vakiofunktio, ja sen derivaatta on nolla. Toisaalta tässä tapauksessa myös 
                         \begin{align*}
                         n(f(x))^{n-1}f'(x) &= 0 \cdot (f(x))^{-1}f'(x) \\
                         &= 0,
@@ -491,7 +489,34 @@ topnav: maa6
                         &= -k(f(x))^{-k-1}f'(x) \\[2mm]
                         &= n(f(x))^{n-1}f'(x)
                         \end{align*}
-                        Huomaa, että funktion potenssin derivointisääntöä voidaan käyttää yllä olevassa päättelyssä, koska $k$ on positiivinen. 
+                        Huomaa, että funktion potenssin derivointisääntöä (teoreema 14) voidaan käyttää yllä olevassa päättelyssä, koska $k$ on positiivinen. 
+                    </p>      
+                </div>
+            </div>
+
+            <p>
+                Edellisen teoreeman avulla saadaan yleistettyä potenssifunktion derivointisääntö negatiivisten eksponenttien tapaukseen:
+            </p>
+
+            <div class="theorem" id="POTENSSIFUNKTION DERIVOINTISÄÄNNÖN YLEISTYS">
+                <h3>TEOREEMA</h3>
+                <p>
+                    Olkoon $n$ mikä tahansa kokonaisluku. Funktion $g(x) = x^n$ derivaattafunktio on 
+                    $$g'(x) = nx^{n-1}.$$
+                </p>
+                <div class="proof">
+                    <p>
+                        Perustelu: Merkitään $f(x) = x$, jolloin funktio $g$ on funktion $f$ potenssi:
+                        $$
+                        g(x) = x^n = \left(f(x)\right)^n.
+                        $$
+                        Sovelletaan funktion potenssin derivointisääntöä:
+                        \begin{align*}
+                        g'(x) &= D\left(f(x)\right)^n \\
+                        &= n\left(f(x)\right)^{n-1}f'(x) \\
+                        &= nx^{n-1}\cdot 1 \\
+                        &= nx^{n-1}
+                        \end{align*}
                     </p>      
                 </div>
             </div>
