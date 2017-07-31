@@ -763,13 +763,13 @@ topnav: maa6
                         <p>
                             Tehtävänä on tutkia, onko funktiolla
                             $$
-                            f(x) = \frac{x}{x^2-1}
+                            g(x) = \frac{x}{x^2-1}
                             $$
                             ääriarvoja.
                         </p>
                         <ol class="a">
                             <li>
-                                Määritä derivaattafunktio $f'(x)$.
+                                Määritä derivaattafunktio $g'(x)$.
                             </li>
                             <li>
                                 Määritä derivaattafunktion nollakohdat ja kohdat, joissa derivaattafunktio ei ole määritelty. 
@@ -777,7 +777,7 @@ topnav: maa6
                             <li>
                                 Laadi derivaattafunktion merkkikaavio. Muista merkitä siihen myös kohdat, joissa derivaattafunktio ei ole määritelty.
                             </li>
-                            <li> Täydennä derivaattafunktion merkkikaavio funktion $f$ kulkukaavioksi. Onko funktiolla $f$ ääriarvoja? </li>
+                            <li> Täydennä derivaattafunktion merkkikaavio funktion $g$ kulkukaavioksi. Onko funktiolla $g$ ääriarvoja? </li>
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t609_v">
@@ -787,16 +787,16 @@ topnav: maa6
                         <div id="t609_v" class="collapse">
                             <ol class="a">
                             <li>
-                                $f'(x) = \dfrac{x^2-2x}{(x-1)^2}$
+                                $g'(x) = \dfrac{-x^2-1}{(x^2-1)^2}$
                             </li>
                             <li>
-                                 Nollakohdat $x_1 = 0$ ja $x_2 = 2$. Derivaattafunktio ei ole määritelty nimittäjän nollakohdassa $x = 1$.
+                                 Derivaattafunktiolla ei ole nollakohtia. Derivaattafunktio ei ole määritelty nimittäjän nollakohdissa $x_1 = 1$ ja $x_2 = -1$.
                             </li>
                             <li>
                                 
                             </li>
                             <li>
-                                Paikallinen maksimiarvo $f(0) = 0$ ja minimiarvo $f(2) = 4$.
+                                Funktiolla $g$ ei ole ääriarvoja.
                             </li>
                         </ol>
                         </div>
@@ -805,7 +805,31 @@ topnav: maa6
             </div>
 
             <p>
-                Kohdat, joissa rationaalifunktio ei ole määritelty, täytyy huomioida myös silloin, kun kulkukaavion pohjalta tehdään päätelmiä funktion kasvamisesta ja vähenemisestä. Aikaisemmin luvussa 5 tarkasteltiin funktiota 
+                Kohdat, joissa rationaalifunktio ei ole määritelty, täytyy huomioida myös silloin, kun kulkukaavion pohjalta tehdään päätelmiä funktion kasvamisesta ja vähenemisestä. Aikaisemmin luvussa 5 tarkasteltiin polynomifunktiota 
+                $$f(x) = \frac{1}{6}x^3 + 1,$$
+                jonka derivaattafunktio on 
+                $$f'(x) = \frac{1}{2}x^2.$$
+                Funktion $f$ kulkukaaviosta voidaan päätellä, että funktio $f$ on aidosti kasvava koko reaaliakselilla:
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva84.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Myös funktion $f$ kuvaaja tukee tätä johtopäätöstä:
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva85.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Tehtävässä 6.10 puolestaan tarkasteltiin rationaalifunktiota
+                $$
+                g(x) = \frac{x}{x^2-1},
+                $$
+                jonka kulkukaavioksi saatiin
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva86.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Kulkukaaviosta nähdään, että funktio $g$ on aidosti vähenevä väleillä $\left]-\infty, -1\right[$, $\left]-1, 1\right[$ ja $\left] 1, \infty\right[$. Se ei kuitenkaan ole aidosti vähenevä koko lukusuoralla, mikä nähdään funktion kuvaajasta:
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva87.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Kun kulkukaavion perusteella tehdään johtopäätöksiä, täytyy siis olla tarkkana, ovatko siihen merkityt erityiskohdat derivaatan nollakohtia vai kohtia, joissa derivaattafunktio ei ole määritelty. Funktion kuvaajan avulla voi usein tarkistaa, ovatko kulkukaaviosta tehdyt päätelmät oikein.
             </p>
 
 
