@@ -978,6 +978,41 @@ topnav: maa6
                 </div>
             </div>
 
+            <p>
+                Taito tutkia rationaalifunktion kulkua laajentaa mahdollisuuksia erilaisten käytännön ongelmien ratkaisemiseen. Jälleen ensimmäinen haaste on kuitenkin mallintaa ongelma matemaattisesti: 
+                <ul>
+                    <li> Mitä muuttujaa tarkastellaan? </li>
+                    <li> Millä välillä muuttujan arvot vaihtelevat? </li>
+                    <li> Minkä funktion suurinta tai pienintä arvoa etsitään?</li>
+                </ul>
+            </p>
+
+            <p>
+                Tarkastellaan esimerkiksi seuraavaa tilannetta: Kunnan kaavoitusarkkitehti suunnittelee uutta pientaloaluetta. Alueelle halutaan kaavoittaa tontteja, joille voi rakentaa $130 \text{ m}^2$ omakotitalon. Tontit ovat suorakulmion muotoisia ja rajoittuvat yhdeltä sivultaan puroon. Rakennuksen etäisyys purosta on oltava vähintään 11 metriä ja tontin muista reunoista vähintään 5 metriä. Mitkä ovat pienimmän mahdollisen tontin mitat ja pinta-ala? Oletetaan yksinkertaisuuden vuoksi, että myös rakennuksen pohja on suorakulmion muotoinen ja sen sivut ovat yhdensuuntaiset tontin rajojen kanssa. 
+            </p>
+
+            <p>
+                Aloitetaan piirtämällä tilanteesta kuva. Merkitään tontin sivujen pituuksia kirjaimilla $x$ ja $y$:
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva89.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Rakennuksen pinta-alasta $130 \text{ m}^2$ saadaan ehto muuttujille $x$ ja $y$:
+                $$
+                (x-10)(y-16) = 130.
+                $$
+                Tästä yhtälöstä voidaan ratkaista toinen muuttujista:
+                \begin{align*}
+                y-16 &= \frac{130}{x-10} \\[2mm]
+                y &= \frac{130}{x-10} + 16
+                \end{align*}
+                Tontista halutaan mahdollisimman pieni, joten ryhdytään tutkimaan tontin pinta-alaa $A = xy$. Sijoitetaan tähän äskeisen pyörittelyn tulos, jolloin tontin pinta-ala saadaan ilmaistua muuttujan $x$ funktiona:
+                \begin{align*}
+                A(x) &= x\left(\frac{130}{x-10} + 16\right) \\[2mm]
+                &= \frac{130x}{x - 10} + 16x.
+                \end{align*}
+                Mallikuvasta voidaan päätellä, että tontin leveys $x$ on vähintään 10 metriä eikä leveydellä ole ylärajaa. Tehtävänä on siis etsiä funktion $A(x)$ pienin arvo, kun $x \geq 10$.
+            </p>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#viimeinen">
                     Sulje kappale
