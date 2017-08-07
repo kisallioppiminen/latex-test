@@ -344,6 +344,99 @@ topnav: maa6
                     </div>
                 </div>
             </div>
+
+            <p>
+                Paloittain määriteltyjä funktiota voidaan samaan tapaan lausekkeiden avulla. Tällöin täytyy huomata, että funktio saattaa olla määritelty eri tavoin tarkastelukohdan eri puolilla. Tarkastelukohtaa pitää sen vuoksi lähestyä erikseen sekä oikealta että vasemmalta. Lähestymissuunta ilmaistaan raja-arvon merkinnässä merkeillä $+$ ja $-$.
+                <br>
+                Vasemmalta lähestyminen:
+                $x \rightarrow c-$
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva21.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Oikealta lähestyminen:
+                $x \rightarrow c+$
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva22.png" max-width: 100%; width: auto; height: auto;/>
+                Jos esimerkiksi tutkitaan, onko funktiolla
+                $$f(x) = \begin{cases}
+                \dfrac{x^2+2x+4}{4}, &\text{ jos $\ x < -2$} \\
+                2-\sqrt{x + 3}, &\text{ jos $\ x \geq -2$}
+                \end{cases}
+                $$    
+                raja-arvoa kohdassa $x = -2$, verrataan vasemman- ja oikeanpuoleista raja-arvoa toisiinsa:
+                \begin{align*}
+                \lim_{x \rightarrow (-2)-} f(x) &= \lim_{x \rightarrow (-2)-}\dfrac{x^2+2x+4}{4} \\[2mm]
+                &= \frac{(-2)^2 + 2\cdot(-2) + 4}{4} \\[2mm]
+                &= \frac{4-4+4}{4} \\[2mm]
+                &= 1
+                \end{align*} 
+                ja
+                \lim_{x \rightarrow (-2)+} f(x) &= \lim_{x \rightarrow (-2)+} (2-\sqrt{x + 3}) \\
+                &= 2 - \sqrt{-2+3} \\
+                &= 2- \sqrt{1} \\
+                &= 1
+                \end{align*} 
+                Tulos ei riipu lähestymissuunnasta, joten funktiolla $f$ on kohdassa $x = -2$ raja-arvo:
+                $$
+                \lim_{x \rightarrow -2} f(x) = 1.
+                $$
+            </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="t205b-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t205b">
+                                Funktion raja-arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t205b" class="collapse">
+                        <p>
+                            Määritä $\ {\displaystyle \lim_{x \rightarrow -3} f(x)}\ $ tai selitä, miksi raja-arvoa ei ole olemassa, jos          
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $$f(x) = \begin{cases}
+                                \dfrac{x^2+2x+4}{4}, &\text{ jos $\ x < -3$} \\
+                                2-\sqrt{x + 3}, &\text{ jos $\ x \geq -3$}.
+                                \end{cases}
+                                $$     
+                            </li>
+                            <li>
+                                $f(x) = x^2 + 2x - 4$
+                            </li>
+                            <li>
+                                $f(x) = \sqrt{x} - x$
+                            </li>
+                            <li>
+                                $f(x) = 9$.
+                            </li>
+                        </ol>
+                             <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t205b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t205b_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    ${\displaystyle \lim_{x \rightarrow 4} f(x)} = \frac{1}{2}$
+                                </li>
+                                <li>
+                                    ${\displaystyle \lim_{x \rightarrow 4} f(x)} = 20$
+                                </li>
+                                <li>
+                                    ${\displaystyle \lim_{x \rightarrow 4} f(x)} = -2$
+                                </li>
+                                <li>
+                                    ${\displaystyle \lim_{x \rightarrow 4} f(x)} = 9$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#raja1">
@@ -486,17 +579,7 @@ topnav: maa6
             </p>
 
             <p>
-                Alla olevassa määritelmässä tarkastellaan sekä avoimia että suljettuja välejä. Avoimen välin mitä tahansa pistettä voidaan lähestyä sekä vasemmalta että oikealta, mutta suljetun välin päätepisteitä voidaan lähestyä vain yhdestä suunnasta: vasenta päätepistettä oikealta ja oikeaa päätepistettä vasemmalta. Lähestymissuunta ilmaistaan raja-arvon merkinnässä merkeillä $+$ ja $-$.
-                <br>
-                Vasemmalta lähestyminen:
-                $x \rightarrow c-$
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva21.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Oikealta lähestyminen:
-                $x \rightarrow c+$
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva22.png" max-width: 100%; width: auto; height: auto;/>
+                Alla olevassa määritelmässä tarkastellaan sekä avoimia että suljettuja välejä. Avoimen välin mitä tahansa pistettä voidaan lähestyä sekä vasemmalta että oikealta, mutta suljetun välin päätepisteitä voidaan lähestyä vain yhdestä suunnasta: vasenta päätepistettä oikealta ja oikeaa päätepistettä vasemmalta. 
             </p>
 
             <div class="definition">
