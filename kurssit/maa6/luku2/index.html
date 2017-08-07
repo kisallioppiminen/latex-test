@@ -392,50 +392,66 @@ topnav: maa6
                     </header>
                     <div id="t205b" class="collapse">
                         <p>
-                            Määritä $\ {\displaystyle \lim_{x \rightarrow 10} f(x)}\ $ tai selitä, miksi raja-arvoa ei ole olemassa, jos          
+                            Määritä $\ {\displaystyle \lim_{x \rightarrow 10} f(x)}\ $ tai selitä, miksi raja-arvoa ei ole olemassa, jos  
+                            $$f(x) = \begin{cases}
+                            9x -x^2 + 3, &\text{ jos $\ x \leq 10$} \\[1mm]
+                            \sqrt{x^2 + 21} - 4, &\text{ jos $\ x > 10$}.
+                            \end{cases}
+                            $$         
                         </p>
-                        <ol class="a">
-                            <li> 
-                                $$f(x) = \begin{cases}
-                                2x^3 - 21x^2 + 9x + 13, &\text{ jos $\ x \leq 10$} \\[1mm]
-                                \sqrt{x^2 + 21} - 4, &\text{ jos $\ x > 10$}.
-                                \end{cases}
-                                $$     
-                            </li>
-                            <li> 
-                                $$f(x) = \begin{cases}
-                                \dfrac{30}{x} + x-9, &\text{ jos $\ x \leq 10$} \\[2mm]
-                                \sqrt{4x -4} - 2, &\text{ jos $\ x > 10$}.
-                                \end{cases}
-                                $$     
-                            </li>
-                        </ol>
-                             <h2>
+                            <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t205b_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="t205b_v" class="collapse">
-                            <ol class="a">
-                                <li> 
-                                    Raja-arvoa ei ole olemassa, sillä
-                                    $$
-                                        \lim_{x \rightarrow 10-} f(x) = 3
-                                    $$
-                                    mutta
-                                    $$
-                                        \lim_{x \rightarrow 10+} f(x) = 7.
-                                    $$
-                                </li>
-                                <li>
-                                    ${\displaystyle \lim_{x \rightarrow 10} f(x)} = 4$, sillä tulos ei riipu siitä, kummasta suunnasta kohtaa $x = 10$ lähestytään.
-                                </li>
-                            </ol>
+                            <p>
+                                Raja-arvoa ei ole olemassa, sillä
+                                $$
+                                    \lim_{x \rightarrow 10-} f(x) = -7
+                                $$
+                                mutta
+                                $$
+                                    \lim_{x \rightarrow 10+} f(x) = 7.
+                                $$
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             
+            <div class="tehtavat">
+                <div class="tehtava" id="t205c-ex">
+                    <header>
+                        <h1>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t205c">
+                                Funktion raja-arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t205c" class="collapse">
+                        <p>
+                            Määritä $\ {\displaystyle \lim_{x \rightarrow 10} f(x)}\ $ tai selitä, miksi raja-arvoa ei ole olemassa, jos 
+                            $$f(x) = \begin{cases}
+                            \dfrac{30}{x} - x + 1, &\text{ jos $\ x \leq 5$} \\[2mm]
+                            \sqrt{4x -4} - 2, &\text{ jos $\ x > 5$}.
+                            \end{cases}
+                            $$          
+                        </p>
+                             <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t205c_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t205c_v" class="collapse">
+                            <p>
+                                ${\displaystyle \lim_{x \rightarrow 5} f(x)} = 2$, sillä tulos ei riipu siitä, kummasta suunnasta kohtaa $x = 10$ lähestytään.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#raja1">
                     Sulje kappale
