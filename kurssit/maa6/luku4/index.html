@@ -765,6 +765,58 @@ topnav: maa6
                 </div>
             </div>
 
+            <p>
+                Tässä luvussa johdettujen derivointisääntöjen avulla voidaan nyt määrittää minkä tahansa polynomifunktion derivaatta. Tämä mahdollistaa myös monenlaisten geometristen ongelmien ratkaisemisen. Tarkastellaan esimerkiksi tilannetta, jossa halutaan määrittää käyrälle $y = x^2 - 4x + 5$ sellainen tangentti, joka kulkee pisteen $(1,-2)$ kautta. 
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva103.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Havaitaan, että piste $(1,-2)$ ei ole käyrällä, sillä jos $x = 1$, niin
+                $$
+                    y = 1^2 - 4\cdot 1 + 5 = 2 \neq -2.
+                $$
+                Hahmotellaan etsitty tangentti kuvaan ja merkitään sivuamispisteen $x$-koordinaattia kirjaimella $a$. Koska sivuamispiste on käyrällä, sen $y$-koordinaatti on käyrän yhtälön mukaisesti $a^2-4a+5$.
+                <br>
+                <img src="/kurssit/maa6/kuvat/kuva104.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                Kuvasta havaitaan, että sopivia tangentteja näyttäisi olevan kaksi erilaista. Tangentin kulmakerroin kohdassa $x = a$ saadaan derivoimalla käyrää vastaava polynomifunktio $f(x) = x^2 - 4x + 5$:
+                $$
+                f'(x) = 2x - 4,
+                $$
+                joten
+                $$
+                f'(a) = 2a - 4.
+                $$
+                Muodostetaan pisteen $(a,a^2-4a+5)$ kautta kulkevan tangentin yhtälö:
+                $$
+                 y - (a^2-4a+5) = (2a-4)(x-a) 
+                $$
+                Myös piste $(1,-2)$ on tällä suoralla, joten saadaan yhtälö
+                $$
+                 -2 - (a^2-4a+5) = (2a-4)(1-a).
+                $$
+                Tästä voidaan ratkaista $a$:
+                \begin{align*}
+                -2 - (a^2-4a+5) &= (2a-4)(1-a) \\
+                -a^2 + 4a - 7 &= 2a -2a^2 - 4 + 4a \\
+                a^2 - 2a - 3 &=0
+                \end{align*}
+                Toisen asteen ratkaisukaavalla ratkaisuiksi saadaan
+                \begin{align*}
+                a &= \frac{2 \pm \sqrt{4+12}}{2} \\[2mm]
+                &= \frac{2 \pm 4}{2} \\[2mm]
+                &= 1\pm 2
+                \end{align*}
+                Sopivia tangentteja siis todella on kaksi ja niiden yhtälöiksi saadaan arvoilla $a = -1$ ja $a = 3$
+                $$
+                 y = -6x + 4
+                $$
+                ja
+                $$
+                y = 2x - 4.
+                $$
+
+            </p>
+
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#saantoja2">
