@@ -169,6 +169,7 @@ class View {
     nav.appendChild(liDropdown);
   }
 
+ /*
   _buildGuest() {
     let nav = document.querySelector('nav>ul');
     let kirjautuminen = [
@@ -179,7 +180,8 @@ class View {
     ];
     this.nav.appendChild(this._createLink(kirjautuminen, 'Kirjautuminen'));
   }
-
+*/
+ 
   _createLink(att, text, clickEvent) {
     let li = document.createElement('li');
     let a = this._addAttributesToElement(att, document.createElement('a'));
