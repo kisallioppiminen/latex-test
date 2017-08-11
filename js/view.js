@@ -169,7 +169,7 @@ class View {
     nav.appendChild(liDropdown);
   }
 
- /*
+ 
   _buildGuest() {
     let nav = document.querySelector('nav>ul');
     let kirjautuminen = [
@@ -178,9 +178,9 @@ class View {
     {key: 'data-toggle', value: 'modal'},
     {key: 'data-target', value: '#login-modal'}
     ];
-    this.nav.appendChild(this._createLink(kirjautuminen, 'Kirjautuminen'));
-  }
-*/
+   /* this.nav.appendChild(this._createLink(kirjautuminen, 'Kirjautuminen'));*/
+}
+
  
   _createLink(att, text, clickEvent) {
     let li = document.createElement('li');
