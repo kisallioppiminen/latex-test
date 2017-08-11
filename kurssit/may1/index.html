@@ -15,6 +15,8 @@ topnav: may1
 
 <input type="hidden" id="chapterNumber" value="0"/>
 
+{% include bottomnav.html %}
+
 <article>
 
     <div class="print-link">
@@ -113,7 +115,7 @@ topnav: may1
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" data-target="#yhteiskuntajayksilo" class="collapsed">
                     Matematiikan merkityksestä yhteiskunnalle ja yksilölle
@@ -121,18 +123,20 @@ topnav: may1
             </h1>
         </header>
         <div id="yhteiskuntajayksilo" class="collapse">
-            <p>Olet opiskellut matematiikkaa koko perusopetuksen ajan, joten nyt lukion matematiikan opiskelun alussa on hyvä hetki pohtia, miksi sitä opiskellaan. Oletkin saattanut pohtia sitä ystäväsi, opettajasi tai vanhempiesi kanssa. Kysymys on saattanut liittyä johonkin tiettyyn matematiikan tunneilla käsiteltyyn aiheeseen tai koko oppiaineeseen. En tiedä, mihin johtopäätökseen mahdollisesti tulit, mutta kuten hyvät kysymykset usein ovat, niihin voi olla vaikeaa vastata.</p>
+            <div class="teoria">
+                <p>Olet opiskellut matematiikkaa koko perusopetuksen ajan, joten nyt lukion matematiikan opiskelun alussa on hyvä hetki pohtia, miksi sitä opiskellaan. Oletkin saattanut pohtia sitä ystäväsi, opettajasi tai vanhempiesi kanssa. Kysymys on saattanut liittyä johonkin tiettyyn matematiikan tunneilla käsiteltyyn aiheeseen tai koko oppiaineeseen. En tiedä, mihin johtopäätökseen mahdollisesti tulit, mutta kuten hyvät kysymykset usein ovat, niihin voi olla vaikeaa vastata.</p>
 
-            <p>Voidaan tokki sanoa, että matematiikkaa opiskellaan, jotta sitä voitaisiin soveltaa jossakin ilmeisessä arkisessa toiminnassa kuten kaupankäynnissä, tilastojen tekemisessä tai fysikaalisten ilmiöiden mallintamisessa. Voidaan myös sanoa, että jotakin tiettyä matematiikan aihetta opiskellaan, koska sitä mahdollisesti tarvitaan tulevissa opinnoissa. Haastavaksi vastaamisen tekee se, että matematiikka sisältyy niin erottumattomana osana meidän yhteiskuntaamme ja kulttuuriimme, että emme aina oikein edes huomaa, miten sitä hyödynnetään ympärillämme. Eläimet eivät tarvitse matematiikkaa selvitäkseen hengissä, joten välttämätöntä ihmiskunnan selviämiselle matematiikka ei ole, mutta nykyisenkaltaiselle yhteiskunnalle matematiikka on elintärkeätä.</p>
-            <p>Tarkastellaan esimerkiksi lukuja. Tähtiteteen professori Tapani Markkanen on todennut, että</p>
-            <blockquote>"lukukäsitteen synty on sekä ihmislajin että yksilön kannalta mullistavimpia edistysaskeleita." 
-             </blockquote>
+                <p>Voidaan tokki sanoa, että matematiikkaa opiskellaan, jotta sitä voitaisiin soveltaa jossakin ilmeisessä arkisessa toiminnassa kuten kaupankäynnissä, tilastojen tekemisessä tai fysikaalisten ilmiöiden mallintamisessa. Voidaan myös sanoa, että jotakin tiettyä matematiikan aihetta opiskellaan, koska sitä mahdollisesti tarvitaan tulevissa opinnoissa. Haastavaksi vastaamisen tekee se, että matematiikka sisältyy niin erottumattomana osana meidän yhteiskuntaamme ja kulttuuriimme, että emme aina oikein edes huomaa, miten sitä hyödynnetään ympärillämme. Eläimet eivät tarvitse matematiikkaa selvitäkseen hengissä, joten välttämätöntä ihmiskunnan selviämiselle matematiikka ei ole, mutta nykyisenkaltaiselle yhteiskunnalle matematiikka on elintärkeätä.</p>
+                <p>Tarkastellaan esimerkiksi lukuja. Tähtiteteen professori Tapani Markkanen on todennut, että</p>
+                <blockquote>"lukukäsitteen synty on sekä ihmislajin että yksilön kannalta mullistavimpia edistysaskeleita." 
+                </blockquote>
+            </div>
             <div class="tehtavat">
 
-                <div class="tehtava" id="ihmiskuntailmanlukuja-ex">
+                <div class="tehtava" id="b48404ca-7dff-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#ihmiskuntailmanlukuja">
                                 Miksi luvut ovat Markkasen mielestä ihmiskunnalle niin tärkeitä?
                             </a>
@@ -147,47 +151,47 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
-            <p>Edellisen tehtävän pohdinnan kautta ehkä huomaat, että matematiikkaa lukujen muodossa on ihmisten luomassa yhteiskunnassa kaikkialla. Vaikka päällisin puolin luvut vaikuttavatkin melko yksinkertaiselta ihmismielen keksinnöltä, niin matematiikan kehitys on vuosituhansien saatossa on puskenut ymmärrystämme lukujen moninaisuudesta eteenpäin.</p>
-            <p>Kokonaisluvut ovat hyviä lukumäärien laskemiseen, mutta kun halutaan verrata esimerkiksi lukumääriä toisiinsa, huomataan, etteivät ne pelkästään riitä. Esimerkiksi kuinka moninkertaisesti Ronaldo (35) teki maaleja verrattuna Messiin (26) La Ligassa kaudella 2015-2016? Tämän ratkaisemiseen tarvitaan matemaattisia keksintöjä, laskutoimituksia, ja vastaukseksi saatu luku $\frac{35}{26}$ on luku yhden ja kahden välissä, eli se ei ole kokonaisluku. Meidän yhteiskunnassamme murtoluvut ja niillä laskeminen opitaan perusopetuksessa, mutta ihmiskunnalle niiden kehittäminen on ollut suurten ponnistuksien ja oivalluksien tulos.</p>
-            <p>Murtolukujakin monimukaisempiin lukuihin olet myös törmännyt perusopetuskessa. Yläkoulun matematiikasta muistat ehkä Pythagoraan lauseen, joka sanoo, että suorakulmaisen kolmion kateettien pituuksien $a$ ja $b$ suhde hypotenuusan pituuteen $c$ on
-
-
-
-                $$a^2 + b^2 = c^2.$$</p>
+            <div class="teoria">
+                <p>Edellisen tehtävän pohdinnan kautta ehkä huomaat, että matematiikkaa lukujen muodossa on ihmisten luomassa yhteiskunnassa kaikkialla. Vaikka päällisin puolin luvut vaikuttavatkin melko yksinkertaiselta ihmismielen keksinnöltä, niin matematiikan kehitys on vuosituhansien saatossa on puskenut ymmärrystämme lukujen moninaisuudesta eteenpäin.</p>
+                <p>Kokonaisluvut ovat hyviä lukumäärien laskemiseen, mutta kun halutaan verrata esimerkiksi lukumääriä toisiinsa, huomataan, etteivät ne pelkästään riitä. Esimerkiksi kuinka moninkertaisesti Ronaldo (35) teki maaleja verrattuna Messiin (26) La Ligassa kaudella 2015-2016? Tämän ratkaisemiseen tarvitaan matemaattisia keksintöjä, laskutoimituksia, ja vastaukseksi saatu luku $\frac{35}{26}$ on luku yhden ja kahden välissä, eli se ei ole kokonaisluku. Meidän yhteiskunnassamme murtoluvut ja niillä laskeminen opitaan perusopetuksessa, mutta ihmiskunnalle niiden kehittäminen on ollut suurten ponnistuksien ja oivalluksien tulos.</p>
+                <p>Murtolukujakin monimukaisempiin lukuihin olet myös törmännyt perusopetuskessa. Yläkoulun matematiikasta muistat ehkä Pythagoraan lauseen, joka sanoo, että suorakulmaisen kolmion kateettien pituuksien $a$ ja $b$ suhde hypotenuusan pituuteen $c$ on
 
 
 
-            <p>Ehkä sinulle heräsi yläkoulussa kysymys, miksi tällaistakin pitäisi osata. Yksinkertainen vastaus olisi se, että sen avulla pystytään laskemaan erilaisten suorakulmaisten kolmioiden sivujen pituuksia. Tämä on merkittävä syy ja osoittaa Pythagoraan lauseen voiman, sillä se pätee <em>kaikkiin</em> suorakulmaisiin kolmioihin. Tämä on kuitenkin vain pintaraapaisu.</p> 
-
-            <p>Yksi ihmismieltä askarruttanut arvaamaton tulos Pythagoraan lauseesta saadaan, kun laitetaan $a$:n ja $b$:n tilalle luku 1. Huomaat, että $c$ saa hyvin oudon arvon. Tämä arvo on esimerkki irrationaaliluvusta, luvusta joka ei ole murtoluku, eli sitä ei voi esittää kahden kokonaisluvun suhteena. Tämän antiikin kreikkalaiset pystyivät todistamaan, ja se saatetaan myös todistaa kurssissa MAA11. Kesti jokunen tuhat vuotta, kunnes äärettömyydestä ja äärettömistä joukoista ymmärrettiin matemaattisesti niin paljon, että 1800-luvulla pystyttiin todistamaan, että näitä irrationaalilukuja on tietyssä mielessä <a href="https://fi.wikipedia.org/wiki/Cantorin_diagonaaliargumentti">enemmän kuin rationaalilukuja</a>. Kuten matematiikan professori Olli Martio <a href="http://www.tieteessatapahtuu.fi/0204/martio.pdf">on todennut</a>: </p>
-
-            <blockquote>
-                "Muutaman tuhannen vuoden takaiset matematiikan tulokset, kuten suorakulmaista kolmiota koskeva Pythagoraan lause, muodostavat edelleen ihmiskunnan kulttuuriperinnön kivijalan."
-            </blockquote>
-
-            <p>Edellä puhuttiin todistamisesta. Pythagoraan lauseen tunsivat viimeistään <a href="http://matematiikkalehtisolmu.fi/2000/mathist/html/kreikka/index.html#pythagoras">pythagoralaiset noin 500 e.a.a</a>., mutta mistä tiedämme, että se tosiaan pätee kaikille suorakulmaisille kolmioille? Pystymme <em>todistamaan</em> Pythagoraan lauseen todeksi ja olet ehkä nähnyt erilaisia <a href="https://www.youtube.com/watch?v=hMHuDpKyE3Q">todistuksia sille</a>. </p>
-
-            <p>Olemme tottuneita hyödyntämään monia tosina pitämiämme matematiikan tuloksia. Ne erottaa mielipiteistä tai luuloista se, että ne voidaan todistaa paikkaansa pitäviksi. Todistaminen ei aina ole kovin yksinkertaista. Jos olet esimerkiksi alakoulussa oppinut jakamaan lukuja jakokulmassa, et todennäköisesti vielä ole nähnyt todistusta sille, että jakokulma todellakin toimii. Todistus vaatii <a href="https://fi.wikipedia.org/wiki/Jakoyht%C3%A4l%C3%B6">tiedon jakoyhtälön totuudesta</a>, jota tutkitaan esimerkiksi kurssilla MAA11 tai yliopiston ensimmäisillä algebran kursseilla. </p>
-
-            <p>Monia matemaattisia totuuksia ei olla vielä löydetty. Matemaatikot eri puolilla maailmaa työskentelevät paraikaa lukemattomien matemaattisten ongelmien parissa, etsien niiden totuutta. Yksi maailman tunnetuimmista matemaattisista ongelmista oli, onko olemassa positiiviset kokonaisluvut $a$, $b$ ja $c$, jotka toteuttavat Pythagoraan lauseen yhtälöä muistuttavan yhtälön 
+                    $$a^2 + b^2 = c^2.$$</p>
 
 
 
-                $$a^n + b^n = c^n,$$</p>
+                <p>Ehkä sinulle heräsi yläkoulussa kysymys, miksi tällaistakin pitäisi osata. Yksinkertainen vastaus olisi se, että sen avulla pystytään laskemaan erilaisten suorakulmaisten kolmioiden sivujen pituuksia. Tämä on merkittävä syy ja osoittaa Pythagoraan lauseen voiman, sillä se pätee <em>kaikkiin</em> suorakulmaisiin kolmioihin. Tämä on kuitenkin vain pintaraapaisu.</p> 
+
+                <p>Yksi ihmismieltä askarruttanut arvaamaton tulos Pythagoraan lauseesta saadaan, kun laitetaan $a$:n ja $b$:n tilalle luku 1. Huomaat, että $c$ saa hyvin oudon arvon. Tämä arvo on esimerkki irrationaaliluvusta, luvusta joka ei ole murtoluku, eli sitä ei voi esittää kahden kokonaisluvun suhteena. Tämän antiikin kreikkalaiset pystyivät todistamaan, ja se saatetaan myös todistaa kurssissa MAA11. Kesti jokunen tuhat vuotta, kunnes äärettömyydestä ja äärettömistä joukoista ymmärrettiin matemaattisesti niin paljon, että 1800-luvulla pystyttiin todistamaan, että näitä irrationaalilukuja on tietyssä mielessä <a href="https://fi.wikipedia.org/wiki/Cantorin_diagonaaliargumentti">enemmän kuin rationaalilukuja</a>. Kuten matematiikan professori Olli Martio <a href="http://www.tieteessatapahtuu.fi/0204/martio.pdf">on todennut</a>: </p>
+
+                <blockquote>
+                    "Muutaman tuhannen vuoden takaiset matematiikan tulokset, kuten suorakulmaista kolmiota koskeva Pythagoraan lause, muodostavat edelleen ihmiskunnan kulttuuriperinnön kivijalan."
+                </blockquote>
+
+                <p>Edellä puhuttiin todistamisesta. Pythagoraan lauseen tunsivat viimeistään <a href="http://matematiikkalehtisolmu.fi/2000/mathist/html/kreikka/index.html#pythagoras">pythagoralaiset noin 500 e.a.a</a>., mutta mistä tiedämme, että se tosiaan pätee kaikille suorakulmaisille kolmioille? Pystymme <em>todistamaan</em> Pythagoraan lauseen todeksi ja olet ehkä nähnyt erilaisia <a href="https://www.youtube.com/watch?v=hMHuDpKyE3Q">todistuksia sille</a>. </p>
+
+                <p>Olemme tottuneita hyödyntämään monia tosina pitämiämme matematiikan tuloksia. Ne erottaa mielipiteistä tai luuloista se, että ne voidaan todistaa paikkaansa pitäviksi. Todistaminen ei aina ole kovin yksinkertaista. Jos olet esimerkiksi alakoulussa oppinut jakamaan lukuja jakokulmassa, et todennäköisesti vielä ole nähnyt todistusta sille, että jakokulma todellakin toimii. Todistus vaatii <a href="https://fi.wikipedia.org/wiki/Jakoyht%C3%A4l%C3%B6">tiedon jakoyhtälön totuudesta</a>, jota tutkitaan esimerkiksi kurssilla MAA11 tai yliopiston ensimmäisillä algebran kursseilla. </p>
+
+                <p>Monia matemaattisia totuuksia ei olla vielä löydetty. Matemaatikot eri puolilla maailmaa työskentelevät paraikaa lukemattomien matemaattisten ongelmien parissa, etsien niiden totuutta. Yksi maailman tunnetuimmista matemaattisista ongelmista oli, onko olemassa positiiviset kokonaisluvut $a$, $b$ ja $c$, jotka toteuttavat Pythagoraan lauseen yhtälöä muistuttavan yhtälön 
 
 
 
-            <p>jos $n$ on lukua 2 suurempi luonnollinen luku. Kysymyksen esitti antiikin kreikkalainen matemaatikko Diofantos ja ranskalainen matemaatikko Pierre Fermat kirjoitti 1600-luvulla löytäneensä vastauksen. Hänen vastaustaan ei kuitenkaan koskaan löydetty.</p>
-            <p>Kului yli 300 vuotta ja useiden aikansa nerokkaimpien matemaatikoiden yrityksiä kunnes brittiläinen matemaatikko Andrew Wiles selvitti tämän Fermat'n suureksi lauseeksi kutsutun ongelman. Vastaus on, että sellaista lukua $n$ ei ole olemassa. Tämän selvittämiseksi Wiles joutui <a href="https://jyx.jyu.fi/dspace/bitstream/handle/123456789/18448/URN_NBN_fi_jyu-200803251286.pdf?sequence=1">kehittämään runsaasti uutta matemaattista teoriaa</a>.</p>
+                    $$a^n + b^n = c^n,$$</p>
 
+
+
+                <p>jos $n$ on lukua 2 suurempi luonnollinen luku. Kysymyksen esitti antiikin kreikkalainen matemaatikko Diofantos ja ranskalainen matemaatikko Pierre Fermat kirjoitti 1600-luvulla löytäneensä vastauksen. Hänen vastaustaan ei kuitenkaan koskaan löydetty.</p>
+                <p>Kului yli 300 vuotta ja useiden aikansa nerokkaimpien matemaatikoiden yrityksiä kunnes brittiläinen matemaatikko Andrew Wiles selvitti tämän Fermat'n suureksi lauseeksi kutsutun ongelman. Vastaus on, että sellaista lukua $n$ ei ole olemassa. Tämän selvittämiseksi Wiles joutui <a href="https://jyx.jyu.fi/dspace/bitstream/handle/123456789/18448/URN_NBN_fi_jyu-200803251286.pdf?sequence=1">kehittämään runsaasti uutta matemaattista teoriaa</a>.</p>
+            </div>
 
             <div class="tehtavat">
 
-                <div class="tehtava" id="ratkaisematonongelma-ex">
+                <div class="tehtava" id="b4840812-7dff-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#ratkaisematonongelma">
                                 Ratkaisematon ongelma
                             </a>
@@ -213,16 +217,16 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
-            <p>Sinulle on ehkä kerrottu, että matematiikan opiskelu harjaannuttaa ajattelun taitoa. Tämä ei luonnollisesti ole matematiikan erityisoikeus, vaan eri oppiaineet harjaannuttavat erilaisia ajattelun taitoja. Kuten yllä on pohdittu, voidaan kuitenkin sanoa, että ihmiskunnan kehityksen kannalta matemaattisen ajattelun merkitys on ollut merkittävä.</p> 
-            <p>Matematiikka on aikojen saatossa kehittynyt monitahoiseksi tieteeksi. <a href="http://www.ams.org/msc/msc2010.html">Kansainvälisessä luokittelussa</a> matematiikka on jaettu noin 50 pääryhmään
-            ja nämä edelleen aliryhmiin. Kussakin näistä on omat avoimet ongelmansa, joita matemaatikot ympäri maailmaa yrittävät ratkaista. Esimerkiksi algebra tutkii laskutoimituksia, geometria ja logiikka todistamista sekä matematiikan perusteita.</p>
-            <p>Akateemikko Olli Lehto <a href="http://www.tieteessatapahtuu.fi/896/lehto.html">on todennut</a>: </p>
-            <blockquote>
-                "Pohjimmaltaan paljolti matematiikkaan perustuva luonnontieteellis-teknologinen tieto on edellytyksenä menestymiseen taloudellisessa kilpailussa, se on pohjana yhteiskuntaa ohjaaville poliittisille päätöksille, ja sitä tarvitaan kestävän kehityksen turvaamisessa."
-            </blockquote>
-            <p>Kuka tietää mikä matematiikan ja matemaattisen ajattelun muoto seuraavaksi mullistaa yhteiskuntaamme!</p>
-
+            <div class="teoria">
+                <p>Sinulle on ehkä kerrottu, että matematiikan opiskelu harjaannuttaa ajattelun taitoa. Tämä ei luonnollisesti ole matematiikan erityisoikeus, vaan eri oppiaineet harjaannuttavat erilaisia ajattelun taitoja. Kuten yllä on pohdittu, voidaan kuitenkin sanoa, että ihmiskunnan kehityksen kannalta matemaattisen ajattelun merkitys on ollut merkittävä.</p> 
+                <p>Matematiikka on aikojen saatossa kehittynyt monitahoiseksi tieteeksi. <a href="http://www.ams.org/msc/msc2010.html">Kansainvälisessä luokittelussa</a> matematiikka on jaettu noin 50 pääryhmään
+                    ja nämä edelleen aliryhmiin. Kussakin näistä on omat avoimet ongelmansa, joita matemaatikot ympäri maailmaa yrittävät ratkaista. Esimerkiksi algebra tutkii laskutoimituksia, geometria ja logiikka todistamista sekä matematiikan perusteita.</p>
+                <p>Akateemikko Olli Lehto <a href="http://www.tieteessatapahtuu.fi/896/lehto.html">on todennut</a>: </p>
+                <blockquote>
+                    "Pohjimmaltaan paljolti matematiikkaan perustuva luonnontieteellis-teknologinen tieto on edellytyksenä menestymiseen taloudellisessa kilpailussa, se on pohjana yhteiskuntaa ohjaaville poliittisille päätöksille, ja sitä tarvitaan kestävän kehityksen turvaamisessa."
+                </blockquote>
+                <p>Kuka tietää mikä matematiikan ja matemaattisen ajattelun muoto seuraavaksi mullistaa yhteiskuntaamme!</p>
+            </div>
         </div>
     </section>
 

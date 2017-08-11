@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tulostaulu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        width: 100%;
+        padding: 15px;
+    }
+
+    table {
+        border-spacing: 0 0;
+        table-layout: fixed;
+    }
+
+    .scoreboard {
+        width: 100%;
+        overflow: scroll;
+    }
+
+    td {
+        white-space: nowrap;
+    }
+
+    th {
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+        min-width: 24px;
+        max-width: 24px;
+    }
+
+    .name {
+        text-align: right;
+        font-size: 11pt;
+        font-family: sans-serif;
+        font-weight: 400;
+        padding-right: 8px;
+    }
+
+    .red {
+        margin: 1px;
+        width: 24px;
+        height: 24px;
+        background: rgb(217, 83, 79);
+    }
+
+    .yellow {
+        margin: 1px;
+        width: 24px;
+        height: 24px;
+        background: rgb(240, 173, 78);
+    }
+
+    .green { 
+        margin: 1px;
+        width: 24px;
+        height: 24px;
+        background: rgb(92, 184, 92);
+    }
+
+    .gray {
+        margin: 1px;
+        width: 24px;
+        height: 24px;
+        background: rgb(105,105,105);
+    }
+
+    .white {
+        margin: 1px;
+        width: 24px;
+        height: 24px;
+        background: #bdc3c7 !important;
+    }
+
+    .black {
+        margin: 1px;
+        width: 24px;
+        height: 24px;
+        background: #16BDEC;
+    }
+
+    .numberHeader {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+        font-size: 11pt;
+        font-family: sans-serif;
+        font-weight: 400;
+        text-align: left;
+        
+        padding: 8px 0;
+    }
+
+    tfoot {
+        border-top: 1px dashed #333;
+    }
+
+    tfoot > tr > td.name {
+        font-weight: 800 !important;
+    }
+</style>
+<body>
+
+<div class='alert alert-info' id>
+    <strong>Ladataan tulostaulua...</strong>
+</div>
+
+<div class="scoreboard"></div>
+
+<!-- JavaScript -->
+<script src="/js/session.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/sorttable.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/view.js"></script>
+<script src="/js/exercises.js"></script>
+<script src="/js/scoreboard.js"></script>
+<script src="/js/backend.js"></script>
+<script src="/js/fullscreen.js"></script>
+
+</body>
+</html>

@@ -5,14 +5,14 @@ navigation:
     name: Kurssin etusivu
     path: /kurssit/maa4/
   -
-    name: Vektorit ja <i>xy</i>-koordinaatisto
+    name: 1. Vektorit ja <i>xy</i>-koordinaatisto
     path: /kurssit/maa4/xy-taso/
   -
-    name: Vektorit ja <i>xyz</i>-koordinaatisto
+    name: 2. Vektorit ja <i>xyz</i>-koordinaatisto
     path: /kurssit/maa4/xyz-koordinaatisto/
   -
-    name: Suorat ja tasot
+    name: 3. Suorat ja tasot
     path: /kurssit/maa4/suoratJaTasot/
   -
-    name: Geometriaa vektoreiden avulla
+    name: 4. Geometriaa vektoreiden avulla
     path: /kurssit/maa4/geometriaaVektoreidenAvulla/

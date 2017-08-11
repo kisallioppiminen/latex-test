@@ -5,17 +5,17 @@ navigation:
     name: Kurssin etusivu
     path: /kurssit/maa5/
   -
-    name: Etäisyys
+    name: 1. Etäisyys
     path: /kurssit/maa5/luku0/
   -
-    name: Suora
+    name: 2. Suora
     path: /kurssit/maa5/luku1/
   -
-    name: Ympyrä
+    name: 3. Ympyrä
     path: /kurssit/maa5/luku2/
   -
-    name: Paraabeli ja muita pistejoukkoja
+    name: 4. Paraabeli ja muita pistejoukkoja
     path: /kurssit/maa5/luku3/
   -
-    name: Itseisarvoyhtälö ja -epäyhtälö
+    name: 5. Itseisarvoyhtälö ja -epäyhtälö
     path: /kurssit/maa5/luku4/

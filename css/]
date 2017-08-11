@@ -1,0 +1,29 @@
+// #login-modal h3 {
+//   text-align: left
+//   font-weight: bold;
+// }
+//
+// #login-modal {
+//   text-align: left;
+// }
+
+#login-modal {
+  text-align: left;
+}
+
+.modal-body > h3 {
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
+.modal-body > p {
+  line-height: 1;
+  font-size: 0.8em;
+  text-transform: none;
+}
+
+.modal-body nav a {
+  padding: 0;
+  margin: 0;
+}

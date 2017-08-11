@@ -9,6 +9,8 @@ topnav: maa6
 <input type="hidden" id="chapterNumber" value="6"/>
 <input type="hidden" id="theoremStart" value="13"/>
 
+{% include bottomnav.html %}
+
 <article>
     <section>
         <header>
@@ -30,7 +32,7 @@ topnav: maa6
                     Tämän luvun tavoitteena on, että ... Osaat
                 <ul>
                     <li> </li>
-                    
+
                 </ul> 
                 </p>
             </div>
@@ -42,8 +44,8 @@ topnav: maa6
         </div>
     </section>
 
-        <section class="panel">
-        <header>
+    <section class="panel">
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#saantoja3">
                     Funktioiden tulo
@@ -51,39 +53,39 @@ topnav: maa6
             </h1>
         </header>
         <div id="saantoja3" class="collapse">
-
-            <p>
-                Tässä kappaleessa johdetaan derivointisäännöt funktioiden tulolle ja funktion potenssille. Tulon derivointisääntöä tarvitaan toden teolla vasta seuraavassa kurssissa MAA7, mutta sen avulla saadaan seuraavassa kappaleessa johdettua funktioiden osamäärän derivointisääntö. Sitä tarvitaan rationaalifunktioiden derivoimiseen.
-            </p>
-
-            <p>
-                Aloitetaan sopimalla, mitä funktioiden tulolla tarkoitetaan:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: FUNKTIOIDEN TULO</h3>
+            <div class="teoria">
                 <p>
-                    Funktioiden $f$ ja $g$ <em>tulo</em> tarkoittaa funktiota, jonka arvo kohdassa $x$ on funktioiden $f$ ja $g$ arvojen tulo:
-                    $$(fg)(x) = f(x)g(x).$$
+                    Tässä kappaleessa johdetaan derivointisäännöt funktioiden tulolle ja funktion potenssille. Tulon derivointisääntöä tarvitaan toden teolla vasta seuraavassa kurssissa MAA7, mutta sen avulla saadaan seuraavassa kappaleessa johdettua funktioiden osamäärän derivointisääntö. Sitä tarvitaan rationaalifunktioiden derivoimiseen.
+                </p>
+
+                <p>
+                    Aloitetaan sopimalla, mitä funktioiden tulolla tarkoitetaan:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: FUNKTIOIDEN TULO</h3>
+                    <p>
+                        Funktioiden $f$ ja $g$ <em>tulo</em> tarkoittaa funktiota, jonka arvo kohdassa $x$ on funktioiden $f$ ja $g$ arvojen tulo:
+                        $$(fg)(x) = f(x)g(x).$$
+                    </p>
+                </div>
+
+                <p>
+                    Esimerkiksi funktio 
+                    $$h(x) = x^2(0{,}5x-1)$$ 
+                    voidaan tulkita funktioiden $f(x) = x^2$ ja $g(x) = 0{,}5x-1$ tuloksi:
+                    $$h(x) = f(x)g(x).$$
+                    <img src="/kurssit/maa6/kuvat/kuva49.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+
+                <p>
+                    Jos funktioiden tulon lauseke voidaan sieventää yhdeksi polynomiksi, saadaan derivaatta määritettyä aiemmin opitulla tavalla. Tätä harjoitellaan seuraavassa tehtävässä.   
                 </p>
             </div>
-
-            <p>
-                Esimerkiksi funktio 
-                $$h(x) = x^2(0{,}5x-1)$$ 
-                voidaan tulkita funktioiden $f(x) = x^2$ ja $g(x) = 0{,}5x-1$ tuloksi:
-                $$h(x) = f(x)g(x).$$
-                <img src="/kurssit/maa6/kuvat/kuva49.png" max-width: 100%; width: auto; height: auto;/>
-            </p>
-
-            <p>
-                Jos funktioiden tulon lauseke voidaan sieventää yhdeksi polynomiksi, saadaan derivaatta määritettyä aiemmin opitulla tavalla. Tätä harjoitellaan seuraavassa tehtävässä.   
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="t413-ex">
+                <div class="tehtava" id="03f9a2a4-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t413">
                                 Funktioiden tulon derivaatta
                             </a>
@@ -108,64 +110,64 @@ topnav: maa6
                             </a>
                         </h2>
                         <div id="t413_v" class="collapse">
-                        <ol class="a">
-                            <li> $(fg)(x) = 4x^5 + 7x^3 - 20x^2 - 35$ </li>
-                            <li> $(fg)'(x) = 20x^4 + 21x^2 - 40x$ </li>
-                            <!-- <li> $f'(x) = 3x^2$ ja $g(x) = 8x$ </li> -->
-                            <li> $f'(x)g'(x) = 24x^3$ </li>
-                            <li> Tulon derivaatta ei ole derivaattojen tulo. (Tulon derivaatta esimerkiksi kohdassa $x = 1$ on $(fg)'(1) = 1$ mutta derivaattojen tulo on $f'(1)g'(1) = 24$.)</li>
-                        </ol>
+                            <ol class="a">
+                                <li> $(fg)(x) = 4x^5 + 7x^3 - 20x^2 - 35$ </li>
+                                <li> $(fg)'(x) = 20x^4 + 21x^2 - 40x$ </li>
+                                <!-- <li> $f'(x) = 3x^2$ ja $g(x) = 8x$ </li> -->
+                                <li> $f'(x)g'(x) = 24x^3$ </li>
+                                <li> Tulon derivaatta ei ole derivaattojen tulo. (Tulon derivaatta esimerkiksi kohdassa $x = 1$ on $(fg)'(1) = 1$ mutta derivaattojen tulo on $f'(1)g'(1) = 24$.)</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <p>
-                Edellinen tehtävä osoittaa, että funktioiden tulon derivaatta <b>ei ole</b> sama kuin derivaattojen tulo. Yleispätevä sääntö on monimutkaisempi ja se todistetaan seuraavassa teoreemassa. Lue teoreema ja sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa. Jos sievennyksen yksityiskohdat tuntuvat kovin hankalilta, keskity aluksi tunnistamaan perustelusta kolme vaihetta ja vertaa niitä teoreeman 8 perusteluun.
-            </p>
-
-            <div class="theorem" id="FUNKTIOIDEN TULON DERIVAATTA">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Oletetaan, että funktio $f$ ja $g$ ovat derivoituvia. Tulofunktion $fg$ derivaattafunktio on 
-                    $$(fg)'(x) = f'(x)g(x) + f(x)g'(x)$$
-                    eli
-                    $$\mathop{\mathrm{D}} f(x)g(x) = f'(x)g(x) + f(x)g'(x).$$ 
+                    Edellinen tehtävä osoittaa, että funktioiden tulon derivaatta <b>ei ole</b> sama kuin derivaattojen tulo. Yleispätevä sääntö on monimutkaisempi ja se todistetaan seuraavassa teoreemassa. Lue teoreema ja sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa. Jos sievennyksen yksityiskohdat tuntuvat kovin hankalilta, keskity aluksi tunnistamaan perustelusta kolme vaihetta ja vertaa niitä teoreeman 8 perusteluun.
                 </p>
-                <div class="proof">
+
+                <div class="theorem" id="FUNKTIOIDEN TULON DERIVAATTA">
+                    <h3>TEOREEMA</h3>
                     <p>
-                        Perustelu: Tulon $fg$ erotusosamäärä kohdassa $a$ on
-                        $$
-                        \frac{f(x)g(x) - f(a)g(a)}{x-a}.
-                        $$
-                        Joku on keksinyt, että osoittajassa kannattaa lisätä ja vähentää sama termi $\textcolor{red}{f(a)g(x)}$:
-                        \begin{align*}
-                        &\phantom{ {} = {} } f(x)g(x) - f(a)g(a) \\[2mm]
-                        &= f(x)g(x) \textcolor{red}{ - f(a)g(x)} \\
-                        &\phantom{ {} = f(x)g(x) {} } \textcolor{red}{ + f(a)g(x)} - f(a)g(a) \\[2mm]
-                        &= (f(x)-f(a))g(x) \\
-                        &\phantom{ {} = (f(x) {} }+ f(a)(g(x)-g(a))
-                        \end{align*}
-                        Erotusosamäärä saadaan näin muotoon
-                        \begin{multline*}
-                        \frac{f(x) - f(a)}{x-a}g(x) + f(a)\frac{g(x) - g(a)}{x-a}
-                        \end{multline*}
-                        Koska funktiot $f$ ja $g$ ovat derivoituvia, niiden erotusosamäärillä on raja-arvot. Lisäksi koska funktio $g$ on derivoituva, se on myös jatkuva (teoreema 3). Siten $g(x) \rightarrow g(a)$, kun $x \rightarrow a$. 
-                        Siis
-                        \begin{multline*}
-                        \frac{f(x) - f(a)}{x-a}g(x) + f(a)\frac{g(x) - g(a)}{x-a} \\[2mm]
-                        \xrightarrow[x \rightarrow a]{} f'(a)g(a) + f(a)g'(a)
-                        \end{multline*}
-                        Näin on osoitettu, että
-                        $$(fg)'(a) = f'(a)g(a) + f(a)g'(a).$$
-                    </p>      
+                        Oletetaan, että funktio $f$ ja $g$ ovat derivoituvia. Tulofunktion $fg$ derivaattafunktio on 
+                        $$(fg)'(x) = f'(x)g(x) + f(x)g'(x)$$
+                        eli
+                        $$\mathop{\mathrm{D}} f(x)g(x) = f'(x)g(x) + f(x)g'(x).$$ 
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Tulon $fg$ erotusosamäärä kohdassa $a$ on
+                            $$
+                            \frac{f(x)g(x) - f(a)g(a)}{x-a}.
+                            $$
+                            Joku on keksinyt, että osoittajassa kannattaa lisätä ja vähentää sama termi $\textcolor{red}{f(a)g(x)}$:
+                            \begin{align*}
+                            &\phantom{ {} = {} } f(x)g(x) - f(a)g(a) \\[2mm]
+                            &= f(x)g(x) \textcolor{red}{ - f(a)g(x)} \\
+                            &\phantom{ {} = f(x)g(x) {} } \textcolor{red}{ + f(a)g(x)} - f(a)g(a) \\[2mm]
+                            &= (f(x)-f(a))g(x) \\
+                            &\phantom{ {} = (f(x) {} }+ f(a)(g(x)-g(a))
+                            \end{align*}
+                            Erotusosamäärä saadaan näin muotoon
+                            \begin{multline*}
+                            \frac{f(x) - f(a)}{x-a}g(x) + f(a)\frac{g(x) - g(a)}{x-a}
+                            \end{multline*}
+                            Koska funktiot $f$ ja $g$ ovat derivoituvia, niiden erotusosamäärillä on raja-arvot. Lisäksi koska funktio $g$ on derivoituva, se on myös jatkuva (teoreema 3). Siten $g(x) \rightarrow g(a)$, kun $x \rightarrow a$. 
+                            Siis
+                            \begin{multline*}
+                            \frac{f(x) - f(a)}{x-a}g(x) + f(a)\frac{g(x) - g(a)}{x-a} \\[2mm]
+                            \xrightarrow[x \rightarrow a]{} f'(a)g(a) + f(a)g'(a)
+                            \end{multline*}
+                            Näin on osoitettu, että
+                            $$(fg)'(a) = f'(a)g(a) + f(a)g'(a).$$
+                        </p>      
+                    </div>
                 </div>
             </div>
-
             <div class="tehtavat">
-                <div class="tehtava" id="t414-ex">
+                <div class="tehtava" id="03f9a402-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t414">
                                 Funktioiden tulon derivaatta
                             </a>
@@ -186,39 +188,39 @@ topnav: maa6
                             </a>
                         </h2>
                         <div id="t414_v" class="collapse">
-                        <ol class="a">
-                            <li> $h'(x) = (2x-4)(x^3 + 6x) + (x^2-4x)(3x^2+6)$ </li>
-                            <li> $h'(3) = -9$ </li>
-                            <li> Funktion $h$ arvot pienenevät kohdassa $x = 3$, koska kasvunopeus on negatiivinen. </li>
-                        </ol>
+                            <ol class="a">
+                                <li> $h'(x) = (2x-4)(x^3 + 6x) + (x^2-4x)(3x^2+6)$ </li>
+                                <li> $h'(3) = -9$ </li>
+                                <li> Funktion $h$ arvot pienenevät kohdassa $x = 3$, koska kasvunopeus on negatiivinen. </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <p>
-                Funktioiden tulon yksi erikoistapaus on funktion potenssi. Esimerkiksi funktio $g(x) = (x^2 + 9x)^4$ voidaan tulkita funktion $f(x) = x^2 + 9x$ neljänneksi potenssiksi:
-                $$g(x) = (f(x))^4.$$
-                Funktioiden tulon derivointisääntöä voidaan soveltaa funktion $f$ toiseen potenssiin:
-                \begin{align*}
-                \mathop{\mathrm{D}} (f(x))^2 &= \mathop{\mathrm{D}}f(x)f(x) \\[1mm]
-                &= f'(x)f(x) + f(x)f'(x) \\[1mm]
-                &= 2f(x)f'(x)
-                \end{align*}
-                Tämän tiedon ja tulon derivointisäännön avulla saadaan määritettyä funktion $f$ kolmannen potenssin derivaatta:
-                \begin{align*}
-                \mathop{\mathrm{D}} (f(x))^3 &= \mathop{\mathrm{D}}f(x)(f(x))^2 \\[1mm]
-                &= f'(x)(f(x))^2 + f(x)\mathop{\mathrm{D}}(f(x))^2 \\[1mm]
-                &= f'(x)(f(x))^2 + f(x)\cdot 2f(x)f'(x) \\[1mm]
-                &= (f(x))^2f'(x) + 2(f(x))^2f'(x) \\[1mm]
-                &= 3(f(x))^2f'(x)
-                \end{align*}
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Funktioiden tulon yksi erikoistapaus on funktion potenssi. Esimerkiksi funktio $g(x) = (x^2 + 9x)^4$ voidaan tulkita funktion $f(x) = x^2 + 9x$ neljänneksi potenssiksi:
+                    $$g(x) = (f(x))^4.$$
+                    Funktioiden tulon derivointisääntöä voidaan soveltaa funktion $f$ toiseen potenssiin:
+                    \begin{align*}
+                    \mathop{\mathrm{D}} (f(x))^2 &= \mathop{\mathrm{D}}f(x)f(x) \\[1mm]
+                    &= f'(x)f(x) + f(x)f'(x) \\[1mm]
+                    &= 2f(x)f'(x)
+                    \end{align*}
+                    Tämän tiedon ja tulon derivointisäännön avulla saadaan määritettyä funktion $f$ kolmannen potenssin derivaatta:
+                    \begin{align*}
+                    \mathop{\mathrm{D}} (f(x))^3 &= \mathop{\mathrm{D}}f(x)(f(x))^2 \\[1mm]
+                    &= f'(x)(f(x))^2 + f(x)\mathop{\mathrm{D}}(f(x))^2 \\[1mm]
+                    &= f'(x)(f(x))^2 + f(x)\cdot 2f(x)f'(x) \\[1mm]
+                    &= (f(x))^2f'(x) + 2(f(x))^2f'(x) \\[1mm]
+                    &= 3(f(x))^2f'(x)
+                    \end{align*}
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t415-ex">
+                <div class="tehtava" id="03f9a970-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t415">
                                 Funktion potenssin derivaatta
                             </a>
@@ -253,28 +255,28 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
-            <p>
-                On mahdollista osoittaa, että vastaava funktion potenssin derivointisääntö pätee kaikilla positiivisilla kokonaislukueksponenteilla:
-            </p>
-
-            <div class="theorem" id="FUNKTION POTENSSIN DERIVAATTA">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Oletetaan, että funktio $f$ on derivoituva. Olkoon $n$ on positiivinen kokonaisluku. Tällöin
-                    $$\mathop{\mathrm{D}} (f(x))^n = n(f(x))^{n-1}f'(x).$$ 
+                    On mahdollista osoittaa, että vastaava funktion potenssin derivointisääntö pätee kaikilla positiivisilla kokonaislukueksponenteilla:
                 </p>
-                <div class="proof">
+
+                <div class="theorem" id="FUNKTION POTENSSIN DERIVAATTA">
+                    <h3>TEOREEMA</h3>
                     <p>
-                        Teoreema voidaan perustella esimerkiksi matemaattisella induktiolla, johon tutustutaan kurssissa MAA11.
-                    </p>      
+                        Oletetaan, että funktio $f$ on derivoituva. Olkoon $n$ on positiivinen kokonaisluku. Tällöin
+                        $$\mathop{\mathrm{D}} (f(x))^n = n(f(x))^{n-1}f'(x).$$ 
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Teoreema voidaan perustella esimerkiksi matemaattisella induktiolla, johon tutustutaan kurssissa MAA11.
+                        </p>      
+                    </div>
                 </div>
             </div>
-
             <div class="tehtavat">
-                <div class="tehtava" id="t416-ex">
+                <div class="tehtava" id="03f9ab0a-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t416">
                                 Funktion potenssin derivaatta
                             </a>
@@ -306,19 +308,19 @@ topnav: maa6
                         </h2>
                         <div id="t416_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                $f'(x) = 4(2x^2 - 8x)^3(4x-8)$. 
-                            </li>
-                            <li>
-                                $f'(1) = 3456$ 
-                            </li>
-                            <li>
-                                $y = 3456x - 2160$
-                            </li>
-                            <li>
-                                Derivaattafunktion nollakohdissa $x = 0$, $x = 2$, $x = 4$.
-                            </li>
-                        </ol>
+                                <li>
+                                    $f'(x) = 4(2x^2 - 8x)^3(4x-8)$. 
+                                </li>
+                                <li>
+                                    $f'(1) = 3456$ 
+                                </li>
+                                <li>
+                                    $y = 3456x - 2160$
+                                </li>
+                                <li>
+                                    Derivaattafunktion nollakohdissa $x = 0$, $x = 2$, $x = 4$.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -334,7 +336,7 @@ topnav: maa6
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#saantoja4">
                     Funktioiden osamäärä
@@ -342,66 +344,66 @@ topnav: maa6
             </h1>
         </header>
         <div id="saantoja4" class="collapse">
-
-            <p>
-                Tässä kappaleessa johdetaan funktioiden osamäärän derivointisääntö, jonka avulla saadaan määritettyä muun muassa rationaalifunktioiden derivaatat.
-            </p>
-
-            <p>
-                Aloitetaan sopimalla, mitä funktioiden osamäärällä tarkoitetaan:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: FUNKTIOIDEN OSAMÄÄRÄ</h3>
+            <div class="teoria">
                 <p>
-                    Funktioiden $f$ ja $g$ <em>osamäärä</em> tarkoittaa funktiota,
-                    jonka arvo kohdassa $x$ on funktioiden $f$ ja $g$ arvojen osamäärä:
-                    $$\left(\frac{f}{g}\right)(x) = \frac{f(x)}{g(x)}.$$
+                    Tässä kappaleessa johdetaan funktioiden osamäärän derivointisääntö, jonka avulla saadaan määritettyä muun muassa rationaalifunktioiden derivaatat.
                 </p>
-            </div>
-        
-            <p>
-                Esimerkiksi rationaalifunktio 
-                $$h(x) = \frac{5x-2}{x^2+5}$$
-                voidaan tulkita funktioiden $f(x) = 5x-2$ ja $g(x) = x^2+5$ osamääräksi:
-                $$h(x) = \frac{f(x)}{g(x)}.$$ 
-                Funktioiden osamäärän derivointisääntö saadaan johdettua tulon derivointisäännön avulla:
-            </p>
 
-            <div class="theorem" id="FUNKTIOIDEN OSAMÄÄRÄN DERIVAATTA">
-                <h3>TEOREEMA</h3>
                 <p>
-                    Oletetaan, että funktiot $f$ ja $g$ ovat derivoituvia. Niiden osamäärän derivaattafunktio on
-                    $$\mathop{\mathrm{D}} \frac{f(x)}{g(x)} = \frac{f'(x)g(x)- f(x)g'(x)}{(g(x))^2}$$ 
+                    Aloitetaan sopimalla, mitä funktioiden osamäärällä tarkoitetaan:
                 </p>
-                <div class="proof">
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: FUNKTIOIDEN OSAMÄÄRÄ</h3>
                     <p>
-                        Perustelu: Merkitään
-                        $$h(x) = \frac{f(x)}{g(x)},$$
-                        jolloin $f(x) = h(x)g(x)$. Funktion $f$ derivaatta saadaan tulon derivointisäännöllä:
-                        $$
-                        f'(x) = h'(x)g(x) + h(x)g'(x).
-                        $$
-                        Tästä yhtälöstä voidaan ratkaista funktion $h$ derivaatta:
-                        \begin{align*}
-                        h'(x)g(x) &= f'(x) - h(x)g'(x) \\[2mm]
-                        h'(x) &= \frac{1}{g(x)}\left(f'(x) - h(x)g'(x) \right)
-                        \end{align*}
-                        Kun funktion $h$ paikalle sijoitetaan funktioiden $f$ ja $g$ osamäärä, saadaan lauseke sievennettyä:
-                        \begin{align*}
-                        h'(x) &= \frac{1}{g(x)}\left(f'(x) - \frac{f(x)}{g(x)}g'(x) \right) \\[2mm]
-                        &= \frac{f'(x)}{g(x)} - \frac{f(x)g'(x)}{(g(x))^2} \\[2mm]
-                        &= \frac{f'(x)g(x)}{(g(x))^2} - \frac{f(x)g'(x)}{(g(x))^2} \\[2mm]
-                        &= \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2}
-                        \end{align*}
-                    </p>      
+                        Funktioiden $f$ ja $g$ <em>osamäärä</em> tarkoittaa funktiota,
+                        jonka arvo kohdassa $x$ on funktioiden $f$ ja $g$ arvojen osamäärä:
+                        $$\left(\frac{f}{g}\right)(x) = \frac{f(x)}{g(x)}.$$
+                    </p>
+                </div>
+
+                <p>
+                    Esimerkiksi rationaalifunktio 
+                    $$h(x) = \frac{5x-2}{x^2+5}$$
+                    voidaan tulkita funktioiden $f(x) = 5x-2$ ja $g(x) = x^2+5$ osamääräksi:
+                    $$h(x) = \frac{f(x)}{g(x)}.$$ 
+                    Funktioiden osamäärän derivointisääntö saadaan johdettua tulon derivointisäännön avulla:
+                </p>
+
+                <div class="theorem" id="FUNKTIOIDEN OSAMÄÄRÄN DERIVAATTA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että funktiot $f$ ja $g$ ovat derivoituvia. Niiden osamäärän derivaattafunktio on
+                        $$\mathop{\mathrm{D}} \frac{f(x)}{g(x)} = \frac{f'(x)g(x)- f(x)g'(x)}{(g(x))^2}$$ 
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Merkitään
+                            $$h(x) = \frac{f(x)}{g(x)},$$
+                            jolloin $f(x) = h(x)g(x)$. Funktion $f$ derivaatta saadaan tulon derivointisäännöllä:
+                            $$
+                            f'(x) = h'(x)g(x) + h(x)g'(x).
+                            $$
+                            Tästä yhtälöstä voidaan ratkaista funktion $h$ derivaatta:
+                            \begin{align*}
+                            h'(x)g(x) &= f'(x) - h(x)g'(x) \\[2mm]
+                            h'(x) &= \frac{1}{g(x)}\left(f'(x) - h(x)g'(x) \right)
+                            \end{align*}
+                            Kun funktion $h$ paikalle sijoitetaan funktioiden $f$ ja $g$ osamäärä, saadaan lauseke sievennettyä:
+                            \begin{align*}
+                            h'(x) &= \frac{1}{g(x)}\left(f'(x) - \frac{f(x)}{g(x)}g'(x) \right) \\[2mm]
+                            &= \frac{f'(x)}{g(x)} - \frac{f(x)g'(x)}{(g(x))^2} \\[2mm]
+                            &= \frac{f'(x)g(x)}{(g(x))^2} - \frac{f(x)g'(x)}{(g(x))^2} \\[2mm]
+                            &= \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2}
+                            \end{align*}
+                        </p>      
+                    </div>
                 </div>
             </div>
-
             <div class="tehtavat">
-                <div class="tehtava" id="t417-ex">
+                <div class="tehtava" id="03f9ac72-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t417">
                                 Funktioiden osamäärän derivaatta
                             </a>
@@ -432,66 +434,66 @@ topnav: maa6
                         </h2>
                         <div id="t417_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                Funktio $h$ ei ole määritelty kohdassa $x = 0$. 
-                            </li>
-                            <li>
-                                Derivaattafunktio on 
-                                $$h'(x) = \dfrac{5x^2-1}{x^2}.$$ 
-                                Se ole määritelty kohdassa $x = 0$.
-                            </li>
-                            <li>
-                                Kohdissa $x = -1$ ja $x = 1$. 
-                            </li>
-                            <li>
-                                $y = 4x - 2$ ja $y = 4x + 2$.
-                            </li>
-                        </ol>
+                                <li>
+                                    Funktio $h$ ei ole määritelty kohdassa $x = 0$. 
+                                </li>
+                                <li>
+                                    Derivaattafunktio on 
+                                    $$h'(x) = \dfrac{5x^2-1}{x^2}.$$ 
+                                    Se ole määritelty kohdassa $x = 0$.
+                                </li>
+                                <li>
+                                    Kohdissa $x = -1$ ja $x = 1$. 
+                                </li>
+                                <li>
+                                    $y = 4x - 2$ ja $y = 4x + 2$.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <p>
-                Osamäärän derivointisäännön avulla saadaan yleistettyä funktion potenssin derivointisääntö myös negatiivisten eksponenttien tapaukseen:
-            </p>
-
-            <div class="theorem" id="FUNKTION POTENSSIN DERIVAATTA">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Olkoon $n$ mikä tahansa kokonaisluku. Jos $f$ on derivoituva funktio, niin
-                    $$\mathop{\mathrm{D}} (f(x))^n = n(f(x))^{n-1}f'(x).$$
+                    Osamäärän derivointisäännön avulla saadaan yleistettyä funktion potenssin derivointisääntö myös negatiivisten eksponenttien tapaukseen:
                 </p>
-                <div class="proof">
+
+                <div class="theorem" id="FUNKTION POTENSSIN DERIVAATTA">
+                    <h3>TEOREEMA</h3>
                     <p>
-                        Perustelu: Oletetaan, että $f$ on derivoituva funktio. Tapaus, jossa kokonaisluku $n$ on positiivinen, on käsitelty teoreemassa 14. 
-                        <br>
-                        Jos $n = 0$, funktio $(f(x))^n$ on vakiofunktio, ja sen derivaatta on nolla. Toisaalta tässä tapauksessa myös 
-                        \begin{align*}
-                        n(f(x))^{n-1}f'(x) &= 0 \cdot (f(x))^{-1}f'(x) \\
-                        &= 0,
-                        \end{align*}
-                        joten derivointisääntö antaa oikean tuloksen. 
-                        <br>
-                        Tutkitaan vielä tapaus, jossa kokonaisluku $n$ on negatiivinen. Merkitään sen vastalukua kirjaimella $k$, jolloin $k$ on positiivinen. (Siis $k = -n$ eli $n = -k$.) Sovelletaan potenssien laskusääntöjä kurssilta <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1</a> sekä funktioiden osamäärän ja funktion potenssin derivointisääntöjä:
-                        \begin{align*}
-                        \mathop{\mathrm{D}} (f(x))^n &= \mathop{\mathrm{D}} \frac{1}{(f(x))^{-n}} \\[2mm]
-                        &= \mathop{\mathrm{D}} \frac{1}{(f(x))^{k}} \\[2mm]
-                        &= \frac{0 - k(f(x))^{k-1}f'(x)}{(f(x))^{2k}} \\[2mm]
-                        &=  -\frac{k(f(x))^{k-1}f'(x)}{(f(x))^{2k}} \\[2mm]
-                        &= -k(f(x))^{k-1-2k}f'(x) \\[2mm]
-                        &= -k(f(x))^{-k-1}f'(x) \\[2mm]
-                        &= n(f(x))^{n-1}f'(x)
-                        \end{align*}
-                        Huomaa, että funktion potenssin derivointisääntöä (teoreema 14) voidaan käyttää yllä olevassa päättelyssä, koska $k$ on positiivinen. 
-                    </p>      
+                        Olkoon $n$ mikä tahansa kokonaisluku. Jos $f$ on derivoituva funktio, niin
+                        $$\mathop{\mathrm{D}} (f(x))^n = n(f(x))^{n-1}f'(x).$$
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Oletetaan, että $f$ on derivoituva funktio. Tapaus, jossa kokonaisluku $n$ on positiivinen, on käsitelty teoreemassa 14. 
+                            <br>
+                            Jos $n = 0$, funktio $(f(x))^n$ on vakiofunktio, ja sen derivaatta on nolla. Toisaalta tässä tapauksessa myös 
+                            \begin{align*}
+                            n(f(x))^{n-1}f'(x) &= 0 \cdot (f(x))^{-1}f'(x) \\
+                            &= 0,
+                            \end{align*}
+                            joten derivointisääntö antaa oikean tuloksen. 
+                            <br>
+                            Tutkitaan vielä tapaus, jossa kokonaisluku $n$ on negatiivinen. Merkitään sen vastalukua kirjaimella $k$, jolloin $k$ on positiivinen. (Siis $k = -n$ eli $n = -k$.) Sovelletaan potenssien laskusääntöjä kurssilta <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1</a> sekä funktioiden osamäärän ja funktion potenssin derivointisääntöjä:
+                            \begin{align*}
+                            \mathop{\mathrm{D}} (f(x))^n &= \mathop{\mathrm{D}} \frac{1}{(f(x))^{-n}} \\[2mm]
+                            &= \mathop{\mathrm{D}} \frac{1}{(f(x))^{k}} \\[2mm]
+                            &= \frac{0 - k(f(x))^{k-1}f'(x)}{(f(x))^{2k}} \\[2mm]
+                            &=  -\frac{k(f(x))^{k-1}f'(x)}{(f(x))^{2k}} \\[2mm]
+                            &= -k(f(x))^{k-1-2k}f'(x) \\[2mm]
+                            &= -k(f(x))^{-k-1}f'(x) \\[2mm]
+                            &= n(f(x))^{n-1}f'(x)
+                            \end{align*}
+                            Huomaa, että funktion potenssin derivointisääntöä (teoreema 14) voidaan käyttää yllä olevassa päättelyssä, koska $k$ on positiivinen. 
+                        </p>      
+                    </div>
                 </div>
             </div>
-
             <div class="tehtavat">
-                <div class="tehtava" id="t606-ex">
+                <div class="tehtava" id="03f9b384-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t606">
                                 Funktion potenssin derivaatta
                             </a>
@@ -522,31 +524,31 @@ topnav: maa6
                         </h2>
                         <div id="t606_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                Funktio $g$ ei ole määritelty kohdassa $x = \frac{1}{5}$. 
-                            </li>
-                            <li>
-                                Derivaattafunktio on 
-                                $g'(x) = 10(1-5x)^{-3}$. 
-                                Se ole määritelty kohdassa $x = \frac{1}{5}$.
-                            </li>
-                            <li>
-                                Funktio $g$ on aidosti kasvava välillä $\left]-\infty, \frac{1}{5}\right[$ ja aidosti vähenevä välillä $\left]\frac{1}{5}, \infty\right[$
-                            </li>
-                        </ol>
+                                <li>
+                                    Funktio $g$ ei ole määritelty kohdassa $x = \frac{1}{5}$. 
+                                </li>
+                                <li>
+                                    Derivaattafunktio on 
+                                    $g'(x) = 10(1-5x)^{-3}$. 
+                                    Se ole määritelty kohdassa $x = \frac{1}{5}$.
+                                </li>
+                                <li>
+                                    Funktio $g$ on aidosti kasvava välillä $\left]-\infty, \frac{1}{5}\right[$ ja aidosti vähenevä välillä $\left]\frac{1}{5}, \infty\right[$
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <p>
-                Seuraavassa tehtävässä yleistetään potenssifunktion derivointisääntö myös negatiivisille eksponenteille.
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Seuraavassa tehtävässä yleistetään potenssifunktion derivointisääntö myös negatiivisille eksponenteille.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t607-ex">
+                <div class="tehtava" id="03f9b596-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t607">
                                 Funktion potenssin derivaatta
                             </a>
@@ -576,21 +578,21 @@ topnav: maa6
                         </h2>
                         <div id="t607_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                $f(x) = x$
-                            </li>
-                            <li>
-                                $f'(x) = 1$
-                            </li>
-                            <li>
-                                \begin{align*}
-                                g'(x) &= \mathop{\mathrm{D}} \left(f(x)\right)^n \\
-                                &= n\left(f(x)\right)^{n-1}f'(x) \\
-                                &= nx^{n-1}\cdot 1 \\
-                                &= nx^{n-1}
-                                \end{align*}
-                            </li>
-                        </ol>
+                                <li>
+                                    $f(x) = x$
+                                </li>
+                                <li>
+                                    $f'(x) = 1$
+                                </li>
+                                <li>
+                                    \begin{align*}
+                                    g'(x) &= \mathop{\mathrm{D}} \left(f(x)\right)^n \\
+                                    &= n\left(f(x)\right)^{n-1}f'(x) \\
+                                    &= nx^{n-1}\cdot 1 \\
+                                    &= nx^{n-1}
+                                    \end{align*}
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -599,24 +601,24 @@ topnav: maa6
             <p>
                 Edellisen tehtävän tuloksena saadaan seuraava teoreema:
             </p>
-
-            <div class="theorem" id="POTENSSIFUNKTION DERIVOINTISÄÄNNÖN YLEISTYS">
-                <h3>TEOREEMA</h3>
-                <p>
-                    Olkoon $n$ mikä tahansa kokonaisluku. Funktion $g(x) = x^n$ derivaattafunktio on 
-                    $$g'(x) = nx^{n-1}.$$
-                </p>
-                <div class="proof">
+            <div class="teoria">
+                <div class="theorem" id="POTENSSIFUNKTION DERIVOINTISÄÄNNÖN YLEISTYS">
+                    <h3>TEOREEMA</h3>
                     <p>
-                        Perustelu tehtävässä 6.7.
-                    </p>      
+                        Olkoon $n$ mikä tahansa kokonaisluku. Funktion $g(x) = x^n$ derivaattafunktio on 
+                        $$g'(x) = nx^{n-1}.$$
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 6.7.
+                        </p>      
+                    </div>
                 </div>
             </div>
-
             <div class="tehtavat">
-                <div class="tehtava" id="t608-ex">
+                <div class="tehtava" id="03f9b726-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t608">
                                 POTENSSIN DERIVOINTISÄÄNNÖN YLEISTYS
                             </a>
@@ -647,22 +649,22 @@ topnav: maa6
                         </h2>
                         <div id="t608_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                $f(x) = x^{-6}$ ja $f'(x) = -6x^{-7}$
-                            </li>
-                            <li>
-                                $f'(x) = \dfrac{0-6x^5}{x^{12}}$
-                            </li>
-                            <li>
-                                Tulokset ovat samat, koska kumpikin sievenee muotoon 
-                                $$f'(x) = -\dfrac{6}{x^7}.$$
-                            </li>
-                        </ol>
+                                <li>
+                                    $f(x) = x^{-6}$ ja $f'(x) = -6x^{-7}$
+                                </li>
+                                <li>
+                                    $f'(x) = \dfrac{0-6x^5}{x^{12}}$
+                                </li>
+                                <li>
+                                    Tulokset ovat samat, koska kumpikin sievenee muotoon 
+                                    $$f'(x) = -\dfrac{6}{x^7}.$$
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#saantoja4">
                     Sulje kappale
@@ -672,7 +674,7 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#viimeinen">
                     Rationaalifunktion kulku
@@ -680,27 +682,27 @@ topnav: maa6
             </h1>
         </header>
         <div id="viimeinen" class="collapse">
-
-            <p>
-                Nyt olemme hankkineet kaikki tiedot, joita tarvitaan rationaalifunktioiden kulun tutkimiseen. Jos haluamme esimerkiksi selvittää funktion 
-                $$
-                f(x) = \frac{x^2}{x-1}
-                $$
-                ääriarvot, pystymme 
-            </p>
+            <div class="teoria">
+                <p>
+                    Nyt olemme hankkineet kaikki tiedot, joita tarvitaan rationaalifunktioiden kulun tutkimiseen. Jos haluamme esimerkiksi selvittää funktion 
+                    $$
+                    f(x) = \frac{x^2}{x-1}
+                    $$
+                    ääriarvot, pystymme 
+                </p>
                 <ul>
                     <li> määrittämään derivaattafunktion osamäärän derivointisäännöllä </li>
                     <li> ratkaisemaan derivaattafunktion nollakohdat ja kohdat, joissa derivaattafunktio ei ole määritelty</li>
                     <li> laatimaan derivaattafunktiolle merkkikaavion ja täydentämään sen funktion $f$ kulkukaavioksi.</li>
                 </ul>
-            <p>
-                Erona aikaisempiin tilanteisiin on oikeastaan vain se, että rationaalifunktion derivaattafunktiolla saattaa olla kohtia, joissa derivaattafunktio ei ole määritelty. Nämä täytyy ottaa huomioon merkkikaaviossa (ks. <a href="http://kisallioppiminen.fi/kurssit/maa6/luku3/">luvun 3</a> kappale Rationaaliepäyhtälö). 
-            </p>
-
+                <p>
+                    Erona aikaisempiin tilanteisiin on oikeastaan vain se, että rationaalifunktion derivaattafunktiolla saattaa olla kohtia, joissa derivaattafunktio ei ole määritelty. Nämä täytyy ottaa huomioon merkkikaaviossa (ks. <a href="http://kisallioppiminen.fi/kurssit/maa6/luku3/">luvun 3</a> kappale Rationaaliepäyhtälö). 
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t609-ex">
+                <div class="tehtava" id="03f9b8ac-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t609">
                                 RATIONAALIFUNKTION KULKU
                             </a>
@@ -733,28 +735,28 @@ topnav: maa6
                         </h2>
                         <div id="t609_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                $f'(x) = \dfrac{x^2-2x}{(x-1)^2}$
-                            </li>
-                            <li>
-                                 Nollakohdat $x_1 = 0$ ja $x_2 = 2$. Derivaattafunktio ei ole määritelty nimittäjän nollakohdassa $x = 1$.
-                            </li>
-                            <li>
-                                
-                            </li>
-                            <li>
-                                Paikallinen maksimiarvo $f(0) = 0$ ja minimiarvo $f(2) = 4$.
-                            </li>
-                        </ol>
+                                <li>
+                                    $f'(x) = \dfrac{x^2-2x}{(x-1)^2}$
+                                </li>
+                                <li>
+                                    Nollakohdat $x_1 = 0$ ja $x_2 = 2$. Derivaattafunktio ei ole määritelty nimittäjän nollakohdassa $x = 1$.
+                                </li>
+                                <li>
+
+                                </li>
+                                <li>
+                                    Paikallinen maksimiarvo $f(0) = 0$ ja minimiarvo $f(2) = 4$.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t610-ex">
+                <div class="tehtava" id="03f9bd02-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t610">
                                 RATIONAALIFUNKTION KULKU
                             </a>
@@ -787,60 +789,60 @@ topnav: maa6
                         </h2>
                         <div id="t610_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                $g'(x) = \dfrac{-x^2-1}{(x^2-1)^2}$
-                            </li>
-                            <li>
-                                 Derivaattafunktiolla ei ole nollakohtia. Derivaattafunktio ei ole määritelty nimittäjän nollakohdissa $x_1 = 1$ ja $x_2 = -1$.
-                            </li>
-                            <li>
-                                
-                            </li>
-                            <li>
-                                Funktion kulkukaavio on 
-                                <br>
-                                <img src="/kurssit/maa6/kuvat/kuva86.png" max-width: 100%; width: auto; height: auto;/>
-                                <br>
-                                Funktiolla $g$ ei ole ääriarvoja.
-                            </li>
-                        </ol>
+                                <li>
+                                    $g'(x) = \dfrac{-x^2-1}{(x^2-1)^2}$
+                                </li>
+                                <li>
+                                    Derivaattafunktiolla ei ole nollakohtia. Derivaattafunktio ei ole määritelty nimittäjän nollakohdissa $x_1 = 1$ ja $x_2 = -1$.
+                                </li>
+                                <li>
+
+                                </li>
+                                <li>
+                                    Funktion kulkukaavio on 
+                                    <br>
+                                    <img src="/kurssit/maa6/kuvat/kuva86.png" max-width: 100%; width: auto; height: auto;/>
+                                         <br>
+                                    Funktiolla $g$ ei ole ääriarvoja.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <p>
-                Kohdat, joissa derivaattafunktio ei ole määritelty, täytyy huomioida myös silloin, kun kulkukaavion pohjalta tehdään päätelmiä funktion kasvamisesta ja vähenemisestä. Aikaisemmin luvussa 5 tarkasteltiin polynomifunktiota 
-                $$f(x) = \frac{1}{6}x^3 + 1,$$
-                jonka derivaattafunktio on 
-                $$f'(x) = \frac{1}{2}x^2.$$
-                Funktion $f$ kulkukaaviosta voidaan päätellä, että funktio $f$ on aidosti kasvava koko reaaliakselilla:
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva84.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Myös funktion $f$ kuvaaja tukee tätä johtopäätöstä:
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva85.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Tehtävässä 6.10 puolestaan tarkasteltiin rationaalifunktiota
-                $$
-                g(x) = \frac{x}{x^2-1},
-                $$
-                jonka kulkukaavioksi saatiin
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva86.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Kulkukaaviosta nähdään, että funktio $g$ on aidosti vähenevä väleillä $\left]-\infty, -1\right[$, $\left]-1, 1\right[$ ja $\left] 1, \infty\right[$. Se ei kuitenkaan ole aidosti vähenevä koko lukusuoralla, mikä nähdään funktion kuvaajasta:
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva87.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Kun kulkukaavion perusteella tehdään johtopäätöksiä, täytyy siis olla tarkkana, ovatko siihen merkityt erityiskohdat derivaatan nollakohtia vai kohtia, joissa derivaattafunktio ei ole määritelty. Funktion kuvaajan avulla voi usein tarkistaa, ovatko kulkukaaviosta tehdyt päätelmät oikein.
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Kohdat, joissa derivaattafunktio ei ole määritelty, täytyy huomioida myös silloin, kun kulkukaavion pohjalta tehdään päätelmiä funktion kasvamisesta ja vähenemisestä. Aikaisemmin luvussa 5 tarkasteltiin polynomifunktiota 
+                    $$f(x) = \frac{1}{6}x^3 + 1,$$
+                    jonka derivaattafunktio on 
+                    $$f'(x) = \frac{1}{2}x^2.$$
+                    Funktion $f$ kulkukaaviosta voidaan päätellä, että funktio $f$ on aidosti kasvava koko reaaliakselilla:
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva84.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Myös funktion $f$ kuvaaja tukee tätä johtopäätöstä:
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva85.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Tehtävässä 6.10 puolestaan tarkasteltiin rationaalifunktiota
+                    $$
+                    g(x) = \frac{x}{x^2-1},
+                    $$
+                    jonka kulkukaavioksi saatiin
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva86.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Kulkukaaviosta nähdään, että funktio $g$ on aidosti vähenevä väleillä $\left]-\infty, -1\right[$, $\left]-1, 1\right[$ ja $\left] 1, \infty\right[$. Se ei kuitenkaan ole aidosti vähenevä koko lukusuoralla, mikä nähdään funktion kuvaajasta:
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva87.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Kun kulkukaavion perusteella tehdään johtopäätöksiä, täytyy siis olla tarkkana, ovatko siihen merkityt erityiskohdat derivaatan nollakohtia vai kohtia, joissa derivaattafunktio ei ole määritelty. Funktion kuvaajan avulla voi usein tarkistaa, ovatko kulkukaaviosta tehdyt päätelmät oikein.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t611-ex">
+                <div class="tehtava" id="03f9be88-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t611">
                                 RATIONAALIFUNKTION KULKU
                             </a>
@@ -875,56 +877,56 @@ topnav: maa6
                         </h2>
                         <div id="t611_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                $f'(x) = \dfrac{2x}{(x^2+1)^2}$
-                            </li>
-                            <li>
-                                 
-                            </li>
-                            <li>
-                                Funktiolla $f$ on minimiarvo $f(0) = 0$.
-                            </li>
-                            <li>
-                                Funktio on aidosti vähenevä välillä $\left] -\infty, 0\right]$ ja aidosti kasvava välillä $\left[0, \infty\right[$, joten funktion $f$ pienin arvo on $f(0) = 0$. Funktiolla $f$ ei ole suurinta arvoa.
-                            </li>
-                        </ol>
+                                <li>
+                                    $f'(x) = \dfrac{2x}{(x^2+1)^2}$
+                                </li>
+                                <li>
+
+                                </li>
+                                <li>
+                                    Funktiolla $f$ on minimiarvo $f(0) = 0$.
+                                </li>
+                                <li>
+                                    Funktio on aidosti vähenevä välillä $\left] -\infty, 0\right]$ ja aidosti kasvava välillä $\left[0, \infty\right[$, joten funktion $f$ pienin arvo on $f(0) = 0$. Funktiolla $f$ ei ole suurinta arvoa.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="teoria">
+                <p>
+                    Joissakin tilanteissa funktion suurimman ja pienimmän arvon olemassaoloa ei voida päätellä pelkän kulkukaavion avulla. Esimerkiksi funktion
+                    $$
+                    g(x) = \frac{-3x}{x^2 + 1}
+                    $$
+                    kulkukaaviosta nähdään, että funktiolla $g$ on kaksi ääriarvoa: maksimiarvo $g(-1) = \frac{3}{2}$ ja minimiarvo $g(1) = -\frac{3}{2}$. 
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva88.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Se, onko maksimiarvo $g(-1) = -\frac{3}{2}$ myös funktion $g$ suurin arvo, riippuu funktion arvojen käyttäytymisestä muuttujan kasvaessa rajatta. Kulkukaaviosta nimittäin nähdään, että funktio $g$ on aidosti kasvava välillä $\left[1, \infty\right[$. Kasvavatko sen arvot tällä välillä suuremmiksi kuin maksimikohdassa $x = -1$?
+                </p>
 
-            <p>
-                Joissakin tilanteissa funktion suurimman ja pienimmän arvon olemassaoloa ei voida päätellä pelkän kulkukaavion avulla. Esimerkiksi funktion
-                $$
-                g(x) = \frac{-3x}{x^2 + 1}
-                $$
-                kulkukaaviosta nähdään, että funktiolla $g$ on kaksi ääriarvoa: maksimiarvo $g(-1) = \frac{3}{2}$ ja minimiarvo $g(1) = -\frac{3}{2}$. 
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva88.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Se, onko maksimiarvo $g(-1) = -\frac{3}{2}$ myös funktion $g$ suurin arvo, riippuu funktion arvojen käyttäytymisestä muuttujan kasvaessa rajatta. Kulkukaaviosta nimittäin nähdään, että funktio $g$ on aidosti kasvava välillä $\left[1, \infty\right[$. Kasvavatko sen arvot tällä välillä suuremmiksi kuin maksimikohdassa $x = -1$?
-            </p>
+                <p>
+                    Funktion $g$ lauseketta tarkastelemalla havaitaan, että nimittäjä $x^2 + 1$ on aina positiivinen. Jos $x \geq 1$, osoittaja $-3x$ on negatiivinen. Funktion $g$ arvot ovat siis negatiivisia välillä $\left[1, \infty\right[$, joten $g(-1) = \frac{3}{2}$ on funktion suurin arvo. 
+                </p>
 
-            <p>
-                Funktion $g$ lauseketta tarkastelemalla havaitaan, että nimittäjä $x^2 + 1$ on aina positiivinen. Jos $x \geq 1$, osoittaja $-3x$ on negatiivinen. Funktion $g$ arvot ovat siis negatiivisia välillä $\left[1, \infty\right[$, joten $g(-1) = \frac{3}{2}$ on funktion suurin arvo. 
-            </p>
+                <p>
+                    Tutkitaan vielä, onko minimiarvo $g(1) = -\frac{3}{2}$ funktion $g$ pienin arvo. Saako funktio $g$ tätä pienemmän arvon välillä $\left] -\infty, -1\right]$? 
+                </p>
 
-            <p>
-                Tutkitaan vielä, onko minimiarvo $g(1) = -\frac{3}{2}$ funktion $g$ pienin arvo. Saako funktio $g$ tätä pienemmän arvon välillä $\left] -\infty, -1\right]$? 
-            </p>
-
-            <p>
-                Funktion $g$ lausekkeesta voidaan päätellä samaan tapaan kuin edellä, että jos $x \leq -1$, niin funktion arvot ovat positiivisia. Siten $g(1) = -\frac{3}{2}$ on funktion $g$ pienin arvo. Myös funktion kuvaaja tukee näitä johtopäätöksiä:
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva67.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Huomaa, että pelkän kuvaajan perusteella ei voida olla täysin varmoja, kuinka suuria tai pieniä arvoja funktio saa, kun muuttuja kasvaa tai pienenee rajatta. Edellä tehty päättely kuitenkin takaa, että $g(-1) = \frac{3}{2}$ ja $g(1) = -\frac{3}{2}$ ovat todella funktion suurin ja pienin arvo.
-            </p>
-
+                <p>
+                    Funktion $g$ lausekkeesta voidaan päätellä samaan tapaan kuin edellä, että jos $x \leq -1$, niin funktion arvot ovat positiivisia. Siten $g(1) = -\frac{3}{2}$ on funktion $g$ pienin arvo. Myös funktion kuvaaja tukee näitä johtopäätöksiä:
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva67.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Huomaa, että pelkän kuvaajan perusteella ei voida olla täysin varmoja, kuinka suuria tai pieniä arvoja funktio saa, kun muuttuja kasvaa tai pienenee rajatta. Edellä tehty päättely kuitenkin takaa, että $g(-1) = \frac{3}{2}$ ja $g(1) = -\frac{3}{2}$ ovat todella funktion suurin ja pienin arvo.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t612-ex">
+                <div class="tehtava" id="03f9bff0-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t612">
                                 RATIONAALIFUNKTION SUURIN JA PIENIN ARVO
                             </a>
@@ -959,65 +961,65 @@ topnav: maa6
                         </h2>
                         <div id="t612_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                $f'(x) = \dfrac{12-4x^2}{(x^2+3)^2}$
-                            </li>
-                            <li>
-                                 
-                            </li>
-                            <li>
-                                Funktiolla $f$ on minimiarvo $f(-\sqrt{3}) = -\frac{2}{3}\sqrt{3}$ ja maksimiarvo $f(\sqrt{3}) = \frac{2}{3}\sqrt{3}$.
-                            </li>
-                            <li>
-                                Funktion $f$ on aidosti vähenevä välillä $\left[\sqrt{3}, \infty\right[$ mutta sen arvot ovat tällä välillä positiivisia, joten minimiarvo $f(-\sqrt{3}) = -\frac{2}{3}\sqrt{3}$ on funktion $f$ pienin arvo.
-                                <br>
-                                Funktion $f$ arvot ovat negatiivisia välillä $\left]-\infty, -\sqrt{3}]$, joten maksimiarvo $f(\sqrt{3}) = \frac{2}{3}\sqrt{3}$ on funktion $f$ suurin arvo.
-                            </li>
-                        </ol>
+                                <li>
+                                    $f'(x) = \dfrac{12-4x^2}{(x^2+3)^2}$
+                                </li>
+                                <li>
+
+                                </li>
+                                <li>
+                                    Funktiolla $f$ on minimiarvo $f(-\sqrt{3}) = -\frac{2}{3}\sqrt{3}$ ja maksimiarvo $f(\sqrt{3}) = \frac{2}{3}\sqrt{3}$.
+                                </li>
+                                <li>
+                                    Funktion $f$ on aidosti vähenevä välillä $\left[\sqrt{3}, \infty\right[$ mutta sen arvot ovat tällä välillä positiivisia, joten minimiarvo $f(-\sqrt{3}) = -\frac{2}{3}\sqrt{3}$ on funktion $f$ pienin arvo.
+                                    <br>
+                                    Funktion $f$ arvot ovat negatiivisia välillä $\left]-\infty, -\sqrt{3}]$, joten maksimiarvo $f(\sqrt{3}) = \frac{2}{3}\sqrt{3}$ on funktion $f$ suurin arvo.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <p>
-                Taito tutkia rationaalifunktion kulkua antaa uusia mahdollisuuksia erilaisten käytännön ongelmien ratkaisemiseen. Jälleen ensimmäinen haaste on kuitenkin mallintaa ongelma matemaattisesti: 
+            <div class="teoria">
+                <p>
+                    Taito tutkia rationaalifunktion kulkua antaa uusia mahdollisuuksia erilaisten käytännön ongelmien ratkaisemiseen. Jälleen ensimmäinen haaste on kuitenkin mallintaa ongelma matemaattisesti: 
                 <ul>
                     <li> Mitä muuttujaa tarkastellaan? </li>
                     <li> Minkä funktion suurinta tai pienintä arvoa etsitään?</li>
                     <li> Millä välillä muuttujan arvot vaihtelevat? </li>
                 </ul>
-            </p>
+                </p>
 
-            <p>
-                Tarkastellaan esimerkiksi seuraavaa tilannetta: Kunnan kaavoitusarkkitehti suunnittelee uutta pientaloaluetta. Alueelle halutaan kaavoittaa tontteja, joille voi rakentaa $130 \text{ m}^2$ omakotitalon. Tontit ovat suorakulmion muotoisia ja rajoittuvat yhdeltä sivultaan puroon. Rakennuksen etäisyys purosta on oltava vähintään 11 metriä ja tontin muista reunoista vähintään 5 metriä. Mitkä ovat pienimmän mahdollisen tontin mitat ja pinta-ala? Oletetaan yksinkertaisuuden vuoksi, että myös rakennuksen pohja on suorakulmion muotoinen ja sen sivut ovat yhdensuuntaiset tontin rajojen kanssa. 
-            </p>
+                <p>
+                    Tarkastellaan esimerkiksi seuraavaa tilannetta: Kunnan kaavoitusarkkitehti suunnittelee uutta pientaloaluetta. Alueelle halutaan kaavoittaa tontteja, joille voi rakentaa $130 \text{ m}^2$ omakotitalon. Tontit ovat suorakulmion muotoisia ja rajoittuvat yhdeltä sivultaan puroon. Rakennuksen etäisyys purosta on oltava vähintään 11 metriä ja tontin muista reunoista vähintään 5 metriä. Mitkä ovat pienimmän mahdollisen tontin mitat ja pinta-ala? Oletetaan yksinkertaisuuden vuoksi, että myös rakennuksen pohja on suorakulmion muotoinen ja sen sivut ovat yhdensuuntaiset tontin rajojen kanssa. 
+                </p>
 
-            <p>
-                Aloitetaan piirtämällä tilanteesta kuva. Merkitään tontin sivujen pituuksia kirjaimilla $x$ ja $y$:
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva89.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Rakennuksen pinta-alasta $130 \text{ m}^2$ saadaan ehto muuttujille $x$ ja $y$:
-                $$
-                (x-10)(y-16) = 130.
-                $$
-                Tästä yhtälöstä voidaan ratkaista toinen muuttujista:
-                \begin{align*}
-                y-16 &= \frac{130}{x-10} \\[2mm]
-                y &= \frac{130}{x-10} + 16
-                \end{align*}
-                Tontista halutaan mahdollisimman pieni, joten ryhdytään tutkimaan tontin pinta-alaa $A = xy$. Sijoitetaan tähän äskeisen pyörittelyn tulos, jolloin tontin pinta-ala saadaan ilmaistua muuttujan $x$ funktiona:
-                \begin{align*}
-                A(x) &= x\left(\frac{130}{x-10} + 16\right) \\[2mm]
-                &= \frac{130x}{x - 10} + 16x.
-                \end{align*}
-                Mallikuvasta voidaan päätellä, että tontin leveys $x$ on vähintään 10 metriä eikä sillä periaatteessa ole ylärajaa. Tehtävänä on siis etsiä funktion $A(x)$ pienin arvo, kun $x \geq 10$. Tämä tehdään seuraavassa tehtävässä.
-            </p>
-
+                <p>
+                    Aloitetaan piirtämällä tilanteesta kuva. Merkitään tontin sivujen pituuksia kirjaimilla $x$ ja $y$:
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva89.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Rakennuksen pinta-alasta $130 \text{ m}^2$ saadaan ehto muuttujille $x$ ja $y$:
+                    $$
+                    (x-10)(y-16) = 130.
+                    $$
+                    Tästä yhtälöstä voidaan ratkaista toinen muuttujista:
+                    \begin{align*}
+                    y-16 &= \frac{130}{x-10} \\[2mm]
+                    y &= \frac{130}{x-10} + 16
+                    \end{align*}
+                    Tontista halutaan mahdollisimman pieni, joten ryhdytään tutkimaan tontin pinta-alaa $A = xy$. Sijoitetaan tähän äskeisen pyörittelyn tulos, jolloin tontin pinta-ala saadaan ilmaistua muuttujan $x$ funktiona:
+                    \begin{align*}
+                    A(x) &= x\left(\frac{130}{x-10} + 16\right) \\[2mm]
+                    &= \frac{130x}{x - 10} + 16x.
+                    \end{align*}
+                    Mallikuvasta voidaan päätellä, että tontin leveys $x$ on vähintään 10 metriä eikä sillä periaatteessa ole ylärajaa. Tehtävänä on siis etsiä funktion $A(x)$ pienin arvo, kun $x \geq 10$. Tämä tehdään seuraavassa tehtävässä.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t613-ex">
+                <div class="tehtava" id="03f9c16c-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t613">
                                 RATIONAALIFUNKTION SUURIN JA PIENIN ARVO
                             </a>
@@ -1052,28 +1054,28 @@ topnav: maa6
                         </h2>
                         <div id="t613_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                $A'(x) = \dfrac{-1300}{(x-10)^2 + 16}$
-                            </li>
-                            <li>
-                                 
-                            </li>
-                            <li>
-                                Funktion $A$ pienin arvo on $A\left(10+\frac{5}{2}\sqrt{13}\right) = 130 + 80\sqrt{13} \approx 578$.
-                            </li>
-                            <li>
-                                Leveys $x \approx 19{,}0 \text{ m}$, pituus $y \approx 30{,}4 \text{ m}$. Pinta-ala noin $578 \text{ m}^2$.
-                            </li>
-                        </ol>
+                                <li>
+                                    $A'(x) = \dfrac{-1300}{(x-10)^2 + 16}$
+                                </li>
+                                <li>
+
+                                </li>
+                                <li>
+                                    Funktion $A$ pienin arvo on $A\left(10+\frac{5}{2}\sqrt{13}\right) = 130 + 80\sqrt{13} \approx 578$.
+                                </li>
+                                <li>
+                                    Leveys $x \approx 19{,}0 \text{ m}$, pituus $y \approx 30{,}4 \text{ m}$. Pinta-ala noin $578 \text{ m}^2$.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t614-ex">
+                <div class="tehtava" id="03f9c2d4-7ecc-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t614">
                                 RATIONAALIFUNKTION SUURIN JA PIENIN ARVO
                             </a>
@@ -1109,19 +1111,19 @@ topnav: maa6
                         </h2>
                         <div id="t614_v" class="collapse">
                             <ol class="a">
-                            <li>
-                                
-                            </li>
-                            <li>
-                                 
-                            </li>
-                            <li>
-                                
-                            </li>
-                            <li>
-                                
-                            </li>
-                        </ol>
+                                <li>
+
+                                </li>
+                                <li>
+
+                                </li>
+                                <li>
+
+                                </li>
+                                <li>
+
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -1136,7 +1138,7 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku5-tehtavasarja2">
                     TEHTÄVÄSARJA II
@@ -1147,9 +1149,9 @@ topnav: maa6
         <div id="luku5-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="s2t101-ex">
+            <div class="tehtava" id="03f9c450-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#s2t101">
                             Suoran yhtälö
                         </a>
@@ -1188,7 +1190,7 @@ topnav: maa6
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku6-tehtavasarja3">
                     TEHTÄVÄSARJA III
@@ -1199,9 +1201,9 @@ topnav: maa6
         <div id="luku6-tehtavasarja3" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="MAA6s3t601-ex">
+            <div class="tehtava" id="03f9c8b0-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t601">
 
                         </a>
@@ -1244,9 +1246,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t602-ex">
+            <div class="tehtava" id="03f9ca5e-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t602">
 
                         </a>
@@ -1271,9 +1273,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t603a-ex">
+            <div class="tehtava" id="03f9cba8-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t603a">
 
                         </a>
@@ -1300,9 +1302,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t603-ex">
+            <div class="tehtava" id="03f9cd06-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t603">
 
                         </a>
@@ -1329,9 +1331,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t604-ex">
+            <div class="tehtava" id="03f9ce50-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t604">
 
                         </a>
@@ -1360,9 +1362,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t605-ex">
+            <div class="tehtava" id="03f9cfc2-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t605">
 
                         </a>
@@ -1377,7 +1379,7 @@ topnav: maa6
                             $$
                         </li>
                         <li>
-                            
+
                         </li>
                     </ol>
                     <p>
@@ -1396,16 +1398,16 @@ topnav: maa6
                                 $$
                             </li>
                             <li>
-                                
+
                             </li>
                         </ol>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t606-ex">
+            <div class="tehtava" id="03f9d134-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t606">
 
                         </a>
@@ -1436,9 +1438,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t607-ex">
+            <div class="tehtava" id="03f9d8f0-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t607">
 
                         </a>
@@ -1467,9 +1469,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t608a-ex">
+            <div class="tehtava" id="03f9db16-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t608a">
 
                         </a>
@@ -1494,9 +1496,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t608-ex">
+            <div class="tehtava" id="03f9dce2-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t608">
 
                         </a>
@@ -1521,9 +1523,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t609-ex">
+            <div class="tehtava" id="03f9de90-7ecc-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t609">
 
                         </a>
@@ -1536,7 +1538,7 @@ topnav: maa6
                         [Pitkä K2017/7]
                     </p>
                     <img src="/kurssit/maa6/kuvat/kuvaYO12.png" max-width: 100%; width: auto; height: auto;/>
-                    <h2>
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s3t609_v">
                             Vastaus
                         </a>

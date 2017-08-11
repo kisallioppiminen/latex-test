@@ -1,5 +1,5 @@
 ---
-title: MAA3 - Geometria 
+title: MAA3 - Geometria
 layout: material
 sitemap: true
 main-class: has-atop
@@ -14,6 +14,8 @@ topnav: maa3
         padding: 5px;
     }
 </style>
+
+{% include bottomnav.html %}
 
 <input type="hidden" id="chapterNumber" value="3"/>
 <input type="hidden" id="theoremStart" value="19"/>
@@ -36,15 +38,15 @@ topnav: maa3
 
             <div class="objective">
 
-                <p> 
+                <p>
                     Tämän luvun tavoitteena on, että opit ratkaisemaan erilaisia avaruusgeometrian ongelmia. Osaat
-                    <ul>
-                        <li> laskea monitahokkaiden, lieriöiden ja kartioiden tilavuuksia ja pinta-aloja</li>
-                        <li> määrittää erilaisia avaruuden suorien ja tasojen välisiä kulmia </li>
-                        <li> selvittää kappaleen tilavuuden yhdenmuotoisuussuhdetta käyttäen</li>
-                        <li> laskea pallon ja pallosegmentin tilavuuden sekä pallon ja kalotin pinta-alan </li>
-                        <li> määrittää etäisyyksiä pallon pinnalla.</li>
-                    </ul> 
+                <ul>
+                    <li> laskea monitahokkaiden, lieriöiden ja kartioiden tilavuuksia ja pinta-aloja</li>
+                    <li> määrittää erilaisia avaruuden suorien ja tasojen välisiä kulmia </li>
+                    <li> selvittää kappaleen tilavuuden yhdenmuotoisuussuhdetta käyttäen</li>
+                    <li> laskea pallon ja pallosegmentin tilavuuden sekä pallon ja kalotin pinta-alan </li>
+                    <li> määrittää etäisyyksiä pallon pinnalla.</li>
+                </ul>
                 </p>
 
             </div>
@@ -53,7 +55,7 @@ topnav: maa3
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#monitahokkaat">
                     MONITAHOKKAITA
@@ -62,66 +64,71 @@ topnav: maa3
         </header>
         <div id="monitahokkaat" class="collapse">
 
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: MONITAHOKAS</h3>
+            <div class="teoria">
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: MONITAHOKAS</h3>
+                    <p>
+                        <em>Monitahokas</em> on kappale, jonka pinta koostuu monikulmioista. Nämä monikulmiot ovat monitahokkaan <em>tahkoja</em>. Monikulmioiden sivut ovat monitahokkaan <em>särmiä</em> ja kärjet monitahokkaan <em>kärkiä</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK22.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
+
                 <p>
-                    <em>Monitahokas</em> on kappale, jonka pinta koostuu monikulmioista. Nämä monikulmiot ovat monitahokkaan <em>tahkoja</em>. Monikulmioiden sivut ovat monitahokkaan <em>särmiä</em> ja kärjet monitahokkaan <em>kärkiä</em>. 
+                    Monitahokkaita ovat esimerkiksi kuutio, neliöpohjainen pyramidi ja suorakulmainen särmiö.
                     <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK22.png" max-width: 100%; width: auto; height: auto;/> 
+                    <img src="/kurssit/maa3/kuvat/avaruusK21.png" max-width: 100%; width: auto; height: auto;/>
+                    Sovitaan seuraavaksi vielä tarkemmin, mitä tarkoitetaan suorakulmaisella särmiöllä.
                 </p>
-            </div>
 
-            <p>
-                Monitahokkaita ovat esimerkiksi kuutio, neliöpohjainen pyramidi ja suorakulmainen särmiö.
-                <br>
-                <img src="/kurssit/maa3/kuvat/avaruusK21.png" max-width: 100%; width: auto; height: auto;/> 
-                Sovitaan seuraavaksi vielä tarkemmin, mitä tarkoitetaan suorakulmaisella särmiöllä.
-            </p>
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SUORAKULMAINEN SÄRMIÖ</h3>
+                    <p>
+                        <em>Suorakulmainen särmiö</em> on monitahokas, jonka kaikki kuusi tahkoa ovat suorakulmioita ja jonka kaikki särmät ovat kohtisuorassa toisiaan vastaan.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK23.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
 
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: SUORAKULMAINEN SÄRMIÖ</h3>
                 <p>
-                    <em>Suorakulmainen särmiö</em> on monitahokas, jonka kaikki kuusi tahkoa ovat suorakulmioita ja jonka kaikki särmät ovat kohtisuorassa toisiaan vastaan. 
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK23.png" max-width: 100%; width: auto; height: auto;/> 
+                    Kappaleiden tilavuuksien laskemiseksi tarvitaan sopimus siitä, mitä tilavuudella tarkoitetaan. Lähtökohdaksi voidaan ottaa suorakulmaisen särmiön tilavuus. Sovitaan siis ensin, mitä suorakulmaisen särmiön tilavuudella tarkoitetaan. Asetetaan seuraava määritelmä:
                 </p>
-            </div>
 
-            <p>
-                Kappaleiden tilavuuksien laskemiseksi tarvitaan sopimus siitä, mitä tilavuudella tarkoitetaan. Lähtökohdaksi voidaan ottaa suorakulmaisen särmiön tilavuus. Sovitaan siis ensin, mitä suorakulmaisen särmiön tilavuudella tarkoitetaan. Asetetaan seuraava määritelmä:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: SUORAKULMAISEN SÄRMIÖN TILAVUUS</h3>
-                <p>
-                    Suorakulmaisen särmiön <em>tilavuus</em> on samasta kärjestä alkavien särmien pituuksien tulo eli alla olevan kuvion merkinnöillä $abc$.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK24.png" style="max-width: 100%; width: auto; height: auto;"/> 
-                </p>
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SUORAKULMAISEN SÄRMIÖN TILAVUUS</h3>
+                    <p>
+                        Suorakulmaisen särmiön <em>tilavuus</em> on samasta kärjestä alkavien särmien pituuksien tulo eli alla olevan kuvion merkinnöillä $abc$.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK24.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="firstEx">
+
+                <div class="tehtava" id="646463c6-651c-4c4a-820f-9e2df79e4b59">
+
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus01">
                                 SUORAKULMAINEN SÄRMIÖ
                             </a>
                         </h1>
                     </header>
                     <div id="avaruus01" class="collapse">
-                        <p>  Hotelliin suunnitellaan uima-allasta, joka on suorakulmaisen särmiön muotoinen. Altaan pituus on 8 m, leveys 2,5 m ja syvyys 1,7 m. 
-                            <ol class = "a">
-                                <li> Mikä on altaan tilavuus? </li>
-                                <li> Kuinka paljon altaan täyttäminen vedellä maksaa, jos veden hinta on 3,67 euroa kuutiometriltä? </li>
-                                <li> Kuinka monta neliömetriä laattoja tarvitaan altaan sisäpuolen laatoittamiseen? Laattoja varataan 5 % enemmän kuin laatoitettava pinta-ala. </li>
-                                <li> Harjoittele suorakulmaisen särmiön piirtämistä Geogebralla piirtämällä tässä tehtävässä tarkasteltu suorakulmainen särmiö. Katso tarvittaessa mallia tästä <a href="https://youtu.be/4iIvn6vVafM" target="_blank">videosta</a>. </li>
-                            </ol>
+                        <p>  Hotelliin suunnitellaan uima-allasta, joka on suorakulmaisen särmiön muotoinen. Altaan pituus on 8 m, leveys 2,5 m ja syvyys 1,7 m.
+                        <ol class = "a">
+                            <li> Mikä on altaan tilavuus? </li>
+                            <li> Kuinka paljon altaan täyttäminen vedellä maksaa, jos veden hinta on 3,67 euroa kuutiometriltä? </li>
+                            <li> Kuinka monta neliömetriä laattoja tarvitaan altaan sisäpuolen laatoittamiseen? Laattoja varataan 5 % enemmän kuin laatoitettava pinta-ala. </li>
+                            <li> Harjoittele suorakulmaisen särmiön piirtämistä Geogebralla piirtämällä tässä tehtävässä tarkasteltu suorakulmainen särmiö. Katso tarvittaessa mallia tästä <a href="https://youtu.be/4iIvn6vVafM" target="_blank">videosta</a>. </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus01_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus01_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus01_v" class="collapse">
                             <ol class="a">
@@ -134,55 +141,58 @@ topnav: maa3
                 </div>
             </div>
 
-            <p>
-                Suorakulmaisen särmiön vastakkaisia kärkiä yhdistävä jana on särmiön <em>avaruuslävistäjä</em>. Alla on näkyvissä yksi suorakulmaisen särmiön avaruuslävistäjistä.
-                <br>
-                <img src="/kurssit/maa3/kuvat/avaruusK26.png" style="max-width: 100%; width: auto; height: auto;"/> 
-                <br>
-                Seuraavassa tehtävässä tutkitaan, miten suorakulmaisen särmiön avaruuslävistäjän pituus riippuu särmien pituuksista.
-            </p>
+            <div class="teoria">
+                <p>
+                    Suorakulmaisen särmiön vastakkaisia kärkiä yhdistävä jana on särmiön <em>avaruuslävistäjä</em>. Alla on näkyvissä yksi suorakulmaisen särmiön avaruuslävistäjistä.
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/avaruusK26.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Seuraavassa tehtävässä tutkitaan, miten suorakulmaisen särmiön avaruuslävistäjän pituus riippuu särmien pituuksista.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus02-ex">
+                <div class="tehtava" id="04b94214-313b-46c5-88b1-441bd1cb0b2d">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus02">
                                 SUORAKULMAINEN SÄRMIÖ
                             </a>
                         </h1>
                     </header>
                     <div id="avaruus02" class="collapse">
-                        <p>  Suorakulmaisen särmiön pituus on 80 cm, leveys 50 cm ja korkeus 40 cm.  
-                            <ol class = "a">
-                                <li> 
-                                    Piirrä tilanteesta mallikuva niin sanotussa <em>kavaljeeriperspektiivissä</em>: Piirrä kuvassa edessä ja takana olevat sivutahkot suorakulmioina oikeissa mittasuhteissa. Piirrä syvyyssuunnassa kulkevat särmät 45 asteen kulmassa ja pienennä niiden pituus puoleen. 
-                                </li>
-                                <li> 
-                                    Laske särmiön pohjan lävistäjän pituus.
-                                    <br>
-                                    <img src="/kurssit/maa3/kuvat/avaruusK27.png" style="max-width: 100%; width: auto; height: auto;"/>
-                                </li>
-                                <li> 
-                                    Laske särmiön avaruuslävistäjän pituus.
-                                    <br>
-                                    <img src="/kurssit/maa3/kuvat/avaruusK28.png" style="max-width: 100%; width: auto; height: auto;"/>
-                                </li>
-                                <li> 
-                                    Muodosta lauseke suorakulmaisen särmiön pohjan lävistäjän pituudelle tilanteessa, jossa särmiön pituus on $a$ ja leveys on $b$. 
-                                    <br>
-                                    Vinkki: b-kohta.
-                                </li>
-                                <li>
-                                    Muodosta lauseke suorakulmaisen särmiön avaruuslävistäjän pituudelle tilanteessa, jossa särmiön pituus on $a$, leveys on $b$ ja korkeus on $c$. 
-                                    <br>
-                                    Vinkki: c- ja d-kohdat.
-                                </li>
-                            </ol>
+                        <p>  Suorakulmaisen särmiön pituus on 80 cm, leveys 50 cm ja korkeus 40 cm.
+                        <ol class = "a">
+                            <li>
+                                Piirrä tilanteesta mallikuva niin sanotussa <em>kavaljeeriperspektiivissä</em>: Piirrä kuvassa edessä ja takana olevat sivutahkot suorakulmioina oikeissa mittasuhteissa. Piirrä syvyyssuunnassa kulkevat särmät 45 asteen kulmassa ja pienennä niiden pituus puoleen.
+                            </li>
+                            <li>
+                                Laske särmiön pohjan lävistäjän pituus.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/avaruusK27.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                            <li>
+                                Laske särmiön avaruuslävistäjän pituus.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/avaruusK28.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                            <li>
+                                Muodosta lauseke suorakulmaisen särmiön pohjan lävistäjän pituudelle tilanteessa, jossa särmiön pituus on $a$ ja leveys on $b$.
+                                <br>
+                                Vinkki: b-kohta.
+                            </li>
+                            <li>
+                                Muodosta lauseke suorakulmaisen särmiön avaruuslävistäjän pituudelle tilanteessa, jossa särmiön pituus on $a$, leveys on $b$ ja korkeus on $c$.
+                                <br>
+                                Vinkki: c- ja d-kohdat.
+                            </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus02_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus02_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus02_v" class="collapse">
                             <ol class="a">
@@ -195,28 +205,32 @@ topnav: maa3
                 </div>
             </div>
 
-            <p>
-                Edellisen tehtävän tuloksista saadaan seuraava teoreema:
-            </p>
-
-            <div class="theorem" id="PYTHAGORAAN LAUSE AVARUUDESSA">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Suorakulmaisen särmiön avaruuslävistäjän pituuden neliö on särmien pituuksien neliöiden summa. Alla olevan kuvion merkinnöillä
-                    $$d^2 = a^2 + b^2 + c^2$$
-                    <img src="/kurssit/maa3/kuvat/avaruusK25.png" style="max-width: 100%; width: auto; height: auto;"/> 
+                    Edellisen tehtävän tuloksista saadaan seuraava teoreema:
                 </p>
-                <div class="proof">
+
+                <div class="theorem" id="PYTHAGORAAN LAUSE AVARUUDESSA">
+                    <h3>TEOREEMA</h3>
                     <p>
-                        Perustelu: tehtävässä 3.2.
+                        Suorakulmaisen särmiön avaruuslävistäjän pituuden neliö on särmien pituuksien neliöiden summa. Alla olevan kuvion merkinnöillä
+                        $$d^2 = a^2 + b^2 + c^2$$
+                        <img src="/kurssit/maa3/kuvat/avaruusK25.png" style="max-width: 100%; width: auto; height: auto;"/>
+
                     </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: tehtävässä 3.2.
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus03-ex">
+                <div class="tehtava" id="bba79675-78d8-4654-8cb0-32edbc0014bd">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus03">
                                 SUORAKULMAINEN SÄRMIÖ
                             </a>
@@ -224,19 +238,19 @@ topnav: maa3
                     </header>
                     <div id="avaruus03" class="collapse">
                         <p>  Suorakulmaisen särmiön muotoisen laatikon pohjasärmien pituudet ovat 40 cm ja 20 cm, ja laatikon korkeus on 15 cm. Tehtävänä on selvittää, mahtuuko ohut 46 cm pituinen suora sauva laatikkoon.
-                            <ol class = "a">
-                                <li> 
-                                    Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat.
-                                </li>
-                                <li> 
-                                    Laske pisimmän laatikkoon mahtuvan sauvan pituus. Mahtuuko 46 cm pituinen suora sauva laatikkoon?
-                                </li>
-                            </ol>
+                        <ol class = "a">
+                            <li>
+                                Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat.
+                            </li>
+                            <li>
+                                Laske pisimmän laatikkoon mahtuvan sauvan pituus. Mahtuuko 46 cm pituinen suora sauva laatikkoon?
+                            </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus03_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus03_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus03_v" class="collapse">
                             <ol class="a">
@@ -248,61 +262,64 @@ topnav: maa3
                 </div>
             </div>
 
-            <p>
-                Tasogeometriassa tutustuttiin säännöllisiin monikulmioihin, joiden kaikki sivut ovat yhtä pitkiä ja kulmat yhtä suuria. 
-                <br>
-                <img src="/kurssit/maa3/kuvat/tasoK23.png" style="max-width: 100%; width: auto; height: auto"/>
-                <br>
-                Joistakin säännöllisistä monikulmioista voidaan muodostaa niin sanottuja säännöllisiä monitahokkaita:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: SÄÄNNÖLLINEN MONITAHOKAS</h3>
+            <div class="teoria">
                 <p>
-                    Monitahokas, jonka kaikki tahkot ovat yhteneviä (samanlaisia) säännöllisiä monikulmioita ja jonka jokaisessa kärjessä kohtaa yhtä monta tahkoa, on <em>säännöllinen monitahokas</em>.
+                    Tasogeometriassa tutustuttiin säännöllisiin monikulmioihin, joiden kaikki sivut ovat yhtä pitkiä ja kulmat yhtä suuria.
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/tasoK23.png" style="max-width: 100%; width: auto; height: auto"/>
+                    <br>
+                    Joistakin säännöllisistä monikulmioista voidaan muodostaa niin sanottuja säännöllisiä monitahokkaita:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SÄÄNNÖLLINEN MONITAHOKAS</h3>
+                    <p>
+                        Monitahokas, jonka kaikki tahkot ovat yhteneviä (samanlaisia) säännöllisiä monikulmioita ja jonka jokaisessa kärjessä kohtaa yhtä monta tahkoa, on <em>säännöllinen monitahokas</em>.
+                    </p>
+                </div>
+
+                <p>
+                    Monitahokas on <em>kupera</em>, jos se toteuttaa seuraavan ehdon: jos monitahokkaan pinnan mitkä tahansa kaksi pistettä yhdistetään janalla, tämä jana ei käy monitahokkaan ulkopuolella.
+                </p>
+                <p>
+                    On mahdollista osoittaa, että kuperia säännöllisiä monitahokkaita on yhteensä viisi. Nämä ovat niin sanotut Platonin kappaleet: <a href="https://commons.wikimedia.org/wiki/Platonic_solid#/media/File:Tetrahedron.gif">säännöllinen tetraedri</a> (nelitahokas), <a href="https://commons.wikimedia.org/wiki/Platonic_solid#/media/File:Hexahedron.gif">kuutio</a> ja <a href="https://commons.wikimedia.org/wiki/Platonic_solid#/media/File:Octahedron.gif">säännöllinen oktaedri</a> (kahdeksantahokas)
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/Platon1.png" style="max-width: 100%; width: auto; height: auto"/>
+                    <br>
+                    sekä <a href="https://commons.wikimedia.org/wiki/Platonic_solid#/media/File:Dodecahedron.gif">säännöllinen dodekaedri</a> (kaksitoistatahokas) ja <a href="https://commons.wikimedia.org/wiki/Platonic_solid#/media/File:Icosahedron.gif">säännöllinen ikosaedri</a> (kaksikymmentahokas).
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/Platon2.png" style="max-width: 100%; width: auto; height: auto"/>
+                    (Yllä olevat punaiset kuvat Robert Webb, <a href="http://www.software3d.com/Stella.php">Stella software</a>.)
                 </p>
             </div>
 
-            <p>
-                Monitahokas on <em>kupera</em>, jos se toteuttaa seuraavan ehdon: jos monitahokkaan pinnan mitkä tahansa kaksi pistettä yhdistetään janalla, tämä jana ei käy monitahokkaan ulkopuolella.
-            </p>
-            <p>
-                On mahdollista osoittaa, että kuperia säännöllisiä monitahokkaita on yhteensä viisi. Nämä ovat niin sanotut Platonin kappaleet: <a href="https://commons.wikimedia.org/wiki/Platonic_solid#/media/File:Tetrahedron.gif">säännöllinen tetraedri</a> (nelitahokas), <a href="https://commons.wikimedia.org/wiki/Platonic_solid#/media/File:Hexahedron.gif">kuutio</a> ja <a href="https://commons.wikimedia.org/wiki/Platonic_solid#/media/File:Octahedron.gif">säännöllinen oktaedri</a> (kahdeksantahokas)
-                <br>
-                <img src="/kurssit/maa3/kuvat/Platon1.png" style="max-width: 100%; width: auto; height: auto"/>
-                <br>
-                sekä <a href="https://commons.wikimedia.org/wiki/Platonic_solid#/media/File:Dodecahedron.gif">säännöllinen dodekaedri</a> (kaksitoistatahokas) ja <a href="https://commons.wikimedia.org/wiki/Platonic_solid#/media/File:Icosahedron.gif">säännöllinen ikosaedri</a> (kaksikymmentahokas).
-                <br>
-                <img src="/kurssit/maa3/kuvat/Platon2.png" style="max-width: 100%; width: auto; height: auto"/>
-                (Yllä olevat punaiset kuvat Robert Webb, <a href="http://www.software3d.com/Stella.php">Stella software</a>.)
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus04-ex">
+                <div class="tehtava" id="59e845e5-d649-4351-a618-d7ba00398d63">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus04">
                                 SÄÄNNÖLLINEN MONITAHOKAS
                             </a>
                         </h1>
                     </header>
                     <div id="avaruus04" class="collapse">
-                        <p>  Kuution tahkojen keskipisteet yhdistetään viereisten tahkojen keskipisteisiin. 
-                            <ol class = "a">
-                                <li> 
-                                    Piirrä tilanteesta mallikuva. Mikä Platonin kappale muodostuu kuution sisälle?
-                                </li>
-                                <li> 
-                                    Jos kuution särmän pituus on 2, mikä on sen sisälle muodostuvan Platonin kappaleen särmän pituus?
-                                    <br>
-                                    Vinkki: halkaise kuutio sen keskipisteen kautta kulkevalla sivutahkon suuntaisella tasolla ja piirrä poikkileikkauksesta kuva. 
-                                </li>
-                            </ol>
+                        <p>  Kuution tahkojen keskipisteet yhdistetään viereisten tahkojen keskipisteisiin.
+                        <ol class = "a">
+                            <li>
+                                Piirrä tilanteesta mallikuva. Mikä Platonin kappale muodostuu kuution sisälle?
+                            </li>
+                            <li>
+                                Jos kuution särmän pituus on 2, mikä on sen sisälle muodostuvan Platonin kappaleen särmän pituus?
+                                <br>
+                                Vinkki: halkaise kuutio sen keskipisteen kautta kulkevalla sivutahkon suuntaisella tasolla ja piirrä poikkileikkauksesta kuva.
+                            </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus04_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus04_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus04_v" class="collapse">
                             <ol class="a">
@@ -318,7 +335,7 @@ topnav: maa3
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#kulmiaAvaruudessa">
                     Kulmia avaruudessa
@@ -327,29 +344,32 @@ topnav: maa3
         </header>
         <div id="kulmiaAvaruudessa" class="collapse">
 
-            <p>
-                Tutkitaan seuraavaksi erilaisia kulmia avaruudessa. Aloitetaan sopimalla, mitä tarkoitetaan kahden suoran välisellä kulmalla.
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: KAHDEN SUORAN VÄLINEN KULMA</h3>
+            <div class="teoria">
                 <p>
-                    <em>Suorien välinen kulma</em> tarkoittaa toisensa leikkaavien suorien muodostamista kulmista sitä, joka on terävä tai suora kulma. Esimerkiksi alla olevan kuvan suorien välinen kulma on $\alpha$.
-                    <br> 
-                    <img src="/kurssit/maa4/kuvat/L4k12b.png" max-width: 100%; width: auto; height: auto;/> 
-                    <br>
-                    Jos suorat eivät leikkaa toisiaan, tarkoittaa suorien välinen kulma näiden suorien kanssa yhdensuuntaisten toisensa leikkaavien suorien välistä kulmaa.
+                    Tutkitaan seuraavaksi erilaisia kulmia avaruudessa. Aloitetaan sopimalla, mitä tarkoitetaan kahden suoran välisellä kulmalla.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KAHDEN SUORAN VÄLINEN KULMA</h3>
+                    <p>
+                        <em>Suorien välinen kulma</em> tarkoittaa toisensa leikkaavien suorien muodostamista kulmista sitä, joka on terävä tai suora kulma. Esimerkiksi alla olevan kuvan suorien välinen kulma on $\alpha$.
+                        <br>
+                        <img src="/kurssit/maa4/kuvat/L4k12b.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Jos suorat eivät leikkaa toisiaan, tarkoittaa suorien välinen kulma näiden suorien kanssa yhdensuuntaisten toisensa leikkaavien suorien välistä kulmaa.
+                    </p>
+                </div>
+
+                <p>
+                    Kahden suoran välisen kulman $\alpha$ suuruus on siis aina välillä $[0^\circ, 90^\circ]$.
                 </p>
             </div>
 
-            <p>
-                Kahden suoran välisen kulman $\alpha$ suuruus on siis aina välillä $[0^\circ, 90^\circ]$.
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus03b1-ex">
+                <div class="tehtava" id="908959e9-8268-4ce7-8ddb-0b483f29a683">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b1">
                                 KAHDEN SUORAN VÄLINEN KULMA
                             </a>
@@ -359,28 +379,28 @@ topnav: maa3
                         <p>
                             Suorakulmaisen särmiön pituus on 80 cm, leveys 50 cm ja korkeus 40 cm. Tehtävänä on laskea särmiön samasta kärjestä lähtevän pohjan lävistäjän ja avaruuslävistäjän välinen kulma.
                             <br>
-                            <img src="/kurssit/maa3/kuvat/avaruusK67.png" max-width: 100%; width: auto; height: auto;/> 
-                            <ol class = "a">
-                                <li> 
-                                    Piirrä mallikuva lävistäjien ja särmiön särmän muodostamasta kolmiosta. Pystytkö päättelemään tämän kolmion jonkin kulman suuruuden?
-                                </li>
-                                <li> 
-                                    Tehtävässä 3.2 laskit särmiön pohjan lävistäjän ja avaruuslävistäjän pituudet. Merkitse nämä ja muut tunnetut mitat piirtämääsi kolmioon. (Käytä mahdollisimman tarkkoja arvoja, jotta vastauksiin ei tule virhettä.)
-                                </li>
-                                <li>
-                                    Ratkaise pohjan lävistäjän ja avaruuslävistäjän välinen kulma. Anna vastaus kahden merkitsevän numeron tarkkuudella.
-                                    <br>
-                                    Huom. tuloksen tarkkuus paranee käyttämällä laskuissa pohjan lävistäjän ja avaruuslävistäjän tarkkoja arvoja pyöristettyjen likiarvojen sijaan. 
-                                </li>
-                                <li>
-                                    Harjoittele Geogebran käyttöä piirtämällä tehtävässä tarkasteltu suorakulmainen särmiö ja kulma. Samalla saat tarkistettua, saitko c-kohdasta oikean tuloksen. Katso tarvittaessa mallia tästä <a href="https://youtu.be/QjB026yC6H0" target="_blank">videosta</a>.
-                                </li>   
-                            </ol>
+                            <img src="/kurssit/maa3/kuvat/avaruusK67.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class = "a">
+                            <li>
+                                Piirrä mallikuva lävistäjien ja särmiön särmän muodostamasta kolmiosta. Pystytkö päättelemään tämän kolmion jonkin kulman suuruuden?
+                            </li>
+                            <li>
+                                Tehtävässä 3.2 laskit särmiön pohjan lävistäjän ja avaruuslävistäjän pituudet. Merkitse nämä ja muut tunnetut mitat piirtämääsi kolmioon. (Käytä mahdollisimman tarkkoja arvoja, jotta vastauksiin ei tule virhettä.)
+                            </li>
+                            <li>
+                                Ratkaise pohjan lävistäjän ja avaruuslävistäjän välinen kulma. Anna vastaus kahden merkitsevän numeron tarkkuudella.
+                                <br>
+                                Huom. tuloksen tarkkuus paranee käyttämällä laskuissa pohjan lävistäjän ja avaruuslävistäjän tarkkoja arvoja pyöristettyjen likiarvojen sijaan.
+                            </li>
+                            <li>
+                                Harjoittele Geogebran käyttöä piirtämällä tehtävässä tarkasteltu suorakulmainen särmiö ja kulma. Samalla saat tarkistettua, saitko c-kohdasta oikean tuloksen. Katso tarvittaessa mallia tästä <a href="https://youtu.be/QjB026yC6H0" target="_blank">videosta</a>.
+                            </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b1_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b1_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus03b1_v" class="collapse">
                             <ol class="a">
@@ -394,9 +414,10 @@ topnav: maa3
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus03b2-ex">
+                <div class="tehtava" id="86c2f903-8ab7-43ae-899e-5ba8befed6f1">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b2">
                                 KAHDEN SUORAN VÄLINEN KULMA
                             </a>
@@ -406,26 +427,26 @@ topnav: maa3
                         <p>
                             Suorakulmaisen särmiön pituus on 80 cm, leveys 50 cm ja korkeus 40 cm. Tehtävänä on laskea alla olevan kuvan mukaisen särmiön pohjan lävistäjän ja avaruuslävistäjän välinen kulma.
                             <br>
-                            <img src="/kurssit/maa3/kuvat/avaruusK68.png" max-width: 100%; width: auto; height: auto;/> 
-                            <ol class = "a">
-                                <li> 
-                                    Piirretään särmiön viereen toinen samanlainen särmiö, jolloin tarkastellut lävistäjät voidaan piirtää alkamaan samasta pisteestä. 
-                                    <br>
-                                    <img src="/kurssit/maa3/kuvat/avaruusK69.png" max-width: 100%; width: auto; height: auto;/>
-                                    <br>
-                                    Piirrä kuva kolmiosta, joka muodostuu, kun lävistäjien toiset päätepisteet yhdistetään janalla. Ratkaise tämän janan pituus suorakulmaisen kolmion geometrian avulla yllä olevasta kuvasta.
-                                </li>
-                                <li>
-                                    Merkitse piirtämääsi kolmioon kaikki tunnetut sivujen pituudet. Voit hyödyntää tehtävän 3.2 tuloksia. Ratkaise lävistäjien välinen kulma $\alpha$.
-                                    <br>
-                                    Vinkki: teoreema 8.
-                                </li>
-                            </ol>
+                            <img src="/kurssit/maa3/kuvat/avaruusK68.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class = "a">
+                            <li>
+                                Piirretään särmiön viereen toinen samanlainen särmiö, jolloin tarkastellut lävistäjät voidaan piirtää alkamaan samasta pisteestä.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/avaruusK69.png" max-width: 100%; width: auto; height: auto;/>
+                                <br>
+                                Piirrä kuva kolmiosta, joka muodostuu, kun lävistäjien toiset päätepisteet yhdistetään janalla. Ratkaise tämän janan pituus suorakulmaisen kolmion geometrian avulla yllä olevasta kuvasta.
+                            </li>
+                            <li>
+                                Merkitse piirtämääsi kolmioon kaikki tunnetut sivujen pituudet. Voit hyödyntää tehtävän 3.2 tuloksia. Ratkaise lävistäjien välinen kulma $\alpha$.
+                                <br>
+                                Vinkki: teoreema 8.
+                            </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b2_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b2_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus03b2_v" class="collapse">
                             <ol class="a">
@@ -437,37 +458,40 @@ topnav: maa3
                 </div>
             </div>
 
-            <p>
-                Suoran $L$ ja tason $T$ välinen kulma määritellään kahden suoran välisen kulman avulla.
-                <br>
-                <img src="/kurssit/maa3/kuvat/avaruusK70.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: SUORAN JA TASON VÄLINEN KULMA</h3>
+            <div class="teoria">
                 <p>
-                    Olkoon $T'$ taso, joka sisältää suoran $L$ ja on kohtisuorassa tasoa $T$ vastaan. <em>Suoran $L$ ja tason $T$ välinen kulma</em> on terävä tai suora kulma, joka muodostuu suoran $L$ sekä tasojen $T$ ja $T'$ leikkaussuoran $L'$ välille.
-                    <br> 
-                    <img src="/kurssit/maa3/kuvat/avaruusK71.png" max-width: 100%; width: auto; height: auto;/> 
+                    Suoran $L$ ja tason $T$ välinen kulma määritellään kahden suoran välisen kulman avulla.
                     <br>
-                    Esimerkiksi yllä olevassa kuvassa suoran $L$ ja tason $T$ välinen kulma on $\alpha$.
+                    <img src="/kurssit/maa3/kuvat/avaruusK70.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SUORAN JA TASON VÄLINEN KULMA</h3>
+                    <p>
+                        Olkoon $T'$ taso, joka sisältää suoran $L$ ja on kohtisuorassa tasoa $T$ vastaan. <em>Suoran $L$ ja tason $T$ välinen kulma</em> on terävä tai suora kulma, joka muodostuu suoran $L$ sekä tasojen $T$ ja $T'$ leikkaussuoran $L'$ välille.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK71.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Esimerkiksi yllä olevassa kuvassa suoran $L$ ja tason $T$ välinen kulma on $\alpha$.
+                    </p>
+                </div>
+
+                <p>
+                    Käytännössä suoran $L$ ja tason $T$ välinen kulma voidaan määrittää seuraavasti: Piirretään suoran $L$ jonkin pisteen $P$ kautta normaali (kohtisuora) tasolle $T$. Alla olevassa kuvassa tämän normaalin ja tason leikkauspistettä on merkitty kirjaimella $B$. Pistettä $B$ sanotaan pisteen $P$ <em>kohtisuoraksi projektioksi</em> tasolla $T$.
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/avaruusK72.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Yhdistetään normaalin ja tason leikkauspiste $B$ sekä tarkasteltavan suoran ja tason leikkauspiste $A$ toisiinsa janalla, jolloin muodostuu suorakulmainen kolmio. Suoran ja tason välinen kulma $\alpha$ voidaan ratkaista tästä suorakulmaisesta kolmiosta.
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/avaruusK73.png" max-width: 100%; width: auto; height: auto;/>
                 </p>
             </div>
 
-            <p>
-                Käytännössä suoran $L$ ja tason $T$ välinen kulma voidaan määrittää seuraavasti: Piirretään suoran $L$ jonkin pisteen $P$ kautta normaali (kohtisuora) tasolle $T$. Alla olevassa kuvassa tämän normaalin ja tason leikkauspistettä on merkitty kirjaimella $B$. Pistettä $B$ sanotaan pisteen $P$ <em>kohtisuoraksi projektioksi</em> tasolla $T$.
-                <br> 
-                <img src="/kurssit/maa3/kuvat/avaruusK72.png" max-width: 100%; width: auto; height: auto;/> 
-                <br>
-                Yhdistetään normaalin ja tason leikkauspiste $B$ sekä tarkasteltavan suoran ja tason leikkauspiste $A$ toisiinsa janalla, jolloin muodostuu suorakulmainen kolmio. Suoran ja tason välinen kulma $\alpha$ voidaan ratkaista tästä suorakulmaisesta kolmiosta. 
-                <br> 
-                <img src="/kurssit/maa3/kuvat/avaruusK73.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus03b3-ex">
+                <div class="tehtava" id="9ed122c5-bde8-4141-b468-3c05bb578ed4">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b3">
                                 SUORAN JA TASON VÄLINEN KULMA
                             </a>
@@ -477,26 +501,26 @@ topnav: maa3
                         <p>
                             Suorakulmaisen särmiön pituus on 80 cm, leveys 50 cm ja korkeus 40 cm. Tehtävänä on laskea alla olevan kuvan mukaisen särmiön päätytahkon ja avaruuslävistäjän välinen kulma.
                             <br>
-                            <img src="/kurssit/maa3/kuvat/avaruusK74.png" max-width: 100%; width: auto; height: auto;/> 
-                            <ol class = "a">
-                                <li> 
-                                    Piirrä vastaava mallikuva vihkoosi. Piirrä pisteen $P$ kautta normaali (kohtisuora) särmiön siniselle päätytahkolle. Merkitse normaalin ja päätytahkon leikkauspistettä kirjaimella $B$.
-                                </li>
-                                <li>
-                                    Yhdistä pisteet $A$ ja $B$ janalla. Laske janan $AB$ pituus suorakulmaisen kolmion geometrian avulla.
-                                </li>
-                                <li>
-                                    Mitä voidaan sanoa kulman $\sphericalangle ABP$ suuruudesta? Piirrä kuva kolmiosta $ABP$ ja merkitse siihen kaikki tiedossa olevat sivujen pituudet. Voit hyödyntää tehtävän 3.2 tuloksia.
-                                </li>
-                                <li>
-                                    Ratkaise särmiön päätytahkon ja avaruuslävistäjän välinen kulma kolmion $ABP$ avulla.
-                                </li>
-                            </ol>
+                            <img src="/kurssit/maa3/kuvat/avaruusK74.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class = "a">
+                            <li>
+                                Piirrä vastaava mallikuva vihkoosi. Piirrä pisteen $P$ kautta normaali (kohtisuora) särmiön siniselle päätytahkolle. Merkitse normaalin ja päätytahkon leikkauspistettä kirjaimella $B$.
+                            </li>
+                            <li>
+                                Yhdistä pisteet $A$ ja $B$ janalla. Laske janan $AB$ pituus suorakulmaisen kolmion geometrian avulla.
+                            </li>
+                            <li>
+                                Mitä voidaan sanoa kulman $\sphericalangle ABP$ suuruudesta? Piirrä kuva kolmiosta $ABP$ ja merkitse siihen kaikki tiedossa olevat sivujen pituudet. Voit hyödyntää tehtävän 3.2 tuloksia.
+                            </li>
+                            <li>
+                                Ratkaise särmiön päätytahkon ja avaruuslävistäjän välinen kulma kolmion $ABP$ avulla.
+                            </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b3_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b3_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus03b3_v" class="collapse">
                             <ol class="a">
@@ -509,30 +533,33 @@ topnav: maa3
                     </div>
                 </div>
             </div>
-            
-            <p>
-                Myös tasojen $T_1$ ja $T_2$ välinen kulma määritellään kahden suoran välisen kulman avulla.
-                <br>
-                <img src="/kurssit/maa3/kuvat/avaruusK75.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
 
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: KAHDEN TASON VÄLINEN KULMA</h3>
+            <div class="teoria">
                 <p>
-                    Olkoon $T$ taso, joka on kohtisuorassa tasojen $T_1$ ja $T_2$ leikkaussuoraa $L$ vastaan. Taso $T$ leikkaa tason $T_1$ pitkin suoraa $L_1$ ja tason $T_2$ pitkin suoraa $L_2$.
+                    Myös tasojen $T_1$ ja $T_2$ välinen kulma määritellään kahden suoran välisen kulman avulla.
                     <br>
-                    <em>Tasojen $T_1$ ja $T_2$ välinen kulma</em> on suorien $L_1$ ja $L_2$ välinen kulma.
-                    <br> 
-                    <img src="/kurssit/maa3/kuvat/avaruusK76b.png" max-width: 100%; width: auto; height: auto;/> 
-                    <br>
-                    Esimerkiksi yllä olevassa kuvassa tasojen $T_1$ ja $T_2$ välinen kulma on $\alpha$.
+                    <img src="/kurssit/maa3/kuvat/avaruusK75.png" max-width: 100%; width: auto; height: auto;/>
                 </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KAHDEN TASON VÄLINEN KULMA</h3>
+                    <p>
+                        Olkoon $T$ taso, joka on kohtisuorassa tasojen $T_1$ ja $T_2$ leikkaussuoraa $L$ vastaan. Taso $T$ leikkaa tason $T_1$ pitkin suoraa $L_1$ ja tason $T_2$ pitkin suoraa $L_2$.
+                        <br>
+                        <em>Tasojen $T_1$ ja $T_2$ välinen kulma</em> on suorien $L_1$ ja $L_2$ välinen kulma.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK76b.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Esimerkiksi yllä olevassa kuvassa tasojen $T_1$ ja $T_2$ välinen kulma on $\alpha$.
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus03b4-ex">
+                <div class="tehtava" id="ea8185ad-02f8-460a-9a2d-84cb97ad799c">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b4">
                                 KAHDEN TASON VÄLINEN KULMA
                             </a>
@@ -542,20 +569,20 @@ topnav: maa3
                         <p>
                             Suorakulmaisen särmiön pituus on 80 cm, leveys 50 cm ja korkeus 40 cm. Särmiö leikataan kahtia alla olevan kuvan mukaisella vastakkaisten särmien kautta kulkevalla tasolla $T$. Tehtävänä on laskea tason $T$ ja särmiön pohjan välinen kulma.
                             <br>
-                            <img src="/kurssit/maa3/kuvat/avaruusK77.png" max-width: 100%; width: auto; height: auto;/> 
-                            <ol class = "a">
-                                <li> 
-                                    Piirrä mallikuva särmiön päätytahkosta. Merkitse näkyviin tason $T$ ja särmiön pohjan välinen kulma.
-                                </li>
-                                <li>
-                                    Ratkaise tason $T$ ja särmiön pohjan välinen kulma suorakulmaisen kolmion trigonometrian avulla.
-                                </li>
-                            </ol>
+                            <img src="/kurssit/maa3/kuvat/avaruusK77.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class = "a">
+                            <li>
+                                Piirrä mallikuva särmiön päätytahkosta. Merkitse näkyviin tason $T$ ja särmiön pohjan välinen kulma.
+                            </li>
+                            <li>
+                                Ratkaise tason $T$ ja särmiön pohjan välinen kulma suorakulmaisen kolmion trigonometrian avulla.
+                            </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b4_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus03b4_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus03b4_v" class="collapse">
                             <ol class="a">
@@ -571,7 +598,7 @@ topnav: maa3
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#yhdenmuotoisuusAvaruudessa">
                     Yhdenmuotoisuus
@@ -580,64 +607,67 @@ topnav: maa3
         </header>
         <div id="yhdenmuotoisuusAvaruudessa" class="collapse">
 
-            <p>
-                Tasogeometriaa käsittelevässä luvussa määriteltiin, mitä tarkoitetaan yhdenmuotoisuudella tasokuvioiden tapauksessa. Yhdenmuotoisuuden käsite voidaan laajentaa myös kolmiulotteisiin kappaleisiin. Kappaleet, jotka saadaan toisistaan siirtämällä, kiertämällä, peilaamalla, suurentamalla tai pienentämällä, ovat yhdenmuotoiset.
-            </p>
-            <p>
-                <img src="/kurssit/maa3/kuvat/avaruusK29.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: KAPPALEIDEN YHDENMUOTOISUUS JA MITTAKAAVA</h3>
+            <div class="teoria">
                 <p>
-                    Kappaleet ovat <em>yhdenmuotoiset</em>, jos ne toteuttavat seuraavat ehdot:
+                    Tasogeometriaa käsittelevässä luvussa määriteltiin, mitä tarkoitetaan yhdenmuotoisuudella tasokuvioiden tapauksessa. Yhdenmuotoisuuden käsite voidaan laajentaa myös kolmiulotteisiin kappaleisiin. Kappaleet, jotka saadaan toisistaan siirtämällä, kiertämällä, peilaamalla, suurentamalla tai pienentämällä, ovat yhdenmuotoiset.
                 </p>
+                <p>
+                    <img src="/kurssit/maa3/kuvat/avaruusK29.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KAPPALEIDEN YHDENMUOTOISUUS JA MITTAKAAVA</h3>
+                    <p>
+                        Kappaleet ovat <em>yhdenmuotoiset</em>, jos ne toteuttavat seuraavat ehdot:
+                    </p>
                     <ul>
                         <li> kulma ja sen vastinkulma ovat aina yhtä suuret </li>
-                        <li> suhde 
-                            $$\frac{\text{ vastinjanan pituus }}{\text{ janan pituus }}$$ 
+                        <li> suhde
+                            $$\frac{\text{ vastinjanan pituus }}{\text{ janan pituus }}$$
                             on sama riippumatta siitä, mitä kappaleen janaa tarkastellaan.</li>
                     </ul>
+                </div>
+
+                <p>
+                    Yhdenmuotoisuussuhde eli mittakaava määritellään samoin kuin tasokuvioiden tapauksessa eli suhteena
+                    $$\frac{\text{ vastinjanan pituus }}{\text{ janan pituus }}$$
+                </p>
+
+                <p>
+                    Tutkitaan seuraavaksi, miten yhdenmuotoisten kappaleiden tilavuudet liittyvät toisiinsa.
+                </p>
             </div>
 
-            <p>
-                Yhdenmuotoisuussuhde eli mittakaava määritellään samoin kuin tasokuvioiden tapauksessa eli suhteena
-                $$\frac{\text{ vastinjanan pituus }}{\text{ janan pituus }}$$ 
-            </p>
-
-            <p>
-                Tutkitaan seuraavaksi, miten yhdenmuotoisten kappaleiden tilavuudet liittyvät toisiinsa.
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus05-ex">
+                <div class="tehtava" id="5e822ce6-36d4-43aa-a5ad-d13f503e2871">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus05">
                                 YHDENMUOTOISUUS
                             </a>
                         </h1>
                     </header>
                     <div id="avaruus05" class="collapse">
-                        <p>  
+                        <p>
                             <img src="/kurssit/maa3/kuvat/avaruusK30.png" max-width: 100%; width: auto; height: auto;/>
                             <br>
                             Kuvan suorakulmaiset särmiöt ovat yhdenmuotoiset suhteessa $3:2$. Tehtävänä on määrittää niiden tilavuuksien suhde.
                         </p>
                         <ol class="a">
-                            <li> 
+                            <li>
                                 Merkitään pienemmän suorakulmaisen särmiön särmiä $2a$, $2b$ ja $2c$ kuten alla olevassa kuvassa. Mitkä tällöin ovat isomman suorakulmaisen särmiön särmien pituudet? Hahmottele vastaava kuva isommasta suorakulmaisesta särmiöstä omaan vihkoosi. Kuinka monta pientä suorakulmaista särmiötä muodostuu isomman suorakulmaisen särmiön sisään?
                                 <br>
                                 <img src="/kurssit/maa3/kuvat/avaruusK31.png" max-width: 100%; width: auto; height: auto;/>
                             </li>
-                            <li> 
+                            <li>
                                 Laske kummankin suorakulmaisen särmiön tilavuus ja niiden suhde. Miten tilavuuksien suhde näkyy a-kohdan piirroksista? Entä miten tilavuuksien suhde liittyy yhdenmuotoisuussuhteeseen? Selitä omin sanoin.
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus05_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus05_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus05_v" class="collapse">
                             <ol class="a">
@@ -649,26 +679,29 @@ topnav: maa3
                 </div>
             </div>
 
-            <p>
-                Edellisen tehtävän havainnot voidaan yleistää kaikille kappaleille. Yleistys perustuu siihen, että jokainen kappale, jolla on tilavuus, voidaan täyttää miten tahansa tarkasti suorakulmaisilla särmiöillä ottamalla käyttöön aina vain pienempiä särmiöitä. Tämän osoittaminen täsmällisesti on kuitenkin niin työlästä, että seuraava teoreema otetaan käyttöön ilman tarkempaa perustelua.
-            </p>
-
-            <div class="theorem" id="YHDENMUOTOISTEN KAPPALEIDEN TILAVUUSLAUSE">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                     Jos kappaleet ovat yhdenmuotoiset suhteessa $m : n$, niin kappaleiden tilavuuksien suhde on
-                     $$\frac{V_1}{V_2} = \left(\frac{m}{n}\right)^3$$
+                    Edellisen tehtävän havainnot voidaan yleistää kaikille kappaleille. Yleistys perustuu siihen, että jokainen kappale, jolla on tilavuus, voidaan täyttää miten tahansa tarkasti suorakulmaisilla särmiöillä ottamalla käyttöön aina vain pienempiä särmiöitä. Tämän osoittaminen täsmällisesti on kuitenkin niin työlästä, että seuraava teoreema otetaan käyttöön ilman tarkempaa perustelua.
+                </p>
+
+                <div class="theorem" id="YHDENMUOTOISTEN KAPPALEIDEN TILAVUUSLAUSE">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jos kappaleet ovat yhdenmuotoiset suhteessa $m : n$, niin kappaleiden tilavuuksien suhde on
+                        $$\frac{V_1}{V_2} = \left(\frac{m}{n}\right)^3$$
+                    </p>
+                </div>
+
+                <p>
+                    Yhdenmuotoisten kappaleiden tilavuuksien suhde on siis yhdenmuotoisuussuhteen eli mittakaavan kuutio.
                 </p>
             </div>
 
-            <p>
-                Yhdenmuotoisten kappaleiden tilavuuksien suhde on siis yhdenmuotoisuussuhteen eli mittakaavan kuutio.
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus06-ex">
+                <div class="tehtava" id="82c7b6ee-467a-4989-88b2-bc5f0aefedab">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus06">
                                 YHDENMUOTOISUUS JA TILAVUUS
                             </a>
@@ -679,7 +712,7 @@ topnav: maa3
                             Jalkapallon ympärysmitta on 70 cm ja tennispallon 20 cm. Tehtävänä on selvittää, kuinka moninkertainen jalkapallon tilavuus on tennispallon tilavuuteen verrattuna. Pallon tilavuuden kaavaa ei saa käyttää.
                         </p>
                         <ol class="a">
-                            <li> 
+                            <li>
                                 Määritä jalkapallon ja tennispallon yhdenmuotoisuussuhde.
                             </li>
                             <li>
@@ -690,9 +723,9 @@ topnav: maa3
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus06_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus06_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus06_v" class="collapse">
                             <ol class="a">
@@ -706,9 +739,10 @@ topnav: maa3
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus07-ex">
+                <div class="tehtava" id="60780159-775d-4879-97ec-2e2682e5d4f9">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus07">
                                 YHDENMUOTOISUUS JA TILAVUUS
                             </a>
@@ -720,12 +754,12 @@ topnav: maa3
                             <br>
                             <img src="/kurssit/maa3/kuvat/avaruusK32.png" max-width: 100%; width: auto; height: auto;/>
                             <br>
-                            Pullojen tilavuudet on ilmoitettu, mutta lisätiedoissa kaikille on virheellisesti merkitty samat mitat ja sama kuvaus: 
+                            Pullojen tilavuudet on ilmoitettu, mutta lisätiedoissa kaikille on virheellisesti merkitty samat mitat ja sama kuvaus:
                             <br>
                             <img src="/kurssit/maa3/kuvat/avaruusK33.png" max-width: 100%; width: auto; height: auto;/>
                         </p>
                         <ol class="a">
-                            <li> 
+                            <li>
                                 Selvitä, minkä pullon mitat on ilmoitettu. Toisin sanottuna arvioi, mikä on sen pullon tilavuus, jonka korkeus 16 cm ja pohjaneliön sivun pituus on 4 cm. Kertaa tarvittaessa tilavuusyksiköiden muunnokset esimerkiksi <a href="http://www02.oph.fi/etalukio/opiskelumodulit/manmath/kerpot/yksmuun/kuva/yksmuun04.gif">täältä</a>.
                             </li>
                             <li>
@@ -736,9 +770,9 @@ topnav: maa3
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus07_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus07_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus07_v" class="collapse">
                             <ol class="a">
@@ -755,7 +789,7 @@ topnav: maa3
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#pallo">
                     Pallo
@@ -764,42 +798,45 @@ topnav: maa3
         </header>
         <div id="pallo" class="collapse">
 
-            <p>
-                Tässä kappaleessa tutkitaan pallon geometrisia ominaisuuksia. Aloitetaan määrittelemällä, mitä tarkoitetaan pallolla ja joillakin siihen liittyvillä käsitteillä.
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: PALLO</h3>
+            <div class="teoria">
                 <p>
-                    Avaruuden pisteet, jotka ovat vakioetäisyydellä kiinteästä pisteestä, muodostavat <em>pallon</em> eli <em>pallopinnan</em>. Kiinteä piste on pallon <em>keskipiste</em> ja vakioetäisyys sen <em>säde</em>.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK12.png" max-width: 100%; width: auto; height: auto;/>
+                    Tässä kappaleessa tutkitaan pallon geometrisia ominaisuuksia. Aloitetaan määrittelemällä, mitä tarkoitetaan pallolla ja joillakin siihen liittyvillä käsitteillä.
                 </p>
-            </div>
 
-            <p>
-                Nimitystä pallo käytetään toisinaan myös pallopinnan rajoittamasta avaruuden osasta.
-            </p>
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: PALLO</h3>
+                    <p>
+                        Avaruuden pisteet, jotka ovat vakioetäisyydellä kiinteästä pisteestä, muodostavat <em>pallon</em> eli <em>pallopinnan</em>. Kiinteä piste on pallon <em>keskipiste</em> ja vakioetäisyys sen <em>säde</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK12.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
 
-            <p> 
-                Niin sanotun integraalilaskennan avulla saadaan johdettua pallon tilavuudelle ja pinta-alalle kaavat, jotka on koottu seuraavaan teoreemaan. Integraalilaskentaan tutustutaan kurssissa MAA9. 
-            </p>
-
-            <div class="theorem" id="PALLON TILAVUUS JA PINTA-ALA">
-                <h3>TEOREEMA</h3>
                 <p>
-                    Pallon tilavuus $V$ ja pinta-ala $A$ riippuvat pallon säteestä $r$ seuraavasti:
-                    \begin{align*}
-                    V &= \frac{4\pi r^3}{3} \\
-                    A &= 4\pi r^2 
-                    \end{align*}
+                    Nimitystä pallo käytetään toisinaan myös pallopinnan rajoittamasta avaruuden osasta.
                 </p>
+
+                <p>
+                    Niin sanotun integraalilaskennan avulla saadaan johdettua pallon tilavuudelle ja pinta-alalle kaavat, jotka on koottu seuraavaan teoreemaan. Integraalilaskentaan tutustutaan kurssissa MAA9.
+                </p>
+
+                <div class="theorem" id="PALLON TILAVUUS JA PINTA-ALA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Pallon tilavuus $V$ ja pinta-ala $A$ riippuvat pallon säteestä $r$ seuraavasti:
+                        \begin{align*}
+                        V &= \frac{4\pi r^3}{3} \\
+                        A &= 4\pi r^2
+                        \end{align*}
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus08-ex">
+                <div class="tehtava" id="ac933cd9-7cec-4228-acad-bb1a6aafb4c5">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus08">
                                 PALLON TILAVUUS JA PINTA-ALA
                             </a>
@@ -810,7 +847,7 @@ topnav: maa3
                             Vesimelonin ympärysmitaksi mitattiin 78 cm. Kuoren paksuudeksi arvioitiin 1,5 cm. Tehtävänä on selvittää, kuinka paljon tässä vesimelonissa on vettä. Tiedetään, että vesimelonin syötävästä osasta vettä on noin 90 %.
                         </p>
                         <ol class="a">
-                            <li> 
+                            <li>
                                 Piirrä mallikuva vesimelonin poikkileikkauksesta ja merkitse siihen tunnetut mitat. Selvitä vesimelonin säde.
                             </li>
                             <li>
@@ -821,9 +858,9 @@ topnav: maa3
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus08_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus08_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus08_v" class="collapse">
                             <ol class="a">
@@ -837,9 +874,10 @@ topnav: maa3
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus09-ex">
+                <div class="tehtava" id="2a2b2f08-76a2-49d1-8e3e-39a7f06f125e">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus09">
                                 PALLON TILAVUUS JA PINTA-ALA
                             </a>
@@ -847,25 +885,25 @@ topnav: maa3
                     </header>
                     <div id="avaruus09" class="collapse">
                         <p>
-                            Myymälän kattoon kiinnitetään puolipallon muotoinen valvontapeili, jonka halkaisija on 900 mm ja paino 2,3 kg. 
+                            Myymälän kattoon kiinnitetään puolipallon muotoinen valvontapeili, jonka halkaisija on 900 mm ja paino 2,3 kg.
                         </p>
                         <ol class="a">
-                            <li> 
+                            <li>
                                 Mikä on peilin pinta-ala?
                             </li>
                             <li>
-                                Saman valmistajan pienimmän valvotapeilin halkaisija on 600 mm ja paino 1,5 kg. Kuinka monta prosenttia tämän peilin pinta-ala on pienempi kuin myymälään asennettavan mallin? 
+                                Saman valmistajan pienimmän valvotapeilin halkaisija on 600 mm ja paino 1,5 kg. Kuinka monta prosenttia tämän peilin pinta-ala on pienempi kuin myymälään asennettavan mallin?
                             </li>
                             <li>
-                                Keksi vielä toinen tapa b-kohdan ratkaisemiseen. 
+                                Keksi vielä toinen tapa b-kohdan ratkaisemiseen.
                                 <br>
                                 Vinkki: teoreemat 21 &amp; 12.
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus09_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus09_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus09_v" class="collapse">
                             <ol class="a">
@@ -878,27 +916,30 @@ topnav: maa3
                 </div>
             </div>
 
-            <p>
-                Jos palloa leikataan tasolla, leikkauskuvio on ympyrä. Tämän ympyrän koko riippuu siitä, miten kaukana pallon keskipisteestä leikkaava taso on. Eri tapauksissa syntyville ympyröille on omat nimityksensä:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: ISOYMPYRÄ JA PIKKUYMPYRÄ</h3>
+            <div class="teoria">
                 <p>
-                    <em>Isoympyrä</em> syntyy, jos pallo leikataan sen keskipisteen kautta kulkevalla tasolla.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK13.png" max-width: 100%; width: auto; height: auto;/>
-                    <br>
-                    <em>Pikkuympyrä</em> syntyy, jos pallo leikataan tasolla, joka ei kulje pallon keskipisteen kautta.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK14.png" max-width: 100%; width: auto; height: auto;/>
+                    Jos palloa leikataan tasolla, leikkauskuvio on ympyrä. Tämän ympyrän koko riippuu siitä, miten kaukana pallon keskipisteestä leikkaava taso on. Eri tapauksissa syntyville ympyröille on omat nimityksensä:
                 </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: ISOYMPYRÄ JA PIKKUYMPYRÄ</h3>
+                    <p>
+                        <em>Isoympyrä</em> syntyy, jos pallo leikataan sen keskipisteen kautta kulkevalla tasolla.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK13.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        <em>Pikkuympyrä</em> syntyy, jos pallo leikataan tasolla, joka ei kulje pallon keskipisteen kautta.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK14.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus10-ex">
+                <div class="tehtava" id="46a3489e-b4e1-4743-9aaf-f35247e53202">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus10">
                                 ISOYMPYRÄ JA PIKKUYMPYRÄ
                             </a>
@@ -906,7 +947,7 @@ topnav: maa3
                     </header>
                     <div id="avaruus10" class="collapse">
                         <p>
-                            Yksi pisimmistä matkustajakoneiden lentoreiteistä oli Singapore Airlinesin lento Singaporesta Newarkin kentälle New Yorkiin maapallon isoympyrää pitkin. Tätä reittiä lennettiin vuosina 2003-2014 ja sen pituus oli noin 15 300 km. 
+                            Yksi pisimmistä matkustajakoneiden lentoreiteistä oli Singapore Airlinesin lento Singaporesta Newarkin kentälle New Yorkiin maapallon isoympyrää pitkin. Tätä reittiä lennettiin vuosina 2003-2014 ja sen pituus oli noin 15 300 km.
                         </p>
                         <p>
                             Tehtävänä on arvioida tämän tiedon pohjalta, olisiko mahdollista lentää maapallon ympäri 10 kilometrin korkeudessa pitkin 53 asteen leveyspiiriä, jolla Berliini sijaitsee. Berliinin sijaintia ($53^\circ$ pohjoista leveyttä) on havainnollistettu alla olevassa kuvassa.
@@ -914,23 +955,23 @@ topnav: maa3
                             <img src="/kurssit/maa3/kuvat/avaruusK34.png" max-width: 100%; width: auto; height: auto;/>
                         </p>
                         <ol class="a">
-                            <li> 
-                                Piirrä yllä olevan kuvan avulla mallikuva maapallon sopivasta poikkileikkauksesta. Merkitse siihen kaikkien kulmien suuruudet, jotka tiedät tai pystyt päättelemään. 
+                            <li>
+                                Piirrä yllä olevan kuvan avulla mallikuva maapallon sopivasta poikkileikkauksesta. Merkitse siihen kaikkien kulmien suuruudet, jotka tiedät tai pystyt päättelemään.
                             </li>
                             <li>
-                                Selvitä lentoreittiä vastaavan pikkuympyrän säde sopivan trigonometrisen suhteen avulla. Maapallon säde on noin 6370 km.  
+                                Selvitä lentoreittiä vastaavan pikkuympyrän säde sopivan trigonometrisen suhteen avulla. Maapallon säde on noin 6370 km.
                             </li>
                             <li>
-                                Kuinka pitkä 53 asteen leveyspiiriä pitkin kulkeva lentoreitti olisi? 
+                                Kuinka pitkä 53 asteen leveyspiiriä pitkin kulkeva lentoreitti olisi?
                             </li>
                             <li>
                                 Utsjoen sijainti on $69{,}9^\circ$ pohjoista leveyttä. Onnistuisiko lento maapallon ympäri pitkin tätä leveyspiiriä?
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus10_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus10_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus10_v" class="collapse">
                             <ol class="a">
@@ -945,9 +986,10 @@ topnav: maa3
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus11-ex">
+                <div class="tehtava" id="0029b551-ebd5-4720-86d4-ac1e96e7d109">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus11">
                                 ISOYMPYRÄ JA PIKKUYMPYRÄ
                             </a>
@@ -962,20 +1004,20 @@ topnav: maa3
                             Tehtävänä on selvittää Helsingin ja Gaboronen välinen etäisyys. Tiedetään, että maapallon säde on noin 6370 km.
                         </p>
                         <ol class="a">
-                            <li> 
+                            <li>
                                 Piirrä mallikuva maapallon poikkileikkauksesta ja merkitse siihen tunnetut kulmat. Saadaanko kysytty etäisyys maapallon isoympyrän kaaren pituutena vai pikkuympyrän kaaren pituutena?
                             </li>
                             <li>
-                                Laske Helsingin ja Gaboronen välinen etäisyys kolmen merkitsevän numeron tarkkuudella. 
+                                Laske Helsingin ja Gaboronen välinen etäisyys kolmen merkitsevän numeron tarkkuudella.
                             </li>
                             <li>
                                 Vertaa saamaasi tulosta esimerkiksi <a href="https://fr.distance.to/">tämän palvelun</a> antamaan tulokseen. Mitä syitä keksit sille, että tuloksissa on eroa?
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus11_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus11_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus11_v" class="collapse">
                             <ol class="a">
@@ -988,43 +1030,46 @@ topnav: maa3
                 </div>
             </div>
 
-            <p>
-                Tasogeometriassa tutustuttiin ympyrän segmenttiin ja kaareen, jotka syntyvät esimerkiksi silloin, kun suora leikkaa ympyrän. 
-                <br>
-                <img src="/kurssit/maa3/kuvat/tasoK36.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Vastaavasti jos taso leikkaa pallon, syntyvää kappaletta sanotaan pallosegmentiksi ja pallon pinnan osaa kalotiksi.
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: PALLOSEGMENTTI JA KALOTTI</h3>
+            <div class="teoria">
                 <p>
-                    Taso leikkaa pallosta kappaleen, jota kutsutaan <em>pallosegmentiksi</em>, ja erottaa pallon pinnasta <em>kalotin</em>.
+                    Tasogeometriassa tutustuttiin ympyrän segmenttiin ja kaareen, jotka syntyvät esimerkiksi silloin, kun suora leikkaa ympyrän.
                     <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK37.png" max-width: 100%; width: auto; height: auto;/>
+                    <img src="/kurssit/maa3/kuvat/tasoK36.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Vastaavasti jos taso leikkaa pallon, syntyvää kappaletta sanotaan pallosegmentiksi ja pallon pinnan osaa kalotiksi.
                 </p>
-            </div>
 
-            <p>
-                Integraalilaskennan avulla pallosegmentin tilavuudelle ja kalotin pinta-alalle saadaan johdettua kaavat, jotka on koottu seuraavaan teoreemaan. Huomaa, että ne pätevät riippumatta siitä, onko pallosegmentin korkeus pienempi vai suurempi kuin pallon säde.
-            </p>
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: PALLOSEGMENTTI JA KALOTTI</h3>
+                    <p>
+                        Taso leikkaa pallosta kappaleen, jota kutsutaan <em>pallosegmentiksi</em>, ja erottaa pallon pinnasta <em>kalotin</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK37.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
 
-            <div class="theorem" id="PALLOSEGMENTIN TILAVUUS JA KALOTIN PINTA-ALA">
-                <h3>TEOREEMA</h3>
                 <p>
-                    Pallosegmentin tilavuus $V_S$ ja kalotin pinta-ala $A_K$ riippuvat pallosegmentin korkeudesta $h$ ja pallon säteestä $r$ seuraavasti:
-                    \begin{align*}
-                    V_S &= \pi h^2 \left(r-\dfrac{h}{3}\right) \\[1mm]
-                    A_K &= 2\pi rh
-                    \end{align*}
-                    <img src="/kurssit/maa3/kuvat/avaruusK39.png" max-width: 100%; width: auto; height: auto;/>
+                    Integraalilaskennan avulla pallosegmentin tilavuudelle ja kalotin pinta-alalle saadaan johdettua kaavat, jotka on koottu seuraavaan teoreemaan. Huomaa, että ne pätevät riippumatta siitä, onko pallosegmentin korkeus pienempi vai suurempi kuin pallon säde.
                 </p>
+
+                <div class="theorem" id="PALLOSEGMENTIN TILAVUUS JA KALOTIN PINTA-ALA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Pallosegmentin tilavuus $V_S$ ja kalotin pinta-ala $A_K$ riippuvat pallosegmentin korkeudesta $h$ ja pallon säteestä $r$ seuraavasti:
+                        \begin{align*}
+                        V_S &= \pi h^2 \left(r-\dfrac{h}{3}\right) \\[1mm]
+                        A_K &= 2\pi rh
+                        \end{align*}
+                        <img src="/kurssit/maa3/kuvat/avaruusK39.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus12-ex">
+                <div class="tehtava" id="e045ef65-69b9-4cb4-bb14-5d8047482b77">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus12">
                                 PALLOSEGMENTTI JA KALOTTI
                             </a>
@@ -1037,11 +1082,11 @@ topnav: maa3
                             <img src="/kurssit/maa3/kuvat/avaruusK40.png" max-width: 100%; width: auto; height: auto;/>
                         </p>
                         <ol class="a">
-                            <li> 
-                                Selvitä hallin lattian säde ja laske hallin lattian pinta-ala. Anna vastaus kahden merkitsevän numeron tarkkuudella. 
+                            <li>
+                                Selvitä hallin lattian säde ja laske hallin lattian pinta-ala. Anna vastaus kahden merkitsevän numeron tarkkuudella.
                             </li>
                             <li>
-                                Alla olevassa kuvassa on poikkileikkaus pallosta, jonka pallosegmentti kuplahalli on. Piirrä vastaava mallikuva omaan vihkoosi ja täydennä siihen kaikki tunnetut mitat. Merkitse pallon sädettä jollakin kirjaimella. 
+                                Alla olevassa kuvassa on poikkileikkaus pallosta, jonka pallosegmentti kuplahalli on. Piirrä vastaava mallikuva omaan vihkoosi ja täydennä siihen kaikki tunnetut mitat. Merkitse pallon sädettä jollakin kirjaimella.
                                 <br>
                                 <img src="/kurssit/maa3/kuvat/avaruusK41.png" max-width: 100%; width: auto; height: auto;/>
                                 <br>
@@ -1053,16 +1098,16 @@ topnav: maa3
                                 Vinkki: teoreema 4.
                             </li>
                             <li>
-                                Laske hallin tilavuus. Anna vastaus kahden merkitsevän numeron tarkkuudella.  
+                                Laske hallin tilavuus. Anna vastaus kahden merkitsevän numeron tarkkuudella.
                             </li>
                             <li>
-                                Laske hallin katon pinta-ala. Anna vastaus kahden merkitsevän numeron tarkkuudella. 
+                                Laske hallin katon pinta-ala. Anna vastaus kahden merkitsevän numeron tarkkuudella.
                             </li>
                         </ol>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus12_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus12_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus12_v" class="collapse">
                             <ol class="a">
@@ -1082,7 +1127,7 @@ topnav: maa3
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#lierio">
                     Lieriö
@@ -1091,44 +1136,47 @@ topnav: maa3
         </header>
         <div id="lierio" class="collapse">
 
-            <p>
-                Aiemmin tässä luvussa tutustuit erilaisiin monitahokkaisiin. Ne ovat kappaleita, joiden pinta koostuu monikulmioista. Yksi esimerkki monitahokkaasta on suorakulmainen särmiö. Voidaan ajatella, että se muodostuu, kun suora liikkuu pitkin suorakulmiota koko ajan kohtisuorassa suorakulmion tasoa vastaan ja syntynyt pinta leikataan kahdella yhdensuuntaisella tasolla:
-                <br>
-                <img src="/kurssit/maa3/kuvat/avaruusK42.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Kappaleita, jotka muodostuvat tähän tapaan, sanotaan <em>lieriöiksi</em>.
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: LIERIÖ</h3>
+            <div class="teoria">
                 <p>
-                    Jos suora liikkuu pitkin umpinaista viivaa, joka ei leikkaa itseään, ja jos suora säilyttää koko ajan suuntansa, muodostuu <em>lieriöpinta</em>.
+                    Aiemmin tässä luvussa tutustuit erilaisiin monitahokkaisiin. Ne ovat kappaleita, joiden pinta koostuu monikulmioista. Yksi esimerkki monitahokkaasta on suorakulmainen särmiö. Voidaan ajatella, että se muodostuu, kun suora liikkuu pitkin suorakulmiota koko ajan kohtisuorassa suorakulmion tasoa vastaan ja syntynyt pinta leikataan kahdella yhdensuuntaisella tasolla:
                     <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK01.png" max-width: 100%; width: auto; height: auto;/>
+                    <img src="/kurssit/maa3/kuvat/avaruusK42.png" max-width: 100%; width: auto; height: auto;/>
                     <br>
-                    Jos lieriöpinta leikataan kahdella yhdensuuntaisella tasolla, syntyy <em>lieriö</em>.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK02.png" max-width: 100%; width: auto; height: auto;/>
-                    <br>
-                    Lieriöllä on <em>vaippa</em> sekä kaksi keskenään yhtenevää ja yhdensuuntaista <em>pohjaa</em>.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK03.png" max-width: 100%; width: auto; height: auto;/>
-                    <br>
-                    <em>Ympyrälieriön</em> pohja on ympyrä. <em>Särmiö</em> eli <em>prisma</em> on lieriö, jonka pohja on monikulmio.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK04.png" max-width: 100%; width: auto; height: auto;/>
-                    <br>
-                    <em>Suora lieriö</em> tarkoittaa lieriötä, jonka vaippa on kohtisuorassa pohjaa vastaan.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK06.png" max-width: 100%; width: auto; height: auto;/>
-                    <br>
+                    Kappaleita, jotka muodostuvat tähän tapaan, sanotaan <em>lieriöiksi</em>.
                 </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: LIERIÖ</h3>
+                    <p>
+                        Jos suora liikkuu pitkin umpinaista viivaa, joka ei leikkaa itseään, ja jos suora säilyttää koko ajan suuntansa, muodostuu <em>lieriöpinta</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK01.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Jos lieriöpinta leikataan kahdella yhdensuuntaisella tasolla, syntyy <em>lieriö</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK02.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Lieriöllä on <em>vaippa</em> sekä kaksi keskenään yhtenevää ja yhdensuuntaista <em>pohjaa</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK03.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        <em>Ympyrälieriön</em> pohja on ympyrä. <em>Särmiö</em> eli <em>prisma</em> on lieriö, jonka pohja on monikulmio.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK04.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        <em>Suora lieriö</em> tarkoittaa lieriötä, jonka vaippa on kohtisuorassa pohjaa vastaan.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK06.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus13-ex">
+                <div class="tehtava" id="370d5a44-6373-4afb-b032-ddb8e696d3f4">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus13">
                                 LIERIÖ
                             </a>
@@ -1136,7 +1184,7 @@ topnav: maa3
                     </header>
                     <div id="avaruus13" class="collapse">
                         <ol class="a">
-                            <li> 
+                            <li>
                                 Keksi esimerkki kappaleesta, joka on monitahokas mutta ei lieriö.
                             </li>
                             <li>
@@ -1153,32 +1201,35 @@ topnav: maa3
                 </div>
             </div>
 
-            <p>
-                Integraalilaskennan avulla voidaan todistaa niin sanottu Cavalierin periaate: Jos kahden yhtä korkean kappaleen tasoleikkausten pinta-alat ovat keskenään yhtä suuret riippumatta siitä, miltä korkeudelta ne leikataan, on kappaleilla sama tilavuus.
-                <br>
-                <img src="/kurssit/maa3/kuvat/avaruusK43.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Suorakulmaisen särmiön tilavuus on määritelmän mukaan samasta kärjestä alkavien särmien pituuksien tulo. Suorakulmaisen särmiön tilavuus voidaan ilmaista myös särmiön pohjan pinta-alan ja korkeuden tulona. Alla olevan kuvan merkinnöillä
-                $$V = abh = A_p \cdot h$$
-                <br>
-                <img src="/kurssit/maa3/kuvat/avaruusK44.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Cavallierin periaatteesta seuraa, että minkä tahansa lieriön tilavuus saadaan laskemalla sellaisen suorakulmaisen särmiön tilavuus, jolla on sama korkeus ja pohjan pinta-ala kuin tarkasteltavalla lieriöllä. Minkä tahansa lieriön tilavuus saadaan siis sen pohjan pinta-alan ja korkeuden tulona.
-            </p>
-
-            <div class="theorem" id="LIERIÖN TILAVUUS">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Lieriön tilavuus $V$ on lieriön pohjan pinta-alan $A_p$ ja lieriön korkeuden $h$ tulo:
-                    $$V = A_p \cdot h$$
-                    <img src="/kurssit/maa3/kuvat/avaruusK17.png" max-width: 100%; width: auto; height: auto;/>
+                    Integraalilaskennan avulla voidaan todistaa niin sanottu Cavalierin periaate: Jos kahden yhtä korkean kappaleen tasoleikkausten pinta-alat ovat keskenään yhtä suuret riippumatta siitä, miltä korkeudelta ne leikataan, on kappaleilla sama tilavuus.
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/avaruusK43.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Suorakulmaisen särmiön tilavuus on määritelmän mukaan samasta kärjestä alkavien särmien pituuksien tulo. Suorakulmaisen särmiön tilavuus voidaan ilmaista myös särmiön pohjan pinta-alan ja korkeuden tulona. Alla olevan kuvan merkinnöillä
+                    $$V = abh = A_p \cdot h$$
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/avaruusK44.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Cavallierin periaatteesta seuraa, että minkä tahansa lieriön tilavuus saadaan laskemalla sellaisen suorakulmaisen särmiön tilavuus, jolla on sama korkeus ja pohjan pinta-ala kuin tarkasteltavalla lieriöllä. Minkä tahansa lieriön tilavuus saadaan siis sen pohjan pinta-alan ja korkeuden tulona.
                 </p>
+
+                <div class="theorem" id="LIERIÖN TILAVUUS">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Lieriön tilavuus $V$ on lieriön pohjan pinta-alan $A_p$ ja lieriön korkeuden $h$ tulo:
+                        $$V = A_p \cdot h$$
+                        <img src="/kurssit/maa3/kuvat/avaruusK17.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus14-ex">
+                <div class="tehtava" id="831e63ac-9288-4e0d-9fd8-812f9edb29ae">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus14">
                                 LIERIÖN TILAVUUS
                             </a>
@@ -1187,16 +1238,16 @@ topnav: maa3
                     <div id="avaruus14" class="collapse">
                         <p>
                             Tasakattoisen omakotitalon katon pinta-ala on $105 \text{ m}^2$. Ukkoskuuron aikana vettä satoi 5 mm. Tehtävänä on laskea, kuinka monta litraa vettä talon katolle satoi.
-                            <ol class="a">
-                                <li> Piirrä tilanteesta mallikuva ja merkitse siihen tehtävässä annetut mitat. Selitä omin sanoin, miksi talon muodolla ei ole merkitystä tehtävän ratkaisussa. </li>
-                                <li> Muuta annetut mitat yhteensopiviin yksikköihin ja laske katolle sataneen veden määrä.</li>
-                                <li> Ilmaise katolle sataneen veden määrä litroina. Kertaa tarvittaessa tilavuusyksiköiden muunnokset esimerkiksi <a href="http://www02.oph.fi/etalukio/opiskelumodulit/manmath/kerpot/yksmuun/kuva/yksmuun04.gif">täältä</a>.</li>
-                            </ol>
+                        <ol class="a">
+                            <li> Piirrä tilanteesta mallikuva ja merkitse siihen tehtävässä annetut mitat. Selitä omin sanoin, miksi talon muodolla ei ole merkitystä tehtävän ratkaisussa. </li>
+                            <li> Muuta annetut mitat yhteensopiviin yksikköihin ja laske katolle sataneen veden määrä.</li>
+                            <li> Ilmaise katolle sataneen veden määrä litroina. Kertaa tarvittaessa tilavuusyksiköiden muunnokset esimerkiksi <a href="http://www02.oph.fi/etalukio/opiskelumodulit/manmath/kerpot/yksmuun/kuva/yksmuun04.gif">täältä</a>.</li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus14_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus14_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus14_v" class="collapse">
                             <ol class="a">
@@ -1209,14 +1260,17 @@ topnav: maa3
                 </div>
             </div>
 
-            <p>
-                Seuraavissa tehtävissä tutkitaan erilaisia suoria lieriöitä. 
-            </p>
+            <div class="teoria">
+                <p>
+                    Seuraavissa tehtävissä tutkitaan erilaisia suoria lieriöitä.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus15a-ex">
+                <div class="tehtava" id="3ed5f84a-64c3-4e7b-93b0-95d073c5db11">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus15a">
                                 SUORA LIERIÖ
                             </a>
@@ -1229,30 +1283,30 @@ topnav: maa3
                             <img src="/kurssit/maa3/kuvat/avaruusK66.png" max-width: 100%; width: auto; height: auto;/>
                             <br>
                             Suurimman mahdollisen ympyrälieriön pohjaympyröiden kehät ovat pallon pinnalla, ja pohjaympyröiden keskipisteitä yhdistävä ympyrälieriön <em>akseli</em> kulkee pallon keskipisteen kautta kuten yllä olevassa kuvassa.
-                            <ol class = "a">
-                                <li> 
-                                   Piirrä kuva poikkileikkauksesta, joka kulkee ympyrälieriön pohjaympyröiden keskipisteiden ja pallon keskipisteen kautta. Merkitse pohjaympyrän sädettä kirjaimella $r$.
-                                </li>
-                                <li>
-                                    Ilmaise lieriön pohjan halkaisija säteen $r$ avulla. Ilmaise lieriön korkeus säteen $r$ avulla. Merkitse nämä mitat piirrokseesi.
-                                </li>
-                                <li>
-                                    Piirrä poikkileikkauskuvan lieriölle lävistäjä. Mikä on sen pituus?
-                                    <br>
-                                    Vinkki: lue tehtävänanto huolellisesti.
-                                </li>
-                                <li>
-                                    Ratkaise lieriön säde suorakulmaisen kolmion geometrian avulla. 
-                                </li>
-                                <li>
-                                    Laske lieriön tilavuus. Anna vastaus kuutiosenttimetreinä ja litroina kolmen merkitsevän numeron tarkkuudella.
-                                </li>
-                            </ol>
+                        <ol class = "a">
+                            <li>
+                                Piirrä kuva poikkileikkauksesta, joka kulkee ympyrälieriön pohjaympyröiden keskipisteiden ja pallon keskipisteen kautta. Merkitse pohjaympyrän sädettä kirjaimella $r$.
+                            </li>
+                            <li>
+                                Ilmaise lieriön pohjan halkaisija säteen $r$ avulla. Ilmaise lieriön korkeus säteen $r$ avulla. Merkitse nämä mitat piirrokseesi.
+                            </li>
+                            <li>
+                                Piirrä poikkileikkauskuvan lieriölle lävistäjä. Mikä on sen pituus?
+                                <br>
+                                Vinkki: lue tehtävänanto huolellisesti.
+                            </li>
+                            <li>
+                                Ratkaise lieriön säde suorakulmaisen kolmion geometrian avulla.
+                            </li>
+                            <li>
+                                Laske lieriön tilavuus. Anna vastaus kuutiosenttimetreinä ja litroina kolmen merkitsevän numeron tarkkuudella.
+                            </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus15a_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus15a_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus15a_v" class="collapse">
                             <ol class="a">
@@ -1267,14 +1321,17 @@ topnav: maa3
                 </div>
             </div>
 
-            <p>
-                Yksi suoran lieriön erikoistapaus on suora ympyrälieriö. Ennen kuin siirryt tekemään seuraavaa tehtävää, kokeile levittää suoran ympyrälieriön vaippa tasoon <a href="https://www.geogebra.org/m/eyFFfWAE">tämän Geogebra-sovelluksen</a> avulla.
-            </p>
+            <div class="teoria">
+                <p>
+                    Yksi suoran lieriön erikoistapaus on suora ympyrälieriö. Ennen kuin siirryt tekemään seuraavaa tehtävää, kokeile levittää suoran ympyrälieriön vaippa tasoon <a href="https://www.geogebra.org/m/eyFFfWAE">tämän Geogebra-sovelluksen</a> avulla.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus15-ex">
+                <div class="tehtava" id="31f84ef3-6e10-44d3-bbac-3dc27db3fe4a">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus15">
                                 SUORA LIERIÖ
                             </a>
@@ -1285,43 +1342,45 @@ topnav: maa3
                             Tässä tehtävässä päätellään lauseke suoran lieriön vaipan pinta-alalle. Kun suoran lieriön vaippa leikataan auki pohjaa vastaan kohtisuoraan, vaippa avatuu suorakulmioksi kuten alla olevassa kuvassa.
                             <br>
                             <img src="/kurssit/maa3/kuvat/avaruusK64.png" max-width: 100%; width: auto; height: auto;/>
-                            <ol class = "a">
-                                <li> 
-                                    Piirrä vastaava mallikuva omaan vihkoosi. Merkitse lieriön pohjan piiriä jollakin kirjaimella. Merkitse lieriön korkeutta jollakin toisella kirjaimella.
-                                </li>
-                                <li> 
-                                    Tunnista alla olevasta kuvasta lieriön pohjan piiri ja lieriön korkeus. Ilmaise vaipan pinta-ala $A_v$ niiden avulla.  
-                                    <br>
-                                    <img src="/kurssit/maa3/kuvat/avaruusK65.png" max-width: 100%; width: auto; height: auto;/>
-                                </li>
-                            </ol>
+                        <ol class = "a">
+                            <li>
+                                Piirrä vastaava mallikuva omaan vihkoosi. Merkitse lieriön pohjan piiriä jollakin kirjaimella. Merkitse lieriön korkeutta jollakin toisella kirjaimella.
+                            </li>
+                            <li>
+                                Tunnista alla olevasta kuvasta lieriön pohjan piiri ja lieriön korkeus. Ilmaise vaipan pinta-ala $A_v$ niiden avulla.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/avaruusK65.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <p>
-                Tehtävän 3.20 tuloksena saadaan seuraava teoreema:
-            </p>
+            <div class="teoria">
+                <div class="theorem" id="SUORAN LIERIÖN VAIPAN PINTA-ALA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Tehtävän 3.20 tuloksena saadaan seuraava teoreema:
 
-            <div class="theorem" id="SUORAN LIERIÖN VAIPAN PINTA-ALA">
-                <h3>TEOREEMA</h3>
-                <p>
+                    </p>
                     Suoran lieriön vaipan pinta-ala $A_v$ on lieriön pohjan piirin $p$ ja lieriön korkeuden $h$ tulo:
                     $$A_v = ph$$
                     <img src="/kurssit/maa3/kuvat/avaruusK18.png" max-width: 100%; width: auto; height: auto;/>
-                </p>
-                <div class="proof">
-                    <p>
-                        Perustelu: tehtävässä 3.20.
                     </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: tehtävässä 3.20.
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus15b-ex">
+                <div class="tehtava" id="6f9d8be2-90e8-41c3-8c11-522bab1d3b41">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus15b">
                                 SUORA LIERIÖ
                             </a>
@@ -1329,20 +1388,20 @@ topnav: maa3
                     </header>
                     <div id="avaruus15b" class="collapse">
                         <p>
-                            Suoran lieriön muotoisen maljakon korkeus on 120 mm. Maljakko täytettiin vedellä aivan täyteen ja veden määräksi mitattiin 1,80 litraa. Mittanauhan avulla maljakon pohjan piiriksi mitattiin 38,7 cm. 
-                            <ol class = "a">
-                                <li> 
-                                    Selvitä maljakon pohjan pinta-ala. Anna vastaus neliösenttimetreinä kolmen merkitsevän numeron tarkkuudella.
-                                </li>
-                                <li> 
-                                    Selvitä maljakon vaipan pinta-ala. Anna vastaus neliösenttimetreinä kolmen merkitsevän numeron tarkkuudella.
-                                </li>
-                            </ol>
+                            Suoran lieriön muotoisen maljakon korkeus on 120 mm. Maljakko täytettiin vedellä aivan täyteen ja veden määräksi mitattiin 1,80 litraa. Mittanauhan avulla maljakon pohjan piiriksi mitattiin 38,7 cm.
+                        <ol class = "a">
+                            <li>
+                                Selvitä maljakon pohjan pinta-ala. Anna vastaus neliösenttimetreinä kolmen merkitsevän numeron tarkkuudella.
+                            </li>
+                            <li>
+                                Selvitä maljakon vaipan pinta-ala. Anna vastaus neliösenttimetreinä kolmen merkitsevän numeron tarkkuudella.
+                            </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus15b_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus15b_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus15b_v" class="collapse">
                             <ol class="a">
@@ -1359,7 +1418,7 @@ topnav: maa3
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#kartio">
                     Kartio
@@ -1368,75 +1427,78 @@ topnav: maa3
         </header>
         <div id="kartio" class="collapse">
 
-            <p>
-                Neliöpohjainen pyramidi on yksi esimerkki monitahokkaasta, joka ei ole lieriö. Voidaan ajatella, että se muodostuu, kun kiinteän pisteen kautta kulkeva suora liikkuu pitkin neliötä ja syntynyt pinta leikataan tasolla:
-                <br>
-                <img src="/kurssit/maa3/kuvat/avaruusK45.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Kappaleita, jotka muodostuvat tähän tapaan, sanotaan <em>kartioiksi</em>.
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: KARTIO</h3>
+            <div class="teoria">
                 <p>
-                    Jos suora liikkuu pitkin umpinaista viivaa, joka ei leikkaa itseään, ja jos suora kulkee koko ajan saman pisteen kautta, muodostuu <em>kartiopinta</em>.
+                    Neliöpohjainen pyramidi on yksi esimerkki monitahokkaasta, joka ei ole lieriö. Voidaan ajatella, että se muodostuu, kun kiinteän pisteen kautta kulkeva suora liikkuu pitkin neliötä ja syntynyt pinta leikataan tasolla:
                     <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK07.png" max-width: 100%; width: auto; height: auto;/>
+                    <img src="/kurssit/maa3/kuvat/avaruusK45.png" max-width: 100%; width: auto; height: auto;/>
                     <br>
-                    Jos kartiopinta leikataan tasolla, syntyy <em>kartio</em>.
+                    Kappaleita, jotka muodostuvat tähän tapaan, sanotaan <em>kartioiksi</em>.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KARTIO</h3>
+                    <p>
+                        Jos suora liikkuu pitkin umpinaista viivaa, joka ei leikkaa itseään, ja jos suora kulkee koko ajan saman pisteen kautta, muodostuu <em>kartiopinta</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK07.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Jos kartiopinta leikataan tasolla, syntyy <em>kartio</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK08.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Kartiolla on <em>vaippa</em> sekä <em>pohja</em> ja <em>huippu</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK09.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        <em>Ympyräkartion</em> pohja on ympyrä. <em>Pyramidi</em> on kartio, jonka pohja on monikulmio.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK10.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        <em>Suoran kartion</em> huipusta piirretty korkeusjanan toinen päätepiste on pohjan keskipisteessä.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK11.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                    </p>
+                </div>
+
+                <p>
+                    Kuutio on mahdollista leikata kolmeksi samanlaiseksi pyramidiksi, joiden pohjana on kuution tahko ja joiden korkeus on sama kuin kuution korkeus:
                     <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK08.png" max-width: 100%; width: auto; height: auto;/>
+                    <img src="/kurssit/maa3/kuvat/avaruusK50.png" max-width: 100%; width: auto; height: auto;/>
+                    <!--                 <figure>
+                                    <img src="/kurssit/maa3/kuvat/image08.jpg" max-width: 100%; width: auto; height: auto;/>
+                                    <figcaption><a href="http://www.mathaware.org/mam/00/master/essays/B3D/2/volume.html">Kuvan lähde</a></figcaption>
+                                    </figure> -->
                     <br>
-                    Kartiolla on <em>vaippa</em> sekä <em>pohja</em> ja <em>huippu</em>.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK09.png" max-width: 100%; width: auto; height: auto;/>
-                    <br>
-                    <em>Ympyräkartion</em> pohja on ympyrä. <em>Pyramidi</em> on kartio, jonka pohja on monikulmio.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK10.png" max-width: 100%; width: auto; height: auto;/>
-                    <br>
-                    <em>Suoran kartion</em> huipusta piirretty korkeusjanan toinen päätepiste on pohjan keskipisteessä.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK11.png" max-width: 100%; width: auto; height: auto;/>
-                    <br>
+                    Tästä voidaan päätellä, että tällaisen pyramidin tilavuus on kolmasosa sellaisen suorakulmaisen särmiön tilavuudesta, jolla on sama pohja ja korkeus kuin pyramidilla.
+                </p>
+                <p>
+                    Voit kokeilla kuution jakamista kolmeksi yhteneväksi pyramidiksi <a href="https://www.geogebra.org/m/jMtA3fNZ">tällä Geogebra-sovelluksella</a>.
+                </p>
+                <p>
+                    Integraalilaskennan avulla voidaan osoittaa, että kysymyksessä ei ole sattuma vaan yleispätevä tosiasia: Kartion tilavuus on aina kolmasosa sellaisen lieriön tilavuudesta, jolla on sama pohja ja sama korkeus kuin kartiolla.
+                </p>
+
+                <div class="theorem" id="KARTION TILAVUUS">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kartion tilavuus on kolmasosa sellaisen lieriön tilavuudesta, jolla on sama pohja ja sama korkeus kuin kyseisellä kartiolla. Kartion tilavuus $V$ on siis kolmasosa kartion pohjan pinta-alan $A_p$ ja kartion korkeuden $h$ tulosta:
+                        $$V = \frac{A_p \cdot h}{3}$$
+                        <img src="/kurssit/maa3/kuvat/avaruusK19.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
+
+                <p>
+                    Seuraavassa tehtävässä harjoitellaan kartion tilavuuden laskemista. Sopivan poikkileikkauskuvan piirtäminen helpottaa tarvittavien mittojen selvittämistä.
                 </p>
             </div>
-
-            <p>
-                Kuutio on mahdollista leikata kolmeksi samanlaiseksi pyramidiksi, joiden pohjana on kuution tahko ja joiden korkeus on sama kuin kuution korkeus: 
-                <br>
-                <img src="/kurssit/maa3/kuvat/avaruusK50.png" max-width: 100%; width: auto; height: auto;/>
-<!--                 <figure>
-                <img src="/kurssit/maa3/kuvat/image08.jpg" max-width: 100%; width: auto; height: auto;/>
-                <figcaption><a href="http://www.mathaware.org/mam/00/master/essays/B3D/2/volume.html">Kuvan lähde</a></figcaption>
-                </figure> -->
-                <br>
-                Tästä voidaan päätellä, että tällaisen pyramidin tilavuus on kolmasosa sellaisen suorakulmaisen särmiön tilavuudesta, jolla on sama pohja ja korkeus kuin pyramidilla. 
-            </p>
-            <p>
-                Voit kokeilla kuution jakamista kolmeksi yhteneväksi pyramidiksi <a href="https://www.geogebra.org/m/jMtA3fNZ">tällä Geogebra-sovelluksella</a>.
-            </p>
-            <p>
-                Integraalilaskennan avulla voidaan osoittaa, että kysymyksessä ei ole sattuma vaan yleispätevä tosiasia: Kartion tilavuus on aina kolmasosa sellaisen lieriön tilavuudesta, jolla on sama pohja ja sama korkeus kuin kartiolla. 
-            </p>
-
-            <div class="theorem" id="KARTION TILAVUUS">
-                <h3>TEOREEMA</h3>
-                <p>
-                    Kartion tilavuus on kolmasosa sellaisen lieriön tilavuudesta, jolla on sama pohja ja sama korkeus kuin kyseisellä kartiolla. Kartion tilavuus $V$ on siis kolmasosa kartion pohjan pinta-alan $A_p$ ja kartion korkeuden $h$ tulosta:
-                    $$V = \frac{A_p \cdot h}{3}$$
-                    <img src="/kurssit/maa3/kuvat/avaruusK19.png" max-width: 100%; width: auto; height: auto;/>
-                </p>
-            </div>
-
-            <p>
-                Seuraavassa tehtävässä harjoitellaan kartion tilavuuden laskemista. Sopivan poikkileikkauskuvan piirtäminen helpottaa tarvittavien mittojen selvittämistä.
-            </p>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus16-ex">
+                <div class="tehtava" id="bc69a1e6-03a2-4d29-94e6-5832b6bcf3ec">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus16">
                                 KARTION TILAVUUS
                             </a>
@@ -1447,21 +1509,21 @@ topnav: maa3
                             Kheopsin pyramidin pohja on neliö, jonka sivun pituudeksi mitattiin 230,4 metriä. Pyramidin sivusärmän ja luotisuoran (pystysuoran) väliseksi kulmaksi mitattiin 48,0 astetta. Tehtävänä on selvittää pyramidin tilavuus näiden mittausten pohjalta.
                             <br>
                             <img src="/kurssit/maa3/kuvat/avaruusK57.png" max-width: 100%; width: auto; height: auto;/>
-                            <ol class="a">
-                                <li> 
-                                    Ratkaise pyramidin korkeus pyramidin lävistäjän ja huipun kautta kulkevan poikkileikkauksen avulla. 
+                        <ol class="a">
+                            <li>
+                                Ratkaise pyramidin korkeus pyramidin lävistäjän ja huipun kautta kulkevan poikkileikkauksen avulla.
                                 <br>
                                 <img src="/kurssit/maa3/kuvat/avaruusK58.png" max-width: 100%; width: auto; height: auto;/>
-                                </li>
-                                <li> 
-                                    Laske pyramidin tilavuus. Anna vastaus kolmen merkitsevän numeron tarkkuudella. 
-                                </li>
-                            </ol>
+                            </li>
+                            <li>
+                                Laske pyramidin tilavuus. Anna vastaus kolmen merkitsevän numeron tarkkuudella.
+                            </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus16_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus16_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus16_v" class="collapse">
                             <ol class="a">
@@ -1473,14 +1535,17 @@ topnav: maa3
                 </div>
             </div>
 
-            <p>
-                Seuraavissa tehtävissä tutkitaan suoraa ympyräkartiota. 
-            </p>
+            <div class="teoria">
+                <p>
+                    Seuraavissa tehtävissä tutkitaan suoraa ympyräkartiota.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus19-ex">
+                <div class="tehtava" id="5a350a84-5785-43a5-b914-cacf4be3a7bf">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus19">
                                 SUORA YMPYRÄKARTIO
                             </a>
@@ -1491,27 +1556,27 @@ topnav: maa3
                             Suoran ympyräkartion sisälle on laitettu mahdollisimman suuri pallo. Pallo sivuaa kartion pohjaa pohjan keskipisteessä ja kartion vaippaa kuten alla olevassa kuvassa. Kartion korkeus on 15 ja pohjaympyrän säde on 8. Tehtävänä on määrittää pallon säde.
                             <br>
                             <img src="/kurssit/maa3/kuvat/avaruusK60.png" max-width: 100%; width: auto; height: auto;/>
-                            <ol class="a">
-                                <li> 
-                                    Piirrä kuva poikkileikkauksesta, joka kulkee kartion huipun ja pohjaympyrän halkaisijan kautta. Merkitse kuvaan kaikki tunnetut mitat. Merkitse pallon sädettä jollakin kirjaimella.
-                                </li>
-                                <li> 
-                                    Tunnista kuvasta kaksi erikokoista suorakulmaista kolmiota. Perustele, että ne ovat yhdenmuotoiset.
-                                    <br>
-                                    Vinkki: teoreema 3.
-                                </li>
-                                <li>
-                                    Ratkaise isomman kolmion hypotenuusan pituus. Muodosta pienemmän kolmion hypoteenuusalle lauseke, jossa esiintyy pallon säde.
-                                </li>
-                                <li> 
-                                    Muodosta kolmioiden yhdenmuotoisuuden avulla verrantoyhtälö ja ratkaise pallon säde.
-                                 </li>
-                            </ol>
+                        <ol class="a">
+                            <li>
+                                Piirrä kuva poikkileikkauksesta, joka kulkee kartion huipun ja pohjaympyrän halkaisijan kautta. Merkitse kuvaan kaikki tunnetut mitat. Merkitse pallon sädettä jollakin kirjaimella.
+                            </li>
+                            <li>
+                                Tunnista kuvasta kaksi erikokoista suorakulmaista kolmiota. Perustele, että ne ovat yhdenmuotoiset.
+                                <br>
+                                Vinkki: teoreema 3.
+                            </li>
+                            <li>
+                                Ratkaise isomman kolmion hypotenuusan pituus. Muodosta pienemmän kolmion hypoteenuusalle lauseke, jossa esiintyy pallon säde.
+                            </li>
+                            <li>
+                                Muodosta kolmioiden yhdenmuotoisuuden avulla verrantoyhtälö ja ratkaise pallon säde.
+                            </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus19_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus19_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus19_v" class="collapse">
                             <ol class="a">
@@ -1526,11 +1591,12 @@ topnav: maa3
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus17-ex">
+                <div class="tehtava" id="adf8bfef-8aa7-4f16-920a-6cc067a86862">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus17">
-                               SUORA YMPYRÄKARTIO
+                                SUORA YMPYRÄKARTIO
                             </a>
                         </h1>
                     </header>
@@ -1543,53 +1609,58 @@ topnav: maa3
                             Tässä tehtävässä päätellään lauseke suoran ympyräkartion vaipan pinta-alalle. Kun suoran ympyräkartion vaippa leikataan auki pitkin sivujanaa, vaippa avatuu ympyräsektoriksi kuten alla olevassa kuvassa.
                             <br>
                             <img src="/kurssit/maa3/kuvat/avaruusK63.png" max-width: 100%; width: auto; height: auto;/>
-                            <ol class = "a">
-                                <li> 
-                                    Piirrä vastaava mallikuva omaan vihkoosi. Merkitse kartion pohjaympyrän sädettä jollakin kirjaimella. Merkitse kartion sivujanan pituutta jollakin toisella kirjaimella.
-                                </li>
-                                <li> 
-                                    Ilmaise ympyräsektorin kaaren pituus $b$ kartion pohjaympyrän säteen avulla. 
-                                </li>
-                                <li> 
-                                    Tunnista alla olevasta kuvasta kartion sivujana. Mikä on koko ympyrän kehän pituus? Entä pinta-ala? Ilmaise ne kartion sivujanan pituuden avulla.
-                                    <br>
-                                    <img src="/kurssit/maa3/kuvat/avaruusK61.png" max-width: 100%; width: auto; height: auto;/>
-                                </li>
-                                <li> 
-                                    Tehtävässä 2.22 havaittiin, että ympyräsektorin pinta-alan $A_v$ suhde koko ympyrän pinta-alaan on sama kuin ympyräsektorin kaaren pituuden $b$ suhde ympyrän kehän pituuteen. 
-                                    <br>
-                                    Muodosta tämän tiedon avulla verrantoyhtälö ja ratkaise siitä ympyräsektorin pinta-ala $A_v$.
-                                </li>
-                            </ol>
+                        <ol class = "a">
+                            <li>
+                                Piirrä vastaava mallikuva omaan vihkoosi. Merkitse kartion pohjaympyrän sädettä jollakin kirjaimella. Merkitse kartion sivujanan pituutta jollakin toisella kirjaimella.
+                            </li>
+                            <li>
+                                Ilmaise ympyräsektorin kaaren pituus $b$ kartion pohjaympyrän säteen avulla.
+                            </li>
+                            <li>
+                                Tunnista alla olevasta kuvasta kartion sivujana. Mikä on koko ympyrän kehän pituus? Entä pinta-ala? Ilmaise ne kartion sivujanan pituuden avulla.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/avaruusK61.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                Tehtävässä 2.22 havaittiin, että ympyräsektorin pinta-alan $A_v$ suhde koko ympyrän pinta-alaan on sama kuin ympyräsektorin kaaren pituuden $b$ suhde ympyrän kehän pituuteen.
+                                <br>
+                                Muodosta tämän tiedon avulla verrantoyhtälö ja ratkaise siitä ympyräsektorin pinta-ala $A_v$.
+                            </li>
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <p>
-                Tehtävän 3.24 tuloksena saadaan seuraava teoreema:
-            </p>
-
-            <div class="theorem" id="SUORAN YMPYRÄKARTION VAIPAN PINTA-ALA">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Suoran ympyräkartion vaipan pinta-ala $A_v$ on
-                    $$A_v = \pi rs,$$
-                    missä $r$ on kartion pohjaympyrän säde ja $s$ on kartion sivujana.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/avaruusK20.png" max-width: 100%; width: auto; height: auto;/>
+                    Tehtävän 3.24 tuloksena saadaan seuraava teoreema:
                 </p>
-                <div class="proof">
+
+                <div class="theorem" id="SUORAN YMPYRÄKARTION VAIPAN PINTA-ALA">
+                    <h3>TEOREEMA</h3>
                     <p>
-                        Perustelu: tehtävässä 3.24.
+
+                        Suoran ympyräkartion vaipan pinta-ala $A_v$ on
+                        $$A_v = \pi rs,$$
+                        missä $r$ on kartion pohjaympyrän säde ja $s$ on kartion sivujana.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/avaruusK20.png" max-width: 100%; width: auto; height: auto;/>
+
                     </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: tehtävässä 3.24.
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="avaruus18-ex">
+                <div class="tehtava" id="cb5730b8-4d71-4341-a756-1f4977b6fb9e">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#avaruus18">
                                 SUORAN YMPYRÄKARTIO
                             </a>
@@ -1600,17 +1671,17 @@ topnav: maa3
                             Ulkoilualueelle suunnitellaan suoran ympyräkartion muotoista kotaa, joka on 2,8 m korkea ja 4,8 m leveä. Tehtävänä on laskea kodan seinään tarvittavan kankaan määrä ja kodan tilavuus.
                             <br>
                             <img src="/kurssit/maa3/kuvat/avaruusK56.png" max-width: 100%; width: auto; height: auto;/>
-                            <ol class="a">
-                                <li> Piirrä mallikuva kodasta tai sen poikkileikkauksesta. Merkitse kuvaan kaikki tunnetut mitat. </li>
-                                <li> Mitä tietoja tarvitset kankaan määrän selvittämiseen? Ratkaise tarvittavat tiedot suorakulmaisen kolmion geometrian avulla. </li>
-                                <li> Kuinka paljon kangasta tarvitaan kodan seinään? Anna vastaus kahden merkitsevän numeron tarkkuudella. </li>
-                                <li> Mikä on suunnitellun kodan tilavuus? </li>
-                            </ol>
+                        <ol class="a">
+                            <li> Piirrä mallikuva kodasta tai sen poikkileikkauksesta. Merkitse kuvaan kaikki tunnetut mitat. </li>
+                            <li> Mitä tietoja tarvitset kankaan määrän selvittämiseen? Ratkaise tarvittavat tiedot suorakulmaisen kolmion geometrian avulla. </li>
+                            <li> Kuinka paljon kangasta tarvitaan kodan seinään? Anna vastaus kahden merkitsevän numeron tarkkuudella. </li>
+                            <li> Mikä on suunnitellun kodan tilavuus? </li>
+                        </ol>
                         </p>
                         <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruus18_v">
-                            VASTAUS
-                        </a>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus18_v">
+                                VASTAUS
+                            </a>
                         </h2>
                         <div id="avaruus18_v" class="collapse">
                             <ol class="a">
@@ -1628,7 +1699,7 @@ topnav: maa3
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku3-tehtavasarja2">
                     TEHTÄVÄSARJA II
@@ -1639,9 +1710,10 @@ topnav: maa3
         <div id="luku3-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="avaruusS201-ex">
+            <div class="tehtava" id="eec41641-37c2-4ac4-8c56-2fb1cdff7e29">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS201">
                             MONITAHOKKAITA
                         </a>
@@ -1658,15 +1730,16 @@ topnav: maa3
                     </h2>
                     <div id="avaruusS201_v" class="collapse">
                         <p>
-                         Pituus 407 mm, leveys 271 mm, korkeus 136 mm.
+                            Pituus 407 mm, leveys 271 mm, korkeus 136 mm.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS202-ex">
+            <div class="tehtava" id="7aac0c04-6310-43a8-88da-0fe91acd1605">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS202">
                             MONITAHOKKAITA
                         </a>
@@ -1674,11 +1747,11 @@ topnav: maa3
                 </header>
                 <div id="avaruusS202">
                     <p>
-                        Kannellinen laatikko, jonka ulkomitat ovat 80 cm, 60 cm ja 40 cm, on valmistettu 30 mm paksuisesta styrokslevystä. 
-                        <ol class="a">
-                            <li> Laske laatikon vetoisuus litroina. </li>
-                            <li> Kuinka paljon laatikko painaa? Yksi kuutiodesimetri styroksia painaa 21 grammaa.</li>
-                        </ol>
+                        Kannellinen laatikko, jonka ulkomitat ovat 80 cm, 60 cm ja 40 cm, on valmistettu 30 mm paksuisesta styrokslevystä.
+                    <ol class="a">
+                        <li> Laske laatikon vetoisuus litroina. </li>
+                        <li> Kuinka paljon laatikko painaa? Yksi kuutiodesimetri styroksia painaa 21 grammaa.</li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS202_v">
@@ -1694,9 +1767,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS203-ex">
+            <div class="tehtava" id="e9b3f0f6-64c7-4403-a3be-99ca2471d968">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS203">
                             MONITAHOKKAITA
                         </a>
@@ -1719,9 +1793,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS204-ex">
+            <div class="tehtava" id="5b5efb5a-25b3-4418-b713-8733a8c4474e">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS204">
                             MONITAHOKKAITA
                         </a>
@@ -1751,9 +1826,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS205-ex">
+            <div class="tehtava" id="aea5ec14-7aff-4446-a6cb-c9352c3a494f">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS205">
                             MONITAHOKKAITA
                         </a>
@@ -1781,9 +1857,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS206a-ex">
+            <div class="tehtava" id="08b58fbc-836d-4546-969b-5c60f4ec6a99">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS206a">
                             Kulmia avaruudessa
                         </a>
@@ -1791,21 +1868,21 @@ topnav: maa3
                 </header>
                 <div id="avaruusS206a">
                     <p>
-                        Taita A4-kokoinen paperiarkki keskeltä. Yhdistä taitosviivan toinen päätepiste $P$ janoilla vastakkaisen sivun kärkiin $A$ ja $B$ kuten alla olevassa kuvassa. 
+                        Taita A4-kokoinen paperiarkki keskeltä. Yhdistä taitosviivan toinen päätepiste $P$ janoilla vastakkaisen sivun kärkiin $A$ ja $B$ kuten alla olevassa kuvassa.
                         <br>
-                        <img src="/kurssit/maa3/kuvat/avaruusK80.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa3/kuvat/avaruusK80.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <ol class="a">
                         <li> Laske kulman $\sphericalangle APB$ suuruus, kun arkki on levitetty tasaiseksi. A4-arkin sivujen pituudet ovat 210 mm ja 297 mm. </li>
-                        <li> 
+                        <li>
                             Taita arkki keskeltä niin, että arkin puolikkaat ovat kohtisuorassa toisiaan vastaan.
                             <br>
                             <img src="/kurssit/maa3/kuvat/avaruusK81.png" max-width: 100%; width: auto; height: auto;/>
                             <br>
                             Leikkaa arkin nurkat pois pitkin janoja $AP$ ja $BP$. Mittaa kulman $\sphericalangle APB$ suuruus kolmioviivottimen avulla.
-                         </li>
-                        <li> 
-                            Laske kulman $\sphericalangle APB$ suuruus, kun arkki on taitettu keskeltä niin, että arkin puolikkaat ovat kohtisuorassa toisiaan vastaan. 
+                        </li>
+                        <li>
+                            Laske kulman $\sphericalangle APB$ suuruus, kun arkki on taitettu keskeltä niin, että arkin puolikkaat ovat kohtisuorassa toisiaan vastaan.
                             <br>
                             Vinkki: Aloita laskemalla janan $AB$ pituus.
                             <br>
@@ -1827,9 +1904,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS206-ex">
+            <div class="tehtava" id="28c57dfe-3973-4658-9012-090736e3067d">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS206">
                             Kulmia avaruudessa
                         </a>
@@ -1837,7 +1915,7 @@ topnav: maa3
                 </header>
                 <div id="avaruusS206">
                     <p>
-                        Laske asteen kymmenesosan tarkkuudella 
+                        Laske asteen kymmenesosan tarkkuudella
                     </p>
                     <ol class="a">
                         <li> kuution avaruuslävistäjän ja samasta kärjestä lähtevän särmän välinen kulma</li>
@@ -1859,9 +1937,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS207-ex">
+            <div class="tehtava" id="f002ec14-3a51-4371-b481-66f6dc07d2a3">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS207">
                             Kulmia avaruudessa
                         </a>
@@ -1889,9 +1968,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS207b-ex">
+            <div class="tehtava" id="545ed191-c303-4de6-b1de-6919d875ac9b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS207b">
                             Kulmia avaruudessa
                         </a>
@@ -1916,9 +1996,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS208-ex">
+            <div class="tehtava" id="22272bb5-89be-4f63-a1ec-c6d828225f7a">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS208">
                             Yhdenmuotoisuus
                         </a>
@@ -1946,9 +2027,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS209-ex">
+            <div class="tehtava" id="a9a6478a-1941-41de-988f-43b6895cd49b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS209">
                             Yhdenmuotoisuus
                         </a>
@@ -1964,16 +2046,17 @@ topnav: maa3
                         </a>
                     </h2>
                     <div id="avaruusS209_v" class="collapse">
-                        <p> 
-                            Noin 14 litraa. 
+                        <p>
+                            Noin 14 litraa.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS210-ex">
+            <div class="tehtava" id="82a031ae-bf69-4382-823a-084635d72707">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS210">
                             Yhdenmuotoisuus
                         </a>
@@ -1981,12 +2064,12 @@ topnav: maa3
                 </header>
                 <div id="avaruusS210">
                     <p>
-                        Kuohuviinilasi on suoran ympyräkartion muotoinen. Lasiin mahtuu 16 senttilitraa viiniä. 
+                        Kuohuviinilasi on suoran ympyräkartion muotoinen. Lasiin mahtuu 16 senttilitraa viiniä.
                     </p>
-                        <ol class="a">
-                            <li> Lasi täytetään puoliväliin. Kuinka paljon lasissa on viiniä? </li>
-                            <li> Lasiin kaadetaan 12 senttilitraa viiniä. Kuinka monta prosenttia nestekerroksen korkeus on koko lasin korkeudesta? </li>
-                        </ol>
+                    <ol class="a">
+                        <li> Lasi täytetään puoliväliin. Kuinka paljon lasissa on viiniä? </li>
+                        <li> Lasiin kaadetaan 12 senttilitraa viiniä. Kuinka monta prosenttia nestekerroksen korkeus on koko lasin korkeudesta? </li>
+                    </ol>
                     <p>
                         <img src="/kurssit/maa3/kuvat/avaruusK78.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
@@ -2004,9 +2087,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS210b-ex">
+            <div class="tehtava" id="3ce14565-1449-48a6-99a1-04fb32f489d1">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS210b">
                             Yhdenmuotoisuus
                         </a>
@@ -2014,7 +2098,7 @@ topnav: maa3
                 </header>
                 <div id="avaruusS210b">
                     <p>
-                        Suoran ympyräkartion muotoisen pikarin vetoisuus on 10 senttilitraa ja sen sivujanan pituus on 11 cm. Pikariin on kaiverrettava viivat 4 cl ja 8 cl kohdalle. Määritä viivojen paikat. 
+                        Suoran ympyräkartion muotoisen pikarin vetoisuus on 10 senttilitraa ja sen sivujanan pituus on 11 cm. Pikariin on kaiverrettava viivat 4 cl ja 8 cl kohdalle. Määritä viivojen paikat.
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS210b_v">
@@ -2027,9 +2111,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS211-ex">
+            <div class="tehtava" id="4a811772-64e2-4121-8897-c09e6d9c2438">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS211">
                             Pallo
                         </a>
@@ -2037,9 +2122,9 @@ topnav: maa3
                 </header>
                 <div id="avaruusS211">
                     <p>
-                        Pohjoisen napapiirin (leveyspiiri $66{,}6^\circ$ pohjoista leveyttä) pohjoispuolella olevaa maapallon osaa kutsutaan arktiseksi alueeksi. Kuinka monta prosenttia arkistisen alueen pinta-ala on maapallon pinta-alasta? 
+                        Pohjoisen napapiirin (leveyspiiri $66{,}6^\circ$ pohjoista leveyttä) pohjoispuolella olevaa maapallon osaa kutsutaan arktiseksi alueeksi. Kuinka monta prosenttia arkistisen alueen pinta-ala on maapallon pinta-alasta?
                         <br>
-                        Maapallon ympärysmitta on kolmen numeron tarkkuudella 40 000 km.  
+                        Maapallon ympärysmitta on kolmen numeron tarkkuudella 40 000 km.
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS211_v">
@@ -2054,9 +2139,10 @@ topnav: maa3
                 </div>
             </div>
 
-                        <div class="tehtava" id="avaruusS216-ex">
+            <div class="tehtava" id="61a1b573-3045-4c42-b9c7-92d2ea4c2bc8">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS216">
                             Pallo
                         </a>
@@ -2079,9 +2165,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS212-ex">
+            <div class="tehtava" id="8483a5d0-e4b1-4916-ba0d-dc73d03ae675">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS212">
                             Pallo
                         </a>
@@ -2089,7 +2176,7 @@ topnav: maa3
                 </header>
                 <div id="avaruusS212">
                     <p>
-                        Puolipallo on mahdutettu mahdollisimman pieneen suorakulmaiseen särmiöön.  
+                        Puolipallo on mahdutettu mahdollisimman pieneen suorakulmaiseen särmiöön.
                     </p>
                     <ol class="a">
                         <li> Laske puolipallon tilavuuden suhde särmiön tilavuuteen. </li>
@@ -2109,9 +2196,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS213-ex">
+            <div class="tehtava" id="f40a1821-34f2-48a9-8216-8085abc80994">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS213">
                             Pallo
                         </a>
@@ -2119,7 +2207,7 @@ topnav: maa3
                 </header>
                 <div id="avaruusS213">
                     <p>
-                        <em>Kuution sisään asetettu pallo</em> tarkoittaa palloa, joka sivuaa kuution kaikkia tahkoja. <em>Kuution ympäri asetettu pallo</em> tarkoittaa palloa, joka kulkee kuution kaikkien kärkien kautta. 
+                        <em>Kuution sisään asetettu pallo</em> tarkoittaa palloa, joka sivuaa kuution kaikkia tahkoja. <em>Kuution ympäri asetettu pallo</em> tarkoittaa palloa, joka kulkee kuution kaikkien kärkien kautta.
                         <br>
                         Kuution sivun pituus on $a$. Määritä kuution sisään ja ympäri asetettujen pallojen säteet.
                     </p>
@@ -2138,9 +2226,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS214-ex">
+            <div class="tehtava" id="2e2a33a5-5deb-49c7-8962-3172afde85f3">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS214">
                             Pallo
                         </a>
@@ -2148,12 +2237,12 @@ topnav: maa3
                 </header>
                 <div id="avaruusS214">
                     <p>
-                        Jatkoa edelliseen tehtävään. Määritä kuution sisään ja ympäri asetettujen pallojen 
-                        <ol class="a">
-                            <li> säteiden suhde </li>
-                            <li> pinta-alojen suhde </li>
-                            <li> tilavuuksien suhde. </li>
-                        </ol>
+                        Jatkoa edelliseen tehtävään. Määritä kuution sisään ja ympäri asetettujen pallojen
+                    <ol class="a">
+                        <li> säteiden suhde </li>
+                        <li> pinta-alojen suhde </li>
+                        <li> tilavuuksien suhde. </li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS214_v">
@@ -2170,9 +2259,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS215-ex">
+            <div class="tehtava" id="f78cf5e0-97ed-44b1-9cfc-df1d290517a3">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS215">
                             Pallo
                         </a>
@@ -2182,7 +2272,7 @@ topnav: maa3
                     <p>
                         Sääsatelliitti ylittää pohjoisnavan 850 km korkeudella. Mille leveyspiirille satelliitin näkyvyys ulottuu, kun se on pohjoisnavan yläpuolella?
                         <br>
-                        Maapallon ympärysmitta on kolmen numeron tarkkuudella 40 000 km. 
+                        Maapallon ympärysmitta on kolmen numeron tarkkuudella 40 000 km.
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS215_v">
@@ -2197,9 +2287,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS215b-ex">
+            <div class="tehtava" id="53953020-c175-451b-a992-7971e9f8f4ac">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS215b">
                             Pallo
                         </a>
@@ -2209,7 +2300,7 @@ topnav: maa3
                     <p>
                         Hanoi, Cancun ja Honolulu sijaitsevat kaikki suunnilleen samalla leveyspiirillä $21^\circ$ pohjoista leveyttä. Hanoi sijaitsee pituuspiirillä $106^\circ$ itäistä pituutta, Cancun $87^\circ$ läntistä pituutta ja Honolulu $158^\circ$ läntistä pituutta. Tehtävänä on laskea, miten pitkä matka on kaupungista toiseen, jos matka tehdään kompassin avulla kulkemalla koko ajan itään tai länteen.
                         <br>
-                        Maapallon ympärysmitta on kolmen numeron tarkkuudella 40 000 km. 
+                        Maapallon ympärysmitta on kolmen numeron tarkkuudella 40 000 km.
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS215b_v">
@@ -2228,9 +2319,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS217-ex">
+            <div class="tehtava" id="bf3ec8c9-e3f7-4993-a9c0-10f29dd0388e">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS217">
                             Lieriö
                         </a>
@@ -2253,9 +2345,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS218-ex">
+            <div class="tehtava" id="1ba5282d-3875-46fe-979c-9ade8c6c2c0f">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS218">
                             Lieriö
                         </a>
@@ -2263,7 +2356,7 @@ topnav: maa3
                 </header>
                 <div id="avaruusS218">
                     <p>
-                        Suoran ympyrälieriön muotoisen mittalasin pohjan halkaisija on 3 cm. Lasiin on tehtävä merkit 10 millilitran kohdalle ja siitä 10 millilitran välein aina 50 millilitraan asti. Mille korkeudelle merkit pitää tehdä? 
+                        Suoran ympyrälieriön muotoisen mittalasin pohjan halkaisija on 3 cm. Lasiin on tehtävä merkit 10 millilitran kohdalle ja siitä 10 millilitran välein aina 50 millilitraan asti. Mille korkeudelle merkit pitää tehdä?
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS218_v">
@@ -2278,9 +2371,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS219-ex">
+            <div class="tehtava" id="49cf308e-d89e-4020-8ecf-a2cbae2e8558">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS219">
                             Lieriö
                         </a>
@@ -2303,9 +2397,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS220-ex">
+            <div class="tehtava" id="ba3d4043-c954-4a75-b69f-89eacf392c50">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS220">
                             Lieriö
                         </a>
@@ -2328,9 +2423,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS221-ex">
+            <div class="tehtava" id="5d87f0c3-faf0-412d-8eda-96fe8040507b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS221">
                             Lieriö
                         </a>
@@ -2353,9 +2449,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS221b-ex">
+            <div class="tehtava" id="39c69858-5331-4d28-ab40-b5b5a5eaa391">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS221b">
                             Lieriö
                         </a>
@@ -2364,21 +2461,21 @@ topnav: maa3
                 <div id="avaruusS221b">
                     <p>
                         Suorakulmaisen särmiön muotoisen huoneen pituus on 4,0 m, leveys 3,0 m ja korkeus 2,5 m. Huoneen kattonurkassa on muurahainen, joka haluaa kulkea vastakkaiseen lattianurkkaan. Muurahainen voi kävellä kattoa ja seiniä pitkin miten vain haluaa. Tehtävänä on selvittää, mikä on lyhin mahdollinen reitti ja kuinka pitkä se on.
-                        <ol class="a">
-                            <li> 
-                                Piirrä mallikuva suorakulmaisesta särmiöstä, joka on leikattu auki särmiä pitkin ja levitetty tasoon. 
-                            </li>
-                            <li>
-                                Millainen on lyhin reitti kattonurkasta lattianurkkaan, jos särmiö on leikattu auki ja levitetty tasoon? 
-                            </li>
-                            <li>
-                                Laske lyhimmän mahdollisen reitin pituus. 
-                            </li>
-                            <li>
-                                Olisiko särmiön voinut leikata auki jollakin toisella tavalla ja levittää tasoon niin, että reitti kattonurkasta lattianurkkaan olisi ollut vielä lyhyempi?
-                            </li>
-                        </ol>
-                        <img src="/kurssit/maa3/kuvat/avaruusK83.png" max-width: 100%; width: auto; height: auto;/>
+                    <ol class="a">
+                        <li>
+                            Piirrä mallikuva suorakulmaisesta särmiöstä, joka on leikattu auki särmiä pitkin ja levitetty tasoon.
+                        </li>
+                        <li>
+                            Millainen on lyhin reitti kattonurkasta lattianurkkaan, jos särmiö on leikattu auki ja levitetty tasoon?
+                        </li>
+                        <li>
+                            Laske lyhimmän mahdollisen reitin pituus.
+                        </li>
+                        <li>
+                            Olisiko särmiön voinut leikata auki jollakin toisella tavalla ja levittää tasoon niin, että reitti kattonurkasta lattianurkkaan olisi ollut vielä lyhyempi?
+                        </li>
+                    </ol>
+                    <img src="/kurssit/maa3/kuvat/avaruusK83.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS221b_v">
@@ -2387,16 +2484,16 @@ topnav: maa3
                     </h2>
                     <div id="avaruusS221b_v" class="collapse">
                         <ol class="a">
-                            <li> 
+                            <li>
                                 <img src="/kurssit/maa3/kuvat/avaruusK84.png" max-width: 100%; width: auto; height: auto;/>
                             </li>
                             <li>
                                 Reitti on suora ja kulkee pitkin kattoa ja pitempää seinää.
                             </li>
                             <li>
-                                Lyhin mahdollinen reitti on noin 6,8 metriä. 
+                                Lyhin mahdollinen reitti on noin 6,8 metriä.
                             </li>
-                            <li>    
+                            <li>
                                 Reitti, joka kulkee pitkin kattoa ja lyhyempää seinää, on noin 7,2 metriä. Reitti, joka kulkee pitkin kumpaakin seinää, on noin 7,4 metriä.
                             </li>
                         </ol>
@@ -2404,9 +2501,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS222-ex">
+            <div class="tehtava" id="b2621bc9-8c16-4e9b-9478-3fb98115c5d7">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS222">
                             Kartio
                         </a>
@@ -2415,10 +2513,10 @@ topnav: maa3
                 <div id="avaruusS222">
                     <p>
                         Pahvisesta ympyrästä, jonka säde on 18,0 cm leikataan $225^\circ$ sektori. Sektori kiedotaan suoran ympyräkartion vaipaksi. Laske kartion
-                        <ol class="a">
-                            <li> pohjan säde </li>
-                            <li> tilavuus. </li>
-                        </ol>
+                    <ol class="a">
+                        <li> pohjan säde </li>
+                        <li> tilavuus. </li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS222_v">
@@ -2434,9 +2532,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS223-ex">
+            <div class="tehtava" id="4239fd72-d43d-4103-9497-8dd460691528">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS223">
                             Kartio
                         </a>
@@ -2457,9 +2556,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS224-ex">
+            <div class="tehtava" id="cfcd9d54-ac8f-41cb-b5a4-d885d65ff307">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS224">
                             Kartio
                         </a>
@@ -2467,11 +2567,11 @@ topnav: maa3
                 </header>
                 <div id="avaruusS224">
                     <p>
-                        Kolmisivuisen pyramidin pohja on tasakylkinen suorakulmainen kolmio, jonka kateettien pituus on 8,6 cm. Pyramidin korkeus on 10,7 cm. 
-                        <ol class="a">
-                            <li> Hahmottele kuva pyramidista. </li>
-                            <li> Laske pyramidin tilavuus. </li>
-                        </ol>
+                        Kolmisivuisen pyramidin pohja on tasakylkinen suorakulmainen kolmio, jonka kateettien pituus on 8,6 cm. Pyramidin korkeus on 10,7 cm.
+                    <ol class="a">
+                        <li> Hahmottele kuva pyramidista. </li>
+                        <li> Laske pyramidin tilavuus. </li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS224_v">
@@ -2487,9 +2587,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS225-ex">
+            <div class="tehtava" id="a88910a9-69fc-434b-8a78-0a1e0429d86b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS225">
                             Kartio
                         </a>
@@ -2498,16 +2599,16 @@ topnav: maa3
                 <div id="avaruusS225">
                     <p>
                         Suora ympyräkartio ympäröidään pallolla niin, että ympyräkartion huippu ja pohjaympyrä ovat pallon pinnalla. Ympyräkartion korkeus on kolme viidesosaa pallon halkaisijasta. Tehtävänä on laskea ympyräkartion tilavuuden suhde pallon tilavuuteen.
-                        <ol class ="a">
-                            <li> Piirrä mallikuva poikkileikkauksesta, joka kulkee kartion huipun ja pohjaympyrän keskipisteen kautta. </li>
-                            <li> Merkitse pallon sädettä jollakin kirjaimella. Ilmaise ympyräkartion korkeus pallon säteen avulla. </li>
-                            <li> 
-                                Ilmaise kartion pohjaympyrän säde pallon säteen avulla.
-                                <br>
-                                Vinkki: täydennä kuvaa niin, että voit käyttää Pythagoraan lausetta.
-                            </li>
-                            <li> Muodosta lausekkeet ympyräkartion ja pallon tilavuudelle. Määritä niiden suhde.</li>
-                        </ol>
+                    <ol class ="a">
+                        <li> Piirrä mallikuva poikkileikkauksesta, joka kulkee kartion huipun ja pohjaympyrän keskipisteen kautta. </li>
+                        <li> Merkitse pallon sädettä jollakin kirjaimella. Ilmaise ympyräkartion korkeus pallon säteen avulla. </li>
+                        <li>
+                            Ilmaise kartion pohjaympyrän säde pallon säteen avulla.
+                            <br>
+                            Vinkki: täydennä kuvaa niin, että voit käyttää Pythagoraan lausetta.
+                        </li>
+                        <li> Muodosta lausekkeet ympyräkartion ja pallon tilavuudelle. Määritä niiden suhde.</li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS225_v">
@@ -2518,8 +2619,8 @@ topnav: maa3
                         <ol class ="a">
                             <li>  </li>
                             <li> $h = \dfrac{6}{5}r$ </li>
-                            <li> 
-                                 $\dfrac{\sqrt{24}}{5}r$
+                            <li>
+                                $\dfrac{\sqrt{24}}{5}r$
                             </li>
                             <li> Suhde on $\dfrac{36}{125}$.</li>
                         </ol>
@@ -2527,9 +2628,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS226-ex">
+            <div class="tehtava" id="acb74c3b-abb4-4c7f-886e-4fa2ffe8b02f">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS226">
                             Kartio
                         </a>
@@ -2538,10 +2640,10 @@ topnav: maa3
                 <div id="avaruusS226">
                     <p>
                         Ympyräsektori kiedotaan suoran ympyräkartion vaipaksi.
-                        <ol class ="a">
-                            <li> Ympyräsektorin keskuskulma on $200^\circ$. Kuinka suuri on tällöin kartion huippukulma eli kahden vastakkaisen sivujanan välinen kulma? Anna vastaus asteen kymmenesosan tarkkuudella.  </li>
-                            <li> Kuinka suuri ympyräsektorin keskuskulman tulee olla, jotta kartion huippukulma olisi $90^\circ$? </li>
-                        </ol>
+                    <ol class ="a">
+                        <li> Ympyräsektorin keskuskulma on $200^\circ$. Kuinka suuri on tällöin kartion huippukulma eli kahden vastakkaisen sivujanan välinen kulma? Anna vastaus asteen kymmenesosan tarkkuudella.  </li>
+                        <li> Kuinka suuri ympyräsektorin keskuskulman tulee olla, jotta kartion huippukulma olisi $90^\circ$? </li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS226_v">
@@ -2557,9 +2659,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS227-ex">
+            <div class="tehtava" id="c3988bba-527a-4ae0-b681-c4d476d067cb">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS227">
                             Kartio
                         </a>
@@ -2568,11 +2671,11 @@ topnav: maa3
                 <div id="avaruusS227">
                     <p>
                         Pöydälle neliönmuotoisen kehikon sisään on asetettu neljä tennispalloa, jotka sivuavat toisiaan niin, että niiden keskipisteet muodostavat neliön. Pallojen keskelle asetetaan viides tennispallo. Tehtävänä on laskea muodostuvan keon korkeus. Tennispallojen halkaisija on noin 6,7 cm.
-                        <ol class ="a">
-                            <li> Piirrä tilanteesta mallikuva, jossa näkyvät tennispallojen keskipisteet. Yhdistä kaikki nämä keskipisteet toisiinsa janoilla. Millainen kappale muodostuu?  </li>
-                            <li> Päättele, miten pitkiä mallikuvan kappaleen särmät ovat.  </li>
-                            <li> Laske kappaleen korkeus ja päättele, mikä on tennispalloista muodostuvan keon korkeus. </li>
-                        </ol>
+                    <ol class ="a">
+                        <li> Piirrä tilanteesta mallikuva, jossa näkyvät tennispallojen keskipisteet. Yhdistä kaikki nämä keskipisteet toisiinsa janoilla. Millainen kappale muodostuu?  </li>
+                        <li> Päättele, miten pitkiä mallikuvan kappaleen särmät ovat.  </li>
+                        <li> Laske kappaleen korkeus ja päättele, mikä on tennispalloista muodostuvan keon korkeus. </li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS227_v">
@@ -2589,13 +2692,13 @@ topnav: maa3
                 </div>
             </div>
 
-    
+
 
         </div>
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku3-tehtavasarja3">
                     TEHTÄVÄSARJA III
@@ -2606,9 +2709,10 @@ topnav: maa3
         <div id="luku3-tehtavasarja3" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="avaruusS301-ex">
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS301">
 
                         </a>
@@ -2616,11 +2720,11 @@ topnav: maa3
                 </header>
                 <div id="avaruusS301">
                     <p>
-                        <ol class="a">
-                            <li> Kuntopolun pituus kartalla on 17,5 cm. Mikä on polun pituus maastossa, kun kartan mittakaava on $1 : 20\ 000$? Anna vastaus 100 metrin tarkkuudella. </li>
-                            <li> Laske kuution yhden sivutahkon pinta‐ala neliösenttimetrin tarkkuudella, kun kuution tilavuus on 7,0 litraa.</li>
-                        </ol>
-                        [Pitkä S2015/3]
+                    <ol class="a">
+                        <li> Kuntopolun pituus kartalla on 17,5 cm. Mikä on polun pituus maastossa, kun kartan mittakaava on $1 : 20\ 000$? Anna vastaus 100 metrin tarkkuudella. </li>
+                        <li> Laske kuution yhden sivutahkon pinta‐ala neliösenttimetrin tarkkuudella, kun kuution tilavuus on 7,0 litraa.</li>
+                    </ol>
+                    [Pitkä S2015/3]
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS301_v">
@@ -2638,9 +2742,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS302-ex">
+            <div class="tehtava" id="b4224ba5-d441-45e5-9720-39a9a3bce648">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS302">
 
                         </a>
@@ -2651,7 +2756,7 @@ topnav: maa3
                         Täysin pyöreän geenimanipuloidun omenan säde on 5,0 cm. Omenan läpi porataan sen keskeltä kulkeva reikä, jonka säde on 1,0 cm. Kuinka monta prosenttia omenan tilavuudesta tällöin häviää? Anna vastaus prosenttiyksikön kymmenesosan tarkkuudella.
                     </p>
                     <p>
-                    <img src="/kurssit/maa3/kuvat/avaruusK46.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa3/kuvat/avaruusK46.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <p>
                         [Pitkä S2015/9]
@@ -2669,9 +2774,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS303-ex">
+            <div class="tehtava" id="b7b1156f-c741-4dcd-bfd8-93d73df567e6">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS303">
 
                         </a>
@@ -2680,13 +2786,13 @@ topnav: maa3
                 <div id="avaruusS303">
                     <p>
                         Öljysäiliö on suoran ympyrälieriön muotoinen, ja sen akseli on vaakasuorassa. Akselia vastaan kohtisuoran poikkileikkauksen halkaisija on 1,3 metriä.
-                        <ol class="a">
-                            <li> Määritä säiliön pituus, kun sen tilavuus on 3 000 litraa. </li>
-                            <li> Öljyn korkeudeksi syvimmässä kohdassa mitataan 40 senttimetriä. Kuinka monta litraa öljyä on jäljellä säiliössä? </li>
-                        </ol>
+                    <ol class="a">
+                        <li> Määritä säiliön pituus, kun sen tilavuus on 3 000 litraa. </li>
+                        <li> Öljyn korkeudeksi syvimmässä kohdassa mitataan 40 senttimetriä. Kuinka monta litraa öljyä on jäljellä säiliössä? </li>
+                    </ol>
                     </p>
                     <p>
-                    <img src="/kurssit/maa3/kuvat/avaruusK47.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa3/kuvat/avaruusK47.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <p>
                         [Pitkä K2015/8]
@@ -2698,7 +2804,7 @@ topnav: maa3
                     </h2>
                     <div id="avaruusS303_v" class="collapse">
                         <p>
-                           <ol class="a">
+                        <ol class="a">
                             <li> Noin 2,26 m. </li>
                             <li> Noin 784 litraa. </li>
                         </ol>
@@ -2707,9 +2813,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS304-ex">
+            <div class="tehtava" id="738bdf2f-ad76-44f8-92cd-bc43092c18d7">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS304">
 
                         </a>
@@ -2720,7 +2827,7 @@ topnav: maa3
                         Pöydällä on kolme samankokoista palloa, joista kukin koskettaa kahta muuta. Niiden päälle asetetaan neljäs samanlainen pallo, joka koskettaa kaikkia kolmea alkuperäistä palloa. Mikä on rakennelman korkeus? Anna vastauksena tarkka arvo pallojen säteen avulla lausuttuna.
                     </p>
                     <p>
-                    <img src="/kurssit/maa3/kuvat/avaruusK48.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa3/kuvat/avaruusK48.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <p>
                         [Pitkä S2013/10]
@@ -2732,15 +2839,16 @@ topnav: maa3
                     </h2>
                     <div id="avaruusS304_v" class="collapse">
                         <p>
-                           $\left(\sqrt{\dfrac{8}{3}} + 2\right)r$
+                            $\left(\sqrt{\dfrac{8}{3}} + 2\right)r$
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS305-ex">
+            <div class="tehtava" id="1befbea2-86a6-48b5-b84f-8b8c49fbb8da">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS305">
 
                         </a>
@@ -2751,7 +2859,7 @@ topnav: maa3
                         Oheisen kuution särmän pituus on 2. Sen sisällä on vaaleanpunainen pallo, joka sivuaa jokaista kuution tahkoa. Kuution yhdessä kulmassa on pienempi sininen pallo, joka sivuaa suurta palloa ja kolmea kuution tahkoa kuvion mukaisesti. Laske sinisen pallon säteen tarkka arvo.
                     </p>
                     <p>
-                    <img src="/kurssit/maa3/kuvat/avaruusK49.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa3/kuvat/avaruusK49.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <p>
                         [Pitkä K2013/10]
@@ -2763,15 +2871,16 @@ topnav: maa3
                     </h2>
                     <div id="avaruusS305_v" class="collapse">
                         <p>
-                           $\dfrac{\sqrt{3}-1}{\sqrt{3}+1}$
+                            $\dfrac{\sqrt{3}-1}{\sqrt{3}+1}$
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS306-ex">
+            <div class="tehtava" id="3af72d31-9b9c-4976-b3f7-c7e35f55297b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS306">
 
                         </a>
@@ -2782,7 +2891,7 @@ topnav: maa3
                         Suoran ympyräkartion korkeus on 5,0 cm, ja sen pohjan säde on 2,0 cm. Kartio katkaistaan niin, että yläreunan säde on 1,0 cm. Tämän jälkeen katkaistun kartion vaippa maalataan siniseksi ja sitä pyöritetään kyljellään paperilla. Määritä näin saadun sinisen rengasalueen pinta-ala yhden neliösenttimetrin tarkkuudella.
                     </p>
                     <p>
-                    <img src="/kurssit/maa3/kuvat/avaruusK05.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa3/kuvat/avaruusK05.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <p>
                         [Pitkä K2012/9]
@@ -2794,15 +2903,16 @@ topnav: maa3
                     </h2>
                     <div id="avaruusS306_v" class="collapse">
                         <p>
-                           $68 \text{ cm}^2$
+                            $68 \text{ cm}^2$
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS206b-ex">
+            <div class="tehtava" id="0715f898-3229-4546-9910-e1c549dc2d10">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS206b">
 
                         </a>
@@ -2810,9 +2920,9 @@ topnav: maa3
                 </header>
                 <div id="avaruusS206b">
                     <p>
-                        Tasakylkisen suorakulmaisen kolmion $ABC$ kanta $BC$ jaetaan pisteillä $P$ ja $Q$ kolmeen yhtä pitkään osaan. Kolmio taitetaan pitkin janoja $AP$ ja $AQ$ niin, että kärjet $B$ ja $C$ yhtyvät pisteessä $R$. 
+                        Tasakylkisen suorakulmaisen kolmion $ABC$ kanta $BC$ jaetaan pisteillä $P$ ja $Q$ kolmeen yhtä pitkään osaan. Kolmio taitetaan pitkin janoja $AP$ ja $AQ$ niin, että kärjet $B$ ja $C$ yhtyvät pisteessä $R$.
                         <br>
-                        <img src="/kurssit/maa3/kuvat/avaruusK79.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa3/kuvat/avaruusK79.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <ol class="a">
                         <li> Tee paperista malli ja arvioi sen avulla särmän $AR$ ja tahkon $APQ$ välisen kulman suuruus. Arvioi myös tahkojen $APR$ ja $AQR$ välisen kulman suuruus. </li>
@@ -2834,9 +2944,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS207c-ex">
+            <div class="tehtava" id="5342ac2e-5fe5-4467-b3b1-857d14b55e1b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS207c">
 
                         </a>
@@ -2861,9 +2972,10 @@ topnav: maa3
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS307-ex">
+            <div class="tehtava" id="e254922c-05b4-4c52-9483-7dfb01690b25">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS307">
 
                         </a>
@@ -2874,7 +2986,7 @@ topnav: maa3
                         Kuvan mukainen puolisuunnikas pyörähtää sivun $CD$ ympäri. Laske syntyvän kappaleen tilavuus ja kokonaispinta-ala.
                     </p>
                     <p>
-                    <img src="/kurssit/maa3/kuvat/avaruusK87.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa3/kuvat/avaruusK87.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS307_v">
@@ -2883,15 +2995,16 @@ topnav: maa3
                     </h2>
                     <div id="avaruusS307_v" class="collapse">
                         <p>
-                           Tilavuus noin $54 \text{ cm}^3$ ja kokonaispinta-ala noin $93 \text{ cm}^2$.
+                            Tilavuus noin $54 \text{ cm}^3$ ja kokonaispinta-ala noin $93 \text{ cm}^2$.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS308-ex">
+            <div class="tehtava" id="f3989add-3530-4c3a-abcd-c323c736101e">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS308">
 
                         </a>
@@ -2908,15 +3021,16 @@ topnav: maa3
                     </h2>
                     <div id="avaruusS308_v" class="collapse">
                         <p>
-                           Suhde on $\dfrac{\pi}{4}$ eli prosentteina noin 79 %.
+                            Suhde on $\dfrac{\pi}{4}$ eli prosentteina noin 79 %.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="avaruusS309-ex">
+            <div class="tehtava" id="8e4478e0-be40-444b-9bf4-0ae56ba79248">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#avaruusS309">
 
                         </a>
@@ -2926,7 +3040,7 @@ topnav: maa3
                     <p>
                         Pahvi taitetaan merkityistä kohdista suoran kolmisivuisen särmiön vaipaksi. Kuinka suuri särmiön tilavuus on?
                         <br>
-                        <img src="/kurssit/maa3/kuvat/avaruusK88.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa3/kuvat/avaruusK88.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#avaruusS309_v">
@@ -2935,7 +3049,7 @@ topnav: maa3
                     </h2>
                     <div id="avaruusS309_v" class="collapse">
                         <p>
-                           Noin $58 \text{ cm}^3.$
+                            Noin $58 \text{ cm}^3.$
                         </p>
                     </div>
                 </div>
@@ -2954,7 +3068,7 @@ topnav: maa3
         </header>
         <div id="L4itsearviointi" class="collapse">
             <p>
-                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1763">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1763">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
             </p>
         </div>
     </section>

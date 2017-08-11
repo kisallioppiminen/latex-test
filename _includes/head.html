@@ -9,38 +9,29 @@
 	{% endif %}
 	<link rel="dns-prefetch" href="//fonts.googleapis.com" data-proofer-ignore>
 	<link rel="dns-prefetch" href="//code.jquery.com" data-proofer-ignore>
-	
+	<link rel="dns-prefetch" href="//www.google-analytics.com" data-proofer-ignore>
+    <!-- Load css from _config.yml -->
 	{% for href in site.resources.css %}
-	<link rel="stylesheet" href="{% if href contains "//" %}{{href}}{%else%}{{href|prepend:site.baseurl}}{% endif %}" type="text/css">{% endfor %}
-	{% for href in page.resources.css %}
-	<link rel="stylesheet" href="{% if href contains "//" %}{{href}}{%else%}{{href|prepend:site.baseurl}}{% endif %}" type="text/css">{% endfor %}
+		<link rel="stylesheet" href="{{ href }}" type="text/css">
+    {% endfor %}
+	<link rel="icon" type="image/png" href="/img/favicon.png">
 
-	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-	<link rel="icon" type="image/png" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
-	
 	<!-- mathjax config similar to math.stackexchange -->
 	<script type="text/x-mathjax-config">
 		MathJax.Hub.Config({
   		jax: ["input/TeX", "output/HTML-CSS"],
   		tex2jax: {
-    			inlineMath: [ ['$', '$'] ],
-    			displayMath: [ ['$$', '$$']],
-    			processEscapes: true,
-    			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            inlineMath: [ ['$', '$'] ],
+            displayMath: [ ['$$', '$$']],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
   		},
   		messageStyle: "none",
   		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
- 
+
 		});
 	</script>
-        
-        
-{% for src in site.resources.js %}
-	<script src="{% if src contains '//' %}{{ src }}{% else %}{{ src | prepend: site.baseurl }}{% endif %}"></script>{% endfor %}
-{% for src in page.resources.js %}
-	<script src="{% if src contains '//' %}{{ src }}{% else %}{{ src | prepend: site.baseurl }}{% endif %}"></script>{% endfor %}
-{% for script in page.resources.script %}
-	<script>{{script}}</script>{% endfor %}
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
 
 </head>

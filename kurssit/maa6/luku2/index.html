@@ -9,6 +9,8 @@ topnav: maa6
 <input type="hidden" id="chapterNumber" value="2"/>
 <input type="hidden" id="theoremStart" value="1"/>
 
+{% include bottomnav.html %}
+
 <article>
     <section>
         <header>
@@ -17,7 +19,7 @@ topnav: maa6
     </section>
     <section class="panel">
         <header>
-            <h1>
+            <h1>                
                 <a data-toggle="collapse" class="collapsed" data-target="#luvun2-tavoitteet">
                     Luvun tavoitteet
                 </a>
@@ -50,45 +52,45 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
-            <h1>
+        <header class="otsikko">
+            <h1>       
                 <a data-toggle="collapse" class="collapsed" data-target="#raja1">
                     Funktion raja-arvo
                 </a>
             </h1>
         </header>
         <div id="raja1" class="collapse">
-
-            <p>
-                Tarkastellaan alla olevaa funktion $f$ kuvaajaa. Havaitaan, että funktio $f$ on määritelty kohdan $x = 1$ läheisyydessä sen molemmilla puolilla, mutta ei kohdassa $x = 1$. 
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva14.png" max-width: 100%; width: auto; height: auto;/> 
-                <br>
-                Tutkitaan funktion $f$ arvoja kohdan $x = 1$ eri puolilla. Huomataan, että funktion $f$ arvot lähestyvät lukua 2, kun lähestytään kohtaa $x = 1$ vasemmalta. Jos kohtaa $x = 1$ lähestytään oikelta, funktion $f$ arvot lähestyvät lukua $0$. Koska funktion arvot lähestyvät eri lukua riippuen siitä, kummalta puolelta kohtaa $x = 1$ lähestytään, ei funktiolla $f$ ole raja-arvoa kohdassa $x = 1$.
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: FUNKTION RAJA-ARVO</h3>
+            <div class="teoria">
                 <p>
-                    Oletetaan, että funktio $f$ on määritelty kohdan $a$ läheisyydessä sen molemmilla puolilla. Funktiolla $f$ on kohdassa $a$ <em>raja-arvo</em> $b$, jos muuttujan arvojen lähestyessä lukua $a$ kummalta puolelta tahansa, funktion $f$ arvot lähestyvät lukua $b$. Lähestymisen pitää olla sellaista, että tulemalla tarpeeksi lähelle kohtaa $a$ funktion $f$ arvot saadaan niin lähelle lukua $b$ kuin vain halutaan.
+                    Tarkastellaan alla olevaa funktion $f$ kuvaajaa. Havaitaan, että funktio $f$ on määritelty kohdan $x = 1$ läheisyydessä sen molemmilla puolilla, mutta ei kohdassa $x = 1$. 
                     <br>
-                    <img src="/kurssit/maa6/kuvat/kuva15.png" max-width: 100%; width: auto; height: auto;/>
-                    <br>
-                    Jos funktiolla $f$ on kohdassa $a$ raja-arvo $b$, niin merkitään
-                    $$\lim_{x \rightarrow a} f(x) = b.$$
-                    Voidaan myös käyttää merkintää
-                    $$f(x) \rightarrow b, \ \text{ kun } \ x \rightarrow a.$$
+                    <img src="/kurssit/maa6/kuvat/kuva14.png" max-width: 100%; width: auto; height: auto;/> 
+                         <br>
+                    Tutkitaan funktion $f$ arvoja kohdan $x = 1$ eri puolilla. Huomataan, että funktion $f$ arvot lähestyvät lukua 2, kun lähestytään kohtaa $x = 1$ vasemmalta. Jos kohtaa $x = 1$ lähestytään oikelta, funktion $f$ arvot lähestyvät lukua $0$. Koska funktion arvot lähestyvät eri lukua riippuen siitä, kummalta puolelta kohtaa $x = 1$ lähestytään, ei funktiolla $f$ ole raja-arvoa kohdassa $x = 1$.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: FUNKTION RAJA-ARVO</h3>
+                    <p>
+                        Oletetaan, että funktio $f$ on määritelty kohdan $a$ läheisyydessä sen molemmilla puolilla. Funktiolla $f$ on kohdassa $a$ <em>raja-arvo</em> $b$, jos muuttujan arvojen lähestyessä lukua $a$ kummalta puolelta tahansa, funktion $f$ arvot lähestyvät lukua $b$. Lähestymisen pitää olla sellaista, että tulemalla tarpeeksi lähelle kohtaa $a$ funktion $f$ arvot saadaan niin lähelle lukua $b$ kuin vain halutaan.
+                        <br>
+                        <img src="/kurssit/maa6/kuvat/kuva15.png" max-width: 100%; width: auto; height: auto;/>
+                             <br>
+                        Jos funktiolla $f$ on kohdassa $a$ raja-arvo $b$, niin merkitään
+                        $$\lim_{x \rightarrow a} f(x) = b.$$
+                        Voidaan myös käyttää merkintää
+                        $$f(x) \rightarrow b, \ \text{ kun } \ x \rightarrow a.$$
+                    </p>
+                </div>
+
+                <p>
+                    Raja-arvon kannalta ei ole mitään merkitystä sillä, onko funktio määritelty tarkasteltavassa kohdassa vai ei. Oleellista on vain se, lähestyvätkö funktion arvot jotain tiettyä arvoa, kun tarkastelukohtaa lähestytään kummasta suunnasta tahansa.
                 </p>
             </div>
-
-            <p>
-                Raja-arvon kannalta ei ole mitään merkitystä sillä, onko funktio määritelty tarkasteltavassa kohdassa vai ei. Oleellista on vain se, lähestyvätkö funktion arvot jotain tiettyä arvoa, kun tarkastelukohtaa lähestytään kummasta suunnasta tahansa.
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="firstEx">
+                <div class="tehtava" id="9a16b48a-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t201">
                                 Funktion raja-arvo
                             </a>
@@ -99,7 +101,7 @@ topnav: maa6
                             Tutki alla olevaa kuvaa. 
                             <br>
                             <img src="/kurssit/maa6/kuvat/kuva16.png" max-width: 100%; width: auto; height: auto;/>
-                            <br>                     
+                                 <br>                     
                         </p>
                         <ol class="a">
                             <li> Onko funktiolla $f$ raja-arvo kohdassa
@@ -117,7 +119,7 @@ topnav: maa6
                                 Onko välillä $[-3, 5]$ jokin kohta, jossa funktio $f$ ei ole määritelty?
                             </li>
                         </ol>
-                             <h2>
+                        <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t201_v">
                                 VASTAUS
                             </a>
@@ -138,17 +140,17 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
-            <p>
-                Joskus funktion raja-arvoa ei ole olemassa tarkastelukohdassa, koska funktion arvot kasvavat tai pienenevät rajatta tämän kohdan läheisyydessä. Esimerkiksi alla on näkyvissä osa funktion $g$ kuvaajasta. Siitä nähdään, että funktio $g$ on kyllä määritelty välin $[-3,5]$ jokaisessa pisteessä, mutta funktiolla $f$ ei ole raja-arvoa kohdassa $x = 2$. Tämä johtuu siitä, että funktion arvot kasvavat rajatta, kun kohtaa $x = 2$ lähestytään oikealta.
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva17.png" max-width: 100%; width: auto; height: auto;/>
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Joskus funktion raja-arvoa ei ole olemassa tarkastelukohdassa, koska funktion arvot kasvavat tai pienenevät rajatta tämän kohdan läheisyydessä. Esimerkiksi alla on näkyvissä osa funktion $g$ kuvaajasta. Siitä nähdään, että funktio $g$ on kyllä määritelty välin $[-3,5]$ jokaisessa pisteessä, mutta funktiolla $f$ ei ole raja-arvoa kohdassa $x = 2$. Tämä johtuu siitä, että funktion arvot kasvavat rajatta, kun kohtaa $x = 2$ lähestytään oikealta.
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva17.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t202-ex">
+                <div class="tehtava" id="9a16b552-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t202">
                                 Funktion raja-arvo
                             </a>
@@ -159,7 +161,7 @@ topnav: maa6
                             Tutki alla olevaa kuvaa. 
                             <br>
                             <img src="/kurssit/maa6/kuvat/kuva18.png" max-width: 100%; width: auto; height: auto;/>
-                            <br>                     
+                                 <br>                     
                         </p>
                         <ol class="a">
                             <li> Onko funktiolla $f$ raja-arvo kohdassa
@@ -178,7 +180,7 @@ topnav: maa6
                                 Onko välillä $[-3, 5]$ jokin kohta, jossa funktio $f$ ei ole määritelty?
                             </li>
                         </ol>
-                             <h2>
+                        <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t202_v">
                                 VASTAUS
                             </a>
@@ -201,9 +203,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t204-ex">
+                <div class="tehtava" id="9a16b610-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t204">
                                 Funktion raja-arvo
                             </a>
@@ -224,7 +226,7 @@ topnav: maa6
                                 Määritä kuvan avulla funktion $f$ raja-arvo kohdassa $x = 2$ tai selitä, miksi sitä ei ole olemassa.
                             </li>
                         </ol>
-                             <h2>
+                        <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t204_v">
                                 VASTAUS
                             </a>
@@ -239,18 +241,18 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
-            <p>
-                Monissa tilanteissa funktion raja-arvo tarkastelukohdassa voidaan määrittää funktion lausekkeen avulla. Esimerkiksi voidaan tutkia, onko funktiolla $f(x) = x^2-9$ raja-arvoa kohdassa $x = 5$. Päätellään, että jos $x \rightarrow 5$, niin
-                $$x^2 - 9 \rightarrow 5^2 - 9 = 25 - 9 = 16.$$
-                Tulos ei riipu siitä, mistä suunnasta kohtaa $x = 5$ lähestytään. Funktiolla $f$ on siis kohdassa $x = 5$ raja-arvo
-                $$\lim_{x \rightarrow 5} f(x) = 16.$$
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Monissa tilanteissa funktion raja-arvo tarkastelukohdassa voidaan määrittää funktion lausekkeen avulla. Esimerkiksi voidaan tutkia, onko funktiolla $f(x) = x^2-9$ raja-arvoa kohdassa $x = 5$. Päätellään, että jos $x \rightarrow 5$, niin
+                    $$x^2 - 9 \rightarrow 5^2 - 9 = 25 - 9 = 16.$$
+                    Tulos ei riipu siitä, mistä suunnasta kohtaa $x = 5$ lähestytään. Funktiolla $f$ on siis kohdassa $x = 5$ raja-arvo
+                    $$\lim_{x \rightarrow 5} f(x) = 16.$$
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t205-ex">
+                <div class="tehtava" id="9a16b6e2-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t205">
                                 Funktion raja-arvo
                             </a>
@@ -274,7 +276,7 @@ topnav: maa6
                                 $f(x) = 9$.
                             </li>
                         </ol>
-                             <h2>
+                        <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t205_v">
                                 VASTAUS
                             </a>
@@ -298,50 +300,50 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
-            <p>
-                Paloittain määriteltyjen funktioiden raja-arvoja voidaan tutkia samaan tapaan lausekkeiden avulla. Tällöin täytyy huomata, että funktio saattaa olla määritelty eri tavoin tarkastelukohdan eri puolilla. Tarkastelukohtaa pitää sen vuoksi lähestyä erikseen sekä oikealta että vasemmalta. Lähestymissuunta ilmaistaan raja-arvon merkinnässä merkeillä $+$ ja $-$.
-            </p>
-            <p>
-                Vasemmalta lähestyminen:
-                $x \rightarrow c-$
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva21.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Oikealta lähestyminen:
-                $x \rightarrow c+$
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva22.png" max-width: 100%; width: auto; height: auto;/>
-            </p>
-            <p>
-                Jos esimerkiksi tutkitaan, onko funktiolla
-                $$f(x) = \begin{cases}
-                \dfrac{x^2+2x+4}{4}, &\text{ jos $\ x < -2$} \\[2mm]
-                2-\sqrt{x + 3}, &\text{ jos $\ x \geq -2$}
-                \end{cases}
-                $$    
-                raja-arvoa kohdassa $x = -2$, verrataan vasemman- ja oikeanpuoleista raja-arvoa toisiinsa:
-                \begin{align*}
-                \lim_{x \rightarrow (-2)-} f(x) &= \lim_{x \rightarrow (-2)-}\dfrac{x^2+2x+4}{4} \\[2mm]
-                &= \frac{(-2)^2 + 2\cdot(-2) + 4}{4} \\[2mm]
-                &= \frac{4-4+4}{4} = 1
-                \end{align*} 
-                ja
-                \begin{align*}
-                \lim_{x \rightarrow (-2)+} f(x) &= \lim_{x \rightarrow (-2)+} (2-\sqrt{x + 3}) \\[1mm]
-                &= 2 - \sqrt{-2+3} \\[1mm]
-                &= 2- \sqrt{1} = 1
-                \end{align*} 
-                Tulos ei riipu lähestymissuunnasta, joten funktiolla $f$ on kohdassa $x = -2$ raja-arvo
-                $$
-                \lim_{x \rightarrow -2} f(x) = 1.
-                $$
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Paloittain määriteltyjen funktioiden raja-arvoja voidaan tutkia samaan tapaan lausekkeiden avulla. Tällöin täytyy huomata, että funktio saattaa olla määritelty eri tavoin tarkastelukohdan eri puolilla. Tarkastelukohtaa pitää sen vuoksi lähestyä erikseen sekä oikealta että vasemmalta. Lähestymissuunta ilmaistaan raja-arvon merkinnässä merkeillä $+$ ja $-$.
+                </p>
+                <p>
+                    Vasemmalta lähestyminen:
+                    $x \rightarrow c-$
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva21.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Oikealta lähestyminen:
+                    $x \rightarrow c+$
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva22.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Jos esimerkiksi tutkitaan, onko funktiolla
+                    $$f(x) = \begin{cases}
+                    \dfrac{x^2+2x+4}{4}, &\text{ jos $\ x < -2$} \\[2mm]
+                    2-\sqrt{x + 3}, &\text{ jos $\ x \geq -2$}
+                    \end{cases}
+                    $$    
+                    raja-arvoa kohdassa $x = -2$, verrataan vasemman- ja oikeanpuoleista raja-arvoa toisiinsa:
+                    \begin{align*}
+                    \lim_{x \rightarrow (-2)-} f(x) &= \lim_{x \rightarrow (-2)-}\dfrac{x^2+2x+4}{4} \\[2mm]
+                    &= \frac{(-2)^2 + 2\cdot(-2) + 4}{4} \\[2mm]
+                    &= \frac{4-4+4}{4} = 1
+                    \end{align*} 
+                    ja
+                    \begin{align*}
+                    \lim_{x \rightarrow (-2)+} f(x) &= \lim_{x \rightarrow (-2)+} (2-\sqrt{x + 3}) \\[1mm]
+                    &= 2 - \sqrt{-2+3} \\[1mm]
+                    &= 2- \sqrt{1} = 1
+                    \end{align*} 
+                    Tulos ei riipu lähestymissuunnasta, joten funktiolla $f$ on kohdassa $x = -2$ raja-arvo
+                    $$
+                    \lim_{x \rightarrow -2} f(x) = 1.
+                    $$
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t205b-ex">
+                <div class="tehtava" id="9a16b7a0-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t205b">
                                 Funktion raja-arvo
                             </a>
@@ -356,7 +358,7 @@ topnav: maa6
                             \end{cases}
                             $$         
                         </p>
-                            <h2>
+                        <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t205b_v">
                                 VASTAUS
                             </a>
@@ -365,11 +367,11 @@ topnav: maa6
                             <p>
                                 Raja-arvoa ei ole olemassa, sillä
                                 $$
-                                    \lim_{x \rightarrow 10-} f(x) = -7
+                                \lim_{x \rightarrow 10-} f(x) = -7
                                 $$
                                 mutta
                                 $$
-                                    \lim_{x \rightarrow 10+} f(x) = 7.
+                                \lim_{x \rightarrow 10+} f(x) = 7.
                                 $$
                             </p>
                         </div>
@@ -386,53 +388,53 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
-            <h1>
+        <header class="otsikko">
+            <h1>      
                 <a data-toggle="collapse" class="collapsed" data-target="#raja2">
                     Funktion jatkuvuus
                 </a>
             </h1>
         </header>
         <div id="raja2" class="collapse">
-
-            <p>
-                Edellisessä kappaleessa havaittiin, että funktiolla voi jossakin kohdassa olla raja-arvo, joka poikkeaa funktion arvosta. Esimerkiksi alla olevasta kuvasta nähdään, että 
-                $$\lim_{x \rightarrow -1} f(x) = -2$$
-                ja 
-                $$f(-1) = 1.$$
-                <img src="/kurssit/maa6/kuvat/kuva19.png" max-width: 100%; width: auto; height: auto;/>
-                <br> 
-                Tällaisessa tilanteessa sanotaan, että funktio $f$ ei ole jatkuva kohdassa $x = -1$. 
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: FUNKTION JATKUVUUS</h3>
+            <div class="teoria">
                 <p>
-                    Oletetaan, että funktio $f$ on määritelty kohdassa $a$. Funktio $f$ on <em>jatkuva kohdassa</em> $a$, jos 
-                    $$\lim_{x \rightarrow a} f(x) = f(a).$$
+                    Edellisessä kappaleessa havaittiin, että funktiolla voi jossakin kohdassa olla raja-arvo, joka poikkeaa funktion arvosta. Esimerkiksi alla olevasta kuvasta nähdään, että 
+                    $$\lim_{x \rightarrow -1} f(x) = -2$$
+                    ja 
+                    $$f(-1) = 1.$$
+                    <img src="/kurssit/maa6/kuvat/kuva19.png" max-width: 100%; width: auto; height: auto;/>
+                         <br> 
+                    Tällaisessa tilanteessa sanotaan, että funktio $f$ ei ole jatkuva kohdassa $x = -1$. 
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: FUNKTION JATKUVUUS</h3>
+                    <p>
+                        Oletetaan, että funktio $f$ on määritelty kohdassa $a$. Funktio $f$ on <em>jatkuva kohdassa</em> $a$, jos 
+                        $$\lim_{x \rightarrow a} f(x) = f(a).$$
+                    </p>
+                </div>
+
+                <p>
+                    Määritelmän mukaan funktio $f$ on siis jatkuva kohdassa $a$, jos sillä on kohdassa $a$ raja-arvo, joka on sama kuin funktion arvo kohdassa $a$. 
+                </p>
+
+                <p>
+                    Jos funktiolla ei ole raja-arvoa kohdassa $a$, funktio ei ole siinä jatkuva. Tämä voi näkyä funktion kuvaajassa hyppäyksenä, kuten esimerkiksi alla kohdassa $x = 2$.
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva20.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Funktion kuvaajassa näkyy hyppäyksenä myös tilanne, jossa raja-arvo on kyllä olemassa mutta poikkeaa funktion arvosta, kuten esimerkiksi alla kohdassa $x = -1$.
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva19.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Yllä näkyvä funktio ei siis ole jatkuva kohdassa $x = -1$.
                 </p>
             </div>
-
-            <p>
-                Määritelmän mukaan funktio $f$ on siis jatkuva kohdassa $a$, jos sillä on kohdassa $a$ raja-arvo, joka on sama kuin funktion arvo kohdassa $a$. 
-            </p>
-            
-            <p>
-                Jos funktiolla ei ole raja-arvoa kohdassa $a$, funktio ei ole siinä jatkuva. Tämä voi näkyä funktion kuvaajassa hyppäyksenä, kuten esimerkiksi alla kohdassa $x = 2$.
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva20.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Funktion kuvaajassa näkyy hyppäyksenä myös tilanne, jossa raja-arvo on kyllä olemassa mutta poikkeaa funktion arvosta, kuten esimerkiksi alla kohdassa $x = -1$.
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva19.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Yllä näkyvä funktio ei siis ole jatkuva kohdassa $x = -1$.
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="t202b-ex">
+                <div class="tehtava" id="9a16baac-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t202b">
                                 Funktion jatkuvuus
                             </a>
@@ -443,7 +445,7 @@ topnav: maa6
                             Tutki alla olevaa kuvaa. 
                             <br>
                             <img src="/kurssit/maa6/kuvat/kuva18.png" max-width: 100%; width: auto; height: auto;/>
-                            <br>              
+                                 <br>              
                             Onko funktio $f$ jatkuva kohdassa       
                         </p>
                         <ol class="a">
@@ -453,7 +455,7 @@ topnav: maa6
                             <li> $x = 2$  </li>
                             <li> $x = 4$? </li>
                         </ol>
-                             <h2>
+                        <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t202b_v">
                                 VASTAUS
                             </a>
@@ -472,9 +474,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t206-ex">
+                <div class="tehtava" id="9a16bb92-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t206">
                                 Funktion jatkuvuus
                             </a>
@@ -492,7 +494,7 @@ topnav: maa6
                             </li>
                             <li> Piirrä funktion $g$ kuvaaja välillä $[-1,4]$ ja tarkista, ettei se ole ristiriidassa vastaustesi kanssa.</li>
                         </ol>
-                             <h2>
+                        <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t206_v">
                                 VASTAUS
                             </a>
@@ -508,59 +510,59 @@ topnav: maa6
                     </div>
                 </div>
             </div>
+            <div class="teoria">
+                <!--             <p>
+                                Kurssissa MAA2 perehdyttiin polynomifunktioihin. Voidaan osoittaa, että ne kaikki ovat jatkuvia lukusuoran jokaisessa kohdassa. Tällaisia funktioita, jotka ovat jatkuvia koko määrittelyjoukossaan, sanotaan jatkuviksi funktioiksi. Voidaan osoittaa, että jatkuvilla funktioilla on hyödyllisiä ominaisuuksia, joihin tutustumme kohta tarkemmin. Ensin kuitenkin sovitaan, mitä tarkoitetaan, kun sanotaan, että funktio on jatkuva jollakin lukusuoran välillä.
+                            </p> -->
 
-<!--             <p>
-                Kurssissa MAA2 perehdyttiin polynomifunktioihin. Voidaan osoittaa, että ne kaikki ovat jatkuvia lukusuoran jokaisessa kohdassa. Tällaisia funktioita, jotka ovat jatkuvia koko määrittelyjoukossaan, sanotaan jatkuviksi funktioiksi. Voidaan osoittaa, että jatkuvilla funktioilla on hyödyllisiä ominaisuuksia, joihin tutustumme kohta tarkemmin. Ensin kuitenkin sovitaan, mitä tarkoitetaan, kun sanotaan, että funktio on jatkuva jollakin lukusuoran välillä.
-            </p> -->
-
-            <p>
-                Edellä on tarkasteltu funktion jatkuvuutta aina jossain yksittäisessä kohdassa. Seuraavaksi siirrytään tarkastelemaan tilanteita, joissa funktio on jatkuva jollakin lukusuoran välillä tai jopa koko lukusuoralla. Tällaisia funktioita ovat esimerkiksi polynomifunktiot, joihin perehdyttiin kurssissa MAA2.
-            </p>
-
-            <p>
-                Alla olevassa määritelmässä tarkastellaan sekä avoimia että suljettuja välejä. Avoimen välin mitä tahansa pistettä voidaan lähestyä sekä vasemmalta että oikealta, mutta suljetun välin päätepisteitä voidaan lähestyä vain yhdestä suunnasta: vasenta päätepistettä oikealta ja oikeaa päätepistettä vasemmalta. 
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: FUNKTION JATKUVUUS VÄLILLÄ</h3>
                 <p>
-                    Funktio $f$ on <em>jatkuva avoimella välillä</em> $\pa a, b\pe$, jos se on jatkuva jokaisessa välin $\pa a, b\pe$ pisteessä. 
-                    <br>
-                    &nbsp;
-                    <br>
-                    Funktio $f$ on <em>jatkuva suljetulla välillä</em> $[a,b]$, jos 
-                <ul>
-                    <li> se on jatkuva avoimella välillä $\pa a, b\pe$</li>
-                    <li> ${\displaystyle \lim_{x \rightarrow a+} f(x)} = f(a)$</li>
-                    <li> ${\displaystyle \lim_{x \rightarrow b-} f(x)} = f(b)$</li>
-                </ul>
+                    Edellä on tarkasteltu funktion jatkuvuutta aina jossain yksittäisessä kohdassa. Seuraavaksi siirrytään tarkastelemaan tilanteita, joissa funktio on jatkuva jollakin lukusuoran välillä tai jopa koko lukusuoralla. Tällaisia funktioita ovat esimerkiksi polynomifunktiot, joihin perehdyttiin kurssissa MAA2.
                 </p>
+
+                <p>
+                    Alla olevassa määritelmässä tarkastellaan sekä avoimia että suljettuja välejä. Avoimen välin mitä tahansa pistettä voidaan lähestyä sekä vasemmalta että oikealta, mutta suljetun välin päätepisteitä voidaan lähestyä vain yhdestä suunnasta: vasenta päätepistettä oikealta ja oikeaa päätepistettä vasemmalta. 
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: FUNKTION JATKUVUUS VÄLILLÄ</h3>
+                    <p>
+                        Funktio $f$ on <em>jatkuva avoimella välillä</em> $\pa a, b\pe$, jos se on jatkuva jokaisessa välin $\pa a, b\pe$ pisteessä. 
+                        <br>
+                        &nbsp;
+                        <br>
+                        Funktio $f$ on <em>jatkuva suljetulla välillä</em> $[a,b]$, jos 
+                    <ul>
+                        <li> se on jatkuva avoimella välillä $\pa a, b\pe$</li>
+                        <li> ${\displaystyle \lim_{x \rightarrow a+} f(x)} = f(a)$</li>
+                        <li> ${\displaystyle \lim_{x \rightarrow b-} f(x)} = f(b)$</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <p>
+                    Määritelmää voidaan havainnollistaa alla näkyvän funktion $f$ kuvaajan avulla. Kuvaajasta havaitaan, että funktio on jatkuva kaikissa muissa kohdissa paitsi kohdassa $x = 1$. Jos kohtaa $x = 1$ lähestytään oikealta, funktion arvot kasvavat rajatta, mutta jos kohtaa $x = 1$ lähestytään vasemmalta, funktion arvot lähestyvät lukua $-2$. Funktiolla ei tämän vuoksi ole raja-arvoa kohdassa $x = 1$ eikä se siten ole siinä jatkuva.
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva23.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Tarkastellaan sitten funktion jatkuvuutta suljetuilla väleillä $[-2,1]$ ja $[1,3]$.
+                </p>
+                <ul>
+                    <li> 
+                        suljetulla välillä $[-2,1]$ funktio $f$ on jatkuva, sillä se on jatkuva avoimella välillä $\pa -2, 1 \pe$ ja lisäksi 
+                        \begin{align*}
+                        \lim_{x \rightarrow -2+} f(x) &= 4 = f(-2) \\
+                        \lim_{x \rightarrow 1-} f(x) &= -2 = f(1)
+                        \end{align*}
+                    </li>
+                    <li> 
+                        suljetulla välillä $[1,3]$ funktio $f$ ei ole jatkuva, sillä $f(1) = -2$ mutta funktion arvot kasvavat rajatta, kun kohtaa $x = 1$ lähestytään oikealta.
+                    </li>
+                </ul>
             </div>
-
-            <p>
-                Määritelmää voidaan havainnollistaa alla näkyvän funktion $f$ kuvaajan avulla. Kuvaajasta havaitaan, että funktio on jatkuva kaikissa muissa kohdissa paitsi kohdassa $x = 1$. Jos kohtaa $x = 1$ lähestytään oikealta, funktion arvot kasvavat rajatta, mutta jos kohtaa $x = 1$ lähestytään vasemmalta, funktion arvot lähestyvät lukua $-2$. Funktiolla ei tämän vuoksi ole raja-arvoa kohdassa $x = 1$ eikä se siten ole siinä jatkuva.
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva23.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Tarkastellaan sitten funktion jatkuvuutta suljetuilla väleillä $[-2,1]$ ja $[1,3]$.
-            </p>
-            <ul>
-                <li> 
-                    suljetulla välillä $[-2,1]$ funktio $f$ on jatkuva, sillä se on jatkuva avoimella välillä $\pa -2, 1 \pe$ ja lisäksi 
-                    \begin{align*}
-                    \lim_{x \rightarrow -2+} f(x) &= 4 = f(-2) \\
-                    \lim_{x \rightarrow 1-} f(x) &= -2 = f(1)
-                    \end{align*}
-                </li>
-                <li> 
-                    suljetulla välillä $[1,3]$ funktio $f$ ei ole jatkuva, sillä $f(1) = -2$ mutta funktion arvot kasvavat rajatta, kun kohtaa $x = 1$ lähestytään oikealta.
-                </li>
-            </ul>
-
             <div class="tehtavat">
-                <div class="tehtava" id="t208-ex">
+                <div class="tehtava" id="9a16bc5a-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t208">
                                 Funktion jatkuvuus 
                             </a>
@@ -571,7 +573,7 @@ topnav: maa6
                             Tarkastele alla näkyvää funktion $g$ kuvaajaa. 
                             <br>
                             <img src="/kurssit/maa6/kuvat/kuva24.png" max-width: 100%; width: auto; height: auto;/>
-                            Onko funktio $g$ jatkuva välillä
+                                 Onko funktio $g$ jatkuva välillä
                         </p>
                         <ol class="a">
                             <li> $\pa -1, 3 \pe$ </li>
@@ -582,7 +584,7 @@ topnav: maa6
                         <p>
                             Perustele vastauksesi omin sanoin.
                         </p>
-                             <h2>
+                        <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t208_v">
                                 VASTAUS
                             </a>
@@ -598,47 +600,47 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
-            <p>
-                On mahdollista osoittaa, että jos suljetulla välillä jatkuva funktio saa välin päätepisteissä erimerkkiset arvot, on funktiolla tällä välillä ainakin yksi nollakohta. Tämä tulos tunnetaan nimellä Bolzanon lause. Sen todisti ensimmäisenä tsekkiläinen matemaatikko Bernard Bolzano vuonna 1817. Kuvasta katsottuna Bolzanon lause on helppo uskoa todeksi, mutta yleispätevän perustelun esittäminen on sen verran työlästä, että sitä käsitellään vasta yliopistotasolla.
-            </p>
-
-            <div class="theorem" id="BOLZANON LAUSE">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Jos funktio $f$ on määritelty ja jatkuva suljetulla välillä $[a,b]$ ja jos funktion arvot $f(a)$ ja $f(b)$ ovat erimerkkiset, niin funktiolla on (ainakin yksi) nollakohta avoimella välillä $\pa a, b\pe$.
+                    On mahdollista osoittaa, että jos suljetulla välillä jatkuva funktio saa välin päätepisteissä erimerkkiset arvot, on funktiolla tällä välillä ainakin yksi nollakohta. Tämä tulos tunnetaan nimellä Bolzanon lause. Sen todisti ensimmäisenä tsekkiläinen matemaatikko Bernard Bolzano vuonna 1817. Kuvasta katsottuna Bolzanon lause on helppo uskoa todeksi, mutta yleispätevän perustelun esittäminen on sen verran työlästä, että sitä käsitellään vasta yliopistotasolla.
+                </p>
+
+                <div class="theorem" id="BOLZANON LAUSE">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jos funktio $f$ on määritelty ja jatkuva suljetulla välillä $[a,b]$ ja jos funktion arvot $f(a)$ ja $f(b)$ ovat erimerkkiset, niin funktiolla on (ainakin yksi) nollakohta avoimella välillä $\pa a, b\pe$.
+                        <br>
+                        <img src="/kurssit/maa6/kuvat/kuva25.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
+
+                <p>
+                    Huomaa, että jos Bolzanon lauseen ehdot täyttyvät, voi funktiolla olla useampikin nollakohta tarkasteluvälillä. Tällainen tilanne on alla olevassa kuvassa.
                     <br>
-                    <img src="/kurssit/maa6/kuvat/kuva25.png" max-width: 100%; width: auto; height: auto;/>
+                    <img src="/kurssit/maa6/kuvat/kuva26.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Nollakohdan olemassaolon kannalta on oleellista, että funktio on jatkuva suljetulla välillä $[a,b]$. Esimerkiksi seuraavan kuvan tilanteessa funktio $f$ on kyllä määritelty suljetulla välillä $[-1,2]$ ja saa sen päätepisteissä erimerkkiset arvot: $f(-1) = 2$ ja $f(2) = -0{,}5$. Lisäksi funktio on jatkuva avoimella välillä $\pa -1, 2 \pe$, mutta sillä ei ole nollakohtaa välillä $\pa -1,2 \pe$.
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva27.png" max-width: 100%; width: auto; height: auto;/>
                 </p>
-            </div>
 
-            <p>
-                Huomaa, että jos Bolzanon lauseen ehdot täyttyvät, voi funktiolla olla useampikin nollakohta tarkasteluvälillä. Tällainen tilanne on alla olevassa kuvassa.
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva26.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Nollakohdan olemassaolon kannalta on oleellista, että funktio on jatkuva suljetulla välillä $[a,b]$. Esimerkiksi seuraavan kuvan tilanteessa funktio $f$ on kyllä määritelty suljetulla välillä $[-1,2]$ ja saa sen päätepisteissä erimerkkiset arvot: $f(-1) = 2$ ja $f(2) = -0{,}5$. Lisäksi funktio on jatkuva avoimella välillä $\pa -1, 2 \pe$, mutta sillä ei ole nollakohtaa välillä $\pa -1,2 \pe$.
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva27.png" max-width: 100%; width: auto; height: auto;/>
-            </p>
-
-            <p>
-                Bolzanon lausetta voidaan hyödyntää esimerkiksi polynomifunktioiden nollakohtien etsimisessä ja polynomiyhtälöiden ratkaisussa, sillä polynomifunktiot ovat jatkuvia millä tahansa lukusuoran välillä. Tämän teoreeman täsmällinen todistus on niin työläs, että siihen tutustutaan vasta yliopistotasolla.
-            </p>
-
-            <div class="theorem" id="POLYNOMIFUNKTIOIDEN JATKUVUUS">
-                <h3>TEOREEMA</h3>
                 <p>
-                    Polynomifunktio on kaikkialla jatkuva.
+                    Bolzanon lausetta voidaan hyödyntää esimerkiksi polynomifunktioiden nollakohtien etsimisessä ja polynomiyhtälöiden ratkaisussa, sillä polynomifunktiot ovat jatkuvia millä tahansa lukusuoran välillä. Tämän teoreeman täsmällinen todistus on niin työläs, että siihen tutustutaan vasta yliopistotasolla.
                 </p>
-            </div>
 
-            <p>Bolzanon lauseen ja teoreeman 2 käyttöä harjoitellaan seuraavassa tehtävässä.</p>
-            
+                <div class="theorem" id="POLYNOMIFUNKTIOIDEN JATKUVUUS">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Polynomifunktio on kaikkialla jatkuva.
+                    </p>
+                </div>
+
+                <p>Bolzanon lauseen ja teoreeman 2 käyttöä harjoitellaan seuraavassa tehtävässä.</p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t209-ex">
+                <div class="tehtava" id="9a16bd18-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t209">
                                 Jatkuvan funktion nollakohdat
                             </a>
@@ -660,28 +662,28 @@ topnav: maa6
                                 Tarkista vastauksesi piirtämällä funktion $f$ kuvaaja.
                             </li>
                         </ol>
-                             <h2>
+                        <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t209_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="t209_v" class="collapse">
                             <ol class="a">
-                                
+
                             </ol>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <p>
-                Jos funktio saa kahdessa eri kohdassa samanmerkkiset arvot, niiden välillä saattaa olla olemassa nollakohtia tai sitten ei. Tätä tutkitaan seuraavassa tehtävässä.
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Jos funktio saa kahdessa eri kohdassa samanmerkkiset arvot, niiden välillä saattaa olla olemassa nollakohtia tai sitten ei. Tätä tutkitaan seuraavassa tehtävässä.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t210-ex">
+                <div class="tehtava" id="9a16bde0-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t210">
                                 Jatkuvan funktion nollakohdat
                             </a>
@@ -699,7 +701,7 @@ topnav: maa6
                         <p>
                             Tarkista vastauksesi piirtämällä keksimäsi funktioiden kuvaajat.
                         </p>
-                             <h2>
+                        <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t210_v">
                                 VINKKI
                             </a>
@@ -718,9 +720,9 @@ topnav: maa6
             </p>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t211-ex">
+                <div class="tehtava" id="9a16bf16-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t211">
                                 Jatkuvan funktion nollakohdat
                             </a>
@@ -744,21 +746,21 @@ topnav: maa6
                         </h2>
                         <div id="t211_v" class="collapse">
                             <ol class="a">
-                            <li> Pienin sopiva luku on $4{,}945$.</li>
-                            <li> Suurin sopiva luku on $4{,}954$.</li>
-                            <li> Funktioon $f(x) = x^4 - 5x^3 + 6$ ja väliin $[4{,}945; \,4{,}954]$. </li>
-                            <li> Funktio $f$ on polynomifunktio, joten se on jatkuva välillä $[4{,}945; \,4{,}954]$. Lisäksi 
-                                $f(4{,}945) \approx -0{,}65 < 0$ ja $f(4{,}954) \approx 0{,}41 > 0$, joten funktiolla $f$ on ainakin yksi nollakohta välillä $\pa 4{,}945; \,4{,}954\pe$</li>.
-                        </ol>
+                                <li> Pienin sopiva luku on $4{,}945$.</li>
+                                <li> Suurin sopiva luku on $4{,}954$.</li>
+                                <li> Funktioon $f(x) = x^4 - 5x^3 + 6$ ja väliin $[4{,}945; \,4{,}954]$. </li>
+                                <li> Funktio $f$ on polynomifunktio, joten se on jatkuva välillä $[4{,}945; \,4{,}954]$. Lisäksi 
+                                    $f(4{,}945) \approx -0{,}65 < 0$ ja $f(4{,}954) \approx 0{,}41 > 0$, joten funktiolla $f$ on ainakin yksi nollakohta välillä $\pa 4{,}945; \,4{,}954\pe$</li>.
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t212-ex">
+                <div class="tehtava" id="9a16c402-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t212">
                                 Jatkuvan funktion nollakohdat
                             </a>
@@ -781,15 +783,15 @@ topnav: maa6
                         </h2>
                         <div id="t212_v" class="collapse">
                             <ol class="a">
-                            <li> </li>
-                            <li> Tarkasteluväliksi sopii esimerkiksi $[1{,}15;\, 1{,}24]$ tai $[1{,}15;\, 1{,}20]$ </li>
-                            <li> Likiarvo on $1{,}2$. </li>
-                        </ol>
+                                <li> </li>
+                                <li> Tarkasteluväliksi sopii esimerkiksi $[1{,}15;\, 1{,}24]$ tai $[1{,}15;\, 1{,}20]$ </li>
+                                <li> Likiarvo on $1{,}2$. </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#raja2">
@@ -801,7 +803,7 @@ topnav: maa6
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#raja3">
                     Jatkuvuus ja derivoituvuus
@@ -809,48 +811,48 @@ topnav: maa6
             </h1>
         </header>
         <div id="raja3" class="collapse">
-
-        <p>
-            <a href="http://kisallioppiminen.fi/kurssit/maa6/luku1/">Ensimmäisessä luvussa</a> opittiin, että funktion derivaatta on funktion kuvaajalle piirretyn tangentin kulmakerroin. Esimerkiksi alla näkyvän funktion $f$ derivaatta kohdassa $x = 2$ on 
-            $$f'(2) = -0{,}5.$$
-            <img src="/kurssit/maa6/kuvat/kuva02.png" max-width: 100%; width: auto; height: auto;/>
-            <br>
-            Funktion kuvaajalle ei kuitenkaan aina ole mahdollista piirtää yksikäsitteistä tangenttia. Erityisesti kohdat, joissa funktio ei ole jatkuva, tuottavat hankaluuksia. Miten esimerkiksi pitäisi piirtää tangentti alla näkyvän funktion kuvaajan kohtaan $x = 3$?
-            <br>
-            <img src="/kurssit/maa6/kuvat/kuva78.png" max-width: 100%; width: auto; height: auto;/>
-            <br>
-            Alla näkyy kaksi suoraa, jotka sivuavat funktion kuvaajaa kohdassa $x = 3$. Yksikäsitteistä tangettia on mahdotonta piirtää, joten funktiolla $f$ ei ole derivaattaa kohdassa $x = 3$. Tämä voidaan ilmaista myös sanomalla, että funktio $f$ ei ole derivoituva kohdassa $x = 3$.
-            <br>
-            <img src="/kurssit/maa6/kuvat/kuva79.png" max-width: 100%; width: auto; height: auto;/>
-            <br>
-            On mahdollista osoittaa yleispätevästi, että funktio voi olla derivoituva vain siinä tapauksessa, että se on jatkuva:
-        </p>
-
-            <div class="theorem" id="JATKUVUUS JA DERIVOITUVUUS">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Jos funktiolla on derivaatta kohdassa $a$, niin funktio on jatkuva kohdassa $a$.
+                    <a href="http://kisallioppiminen.fi/kurssit/maa6/luku1/">Ensimmäisessä luvussa</a> opittiin, että funktion derivaatta on funktion kuvaajalle piirretyn tangentin kulmakerroin. Esimerkiksi alla näkyvän funktion $f$ derivaatta kohdassa $x = 2$ on 
+                    $$f'(2) = -0{,}5.$$
+                    <img src="/kurssit/maa6/kuvat/kuva02.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Funktion kuvaajalle ei kuitenkaan aina ole mahdollista piirtää yksikäsitteistä tangenttia. Erityisesti kohdat, joissa funktio ei ole jatkuva, tuottavat hankaluuksia. Miten esimerkiksi pitäisi piirtää tangentti alla näkyvän funktion kuvaajan kohtaan $x = 3$?
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva78.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Alla näkyy kaksi suoraa, jotka sivuavat funktion kuvaajaa kohdassa $x = 3$. Yksikäsitteistä tangettia on mahdotonta piirtää, joten funktiolla $f$ ei ole derivaattaa kohdassa $x = 3$. Tämä voidaan ilmaista myös sanomalla, että funktio $f$ ei ole derivoituva kohdassa $x = 3$.
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva79.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    On mahdollista osoittaa yleispätevästi, että funktio voi olla derivoituva vain siinä tapauksessa, että se on jatkuva:
+                </p>
+
+                <div class="theorem" id="JATKUVUUS JA DERIVOITUVUUS">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jos funktiolla on derivaatta kohdassa $a$, niin funktio on jatkuva kohdassa $a$.
+                    </p>
+                </div>
+
+                <p>
+                    Teoreemasta 3 seuraa, että jos funktio ei ole jatkuva, se ei missään tapauksessa voi olla derivoituva. Toisaalta vaikka funktio olisi jatkuva, se ei välttämättä ole derivoituva. Esimerkiksi alla on näkyvissä itseisarvofunktion 
+                    $$f(x) = \left|x\right|$$
+                    kuvaaja. Se on katkeamaton käyrä, mistä voidaan päätellä, että itseisarvofunktio on jatkuva.  
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva80.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Havaitaan, että kohtaan $x = 0$ on mahdotonta piirtää yksikäsitteistä tangenttia:
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva81.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Itseisarvofunktio $f(x) = \left|x\right|$ ei siten ole derivoituva kohdassa $x = 0$, vaikka onkin siinä jatkuva.
                 </p>
             </div>
-
-        <p>
-            Teoreemasta 3 seuraa, että jos funktio ei ole jatkuva, se ei missään tapauksessa voi olla derivoituva. Toisaalta vaikka funktio olisi jatkuva, se ei välttämättä ole derivoituva. Esimerkiksi alla on näkyvissä itseisarvofunktion 
-            $$f(x) = \left|x\right|$$
-            kuvaaja. Se on katkeamaton käyrä, mistä voidaan päätellä, että itseisarvofunktio on jatkuva.  
-            <br>
-            <img src="/kurssit/maa6/kuvat/kuva80.png" max-width: 100%; width: auto; height: auto;/>
-            <br>
-            Havaitaan, että kohtaan $x = 0$ on mahdotonta piirtää yksikäsitteistä tangenttia:
-            <br>
-            <img src="/kurssit/maa6/kuvat/kuva81.png" max-width: 100%; width: auto; height: auto;/>
-            <br>
-            Itseisarvofunktio $f(x) = \left|x\right|$ ei siten ole derivoituva kohdassa $x = 0$, vaikka onkin siinä jatkuva.
-        </p>
-
-        <div class="tehtavat">
-                <div class="tehtava" id="t213-ex">
+            <div class="tehtavat">
+                <div class="tehtava" id="9a16c506-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t213">
                                 Jatkuvuus ja derivoituvuus
                             </a>
@@ -866,29 +868,29 @@ topnav: maa6
                             <li> mikä on funktion derivaatan arvo niissä kohdissa, joissa se on olemassa.</li>
                         </ol>
                         <img src="/kurssit/maa6/kuvat/kuva82.png" max-width: 100%; width: auto; height: auto;/>
-                        <h2>
+                             <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t213_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="t213_v" class="collapse">
                             <ol class="a">
-                            <li> Kohdissa $x = 0$ ja $x = 1$. </li>
-                            <li> Kohdissa $x = -1$, $x = 0$ ja $x = 1$.  </li>
-                            <li> 
-                                <ul>
-                                    <li> Jos $x < -1$, niin $f'(x) = 1$. </li>
-                                    <li> Jos $-1 < x < 0$ tai $0 < x < 1$, niin $f'(x) = -0{,}5$. </li>
-                                    <li> Jos $x > 1$, niin $f'(x) = -1{,}5$. </li>
-                                </ul>
-                            </li>
-                        </ol>
+                                <li> Kohdissa $x = 0$ ja $x = 1$. </li>
+                                <li> Kohdissa $x = -1$, $x = 0$ ja $x = 1$.  </li>
+                                <li> 
+                                    <ul>
+                                        <li> Jos $x < -1$, niin $f'(x) = 1$. </li>
+                                        <li> Jos $-1 < x < 0$ tai $0 < x < 1$, niin $f'(x) = -0{,}5$. </li>
+                                        <li> Jos $x > 1$, niin $f'(x) = -1{,}5$. </li>
+                                    </ul>
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
 
-        <div class="close-section">
+            <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#raja3">
                     Sulje kappale
                 </a>
@@ -897,7 +899,7 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku2-tehtavasarja2">
                     TEHTÄVÄSARJA II
@@ -908,9 +910,9 @@ topnav: maa6
         <div id="luku2-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="MAA6s2t203-ex">
+            <div class="tehtava" id="9a16d0d2-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t203">
                             Funktion raja-arvo
                         </a>
@@ -934,7 +936,7 @@ topnav: maa6
                             Määritä kuvan avulla funktion $f$ raja-arvo kohdassa $x = -1$ tai selitä, miksi sitä ei ole olemassa.
                         </li>
                     </ol>
-                         <h2>
+                    <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t203_v">
                             VASTAUS
                         </a>
@@ -953,9 +955,9 @@ topnav: maa6
             </div>
 
 
-            <div class="tehtava" id="MAA6s2t201-ex">
+            <div class="tehtava" id="9a16d24e-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t201">
                             Funktion raja-arvo
                         </a>
@@ -970,7 +972,7 @@ topnav: maa6
                         \end{cases}
                         $$          
                     </p>
-                         <h2>
+                    <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t201_v">
                             VASTAUS
                         </a>
@@ -983,9 +985,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t202-ex">
+            <div class="tehtava" id="9a16d32a-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t202">
                             Funktion jatkuvuus
                         </a>
@@ -1007,7 +1009,7 @@ topnav: maa6
                             Määritä vakiolle $a$ sellainen arvo, että funktio $f$ on jatkuva kohdassa $x = 2$.
                         </li>
                     </ol>
-                         <h2>
+                    <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t202_v">
                             VASTAUS
                         </a>
@@ -1023,9 +1025,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t205-ex">
+            <div class="tehtava" id="9a16d6c2-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t205">
                             Funktion jatkuvuus
                         </a>
@@ -1054,10 +1056,10 @@ topnav: maa6
                 </div>
             </div>
 
-            
-            <div class="tehtava" id="MAA6s2t207-ex">
+
+            <div class="tehtava" id="9a16d7ee-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t207">
                             Jatkuvuus ja derivoituvuus
                         </a>
@@ -1079,7 +1081,7 @@ topnav: maa6
                         </li>
                     </ol>
                     <img src="/kurssit/maa6/kuvat/kuva102.png" max-width: 100%; width: auto; height: auto;/>
-                    <h2>
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t207_v">
                             VASTAUS
                         </a>
@@ -1104,7 +1106,7 @@ topnav: maa6
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku2-tehtavasarja3">
                     TEHTÄVÄSARJA III
@@ -1115,11 +1117,11 @@ topnav: maa6
         <div id="luku2-tehtavasarja3" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="MAA6s2t204-ex">
+            <div class="tehtava" id="9a16d8c0-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t204">
-                            
+
                         </a>
                     </h1>
                 </header>
@@ -1138,7 +1140,7 @@ topnav: maa6
                             Määritä pinta-alan raja-arvo, kun piste $A$ lähestyy pistettä $C$.
                         </li>
                     </ol>
-                         <h2>
+                    <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t204_v">
                             VASTAUS
                         </a>
@@ -1160,11 +1162,11 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t206-ex">
+            <div class="tehtava" id="9a16d988-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t206">
-                            
+
                         </a>
                     </h1>
                 </header>
@@ -1204,9 +1206,9 @@ topnav: maa6
             </div>
 
 
-            <div class="tehtava" id="MAA6s3t201-ex">
+            <div class="tehtava" id="9a16da50-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t201">
 
                         </a>
@@ -1237,9 +1239,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t202-ex">
+            <div class="tehtava" id="9a16dfe6-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t202">
 
                         </a>
@@ -1270,19 +1272,19 @@ topnav: maa6
                             Funktion $f$ kuvaaja:
                             <br>
                             <img src="/kurssit/maa6/kuvat/kuva90.png" max-width: 100%; width: auto; height: auto;/>
-                            <br>
+                                 <br>
                             Funktio $f$ ei ole derivoituva sahalaidan kärkipisteissä eli kohdissa, joissa kuvaajan pisteiden $x$-koordinaatti on kokonaisluku.
                             <br>
                             Funktiolle $g$ pätee $g(0) = f(0+1) = f(1)$, $g(1) = f(1+1) = f(2)$ ja niin edelleen. Funktion $g$ kuvaaja: 
                             <br>
                             <img src="/kurssit/maa6/kuvat/kuva91.png" max-width: 100%; width: auto; height: auto;/>
-                            <br>
+                                 <br>
                             Myöskään funktio $g$ ei ole derivoituva sahalaidan kärkipisteissä eli kohdissa, joissa kuvaajan pisteiden $x$-koordinaatti on kokonaisluku.
                             <br>
                             Funktion $h$ arvo on jokaisessa kohdassa funktioiden $f$ ja $g$ arvojen summa: $h(x) = f(x) + g(x)$. Funktion $h$ kuvaaja:
                             <br>
                             <img src="/kurssit/maa6/kuvat/kuva92.png" max-width: 100%; width: auto; height: auto;/>
-                            <br>
+                                 <br>
                             Funktio $h$ on vakiofunktio, joten se on derivoituva kaikkialla.
                         </p>
                     </div>
@@ -1299,7 +1301,7 @@ topnav: maa6
 
     <section class="panel">
         <header>
-            <h1>
+            <h1> 
                 <a data-toggle="collapse" class="collapsed" data-target="#L2itsearviointi">
                     Itsearviointitehtävät
                 </a>

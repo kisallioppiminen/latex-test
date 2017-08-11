@@ -1,1 +1,11 @@
+<!--resources.js from _config.yml -->
+{% for src in site.resources.js %}
+	<script src="{% if src contains '//' %}{{ src }}{% else %}{{ src | prepend: site.baseurl }}{% endif %}"></script>{% endfor %}
+
+<!-- USELESS? -->
+{% for src in page.resources.js %}
+	<script src="{% if src contains '//' %}{{ src }}{% else %}{{ src | prepend: site.baseurl }}{% endif %}"></script>{% endfor %}
+<!-- USELESS? -->
+{% for script in page.resources.script %}
+	<script>{{script}}</script>{% endfor %}
 

@@ -112,6 +112,5 @@ var SITE = {
 
 
 $(function() {
-    console.log("Init site");
     SITE.init();
 });

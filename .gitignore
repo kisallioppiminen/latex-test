@@ -1,8 +1,18 @@
 _site
 .sass-cache
+.idea/
 Gemfile.lock
 
 kurssit/may1/.DS_Store
 
 .DS_Store
+.tern-port
+
+out/
+node_modules/
+_coverage/*
+*~
+*.orig
+CNAME
+
 /HTML5Application/nbproject/private

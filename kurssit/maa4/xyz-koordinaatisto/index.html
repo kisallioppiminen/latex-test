@@ -4,6 +4,7 @@ title: MAA4 Vektorit
 main-class: has-atop
 topnav: maa4
 ---
+{% include bottomnav.html %}
 
 <input type="hidden" id="theoremStart" value="7"/>
 <input type="hidden" id="chapterNumber" value="2"/>
@@ -34,16 +35,18 @@ topnav: maa4
                 </ul>
                 Tavoitteiden toteutumista pääset arvioimaan luvun lopussa olevan itsearviointitestin avulla.</p>
             </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#L2luvun-tavoitteet">
                     Sulje kappale
                 </a>
             </div>
+
         </div>
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#kolmiulotteisen-avaruuden-vektorit">
                     Kolmiulotteisen avaruuden vektorit
@@ -52,41 +55,44 @@ topnav: maa4
         </header>
         <div id="kolmiulotteisen-avaruuden-vektorit" class="collapse">
 
-            <p>
-                Edellisessä luvussa tutustuimme $xy$-koordinaatistoon, jonka avulla voidaan kuvata tason pisteitä ja vektoreita. Kolmiulotteisen avaruuden pisteitä ja vektoreita voidaan kuvata niin sanotun $xyz$-koordinaatiston avulla. Tämä koordinaatisto saadaan $xy$-koordinaatistosta lisäämällä siihen yksi akseli, joka on kohtisuorassa sekä $x$-akselia että $y$-akselia vastaan. Kolmatta akselia sanotaan $z$-akseliksi. 
-            </p>
+            <div class="teoria">
+                <p>
+                    Edellisessä luvussa tutustuimme $xy$-koordinaatistoon, jonka avulla voidaan kuvata tason pisteitä ja vektoreita. Kolmiulotteisen avaruuden pisteitä ja vektoreita voidaan kuvata niin sanotun $xyz$-koordinaatiston avulla. Tämä koordinaatisto saadaan $xy$-koordinaatistosta lisäämällä siihen yksi akseli, joka on kohtisuorassa sekä $x$-akselia että $y$-akselia vastaan. Kolmatta akselia sanotaan $z$-akseliksi.
+                </p>
 
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k1.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k1.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
 
-            <p> 
-                Yllä olevassa kuvassa $z$-akseli suuntautuu kohti katsojaa. Kolmiulotteista koordinaatistoa voidaan katsoa muistakin suunnista, jolloin esimerkiksi $x$-akseli saattaa suuntautua kohti katsojaa, kuten alla olevassa kuvassa. Koordinaattiakselien keskinäiset suunnat pysyvät kuitenkin samoina. Niitä voidaan havainnollistaa oikean käden sormien avulla: peukalo vastaa $x$-akselia, etusormi $y$-akselia ja keskisormi $z$-akselia.
-            </p>
+                <p>
+                    Yllä olevassa kuvassa $z$-akseli suuntautuu kohti katsojaa. Kolmiulotteista koordinaatistoa voidaan katsoa muistakin suunnista, jolloin esimerkiksi $x$-akseli saattaa suuntautua kohti katsojaa, kuten alla olevassa kuvassa. Koordinaattiakselien keskinäiset suunnat pysyvät kuitenkin samoina. Niitä voidaan havainnollistaa oikean käden sormien avulla: peukalo vastaa $x$-akselia, etusormi $y$-akselia ja keskisormi $z$-akselia.
+                </p>
 
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k05.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k05.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
 
-            <p>
-                Kolmiulotteisen avaruuden piste $P$ ilmaistaan lukukolmikkona $(x,y,z)$, missä ensimmäiset kaksi lukua ilmoittavat pisteen paikan $x$- ja $y$-akseleiden suhteen ja kolmas koordinaatti kertoo, missä piste sijaitsee $z$-akselin suunnassa origoon verrattuna. Alla olevassa kuvassa on havainnollistettu $xyz$-koordinaatiston pisteitä $S=(1,0,4)$ ja  $R = (3,2,2)$. 
-            </p>
+                <p>
+                    Kolmiulotteisen avaruuden piste $P$ ilmaistaan lukukolmikkona $(x,y,z)$, missä ensimmäiset kaksi lukua ilmoittavat pisteen paikan $x$- ja $y$-akseleiden suhteen ja kolmas koordinaatti kertoo, missä piste sijaitsee $z$-akselin suunnassa origoon verrattuna. Alla olevassa kuvassa on havainnollistettu $xyz$-koordinaatiston pisteitä $S=(1,0,4)$ ja  $R = (3,2,2)$.
+                </p>
 
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k2.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k2.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
 
-            <p>
-                Yllä olevasta kuvasta nähdään myös, miten $xyz$-koordinaatisto yleensä piirretään. Katsojaa kohti tuleva akseli piirretään 135 asteen kulmassa oikealle suuntautuvaan akseliin nähden. Lisäksi katsojaa kohti tulevan akselin yksikön pituudeksi valitaan noin puolet muiden akseleiden yksikön pituudesta, jotta vaikutelmasta tulee kolmiulotteinen.
-            </p>
-            <p>
-                Esimerkiksi yllä olevassa kuvassa $x$- ja $y$-akseleiden yksiköksi on valittu kolme ruutua ja $z$-akselin yksikön pituudeksi yhden ruudun lävistäjä eli $\sqrt{2}\approx 1{,}4$ ruutua.
-            </p>
+                <p>
+                    Yllä olevasta kuvasta nähdään myös, miten $xyz$-koordinaatisto yleensä piirretään. Katsojaa kohti tuleva akseli piirretään 135 asteen kulmassa oikealle suuntautuvaan akseliin nähden. Lisäksi katsojaa kohti tulevan akselin yksikön pituudeksi valitaan noin puolet muiden akseleiden yksikön pituudesta, jotta vaikutelmasta tulee kolmiulotteinen.
+                </p>
+                <p>
+                    Esimerkiksi yllä olevassa kuvassa $x$- ja $y$-akseleiden yksiköksi on valittu kolme ruutua ja $z$-akselin yksikön pituudeksi yhden ruudun lävistäjä eli $\sqrt{2}\approx 1{,}4$ ruutua.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="firstEx">
+                <div class="tehtava" id="fce9f0af-6cf4-44fd-97f4-7bccc65f8df4">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2t1">
                                 $xyz$-koordinaatisto
                             </a>
@@ -94,16 +100,17 @@ topnav: maa4
                     </header>
                     <div id="t-L2t1" class="collapse">
                         <p>
-                            Piirrä kolmiulotteinen koordinaatisto ja merkitse siihen pisteet $A=(3,0,1)$, $B=(-2,1,2)$ ja $C=(2,3,-2)$. 
+                            Piirrä kolmiulotteinen koordinaatisto ja merkitse siihen pisteet $A=(3,0,1)$, $B=(-2,1,2)$ ja $C=(2,3,-2)$.
                         </p>
                     </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2t1b-ex">
+                <div class="tehtava" id="4bc93d7f-e7c7-43e7-ba31-44865a777f67">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2t1b">
                                 $xyz$-koordinaatisto
                             </a>
@@ -113,7 +120,7 @@ topnav: maa4
                         <p>
                             Päättele, mitä tiedät pisteen $P$ koordinaateista, jos piste $P$ on
                         <ol class="a">
-                            <li> $x$-akselilla  
+                            <li> $x$-akselilla
                             <li> $y$-akselilla
                             <li> $z$-akselilla.
                         </ol>
@@ -124,9 +131,10 @@ topnav: maa4
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2t1c-ex">
+                <div class="tehtava" id="9c9c9c04-6e5a-4b6e-8222-cee161d04820">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2t1c">
                                 $xyz$-koordinaatisto
                             </a>
@@ -136,7 +144,7 @@ topnav: maa4
                         <p>
                             Päättele, mitä tiedät pisteen $P$ koordinaateista, jos piste $P$ on
                         <ol class="a">
-                            <li> $xy$-tasossa 
+                            <li> $xy$-tasossa
                             <li> $yz$-tasossa
                             <li> $xz$-tasossa.
                         </ol>
@@ -145,18 +153,21 @@ topnav: maa4
                 </div>
             </div>
 
-            <p>
-                Kolmiulotteisessa koordinaatistossa kaikki vektorit voidaan esittää koordinaattiakselien suuntaisten yksikkövektoreiden avulla samaan tapaan kuin $xy$-tasossa. Erona on, että koordinaattiakselien suuntaisia yksikkövektoreita on nyt kolme: $\vi$, $\vj$ ja $\vk$. Niitä on havainnollistettu alla olevassa kuvassa.
-            </p>
+            <div class="teoria">
+                <p>
+                    Kolmiulotteisessa koordinaatistossa kaikki vektorit voidaan esittää koordinaattiakselien suuntaisten yksikkövektoreiden avulla samaan tapaan kuin $xy$-tasossa. Erona on, että koordinaattiakselien suuntaisia yksikkövektoreita on nyt kolme: $\vi$, $\vj$ ja $\vk$. Niitä on havainnollistettu alla olevassa kuvassa.
+                </p>
 
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k3.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k3.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2t2-ex">
+                <div class="tehtava" id="a07c5e4f-7b1d-4074-b5a0-1a531ef4152f">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2t2">
                                 Vektoreiden esittäminen vektoreiden $\bar{\imath}$, $\bar{\jmath}$ ja $\vk$ avulla
                             </a>
@@ -164,15 +175,17 @@ topnav: maa4
                     </header>
                     <div id="t-L2t2" class="collapse">
                         <p>
-                            Ilmoita alla olevan kuvan vektori $\bar{v}$ vektoreiden $\bar{\imath}$, $\bar{\jmath}$ ja $\vk$ avulla. 
+                            Ilmoita alla olevan kuvan vektori $\bar{v}$ vektoreiden $\bar{\imath}$, $\bar{\jmath}$ ja $\vk$ avulla.
                         </p>
                         <p>
-                            <img src="/kurssit/maa4/kuvat/L2k4.png" max-width: 100%; width: auto; height: auto;/> 
+                            <img src="/kurssit/maa4/kuvat/L2k4.png" max-width: 100%; width: auto; height: auto;/>
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2t2_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-L2t2_v" class="collapse">
                             <p>$\vv = -2\vi + \vj - 2\vk$</p>
@@ -181,17 +194,20 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: VEKTOREIDEN SAMUUS</h3>
-                <p>
-                    Kaksi vektoria ovat samat, jos ne voidaan esittää samalla tavalla vektoreiden $\bar{\imath}$, $\bar{\jmath}$ ja $\vk$ avulla. Tarkemmin sanottuna vektorit $\vv = x_1\vi + y_1\vj + z_1\vk$ ja $\vw = x_2\vi + y_2\vj + z_2\vk$ ovat samat eli $\vv = \vw$, jos ja vain jos $x_1 = x_2$ ja $y_1 = y_2$ ja $z_1 = z_2$.
-                </p>
+            <div class="teoria">
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: VEKTOREIDEN SAMUUS</h3>
+                    <p>
+                        Kaksi vektoria ovat samat, jos ne voidaan esittää samalla tavalla vektoreiden $\bar{\imath}$, $\bar{\jmath}$ ja $\vk$ avulla. Tarkemmin sanottuna vektorit $\vv = x_1\vi + y_1\vj + z_1\vk$ ja $\vw = x_2\vi + y_2\vj + z_2\vk$ ovat samat eli $\vv = \vw$, jos ja vain jos $x_1 = x_2$ ja $y_1 = y_2$ ja $z_1 = z_2$.
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2t3-ex">
+                <div class="tehtava" id="84d87835-ef6b-4d75-888b-e3bbeef2f30e">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2t3">
                                 Vektoreiden samuus
                             </a>
@@ -203,9 +219,11 @@ topnav: maa4
                             Tiedetään, että $\vv = -9\vi + (3-a)\vj + 4b\vk$ ja $\vw = 3c\vi - 7\vj - 20\vk$. Etsi sellaiset luvut $a$, $b$ ja $c$, että $\vv = \vw$. Kuinka monella tavalla tällaiset luvut on mahdollista valita?
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2t3_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-L2t3_v" class="collapse">
                             <p>$a = 10$, $\ b = -5 \ $ ja $\ c = -3$.</p>
@@ -214,14 +232,19 @@ topnav: maa4
                 </div>
             </div>
 
-            <p>
-                Pisteen $P = (x,y,z)$ paikkavektori määritellään kolmiulotteisessa koordinaatistossa samaan tapaan kuin $xy$-tasossa: pisteen $P = (x,y,z)$ paikkavektori tarkoittaa vektoria, jonka alkupiste on origo ja loppupiste on $P$. 
-            </p>
+
+            <div class="teoria">
+                <p>
+                    Pisteen $P = (x,y,z)$ paikkavektori määritellään kolmiulotteisessa koordinaatistossa samaan tapaan kuin $xy$-tasossa: pisteen $P = (x,y,z)$ paikkavektori tarkoittaa vektoria, jonka alkupiste on origo ja loppupiste on $P$.
+                </p>
+            </div>
+
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2t4-ex">
+                <div class="tehtava" id="06a4330b-155a-42dc-95ed-2f94bf93cd16">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2t4">
                                 Paikkavektori
                             </a>
@@ -232,12 +255,14 @@ topnav: maa4
                             Ilmaise alla olevan kuvan vektori $\vv$ vektoreiden $\vi$, $\vj$ ja $\vk$ avulla. Minkä pisteen paikkavektori se on?
                         </p>
                         <p>
-                            <img src="/kurssit/maa4/kuvat/L2k22.png" max-width: 100%; width: auto; height: auto;/> 
+                            <img src="/kurssit/maa4/kuvat/L2k22.png" max-width: 100%; width: auto; height: auto;/>
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2t4_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-L2t4_v" class="collapse">
                             <p>$\vv = 3\vi - \vj - 2\vk$ on pisteen $(3,-1,-2)$ paikkavektori.</p>
@@ -246,19 +271,22 @@ topnav: maa4
                 </div>
             </div>
 
-            <p>
-                Kolmiulotteisessa koordinaatistossa nollavektori tarkoittaa vektoria $\bar{0} = 0\vi + 0\vj + 0\vk$. Se on origon eli pisteen $O = (0,0,0)$ paikkavektori.
-            </p>
+            <div class="teoria">
+                <p>
+                    Kolmiulotteisessa koordinaatistossa nollavektori tarkoittaa vektoria $\bar{0} = 0\vi + 0\vj + 0\vk$. Se on origon eli pisteen $O = (0,0,0)$ paikkavektori.
+                </p>
+            </div>
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#kolmiulotteisen-avaruuden-vektorit">
                     Sulje kappale
                 </a>
             </div>
+
         </div>
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#vektoreiden-laskutoimituksia">
                     Vektoreiden laskutoimituksia
@@ -267,29 +295,32 @@ topnav: maa4
         </header>
         <div id="vektoreiden-laskutoimituksia" class="collapse">
 
-            <p>
-                Vektoreiden summa ja erotus lasketaan $xyz$-koordinaatistossa samaan tapaan kuin $xy$-koordinaatistossa eli komponenteittain. Esimerkiksi vektoreiden $\vv = \textcolor{blue}{2}\vi  \textcolor{red}{-5}\vj + \textcolor{magenta}{3}\vk$ ja $\vw = \textcolor{blue}{-7}\vi + \textcolor{red}{9}\vj + \textcolor{magenta}{8}\vk$ summa on 
-                $$
-                \begin{align*}
-                \vv + \vw 
-                &= (\textcolor{blue}{2-7})\vi + (\textcolor{red}{-5}+\textcolor{red}{9})\vj + (\textcolor{magenta}{3}+\textcolor{magenta}{8})\vk \\
-                &= \textcolor{blue}{-5}\vi + \textcolor{red}{4}\vj + \textcolor{magenta}{11}\vk
-                \end{align*}
-                $$ 
-                ja erotus on 
-                $$
-                \begin{align*}
-                \vv - \vw 
-                &= (\textcolor{blue}{2}-(\textcolor{blue}{-7}))\vi + (\textcolor{red}{-5}-\textcolor{red}{9})\vj + (\textcolor{magenta}{3}-\textcolor{magenta}{8})\vk \\
-                &= \textcolor{blue}{9}\vi \textcolor{red}{- 14}\vj \textcolor{magenta}{- 5}\vk.
-                \end{align*}
-                $$
-            </p>
+            <div class="teoria">
+                <p>
+                    Vektoreiden summa ja erotus lasketaan $xyz$-koordinaatistossa samaan tapaan kuin $xy$-koordinaatistossa eli komponenteittain. Esimerkiksi vektoreiden $\vv = \textcolor{blue}{2}\vi  \textcolor{red}{-5}\vj + \textcolor{magenta}{3}\vk$ ja $\vw = \textcolor{blue}{-7}\vi + \textcolor{red}{9}\vj + \textcolor{magenta}{8}\vk$ summa on
+                    $$
+                    \begin{align*}
+                    \vv + \vw
+                    &= (\textcolor{blue}{2-7})\vi + (\textcolor{red}{-5}+\textcolor{red}{9})\vj + (\textcolor{magenta}{3}+\textcolor{magenta}{8})\vk \\
+                    &= \textcolor{blue}{-5}\vi + \textcolor{red}{4}\vj + \textcolor{magenta}{11}\vk
+                    \end{align*}
+                    $$
+                    ja erotus on
+                    $$
+                    \begin{align*}
+                    \vv - \vw
+                    &= (\textcolor{blue}{2}-(\textcolor{blue}{-7}))\vi + (\textcolor{red}{-5}-\textcolor{red}{9})\vj + (\textcolor{magenta}{3}-\textcolor{magenta}{8})\vk \\
+                    &= \textcolor{blue}{9}\vi \textcolor{red}{- 14}\vj \textcolor{magenta}{- 5}\vk.
+                    \end{align*}
+                    $$
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2summa1-ex">
+                <div class="tehtava" id="91c2e47b-6e67-4cc8-ab4e-ea93b71c576b">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2summa1">
                                 Vektoreiden summa ja erotus
                             </a>
@@ -298,59 +329,65 @@ topnav: maa4
                     <div id="t-L2summa1" class="collapse">
                         <p> Tutki vektoreita $\bar{v}= 3\bar{\imath}-4\bar{\jmath} + 7\vk$, $\bar{w}=9\bar{\imath}-5\vk$ ja $\bar{u}=-2\vj+6\vk$. Laske seuraavat vektorit:
                         <ol class="a">
-                            <li> $\bar{v}+\bar{w}$  
+                            <li> $\bar{v}+\bar{w}$
                             <li> $\bar{w}+\bar{u}$
                             <li> $\bar{v}-\bar{w}$
                             <li> $\bar{u}-\bar{v}$.
                         </ol>
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2summa1_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="t-L2summa1_v" class="collapse">
                             <ol class="a">
-                                <li> $\bar{v}+\bar{w} = 12\vi - 4\vj + 2\vk$  
+                                <li> $\bar{v}+\bar{w} = 12\vi - 4\vj + 2\vk$
                                 <li> $\bar{w}+\bar{u} = 9\vi - 2\vj + \vk$
                                 <li> $\bar{v}-\bar{w} = -6\vi - 4\vj + 12\vk$
                                 <li> $\bar{u}-\bar{v} = -3\vi + 2\vj - \vk$.
                             </ol>
+
                         </div>
                     </div>
                 </div>
             </div>
 
-            <p>
-                Summan ja erotuksen määrittäminen piirtämällä on $xyz$-koordinaatistossa hankalampaa kuin $xy$-koordinaatistossa, koska tarkkojen kolmiulotteisten kuvien piirtäminen on usein vaikeaa. Summaa ja erotusta voidaan kuitenkin havainnollistaa mallikuvilla. Summavektori saadaan muodotettua laittamalla yhteenlaskettavat vektorit peräkkäin ja piirtämällä vektori ensimmäisen yhteenlaskettavan alkupisteestä viimeisen yhteenlaskettavan loppupisteeseen. Tätä on havainnollistettu alla olevassa kuvassa.
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k07.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p> 
-                Erotusvektori $\vv - \vw$ saadaan muodostettua laittamalla peräkkäin vektorit $\vv$ ja $-\vw$ kuten alla olevassa kuvassa.
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k08.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p> 
-                Jos vektorit $\vv$ ja $\vw$ alkavat samasta pisteestä kuten alla olevassa kuvassa, löydetään erotusvektori $\vv - \vw$ etsimällä reitti, jossa kuljetaan ensin vektori $\vw$ vastakkaiseen suuntaan ja sen jälkeen vektori $\vv$. Tämä reitti vastaa summaa $-\vw + \vv$, joka on sama kuin $\vv-\vw$.
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k09.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Tätä ideaa voidaan hyödyntää kahden pisteen välisen vektorin määrittämisessä samaan tapaan kuin $xy$-koordinaatistossa. Alla olevasta kuvasta voidaan päätellä, että vektori $\pv{AB}$ saadaan vähentämällä loppupisteen paikkavektorista $\pv{OB}$ alkupisteen paikkavektori $\pv{OA}$ eli 
-                $\pv{AB} = \pv{OB} - \pv{OA}$.
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k11.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
+            <div class="teoria">
+                <p>
+                    Summan ja erotuksen määrittäminen piirtämällä on $xyz$-koordinaatistossa hankalampaa kuin $xy$-koordinaatistossa, koska tarkkojen kolmiulotteisten kuvien piirtäminen on usein vaikeaa. Summaa ja erotusta voidaan kuitenkin havainnollistaa mallikuvilla. Summavektori saadaan muodotettua laittamalla yhteenlaskettavat vektorit peräkkäin ja piirtämällä vektori ensimmäisen yhteenlaskettavan alkupisteestä viimeisen yhteenlaskettavan loppupisteeseen. Tätä on havainnollistettu alla olevassa kuvassa.
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k07.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Erotusvektori $\vv - \vw$ saadaan muodostettua laittamalla peräkkäin vektorit $\vv$ ja $-\vw$ kuten alla olevassa kuvassa.
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k08.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Jos vektorit $\vv$ ja $\vw$ alkavat samasta pisteestä kuten alla olevassa kuvassa, löydetään erotusvektori $\vv - \vw$ etsimällä reitti, jossa kuljetaan ensin vektori $\vw$ vastakkaiseen suuntaan ja sen jälkeen vektori $\vv$. Tämä reitti vastaa summaa $-\vw + \vv$, joka on sama kuin $\vv-\vw$.
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k09.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Tätä ideaa voidaan hyödyntää kahden pisteen välisen vektorin määrittämisessä samaan tapaan kuin $xy$-koordinaatistossa. Alla olevasta kuvasta voidaan päätellä, että vektori $\pv{AB}$ saadaan vähentämällä loppupisteen paikkavektorista $\pv{OB}$ alkupisteen paikkavektori $\pv{OA}$ eli
+                    $\pv{AB} = \pv{OB} - \pv{OA}$.
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k11.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
+
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2summa2-ex">
+                <div class="tehtava" id="2e73d4e5-99d6-4a3d-a75f-d07be297eba6">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2summa2">
                                 Vektoreiden summa ja erotus
                             </a>
@@ -358,7 +395,7 @@ topnav: maa4
                     </header>
 
                     <div id="t-L2summa2" class="collapse">
-                        <p> Tiedetään, että $A= (1,5,-3)$ ja $\pv{AB} = -4\vi-7\vj + 15 \vk$. 
+                        <p> Tiedetään, että $A= (1,5,-3)$ ja $\pv{AB} = -4\vi-7\vj + 15 \vk$.
                         <ol class="a">
                             <li> Muodosta pisteen $A$ paikkavektori. </li>
                             <li> Määritä pisteen $B$ paikkavektori $\pv{OB}$ ja piste $B$. Havainnollista ratkaisuasi mallikuvan avulla. </li>
@@ -366,6 +403,7 @@ topnav: maa4
                         </ol>
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2summa2_v">
                                 VASTAUS
                             </a>
@@ -375,39 +413,44 @@ topnav: maa4
                                 <li> $\pv{OA} = \vi + 5\vj - 3\vk$  </li>
                                 <li> $\pv{OB} = -3\vi - 2\vj + 12\vk\ $ ja $\ B = (-3,-2,12)$ </li>
                             </ol>
+
                         </div>
                     </div>
                 </div>
             </div>
 
-            <p> 
-                Myös vektorin kertominen reaaliluvulla tapahtuu $xyz$-koordinaatistossa samaan tapaan kuin $xy$-koordinaatistossa eli komponenteittain. Esimerkiksi vektorin $\vv = 2\vi - 5\vj + 3\vk$ skalaarimonikerta $-15\vv$ saadaan kertomalla kaikki komponentit luvulla $-15$. Siten 
-                $$
-                \begin{align*}
-                -15\vv &= -15\cdot 2\vi + (-15) \cdot (-5)\vj + (-15)\cdot 3\vk \\
-                &= -30\vi + 75\vj - 45\vk.
-                \end{align*}
-                $$
-            </p>
+            <div class="teoria">
+                <p>
+                    Myös vektorin kertominen reaaliluvulla tapahtuu $xyz$-koordinaatistossa samaan tapaan kuin $xy$-koordinaatistossa eli komponenteittain. Esimerkiksi vektorin $\vv = 2\vi - 5\vj + 3\vk$ skalaarimonikerta $-15\vv$ saadaan kertomalla kaikki komponentit luvulla $-15$. Siten
+                    $$
+                    \begin{align*}
+                    -15\vv &= -15\cdot 2\vi + (-15) \cdot (-5)\vj + (-15)\cdot 3\vk \\
+                    &= -30\vi + 75\vj - 45\vk.
+                    \end{align*}
+                    $$
+                </p>
 
-            <p> 
-                Alla olevassa kuvassa piste $P$ jakaa janan $AB$ suhteessa $1:3$. Jana $AB$ muodostuu siis neljästä yhtä pitkästä osasta. Jana $AP$ on yhden osan mittainen ja jana $PB$ on kolmen osan mittainen. Tätä tietoa voidaan hyödyntää esimerkiksi pisteen $P$ paikkavektorin määrittämisessä. Sitä harjoitellaan seuraavassa tehtävässä.
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k10.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
+                <p>
+                    Alla olevassa kuvassa piste $P$ jakaa janan $AB$ suhteessa $1:3$. Jana $AB$ muodostuu siis neljästä yhtä pitkästä osasta. Jana $AP$ on yhden osan mittainen ja jana $PB$ on kolmen osan mittainen. Tätä tietoa voidaan hyödyntää esimerkiksi pisteen $P$ paikkavektorin määrittämisessä. Sitä harjoitellaan seuraavassa tehtävässä.
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k10.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
+
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2skalaarikerto1-ex">
+                <div class="tehtava" id="d4b6058f-a59f-4467-b0d1-d565645373cd">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2skalaarikerto1">
                                 Vektorin kertominen reaaliluvulla
                             </a>
                         </h1>
                     </header>
                     <div id="t-L2skalaarikerto1" class="collapse">
-                        <p> 
+                        <p>
                             Tiedetään, että $A = (1,-1,0)$ ja $B = (5,7,8)$. Tiedetään lisäksi, että piste $P$ jakaa janan $AB$ suhteessa $1:3$ kuten yllä olevassa kuvassa. Piirrä tilanteesta mallikuva ja havainnollista ratkaisusi vaiheita sen avulla.
                         <ol class="a">
                             <li> Määritä paikkavektorit $\pv{OA}$ ja $\pv{OB}$.
@@ -418,6 +461,7 @@ topnav: maa4
                         </ol>
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2skalaarikerto1_v">
                                 VASTAUS
                             </a>
@@ -430,20 +474,23 @@ topnav: maa4
                                 <li> $\pv{OP} = 2\vi + \vj + 2\vk$</li>
                                 <li> $P = (2,1,2)$ </li>
                             </ol>
+
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#vektoreiden-laskutoimituksia">
                     Sulje kappale
                 </a>
             </div>
+
         </div>
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#vektorin-pituus-ja-suunta">
                     Vektorin pituus
@@ -452,40 +499,43 @@ topnav: maa4
         </header>
         <div id="vektorin-pituus-ja-suunta" class="collapse">
 
-            <p>
-                Vektorin pituus saadaan $xyz$-koordinaatistossa laskettua Pythagoraan lauseen avulla, mutta sitä täytyy soveltaa useamman kerran. Alla olevan kuvan vektorin $\vv$ pituus voidaan selvittää laskemalla ensin kuvassa näkyvän suorakulmaisen särmiön pohjan lävistäjän $c$ pituus. Se saadaan Pythagoraan lauseen mukaisesta yhtälöstä
-                $$a^2 + b^2 = c^2.$$
-                Tässä tapauksessa $c^2 = 2^2 + 3^2 = 13$, joten särmiön pohjan lävistäjän pituus on $c = \sqrt{13} \approx 3{,}6$.
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k12.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Särmiön pohjan lävistäjän $c$ ja särmiön korkeuden $h$ avulla saadaan selville vektorin $\vv$ pituus, kun Pythagoraan lausetta sovelletaan alla olevassa kuvassa näkyvään suorakulmaiseen kolmioon. Pythagoraan lauseen mukaan
-                $$|\vv|^2 = c^2 + h^2.$$
-                Edellä todettiin, että $c^2 = a^2 + b^2$, joten saadaan yhtälö
-                $$|\vv|^2 = a^2 + b^2 + h^2.$$
-                Tässä tapauksessa $|\vv|^2 = 2^2 + 3^2 + 2^2 = 17$, joten $|\vv| = \sqrt{17} \approx 4{,}1$.
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k13.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-
-            <p>
-                Koska toiseen potenssiin korotus tekee kaikista luvuista epänegatiivisia, voidaan vektorin pituus määritellä seuraavasti:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: VEKTORIN PITUUS</h3>
+            <div class="teoria">
                 <p>
-                    Vektorin $\vv=x\vi+y\vj + z\vk$ pituus on $$|\vv|=\sqrt{x^2+y^2+z^2}.$$
+                    Vektorin pituus saadaan $xyz$-koordinaatistossa laskettua Pythagoraan lauseen avulla, mutta sitä täytyy soveltaa useamman kerran. Alla olevan kuvan vektorin $\vv$ pituus voidaan selvittää laskemalla ensin kuvassa näkyvän suorakulmaisen särmiön pohjan lävistäjän $c$ pituus. Se saadaan Pythagoraan lauseen mukaisesta yhtälöstä
+                    $$a^2 + b^2 = c^2.$$
+                    Tässä tapauksessa $c^2 = 2^2 + 3^2 = 13$, joten särmiön pohjan lävistäjän pituus on $c = \sqrt{13} \approx 3{,}6$.
                 </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k12.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Särmiön pohjan lävistäjän $c$ ja särmiön korkeuden $h$ avulla saadaan selville vektorin $\vv$ pituus, kun Pythagoraan lausetta sovelletaan alla olevassa kuvassa näkyvään suorakulmaiseen kolmioon. Pythagoraan lauseen mukaan
+                    $$|\vv|^2 = c^2 + h^2.$$
+                    Edellä todettiin, että $c^2 = a^2 + b^2$, joten saadaan yhtälö
+                    $$|\vv|^2 = a^2 + b^2 + h^2.$$
+                    Tässä tapauksessa $|\vv|^2 = 2^2 + 3^2 + 2^2 = 17$, joten $|\vv| = \sqrt{17} \approx 4{,}1$.
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k13.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+
+                <p>
+                    Koska toiseen potenssiin korotus tekee kaikista luvuista epänegatiivisia, voidaan vektorin pituus määritellä seuraavasti:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: VEKTORIN PITUUS</h3>
+                    <p>
+                        Vektorin $\vv=x\vi+y\vj + z\vk$ pituus on $$|\vv|=\sqrt{x^2+y^2+z^2}.$$
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2pituus1-ex">
+                <div class="tehtava" id="6c5f726a-54c5-4f4e-b784-0c66c6d45632">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2pituus1">
                                 Vektorin pituus
                             </a>
@@ -495,9 +545,11 @@ topnav: maa4
                         <p> Piirrä pisteen $A = (4,1,3)$ paikkavektori suorakulmaisen särmiön avaruuslävistäjänä ja laske paikkavektorin pituus.
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2pituus1_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-L2pituus1_v" class="collapse">
                             <p>$|\pv{OA}| = \sqrt{26} \approx 5{,}1$</p>
@@ -507,16 +559,17 @@ topnav: maa4
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2pituus2-ex">
+                <div class="tehtava" id="0fe97839-a753-4619-af7f-c539c4ca994b">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2pituus2">
                                 Vektorin pituus
                             </a>
                         </h1>
                     </header>
                     <div id="t-L2pituus2" class="collapse">
-                        <p> Tarkastele vektoria $\vv = 2\vi-6\vj-3\vk$. 
+                        <p> Tarkastele vektoria $\vv = 2\vi-6\vj-3\vk$.
                         <ol class="a">
                             <li> Laske vektorin $\vv$ pituus $|\vv|$.</li>
                             <li> Muodosta vektori $\vw = -5\vv$.</li>
@@ -525,9 +578,11 @@ topnav: maa4
                         </ol>
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2pituus2_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-L2pituus2_v" class="collapse">
                             <ol class="a">
@@ -545,34 +600,39 @@ topnav: maa4
                 Edellisen tehtävän havainto voidaan yleistää seuraavaksi teoreemaksi:
             </p>
 
-            <div class="theorem">
-                <h3>TEOREEMA</h3>
-                <p>
-                    Kaikilla vektoreilla $\vv$ ja reaaliluvuilla $t$ pätee, että 
-                    $$|t\vv|=|t|\cdot |\vv|.$$
-                </p>
-                <div class="proof">
+
+            <div class="teoria">
+                <div class="theorem">
+                    <h3>TEOREEMA</h3>
+
                     <p>
-                        Perustelu: Tarkastellaan vektoria $\vv = x\vi + y\vj + z\vk$ ja reaalilukua $t$. Vektorin $\vv$ pituus on 
-                        $$|\vv|=\sqrt{x^2+y^2+z^2}.$$
-                        Vektorin $t\vv = tx\vi + ty\vj + tz\vk$ pituus on puolestaan
-                        $$\begin{align*}
-                        |t\vv| &=\sqrt{(tx)^2+(ty)^2+(tz)^2} \\
-                        &=\sqrt{t^2x^2+t^2y^2+t^2z^2} \\
-                        &=\sqrt{t^2(x^2+y^2+z^2)} \\
-                        &=\sqrt{t^2}\sqrt{(x^2+y^2+z^2)} \\
-                        &=|t|\sqrt{(x^2+y^2+z^2)}.
-                        \end{align*}$$
-                        Huomataan, että tämä on sama kuin vektorin $\vv$ pituus kerrottuna luvun $t$ itseisarvolla. Siis 
+                        Kaikilla vektoreilla $\vv$ ja reaaliluvuilla $t$ pätee, että
                         $$|t\vv|=|t|\cdot |\vv|.$$
                     </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Tarkastellaan vektoria $\vv = x\vi + y\vj + z\vk$ ja reaalilukua $t$. Vektorin $\vv$ pituus on
+                            $$|\vv|=\sqrt{x^2+y^2+z^2}.$$
+                            Vektorin $t\vv = tx\vi + ty\vj + tz\vk$ pituus on puolestaan
+                            $$\begin{align*}
+                            |t\vv| &=\sqrt{(tx)^2+(ty)^2+(tz)^2} \\
+                            &=\sqrt{t^2x^2+t^2y^2+t^2z^2} \\
+                            &=\sqrt{t^2(x^2+y^2+z^2)} \\
+                            &=\sqrt{t^2}\sqrt{(x^2+y^2+z^2)} \\
+                            &=|t|\sqrt{(x^2+y^2+z^2)}.
+                            \end{align*}$$
+                            Huomataan, että tämä on sama kuin vektorin $\vv$ pituus kerrottuna luvun $t$ itseisarvolla. Siis
+                            $$|t\vv|=|t|\cdot |\vv|.$$
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2pituus2b-ex">
+                <div class="tehtava" id="4d215708-390d-43d1-89c5-c4af19a203b9">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2pituus2b">
                                 Toisen potenssin neliöjuuri
                             </a>
@@ -581,15 +641,16 @@ topnav: maa4
                     <div id="t-L2pituus2b" class="collapse">
                         <p> Edellisen teoreeman perustelussa käytettiin tietoa, että $\sqrt{t^2} = |t|$ kaikilla reaaliluvuilla $t$.
                         <ol class="a">
-                            <li> Keksi esimerkki luvusta $t$, jolla $\sqrt{t^2} = t$.
-                            <li> Keksi esimerkki luvusta $t$, jolla $\sqrt{t^2} \neq t$.
-                            <li> Selitä omin sanoin, miksi yhtälön $\sqrt{t^2} = |t|$ oikealla puolella tarvitaan itseisarvomerkit. 
+                            <li> Keksi esimerkki luvusta $t$, jolla $\sqrt{t^2} = t$.</li>
+                            <li> Keksi esimerkki luvusta $t$, jolla $\sqrt{t^2} \neq t$.</li>
+                            <li> Selitä omin sanoin, miksi yhtälön $\sqrt{t^2} = |t|$ oikealla puolella tarvitaan itseisarvomerkit.</li>
                         </ol>
                         </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2pituus2b_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-L2pituus2b_v" class="collapse">
                             <ol class="a">
@@ -601,53 +662,60 @@ topnav: maa4
                 </div>
             </div>
 
-            <p>
-                Palautetaan mieleen, että yksikkövektori tarkoittaa vektoria, jonka pituus on 1. Edellisen teoreeman avulla saadaan johdettua lauseke annetun vektorin suuntaiselle yksikkövektorille:
-            </p>
 
-            <div class="theorem">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
+
                 <p>
-                    Vektorin $\vv \neq \bar{0}$ suuntainen yksikkövektori $\vv^0$ on
-                    $$\frac{1}{|\vv|}\vv.$$
+                    Palautetaan mieleen, että yksikkövektori tarkoittaa vektoria, jonka pituus on 1. Edellisen teoreeman avulla saadaan johdettua lauseke annetun vektorin suuntaiselle yksikkövektorille:
                 </p>
-                <div class="proof">
+
+                <div class="theorem">
+                    <h3>TEOREEMA</h3>
                     <p>
-                        Perustelu: Koska $\vv \neq \bar{0}$, niin vektorin $\vv$ pituus on positiivinen eli $|\vv| > 0$. Tällöin sen käänteisluku on määritelty ja positiivinen. Toisin sanottuna
-                        $$\frac{1}{|\vv|} > 0.$$
-                        Positiivisella luvulla kerrottaessa vektorin suunta säilyy, joten vektori 
-                        $$\vv^0 = \frac{1}{|\vv|}\vv$$
-                        on samansuuntainen kuin vektori $\vv$. Sen pituudeksi saadaan edellisen teoreeman nojalla
-                        $$\begin{align*}
-                        \left| \vv^0 \right| &= \left| \frac{1}{|\vv|}\vv \right| \\
-                        &= \left| \frac{1}{|\vv|}\right| \cdot |\vv| \\
-                        &=  \frac{1}{|\vv|} \cdot |\vv| \\
-                        &= 1.
-                        \end{align*}$$
+                        Vektorin $\vv \neq \bar{0}$ suuntainen yksikkövektori $\vv^0$ on
+                        $$\frac{1}{|\vv|}\vv.$$
                     </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Koska $\vv \neq \bar{0}$, niin vektorin $\vv$ pituus on positiivinen eli $|\vv| > 0$. Tällöin sen käänteisluku on määritelty ja positiivinen. Toisin sanottuna
+                            $$\frac{1}{|\vv|} > 0.$$
+                            Positiivisella luvulla kerrottaessa vektorin suunta säilyy, joten vektori
+                            $$\vv^0 = \frac{1}{|\vv|}\vv$$
+                            on samansuuntainen kuin vektori $\vv$. Sen pituudeksi saadaan edellisen teoreeman nojalla
+                            $$\begin{align*}
+                            \left| \vv^0 \right| &= \left| \frac{1}{|\vv|}\vv \right| \\
+                            &= \left| \frac{1}{|\vv|}\right| \cdot |\vv| \\
+                            &=  \frac{1}{|\vv|} \cdot |\vv| \\
+                            &= 1.
+                            \end{align*}$$
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-L2vektorinSuunta3-ex">
+                <div class="tehtava" id="d93df3af-4fd4-4360-b232-58653155f02d">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2vektorinSuunta3">
                                 Yksikkövektori
                             </a>
                         </h1>
                     </header>
                     <div id="t-L2vektorinSuunta3" class="collapse">
-                        <p> Määritä vektorin $\va$ suuntainen yksikkövektori $\va^0$, jos 
+                        <p> Määritä vektorin $\va$ suuntainen yksikkövektori $\va^0$, jos
                         <ol class="a">
                             <li> $\va = -2\vi + \vj$
                             <li> $\va = \pv{AB}$, missä $A = (4,-1,2)$ ja $B = (6,2,-4)$.
                         </ol>
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-L2vektorinSuunta3_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-L2vektorinSuunta3_v" class="collapse">
                             <ol class="a">
@@ -658,16 +726,18 @@ topnav: maa4
                     </div>
                 </div>
             </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#vektorin-pituus-ja-suunta">
                     Sulje kappale
                 </a>
             </div>
+
         </div>
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#yhtaloryhman-ratkaiseminen">
                     Vektorin suunta ja yhtälöryhmän ratkaiseminen
@@ -676,87 +746,114 @@ topnav: maa4
         </header>
         <div id="yhtaloryhman-ratkaiseminen" class="collapse">
 
-            <p> 
-                Vektoreiden yhdensuuntaisuus määritellään $xyz$-koordinaatistossa samalla tavalla kuin $xy$-tasossa:  
-            </p>
 
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: YHDENSUUNTAISUUS</h3>
+            <div class="teoria">
+                <p>
+                    Vektoreiden yhdensuuntaisuus määritellään $xyz$-koordinaatistossa samalla tavalla kuin $xy$-tasossa:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: YHDENSUUNTAISUUS</h3>
+                    <p>
+                        Vektorit $\vv$ ja $\vw$ ovat yhdensuuntaiset eli $\vv \parallel \vw$, jos ja vain jos $\vv=r\vw$ jollakin reaaliluvulla $r \neq 0$.
+                    </p>
+                </div>
+
+
+                <p>Vektoreiden yhdensuuntaisuuden tutkiminen johtaa usein yhtälöpariin tai yhtälöryhmään. Esimerkiksi jos halutaan määrittää vakio $t$ niin, että vektorit $\vv = 0{,}5\vi + t\vj + \vk$ ja $\vw = -\vi + 1{,}5\vj-2\vk$ ovat yhdensuuntaisia, on tutkittava yhtälöä
+                    $$\vv = r\vw.$$
+                    Tämä yhtälö voidaan kirjoittaa muodossa
+                    $$0{,}5\vi + t\vj + \vk = r(-\vi + 1{,}5\vj-2\vk)$$
+                    eli
+                    $$0{,}5\vi + t\vj + \vk = -r\vi + 1{,}5r\vj-2r\vk.$$
+                    Vektoreiden samuuden määritelmän mukaan tämä yhtälö toteutuu, jos ja vain jos yhtälön eri puolilla olevat vektorit voidaan ilmaista samalla tavalla vektoreiden $\vi$, $\vj$ ja $\vk$ avulla eli
+                    $$
+                    \left\{\begin{aligned}
+                    -r &= 0{,}5 \\
+                    1{,}5r &= t \\
+                    -2r &= 1
+                    \end{aligned}\right.
+                    $$
+                    Ratkaistaan nyt tämä yhtälöryhmä eli etsitään kaikki sellaiset luvut $r$ ja $t$, joilla yhtälöryhmän kaikki yhtälöt toteutuvat.
+                </p>
                 <p>
                     Vektorit $\vv$ ja $\vw$ ovat yhdensuuntaiset eli $\vv \parallel \vw$, jos ja vain jos $\vv=r\vw$ jollakin reaaliluvulla $r \neq 0$.
                 </p>
+
+                <p>
+                    Vektoreiden yhdensuuntaisuuden tutkiminen johtaa usein yhtälöpariin tai yhtälöryhmään. Esimerkiksi jos halutaan määrittää vakio $t$ niin, että vektorit $\vv = 0{,}5\vi + t\vj + \vk$ ja $\vw = -\vi + 1{,}5\vj-2\vk$ ovat yhdensuuntaisia, on tutkittava yhtälöä
+                    $$\vv = r\vw.$$
+                    Tämä yhtälö voidaan kirjoittaa muodossa
+                    $$0{,}5\vi + t\vj + \vk = r(-\vi + 1{,}5\vj-2\vk)$$
+                    eli
+                    $$0{,}5\vi + t\vj + \vk = -r\vi + 1{,}5r\vj-2r\vk.$$
+                    Vektoreiden samuuden määritelmän mukaan tämä yhtälö toteutuu, jos ja vain jos yhtälön eri puolilla olevat vektorit voidaan ilmaista samalla tavalla vektoreiden $\vi$, $\vj$ ja $\vk$ avulla eli
+                    $$
+                    \left\{\begin{aligned}
+                    -r &= 0{,}5 \\
+                    1{,}5r &= t \\
+                    -2r &= 1
+                    \end{aligned}\right.
+                    $$
+                    Ratkaistaan nyt tämä yhtälöryhmä eli etsitään kaikki sellaiset luvut $r$ ja $t$, joilla yhtälöryhmän kaikki yhtälöt toteutuvat.
+                </p>
+                <p>
+                    Jos yhtälöryhmän ensimmäisen yhtälön molemmat puolet kerrotaan luvulla $-1$, saadaan yhtälö $$r = -0{,}5.$$ Se voidaan sijoittaa yhtälöryhmän toiseen yhtälöön, joka saadaan silloin kirjoitettua muodossa
+                    $$1{,}5\cdot (-0{,}5) = t.$$
+                    Toisin sanottuna
+                    $$t = -0{,}75.$$
+                    Tämä tarkoittaa, että yhtälöryhmän ainoa mahdollinen ratkaisu on $r = -0{,}5$ ja $t = -0{,}75$. Vielä on kuitenkin tarkistettava, että se todella on yhtälöryhmän ratkaisu. Tämä tehdään sijoittamalla nämä luvut alkuperäiseen yhtälöryhmään ja tarkistamalla, että kaikki yhtälöt toteutuvat:
+                    $$
+                    \left\{\begin{aligned}
+                    -(-0{,}5) &= 0{,}5 \\
+                    1{,}5\cdot (-0{,}5) &= -0{,}75 \\
+                    -2\cdot (-0{,}5) &= 1
+                    \end{aligned}\right.
+                    $$
+                    Kaikki yhtälöt toteutuvat, joten yhtälöryhmän
+                    $$
+                    \left\{\begin{aligned}
+                    -r &= 0{,}5 \\
+                    1{,}5r &= t \\
+                    -2r &= 1
+                    \end{aligned}\right.
+                    $$
+                    ratkaisu on $r = -0{,}5$ ja $t = -0{,}75$.
+                </p>
+                <p>
+                    Yhtälö
+                    $$0{,}5\vi + t\vj + \vk = r(-\vi + 1{,}5\vj-2\vk)$$
+                    siis toteutuu, jos ja vain jos $r = -0{,}5$ ja $t = -0{,}75$. Tästä voidaan päätellä, että vektorit $\vv = 0{,}5\vi + t\vj + \vk$ ja $\vw = -\vi + 1{,}5\vj-2\vk$ ovat yhdensuuntaisia, jos ja vain jos $t = -0{,}75$. Tällöin vektorit ovat vastakkaissuuntaisia, koska yhtälössä $\vv = r\vw$ esiintyvä kerroin $r$ on negatiivinen: $r = -0{,}5$.
+                </p>
             </div>
 
-            <p>
-                Vektoreiden yhdensuuntaisuuden tutkiminen johtaa usein yhtälöpariin tai yhtälöryhmään. Esimerkiksi jos halutaan määrittää vakio $t$ niin, että vektorit $\vv = 0{,}5\vi + t\vj + \vk$ ja $\vw = -\vi + 1{,}5\vj-2\vk$ ovat yhdensuuntaisia, on tutkittava yhtälöä
-                $$\vv = r\vw.$$
-                Tämä yhtälö voidaan kirjoittaa muodossa
-                $$0{,}5\vi + t\vj + \vk = r(-\vi + 1{,}5\vj-2\vk)$$
-                eli
-                $$0{,}5\vi + t\vj + \vk = -r\vi + 1{,}5r\vj-2r\vk.$$
-                Vektoreiden samuuden määritelmän mukaan tämä yhtälö toteutuu, jos ja vain jos yhtälön eri puolilla olevat vektorit voidaan ilmaista samalla tavalla vektoreiden $\vi$, $\vj$ ja $\vk$ avulla eli
-                $$
-                \left\{\begin{aligned}
-                -r &= 0{,}5 \\
-                1{,}5r &= t \\
-                -2r &= 1
-                \end{aligned}\right.
-                $$
-                Ratkaistaan nyt tämä yhtälöryhmä eli etsitään kaikki sellaiset luvut $r$ ja $t$, joilla yhtälöryhmän kaikki yhtälöt toteutuvat.
-            </p>
-            <p>
-                Jos yhtälöryhmän ensimmäisen yhtälön molemmat puolet kerrotaan luvulla $-1$, saadaan yhtälö $$r = -0{,}5.$$ Se voidaan sijoittaa yhtälöryhmän toiseen yhtälöön, joka saadaan silloin kirjoitettua muodossa
-                $$1{,}5\cdot (-0{,}5) = t.$$
-                Toisin sanottuna
-                $$t = -0{,}75.$$
-                Tämä tarkoittaa, että yhtälöryhmän ainoa mahdollinen ratkaisu on $r = -0{,}5$ ja $t = -0{,}75$. Vielä on kuitenkin tarkistettava, että se todella on yhtälöryhmän ratkaisu. Tämä tehdään sijoittamalla nämä luvut alkuperäiseen yhtälöryhmään ja tarkistamalla, että kaikki yhtälöt toteutuvat:
-                $$
-                \left\{\begin{aligned}
-                -(-0{,}5) &= 0{,}5 \\
-                1{,}5\cdot (-0{,}5) &= -0{,}75 \\
-                -2\cdot (-0{,}5) &= 1
-                \end{aligned}\right.
-                $$
-                Kaikki yhtälöt toteutuvat, joten yhtälöryhmän
-                $$
-                \left\{\begin{aligned}
-                -r &= 0{,}5 \\
-                1{,}5r &= t \\
-                -2r &= 1
-                \end{aligned}\right.
-                $$
-                ratkaisu on $r = -0{,}5$ ja $t = -0{,}75$.
-            </p>
-            <p>
-                Yhtälö
-                $$0{,}5\vi + t\vj + \vk = r(-\vi + 1{,}5\vj-2\vk)$$
-                siis toteutuu, jos ja vain jos $r = -0{,}5$ ja $t = -0{,}75$. Tästä voidaan päätellä, että vektorit $\vv = 0{,}5\vi + t\vj + \vk$ ja $\vw = -\vi + 1{,}5\vj-2\vk$ ovat yhdensuuntaisia, jos ja vain jos $t = -0{,}75$. Tällöin vektorit ovat vastakkaissuuntaisia, koska yhtälössä $\vv = r\vw$ esiintyvä kerroin $r$ on negatiivinen: $r = -0{,}5$.
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="t-yhtaloryhmaT7-ex">
+                <div class="tehtava" id="def356df-c88b-4f8c-a477-7db0cfd16cd6">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT7">
                                 Vektoreiden yhdensuuntaisuus
                             </a>
                         </h1>
                     </header>
                     <div id="t-yhtaloryhmaT7" class="collapse">
-                        <p> 
+                        <p>
                             Tutki, onko olemassa sellainen luku $t$, että vektorit $\vv$ ja $\vw$ ovat yhdensuuntaiset, jos
                         </p>
                         <ol class="a">
-                            <li> $\vv = -\vi + 2\vj$ ja $\vw = 2\vi + t\vj$ 
-                            <li> $\vv = 2\vi + 3\vj$ ja $\vw = t(\vi + \vj) - 3(3\vi +\vj)$. 
+                            <li> $\vv = -\vi + 2\vj$ ja $\vw = 2\vi + t\vj$
+                            <li> $\vv = 2\vi + 3\vj$ ja $\vw = t(\vi + \vj) - 3(3\vi +\vj)$.
                         </ol>
                         <p>
-                            Tarkista tuloksesi järkevyys hahmottelemalla kuva vektoreista $\vv$ ja $\vw$. Jos vektorit ovat yhdensuuntaiset, ovatko ne saman- vai vastakkaissuuntaiset? 
+                            Tarkista tuloksesi järkevyys hahmottelemalla kuva vektoreista $\vv$ ja $\vw$. Jos vektorit ovat yhdensuuntaiset, ovatko ne saman- vai vastakkaissuuntaiset?
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT7_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-yhtaloryhmaT7_v" class="collapse">
                             <ol class="a">
@@ -769,22 +866,25 @@ topnav: maa4
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-yhtaloryhmaT1-ex">
+                <div class="tehtava" id="daa408eb-f021-4fe8-9609-91ac16fb77a9">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT1">
                                 Vektoreiden yhdensuuntaisuus
                             </a>
                         </h1>
                     </header>
                     <div id="t-yhtaloryhmaT1" class="collapse">
-                        <p> 
+                        <p>
                             Määritä kaikki sellaiset luvut $t$, joilla vektorit $\vv = 8t\vi + (3t-6)\vj + (6t-4)\vk$ ja $\vw = 4\vi + 3\vj+4\vk$ ovat yhdensuuntaiset. Ovatko vektorit $\vv$ ja $\vw$ tällöin saman- vai vastakkaissuuntaiset?
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT1_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-yhtaloryhmaT1_v" class="collapse">
                             <p>
@@ -795,49 +895,52 @@ topnav: maa4
                 </div>
             </div>
 
-            <p> 
-                Tutkitaan seuraavaksi yhtälöparia
-                $$
-                \left\{\begin{aligned}
-                x+2y &= 5 \\
-                2x-3y &= 3.
-                \end{aligned}\right.
-                $$
-                Se voidaan ratkaista samaan tapaan kuin edellä tehtiin. Ratkaistaan ensin ylemmästä yhtälöstä toinen tuntematon, esimerkiksi $x$. Vähentämällä yhtälön $x + 2y = 5$ molemmilta puolilta $2y$ saadaan yhtälö
-                $$x = 5-2y.$$
-                Se voidaan sijoittaa alempaan yhtälöön, joka saadaan silloin kirjoitettua muodossa
-                $$2(5-2y) - 3y = 3.$$
-                Kerrotaan tämän yhtälön vasemmalla puolella sulut auki, jolloin yhtälö saadaan muotoon
-                $$10-4y - 3y = 3.$$
-                Sieventämällä yhtälön vasen puoli saadaan se muotoon
-                $$10-7y = 3.$$ 
-                Vähentämällä yhtälön molemmilta puolilta 10 saadaan uusi yhtälö
-                $$-7y = -7.$$
-                Jakamalla tämän yhtälön molemmat puolet luvulla $-7$ saadaan 
-                $$y = 1.$$
-                Koska aiempien laskujen mukaan $x = 5-2y$, saadaan 
-                $$x = 5-2\cdot 1 = 5-2 = 3.$$
-                Tämä tarkoittaa, että yhtälöparin ainoa mahdollinen ratkaisu on $x = 3$ ja $y = 1$. Tarkistetaan vielä, että nämä luvut todella toteuttavat kummankin yhtälön:
-                $$
-                \left\{\begin{aligned}
-                3+2\cdot 1 &= 3 + 2 = 5 \\
-                2\cdot 3-3\cdot 1 &= 6-3 = 3.
-                \end{aligned}\right.
-                $$
-                Kaikki yhtälöt toteutuvat, joten yhtälöparin
-                $$
-                \left\{\begin{aligned}
-                x+2y &= 5 \\
-                2x-3y &= 3.
-                \end{aligned}\right.
-                $$
-                ratkaisu on $x = 3$ ja $y = 1$.
-            </p>
+            <div class="teoria">
+                <p>
+                    Tutkitaan seuraavaksi yhtälöparia
+                    $$
+                    \left\{\begin{aligned}
+                    x+2y &= 5 \\
+                    2x-3y &= 3.
+                    \end{aligned}\right.
+                    $$
+                    Se voidaan ratkaista samaan tapaan kuin edellä tehtiin. Ratkaistaan ensin ylemmästä yhtälöstä toinen tuntematon, esimerkiksi $x$. Vähentämällä yhtälön $x + 2y = 5$ molemmilta puolilta $2y$ saadaan yhtälö
+                    $$x = 5-2y.$$
+                    Se voidaan sijoittaa alempaan yhtälöön, joka saadaan silloin kirjoitettua muodossa
+                    $$2(5-2y) - 3y = 3.$$
+                    Kerrotaan tämän yhtälön vasemmalla puolella sulut auki, jolloin yhtälö saadaan muotoon
+                    $$10-4y - 3y = 3.$$
+                    Sieventämällä yhtälön vasen puoli saadaan se muotoon
+                    $$10-7y = 3.$$
+                    Vähentämällä yhtälön molemmilta puolilta 10 saadaan uusi yhtälö
+                    $$-7y = -7.$$
+                    Jakamalla tämän yhtälön molemmat puolet luvulla $-7$ saadaan
+                    $$y = 1.$$
+                    Koska aiempien laskujen mukaan $x = 5-2y$, saadaan
+                    $$x = 5-2\cdot 1 = 5-2 = 3.$$
+                    Tämä tarkoittaa, että yhtälöparin ainoa mahdollinen ratkaisu on $x = 3$ ja $y = 1$. Tarkistetaan vielä, että nämä luvut todella toteuttavat kummankin yhtälön:
+                    $$
+                    \left\{\begin{aligned}
+                    3+2\cdot 1 &= 3 + 2 = 5 \\
+                    2\cdot 3-3\cdot 1 &= 6-3 = 3.
+                    \end{aligned}\right.
+                    $$
+                    Kaikki yhtälöt toteutuvat, joten yhtälöparin
+                    $$
+                    \left\{\begin{aligned}
+                    x+2y &= 5 \\
+                    2x-3y &= 3.
+                    \end{aligned}\right.
+                    $$
+                    ratkaisu on $x = 3$ ja $y = 1$.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-yhtaloryhmaT2-ex">
+                <div class="tehtava" id="f4cefa59-186b-4cc1-8dbf-32fd37755ac3">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT2">
                                 Yhtälöparin ratkaiseminen
                             </a>
@@ -853,9 +956,11 @@ topnav: maa4
                             $$
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT2_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-yhtaloryhmaT2_v" class="collapse">
                             <p>$x = \frac{3}{2}\ $ ja $\ y = \frac{7}{6}$</p>
@@ -864,82 +969,85 @@ topnav: maa4
                 </div>
             </div>
 
-            <p> 
-                Edellä tarkastellun yhtälöparin 
-                $$
-                \left\{\begin{aligned}
-                x+2y &= 5 \\
-                2x-3y &= 3.
-                \end{aligned}\right.
-                $$
-                ratkaisua voidaan havainnollistaa seuraavasti: Ensimmäinen yhtälö $x + 2y = 5$ voidaan kirjoittaa muodossa $2y = 5-x$ ja edelleen muodossa
-                $$y = \frac{5-x}{2}.$$
-                Sen toteuttavia lukupareja $(x,y)$ on vaikka kuinka paljon, sillä luvuksi $x$ voidaan valita mikä tahansa reaaliluku ja sen jälkeen vastaava $y$:n arvo saadaan yllä olevasta yhtälöstä. Esimerkiksi jos $x = 0$, saadaan $$y = \frac{5}{2} = 2{,}5.$$ Jos $x = 1$, saadaan $$y = \frac{4}{2} = 2.$$ Jos $x = 3$, saadaan $$y = \frac{2}{2} = 1.$$
-                Lukuparit $(0;2{,}5)$, $(1,2)$ ja $(3,1)$ ovat esimerkkejä yhtälön 
-                $x + 2y = 5$
-                ratkaisuista ja niitä voidaan havainnollistaa pisteinä koordinaatistossa:
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k16.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Jos kerätään yhteen kaikki yhtälön $x + 2y = 5$ ratkaisut eli lukuparit, jotka ovat muotoa 
-                $$\left(x,\frac{5-x}{2}\right)$$
-                muodostavat ne koordinaatistoon suoran
-                $$y = \frac{5}{2}-\frac{1}{2}x.$$
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k17.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Toinen yhtälö $2x - 3y = 3$ voidaan kirjoittaa muodossa $-3y = 3-2x$ ja edelleen muodossa
-                $$y = \frac{3-2x}{-3}.$$
-                Sen toteuttavia lukupareja $(x,y)$ on myös vaikka kuinka paljon, sillä luvuksi $x$ voidaan valita mikä tahansa reaaliluku ja sen jälkeen vastaava $y$:n arvo saadaan yllä olevasta yhtälöstä. Esimerkiksi jos $x = 0$, saadaan $$y = \frac{3}{-3} = -1.$$ Jos $x = 1{,}5$, saadaan $$y = \frac{0}{-3} = 0.$$ Jos $x = 3$, saadaan $$y = \frac{-3}{-3} = 1.$$
-                Lukuparit $(0,-1)$, $(1{,}5;0)$ ja $(3,1)$ ovat esimerkkejä yhtälön 
-                $2x - 3y = 3$
-                ratkaisuista ja niitä voidaan havainnollistaa pisteinä koordinaatistossa:
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k18.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Jos kerätään yhteen kaikki yhtälön $2x - 3y = 3$ ratkaisut eli lukuparit, jotka ovat muotoa 
-                $$\left(x,\frac{3-2x}{-3}\right),$$
-                muodostavat ne koordinaatistoon suoran
-                $$y = -1+\frac{2}{3}x.$$
-            </p>
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k19.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Yhtälöparin 
-                $$
-                \left\{\begin{aligned}
-                x+2y &= 5 \\
-                2x-3y &= 3.
-                \end{aligned}\right.
-                $$
-                ratkaisut ovat täsmälleen ne lukuparit $(x,y)$, jotka toteuttavat sekä yhtälön $x+2y = 5$ että yhtälön $2x-3y = 3$. Toisin sanottuna tutkittavan yhtälöparin ratkaisut ovat näitä yhtälöitä vastaavien suorien leikkauspisteet:
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k20.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Yllä olevasta kuvasta havaitaan, että yhtälöparilla
-                $$
-                \left\{\begin{aligned}
-                x+2y &= 5 \\
-                2x-3y &= 3.
-                \end{aligned}\right.
-                $$
-                on tasan yksi ratkaisu, joka määritettiin jo aikaisemmin laskemalla: $x = 3$ ja $y = 1$.
-            </p>
+            <div class="teoria">
+                <p>
+                    Edellä tarkastellun yhtälöparin
+                    $$
+                    \left\{\begin{aligned}
+                    x+2y &= 5 \\
+                    2x-3y &= 3.
+                    \end{aligned}\right.
+                    $$
+                    ratkaisua voidaan havainnollistaa seuraavasti: Ensimmäinen yhtälö $x + 2y = 5$ voidaan kirjoittaa muodossa $2y = 5-x$ ja edelleen muodossa
+                    $$y = \frac{5-x}{2}.$$
+                    Sen toteuttavia lukupareja $(x,y)$ on vaikka kuinka paljon, sillä luvuksi $x$ voidaan valita mikä tahansa reaaliluku ja sen jälkeen vastaava $y$:n arvo saadaan yllä olevasta yhtälöstä. Esimerkiksi jos $x = 0$, saadaan $$y = \frac{5}{2} = 2{,}5.$$ Jos $x = 1$, saadaan $$y = \frac{4}{2} = 2.$$ Jos $x = 3$, saadaan $$y = \frac{2}{2} = 1.$$
+                    Lukuparit $(0;2{,}5)$, $(1,2)$ ja $(3,1)$ ovat esimerkkejä yhtälön
+                    $x + 2y = 5$
+                    ratkaisuista ja niitä voidaan havainnollistaa pisteinä koordinaatistossa:
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k16.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Jos kerätään yhteen kaikki yhtälön $x + 2y = 5$ ratkaisut eli lukuparit, jotka ovat muotoa
+                    $$\left(x,\frac{5-x}{2}\right)$$
+                    muodostavat ne koordinaatistoon suoran
+                    $$y = \frac{5}{2}-\frac{1}{2}x.$$
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k17.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Toinen yhtälö $2x - 3y = 3$ voidaan kirjoittaa muodossa $-3y = 3-2x$ ja edelleen muodossa
+                    $$y = \frac{3-2x}{-3}.$$
+                    Sen toteuttavia lukupareja $(x,y)$ on myös vaikka kuinka paljon, sillä luvuksi $x$ voidaan valita mikä tahansa reaaliluku ja sen jälkeen vastaava $y$:n arvo saadaan yllä olevasta yhtälöstä. Esimerkiksi jos $x = 0$, saadaan $$y = \frac{3}{-3} = -1.$$ Jos $x = 1{,}5$, saadaan $$y = \frac{0}{-3} = 0.$$ Jos $x = 3$, saadaan $$y = \frac{-3}{-3} = 1.$$
+                    Lukuparit $(0,-1)$, $(1{,}5;0)$ ja $(3,1)$ ovat esimerkkejä yhtälön
+                    $2x - 3y = 3$
+                    ratkaisuista ja niitä voidaan havainnollistaa pisteinä koordinaatistossa:
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k18.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Jos kerätään yhteen kaikki yhtälön $2x - 3y = 3$ ratkaisut eli lukuparit, jotka ovat muotoa
+                    $$\left(x,\frac{3-2x}{-3}\right),$$
+                    muodostavat ne koordinaatistoon suoran
+                    $$y = -1+\frac{2}{3}x.$$
+                </p>
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k19.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Yhtälöparin
+                    $$
+                    \left\{\begin{aligned}
+                    x+2y &= 5 \\
+                    2x-3y &= 3.
+                    \end{aligned}\right.
+                    $$
+                    ratkaisut ovat täsmälleen ne lukuparit $(x,y)$, jotka toteuttavat sekä yhtälön $x+2y = 5$ että yhtälön $2x-3y = 3$. Toisin sanottuna tutkittavan yhtälöparin ratkaisut ovat näitä yhtälöitä vastaavien suorien leikkauspisteet:
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k20.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Yllä olevasta kuvasta havaitaan, että yhtälöparilla
+                    $$
+                    \left\{\begin{aligned}
+                    x+2y &= 5 \\
+                    2x-3y &= 3.
+                    \end{aligned}\right.
+                    $$
+                    on tasan yksi ratkaisu, joka määritettiin jo aikaisemmin laskemalla: $x = 3$ ja $y = 1$.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-yhtaloryhmaT3-ex">
+                <div class="tehtava" id="67519f1f-6b0c-42a1-a9d4-73d3b5a60710">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT3">
                                 Yhtälöparin ratkaiseminen
                             </a>
@@ -953,56 +1061,60 @@ topnav: maa4
                             x+3y &= 5.
                             \end{aligned}\right.
                             $$
-                            Havainnollista ratkaisua piirtämällä koordinaatistoon yhtälöä $3x-3y = 1$ vastaava suora ja yhtälöä $x+3y = 5$ vastaava suora. 
+                            Havainnollista ratkaisua piirtämällä koordinaatistoon yhtälöä $3x-3y = 1$ vastaava suora ja yhtälöä $x+3y = 5$ vastaava suora.
                         </p>
-                        <p> 
+                        <p>
                             Pystyisitkö päättelemään pelkän piirroksen avulla, mitkä luvut toteuttavat tämän yhtälöparin?
                         </p>
                     </div>
                 </div>
             </div>
 
-            <p>
-                Yhtälöparin ratkaisujen lukumäärää voidaan siis tutkia graafisesti. Esimerkiksi yhtälöpari
-                $$
-                \left\{\begin{aligned}
-                -2x+y &= -3 \\
-                4x-2y &= 3
-                \end{aligned}\right.
-                $$
-                voidaan kirjoittaa myös muodossa 
-                $$
-                \left\{\begin{aligned}
-                y &= 2x-3 \\
-                -2y &= -4x+3
-                \end{aligned}\right.
-                $$
-                ja edelleen muodossa
-                $$
-                \left\{\begin{aligned}
-                y &= 2x-3 \\
-                y &= 2x-\frac{3}{2}.
-                \end{aligned}\right.
-                $$
-                Näitä yhtälöitä vastaavat suorat ovat yhdensuuntaiset, kuten alla olevasta kuvasta nähdään:
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k21.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Tarkasteltavalla yhtälöparilla ei siis ole yhtään ratkaisua. Samaan tulokseen päädytään myös laskennallisesti: Yhtälöparin ensimmäinen yhtälö voidaan kirjoittaa muodossa $y = 2x-3$. Jos se sijoitetaan toiseen yhtälöön, saadaan yhtälö
-                $$4x-2(2x-3) = 3.$$
-                Sieventämällä yhtälön vasenta puolta saadaan
-                $$4x-4x+6 = 3$$
-                eli 
-                $$6 = 3.$$
-                Tämä yhtälö ei toteudu millään tuntemattomien $x$ ja $y$ arvoilla, joten yhtälöparilla ei ole yhtään ratkaisua.
-            </p>
+            <div class="teoria">
+                <p>
+                    Yhtälöparin ratkaisujen lukumäärää voidaan siis tutkia graafisesti. Esimerkiksi yhtälöpari
+                    $$
+                    \left\{\begin{aligned}
+                    -2x+y &= -3 \\
+                    4x-2y &= 3
+                    \end{aligned}\right.
+                    $$
+                    voidaan kirjoittaa myös muodossa
+                    $$
+                    \left\{\begin{aligned}
+                    y &= 2x-3 \\
+                    -2y &= -4x+3
+                    \end{aligned}\right.
+                    $$
+                    ja edelleen muodossa
+                    $$
+                    \left\{\begin{aligned}
+                    y &= 2x-3 \\
+                    y &= 2x-\frac{3}{2}.
+                    \end{aligned}\right.
+                    $$
+                    Näitä yhtälöitä vastaavat suorat ovat yhdensuuntaiset, kuten alla olevasta kuvasta nähdään:
+                </p>
+                <p>
+                    <img src="/kurssit/maa4/kuvat/L2k21.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Tarkasteltavalla yhtälöparilla ei siis ole yhtään ratkaisua. Samaan tulokseen päädytään myös laskennallisesti: Yhtälöparin ensimmäinen yhtälö voidaan kirjoittaa muodossa $y = 2x-3$. Jos se sijoitetaan toiseen yhtälöön, saadaan yhtälö
+                    $$4x-2(2x-3) = 3.$$
+                    Sieventämällä yhtälön vasenta puolta saadaan
+                    $$4x-4x+6 = 3$$
+                    eli
+                    $$6 = 3.$$
+                    Tämä yhtälö ei toteudu millään tuntemattomien $x$ ja $y$ arvoilla, joten yhtälöparilla ei ole yhtään ratkaisua.
+                </p>
+            </div>
+
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-yhtaloryhmaT4-ex">
+                <div class="tehtava" id="f4016be4-8966-4f39-9306-53dde8ff0006">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT4">
                                 Yhtälöparin ratkaiseminen
                             </a>
@@ -1019,9 +1131,11 @@ topnav: maa4
                             Havainnollista ratkaisua piirtämällä. Pystyisitkö päättelemään pelkän piirroksen avulla, mitkä luvut toteuttavat tämän yhtälöparin?
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT4_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-yhtaloryhmaT4_v" class="collapse">
                             <p>Yhtälöparilla ei ole ratkaisua.</p>
@@ -1029,21 +1143,26 @@ topnav: maa4
                     </div>
                 </div>
             </div>
-            <p>
-                Edellä on tarkasteltu yhtälöpareja, jotka ovat muotoa
-                $$
-                \left\{\begin{aligned}
-                ax+by &= c \\
-                mx+ny &= k,
-                \end{aligned}\right.
-                $$
-                missä $a$, $b$, $c$, $m$, $n$ ja $k$ ovat reaalilukuja. Tällaisia yhtälöpareja sanotaan ensimmäisen asteen yhtälöpareiksi. Edellä nähtiin, että tällaisella ensimmäisen asteen yhtälöparilla voi olla tasan yksi ratkaisu tai ei yhtään ratkaisua riippuen siitä, onko yhtälöparia vastaavilla suorilla leikkauspiste vai ei. Näiden vaihtoehtojen lisäksi on vielä kolmaskin mahdollisuus: yhtälöparin kumpikin yhtälö voi vastata samaa suoraa. Tällöin yhtälöparilla on äärettömän paljon ratkaisuja, koska kyseisen suoran jokainen piste on yksi ratkaisu. 
-            </p>
+
+            <div class="teoria">
+                <p>
+                    Edellä on tarkasteltu yhtälöpareja, jotka ovat muotoa
+                    $$
+                    \left\{\begin{aligned}
+                    ax+by &= c \\
+                    mx+ny &= k,
+                    \end{aligned}\right.
+                    $$
+                    missä $a$, $b$, $c$, $m$, $n$ ja $k$ ovat reaalilukuja. Tällaisia yhtälöpareja sanotaan ensimmäisen asteen yhtälöpareiksi. Edellä nähtiin, että tällaisella ensimmäisen asteen yhtälöparilla voi olla tasan yksi ratkaisu tai ei yhtään ratkaisua riippuen siitä, onko yhtälöparia vastaavilla suorilla leikkauspiste vai ei. Näiden vaihtoehtojen lisäksi on vielä kolmaskin mahdollisuus: yhtälöparin kumpikin yhtälö voi vastata samaa suoraa. Tällöin yhtälöparilla on äärettömän paljon ratkaisuja, koska kyseisen suoran jokainen piste on yksi ratkaisu.
+                </p>
+            </div>
+
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-yhtaloryhmaT5-ex">
+                <div class="tehtava" id="3a2eafe3-bbdf-4453-8478-0823fe544074">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT5">
                                 Yhtälöparin ratkaiseminen
                             </a>
@@ -1067,9 +1186,11 @@ topnav: maa4
                         </ol>
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT5_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-yhtaloryhmaT5_v" class="collapse">
                             <ol class="a">
@@ -1085,103 +1206,108 @@ topnav: maa4
                 </div>
             </div>
 
-            <p>
-                Yhtälöryhmiä, joissa yhtälöitä ja tuntemattomia on useampia, voidaan ratkaista samaan tapaan kuin edellä ratkaistiin kahden tuntemattoman yhtälöpareja. Esimerkiksi yhtälöryhmää
-                $$
-                \left\{\begin{aligned}
-                x-3y-2z &= 0 \\
-                -x+2y-\phantom{2}z &= -5 \\
-                3x+4y+\phantom{2}z &= 1
-                \end{aligned}\right.
-                $$
-                ratkaistaessa voidaan ensin ratkaista ylimmästä yhtälöstä $x$:
-                $$x = 3y+2z.$$
-                Se voidaan sijoittaa kahteen alempaan yhtälöön:
-                $$
-                \left\{\begin{aligned}
-                -(3y+2z)+2y-z &= -5 \\
-                3(3y+2z)+4y+z &= 1
-                \end{aligned}\right.
-                $$
-                Kertomalla sulut auki yhtälöt saadaan muotoon
-                $$
-                \left\{\begin{aligned}
-                -3y-2z+2y-z &= -5 \\
-                9y+6z+4y+z &= 1.
-                \end{aligned}\right.
-                $$
-                Sievennetään vielä yhtälöiden vasemmat puolet, jolloin ne näyttävät tältä:
-                $$
-                \left\{\begin{aligned}
-                -y-3z &= -5 \\
-                13y+7z &= 1.
-                \end{aligned}\right.
-                $$
-                Koko yhtälöryhmä on siis tässä vaiheessa
-                $$
-                \left\{\begin{aligned}
-                x &= 3y+2z \\
-                -y-3z &= -5 \\
-                13y+7z &= 1.
-                \end{aligned}\right.
-                $$
-                Ratkaistaan keskimmäisestä yhtälöstä $y$ muutaman välivaiheen kautta, jolloin saadaan
-                $$y = 5-3z.$$
-                Tässä kannattaa itse miettiä kynän ja paperin kanssa, millaisia välivaiheita ratkaisussa oli.
-                Sijoitetaan saatu $y$:n lauseke alimpaan yhtälöön:
-                $$13(5-3z)+7z = 1.$$
-                Kertomalla sulut auki yhtälö saadaan muotoon
-                $$65-39z+7z = 1.$$
-                Tästä saadaan ratkaistua
-                $$-32z = -64$$
-                eli 
-                $$z = \frac{-64}{-32} = 2.$$
-                Koko yhtälöryhmä on tässä vaiheessa
-                $$
-                \left\{\begin{aligned}
-                x &= 3y+2z \\
-                y &= 5-3z \\
-                z &= 2.
-                \end{aligned}\right.
-                $$
-                Kun nyt $z$:n arvo tunnetaan, saadaan muut tuntemattomat ratkaistua sen avulla vaiheittain:
-                $$
-                \left\{\begin{aligned}
-                z &= 2 \\
-                y &= 5-3z \\
-                &= 5-3\cdot 2 \\
-                &= 5-6 \\
-                &= -1\\
-                x &= 3y+2z \\
-                &= 3\cdot(-1) + 2\cdot 2 \\
-                &= -3+4 \\
-                &= 1.
-                \end{aligned}\right.
-                $$
-                Nämä laskut osoittavat, että tarkastellulla yhtälöryhmällä on enintään yksi ratkaisu. Tarkistetaan vielä sijoittamalla, että kaikki yhtälöt todella toteutuvat, jos $x = 1$, $y = -1$ ja $z = 2$:
-                $$
-                \left\{\begin{aligned}
-                x-3y-2z &=1-3\cdot(-1)-2\cdot 2 \\
-                &= 1+3-4 \\
-                &= 4-4 \\
-                &=0 \\
-                -x+2y-\phantom{2}z &= -1 + 2\cdot(-1)-2 \\
-                &= -1-2-2 \\
-                &= -3-2 \\
-                &= -5 \\
-                3x+4y+\phantom{2}z &= 3\cdot 1 + 4\cdot (-1) + 2 \\
-                &= 3-4+2 \\
-                &= -1 + 2 \\
-                &= 1
-                \end{aligned}\right.
-                $$
-                Kaikki yhtälöt toteutuvat, joten yhtälöryhmän ratkaisu on $x = 1$, $y = -1$ ja $z = 2$.
-            </p>
+
+            <div class="teoria">
+                <p>
+                    Yhtälöryhmiä, joissa yhtälöitä ja tuntemattomia on useampia, voidaan ratkaista samaan tapaan kuin edellä ratkaistiin kahden tuntemattoman yhtälöpareja. Esimerkiksi yhtälöryhmää
+                    $$
+                    \left\{\begin{aligned}
+                    x-3y-2z &= 0 \\
+                    -x+2y-\phantom{2}z &= -5 \\
+                    3x+4y+\phantom{2}z &= 1
+                    \end{aligned}\right.
+                    $$
+                    ratkaistaessa voidaan ensin ratkaista ylimmästä yhtälöstä $x$:
+                    $$x = 3y+2z.$$
+                    Se voidaan sijoittaa kahteen alempaan yhtälöön:
+                    $$
+                    \left\{\begin{aligned}
+                    -(3y+2z)+2y-z &= -5 \\
+                    3(3y+2z)+4y+z &= 1
+                    \end{aligned}\right.
+                    $$
+                    Kertomalla sulut auki yhtälöt saadaan muotoon
+                    $$
+                    \left\{\begin{aligned}
+                    -3y-2z+2y-z &= -5 \\
+                    9y+6z+4y+z &= 1.
+                    \end{aligned}\right.
+                    $$
+                    Sievennetään vielä yhtälöiden vasemmat puolet, jolloin ne näyttävät tältä:
+                    $$
+                    \left\{\begin{aligned}
+                    -y-3z &= -5 \\
+                    13y+7z &= 1.
+                    \end{aligned}\right.
+                    $$
+                    Koko yhtälöryhmä on siis tässä vaiheessa
+                    $$
+                    \left\{\begin{aligned}
+                    x &= 3y+2z \\
+                    -y-3z &= -5 \\
+                    13y+7z &= 1.
+                    \end{aligned}\right.
+                    $$
+                    Ratkaistaan keskimmäisestä yhtälöstä $y$ muutaman välivaiheen kautta, jolloin saadaan
+                    $$y = 5-3z.$$
+                    Tässä kannattaa itse miettiä kynän ja paperin kanssa, millaisia välivaiheita ratkaisussa oli.
+                    Sijoitetaan saatu $y$:n lauseke alimpaan yhtälöön:
+                    $$13(5-3z)+7z = 1.$$
+                    Kertomalla sulut auki yhtälö saadaan muotoon
+                    $$65-39z+7z = 1.$$
+                    Tästä saadaan ratkaistua
+                    $$-32z = -64$$
+                    eli
+                    $$z = \frac{-64}{-32} = 2.$$
+                    Koko yhtälöryhmä on tässä vaiheessa
+                    $$
+                    \left\{\begin{aligned}
+                    x &= 3y+2z \\
+                    y &= 5-3z \\
+                    z &= 2.
+                    \end{aligned}\right.
+                    $$
+                    Kun nyt $z$:n arvo tunnetaan, saadaan muut tuntemattomat ratkaistua sen avulla vaiheittain:
+                    $$
+                    \left\{\begin{aligned}
+                    z &= 2 \\
+                    y &= 5-3z \\
+                    &= 5-3\cdot 2 \\
+                    &= 5-6 \\
+                    &= -1\\
+                    x &= 3y+2z \\
+                    &= 3\cdot(-1) + 2\cdot 2 \\
+                    &= -3+4 \\
+                    &= 1.
+                    \end{aligned}\right.
+                    $$
+                    Nämä laskut osoittavat, että tarkastellulla yhtälöryhmällä on enintään yksi ratkaisu. Tarkistetaan vielä sijoittamalla, että kaikki yhtälöt todella toteutuvat, jos $x = 1$, $y = -1$ ja $z = 2$:
+                    $$
+                    \left\{\begin{aligned}
+                    x-3y-2z &=1-3\cdot(-1)-2\cdot 2 \\
+                    &= 1+3-4 \\
+                    &= 4-4 \\
+                    &=0 \\
+                    -x+2y-\phantom{2}z &= -1 + 2\cdot(-1)-2 \\
+                    &= -1-2-2 \\
+                    &= -3-2 \\
+                    &= -5 \\
+                    3x+4y+\phantom{2}z &= 3\cdot 1 + 4\cdot (-1) + 2 \\
+                    &= 3-4+2 \\
+                    &= -1 + 2 \\
+                    &= 1
+                    \end{aligned}\right.
+                    $$
+                    Kaikki yhtälöt toteutuvat, joten yhtälöryhmän ratkaisu on $x = 1$, $y = -1$ ja $z = 2$.
+                </p>
+            </div>
+
 
             <div class="tehtavat">
-                <div class="tehtava" id="t-yhtaloryhmaT6-ex">
+                <div class="tehtava" id="81f2fc13-3a2e-46cd-8e46-ceed20f98e07">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT6">
                                 Yhtälöryhmän ratkaiseminen
                             </a>
@@ -1189,7 +1315,8 @@ topnav: maa4
                     </header>
                     <div id="t-yhtaloryhmaT6" class="collapse">
                         <ol class="a">
-                            <li> 
+                            <li>
+
                                 Ratkaise kynän ja paperin avulla yhtälöryhmä
                                 $$
                                 \left\{\begin{aligned}
@@ -1198,16 +1325,18 @@ topnav: maa4
                                 6x-\phantom{2}y + 5z &= 10
                                 \end{aligned}\right.
                                 $$
-                            </li>
+
                             <li>
                                 Ratkaise a-kohdan yhtälöryhmä laskimen tai tietokoneen avulla. Katso tarvittaessa mallia tästä <a href="https://youtu.be/OP_PMcGp_hc" target="_blank">videosta</a>.
                             </li>
                         </ol>
                         </p>
                         <h2>
+
                             <a data-toggle="collapse" class="collapsed" data-target="#t-yhtaloryhmaT6_v">
                                 VASTAUS
                             </a>
+
                         </h2>
                         <div id="t-yhtaloryhmaT6_v" class="collapse">
                             <ol class="a">
@@ -1218,19 +1347,23 @@ topnav: maa4
                 </div>
             </div>
 
-            <p> 
-                Edellä opeteltiin ratkaisemaan yhtälöryhmiä niin sanotun sijoitusmenetelmän avulla. Yhtälöryhmiä voidaan ratkaista muillakin menetelmillä. Edellisen tehtävän yhtälöryhmä on esimerkki <em>lineaarisesta yhtälöryhmästä</em>, jollaisia voidaan ratkaista myös niin sanotun Gaussin eliminointimenetelmän avulla. Yhden ratkaisutavan hallitseminen kuitenkin riittää tällä kurssilla.  
-            </p> 
+
+            <div class="teoria">
+                <p>
+                    Edellä opeteltiin ratkaisemaan yhtälöryhmiä niin sanotun sijoitusmenetelmän avulla. Yhtälöryhmiä voidaan ratkaista muillakin menetelmillä. Edellisen tehtävän yhtälöryhmä on esimerkki <em>lineaarisesta yhtälöryhmästä</em>, jollaisia voidaan ratkaista myös niin sanotun Gaussin eliminointimenetelmän avulla. Yhden ratkaisutavan hallitseminen kuitenkin riittää tällä kurssilla.
+                </p>
+            </div>
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#yhtaloryhman-ratkaiseminen">
                     Sulje kappale
                 </a>
             </div>
+
         </div>
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#L2vektorin-jakaminen-komponentteihin">
                     Vektorin jakaminen komponentteihin
@@ -1239,113 +1372,119 @@ topnav: maa4
         </header>
         <div id="L2vektorin-jakaminen-komponentteihin" class="collapse">
 
-            <p>
-                Edellisessä luvussa jaettiin $xy$-tason vektoreita komponentteihin piirrosten avulla päättelemällä. Esimerkiksi alla olevasta kuvasta nähdään, että vektori $\va = 6\vi + 3\vj$ voidaan kirjoittaa muodossa $\va = 5\vv + 4\vw$, missä $\vv = 2\vi-\vj$ ja $\vw = -\vi+2\vj$. Vektorit $5\vv$ ja $4\vw$ ovat siis vektorin $\va$ vektorien $\vv$ ja $\vw$ suuntaiset komponentit.
-            </p>
+            <div class="teoria">
+                <p>
+                    Edellisessä luvussa jaettiin $xy$-tason vektoreita komponentteihin piirrosten avulla päättelemällä. Esimerkiksi alla olevasta kuvasta nähdään, että vektori $\va = 6\vi + 3\vj$ voidaan kirjoittaa muodossa $\va = 5\vv + 4\vw$, missä $\vv = 2\vi-\vj$ ja $\vw = -\vi+2\vj$. Vektorit $5\vv$ ja $4\vw$ ovat siis vektorin $\va$ vektorien $\vv$ ja $\vw$ suuntaiset komponentit.
+                </p>
 
-            <p>
-                <img src="/kurssit/maa4/kuvat/L1k06.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
+                <p>
+                    Kolmiulotteisen avaruuden vektorin jakaminen komponentteihin ei yleensä onnistu piirroksen avulla, vaan siinä vaaditaan yhtälöryhmän ratkaisemista. Esimerkiksi jos vektori $\vv = 2\vi + 3\vk$ halutaan jakaa vektoreiden $\va = \vi-\vj$, $\vb = \vj + \vk$ ja $\vc = \vi + \vj + \vk$ suuntaisiin komponentteihin, on etsittävä kertoimet $x$, $y$ ja $z$, jotka toteuttavat yhtälön
+                    $$\vv = x\va + y\vb + z\vc.$$
+                    Tämä yhtälö voidaan kirjoittaa myös muodossa
+                    $$2\vi + 3\vk = x(\vi-\vj) + y(\vj + \vk) + z(\vi + \vj + \vk).$$
+                    Kertomalla yhtälön oikealla puolella sulut auki yhtälö saadaan muotoon
+                    $$2\vi + 3\vk = x\vi-x\vj + y\vj + y\vk + z\vi + z\vj + z\vk.$$
+                    Yhtälön oikeaa puolta voidaan vielä sieventää laskemalla yhteen vektoreiden $\vi$, $\vj$ ja $\vk$ skalaarimonikerrat:
+                    $$2\vi + 3\vk = (x+z)\vi + (-x+y+z)\vj  + (y+z)\vk.$$
+                    Vektoreiden samuuden määritelmän mukaan tämä yhtälö toteutuu, jos ja vain jos yhtälön eri puolilla olevat vektorit voidaan ilmaista samalla tavalla vektoreiden $\vi$, $\vj$ ja $\vk$ avulla eli
+                    $$
+                    \left\{\begin{aligned}
+                    x+z &= 2 \\
+                    -x+y+z &= 0 \\
+                    y + z &= 3.
+                    \end{aligned}\right.
+                    $$
+                    Vektorin $\vv$ vektoreiden $\va$, $\vb$ ja $\vc$ suuntaiset komponentit saadaan määritettyä ratkaisemalla yllä oleva yhtälöryhmä.
+                </p>
 
-            <p> 
-                Kolmiulotteisen avaruuden vektorin jakaminen komponentteihin ei yleensä onnistu piirroksen avulla, vaan siinä vaaditaan yhtälöryhmän ratkaisemista. Esimerkiksi jos vektori $\vv = 2\vi + 3\vk$ halutaan jakaa vektoreiden $\va = \vi-\vj$, $\vb = \vj + \vk$ ja $\vc = \vi + \vj + \vk$ suuntaisiin komponentteihin, on etsittävä kertoimet $x$, $y$ ja $z$, jotka toteuttavat yhtälön
-                $$\vv = x\va + y\vb + z\vc.$$
-                Tämä yhtälö voidaan kirjoittaa myös muodossa
-                $$2\vi + 3\vk = x(\vi-\vj) + y(\vj + \vk) + z(\vi + \vj + \vk).$$
-                Kertomalla yhtälön oikealla puolella sulut auki yhtälö saadaan muotoon
-                $$2\vi + 3\vk = x\vi-x\vj + y\vj + y\vk + z\vi + z\vj + z\vk.$$
-                Yhtälön oikeaa puolta voidaan vielä sieventää laskemalla yhteen vektoreiden $\vi$, $\vj$ ja $\vk$ skalaarimonikerrat:
-                $$2\vi + 3\vk = (x+z)\vi + (-x+y+z)\vj  + (y+z)\vk.$$
-                Vektoreiden samuuden määritelmän mukaan tämä yhtälö toteutuu, jos ja vain jos yhtälön eri puolilla olevat vektorit voidaan ilmaista samalla tavalla vektoreiden $\vi$, $\vj$ ja $\vk$ avulla eli
-                $$
-                \left\{\begin{aligned}
-                x+z &= 2 \\
-                -x+y+z &= 0 \\
-                y + z &= 3.
-                \end{aligned}\right.
-                $$
-                Vektorin $\vv$ vektoreiden $\va$, $\vb$ ja $\vc$ suuntaiset komponentit saadaan määritettyä ratkaisemalla yllä oleva yhtälöryhmä.
-            </p>
 
-            <div class="tehtavat">
-                <div class="tehtava" id="t-L2komponentit1-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2komponentit1">
-                                Vektorin jakaminen komponentteihin
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t-L2komponentit1" class="collapse">
-                        <p> 
-                            Ratkaise edellä tarkasteltu yhtälöryhmä ja päättele, mitkä ovat vektorin $\vv = 2\vi + 3\vk$ vektoreiden $\va = \vi-\vj$, $\vb = \vj + \vk$ ja $\vc = \vi + \vj + \vk$ suuntaiset komponentit.
-                        </p>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2komponentit1_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="t-L2komponentit1_v" class="collapse">
-                            <p> 
-                                $\vv = 3\va+4\vb -\vc$, joten kysytyt komponentit ovat $3\va$, $\ 4\vb \ $ ja $\,-\vc$. 
+                <div class="tehtavat">
+                    <div class="tehtava" id="cd561d32-468a-4db2-9dd7-476c1055d559">
+                        <header>
+                            <h1>
+                                <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2komponentit1">
+                                    Vektorin jakaminen komponentteihin
+                                </a>
+                            </h1>
+                        </header>
+                        <div id="t-L2komponentit1" class="collapse">
+                            <p>
+                                Ratkaise edellä tarkasteltu yhtälöryhmä ja päättele, mitkä ovat vektorin $\vv = 2\vi + 3\vk$ vektoreiden $\va = \vi-\vj$, $\vb = \vj + \vk$ ja $\vc = \vi + \vj + \vk$ suuntaiset komponentit.
                             </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <h2>
 
-            <div class="tehtavat">
-                <div class="tehtava" id="t-L2komponentit2-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2komponentit2">
-                                Vektorin jakaminen komponentteihin
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t-L2komponentit2" class="collapse">
-                        <p> Halutaan jakaa vektori $\vv = 3\vi + 4\vj$ vektoreiden $\va = 3\vi-\vj$ ja $\vb = \vi - 2\vj$ suuntaisiin komponentteihin.
-                        <ol class="a">
-                            <li> Kirjoita näkyviin, millaista yhtälöä pitää tutkia. </li>
-                            <li> Sijoita vektorit $\vv$, $\va$ ja $\vb$ yhtälöön ja muokkaa yhtälöä niin, että pystyt vertaamaan sen eri puolilla olevia vektoreiden $\vi$ ja $\vj$ kertoimia.</li>
-                            <li> Muodosta saamaasi yhtälöä vastaava yhtälöpari. Ensimmäisen yhtälön saat vektoreiden $\vi$ kertoimista, toisen yhtälön saat vektoreiden $\vj$ kertoimista.</li>
-                            <li> Ratkaise yhtälöpari. Mitkä ovat vektorin $\vv$ vektoreiden $\va$ ja $\vb$ suuntaiset komponentit?</li>
-                            <li> Havainnollista saamaasi vastausta piirtämällä vektori $\vv$ ja sen komponentit koordinaatistoon. Tarkista piirroksesi avulla, että saamasi tulokset ovat oikein.</li>
-                        </ol>
-                        </p>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2komponentit2_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="t-L2komponentit2_v" class="collapse">
-                            <ol class="a">
-                                <li> $\vv = x\va + y\vb$ </li>
-                                <li> $3\vi + 4\vj = (3x+y)\vi + (-x-2y)\vj$</li>
-                                <li> Yhtälöpari:
-                                    $$
-                                    \left\{\begin{aligned}
-                                    3x+y &= 3 \\
-                                    -x-2y &= 4.
-                                    \end{aligned}\right.
-                                    $$
-                                </li>
-                                <li> Komponentit ovat $2\va\ $ ja $\ -3\vb$.</li>
-                            </ol>
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2komponentit1_v">
+                                    VASTAUS
+                                </a>
+
+                            </h2>
+                            <div id="t-L2komponentit1_v" class="collapse">
+                                <p>
+                                    $\vv = 3\va+4\vb -\vc$, joten kysytyt komponentit ovat $3\va$, $\ 4\vb \ $ ja $\,-\vc$.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="tehtavat">
+                    <div class="tehtava" id="aeac26cd-1631-40d7-9532-aac27b7d3b5c">
+                        <header>
+                            <h1>
+                                <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2komponentit2">
+                                    Vektorin jakaminen komponentteihin
+                                </a>
+                            </h1>
+                        </header>
+                        <div id="t-L2komponentit2" class="collapse">
+                            <p> Halutaan jakaa vektori $\vv = 3\vi + 4\vj$ vektoreiden $\va = 3\vi-\vj$ ja $\vb = \vi - 2\vj$ suuntaisiin komponentteihin.
+                            <ol class="a">
+                                <li> Kirjoita näkyviin, millaista yhtälöä pitää tutkia. </li>
+                                <li> Sijoita vektorit $\vv$, $\va$ ja $\vb$ yhtälöön ja muokkaa yhtälöä niin, että pystyt vertaamaan sen eri puolilla olevia vektoreiden $\vi$ ja $\vj$ kertoimia.</li>
+                                <li> Muodosta saamaasi yhtälöä vastaava yhtälöpari. Ensimmäisen yhtälön saat vektoreiden $\vi$ kertoimista, toisen yhtälön saat vektoreiden $\vj$ kertoimista.</li>
+                                <li> Ratkaise yhtälöpari. Mitkä ovat vektorin $\vv$ vektoreiden $\va$ ja $\vb$ suuntaiset komponentit?</li>
+                                <li> Havainnollista saamaasi vastausta piirtämällä vektori $\vv$ ja sen komponentit koordinaatistoon. Tarkista piirroksesi avulla, että saamasi tulokset ovat oikein.</li>
+                            </ol>
+                            </p>
+                            <h2>
+
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2komponentit2_v">
+                                    VASTAUS
+                                </a>
+
+                            </h2>
+                            <div id="t-L2komponentit2_v" class="collapse">
+                                <ol class="a">
+                                    <li> $\vv = x\va + y\vb$ </li>
+                                    <li> $3\vi + 4\vj = (3x+y)\vi + (-x-2y)\vj$</li>
+                                    <li> Yhtälöpari:
+                                        $$
+                                        \left\{\begin{aligned}
+                                        3x+y &= 3 \\
+                                        -x-2y &= 4.
+                                        \end{aligned}\right.
+                                        $$
+                                    </li>
+                                    <li> Komponentit ovat $2\va\ $ ja $\ -3\vb$.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="close-section">
+                    <a data-toggle="collapse" class="collapsed" data-target="#L2vektorin-jakaminen-komponentteihin">
+                        Sulje kappale
+                    </a>
+                </div>
+
             </div>
-            <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#L2vektorin-jakaminen-komponentteihin">
-                    Sulje kappale
-                </a>
-            </div>
-        </div>
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#L2vektoreiden-pistetulo-ja-vektoreiden-valinen-kulma">
                     Vektoreiden pistetulo ja vektoreiden välinen kulma
@@ -1353,272 +1492,303 @@ topnav: maa4
             </h1>
         </header>
         <div id="L2vektoreiden-pistetulo-ja-vektoreiden-valinen-kulma" class="collapse">
-
-            <p>
-                Kolmiulotteisen koordinaatiston vektoreiden pistetulo määritellään samaan tapaan kuin $xy$-koordinaatiston vektoreiden pistetulo:
-            </p>
-
             <div class="definition">
                 <h3>MÄÄRITELMÄ: PISTETULO</h3>
                 <p>
-                    Vektoreiden $\vv=x_1\vi+y_1\vj + z_1\vk$ ja $\vw=x_2\vi+y_2\vj + z_2\vk$ pistetulo on 
+                    Vektoreiden $\vv=x_1\vi+y_1\vj + z_1\vk$ ja $\vw=x_2\vi+y_2\vj + z_2\vk$ pistetulo on
                     $$\vv \cdot \vw = x_1x_2+y_1y_2 + z_1z_2.$$
                 </p>
             </div>
+            <div class="teoria">
+                <p>
+                    Kolmiulotteisen avaruuden vektoreiden pistetulolla on samat ominaisuudet kuin $xy$-koordinaatiston vektoreiden pistetulolla. Näistä tärkeimmät on koottu alla olevaan teoreemaan, jotka on perusteltu $xy$-koordinaatiston tapauksessa edellisessä luvussa.
+                </p>
 
-            <p> 
-                Kolmiulotteisen avaruuden vektoreiden pistetulolla on samat ominaisuudet kuin $xy$-koordinaatiston vektoreiden pistetulolla. Näistä tärkeimmät on koottu alla olevaan teoreemaan, jotka on perusteltu $xy$-koordinaatiston tapauksessa edellisessä luvussa.
-            </p>
+                <p>
+                    Kolmiulotteisen koordinaatiston vektoreiden pistetulo määritellään samaan tapaan kuin $xy$-koordinaatiston vektoreiden pistetulo:
+                </p>
 
-            <div class="theorem">
-                <h3>TEOREEMA</h3>
-                <ol type="1">
-                    <li> Vektorit $\vv\neq \bar{0}$ ja $\vw\neq \bar{0}$ ovat toisiaan vastaan kohtisuorassa, jos ja vain jos $$\vv \cdot \vw = 0.$$ </li>
-                    <li> Vektorin pistetulo itsensä kanssa on yhtä suuri kuin vektorin pituuden neliö. Toisin sanottuna $$\vv \cdot \vv = \left|\vv\right|^2.$$ </li>
-                </ol>
-            </div>
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: PISTETULO</h3>
+                    <p>
+                        Vektoreiden $\vv=x_1\vi+y_1\vj + z_1\vk$ ja $\vw=x_2\vi+y_2\vj + z_2\vk$ pistetulo on
+                        $$\vv \cdot \vw = x_1x_2+y_1y_2 + z_1z_2.$$
+                    </p>
+                </div>
 
-            <div class="tehtavat">
-                <div class="tehtava" id="t-L2pistetulo-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetulo">
-                                Pistetulo
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t-L2pistetulo" class="collapse">
-                        <p> 
-                            Määritä reaaliluku $t$ siten, että vektorit $\vv = 2\vi-5t\vj + 3t\vk$ ja $\vw = \vi + \vj - t\vk$ ovat kohtisuorassa toisiaan vastaan.
-                        </p>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetulo_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="t-L2pistetulo_v" class="collapse">
-                            <p> $t = -2\ $ tai $t = \frac{1}{3}$</p>
+                <p>
+                    Kolmiulotteisen avaruuden vektoreiden pistetulolla on samat ominaisuudet kuin $xy$-koordinaatiston vektoreiden pistetulolla. Näistä tärkeimmät on koottu alla olevaan teoreemaan, jotka on perusteltu $xy$-koordinaatiston tapauksessa edellisessä luvussa.
+                </p>
+
+                <div class="theorem">
+                    <h3>TEOREEMA</h3>
+                    <ol type="1">
+                        <li> Vektorit $\vv\neq \bar{0}$ ja $\vw\neq \bar{0}$ ovat toisiaan vastaan kohtisuorassa, jos ja vain jos $$\vv \cdot \vw = 0.$$ </li>
+                        <li> Vektorin pistetulo itsensä kanssa on yhtä suuri kuin vektorin pituuden neliö. Toisin sanottuna $$\vv \cdot \vv = \left|\vv\right|^2.$$ </li>
+                    </ol>
+                </div>
+
+
+                <div class="tehtavat">
+                    <div class="tehtava" id="025d480d-e175-4c37-978a-ce1e27c58c82">
+                        <header>
+                            <h1>
+                                <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetulo">
+                                    Pistetulo
+                                </a>
+                            </h1>
+                        </header>
+                        <div id="t-L2pistetulo" class="collapse">
+                            <p>
+                                Määritä reaaliluku $t$ siten, että vektorit $\vv = 2\vi-5t\vj + 3t\vk$ ja $\vw = \vi + \vj - t\vk$ ovat kohtisuorassa toisiaan vastaan.
+                            </p>
+                            <h2>
+
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetulo_v">
+                                    VASTAUS
+                                </a>
+
+                            </h2>
+                            <div id="t-L2pistetulo_v" class="collapse">
+                                <p> $t = -2\ $ tai $t = \frac{1}{3}$</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="tehtavat">
-                <div class="tehtava" id="t-L2pistetulo1b-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetulo1b">
-                                Pistetulo
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t-L2pistetulo1b" class="collapse">
-                        <p> 
-                        <ol class="a">
-                            <li> Keksi esimerkki vektorista $\vv$, jonka pistetulo itsensä kanssa on negatiivinen eli $\vv \cdot \vv < 0$, tai selitä, miksi tällaista vektoria ei ole olemassa. </li>
-                            <li> Keksi esimerkki vektoreista $\vv$ ja $\vw$, joiden pistetulo on negatiivinen eli $\vv \cdot \vw < 0$, tai selitä, miksi tällaisia vektoreita ei ole olemassa. </li>
-                        </ol>
-                        </p>
+                <div class="tehtavat">
+                    <div class="tehtava" id="8b613409-c34c-453c-be0c-d80638dd3d35">
+                        <header>
+                            <h1>
+                                <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetulo1b">
+                                    Pistetulo
+                                </a>
+                            </h1>
+                        </header>
+                        <div id="t-L2pistetulo1b" class="collapse">
+                            <p>
+                            <ol class="a">
+                                <li> Keksi esimerkki vektorista $\vv$, jonka pistetulo itsensä kanssa on negatiivinen eli $\vv \cdot \vv < 0$, tai selitä, miksi tällaista vektoria ei ole olemassa. </li>
+                                <li> Keksi esimerkki vektoreista $\vv$ ja $\vw$, joiden pistetulo on negatiivinen eli $\vv \cdot \vw < 0$, tai selitä, miksi tällaisia vektoreita ei ole olemassa. </li>
+                            </ol>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <p>
-                Tutkitaan seuraavaksi vektoreiden välisen kulman ja pistetulon yhteyttä. Jos vektoreiden $\vv$ ja $\vw$ välinen kulma on oikokulma eli $\sphericalangle(\vv,\vw) = 180^\circ$, ovat vektorit $\vv$ ja $\vw$ vastakkaissuuntaiset. Tällöin on olemassa sellainen negatiivinen reaaliluku $r$, että $\vv = r\vw$. Vektoreiden $\vv$ ja $\vw$ pistetuloksi saadaan näin
-                $$
-                \begin{align*}
-                \vv \cdot \vw &= (r\vw) \cdot \vw \\
-                &= r(\vw\cdot \vw)  \\
-                &= \textcolor{red}{r\left|\vw\right|^2}.
-                \end{align*}
-                $$
-                Toisaalta vektoreiden $\vv$ ja $\vw$ pituuksien tuloksi saadaan
-                $$
-                \begin{align*}
-                \left|\vv\right|\left|\vw\right| &= \left|r\vw\right| \left|\vw\right| \\
-                &= \left|r\right|\left|\vw\right| \left|\vw\right| \\
-                &= \left|r\right|\left|\vw\right|^2  \\
-                &= -r\left|\vw\right|^2.
-                \end{align*}
-                $$
-                Huomaa, että koska luku $r$ on negatiivinen, on sen itseisarvo sama kuin sen vastaluku $-r$. Esimerkiksi jos $r= -2$, niin $\left|r\right| = \left|-2\right| = -(-2) = 2$.
-            </p>
-            <p>
-                Vektoreiden $\vv$ ja $\vw$ pituuksien tuloksi saatiin siis
-                $$
-                \left|\vv\right|\left|\vw\right| = -r\left|\vw\right|^2.
-                $$
-                Kerrotaan tämän yhtälön molemmat puolet luvulla $-1$. Koska $\cos (\vv, \vw) = \cos 180^\circ = -1$, voidaan näin saatu yhtälö kirjoittaa myös muodossa
-                $$
-                \left|\vv\right|\left|\vw\right|\cos (\vv, \vw) = \textcolor{blue}{r\left|\vw\right|^2}.
-                $$
-                Huomataan, että $\textcolor{blue}{\text{tässä}}$ $\textcolor{blue}{\text{saatu}}$ $\textcolor{blue}{\text{tulos}}$ on sama kuin edellä $\textcolor{red}{\text{vektoreiden}}$ $\textcolor{red}{\text{pistetulosta}}$ $\textcolor{red}{\text{saatu}}$ $\textcolor{red}{\text{tulos}}$. Siten voidaan päätellä, että
-                $$
-                \vv \cdot \vw = \left|\vv\right| \left|\vw\right| \cos (\vv, \vw).
-                $$
-            </p>
-            <div class="tehtavat">
-                <div class="tehtava" id="t-L2pistetulo2-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetulo2">
-                                Pistetulo ja vektoreiden välinen kulma
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t-L2pistetulo2" class="collapse">
-                        <p> Tehtävänä on tutkia, päteekö yhtälö
-                            $$
-                            \vv \cdot \vw = \left|\vv\right| \left|\vw\right| \cos (\vv, \vw)
-                            $$
-                            tilanteessa, jossa vektoreiden $\vv$ ja $\vw$ välinen kulma on nollakulma eli $\sphericalangle(\vv,\vw) = 0^\circ$.
-                        <ol class="a">
-                            <li> Jos $\sphericalangle(\vv,\vw) = 0^\circ$, niin vektorit $\vv$ ja $\vw$ ovat yhdensuuntaisia. Tällöin on olemassa sellainen reaaliluku $t$, että $\vv = t\vw$. Mitä voit päätellä luvun $t$ etumerkistä? </li>
-                            <li> Sievennä vektoreiden $\vv$ ja $\vw$ pistetulo $\vv \cdot \vw$ ja pituuksien tulo $\left|\vv\right|\left|\vw\right|$ samaan tapaan kuin edellä tehtiin. </li>
-                            <li> Vertaa saamiasi tuloksia. Voitko päätellä, että yhtälö 
-                                $$
-                                \vv \cdot \vw = \left|\vv\right| \left|\vw\right| \cos (\vv, \vw)
-                                $$
-                                pätee? Tarkista tarvittaessa kulman $\sphericalangle(\vv,\vw) = 0^\circ$ kosinin arvo laskimesta.</li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <p>
-                Jos vektoreiden välinen kulma on suurempi kuin $0^\circ$ ja pienempi kuin $180^\circ$, voidaan vektoreista muodostaa kolmio, jonka kylkinä tarkasteltavat vektorit ovat. Vektoreiden välinen kulma voidaan tällöin laskea Geometria-kurssista tutun kosinilauseen avulla. 
-            </p>
-            <p>
-                Kosinilause on Pythagoraan lauseen yleistys. Pythagoraan lause pätee ainoastaan suorakulmaisille kolmioille, mutta kosinilausetta voi käyttää kaikille kolmioille. Kosinilauseen mukaan alla olevan kuvan kolmiossa 
-                $$
-                c^2=a^2+b^2-2ab \cos \gamma.
-                $$
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k14.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Jos kolmion sivujen pituudet ajatellaan vektoreiden pituuksina kuten alla olevassa kuvassa, saadaan kosinilauseesta yhtälö
-                $$
-                |\vv-\vw|^2=|\vv|^2+|\vw|^2-2|\vv||\vw| \cos(\vv,\vw).
-                $$
-            </p>
-            <p>
-                <img src="/kurssit/maa4/kuvat/L2k15.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Kosinilauseen ja pistetulon ominaisuuksien avulla saadaan perusteltua seuraava edellisestä luvusta tuttu teoreema, joka yhdistää pistetulon ja vektoreiden välisen kulman. 
-            </p>
-
-            <div class="theorem">
-                <h3>TEOREEMA</h3>
-                <p>
-                    Vektoreiden $\vv$ ja $\vw$ pistetulolle pätee $$\vv \cdot \vw = |\vv||\vw|\cos (\vv, \vw).$$
-                    Jos $\vv \neq \bar{0}$ ja $\vw \neq \bar{0}$, niin vektoreiden $\vv$ ja $\vw$ välinen kulma saadaan yhtälöstä
-                    $$
-                    \cos (\vv, \vw)=\frac{\vv \cdot \vw}{|\vv||\vw|}.
-                    $$
-                </p>
-                <div class="proof">
+                <div class="teoria">
                     <p>
-                        Perustelu: Tapaukset $\sphericalangle(\vv,\vw) = 0^\circ$ ja $\sphericalangle(\vv,\vw) = 180^\circ$ on perusteltu jo tehtävässä 24 sekä sitä edeltävässä tekstissä. Tarkastellaan siis tapausta, jossa vektoreiden $\vv$ ja $\vw$ välinen kulma ei ole nollakulma eikä oikokulma.
-                        <br>
-                        Tiedetään, että vektorin pituuden neliö on aina sama kuin sen pistetulo itsensä kanssa. Tästä saadaan seuraava yhtälöketju:
+                        Tutkitaan seuraavaksi vektoreiden välisen kulman ja pistetulon yhteyttä. Jos vektoreiden $\vv$ ja $\vw$ välinen kulma on oikokulma eli $\sphericalangle(\vv,\vw) = 180^\circ$, ovat vektorit $\vv$ ja $\vw$ vastakkaissuuntaiset. Tällöin on olemassa sellainen negatiivinen reaaliluku $r$, että $\vv = r\vw$. Vektoreiden $\vv$ ja $\vw$ pistetuloksi saadaan näin
                         $$
                         \begin{align*}
-                        |\vv-\vw|^2
-                        &=(\vv-\vw)\cdot(\vv-\vw) \\
-                        &= \vv \cdot \vv -\vv\cdot\vw - \vw \cdot \vv+\vw\cdot\vw \\
-                        &= |\vv|^2 - 2(\vv\cdot\vw) +|\vw|^2.
+                        \vv \cdot \vw &= (r\vw) \cdot \vw \\
+                        &= r(\vw\cdot \vw)  \\
+                        &= \textcolor{red}{r\left|\vw\right|^2}.
                         \end{align*}
                         $$
-                        Toisaalta kosinilauseen mukaan
+                        Toisaalta vektoreiden $\vv$ ja $\vw$ pituuksien tuloksi saadaan
                         $$
-                        |\vv-\vw|^2=|\vv|^2+|\vw|^2-2|\vv||\vw| \cos(\vv,\vw).
+                        \begin{align*}
+                        \left|\vv\right|\left|\vw\right| &= \left|r\vw\right| \left|\vw\right| \\
+                        &= \left|r\right|\left|\vw\right| \left|\vw\right| \\
+                        &= \left|r\right|\left|\vw\right|^2  \\
+                        &= -r\left|\vw\right|^2.
+                        \end{align*}
                         $$
-                        Yhdistämällä edelliset tiedot saadaan yhtälö
+                        Huomaa, että koska luku $r$ on negatiivinen, on sen itseisarvo sama kuin sen vastaluku $-r$. Esimerkiksi jos $r= -2$, niin $\left|r\right| = \left|-2\right| = -(-2) = 2$.
+                    </p>
+                    <p>
+                        Vektoreiden $\vv$ ja $\vw$ pituuksien tuloksi saatiin siis
                         $$
-                        |\vv|^2 - 2(\vv\cdot\vw) +|\vw|^2 = |\vv|^2+|\vw|^2-2|\vv||\vw| \cos(\vv,\vw).
+                        \left|\vv\right|\left|\vw\right| = -r\left|\vw\right|^2.
                         $$
-                        Ratkaistaan tästä $\vv\cdot\vw$, jolloin saadaan
+                        Kerrotaan tämän yhtälön molemmat puolet luvulla $-1$. Koska $\cos (\vv, \vw) = \cos 180^\circ = -1$, voidaan näin saatu yhtälö kirjoittaa myös muodossa
                         $$
-                        \vv\cdot\vw = |\vv||\vw| \cos(\vv,\vw).
+                        \left|\vv\right|\left|\vw\right|\cos (\vv, \vw) = \textcolor{blue}{r\left|\vw\right|^2}.
                         $$
-                        Jos $\vv \neq \bar{0}$ ja $\vw \neq \bar{0}$, niin vektoreiden $\vv$ ja $\vw$ pituudet ovat positiivisia. Jakamalla yhtälön molemmat puolet tulolla $|\vv||\vw|$ saadaan
+                        Huomataan, että $\textcolor{blue}{\text{tässä}}$ $\textcolor{blue}{\text{saatu}}$ $\textcolor{blue}{\text{tulos}}$ on sama kuin edellä $\textcolor{red}{\text{vektoreiden}}$ $\textcolor{red}{\text{pistetulosta}}$ $\textcolor{red}{\text{saatu}}$ $\textcolor{red}{\text{tulos}}$. Siten voidaan päätellä, että
                         $$
-                        \cos (\vv, \vw)=\frac{\vv \cdot \vw}{|\vv||\vw|}.
+                        \vv \cdot \vw = \left|\vv\right| \left|\vw\right| \cos (\vv, \vw).
                         $$
                     </p>
                 </div>
-            </div>
 
-            <div class="tehtavat">
-                <div class="tehtava" id="t-L2pistetuloKulma-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetuloKulma">
-                                Pistetulo ja vektoreiden välinen kulma
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t-L2pistetuloKulma" class="collapse">
-                        <p>  
-                            Laske vektorien $\va = 3\vi -4\vj$ ja $\vb = 6\vi + 3\vj - 2\vk$ välinen kulma. Anna vastaus asteen kymmenesosan tarkkuudella.
-                        </p>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetuloKulma_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="t-L2pistetuloKulma_v" class="collapse">
-                            <p> $\sphericalangle(\va,\vb) \approx 80{,}1^\circ$</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="t-L2pistetuloKulma3-ex">
-                    <header>
-                        <h1>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetuloKulma3">
-                                Pistetulo ja vektoreiden välinen kulma
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t-L2pistetuloKulma3" class="collapse">
-                        <p> Kolmion kärjet ovat pisteissä $A = (4,1,2)$, $B = (-5,5,-3)$ ja $C = (-4,6,1)$. Määritä 
-                        <ol class="a">
-                            <li> kolmion sivujen pituudet (tarkat arvot) </li>
-                            <li> kolmion kulmat asteen kymmenesosan tarkkuudella. </li>
-                        </ol>
-                        </p>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetuloKulma3_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="t-L2pistetuloKulma3_v" class="collapse">
+                <div class="tehtavat">
+                    <div class="tehtava" id="f8bd0ad2-257a-43b6-ac87-bc0261bee980">
+                        <header>
+                            <h1>
+                                <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetulo2">
+                                    Pistetulo ja vektoreiden välinen kulma
+                                </a>
+                            </h1>
+                        </header>
+                        <div id="t-L2pistetulo2" class="collapse">
+                            <p> Tehtävänä on tutkia, päteekö yhtälö
+                                $$
+                                \vv \cdot \vw = \left|\vv\right| \left|\vw\right| \cos (\vv, \vw)
+                                $$
+                                tilanteessa, jossa vektoreiden $\vv$ ja $\vw$ välinen kulma on nollakulma eli $\sphericalangle(\vv,\vw) = 0^\circ$.
                             <ol class="a">
-                                <li> $|\pv{AB}| = \sqrt{122}$, $\ |\pv{AC}| = \sqrt{90} = 3\sqrt{10} \ $ ja $\ |\pv{BC}| = \sqrt{18} = 3\sqrt{2}$ </li>
-                                <li> $\sphericalangle A \approx 22{,}2^\circ$, $\ \sphericalangle B \approx 57{,}8^\circ \ $ ja $\ \sphericalangle C \approx 100{,}0^\circ.$ </li>
+                                <li> Jos $\sphericalangle(\vv,\vw) = 0^\circ$, niin vektorit $\vv$ ja $\vw$ ovat yhdensuuntaisia. Tällöin on olemassa sellainen reaaliluku $t$, että $\vv = t\vw$. Mitä voit päätellä luvun $t$ etumerkistä? </li>
+                                <li> Sievennä vektoreiden $\vv$ ja $\vw$ pistetulo $\vv \cdot \vw$ ja pituuksien tulo $\left|\vv\right|\left|\vw\right|$ samaan tapaan kuin edellä tehtiin. </li>
+                                <li> Vertaa saamiasi tuloksia. Voitko päätellä, että yhtälö
+                                    $$
+                                    \vv \cdot \vw = \left|\vv\right| \left|\vw\right| \cos (\vv, \vw)
+                                    $$
+                                    pätee? Tarkista tarvittaessa kulman $\sphericalangle(\vv,\vw) = 0^\circ$ kosinin arvo laskimesta.</li>
                             </ol>
+                            </p>
                         </div>
                     </div>
                 </div>
+
+                <div class="teoria">
+                    <p>
+                        Jos vektoreiden välinen kulma on suurempi kuin $0^\circ$ ja pienempi kuin $180^\circ$, voidaan vektoreista muodostaa kolmio, jonka kylkinä tarkasteltavat vektorit ovat. Vektoreiden välinen kulma voidaan tällöin laskea Geometria-kurssista tutun kosinilauseen avulla.
+                    </p>
+                    <p>
+                        Kosinilause on Pythagoraan lauseen yleistys. Pythagoraan lause pätee ainoastaan suorakulmaisille kolmioille, mutta kosinilausetta voi käyttää kaikille kolmioille. Kosinilauseen mukaan alla olevan kuvan kolmiossa
+                        $$
+                        c^2=a^2+b^2-2ab \cos \gamma.
+                        $$
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa4/kuvat/L2k14.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <p>
+                        Jos kolmion sivujen pituudet ajatellaan vektoreiden pituuksina kuten alla olevassa kuvassa, saadaan kosinilauseesta yhtälö
+                        $$
+                        |\vv-\vw|^2=|\vv|^2+|\vw|^2-2|\vv||\vw| \cos(\vv,\vw).
+                        $$
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa4/kuvat/L2k15.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <p>
+                        Kosinilauseen ja pistetulon ominaisuuksien avulla saadaan perusteltua seuraava edellisestä luvusta tuttu teoreema, joka yhdistää pistetulon ja vektoreiden välisen kulman.
+                    </p>
+
+
+                    <div class="theorem">
+                        <h3>TEOREEMA</h3>
+                        <p>
+                            Vektoreiden $\vv$ ja $\vw$ pistetulolle pätee $$\vv \cdot \vw = |\vv||\vw|\cos (\vv, \vw).$$
+                            Jos $\vv \neq \bar{0}$ ja $\vw \neq \bar{0}$, niin vektoreiden $\vv$ ja $\vw$ välinen kulma saadaan yhtälöstä
+                            $$
+                            \cos (\vv, \vw)=\frac{\vv \cdot \vw}{|\vv||\vw|}.
+                            $$
+                        </p>
+                        <div class="proof">
+                            <p>
+                                Perustelu: Tapaukset $\sphericalangle(\vv,\vw) = 0^\circ$ ja $\sphericalangle(\vv,\vw) = 180^\circ$ on perusteltu jo tehtävässä 24 sekä sitä edeltävässä tekstissä. Tarkastellaan siis tapausta, jossa vektoreiden $\vv$ ja $\vw$ välinen kulma ei ole nollakulma eikä oikokulma.
+                                <br>
+                                Tiedetään, että vektorin pituuden neliö on aina sama kuin sen pistetulo itsensä kanssa. Tästä saadaan seuraava yhtälöketju:
+                                $$
+                                \begin{align*}
+                                |\vv-\vw|^2
+                                &=(\vv-\vw)\cdot(\vv-\vw) \\
+                                &= \vv \cdot \vv -\vv\cdot\vw - \vw \cdot \vv+\vw\cdot\vw \\
+                                &= |\vv|^2 - 2(\vv\cdot\vw) +|\vw|^2.
+                                \end{align*}
+                                $$
+                                Toisaalta kosinilauseen mukaan
+                                $$
+                                |\vv-\vw|^2=|\vv|^2+|\vw|^2-2|\vv||\vw| \cos(\vv,\vw).
+                                $$
+                                Yhdistämällä edelliset tiedot saadaan yhtälö
+                                $$
+                                |\vv|^2 - 2(\vv\cdot\vw) +|\vw|^2 = |\vv|^2+|\vw|^2-2|\vv||\vw| \cos(\vv,\vw).
+                                $$
+                                Ratkaistaan tästä $\vv\cdot\vw$, jolloin saadaan
+                                $$
+                                \vv\cdot\vw = |\vv||\vw| \cos(\vv,\vw).
+                                $$
+                                Jos $\vv \neq \bar{0}$ ja $\vw \neq \bar{0}$, niin vektoreiden $\vv$ ja $\vw$ pituudet ovat positiivisia. Jakamalla yhtälön molemmat puolet tulolla $|\vv||\vw|$ saadaan
+                                $$
+                                \cos (\vv, \vw)=\frac{\vv \cdot \vw}{|\vv||\vw|}.
+                                $$
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tehtavat">
+                    <div class="tehtava" id="1c7656d2-2495-4d89-97cb-d747299d1d0b">
+                        <header>
+                            <h1>
+                                <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetuloKulma">
+                                    Pistetulo ja vektoreiden välinen kulma
+                                </a>
+                            </h1>
+                        </header>
+                        <div id="t-L2pistetuloKulma" class="collapse">
+                            <p>
+                                Laske vektorien $\va = 3\vi -4\vj$ ja $\vb = 6\vi + 3\vj - 2\vk$ välinen kulma. Anna vastaus asteen kymmenesosan tarkkuudella.
+                            </p>
+                            <h2>
+
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetuloKulma_v">
+                                    VASTAUS
+                                </a>
+
+                            </h2>
+                            <div id="t-L2pistetuloKulma_v" class="collapse">
+                                <p> $\sphericalangle(\va,\vb) \approx 80{,}1^\circ$</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tehtavat">
+                    <div class="tehtava" id="33e2dc4d-dd7e-4706-be42-5af5d9421bfe">
+                        <header>
+                            <h1>
+                                <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetuloKulma3">
+                                    Pistetulo ja vektoreiden välinen kulma
+                                </a>
+                            </h1>
+                        </header>
+                        <div id="t-L2pistetuloKulma3" class="collapse">
+                            <p> Kolmion kärjet ovat pisteissä $A = (4,1,2)$, $B = (-5,5,-3)$ ja $C = (-4,6,1)$. Määritä
+                            <ol class="a">
+                                <li> kolmion sivujen pituudet (tarkat arvot) </li>
+                                <li> kolmion kulmat asteen kymmenesosan tarkkuudella. </li>
+                            </ol>
+                            </p>
+                            <h2>
+
+                                <a data-toggle="collapse" class="collapsed" data-target="#t-L2pistetuloKulma3_v">
+                                    VASTAUS
+                                </a>
+
+                            </h2>
+                            <div id="t-L2pistetuloKulma3_v" class="collapse">
+                                <ol class="a">
+                                    <li> $|\pv{AB}| = \sqrt{122}$, $\ |\pv{AC}| = \sqrt{90} = 3\sqrt{10} \ $ ja $\ |\pv{BC}| = \sqrt{18} = 3\sqrt{2}$ </li>
+                                    <li> $\sphericalangle A \approx 22{,}2^\circ$, $\ \sphericalangle B \approx 57{,}8^\circ \ $ ja $\ \sphericalangle C \approx 100{,}0^\circ.$ </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="close-section">
+                    <a data-toggle="collapse" class="collapsed" data-target="#L2vektoreiden-pistetulo-ja-vektoreiden-valinen-kulma">
+                        Sulje kappale
+                    </a>
+                </div>
+
             </div>
-            <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#L2vektoreiden-pistetulo-ja-vektoreiden-valinen-kulma">
-                    Sulje kappale
-                </a>
-            </div>
-        </div>
     </section>
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#L2tehtavasarjaii">
                     TEHTÄVÄSARJA II
@@ -1629,28 +1799,31 @@ topnav: maa4
 
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="xyz_1-ex">
+            <div class="tehtava" id="6252897e-579d-434e-ba53-7a82b7fe9bea">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_1">
                             $xyz$-koordinaatisto
                         </a>
                     </h1>
                 </header>
                 <div id="xyz_1">
-                    <p> Tarkastele alla olevan kuvan suorakulmaista särmiötä. 
+                    <p> Tarkastele alla olevan kuvan suorakulmaista särmiötä.
                     <ol class="a">
                         <li> Määritä särmiön kärkipisteiden koordinaatit. </li>
                         <li> Piste $B$ on $xy$-tasossa. Missä tasossa piste $D$ sijaitsee? Entä piste $F$? </li>
                     </ol>
                     </p>
                     <p>
-                        <img src="/kurssit/maa4/kuvat/L2k23.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa4/kuvat/L2k23.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_1_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_1_v" class="collapse">
                         <ol class="a">
@@ -1661,22 +1834,27 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="xyz_2-ex">
+
+            <div class="tehtava" id="a64b3528-4e31-4db3-a22d-807af5039236">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_2">
                             Vektorin pituus
                         </a>
                     </h1>
                 </header>
                 <div id="xyz_2">
-                    <p> 
-                        Kolmion kärjet sijaitsevat pisteissä $A=(1,2,4)$, $B=(2,0,1)$ ja $C=(2,-3,0)$. Laske kolmion sivujen pituudet. 
+                    <p>
+                        Kolmion kärjet sijaitsevat pisteissä $A=(1,2,4)$, $B=(2,0,1)$ ja $C=(2,-3,0)$. Laske kolmion sivujen pituudet.
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_2_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_2_v" class="collapse">
                         <p> $|\pv{AB}| = \sqrt{14}$, $\ |\pv{AC}| = \sqrt{42} \ $ ja $\ |\pv{BC}| = \sqrt{10}$. </p>
@@ -1684,16 +1862,20 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="xyz_3-ex">
+
+
+            <div class="tehtava" id="e83c6a6e-a2cc-4953-be08-33b4caa84940">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_3">
                             Yksikkövektori
                         </a>
                     </h1>
                 </header>
                 <div id="xyz_3">
-                    <p>  
+                    <p>
                         Tarkastele vektoria $\vv=3\vi+6\vj-6\vk$.
                     <ol class="a">
                         <li> Määritä vektorin $\vv$ suuntainen yksikkövektori. </li>
@@ -1702,9 +1884,11 @@ topnav: maa4
                     </ol>
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_3_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_3_v" class="collapse">
                         <ol class="a">
@@ -1716,9 +1900,10 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="xyz_4-ex">
+            <div class="tehtava" id="95d49af2-73d7-4e46-ba86-a29722da7a8c">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_4">
                             Vektorin pituus
                         </a>
@@ -1726,22 +1911,25 @@ topnav: maa4
                 </header>
                 <div id="xyz_4">
                     <p>
-                        Lennonjohtaja tarkkailee kahden koneen sijaintia. Havaintohetkellä lentokone $A$ on lentokentästä $4{,}0$ km länteen ja $2{,}0$ km pohjoiseen, ja lentokone $B$ on lentokentästä $1{,}0$ km itään ja $7{,}0$ km etelään. Kuinka kaukana lentokoneet ovat toisistaan, kun kone $A$ lentää $5$ km korkeudella ja kone $B$ lentää $3$ km korkeudella?   
+                        Lennonjohtaja tarkkailee kahden koneen sijaintia. Havaintohetkellä lentokone $A$ on lentokentästä $4{,}0$ km länteen ja $2{,}0$ km pohjoiseen, ja lentokone $B$ on lentokentästä $1{,}0$ km itään ja $7{,}0$ km etelään. Kuinka kaukana lentokoneet ovat toisistaan, kun kone $A$ lentää $5$ km korkeudella ja kone $B$ lentää $3$ km korkeudella?
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_4_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_4_v" class="collapse">
                         <p> Lentokoneet ovat noin 10,5 km etäisyydellä toisistaan. </p>
                     </div>
                 </div>
-            </div> 
+            </div>
 
-            <div class="tehtava" id="xyz_6b-ex">
+            <div class="tehtava" id="bdd89278-31cb-4e16-9ff6-f2fb4e61f87d">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_6b">
                             Vektorin jakaminen komponentteihin
                         </a>
@@ -1752,9 +1940,11 @@ topnav: maa4
                         Edellisessä luvussa eräänä tehtävänä oli jakaa vektori $\va=4\vi-2\vj$ vektoreiden $\vv=3\vi+\vj$ ja $\vw=-\vi-\vj$ suuntaisiin komponentteihin kuvan avulla päättelemällä. Nyt, kun osaat ratkaista yhtälöpareja, tee sama tehtävä laskemalla. Tarkista lopuksi, että sait samat komponenttivektorit kummallakin tavalla.
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_6b_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_6b_v" class="collapse">
                         <p> $\va = 3\vv + 5\vw$, joten kysytyt komponenttivektorit ovat $3\vv$ ja $5\vw$. </p>
@@ -1762,9 +1952,10 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="xyz_6c-ex">
+            <div class="tehtava" id="ffdbc596-6487-409d-bdb0-e3b098ae29b9">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_6c">
                             Vektorin jakaminen komponentteihin
                         </a>
@@ -1772,12 +1963,14 @@ topnav: maa4
                 </header>
                 <div id="xyz_6c">
                     <p>
-                        Jaa vektori $\va=-5\vi-5\vj+9\vk$ vektoreiden $\vu=3\vi-\vk$, $\vv=-\vj+2\vk$ ja $\vw=\vi-2\vj+\vk$ suuntaisiin komponentteihin.  
+                        Jaa vektori $\va=-5\vi-5\vj+9\vk$ vektoreiden $\vu=3\vi-\vk$, $\vv=-\vj+2\vk$ ja $\vw=\vi-2\vj+\vk$ suuntaisiin komponentteihin.
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_6c_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_6c_v" class="collapse">
                         <p> $\va = -2\vu + 3\vv + \vw$, joten kysytyt komponenttivektorit ovat $-2\vu$, $3\vv$ ja $\vw$. </p>
@@ -1785,9 +1978,12 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="xyz_6d-ex">
+
+            <div class="tehtava" id="b2e8f58f-a62d-4858-86be-4863caa3da3a">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_6d">
                             Paikkavektori
                         </a>
@@ -1795,12 +1991,14 @@ topnav: maa4
                 </header>
                 <div id="xyz_6d">
                     <p>
-                        Vektori $\pv{AB}$ alkaa pisteestä $A=(2,3,-1)$. Määritä pisteen $B$ koordinaatit, kun vektori $\pv{AB}$ on vastakkaissuuntainen vektorin $\vv=2\vi-\vj-2\vk$ kanssa ja sen pituus on kaksinkertainen vektorin $\vv$ pituuteen verrattuna.  
+                        Vektori $\pv{AB}$ alkaa pisteestä $A=(2,3,-1)$. Määritä pisteen $B$ koordinaatit, kun vektori $\pv{AB}$ on vastakkaissuuntainen vektorin $\vv=2\vi-\vj-2\vk$ kanssa ja sen pituus on kaksinkertainen vektorin $\vv$ pituuteen verrattuna.
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_6d_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_6d_v" class="collapse">
                         <p> $B = (-2,5,3)$. </p>
@@ -1808,16 +2006,19 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="xyz_6-ex">
+
+            <div class="tehtava" id="eb143013-2d41-4016-bc01-1123a00ad9d1">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_6">
                             $xyz$-koordinaatisto
                         </a>
                     </h1>
                 </header>
                 <div id="xyz_6">
-                    <p> 
+                    <p>
                         Neliöpohjainen suora pyramidi, jonka pohjaneliön sivun pituus on 3 ja korkeus on 4, asetetaan koordinaatistoon siten, että pyramidin huippu on positiivisella $y$-akselilla, pohjan keskipiste origossa ja pohjaneliön sivut ovat $x$- ja $z$-akselien suuntaiset.
                     <ol class="a">
                         <li> Piirrä tilanteesta kuva. </li>
@@ -1826,9 +2027,11 @@ topnav: maa4
                     </ol>
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_6_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_6_v" class="collapse">
                         <ol class="a">
@@ -1840,25 +2043,30 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="xyz_9-ex">
+
+            <div class="tehtava" id="15eebc62-0cc3-4914-bb49-ee9120490a5c">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_9">
                             Kahden pisteen välinen vektori
                         </a>
                     </h1>
                 </header>
                 <div id="xyz_9">
-                    <p> Tarkastele pisteitä $A=(7,2,-9)$ ja $B=(2,-3,6)$. 
+                    <p> Tarkastele pisteitä $A=(7,2,-9)$ ja $B=(2,-3,6)$.
                     <ol class="a">
                         <li> Muodosta vektori $\pv{AB}$. </li>
                         <li> Mihin pisteeseen päädyt, jos lähdet pisteestä $(-1,5,8)$ ja kuljet vektorin $\pv{AB}$? </li>
                     </ol>
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_9_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_9_v" class="collapse">
                         <ol class="a">
@@ -1869,25 +2077,28 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="xyz_10-ex">
+            <div class="tehtava" id="f50cca71-407a-4494-bdd8-0c803341317b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_10">
                             Vektoreiden yhdensuuntaisuus
                         </a>
                     </h1>
                 </header>
                 <div id="xyz_10">
-                    <p> Etsi sellainen reaaliluku $r$, että vektorit $\va=-3\vi+8\vj-6\vk$ ja $\vb=\vi-r\vj+2\vk$ ovat 
+                    <p> Etsi sellainen reaaliluku $r$, että vektorit $\va=-3\vi+8\vj-6\vk$ ja $\vb=\vi-r\vj+2\vk$ ovat
                     <ol class="a">
                         <li> yhtä pitkät
                         <li> yhdensuuntaiset.
-                    </ol> 
+                    </ol>
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_10_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_10_v" class="collapse">
                         <ol class="a">
@@ -1898,22 +2109,25 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="xyz_11-ex">
+            <div class="tehtava" id="d62ab02f-ee09-4436-b461-91632c6a3c8b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_11">
                             Vektoreiden laskutoimituksia
                         </a>
                     </h1>
                 </header>
                 <div id="xyz_11">
-                    <p>  
-                        Lentokone kiihdyttää $xz$-tasolla olevalla kiitoradalla. Kone irtoaa kiitoradasta ja nousee vektorin $\vv=2\vi+3\vj-\vk$ suuntaisesti. Hetken kuluttua kone on pisteessä $(8,7,-4)$. Missä pisteessä kone irtosi kiitoradasta? 
+                    <p>
+                        Lentokone kiihdyttää $xz$-tasolla olevalla kiitoradalla. Kone irtoaa kiitoradasta ja nousee vektorin $\vv=2\vi+3\vj-\vk$ suuntaisesti. Hetken kuluttua kone on pisteessä $(8,7,-4)$. Missä pisteessä kone irtosi kiitoradasta?
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_11_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_11_v" class="collapse">
                         <p> Pisteessä $\left(\frac{10}{3}, 0, -\frac{5}{3}\right)$.</p>
@@ -1921,9 +2135,12 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="xyz_12-ex">
+
+            <div class="tehtava" id="c206a7ff-3fad-460a-9265-2e2e3c9c1243">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_12">
                             Vektoreiden välinen kulma
                         </a>
@@ -1937,9 +2154,11 @@ topnav: maa4
                     </ol>
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_12_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_12_v" class="collapse">
                         <ol class="a">
@@ -1950,39 +2169,44 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="xyz_2a-ex">
+            <div class="tehtava" id="c26edcb2-1c3c-4a30-8437-bfa78690dac0">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#xyz_2a">
                             Vektoreiden välinen kulma
                         </a>
                     </h1>
                 </header>
                 <div id="xyz_2a">
-                    <p> 
-                        Kolmion kärjet sijaitsevat pisteissä $A=(3,2,1)$, $B=(2,0,4)$ ja $C=(2,-3,0)$. Määritä kolmion suurimman kulman suuruus asteen tarkkudella.  
+                    <p>
+                        Kolmion kärjet sijaitsevat pisteissä $A=(3,2,1)$, $B=(2,0,4)$ ja $C=(2,-3,0)$. Määritä kolmion suurimman kulman suuruus asteen tarkkudella.
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#xyz_2a_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="xyz_2a_v" class="collapse">
                         <p> $\sphericalangle B \approx 71^\circ$</p>
                     </div>
                 </div>
             </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#L2tehtavasarjaii">
                     Sulje kappale
                 </a>
             </div>
+
         </div>
         <!-- Tähän loppui piilotus -->
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#L2tehtavasarjaiii">
                     TEHTÄVÄSARJA III
@@ -1993,9 +2217,12 @@ topnav: maa4
 
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="t-s3t1-ex">
+
+            <div class="tehtava" id="cad0eccd-0749-4160-a78a-1f2ad123c5e1">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#t-s3t1">
 
                         </a>
@@ -2007,6 +2234,7 @@ topnav: maa4
                         <li> Millä parametrin $s$ arvolla vektorit $\va=\vi-2\vj$ ja $\vc=s\vi+(1-s)\vj$ ovat yhdensuuntaiset? Ovatko ne tällöin samansuuntaiset vai vastakkaissuuntaiset? [Pitkä S13/3]</li>
                     </ol>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#s3t1_v">
                             VASTAUS
                         </a>
@@ -2016,26 +2244,32 @@ topnav: maa4
                             <li> Noin $81{,}9^\circ$.</li>
                             <li> $s = -1$, jolloin vektorit $\va$ ja $\vc$ ovat vastakkaissuuntaiset.</li>
                         </ol>
+
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="t-s3t2-ex">
+
+            <div class="tehtava" id="5ca97c68-ff00-4a6c-bdb9-4fe6367eb33b">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#t-s3t2">
 
                         </a>
                     </h1>
                 </header>
                 <div id="t-s3t2">
-                    <p> 
+                    <p>
                         Pisteestä $A(1,-1,0)$ siirrytään $9$ pituusyksikköä vektorin $\vi-2\vj+2\vk$ suuntaan pisteeseen $B$ ja siitä edelleen $10$ pituusyksikköä vektorin $3\vi-4\vk$ suuntaan pisteeseen $C$. Määritä pisteen $C$ koordinaatit. [Pitkä S13/5]
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#s3t2_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="s3t2_v" class="collapse">
                         <p>$C = (10, -7, -2)$</p>
@@ -2043,22 +2277,26 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="s3t3-ex">
+            <div class="tehtava" id="3b62e3f1-f8b7-484d-ab61-674cd774be1f">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#s3t3">
 
                         </a>
                     </h1>
                 </header>
                 <div id="s3t3">
-                    <p> 
+                    <p>
                         Olkoon $\va=4\vi-5\vj+3\vk$ ja $\vb=2\vi+\vj-2\vk$. Esitä vektori $\va$ summana vektoreista $\vu$ ja $\vv$, joista $\vu$ on yhdensuuntainen vektorin $\vb$ kanssa ja $\vv$ kohtisuorassa vektoria $\vb$ vastaan. [Pitkä K11/8]
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#s3t3_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="s3t3_v" class="collapse">
                         <p>
@@ -2068,25 +2306,30 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="s3t4-ex">
+
+            <div class="tehtava" id="9925e7e7-fe96-41a4-b19d-3d923b886a15">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#s3t4">
 
                         </a>
                     </h1>
                 </header>
                 <div id="s3t4">
-                    <p> Kuljet origosta pisteeseen $A=(6,-4,-2)$. Alkumatkan kuljet $xy$-tasossa ja loppumatkan vektorin $\vv=2\vi+2\vj-\vk$ suuntaan. 
+                    <p> Kuljet origosta pisteeseen $A=(6,-4,-2)$. Alkumatkan kuljet $xy$-tasossa ja loppumatkan vektorin $\vv=2\vi+2\vj-\vk$ suuntaan.
                     <ol class="a">
                         <li> Missä pisteessä poistut $xy$-tasosta? </li>
                         <li> Kuinka pitkän matkan kuljet yhteensä? </li>
                     </ol>
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#s3t4_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="s3t4_v" class="collapse">
                         <ol class="a">
@@ -2097,22 +2340,27 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="s3t5-ex">
+
+            <div class="tehtava" id="5ef2cb42-c96d-418c-a05e-7bd4dddff721">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#s3t5">
 
                         </a>
                     </h1>
                 </header>
                 <div id="s3t5">
-                    <p> 
-                        Suunnikkaan kolme kärkipistettä ovat $(1,0,2), (3,1,1)$ ja $(2,-2,6)$. Määritä suunnikkaan neljäs kärkipiste. Huomaat, että ratkaisuja on useita. Voit hahmotella mallikuvaa ratkaisun tueksi. 
+                    <p>
+                        Suunnikkaan kolme kärkipistettä ovat $(1,0,2), (3,1,1)$ ja $(2,-2,6)$. Määritä suunnikkaan neljäs kärkipiste. Huomaat, että ratkaisuja on useita. Voit hahmotella mallikuvaa ratkaisun tueksi.
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#s3t5_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="s3t5_v" class="collapse">
                         <p>Suunnikkaan neljäs kärkipiste voi olla $(0,-3,7)$ tai $(2,3,-3)$ tai $(4,-1,5)$.</p>
@@ -2120,9 +2368,12 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="s3t6-ex">
+
+            <div class="tehtava" id="5d4b078d-694e-4360-bd50-0fd03a90b404">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#s3t6">
 
                         </a>
@@ -2137,9 +2388,11 @@ topnav: maa4
                     </ol>
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#s3t6_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="s3t6_v" class="collapse">
                         <ol class="a">
@@ -2151,22 +2404,26 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="s3t7-ex">
+            <div class="tehtava" id="71160c61-4063-4da9-859f-fe2b7e7cf6c0">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#s3t7">
 
                         </a>
                     </h1>
                 </header>
                 <div id="s3t7">
-                    <p> 
+                    <p>
                         Vektoreiden $\va$ ja $\vb$ summa on vektori $4\vi+\vj$ ja niiden pistetulo on $\va\cdot \vb=4$. Vektori $\vb$ on yhdensuuntainen vektorin $\vi$ kanssa. Määritä vektorit $\va$ ja $\vb$. [Pitkä K10/5]
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#s3t7_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="s3t7_v" class="collapse">
                         <p>$\va = 2\vi + \vj\ $ ja $\ \vb = 2\vi$.</p>
@@ -2174,33 +2431,40 @@ topnav: maa4
                 </div>
             </div>
 
-            <div class="tehtava" id="s3t8-ex">
+
+            <div class="tehtava" id="5207521d-ade1-45fa-9c6d-631f2bd275e2">
+
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#s3t8">
 
                         </a>
                     </h1>
                 </header>
                 <div id="s3t8">
-                    <p> 
-                        Mitkä ovat ne $z$-akselin pisteet, joista tarkasteltuna pisteet $A=(7,-5,1)$ ja $B=(-4,7,-1)$ yhdistävä jana näkyy suorassa kulmassa? 
+                    <p>
+                        Mitkä ovat ne $z$-akselin pisteet, joista tarkasteltuna pisteet $A=(7,-5,1)$ ja $B=(-4,7,-1)$ yhdistävä jana näkyy suorassa kulmassa?
                     </p>
                     <h2>
+
                         <a data-toggle="collapse" class="collapsed" data-target="#s3t8_v">
                             VASTAUS
                         </a>
+
                     </h2>
                     <div id="s3t8_v" class="collapse">
                         <p>Kysytyt pisteet ovat $(0,0,8)$ ja $(0,0,-8)$.</p>
                     </div>
                 </div>
             </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#L2tehtavasarjaiii">
                     Sulje kappale
                 </a>
             </div>
+
         </div>
         <!-- Tähän loppui piilotus -->
     </section>
@@ -2216,13 +2480,15 @@ topnav: maa4
         </header>
         <div id="L2itsearviointi" class="collapse">
             <p>
-                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1345">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1345">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
             </p>
             <div class="close-section">
+
                 <a data-toggle="collapse" class="collapsed" data-target="#L2itsearviointi">
                     Sulje kappale
                 </a>
             </div>
+
         </div>
     </section>
 </article>

@@ -1,7 +1,6 @@
 # Site settings
 title: Kisallioppiminen.fi
-baseurl: ""
-url: "https://kisallioppiminen.github.io"
+backendbaseurl: "https://beta-kisallioppiminen.github.io/"
 
 # Build settings
 markdown: kramdown
@@ -16,17 +15,36 @@ navigation:
   "Materiaalit": "/"
   "Blogi": "http://blogs.helsinki.fi/kisallioppiminenlukiossa"
   "Tietoa": "/tietoa.html"
+  # Login button added with js
 
 resources:
   css:
+    - "/css/bootstrap.css"
+    - "/css/custom.css"
     - "//fonts.googleapis.com/css?family=Alegreya+Sans:400|Noto+Sans:400,700|Open+Sans+Condensed:300,700"
     - "/css/main.css"
+   #- "/css/definitions_page.css"
+
   js:
-    - "/js/jquery.js"
-    - "/js/jquery-ui.js"
-    - "//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    # Download libraries
+    - "//code.jquery.com/jquery-2.2.4.min.js"
+    - "//code.jquery.com/ui/1.12.1/jquery-ui.min.js"
     - "//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+
+    # Download own scripts
+    - "/js/common.js"
+    - "/js/session.js"
+    - "/js/view.js"
+    - "/js/scheduleManager.js"
+    - "/js/exercises.js"
+    - "/js/backend.js"
+    - "/js/jquery-ui.js"
     - "/js/mooc.js"
+    - "/js/button/button.js"
+    - "/js/statistics.js"
+    - "/js/scheduleCheckbox.js"
+    - "/js/init.js"
+
 
 
 exclude: [vendor]

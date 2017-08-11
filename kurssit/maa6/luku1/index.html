@@ -9,6 +9,9 @@ topnav: maa6
 <input type="hidden" id="chapterNumber" value="1"/>
 <input type="hidden" id="theoremStart" value="1"/>
 
+{% include bottomnav.html %}
+
+
 <article>
     <section>
         <header>
@@ -47,37 +50,37 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
-            <h1>
+        <header class="otsikko">
+            <h1>      
                 <a data-toggle="collapse" class="collapsed" data-target="#tangentti1">
                     Funktion kuvaajan tangentti
                 </a>
             </h1>
         </header>
         <div id="tangentti1" class="collapse">
-
-            <p>
-                Kursseissa MAA3 ja MAA5 on tarkasteltu ympyrän tangetteja. Nämä ovat suoria, jotka sivuavat ympyrää tasan yhdessä pisteessä. 
-                <br>
-                <img src="/kurssit/maa3/kuvat/tasoK41.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Samaan tapaan voidaan piirtää tangetti myös funktion kuvaajalle. Esimerkiksi alla olevassa kuvassa on piirretty funktion $f$ kuvaajalle tangentti kohtaan $x = 2$.
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva01.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Tangentin kulmakerroin antaa tietoa funktion kuvaajan jyrkkyydestä tarkastelukohdassa. Alla olevasta kuvasta nähdään, että tässä tapauksessa tangetin kulmakerroin on 
-                $$\frac{-2}{\phantom{-}4} = -0{,}5.$$
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva02.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Funktion kuvaajalle piirretyn tangentin kulmakerroin on toiselta nimeltään funktion derivaatta. Tämän funktion $f$ derivaatta kohdassa $x = 2$ on siis $-0{,}5$. Tämä ilmaistaan merkinnällä 
-                $$f'(2) = -0{,}5.$$
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Kursseissa MAA3 ja MAA5 on tarkasteltu ympyrän tangetteja. Nämä ovat suoria, jotka sivuavat ympyrää tasan yhdessä pisteessä. 
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/tasoK41.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Samaan tapaan voidaan piirtää tangetti myös funktion kuvaajalle. Esimerkiksi alla olevassa kuvassa on piirretty funktion $f$ kuvaajalle tangentti kohtaan $x = 2$.
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva01.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Tangentin kulmakerroin antaa tietoa funktion kuvaajan jyrkkyydestä tarkastelukohdassa. Alla olevasta kuvasta nähdään, että tässä tapauksessa tangetin kulmakerroin on 
+                    $$\frac{-2}{\phantom{-}4} = -0{,}5.$$
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva02.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Funktion kuvaajalle piirretyn tangentin kulmakerroin on toiselta nimeltään funktion derivaatta. Tämän funktion $f$ derivaatta kohdassa $x = 2$ on siis $-0{,}5$. Tämä ilmaistaan merkinnällä 
+                    $$f'(2) = -0{,}5.$$
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="firstEx">
+                <div class="tehtava" id="9a168960-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t101">
                                 Tangentin kulmakerroin
                             </a>
@@ -110,9 +113,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t102-ex">
+                <div class="tehtava" id="9a168bfe-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t102">
                                 Tangentin kulmakerroin
                             </a>
@@ -151,9 +154,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t103-ex">
+                <div class="tehtava" id="9a168cf8-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t103">
                                 Tangentin kulmakerroin
                             </a>
@@ -161,26 +164,26 @@ topnav: maa6
                     </header>
                     <div id="t103" class="collapse">
                         <p>
-                        Tässä tehtävässä harjoitellaan derivaatan tai sen likiarvon määrittämistä Geogebran avulla. 
-                        <br>
-                        Tarkastellaan funktiota
-                        $$
-                        f(x) = 0{,}1x^4 - 0{,}3x^3 - 1{,}5x^2 + 1{,}9x + 3.
-                        $$
-                    </p>
-                    <ol class="a">
-                        <li> 
-                            Piirrä Geogebralla funktion $f$ kuvaaja välillä $[-3,5]$. Ohjevideo löytyy <a href="https://youtu.be/Hvjq0joADLk">täältä</a>.
-                        </li>
-                        <li> 
-                            Määritä kuvaajalle kohtaan $x = -0{,}5$ piirretyn tangentin yhtälö. Katso tarvittaessa ohjeita a-kohdan videosta.
+                            Tässä tehtävässä harjoitellaan derivaatan tai sen likiarvon määrittämistä Geogebran avulla. 
                             <br>
-                            Vinkki: Oletusarvoisesti Geogebra pyöristää luvut kahden desimaalin tarkkuuteen, mutta valikosta "Asetukset" &rarr; "Pyöristä" voit muuttaa desimaalien määrää.  
-                        </li>
-                        <li> 
-                            Määritä derivaatta $f'(-0{,}5)$ tai sen likiarvo.
-                        </li>
-                    </ol>
+                            Tarkastellaan funktiota
+                            $$
+                            f(x) = 0{,}1x^4 - 0{,}3x^3 - 1{,}5x^2 + 1{,}9x + 3.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Piirrä Geogebralla funktion $f$ kuvaaja välillä $[-3,5]$. Ohjevideo löytyy <a href="https://youtu.be/Hvjq0joADLk">täältä</a>.
+                            </li>
+                            <li> 
+                                Määritä kuvaajalle kohtaan $x = -0{,}5$ piirretyn tangentin yhtälö. Katso tarvittaessa ohjeita a-kohdan videosta.
+                                <br>
+                                Vinkki: Oletusarvoisesti Geogebra pyöristää luvut kahden desimaalin tarkkuuteen, mutta valikosta "Asetukset" &rarr; "Pyöristä" voit muuttaa desimaalien määrää.  
+                            </li>
+                            <li> 
+                                Määritä derivaatta $f'(-0{,}5)$ tai sen likiarvo.
+                            </li>
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t103_v">
                                 VASTAUS
@@ -196,7 +199,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-    
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#tangentti1">
                     Sulje kappale
@@ -206,27 +209,27 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
-            <h1>
+        <header class="otsikko">
+            <h1>                       
                 <a data-toggle="collapse" class="collapsed" data-target="#tangentti2">
                     Funktion kasvunopeus
                 </a>
             </h1>
         </header>
         <div id="tangentti2" class="collapse">
-
-            <p>
-                Funktion kuvaajalle piirretyn tangentin kulmakerroin eli funktion derivaatta ilmaisee funktion arvojen kasvunopeuden kyseisessä kohdassa. Tarkastellaan esimerkiksi funktiota $f$, jonka kuvaaja on näkyvissä alla.  
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva06.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Kuvaajalle piirretyistä tangeteista havaitaan, että funktion arvot kasvavat voimakkaasti kohdassa $x = -1$. Kohdassa $x = 2$ kasvu on hiipumassa ja kohdassa $x = 5$ funktion arvot pienenevät. Jokaisessa kohdassa tangentin kulmakerroin eli funktion $f$ derivaatta antaa kasvunopeuden hetkellisen arvon. 
-            </p>
-            
+            <div class="teoria">
+                <p>
+                    Funktion kuvaajalle piirretyn tangentin kulmakerroin eli funktion derivaatta ilmaisee funktion arvojen kasvunopeuden kyseisessä kohdassa. Tarkastellaan esimerkiksi funktiota $f$, jonka kuvaaja on näkyvissä alla.  
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva06.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Kuvaajalle piirretyistä tangeteista havaitaan, että funktion arvot kasvavat voimakkaasti kohdassa $x = -1$. Kohdassa $x = 2$ kasvu on hiipumassa ja kohdassa $x = 5$ funktion arvot pienenevät. Jokaisessa kohdassa tangentin kulmakerroin eli funktion $f$ derivaatta antaa kasvunopeuden hetkellisen arvon. 
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t104-ex">
+                <div class="tehtava" id="9a168dd4-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t104">
                                 Funktion kasvunopeus
                             </a>
@@ -263,9 +266,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t105-ex">
+                <div class="tehtava" id="9a1691da-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t105">
                                 Funktion kasvunopeus
                             </a>
@@ -304,20 +307,20 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
-            <p>
-                Edellä on tutkittu funktioita, joiden kasvunopeus vaihtelee kohdasta toiseen. On olemassa myös funktioita, joiden arvot kasvavat koko ajan samalla nopeudella. Esimerkiksi funktion $f(x) = 2x-3$ arvo kasvaa aina kahdella, kun $x$-akselilla siirrytään yhden yksikön verran oikealle:
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva08.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Tästä voidaan päätellä, että funktion $f(x) = 2x-3$ derivaatan arvo on koko ajan vakio: $$f'(x) = 2$$
-                kaikissa kohdissa $x$.
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Edellä on tutkittu funktioita, joiden kasvunopeus vaihtelee kohdasta toiseen. On olemassa myös funktioita, joiden arvot kasvavat koko ajan samalla nopeudella. Esimerkiksi funktion $f(x) = 2x-3$ arvo kasvaa aina kahdella, kun $x$-akselilla siirrytään yhden yksikön verran oikealle:
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva08.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Tästä voidaan päätellä, että funktion $f(x) = 2x-3$ derivaatan arvo on koko ajan vakio: $$f'(x) = 2$$
+                    kaikissa kohdissa $x$.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t106-ex">
+                <div class="tehtava" id="9a1692ac-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t106">
                                 Funktion kasvunopeus
                             </a>
@@ -350,7 +353,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-        
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#tangentti2">
                     Sulje kappale
@@ -360,30 +363,30 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
-            <h1>
+        <header class="otsikko">
+            <h1>                      
                 <a data-toggle="collapse" class="collapsed" data-target="#tangentti3">
                     Derivaattafunktio
                 </a>
             </h1>
         </header>
         <div id="tangentti3" class="collapse">
-
-            <p>
-                Edellä havaittiin, että ensimmäisen asteen polynomifunktioiden ja vakiofunktioiden kasvunopeus on vakio. Esimerkiksi funktion $g(x) = -0{,}5x + 4$ arvo pienenee aina puolikkaan verran, kun $x$-akselilla siirrytään yhden yksikön verran oikealle:
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva09.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Tästä voidaan päätellä, että funktion $g(x) = -0{,}5x+4$ derivaatan arvo on koko ajan vakio: $$g'(x) = -0{,}5$$
-                kaikissa kohdissa $x$. Derivaatta on siis vakiofunktio, jonka arvo on koko ajan $-0{,}5$:
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva10.png" max-width: 100%; width: auto; height: auto;/>
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Edellä havaittiin, että ensimmäisen asteen polynomifunktioiden ja vakiofunktioiden kasvunopeus on vakio. Esimerkiksi funktion $g(x) = -0{,}5x + 4$ arvo pienenee aina puolikkaan verran, kun $x$-akselilla siirrytään yhden yksikön verran oikealle:
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva09.png" max-width: 100%; width: auto; height: auto;/>
+                         <br>
+                    Tästä voidaan päätellä, että funktion $g(x) = -0{,}5x+4$ derivaatan arvo on koko ajan vakio: $$g'(x) = -0{,}5$$
+                    kaikissa kohdissa $x$. Derivaatta on siis vakiofunktio, jonka arvo on koko ajan $-0{,}5$:
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva10.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t107-ex">
+                <div class="tehtava" id="9a1697d4-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t107">
                                 Derivaattafunktio
                             </a>
@@ -415,9 +418,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t108-ex">
+                <div class="tehtava" id="9a16993c-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t108">
                                 Derivaattafunktio
                             </a>
@@ -449,9 +452,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t109-ex">
+                <div class="tehtava" id="9a169a18-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t109">
                                 Derivaattafunktio
                             </a>
@@ -481,56 +484,56 @@ topnav: maa6
                     </div>
                 </div>
             </div>
+            <div class="teoria">
+                <p>
+                    Tarkastellaan seuraavaksi toisen asteen potenssifunktiota $f(x) = x^2$. Alla on näkyvissä osa sen kuvaajasta ja sille piirrettyjä tangentteja. 
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva11.png" max-width: 100%; width: auto; height: auto;/> 
+                         <br>
+                    Lisäksi havaitaan, että kohdassa $x = 0$ kuvaajan tangettina on $x$-akseli. Näiden tangenttien kulmakertoimista saadaan funktion $f$ derivaatalle seuraavat arvot:
+                </p>
 
-            <p>
-                Tarkastellaan seuraavaksi toisen asteen potenssifunktiota $f(x) = x^2$. Alla on näkyvissä osa sen kuvaajasta ja sille piirrettyjä tangentteja. 
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva11.png" max-width: 100%; width: auto; height: auto;/> 
-                <br>
-                Lisäksi havaitaan, että kohdassa $x = 0$ kuvaajan tangettina on $x$-akseli. Näiden tangenttien kulmakertoimista saadaan funktion $f$ derivaatalle seuraavat arvot:
-            </p>
+                <div align="center">
+                    <table style="width = 75%"> 
+                        <tr>
+                            <th> $\phantom{-}x$ </th>
+                            <th> $\phantom{-}f'(x)$ </th>
+                        </tr>
+                        <tr>
+                            <td> $\textcolor{blue}{-2}$ </td>
+                            <td> $\textcolor{blue}{-4}$ </td>
+                        </tr>
+                        <tr>
+                            <td> $\textcolor{Purple}{-1}$ </td>
+                            <td> $\textcolor{Purple}{-2}$ </td>
+                        </tr>
+                        <tr>
+                            <td> $\phantom{-}0$ </td>
+                            <td> $\phantom{-}0$ </td>
+                        </tr>
+                        <tr>
+                            <td> $\phantom{-}\textcolor{red}{1}$ </td>
+                            <td> $\phantom{-}\textcolor{red}{2}$ </td>
+                        </tr>
+                        <tr>
+                            <td> $\phantom{-}\textcolor{DeepSkyBlue}{2}$ </td>
+                            <td> $\phantom{-}\textcolor{DeepSkyBlue}{4}$ </td>
+                        </tr>
+                    </table> 
+                </div>
 
-            <div align="center">
-                <table style="width = 75%"> 
-                    <tr>
-                        <th> $\phantom{-}x$ </th>
-                        <th> $\phantom{-}f'(x)$ </th>
-                    </tr>
-                    <tr>
-                        <td> $\textcolor{blue}{-2}$ </td>
-                        <td> $\textcolor{blue}{-4}$ </td>
-                    </tr>
-                    <tr>
-                        <td> $\textcolor{Purple}{-1}$ </td>
-                        <td> $\textcolor{Purple}{-2}$ </td>
-                    </tr>
-                    <tr>
-                        <td> $\phantom{-}0$ </td>
-                        <td> $\phantom{-}0$ </td>
-                    </tr>
-                    <tr>
-                        <td> $\phantom{-}\textcolor{red}{1}$ </td>
-                        <td> $\phantom{-}\textcolor{red}{2}$ </td>
-                    </tr>
-                    <tr>
-                        <td> $\phantom{-}\textcolor{DeepSkyBlue}{2}$ </td>
-                        <td> $\phantom{-}\textcolor{DeepSkyBlue}{4}$ </td>
-                    </tr>
-                </table> 
+                <p>
+                    Kun vastaavat pisteet merkitään koordinaatistoon, saadaan hieman käsitystä siitä, millainen derivaattafunktio $f'$ on.
+                    <br>
+                    <img src="/kurssit/maa6/kuvat/kuva12.png" max-width: 100%; width: auto; height: auto;/> 
+                         <br>
+                    Jos funktion kuvaajalle piirretään enemmän tangentteja ja määritetään niiden kulmakertoimet, saadaan tarkempaa tietoa derivaattafunktion arvoista. Tätä kokeillaan seuraavassa tehtävässä.
+                </p>
             </div>
-
-            <p>
-                Kun vastaavat pisteet merkitään koordinaatistoon, saadaan hieman käsitystä siitä, millainen derivaattafunktio $f'$ on.
-                <br>
-                <img src="/kurssit/maa6/kuvat/kuva12.png" max-width: 100%; width: auto; height: auto;/> 
-                <br>
-                Jos funktion kuvaajalle piirretään enemmän tangentteja ja määritetään niiden kulmakertoimet, saadaan tarkempaa tietoa derivaattafunktion arvoista. Tätä kokeillaan seuraavassa tehtävässä.
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="t110-ex">
+                <div class="tehtava" id="9a169ae0-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t110">
                                 Derivaattafunktio
                             </a>
@@ -548,9 +551,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t111-ex">
+                <div class="tehtava" id="9a169cb6-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t111">
                                 Derivaattafunktio
                             </a>
@@ -561,7 +564,7 @@ topnav: maa6
                             Alla on näkyvissä erään funktion $h$ derivaattafunktion kuvaaja. 
                             <br>
                             <img src="/kurssit/maa6/kuvat/kuva13.png" max-width: 100%; width: auto; height: auto;/> 
-                            <br>
+                                 <br>
                             Tutki derivaattafunktion kuvaajaa ja päättele vastaukset seuraaviin kysymyksiin:
                         </p>
                         <ol class="a">
@@ -585,26 +588,26 @@ topnav: maa6
                         </h2>
                         <div id="t111_v" class="collapse">
                             <ol class="a">
-                            <li> Kohdassa $x = 3$.</li>
-                            <li> Kohdassa $x = 3$.</li>
-                            <li> Välillä $\pa -\infty, 1]$. </li>
-                            <li> Välillä $\pa -\infty, 1]$. </li>
-                            <li> Välillä $\pa -\infty, 3\pe$.  </li>
-                            <li> Välillä $\pa -\infty, 3\pe$.  </li>
-                            <li> Välillä $\pa 3, \infty\pe$. </li>
-                            <li> Välillä $\pa 3, \infty\pe$. </li>
-                            <li> Kohdassa $x = 3$. </li>
-                        </ol>
-                        <img src="/kurssit/maa6/kuvat/kuva95.png" max-width: 100%; width: auto; height: auto;/> 
+                                <li> Kohdassa $x = 3$.</li>
+                                <li> Kohdassa $x = 3$.</li>
+                                <li> Välillä $\pa -\infty, 1]$. </li>
+                                <li> Välillä $\pa -\infty, 1]$. </li>
+                                <li> Välillä $\pa -\infty, 3\pe$.  </li>
+                                <li> Välillä $\pa -\infty, 3\pe$.  </li>
+                                <li> Välillä $\pa 3, \infty\pe$. </li>
+                                <li> Välillä $\pa 3, \infty\pe$. </li>
+                                <li> Kohdassa $x = 3$. </li>
+                            </ol>
+                            <img src="/kurssit/maa6/kuvat/kuva95.png" max-width: 100%; width: auto; height: auto;/> 
                         </div>
                     </div>
                 </div>
             </div>
-
-            <p>
-                Tässä luvussa olemme tutustuneet derivaatan käsitteeseen pääasiassa graafisesti määrittämällä funktion kuvaajalle piirrettyjen tangenttien kulmakertoimia. Jotta voimme tarkastella derivaattaa myös lausekkeiden avulla, perehdymme seuraavassa luvussa funktion raja-arvon käsitteeseen. Kolmannessa luvussa harjoittelemme rationaalifunktioiden käsittelyä, minkä jälkeen voimme määritellä derivaatan käsitteen täsmällisesti niin sanottuna erotusosamäärän raja-arvona luvussa 4. 
-            </p>
-        
+            <div class="teoria">
+                <p>
+                    Tässä luvussa olemme tutustuneet derivaatan käsitteeseen pääasiassa graafisesti määrittämällä funktion kuvaajalle piirrettyjen tangenttien kulmakertoimia. Jotta voimme tarkastella derivaattaa myös lausekkeiden avulla, perehdymme seuraavassa luvussa funktion raja-arvon käsitteeseen. Kolmannessa luvussa harjoittelemme rationaalifunktioiden käsittelyä, minkä jälkeen voimme määritellä derivaatan käsitteen täsmällisesti niin sanottuna erotusosamäärän raja-arvona luvussa 4. 
+                </p>
+            </div>
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#tangentti3">
                     Sulje kappale
@@ -614,8 +617,8 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
-            <h1>
+        <header class="otsikko">
+            <h1>                        
                 <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja2">
                     TEHTÄVÄSARJA II
                 </a>
@@ -625,9 +628,9 @@ topnav: maa6
         <div id="luku1-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="MAA6s2t105-ex">
+            <div class="tehtava" id="9a169e1e-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t105">
                             Tangentin kulmakerroin
                         </a>
@@ -646,27 +649,27 @@ topnav: maa6
                         <li> $f'(8)$. </li>
                     </ol>
                     <img src="/kurssit/maa6/kuvat/kuva101.png" max-width: 100%; width: auto; height: auto;/> 
-                    <h2>
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t105_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA6s2t105_v" class="collapse">
                         <ol class="a">
-                        <li> $f'(-1) = 1$ </li>
-                        <li> $f'(1) = 0$ </li>
-                        <li> $f'(3) = -1$ </li>
-                        <li> $f'(5) = -2$ </li>
-                        <li> $f'(6) = 0$ </li>
-                        <li> $f'(8) = 4$. </li>
-                    </ol>
+                            <li> $f'(-1) = 1$ </li>
+                            <li> $f'(1) = 0$ </li>
+                            <li> $f'(3) = -1$ </li>
+                            <li> $f'(5) = -2$ </li>
+                            <li> $f'(6) = 0$ </li>
+                            <li> $f'(8) = 4$. </li>
+                        </ol>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t106-ex">
+            <div class="tehtava" id="9a16a21a-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t106">
                             Tangentin kulmakerroin
                         </a>
@@ -682,25 +685,25 @@ topnav: maa6
                         <li> $x = 8$. </li>
                     </ol>
                     <img src="/kurssit/maa6/kuvat/kuva101.png" max-width: 100%; width: auto; height: auto;/> 
-                    <h2>
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t106_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA6s2t106_v" class="collapse">
                         <ol class="a">
-                        <li> $y = x + 3$ </li>
-                        <li> $y = -2x+9$ </li>
-                        <li> $y = 4x-30$ </li>
-                    </ol>
+                            <li> $y = x + 3$ </li>
+                            <li> $y = -2x+9$ </li>
+                            <li> $y = 4x-30$ </li>
+                        </ol>
                     </div>
                 </div>
             </div>
 
 
-            <div class="tehtava" id="MAA6s2t107-ex">
+            <div class="tehtava" id="9a16a3c8-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t107">
                             Tangentin kulmakerroin
                         </a>
@@ -721,7 +724,7 @@ topnav: maa6
                         </li>
                     </ol>
                     <img src="/kurssit/maa6/kuvat/kuva05.png" max-width: 100%; width: auto; height: auto;/>
-                    <h2>
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t107_v">
                             Vastaus
                         </a>
@@ -735,9 +738,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t104-ex">
+            <div class="tehtava" id="9a16a526-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t104">
                             Funktion kasvunopeus
                         </a>
@@ -748,14 +751,14 @@ topnav: maa6
                         Alla näkyvä kuvaaja esittää paikallisjunan etäisyyttä päärautatieasemasta ajan funktiona.
                     </p>
                     <img src="/kurssit/maa6/kuvat/kuva99.png" max-width: 100%; width: auto; height: auto;/> 
-                    <ol class="a">
+                         <ol class="a">
                         <li> Selitä omin sanoin, mitä tapahtuu kyseisten yhdeksän minuutin aikana. </li>
                         <li> 
                             Kuvaajalle on alla piirretty kolme tangenttia kohtiin $x = 2 \text{ min}$, $x = 3{,}5 \text{ min}$ ja $x = 6 \text{ min}$. Määritä näiden tangenttien kulmakertoimien likiarvot kuvasta. Mitä junaan liittyvää tietoa niistä saadaan?
                         </li>
                     </ol>
                     <img src="/kurssit/maa6/kuvat/kuva100.png" max-width: 100%; width: auto; height: auto;/> 
-                    <p>
+                         <p>
                         Mikä on junan huippunopeus kyseisten yhdeksän minuutin aikana?
                     </p>
                     <h2>
@@ -781,9 +784,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t108-ex">
+            <div class="tehtava" id="9a16a684-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t108">
                             Funktion kasvunopeus
                         </a>
@@ -831,9 +834,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t101-ex">
+            <div class="tehtava" id="9a16a76a-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t101">
                             Derivaattafunktio
                         </a>
@@ -849,7 +852,7 @@ topnav: maa6
                         <li> $f'(x) \leq 0$. </li>
                     </ol>
                     <img src="/kurssit/maa6/kuvat/kuva96.png" max-width: 100%; width: auto; height: auto;/> 
-                    <h2>
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t101_v">
                             Vastaus
                         </a>
@@ -864,9 +867,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t102-ex">
+            <div class="tehtava" id="9a16a83c-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t102">
                             Derivaattafunktio
                         </a>
@@ -881,23 +884,23 @@ topnav: maa6
                         <li> funktion $g$ arvot pienenevät.</li>
                     </ol>
                     <img src="/kurssit/maa6/kuvat/kuva97.png" max-width: 100%; width: auto; height: auto;/> 
-                    <h2>
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t102_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA6s2t102_v" class="collapse">
                         <ol class="a">
-                        <li> Funktion $g$ arvot kasvavat, kun kasvunopeus eli derivaatta on positiivinen. Toisin sanottuna jos $-5 < x < 0{,}5$ tai $x > 2$ </li>
-                        <li> Funktion $g$ arvot pienenevät, kun kasvunopeus eli derivaatta on negatiivinen. Toisin sanottuna jos $x < -5$ tai $0{,}5 < x < 2$.</li>
-                    </ol>
+                            <li> Funktion $g$ arvot kasvavat, kun kasvunopeus eli derivaatta on positiivinen. Toisin sanottuna jos $-5 < x < 0{,}5$ tai $x > 2$ </li>
+                            <li> Funktion $g$ arvot pienenevät, kun kasvunopeus eli derivaatta on negatiivinen. Toisin sanottuna jos $x < -5$ tai $0{,}5 < x < 2$.</li>
+                        </ol>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t103-ex">
+            <div class="tehtava" id="9a16abca-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t103">
                             Derivaattafunktio
                         </a>
@@ -908,8 +911,8 @@ topnav: maa6
                         Alla on näkyvissä neljän funktion kuvaajat. Mitkä niistä ovat toistensa derivaattafunktioita? Etsi niin monta funktio &amp; derivaattafunktio -paria kuin mahdollista.
                     </p>
                     <img src="/kurssit/maa6/kuvat/kuva98a.png" max-width: 100%; width: auto; height: auto;/> 
-                    <img src="/kurssit/maa6/kuvat/kuva98b.png" max-width: 100%; width: auto; height: auto;/> 
-                    <h2>
+                         <img src="/kurssit/maa6/kuvat/kuva98b.png" max-width: 100%; width: auto; height: auto;/> 
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t103_v">
                             Vastaus
                         </a>
@@ -936,8 +939,8 @@ topnav: maa6
 
 
     <section class="panel">
-        <header>
-            <h1>
+        <header class="otsikko">
+            <h1>                    
                 <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja3">
                     TEHTÄVÄSARJA III
                 </a>
@@ -947,9 +950,9 @@ topnav: maa6
         <div id="luku1-tehtavasarja3" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="MAA6s3t101-ex">
+            <div class="tehtava" id="9a16ac9c-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t101">
 
                         </a>
@@ -960,13 +963,13 @@ topnav: maa6
                         Taulukon ylärivissä ovat funktioiden $f(x)$, $g(x)$ ja $h(x)$ kuvaajat. Alemmassa rivissä on viiden eri funktion kuvaajat. Näiden joukossa ovat myös derivaattafunktioiden $f'(x)$, $g'(x)$ ja $h'(x)$ kuvaajat.                
                     </p>
                     <img src="/kurssit/maa6/kuvat/kuvaYO4.png" max-width: 100%; width: auto; height: auto;/> 
-                    <p>
+                         <p>
                         Kopioi alla oleva taulukko vastauspaperiisi ja merkitse siihen, mikä kuvaajista 1−5 esittää kyseessä olevan funktion derivaattaa. Vastausta ei tarvitse perustella. 
                         <br>
                         [Pitkä K2014/2]
                     </p>
                     <img src="/kurssit/maa6/kuvat/kuvaYO5.png" max-width: 100%; width: auto; height: auto;/> 
-                    <h2>
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s3t101_v">
                             Vastaus
                         </a>
@@ -979,9 +982,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t102-ex">
+            <div class="tehtava" id="9a16ad6e-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t102">
 
                         </a>
@@ -1010,20 +1013,20 @@ topnav: maa6
                     </h2>
                     <div id="MAA6s3t102_v" class="collapse">
                         <ol class = "a">
-                        <li> 
-                            <img src="/kurssit/maa6/kuvat/kuva93.png" max-width: 100%; width: auto; height: auto;/> 
-                        </li>
-                        <li>
-                            <img src="/kurssit/maa6/kuvat/kuva94.png" max-width: 100%; width: auto; height: auto;/> 
-                        </li>
-                    </ol>
+                            <li> 
+                                <img src="/kurssit/maa6/kuvat/kuva93.png" max-width: 100%; width: auto; height: auto;/> 
+                            </li>
+                            <li>
+                                <img src="/kurssit/maa6/kuvat/kuva94.png" max-width: 100%; width: auto; height: auto;/> 
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t103-ex">
+            <div class="tehtava" id="9a16af58-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t103">
 
                         </a>
@@ -1048,7 +1051,7 @@ topnav: maa6
                         [Lyhyt S2015/3]
                     </p>
                     <img src="/kurssit/maa6/kuvat/kuvaYO8.png" max-width: 100%; width: auto; height: auto;/> 
-                    <h2>
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s3t103_v">
                             Vastaus
                         </a>
@@ -1069,9 +1072,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t104-ex">
+            <div class="tehtava" id="9a16b048-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t104">
 
                         </a>
@@ -1086,7 +1089,7 @@ topnav: maa6
                         Vinkki: Kannattaa valita $x$-akselilla yksiköksi esimerkiksi $0{,}1$ ja $y$-akselilla $1$. Näin kuva mahtuu mukavasti A4-koon ruutupaperille. Muista ottaa akseleilla käyttämäsi yksiköt huomioon, kun lasket derivaatan likiarvoa.
                     </p>
                     <img src="/kurssit/maa6/kuvat/kuvaYO10.png" max-width: 100%; width: auto; height: auto;/> 
-                    <h2>
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s3t104_v">
                             Vastaus
                         </a>
@@ -1099,9 +1102,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t105-ex">
+            <div class="tehtava" id="9a16b11a-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t105">
 
                         </a>
@@ -1123,20 +1126,20 @@ topnav: maa6
                         [Lyhyt K2010/3]
                     </p>
                     <img src="/kurssit/maa6/kuvat/kuvaYO11.png" max-width: 100%; width: auto; height: auto;/> 
-                    <h2>
+                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA6s3t105_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA6s3t105_v" class="collapse">
                         <ol class="a">
-                        <li> $x = -2$, $x \approx 0{,}5$ ja $x \approx 2{,}8$ </li>
-                        <li> $x = -1$ ja $x = 2$ </li>
-                        <li> $f(-1) \approx 3$ </li>
-                        <li> $f(2) \approx -5$ </li>
-                        <li> $[-2,-1]$ ja $[2,3]$ </li>
-                        <li> $[-1,2]$ </li>
-                    </ol>
+                            <li> $x = -2$, $x \approx 0{,}5$ ja $x \approx 2{,}8$ </li>
+                            <li> $x = -1$ ja $x = 2$ </li>
+                            <li> $f(-1) \approx 3$ </li>
+                            <li> $f(2) \approx -5$ </li>
+                            <li> $[-2,-1]$ ja $[2,3]$ </li>
+                            <li> $[-1,2]$ </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -1151,7 +1154,7 @@ topnav: maa6
 
     <section class="panel">
         <header>
-            <h1>
+            <h1>                        
                 <a data-toggle="collapse" class="collapsed" data-target="#L1itsearviointi">
                     Itsearviointitehtävät
                 </a>
@@ -1159,7 +1162,7 @@ topnav: maa6
         </header>
         <div id="L1itsearviointi" class="collapse">
             <p>
-                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/2013">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
             </p>
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#L1itsearviointi">

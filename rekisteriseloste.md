@@ -17,28 +17,28 @@ PL 68
 
 kisalli-oppiminen@helsinki.fi
 
-## 3. Henkilötietojen käsittelyn tarkoitus
+## 4. Henkilötietojen käsittelyn tarkoitus
 Rekisterin tarkoitus on palveluun rekisteröityneiden käyttäjien tunnistaminen ja käyttäjien palvelussa tapahtuvien opintojen seuraaminen. Lisäksi kerättyä dataa käytetään palvelun kehittämiseen ja tutkimustyöhön.
 
-## 4. Rekisterin tietosisältö
+## 5. Rekisterin tietosisältö
 Rekisteri sisältää tiedot käyttäjän nimestä, sähköpostiosoitteesta sekä tietoa siitä mitä tehtäviä käyttäjä on tehnyt. Järjestelmä sisältää myös tiedot käyttäjien luomista kursseista, niiden aloitus- ja päättymispäivät, kurssiavaimet, tehtävien tavoiteaikataulut ja kursseihin liittyneiden opiskelijoiden tiedot.
 
-## 5. Säännönmukaiset tietolähteet
+## 6. Säännönmukaiset tietolähteet
 Käyttäjän nimi sekä sähköpostiosoite kerätään rekisteröitymisen yhteydessä.
 
 Muut tiedot kerätään käyttäjän käyttäessä järjestelmää tai siihen liittyviä ohjelmia ja verkkosivuja. 
 
-## 6. Tietojen säännönmukaiset luovutukset
+## 7. Tietojen säännönmukaiset luovutukset
 Tietoja ei säännönmukaisesti luovuteta ulkopuolisille tahoille. Tietoja voidaan kuitenkin luovuttaa ylläpidon harkinnan mukaisesti anonymisoituna esimerkiksi akateemista tutkimusta varten.
 
 Tiedot ovat nähtävillä järjestelmän ylläpitäjille. Kurssien opettajille käyttäjän tiedot ovat näkyvillä siltä osin kun hän osallistuu opettajien kursseille.
 
 Rekisterin tietoja ei käytetä kolmansien osapuolien markkinointitarkoituksiin. Käyttäjälle voidaan kuitenkin lähettää sähköpostia järjestelmän ylläpitäjän toimesta.
 
-## 7. Tietojen siirto EU:n tai ETA:n ulkopuolelle
+## 8. Tietojen siirto EU:n tai ETA:n ulkopuolelle
 Rekisterin tiedot tai osaa niistä ei siirretä EU:n tai ETA:n ulkopuolelle.
 
-## 8. Rekisterin suojauksen periaatteet
+## 9. Rekisterin suojauksen periaatteet
 Rekisteri on tallennettu suojatuille palvelimille useaan erilliseen tietokantaan joista vain yksi sisältää käyttäjän henkilötietoja (sähköpostiosoitteen sekä nimen). Muut tietokannat viittaavat vain käyttäjän käyttäjätunnukseen.
 
 Kaikkiin tietokantoihin pääsevät käsiksi vain palvelun ylläpitäjät.

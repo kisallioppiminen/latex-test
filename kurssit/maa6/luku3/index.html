@@ -9,6 +9,8 @@ topnav: maa6
 <input type="hidden" id="chapterNumber" value="3"/>
 <input type="hidden" id="theoremStart" value="4"/>
 
+{% include bottomnav.html %}
+
 <article>
     <section>
         <header>
@@ -46,7 +48,7 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#rationaali1">
                     Murto- ja rationaalilausekkeet
@@ -54,7 +56,7 @@ topnav: maa6
             </h1>
         </header>
         <div id="rationaali1" class="collapse">
-            
+            <div class="teoria">
             <p>
                 Murtolauseke tarkoittaa kahden polynomin osamäärää. Esimerkiksi lausekkeet
                 $$\frac{4x-1}{7-x^2} \quad \text{ ja } \quad \frac{9}{y^3+5y}$$
@@ -72,11 +74,11 @@ topnav: maa6
                 $$
                 Tässä osoittajan termeillä oli yhteinen tekijä $4$, ja nimittäjän termeillä oli yhteinen tekijä $3x$. Kun osoittaja ja nimittäjä kirjoitettiin tulomuotoon, nähtiin molemmissa tekijänä myös lauseke $2x+1$. Se voitiin supistaa pois.
             </p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="firstEx">
+                <div class="tehtava" id="9a16e536-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t301">
                                 Murtolausekkeiden supistaminen
                             </a>
@@ -108,9 +110,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t302-ex">
+                <div class="tehtava" id="9a16e662-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t302">
                                 Murtolausekkeiden supistaminen
                             </a>
@@ -142,9 +144,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t303-ex">
+                <div class="tehtava" id="9a16e734-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t303">
                                 Murtolausekkeiden supistaminen
                             </a>
@@ -176,7 +178,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
                 Murtolukujen tapauksessa luvun ja sen vastaluvun osamäärä on helppo tunnistaa. Esimerkiksi
                 $$\frac{\phantom{-}3}{-3} = -1.$$
@@ -194,11 +196,11 @@ topnav: maa6
                 \frac{x-8}{8-x} = \frac{-1 \cdot (8-x)}{\phantom{-}1 \cdot (8-x)} = \frac{-1}{\phantom{-}1} = -1
                 $$
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t304-ex">
+                <div class="tehtava" id="9a16e7fc-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t304">
                                 Murtolausekkeiden supistaminen
                             </a>
@@ -226,15 +228,15 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
-                <a href="http://kisallioppiminen.fi/kurssit/maa2/luku3/">MAA2-kurssilla</a> johdetut summan ja erotuksen tulon sekä binomien neliöiden muistikaavat ovat välillä tarpeen murtolausekkeiden supistamisessa.
+                <a href="/kurssit/maa2/luku3/">MAA2-kurssilla</a> johdetut summan ja erotuksen tulon sekä binomien neliöiden muistikaavat ovat välillä tarpeen murtolausekkeiden supistamisessa.
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t305-ex">
+                <div class="tehtava" id="9a16e8c4-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t305">
                                 Murtolausekkeiden supistaminen
                             </a>
@@ -266,7 +268,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
                 Ennen yhteen- ja vähennyslaskuja murtoluvut täytyy laventaa samannimisiksi. Laventaminen tarkoittaa, että osoittaja ja nimittäjä kerrotaan samalla luvulla. Tällöin murtoluvusta tulee eri näköinen mutta sen suuruus ei muutu. Esimerkiksi
                 $$
@@ -281,11 +283,11 @@ topnav: maa6
                 \end{align*}
                 Lavennuksen jälkeen osoittajat voitiin yhdistää. Lopuksi vielä tarkistetaan, voiko tulosta supistaa. Tällä kertaa supistaminen ei onnistu, koska osoittajalla ja nimittäjällä ei ole yhteisiä tekijöitä.
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t306-ex">
+                <div class="tehtava" id="9a16ee64-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t306">
                                 Murtolausekkeiden yhteenlasku
                             </a>
@@ -315,7 +317,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
                 Murtolausekkeiden vähennyslaskussa on tärkeää huomata, että lausekkeiden välissä oleva miinusmerkki vaikuttaa sen perässä olevan murtolausekkeen koko osoittajaan. Esimerkiksi
                 \begin{align*}
@@ -324,11 +326,11 @@ topnav: maa6
                 &= \frac{2x-3}{x^2}
                 \end{align*}
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t307-ex">
+                <div class="tehtava" id="9a16f030-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t307">
                                 Murtolausekkeiden vähennyslasku
                             </a>
@@ -358,7 +360,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
                 Murtolukujen kerto- ja jakolaskussa laventamista ei tarvitse tehdä. Kertolaskussa osoittajat kerrotaan keskenään ja nimittäjät kerrotaan keskenään. Esimerkiksi
                 $$
@@ -384,11 +386,11 @@ topnav: maa6
                     &= \frac{x^2}{2x-3}
                 \end{align*}
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t308-ex">
+                <div class="tehtava" id="9a16f1c0-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t308">
                                 Murtolausekkeiden kertolasku
                             </a>
@@ -418,7 +420,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
                 Jakolasku saadaan suoritettua, kun kerrotaan jakajan käänteisluvulla. Esimerkiksi $10 : 2 = 5$ ja samaan tulokseen päästään myös kertomalla jakajan käänteisluvulla:
                 $$
@@ -435,11 +437,11 @@ topnav: maa6
                 Tässä käytettiin MAA2-kurssin <a href="http://kisallioppiminen.fi/kurssit/maa2/luku3/">luvun 3</a> teoreeman 3 summan ja erotuksen tulon kaavaa, jonka mukaan 
                 $$\textcolor{blue}{(x+1)(x-1) = x^2-1}.$$
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t309-ex">
+                <div class="tehtava" id="9a16f332-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t309">
                                 Murtolausekkeiden jakolasku
                             </a>
@@ -469,7 +471,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
                 Rationaalilauseke tarkoittaa polynomien ja murtolausekkeiden summaa. Myös pelkät polynomit ja pelkät murtolausekkeet luetaan mukaan rationaalilausekkeisiin. Rationaalilausekkeita ovat siis esimerkiksi
                 \begin{align*}
@@ -486,11 +488,11 @@ topnav: maa6
                 \end{align*}
                 Huomaa, että tässä jaettava sievennettiin ensin yhdeksi murtolausekkeeksi. 
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t310-ex">
+                <div class="tehtava" id="9a16f436-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t310">
                                 Rationaalilausekkeiden sieventäminen
                             </a>
@@ -520,9 +522,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t311-ex">
+                <div class="tehtava" id="9a16f512-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t311">
                                 Rationaalilausekkeiden sieventäminen
                             </a>
@@ -558,14 +560,15 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
-            <h1>
+        <header class="otsikko">
+            <h1>            
                 <a data-toggle="collapse" class="collapsed" data-target="#rationaali2">
                     Rationaalifunktiot ja -yhtälöt
                 </a>
             </h1>
         </header>
         <div id="rationaali2" class="collapse">
+            <div class="teoria">
 <!-- Tähän myös rationaaliyhtälön ratkaiseminen ja merkin tutkiminen -->
 
             <p>
@@ -575,11 +578,11 @@ topnav: maa6
                 $$
                 on rationaalifunktio. 
             </p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t312-ex">
+                <div class="tehtava" id="9a16f8d2-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t312">
                                 Rationaalifunktio
                             </a>
@@ -641,9 +644,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t313-ex">
+                <div class="tehtava" id="9a16f99a-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t313">
                                 Rationaalifunktio
                             </a>
@@ -684,15 +687,15 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-            
+            <div class="teoria">
             <p>
                 Koska nollalla jakamista ei ole määritelty, rationaalifunktio ei ole määritelty kohdissa, joissa jokin siinä esiintyvistä nimittäjistä saa arvon nolla. 
             </p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="t314-ex">
+                <div class="tehtava" id="9a16fa94-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t314">
                                 Rationaalifunktio
                             </a>
@@ -722,7 +725,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
                 Kun tutkitaan, missä kohdassa jokin rationaalifunktio saa tietyn arvon, päädytään ratkaisemaan niin sanottu rationaaliyhtälö. Esimerkiksi rationaalifunktion $f$ nollakohdat voidaan löytää ratkaisemalla yhtälö $f(x) = 0$.
             </p>
@@ -769,11 +772,11 @@ topnav: maa6
                     \end{align*}
                 Lopuksi tarkistetaan, että kysymyksessä todella on alkuperäisen yhtälön ratkaisu. Tämä voidaan tehdä sijoittamalla ratkaisuehdokas alkuperäiseen yhtälöön tai tarkistamalla, ettei kysymyksessä ole minkään yhtälössä esiintyvän nimittäjän nollakohta. Tässä tarkastellun yhtälön nimittäjien nollakohdat ovat $x = 0$ ja $x = 2$, joten $x = \frac{6}{5}$ todella on yhtälön ratkaisu. (Sijoittamalla havaitaan, että jos $x = \frac{6}{5}$, niin yhtälön vasen ja oikea puoli saavat kumpikin arvon $\frac{5}{2}$.)
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t315-ex">
+                <div class="tehtava" id="9a16fbfc-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t315">
                                 Rationaaliyhtälö
                             </a>
@@ -793,9 +796,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t316-ex">
+                <div class="tehtava" id="9a170052-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t316">
                                 Rationaaliyhtälö
                             </a>
@@ -837,15 +840,15 @@ topnav: maa6
 
 
     <section class="panel">
-        <header>
-            <h1>
+        <header class="otsikko">
+            <h1> 
                 <a data-toggle="collapse" class="collapsed" data-target="#rationaali2b">
                     Rationaaliepäyhtälöt
                 </a>
             </h1>
         </header>
         <div id="rationaali2b" class="collapse">
-
+<div class="teoria">
             <p>
                 Edellisessä kappaleessa harjoiteltiin rationaaliyhtälöiden ratkaisemista. Esimerkiksi yhtälö
                 $$
@@ -933,11 +936,11 @@ topnav: maa6
                 <img src="/kurssit/maa6/kuvat/kuva75.png" max-width: 100%; width: auto; height: auto;/>
                 Funktio $g$ saa siis positiivisia arvoja lukusuoran väleillä $\pa -\infty, -\frac{5}{4} \pe$ ja $\pa \frac{4}{3}, \infty \pe$ ja negatiivisia arvoja lukusuoran välillä $\pa -\frac{5}{4}, \frac{4}{3} \pe$.
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t322-ex">
+                <div class="tehtava" id="9a170160-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t322">
                                 Rationaalifunktion merkki
                             </a>
@@ -971,7 +974,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
                 Rationaaliepäyhtälön ratkaisemisessa ensimmäinen askel on palauttaa tilanne rationaalifunktion merkin tarkasteluun. Käytännössä epäyhtälöä muokataan niin, että sen toiselle puolelle jää nolla. Esimerkiksi epäyhtälö
                 $$
@@ -1028,11 +1031,11 @@ topnav: maa6
                 $$
                 siis toteutuu, jos ja vain jos $-1 < x  < 2$. 
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t323-ex">
+                <div class="tehtava" id="9a170228-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t323">
                                 Rationaaliepäyhtälö
                             </a>
@@ -1076,7 +1079,7 @@ topnav: maa6
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#rationaali3">
                     Rationaalifunktion raja-arvo
@@ -1084,15 +1087,15 @@ topnav: maa6
             </h1>
         </header>
         <div id="rationaali3" class="collapse">
-
+<div class="teoria">
             <p>
-                <a href="http://kisallioppiminen.fi/kurssit/maa6/luku2/">Edellisessä luvussa</a> tutustuttiin funktion raja-arvon käsitteeseen. Tässä kappaleessa tutkitaan tarkemmin rationaalifunktioiden raja-arvoja. 
+                <a href="/kurssit/maa6/luku2/">Edellisessä luvussa</a> tutustuttiin funktion raja-arvon käsitteeseen. Tässä kappaleessa tutkitaan tarkemmin rationaalifunktioiden raja-arvoja. 
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t317-ex">
+                <div class="tehtava" id="9a1702e6-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t317">
                                 Rationaalifunktion raja-arvo
                             </a>
@@ -1142,9 +1145,9 @@ topnav: maa6
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="t318-ex">
+                <div class="tehtava" id="9a1703cc-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t318">
                                 Rationaalifunktion raja-arvo
                             </a>
@@ -1191,7 +1194,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
                 Edellisistä tehtävistä havaitaan, että raja-arvon olemassaolon kannalta kriittisimpiä ovat ne kohdat, joissa rationaalifunktio ei ole määritelty. Jos funktiolla on tällaisessa kohdassa raja-arvo, voidaan se löytää supistamalla funktion lauseketta. Esimerkiksi edellisen tehtävän funktio
                 $$g(x) = \frac{x^2-1}{2x-2}$$
@@ -1202,11 +1205,11 @@ topnav: maa6
                 \end{align*}
                 Tässä osoittaja ja nimittäjä muokattiin ensin tulomuotoon. Supistamisen jälkeen tutkittiin, mitä lausekkeelle tapahtuu, kun lähestytään kohtaa $x = 1$.
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t319-ex">
+                <div class="tehtava" id="9a170566-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t319">
                                 Rationaalifunktion raja-arvo
                             </a>
@@ -1250,7 +1253,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
                 Jos rationaalifunktio on määritelty tarkastelukohdassa, saadaan raja-arvo selvitettyä ilman supistamista. Esimerkiksi 
                 $$\frac{3x}{x^2-4x} \xrightarrow[x \rightarrow 7]{} \frac{3\cdot 7}{7^2 - 4\cdot 7} = \frac{21}{21} = 1,$$
@@ -1260,7 +1263,7 @@ topnav: maa6
                 $$\lim_{x\rightarrow 7} h(x) = 1.$$
                 Tämä itse asiassa tarkoittaa, että funktion $h$ raja-arvo kohdassa $x = 7$ on sama kuin funktion arvo kohdassa $x = 7$:
                 $$\lim_{x\rightarrow 7} h(x) = h(7).$$
-                <a href="http://kisallioppiminen.fi/kurssit/maa6/luku2/">Luvussa 2</a> esitetty jatkuvuuden määritelmän ehto siis toteutuu, joten funktio $h$ on jatkuva kohdassa $x = 7$. 
+                <a href="/kurssit/maa6/luku2/">Luvussa 2</a> esitetty jatkuvuuden määritelmän ehto siis toteutuu, joten funktio $h$ on jatkuva kohdassa $x = 7$. 
             </p>
 
             <p>
@@ -1277,11 +1280,11 @@ topnav: maa6
             <p>
                 Teoreeman 4 mukaan rationaalifunktion raja-arvo on sama kuin funktion arvo kaikissa kohdissa, joissa funktio on määritelty. Erityistä tarkastelua vaativat vain nimittäjän nollakohdat, joissa funktio ei ole määritelty.
             </p>
-        
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t320-ex">
+                <div class="tehtava" id="9a170700-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t320">
                                 Rationaalifunktion raja-arvo
                             </a>
@@ -1316,7 +1319,7 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-
+<div class="teoria">
             <p>
                 Tutkitaan seuraavaksi funktiota
                 $$g(x) = \frac{x^2-16}{x^2 - 8x + 16}$$
@@ -1337,11 +1340,11 @@ topnav: maa6
                 <br>
                 <img src="/kurssit/maa6/kuvat/kuva40.png" max-width: 100%; width: auto; height: auto;/>
             </p>
-
+</div>
             <div class="tehtavat">
-                <div class="tehtava" id="t321-ex">
+                <div class="tehtava" id="9a170a84-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#t321">
                                 Rationaalifunktion raja-arvo
                             </a>
@@ -1388,7 +1391,7 @@ topnav: maa6
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku3-tehtavasarja2">
                     TEHTÄVÄSARJA II
@@ -1399,9 +1402,9 @@ topnav: maa6
         <div id="luku3-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="MAA6s2t302-ex">
+            <div class="tehtava" id="9a170b6a-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t302">
                             Rationaaliyhtälö
                         </a>
@@ -1429,9 +1432,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t303-ex">
+            <div class="tehtava" id="9a170c32-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t303">
                             Rationaaliyhtälö
                         </a>
@@ -1457,9 +1460,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t301-ex">
+            <div class="tehtava" id="9a170cfa-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t301">
                             Rationaaliepäyhtälö
                         </a>
@@ -1484,9 +1487,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t304-ex">
+            <div class="tehtava" id="9a170db8-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t304">
                             Rationaaliyhtälö
                         </a>
@@ -1513,9 +1516,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t305-ex">
+            <div class="tehtava" id="9a17109c-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t305">
                             Rationaaliepäyhtälö
                         </a>
@@ -1543,9 +1546,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t306-ex">
+            <div class="tehtava" id="9a17120e-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t306">
                             Rationaalifunktion raja-arvo
                         </a>
@@ -1573,9 +1576,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s2t307-ex">
+            <div class="tehtava" id="9a17136c-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t307">
                             Rationaalifunktion raja-arvo
                         </a>
@@ -1603,9 +1606,9 @@ topnav: maa6
                 </div>
             </div>
             
-            <div class="tehtava" id="MAA6s2t308-ex">
+            <div class="tehtava" id="9a171556-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t308">
                             Rationaalifunktion raja-arvo
                         </a>
@@ -1646,7 +1649,7 @@ topnav: maa6
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku3-tehtavasarja3">
                     TEHTÄVÄSARJA III
@@ -1657,9 +1660,9 @@ topnav: maa6
         <div id="luku3-tehtavasarja3" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="MAA6s3t304-ex">
+            <div class="tehtava" id="9a171970-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t304">
 
                         </a>
@@ -1689,9 +1692,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t305-ex">
+            <div class="tehtava" id="9a171aa6-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t305">
 
                         </a>
@@ -1735,9 +1738,9 @@ topnav: maa6
             </div>
 
 
-            <div class="tehtava" id="MAA6s3t301-ex">
+            <div class="tehtava" id="9a171c86-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t301">
 
                         </a>
@@ -1783,9 +1786,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t302-ex">
+            <div class="tehtava" id="9a171de4-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t302">
 
                         </a>
@@ -1814,9 +1817,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t303-ex">
+            <div class="tehtava" id="9a1722d0-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t303">
 
                         </a>
@@ -1843,9 +1846,9 @@ topnav: maa6
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA6s3t306-ex">
+            <div class="tehtava" id="9a172424-7ec6-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s3t306">
 
                         </a>
@@ -1887,7 +1890,7 @@ topnav: maa6
 
     <section class="panel">
         <header>
-            <h1>
+            <h1> 
                 <a data-toggle="collapse" class="collapsed" data-target="#L3itsearviointi">
                     Itsearviointitehtävät
                 </a>

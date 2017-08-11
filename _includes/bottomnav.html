@@ -1,0 +1,101 @@
+<style>
+    label.toggleDivVisibilityLabel {
+        line-height: 20px;
+    }
+    label.switch {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px;
+    }
+    #scrollToTop {
+        z-index: 99;
+        display: none;
+        bottom: 6px; 
+        float: right;
+        border: none; 
+        outline: none;
+        background-color: #4da851;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #scrollToTop:hover {
+        background-color: #52CD57;
+    }
+    div.SaveScheduleChangesDiv {
+        display: none;
+        vertical-align: middle;
+        margin: 10px;
+    }
+    .btn-saveChanges {
+        color: black;
+        background-color: #de5b5b;
+        border-color: #bf3e3e;
+        line-height: 20px;
+        border-radius: 20px;
+    }
+</style>
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom" id="bottomNav" style="max-width: 100%; max-height: 80px">
+    <div class="container-fluid" style="max-width: 1150px;">
+
+        <label class="toggleDivVisibilityLabel" for="tehtava">Tehtävät</label>
+        <label class="switch">
+            <input class="toggleDivVisibility" id="tehtava" type="checkbox" checked>
+            <div class="slider round"></div>
+        </label>
+
+        <label class="toggleDivVisibilityLabel" for="teoria">Teoria</label>
+        <label class="switch" >
+            <input class="toggleDivVisibility" id="teoria" type="checkbox" checked>
+            <div class="slider round"></div>
+        </label>
+
+        <label class="toggleDivVisibilityLabel" for="avaa_kaikki">Avaa kaikki</label>
+        <label class="switch" >
+            <input class="toggleDivVisibility" id="avaa_kaikki" type="checkbox">
+            <div class="slider round"></div>
+        </label>
+
+        <div class="SaveScheduleChangesDiv">
+            <button id="saveScheduleButton" type="button" class="btn btn-saveChanges">Tallenna muutokset!</button>
+        </div>
+
+        <!-- Scroll to top button -->
+        <button onclick="topFunction()" id="scrollToTop" title="Takaisin ylös"> ⬆ </button>
+
+    </div>
+</nav>
+
+<script>
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            document.getElementById("scrollToTop").style.display = "block";
+        } else {
+            document.getElementById("scrollToTop").style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    $("#avaa_kaikki").on("change", function(e) {
+        let isChecked = $(this).prop("checked");
+        if (isChecked) {
+            $(".collapse").collapse("show");
+        } else {
+            $(".collapse").collapse("hide");
+        }
+    })
+</script>

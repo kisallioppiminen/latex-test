@@ -2,6 +2,11 @@
 layout: compress
 ---
 
+<!-- numbering4print.js need JQuery so it need to be loaded here also-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="/js/numbering4print.js"></script>
+
 <style>
         
         div.print-link {
@@ -46,7 +51,7 @@ layout: compress
 			{% include footer.html %}
 		{% endif %}
 
-		{% include foot.html %}
+		{% include scripts.html %}
 
 	</body>
 

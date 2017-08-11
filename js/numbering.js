@@ -11,7 +11,8 @@ var SITE = {
             }
             
             var exCount = (index + 1);
-            var exName = "Tehtävä " + chNumber + "." + exCount + ": " + $(value).find("h1 a").text();
+            var problemNumber = chNumber + "." + exCount;
+            var exName = "Tehtävä " + problemNumber + ": " + $(value).find("h1 a").text();
 
              // add assignments to toc 
 //            $("#tehtavat-toc").append("<li><a data-toggle='collapse' href='" + $(value).find("h1 a").attr("href") + "'>" + exName + "</a></li>");
@@ -19,13 +20,55 @@ var SITE = {
             // add links to assignment names
 //            $(value).attr("id", $(value).find("h1 a").attr("href").substring(1) + "-ex");
 
+
             // relabel assignments
             $(value).find("header h1 a").text(exName);
 
+            // Problem ID
+            /*var problemID = this.id;
+
+            if (session.getUserId() !== undefined) {
+                // Insert button group here
+                var $input = $('<div class="problemButtonWrap"><h3 id="textbar_' + problemID + '">Miten tehtävä meni?</h3><div class="btn-group btn-group"><button data-toggle="tooltip" title="En osannut tehtävää. Tarvitsen apua." class="problemButton btn btn-danger btn-primary" id=' + "0;" + problemID + '><img class="face" src="/img/faces/sad.svg"></button>'
+                        + '<button data-toggle="tooltip" title="Ratkaisin tehtävän, mutta olen epävarma vastauksesta." class="problemButton btn btn-warning btn-primary" id=' + "1;" + problemID + '><img class="face" src="/img/faces/meh.svg"></button>'
+                        + '<button data-toggle="tooltip" title="Ratkaisin tehtävän ja osaan tämän." class="problemButton btn btn-success btn-primary" id=' + "2;" + problemID + '><img class="face" src="/img/faces/happy.svg"></button></div></div>');
+                $(value).find("div:first").append($input);
+            }*/
+
+            // $(value).find("header").append(buttonHTML);
+
+
+            // relabel IDs
+            // $(value).attr("id", problemID);
+
             // tag subassignments
+
+
             $(value).find("div h1").each(function(subIndex, value) {
                 $(value).text(exCount + "." + (subIndex + 1) + ": " + $(value).text());
             });
+
+
+        });
+
+        $(".panel").each(function(index, value) {
+            let firstExercise;
+            let lastExercise;
+
+            $(this).find('.tehtava').each(function(index, value) {
+                if (index === 0) {
+                    firstExercise = $(this).find('header h1').text();
+                };
+
+                lastExercise = $(this).find('header h1').text();
+            });
+
+            $(this).find('.otsikko').each(function(index, value) {
+                var exHeader = $(value).find("h1 a").text();
+                var newHeader = exHeader + " ("+ /[0-9].[0-9]+/.exec(firstExercise)[0] + " - " + /[0-9].[0-9]+/.exec(lastExercise)[0] + ")";
+                $(value).find("h1 a").text(newHeader);
+            });
+
         });
         
         if ($('#theoremStart').val() == null) {
@@ -122,6 +165,5 @@ var SITE = {
 
 
 $(function() {
-    console.log("Init site");
     SITE.init();
 });

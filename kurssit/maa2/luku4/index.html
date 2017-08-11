@@ -1,5 +1,5 @@
 ---
-title: MAA2 - Polynomifunktiot ja -yhtälöt 
+title: MAA2 - Polynomifunktiot ja -yhtälöt
 layout: material
 sitemap: true
 main-class: has-atop
@@ -15,6 +15,8 @@ topnav: maa2
         padding: 5px;
     }
 </style>
+
+{% include bottomnav.html %}
 
 <input type="hidden" id="theoremStart" value="9"/>
 <input type="hidden" id="chapterNumber" value="4"/>
@@ -38,7 +40,7 @@ topnav: maa2
             <div class="objective">
 
                 <p>
-                    Tämän luvun tavoitteena on, että tunnet korkeamman asteen potenssifunktiot ja korkeammat juuret. Lisäksi vahvistat edellisissä luvuissa oppimiasi taitoja ja sovellat niitä korkeamman asteen yhtälöiden ja epäyhtälöiden ratkaisemiseen. Osaat 
+                    Tämän luvun tavoitteena on, että tunnet korkeamman asteen potenssifunktiot ja korkeammat juuret. Lisäksi vahvistat edellisissä luvuissa oppimiasi taitoja ja sovellat niitä korkeamman asteen yhtälöiden ja epäyhtälöiden ratkaisemiseen. Osaat
                 <ul>
                     <li> hahmotella potenssifunktioiden kuvaajat ja tiedät, miten funktion lauseke vaikuttaa kuvaajan muotoon </li>
                     <li> määrittää korkeampien juurten tarkkoja arvoja määritelmän perusteella tapauksissa, joissa tuloksena on luonnollinen luku tai rationaaliluku</li>
@@ -53,7 +55,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#potenssifunktiotJuuret">
                     Korkeamman asteen potenssifunktiot ja juuret
@@ -62,37 +64,40 @@ topnav: maa2
         </header>
         <div id="potenssifunktiotJuuret" class="collapse">
 
-            <p>
-                Kurssin alkupuolella tutustuttiin toisen asteen potenssifunktioon $f(x) = x^2$, jonka kuvaaja on $y$-akselin suhteen symmetrinen paraabeli:
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/PFk1.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p> 
-                Tässä kappaleessa tutkitaan muita potenssifunktioita ja sekä niin sanottuja korkeampia juuria.
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: POTENSSIFUNKTIO</h3>
+            <div class="teoria">
                 <p>
-                    Oletetaan, että $n$ on positiivinen kokonaisluku. Funktioita, jotka ovat muotoa $f(x) = x^n$, sanotaan <em>potenssifunktioiksi</em>.
+                    Kurssin alkupuolella tutustuttiin toisen asteen potenssifunktioon $f(x) = x^2$, jonka kuvaaja on $y$-akselin suhteen symmetrinen paraabeli:
                 </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk1.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Tässä kappaleessa tutkitaan muita potenssifunktioita ja sekä niin sanottuja korkeampia juuria.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: POTENSSIFUNKTIO</h3>
+                    <p>
+                        Oletetaan, että $n$ on positiivinen kokonaisluku. Funktioita, jotka ovat muotoa $f(x) = x^n$, sanotaan <em>potenssifunktioiksi</em>.
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="firstEx">
+                <div class="tehtava" id="b1589e82-503f-44b4-aa40-944722cf7584">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat1">
-                               Potenssifunktio
+                                Potenssifunktio
                             </a>
                         </h1>
                     </header>
                     <div id="korkeammat1" class="collapse">
                         <p> Alla on näkyvissä potenssifunktioiden kuvaajia. Täydennä alla oleva taulukko yhdistämällä jokainen kuvaaja oikeaan funktioon.
-                        </p>  
+                        </p>
                         <div align="center">
-                            <table style="width = 75%"> 
+                            <table style="width = 75%">
                                 <tr>
                                     <th> Funktio </th>
                                     <th> Kuvaaja </th>
@@ -113,26 +118,27 @@ topnav: maa2
                                     <td> $k(x) = x^6$ </td>
                                     <td>  </td>
                                 </tr>
-                            </table> 
+                            </table>
                         </div>
                         <p>
-                        <img src="/kurssit/maa2/kuvat/KAk1.png" style="float: left; width: 45%; margin-left: 4%; margin-right: 1%; margin-bottom: 0.5em;">   
-                        <img src="/kurssit/maa2/kuvat/KAk2.png" style="float: left; width: 45%; margin-left: 1%; margin-right: 4%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/KAk1.png" style="float: left; width: 45%; margin-left: 4%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/KAk2.png" style="float: left; width: 45%; margin-left: 1%; margin-right: 4%; margin-bottom: 0.5em;">
                         <p style="clear: both;"></p>
                         <p>
-                        <img src="/kurssit/maa2/kuvat/Kak3.png" style="float: left; width: 45%; margin-left: 4%; margin-right: 1%; margin-bottom: 0.5em;">   
-                        <img src="/kurssit/maa2/kuvat/KAk4.png" style="float: left; width: 45%; margin-left: 1%; margin-right: 4%; margin-bottom: 0.5em;">  </p>
+                            <img src="/kurssit/maa2/kuvat/Kak3.png" style="float: left; width: 45%; margin-left: 4%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/KAk4.png" style="float: left; width: 45%; margin-left: 1%; margin-right: 4%; margin-bottom: 0.5em;">  </p>
                         <p style="clear: both;"></p>
                     </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat2-ex">
+                <div class="tehtava" id="a0208358-1664-447e-bd65-7da5d931fc28">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat2">
-                               Potenssifunktio
+                                Potenssifunktio
                             </a>
                         </h1>
                     </header>
@@ -141,7 +147,7 @@ topnav: maa2
                             Alla olevassa kuvassa on näkyvissä esimerkki funktiosta $g$, jonka kuvaaja on symmetrinen $y$-akselin suhteen. (Funktio $g$ ei ole potenssifunktio.)
                         </p>
                         <p>
-                        <img src="/kurssit/maa2/kuvat/KAk5.png" max-width: 100%; width: auto; height: auto;/> 
+                            <img src="/kurssit/maa2/kuvat/KAk5.png" max-width: 100%; width: auto; height: auto;/>
                         </p>
                         <ol class ="a">
                             <li> Tarkastele yllä olevaa funktion $g$ kuvaajaa. Vertaa arvoja $g(-3)$ ja $g(3)$ sekä arvoja $g(-2)$ ja $g(2)$. Mitä havaitset?</li>
@@ -153,11 +159,12 @@ topnav: maa2
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat3-ex">
+                <div class="tehtava" id="0a4aa309-3c71-4d92-9c81-299ff80bc22e">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat3">
-                               Potenssifunktio
+                                Potenssifunktio
                             </a>
                         </h1>
                     </header>
@@ -166,7 +173,7 @@ topnav: maa2
                             Alla olevassa kuvassa on näkyvissä esimerkki funktiosta $g$, jonka kuvaaja on symmetrinen origon eli pisteen $(0,0)$ suhteen. (Funktio $g$ ei ole potenssifunktio.)
                         </p>
                         <p>
-                        <img src="/kurssit/maa2/kuvat/KAk6.png" max-width: 100%; width: auto; height: auto;/> 
+                            <img src="/kurssit/maa2/kuvat/KAk6.png" max-width: 100%; width: auto; height: auto;/>
                         </p>
                         <ol class ="a">
                             <li> Tarkastele yllä olevaa funktion $g$ kuvaajaa. Vertaa arvoja $g(-3)$ ja $g(3)$ sekä arvoja $g(-1)$ ja $g(1)$. Mitä havaitset?</li>
@@ -177,39 +184,42 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Kolmannen asteen potenssifunktion $f(x) = x^3$ kuvaajasta voidaan päätellä, että yhtälöllä $x^3 = a$ on yksi ratkaisu, olipa $a$ mikä tahansa reaaliluku. Esimerkiksi alla olevassa kuvassa on merkitty yhtälön $x^3 = -2$ ratkaisua kirjaimella $b$:
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/KAk7.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p> Yhtälön $x^3 = -2$ ratkaisua sanotaan luvun $-2$ kuutiojuureksi. Luvun $-2$ kuutiojuuri on siis se luku, jonka kolmas potenssi on $-2$. Vastaavasti määritellään muidenkin lukujen kuutiojuuret.
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: KUUTIOJUURI</h3>
+            <div class="teoria">
                 <p>
-                    Luvun $a$ <em>kuutiojuuri</em> tarkoittaa lukua $b$, jolle pätee 
-                    $$b^3 = a.$$
-                    Luvun $a$ kuutiojuurelle käytetään merkintää $\sqrt[3]{a}.$
+                    Kolmannen asteen potenssifunktion $f(x) = x^3$ kuvaajasta voidaan päätellä, että yhtälöllä $x^3 = a$ on yksi ratkaisu, olipa $a$ mikä tahansa reaaliluku. Esimerkiksi alla olevassa kuvassa on merkitty yhtälön $x^3 = -2$ ratkaisua kirjaimella $b$:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/KAk7.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p> Yhtälön $x^3 = -2$ ratkaisua sanotaan luvun $-2$ kuutiojuureksi. Luvun $-2$ kuutiojuuri on siis se luku, jonka kolmas potenssi on $-2$. Vastaavasti määritellään muidenkin lukujen kuutiojuuret.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KUUTIOJUURI</h3>
+                    <p>
+                        Luvun $a$ <em>kuutiojuuri</em> tarkoittaa lukua $b$, jolle pätee
+                        $$b^3 = a.$$
+                        Luvun $a$ kuutiojuurelle käytetään merkintää $\sqrt[3]{a}.$
+                    </p>
+                </div>
+
+                <p>
+                    Luvun $a$ kuutiojuurelle pätee siis määritelmän mukaan $\left(\sqrt[3]{a}\right)^3 = a$. Kuutiojuuri $\sqrt[3]{a}$ on toiselta nimeltään luvun $a$ <em>kolmas juuri</em>.
+                </p>
+
+                <p>
+                    Kuutiojuuren merkintää käyttäen edellinen kuva näyttää tältä:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/KAk8.png" max-width: 100%; width: auto; height: auto;/>
                 </p>
             </div>
 
-            <p>
-                Luvun $a$ kuutiojuurelle pätee siis määritelmän mukaan $\left(\sqrt[3]{a}\right)^3 = a$. Kuutiojuuri $\sqrt[3]{a}$ on toiselta nimeltään luvun $a$ <em>kolmas juuri</em>.
-            </p>
-
-            <p>
-                Kuutiojuuren merkintää käyttäen edellinen kuva näyttää tältä:
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/KAk8.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat4-ex">
+                <div class="tehtava" id="44eb3397-7925-4333-b31e-8aba34c798f5">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat4">
                                 Kuutiojuuri
                             </a>
@@ -228,35 +238,38 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Määritellään seuraavaksi muut niin sanotut korkeammat juuret. Niitä tarvitaan, kun tutkitaan potenssiyhtälöiden $x^n = a$ ratkaisuja tapauksissa, joissa kokonaisluku $n \geq 4$. Seuraava määritelmä sisältää myös neliöjuuren ja kuutiojuuren määritelmät.
-            </p>
+            <div class="teoria">
+                <p>
+                    Määritellään seuraavaksi muut niin sanotut korkeammat juuret. Niitä tarvitaan, kun tutkitaan potenssiyhtälöiden $x^n = a$ ratkaisuja tapauksissa, joissa kokonaisluku $n \geq 4$. Seuraava määritelmä sisältää myös neliöjuuren ja kuutiojuuren määritelmät.
+                </p>
 
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: N:S JUURI</h3>
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: N:S JUURI</h3>
                     <ul>
-                        <li> Jos $n \geq 2$ on parillinen kokonaisluku ja $a \geq 0$, luvun $a$ <em>$n$:s juuri</em> $\sqrt[n]{a}$ tarkoittaa lukua $b \geq 0$, jolle pätee 
-                        $$b^n = a.$$</li>
-                        <li> Jos $n \geq 3$ on pariton kokonaisluku, luvun $a$ <em>$n$:s juuri</em> $\sqrt[n]{a}$ tarkoittaa lukua $b$, jolle pätee 
-                        $$b^n = a.$$</li>
+                        <li> Jos $n \geq 2$ on parillinen kokonaisluku ja $a \geq 0$, luvun $a$ <em>$n$:s juuri</em> $\sqrt[n]{a}$ tarkoittaa lukua $b \geq 0$, jolle pätee
+                            $$b^n = a.$$</li>
+                        <li> Jos $n \geq 3$ on pariton kokonaisluku, luvun $a$ <em>$n$:s juuri</em> $\sqrt[n]{a}$ tarkoittaa lukua $b$, jolle pätee
+                            $$b^n = a.$$</li>
                     </ul>
+                </div>
+
+                <p>
+                    Huomaa, että parillisten juurten tapauksessa juuri $\sqrt[n]{a}$ on määritelty vain siinä tapauksessa, että juurrettava $a$ on epänegatiivinen eli $a \geq 0$. Tällöin $\sqrt[n]{a}$ tarkoittaa yhtälön $x^n = a$ epänegatiivista ratkaisua. Esimerkiksi alla olevassa kuvassa on havainnollistettu luvun $3$ neljättä juurta $\sqrt[4]{3}$:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/KAk9.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+
+                <p>
+                    On mahdollista osoittaa, että korkeammat juuret noudattavat samoja laskusääntöjä kuin neliöjuuri. Teoreemojen 1 ja 2 tulokset pätevät siis myös korkeampien juurten tapauksessa.
+                </p>
             </div>
 
-            <p> 
-                Huomaa, että parillisten juurten tapauksessa juuri $\sqrt[n]{a}$ on määritelty vain siinä tapauksessa, että juurrettava $a$ on epänegatiivinen eli $a \geq 0$. Tällöin $\sqrt[n]{a}$ tarkoittaa yhtälön $x^n = a$ epänegatiivista ratkaisua. Esimerkiksi alla olevassa kuvassa on havainnollistettu luvun $3$ neljättä juurta $\sqrt[4]{3}$:
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/KAk9.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-
-            <p>
-                On mahdollista osoittaa, että korkeammat juuret noudattavat samoja laskusääntöjä kuin neliöjuuri. Teoreemojen 1 ja 2 tulokset pätevät siis myös korkeampien juurten tapauksessa.
-            </p>    
-
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat5-ex">
+                <div class="tehtava" id="2d500124-e36f-43a5-9cd1-60a4fa048631">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat5">
                                 Korkeampia juuria
                             </a>
@@ -275,19 +288,22 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Potenssiyhtälöiden $x^n = a$ ratkaisut saadaan ilmaistua juurten avulla. Ratkaisujen lukumäärä täytyy päätellä siitä, onko eksponentti $n$ parillinen vai pariton. Esimerkiksi yhtälöllä $x^4 = 3$ on kaksi ratkaisua mutta yhtälöllä $x^3 = 3$ vain yksi ratkaisu:
-            </p>
-            <p>
-                <img src="/kurssit/maa2/kuvat/KAk10.png" style="float: left; width: 45%; margin-left: 4%; margin-right: 1%; margin-bottom: 0.5em;">   
-                <img src="/kurssit/maa2/kuvat/KAk11.png" style="float: left; width: 45%; margin-left: 1%; margin-right: 4%; margin-bottom: 0.5em;">
+            <div class="teoria">
+                <p>
+                    Potenssiyhtälöiden $x^n = a$ ratkaisut saadaan ilmaistua juurten avulla. Ratkaisujen lukumäärä täytyy päätellä siitä, onko eksponentti $n$ parillinen vai pariton. Esimerkiksi yhtälöllä $x^4 = 3$ on kaksi ratkaisua mutta yhtälöllä $x^3 = 3$ vain yksi ratkaisu:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/KAk10.png" style="float: left; width: 45%; margin-left: 4%; margin-right: 1%; margin-bottom: 0.5em;">
+                    <img src="/kurssit/maa2/kuvat/KAk11.png" style="float: left; width: 45%; margin-left: 1%; margin-right: 4%; margin-bottom: 0.5em;">
                 <p style="clear: both;">
-            </p>
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat6-ex">
+                <div class="tehtava" id="e5522309-edae-479c-8883-64a246c1ae28">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat6">
                                 Potenssiyhtälöitä
                             </a>
@@ -310,7 +326,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#murtopotenssit">
                     Murtopotenssit
@@ -318,38 +334,41 @@ topnav: maa2
             </h1>
         </header>
         <div id="murtopotenssit" class="collapse">
-            <p>
-                Kurssissa MAY1 määriteltiin, mitä tarkoitetaan potenssilla, jossa eksponenttina on kokonaisluku. Sovittiin, että jos $n$ on positiivinen kokonaisluku, niin 
-                $$a^n = \underbrace{a \cdot a \cdots a}_\text{$n$ kappaletta}.$$
-                Lisäksi sovittiin, että jos $a \neq 0$, niin $a^0 = 1$ ja 
-                $$a^{-n} = \frac{1}{a^n}.$$
-                Potenssin määritelmää voidaan laajentaa kattamaan myös tilanteet, joissa kantaluku on positiivinen ja eksponenttina on mikä tahansa rationaaliluku:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: POTENSSI</h3>
+            <div class="teoria">
                 <p>
-                    Oletetaan, että $a > 0$. Oletetaan lisäksi, että $m$ ja $n$ ovat positiivisia kokonaislukuja. Potenssit $a^\frac{m}{n}$ ja $a^{-\frac{m}{n}}$ määritellään seuraavasti:
-                    \begin{align*}
-                    a^\frac{m}{n} &= \sqrt[n]{a^m} \\[1mm]
-                    a^{-\frac{m}{n}} &= \frac{1}{\sqrt[n]{a^m}} 
-                    \end{align*}
+                    Kurssissa MAY1 määriteltiin, mitä tarkoitetaan potenssilla, jossa eksponenttina on kokonaisluku. Sovittiin, että jos $n$ on positiivinen kokonaisluku, niin
+                    $$a^n = \underbrace{a \cdot a \cdots a}_\text{$n$ kappaletta}.$$
+                    Lisäksi sovittiin, että jos $a \neq 0$, niin $a^0 = 1$ ja
+                    $$a^{-n} = \frac{1}{a^n}.$$
+                    Potenssin määritelmää voidaan laajentaa kattamaan myös tilanteet, joissa kantaluku on positiivinen ja eksponenttina on mikä tahansa rationaaliluku:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: POTENSSI</h3>
+                    <p>
+                        Oletetaan, että $a > 0$. Oletetaan lisäksi, että $m$ ja $n$ ovat positiivisia kokonaislukuja. Potenssit $a^\frac{m}{n}$ ja $a^{-\frac{m}{n}}$ määritellään seuraavasti:
+                        \begin{align*}
+                        a^\frac{m}{n} &= \sqrt[n]{a^m} \\[1mm]
+                        a^{-\frac{m}{n}} &= \frac{1}{\sqrt[n]{a^m}}
+                        \end{align*}
+                    </p>
+                </div>
+
+                <p>
+                    Potenssi $a^\frac{m}{n}$ on siis $n$:s juuri luvusta $a^m$. Erityisesti pontenssi $a^\frac{1}{n}$ on $n$:s juuri luvusta $a$. Esimerkiksi
+                    $$64^\frac{1}{3} = \sqrt[3]{64} = 4.$$
+                    Potenssi $a^{-\frac{m}{n}}$ on puolestaan potenssin $a^\frac{m}{n}$ käänteisluku samaan tapaan kuin kokonaislukueksponenttien tapauksessa.
+                </p>
+                <p>
+                    Kun murtopotenssit määritellään kuten edellä, voidaan osoittaa, että vanhat tutut potenssien laskusäännöt ovat edelleen voimassa. Kurssin MAY1 teoreeman 1 tulokset pätevät siis myös tilanteessa, jossa eksponenttina on mikä tahansa rationaaliluku, kunhan kantaluvut ovat positiivisia.
                 </p>
             </div>
 
-            <p> 
-                Potenssi $a^\frac{m}{n}$ on siis $n$:s juuri luvusta $a^m$. Erityisesti pontenssi $a^\frac{1}{n}$ on $n$:s juuri luvusta $a$. Esimerkiksi
-                $$64^\frac{1}{3} = \sqrt[3]{64} = 4.$$
-                Potenssi $a^{-\frac{m}{n}}$ on puolestaan potenssin $a^\frac{m}{n}$ käänteisluku samaan tapaan kuin kokonaislukueksponenttien tapauksessa.
-            </p>
-            <p>
-                Kun murtopotenssit määritellään kuten edellä, voidaan osoittaa, että vanhat tutut potenssien laskusäännöt ovat edelleen voimassa. Kurssin MAY1 teoreeman 1 tulokset pätevät siis myös tilanteessa, jossa eksponenttina on mikä tahansa rationaaliluku, kunhan kantaluvut ovat positiivisia.
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat7-ex">
+                <div class="tehtava" id="862ba167-c91a-4e27-abad-766282cadf9d">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat7">
                                 Murtopotenssi
                             </a>
@@ -370,9 +389,10 @@ topnav: maa2
 
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat8-ex">
+                <div class="tehtava" id="b3516039-e979-47ee-9833-d3dc1a834f40">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat8">
                                 Murtopotenssi
                             </a>
@@ -393,14 +413,17 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Murtopotensseja voidaan käyttää juurilausekkeiden sieventämisessä. Tätä harjoitellaan seuraavassa tehtävässä.
-            </p>
+            <div class="teoria">
+                <p>
+                    Murtopotensseja voidaan käyttää juurilausekkeiden sieventämisessä. Tätä harjoitellaan seuraavassa tehtävässä.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat9-ex">
+                <div class="tehtava" id="56064944-6b55-4f5b-b7c2-eb40fd906ddf">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat9">
                                 Murtopotenssi
                             </a>
@@ -422,7 +445,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#polynomifunktiot">
                     Korkeamman asteen polynomifunktiot
@@ -431,37 +454,40 @@ topnav: maa2
         </header>
         <div id="polynomifunktiot" class="collapse">
 
-            <p>
-                Aikaisemmin tällä kurssilla on tutustuttu ensimmäisen asteen polynomifunktioihin, jotka ovat muotoa $f(x) = ax + b$, ja toisen asteen polynomifunktioihin, jotka ovat muotoa $f(x) = ax^2 + bx + c$. Samalla idealla voidaan määritellä muut polynomifunktiot:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: POLYNOMIFUNKTIO</h3>
+            <div class="teoria">
                 <p>
-                    Olkoon $n$ positiivinen kokonaisluku. Funktiota $f$, joka on muotoa 
-                    $$f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0,$$ 
-                    missä $a_n\neq 0$, sanotaan <em>$n$:nnen asteen polynomifunktioksi</em>.
+                    Aikaisemmin tällä kurssilla on tutustuttu ensimmäisen asteen polynomifunktioihin, jotka ovat muotoa $f(x) = ax + b$, ja toisen asteen polynomifunktioihin, jotka ovat muotoa $f(x) = ax^2 + bx + c$. Samalla idealla voidaan määritellä muut polynomifunktiot:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: POLYNOMIFUNKTIO</h3>
+                    <p>
+                        Olkoon $n$ positiivinen kokonaisluku. Funktiota $f$, joka on muotoa
+                        $$f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0,$$
+                        missä $a_n\neq 0$, sanotaan <em>$n$:nnen asteen polynomifunktioksi</em>.
+                    </p>
+                </div>
+
+                <p>
+                    Esimerkiksi funktio $g(x) = x^4+15x^3-2$ on neljännen asteen polynomifunktio ja funktio $h(x) = 0{,}2x^9-6x^5+x$ on yhdeksännen asteen polynomifunktio. Potenssifunktiot $f(x) = x^n$ ovat nekin esimerkkejä polynomifunktioista. Niillä $a_n = 1$ ja muut kertoimet ovat nollia: $a_{n-1} = 0$, $\ldots$, $a_0 = 0$.
                 </p>
             </div>
 
-            <p>
-                Esimerkiksi funktio $g(x) = x^4+15x^3-2$ on neljännen asteen polynomifunktio ja funktio $h(x) = 0{,}2x^9-6x^5+x$ on yhdeksännen asteen polynomifunktio. Potenssifunktiot $f(x) = x^n$ ovat nekin esimerkkejä polynomifunktioista. Niillä $a_n = 1$ ja muut kertoimet ovat nollia: $a_{n-1} = 0$, $\ldots$, $a_0 = 0$.
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat10-ex">
+                <div class="tehtava" id="1751682a-9c93-404d-8a32-4297e934b298">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat10">
-                               Polynomifunktio
+                                Polynomifunktio
                             </a>
                         </h1>
                     </header>
                     <div id="korkeammat10" class="collapse">
                         <p> Alla on näkyvissä polynomifunktioiden kuvaajia. Täydennä alla oleva taulukko kirjaamalla näkyviin funktioiden asteluvut ja yhdistämällä jokainen kuvaaja oikeaan funktioon.
-                        </p>  
+                        </p>
                         <div align="center">
-                            <table style="width = 75%"> 
+                            <table style="width = 75%">
                                 <tr>
                                     <th> Funktio </th>
                                     <th> Aste </th>
@@ -487,28 +513,31 @@ topnav: maa2
                                     <td>  </td>
                                     <td>  </td>
                                 </tr>
-                            </table> 
+                            </table>
                         </div>
                         <p>
-                        <img src="/kurssit/maa2/kuvat/KAk12.png" style="float: left; width: 45%; margin-left: 4%; margin-right: 1%; margin-bottom: 0.5em;">   
-                        <img src="/kurssit/maa2/kuvat/KAk13.png" style="float: left; width: 45%; margin-left: 1%; margin-right: 4%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/KAk12.png" style="float: left; width: 45%; margin-left: 4%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/KAk13.png" style="float: left; width: 45%; margin-left: 1%; margin-right: 4%; margin-bottom: 0.5em;">
                         <p style="clear: both;"></p>
                         <p>
-                        <img src="/kurssit/maa2/kuvat/KAk14.png" style="float: left; width: 45%; margin-left: 4%; margin-right: 1%; margin-bottom: 0.5em;">   
-                        <img src="/kurssit/maa2/kuvat/KAk15.png" style="float: left; width: 45%; margin-left: 1%; margin-right: 4%; margin-bottom: 0.5em;">  </p>
+                            <img src="/kurssit/maa2/kuvat/KAk14.png" style="float: left; width: 45%; margin-left: 4%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/KAk15.png" style="float: left; width: 45%; margin-left: 1%; margin-right: 4%; margin-bottom: 0.5em;">  </p>
                         <p style="clear: both;"></p>
                     </div>
                 </div>
             </div>
 
-            <p>
-                Kun tutkitaan, missä kohdassa jokin korkeamman asteen polynomifunktio saa tietyn arvon, päädytään korkeamman asteen yhtälöön. Tällaisten yhtälöiden ratkaiseminen voi olla joskus hyvin monimutkaista, mutta joissakin tapauksissa ratkaisu onnistuu tulon nollasäännön avulla.
-            </p>
+            <div class="teoria">
+                <p>
+                    Kun tutkitaan, missä kohdassa jokin korkeamman asteen polynomifunktio saa tietyn arvon, päädytään korkeamman asteen yhtälöön. Tällaisten yhtälöiden ratkaiseminen voi olla joskus hyvin monimutkaista, mutta joissakin tapauksissa ratkaisu onnistuu tulon nollasäännön avulla.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat11-ex">
+                <div class="tehtava" id="d389cc65-2626-4e9b-b64d-8b0b97ff24d2">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat11">
                                 Ratkaisu tulon nollasäännön avulla
                             </a>
@@ -526,9 +555,10 @@ topnav: maa2
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat12-ex">
+                <div class="tehtava" id="bb3c0ade-0dc1-4e34-98d4-43072e577338">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat12">
                                 Ratkaisu tulon nollasäännön avulla
                             </a>
@@ -546,21 +576,24 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Joissakin tapauksissa yhteinen tekijä voi olla monimutkaisempi kuin pelkkä $x$ tai $x^2$. Esimerkiksi yhtälössä 
-                $$x^3-3x^2-4x+12 = 0$$
-                termit voidaan ryhmitellä niin, että yhteinen tekijä paljastuu:
-                \begin{align*}
-                x^2(\textcolor{red}{x-3})-4(\textcolor{red}{x-3}) &= 0 \\
-                (\textcolor{red}{x-3})(x^2-4) = 0
-                \end{align*}
-                Tämän jälkeen yhtälö voidaan ratkaista tulon nollasäännön avulla. Ratkaisuja saadaan kolme: $x_1 = 3$, $x_2 = 2$ ja $x_3 = -2$.
-            </p>
+            <div class="teoria">
+                <p>
+                    Joissakin tapauksissa yhteinen tekijä voi olla monimutkaisempi kuin pelkkä $x$ tai $x^2$. Esimerkiksi yhtälössä
+                    $$x^3-3x^2-4x+12 = 0$$
+                    termit voidaan ryhmitellä niin, että yhteinen tekijä paljastuu:
+                    \begin{align*}
+                    x^2(\textcolor{red}{x-3})-4(\textcolor{red}{x-3}) &= 0 \\
+                    (\textcolor{red}{x-3})(x^2-4) = 0
+                    \end{align*}
+                    Tämän jälkeen yhtälö voidaan ratkaista tulon nollasäännön avulla. Ratkaisuja saadaan kolme: $x_1 = 3$, $x_2 = 2$ ja $x_3 = -2$.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat13-ex">
+                <div class="tehtava" id="b8865822-45ee-4a59-9902-d1ec98ab65d9">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat13">
                                 Ratkaisu ryhmittelemällä
                             </a>
@@ -578,9 +611,10 @@ topnav: maa2
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat14-ex">
+                <div class="tehtava" id="f25f4596-9940-48b8-be54-b415d7d4b23a">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat14">
                                 Ratkaisu ryhmittelemällä
                             </a>
@@ -598,28 +632,31 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Sellaiset neljännen asteen yhtälöt, joissa esiintyy neljännen asteen termin lisäksi vain toisen asteen termi ja vakiotermi, voidaan ratkaista soveltamalla toisen asteen yhtälön ratkaisukaavaa. Esimerkki tällaisesta niin sanotusta bikvadraattisesta yhtälöstä on 
-                $$4x^4 + 11x^2 - 3 = 0.$$
-                Kun merkitään $t = x^2$, voidaan yhtälö kirjoittaa muodossa
-                $$4t^2 + 11t - 3 = 0.$$
-                Tämä on tavallinen toisen asteen yhtälö, jonka ratkaisuiksi saadaan
-                \begin{align*}
-                t &= \frac{-11 \pm \sqrt{11^2-4\cdot 4\cdot (-3)}}{2\cdot 4} \\[1mm]
-                &= \frac{-11 \pm 13}{8}
-                \end{align*}
-                eli $t_1 = \frac{1}{4}$ ja $t_2 = -3$. Ratkaisusta $t_1 = \frac{1}{4}$ saadaan alkuperäiselle yhtälölle kaksi ratkaisua:
-                \begin{align*}
-                x^2 &= \frac{1}{4} \\[1mm]
-                x = \frac{1}{2} \quad &\text{ tai } \quad x = -\frac{1}{2}
-                \end{align*}
-                Ratkaisu $t_2 = -3$ ei tuota alkuperäiselle yhtälölle yhtään ratkaisua, sillä yhtälö $x^2 = -3$ ei toteudu millään muuttujan $x$ arvolla.
-            </p>
+            <div class="teoria">
+                <p>
+                    Sellaiset neljännen asteen yhtälöt, joissa esiintyy neljännen asteen termin lisäksi vain toisen asteen termi ja vakiotermi, voidaan ratkaista soveltamalla toisen asteen yhtälön ratkaisukaavaa. Esimerkki tällaisesta niin sanotusta bikvadraattisesta yhtälöstä on
+                    $$4x^4 + 11x^2 - 3 = 0.$$
+                    Kun merkitään $t = x^2$, voidaan yhtälö kirjoittaa muodossa
+                    $$4t^2 + 11t - 3 = 0.$$
+                    Tämä on tavallinen toisen asteen yhtälö, jonka ratkaisuiksi saadaan
+                    \begin{align*}
+                    t &= \frac{-11 \pm \sqrt{11^2-4\cdot 4\cdot (-3)}}{2\cdot 4} \\[1mm]
+                    &= \frac{-11 \pm 13}{8}
+                    \end{align*}
+                    eli $t_1 = \frac{1}{4}$ ja $t_2 = -3$. Ratkaisusta $t_1 = \frac{1}{4}$ saadaan alkuperäiselle yhtälölle kaksi ratkaisua:
+                    \begin{align*}
+                    x^2 &= \frac{1}{4} \\[1mm]
+                    x = \frac{1}{2} \quad &\text{ tai } \quad x = -\frac{1}{2}
+                    \end{align*}
+                    Ratkaisu $t_2 = -3$ ei tuota alkuperäiselle yhtälölle yhtään ratkaisua, sillä yhtälö $x^2 = -3$ ei toteudu millään muuttujan $x$ arvolla.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat15-ex">
+                <div class="tehtava" id="e704c5b8-cdaa-4702-a063-02358ae3f766">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat15">
                                 Bikvadraattisen yhtälön ratkaisu
                             </a>
@@ -637,14 +674,17 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Joissakin tilanteissa mikään edellä harjoitelluista menetelmistä ei sovi korkeamman asteen yhtälön ratkaisemiseen. Tällöin yhtälön ratkaisut tai niiden likiarvot on mahdollista selvittää laskimella tai tietokoneella.
-            </p>
+            <div class="teoria">
+                <p>
+                    Joissakin tilanteissa mikään edellä harjoitelluista menetelmistä ei sovi korkeamman asteen yhtälön ratkaisemiseen. Tällöin yhtälön ratkaisut tai niiden likiarvot on mahdollista selvittää laskimella tai tietokoneella.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat16-ex">
+                <div class="tehtava" id="2bd47ed5-2a15-485c-ba14-a73f7cacc6dd">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat16">
                                 Ratkaisu laskimen avulla
                             </a>
@@ -662,41 +702,44 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Aiemmin on osoitettu, että toisen asteen polynomi voidaan jakaa tekijöihin polynomin nollakohtien avulla. Jos esimerkiksi tiedetään, että yhtälön $2x^2+5x-3 = 0$ ratkaisut ovat $x_1 = -3$ ja $x_2 = \frac{1}{2}$, voidaan polynomi $2x^2+5x-3$ kirjoittaa tulomuodossa:
-                $$2x^2+5x-3 = 2\left(x+3\right)\left(x-\tfrac{1}{2}\right).$$
-                Polynomilla $2x^2 +5x -3$ on siis tekijät $(x-x_1)$ ja $(x-x_2)$. Seuraavan teoreeman mukaan vastaava tulos pätee myös korkeamman asteen polynomien tapauksessa. 
-            </p>
-
-            <div class="theorem">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Lauseke $x-a$ on polynomin $P(x)$ tekijä, jos ja vain jos polynomiyhtälöllä $P(x) = 0$ on ratkaisu $x = a$.
+                    Aiemmin on osoitettu, että toisen asteen polynomi voidaan jakaa tekijöihin polynomin nollakohtien avulla. Jos esimerkiksi tiedetään, että yhtälön $2x^2+5x-3 = 0$ ratkaisut ovat $x_1 = -3$ ja $x_2 = \frac{1}{2}$, voidaan polynomi $2x^2+5x-3$ kirjoittaa tulomuodossa:
+                    $$2x^2+5x-3 = 2\left(x+3\right)\left(x-\tfrac{1}{2}\right).$$
+                    Polynomilla $2x^2 +5x -3$ on siis tekijät $(x-x_1)$ ja $(x-x_2)$. Seuraavan teoreeman mukaan vastaava tulos pätee myös korkeamman asteen polynomien tapauksessa.
                 </p>
-                <div class="proof">
+
+                <div class="theorem">
+                    <h3>TEOREEMA</h3>
                     <p>
-                        Perustelu: Koska teoreeman tulos on kaksisuuntainen (jos ja vain jos), on myös perustelussa kaksi osaa:
+                        Lauseke $x-a$ on polynomin $P(x)$ tekijä, jos ja vain jos polynomiyhtälöllä $P(x) = 0$ on ratkaisu $x = a$.
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Koska teoreeman tulos on kaksisuuntainen (jos ja vain jos), on myös perustelussa kaksi osaa:
                         <ul>
-                            <li> 
+                            <li>
                                 Oletetaan aluksi, että $x-a$ on polynomin $P(x)$ tekijä. Tämä tarkoittaa, että polynomi $P(x)$ voidaan kirjoittaa tulomuodossa
                                 $$P(x) = (x-a)Q(x),$$
-                                missä $Q(x)$ on jokin polynomi. Silloin myös yhtälö 
+                                missä $Q(x)$ on jokin polynomi. Silloin myös yhtälö
                                 $$P(x) = 0$$
-                                voidaan kirjoittaa muodossa 
+                                voidaan kirjoittaa muodossa
                                 $$(x-a)Q(x) = 0.$$
                                 Tulon nollasäännön nojalla tämän yhtälön yksi ratkaisu on $x = a$.
-                            <li> 
+                            <li>
                                 Oletetaan, että polynomiyhtälöllä $P(x) = 0$ on ratkaisu $x = a$. Nyt pitäisi jollakin tavalla perustella, että tällöin lauseke $x-a$ on polynomin $P(x)$ tekijä. Toisen asteen polynomien tapauksessa tämä on tehty aiemmin teoreemassa 8. Korkeamman asteen polynomien tapauksessa perustelu on liian hankala tässä esitettäväksi.
                             </li>
                         </ul>
-                    </p>
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat17-ex">
+                <div class="tehtava" id="415e3407-2a78-4a6c-8d4b-0721aae9fc06">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat17">
                                 Tekijöihin jako nollakohtien avulla
                             </a>
@@ -714,62 +757,65 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Toisen asteen yhtälön ratkaisukaavasta nähdään, että toisen asteen polynomiyhtälöllä on aina enintään kaksi ratkaisua. Teoreeman 9 avulla on mahdollista osoittaa, että vastaava tulos pätee myös korkeamman asteen polynomiyhtälöille: kolmannen asteen yhtälöllä on enintään kolme ratkaisua, neljännen asteen yhtälöllä enintään neljä ratkaisua ja niin edelleen. 
-            </p>
-
-            <div class="theorem">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Astetta $n$ olevalla polynomiyhtälöllä on enintään $n$ ratkaisua.
+                    Toisen asteen yhtälön ratkaisukaavasta nähdään, että toisen asteen polynomiyhtälöllä on aina enintään kaksi ratkaisua. Teoreeman 9 avulla on mahdollista osoittaa, että vastaava tulos pätee myös korkeamman asteen polynomiyhtälöille: kolmannen asteen yhtälöllä on enintään kolme ratkaisua, neljännen asteen yhtälöllä enintään neljä ratkaisua ja niin edelleen.
                 </p>
-                <div class="proof">
+
+                <div class="theorem">
+                    <h3>TEOREEMA</h3>
                     <p>
-                        Perustelu: Oletetaan, että $P(x)$ on $n$:nnen asteen polynomi. Oletetaan lisäksi, että $x_1$, $x_2$ $\ldots$, $x_k$ ovat polynomiyhtälön $P(x) = 0$ ratkaisut. Tällöin lausekkeet $(x-x_1)$, $(x-x_2)$ $\ldots$, $(x-x_k)$ ovat teoreeman 9 mukaan polynomin $P(x)$ tekijöitä. Siis polynomi $P(x)$ voidaan kirjoittaa tulomuodossa
-                        $$P(x) = (x-x_1)(x-x_2) \cdots (x-x_k)Q(x),$$
-                        missä $Q(x)$ on jokin polynomi (mahdollisesti pelkkä vakiopolynomi, esimerkiksi $1$). Laskemalla tulo 
-                        $$(x-x_1)(x-x_2) \cdots (x-x_k)$$
-                        huomataan, että sen aste on $k$. Koska polynomin $P(x)$ aste on $n$, voidaan päätellä, että $k \leq n$. Siis ratkaisujen lukumäärä $k$ on enintään $n$.
+                        Astetta $n$ olevalla polynomiyhtälöllä on enintään $n$ ratkaisua.
                     </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Oletetaan, että $P(x)$ on $n$:nnen asteen polynomi. Oletetaan lisäksi, että $x_1$, $x_2$ $\ldots$, $x_k$ ovat polynomiyhtälön $P(x) = 0$ ratkaisut. Tällöin lausekkeet $(x-x_1)$, $(x-x_2)$ $\ldots$, $(x-x_k)$ ovat teoreeman 9 mukaan polynomin $P(x)$ tekijöitä. Siis polynomi $P(x)$ voidaan kirjoittaa tulomuodossa
+                            $$P(x) = (x-x_1)(x-x_2) \cdots (x-x_k)Q(x),$$
+                            missä $Q(x)$ on jokin polynomi (mahdollisesti pelkkä vakiopolynomi, esimerkiksi $1$). Laskemalla tulo
+                            $$(x-x_1)(x-x_2) \cdots (x-x_k)$$
+                            huomataan, että sen aste on $k$. Koska polynomin $P(x)$ aste on $n$, voidaan päätellä, että $k \leq n$. Siis ratkaisujen lukumäärä $k$ on enintään $n$.
+                        </p>
+                    </div>
                 </div>
+
+                <p>
+                    Edellisessä luvussa opeteltiin ratkaisemaan toisen asteen epäyhtälöitä. Ratkaisun ideana oli muuttaa epäyhtälö perusmuotoon, jossa vasemmalla puolella on toisen asteen polynomi $ax^2 + bx + c$ ja oikealla puolella nolla, esimerkiksi
+                    $$ax^2 + bx + c > 0.$$
+                    Tämä epäyhtälö saatiin ratkaistua selvittämällä polynomifunktion $f(x) = ax^2 + bx + c$ nollakohdat ja päättelemällä, onko funktion $f$ kuvaaja alas- vai ylöspäin aukeava paraabeli.
+                </p>
+                <p>
+                    Korkeamman asteen epäyhtälöt ratkaistaan samaan tapaan. Esimerkiksi epäyhtälö
+                    $$x^3 \leq 4x(x-1)$$
+                    kirjoitetaan ensin perusmuodossa
+                    $$x^3-4x^2+4x \leq 0.$$
+                    Vastaavan polynomifunktion nollakohdat löydetään erottamalla yhteinen tekijä ja käyttämällä tulon nollasääntöä:
+                    \begin{align*}
+                    x(x^2-4x+4) &= 0 & & \\
+                    x = 0 \quad &\text{ tai } &\quad x^2-4x + 4 &= 0 \\
+                    & & (x-2)^2 &= 0 \\
+                    & & x &= 2
+                    \end{align*}
+                    Funktion merkki näiden nollakohtien eri puolilla saadaan selville laskemalla funktion arvo esimerkiksi kohdissa $x = -1$, $x = 1$ ja $x = 3$:
+                    \begin{align*}
+                    f(-1) &= (-1)^3-4\cdot (-1)^2+4\cdot (-1) = -9\\
+                    f(1) &= 1^3-4\cdot 1^2+4\cdot 1 = 1 \\
+                    f(3) &= 3^3-4\cdot 3^2+4\cdot 3 = 3
+                    \end{align*}
+                    Koska polynomifunktion arvojen merkki voi vaihtua vain funktion nollakohdissa, riittää laskea funktion arvo yhdessä testikohdassa jokaisella nollakohtien määräämällä välillä $\pa -\infty, 0\pe$, $\ \pa 0, 2\pe \ $ ja $\ \pa 2, \infty \pe$. Näiden tietojen avulla voidaan piirtää merkkikaavio:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/KAk16.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Tästä voidaan päätellä, että epäyhtälö $$x^3 \leq 4x(x-1)$$ toteutuu, jos ja vain jos $x \leq 0$ tai $x = 2$.
+                </p>
             </div>
 
-            <p>
-                Edellisessä luvussa opeteltiin ratkaisemaan toisen asteen epäyhtälöitä. Ratkaisun ideana oli muuttaa epäyhtälö perusmuotoon, jossa vasemmalla puolella on toisen asteen polynomi $ax^2 + bx + c$ ja oikealla puolella nolla, esimerkiksi
-                $$ax^2 + bx + c > 0.$$
-                Tämä epäyhtälö saatiin ratkaistua selvittämällä polynomifunktion $f(x) = ax^2 + bx + c$ nollakohdat ja päättelemällä, onko funktion $f$ kuvaaja alas- vai ylöspäin aukeava paraabeli. 
-            </p>
-            <p>
-                Korkeamman asteen epäyhtälöt ratkaistaan samaan tapaan. Esimerkiksi epäyhtälö
-                $$x^3 \leq 4x(x-1)$$
-                kirjoitetaan ensin perusmuodossa
-                $$x^3-4x^2+4x \leq 0.$$
-                Vastaavan polynomifunktion nollakohdat löydetään erottamalla yhteinen tekijä ja käyttämällä tulon nollasääntöä:
-                \begin{align*}
-                x(x^2-4x+4) &= 0 & & \\ 
-                x = 0 \quad &\text{ tai } &\quad x^2-4x + 4 &= 0 \\
-                & & (x-2)^2 &= 0 \\
-                & & x &= 2
-                \end{align*}
-                Funktion merkki näiden nollakohtien eri puolilla saadaan selville laskemalla funktion arvo esimerkiksi kohdissa $x = -1$, $x = 1$ ja $x = 3$:
-                \begin{align*}
-                f(-1) &= (-1)^3-4\cdot (-1)^2+4\cdot (-1) = -9\\ 
-                f(1) &= 1^3-4\cdot 1^2+4\cdot 1 = 1 \\
-                f(3) &= 3^3-4\cdot 3^2+4\cdot 3 = 3
-                \end{align*}
-                Koska polynomifunktion arvojen merkki voi vaihtua vain funktion nollakohdissa, riittää laskea funktion arvo yhdessä testikohdassa jokaisella nollakohtien määräämällä välillä $\pa -\infty, 0\pe$, $\ \pa 0, 2\pe \ $ ja $\ \pa 2, \infty \pe$. Näiden tietojen avulla voidaan piirtää merkkikaavio:
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/KAk16.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Tästä voidaan päätellä, että epäyhtälö $$x^3 \leq 4x(x-1)$$ toteutuu, jos ja vain jos $x \leq 0$ tai $x = 2$.
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat18-ex">
+                <div class="tehtava" id="acbebd23-a6d1-4ac9-88b9-e62ecd617538">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat18">
                                 Korkeamman asteen epäyhtälö
                             </a>
@@ -786,31 +832,34 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Jos epäyhtälön toinen puoli on valmiiksi tulomuodossa, merkkikaavioon kannattaa merkitä jokaisen tulon tekijän merkki erikseen. Esimerkiksi epäyhtälön
-                $$(x+1)(x-3)(5-2x) < 0$$
-                tapauksessa vastaavan polynomifunktion $f(x) = (x+1)(x-3)(5-2x)$ nollakohdiksi saadaan tulon nollasäännön perusteella $x_1 = -1$, $x_2 = \frac{5}{2}$ ja $x_3 = 3$. Tulon tekijöiden merkit nollakohtien eri puolilla voidaan päätellä hahmottelemalla kuvaajat:
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/KAk18.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Kuvaajien ei tarvitse olla kovin tarkkoja. Ensimmäisen asteen polynomifunktion tapauksessa oleellista on selvittää, onko kysymyksessä nouseva vai laskeva suora. Toisen asteen polynomifunktion tapauksessa oleellista on selvittää, onko kysymyksessä ylöspäin vai alaspäin aukeava paraabeli. Molemmissa tapauksissa riittää siis katsoa, onko korkeimman asteen termin kerroin positiivinen vai negatiivinen.
-            </p>
-            <p>
-                 Kuvaajien avulla voi laatia merkkikaavion:
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/KAk17.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Tulon merkin voi päätellä tulon tekijöiden merkkien avulla. Pitää vain muistaa, että kahden negatiivisen luvun tulo on aina positiivinen. Tarkasteltu epäyhtälö siis toteutuu, jos ja vain jos $-1 < x < \dfrac{5}{2}$ tai $x > 3$.
-            </p>    
+            <div class="teoria">
+                <p>
+                    Jos epäyhtälön toinen puoli on valmiiksi tulomuodossa, merkkikaavioon kannattaa merkitä jokaisen tulon tekijän merkki erikseen. Esimerkiksi epäyhtälön
+                    $$(x+1)(x-3)(5-2x) < 0$$
+                    tapauksessa vastaavan polynomifunktion $f(x) = (x+1)(x-3)(5-2x)$ nollakohdiksi saadaan tulon nollasäännön perusteella $x_1 = -1$, $x_2 = \frac{5}{2}$ ja $x_3 = 3$. Tulon tekijöiden merkit nollakohtien eri puolilla voidaan päätellä hahmottelemalla kuvaajat:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/KAk18.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Kuvaajien ei tarvitse olla kovin tarkkoja. Ensimmäisen asteen polynomifunktion tapauksessa oleellista on selvittää, onko kysymyksessä nouseva vai laskeva suora. Toisen asteen polynomifunktion tapauksessa oleellista on selvittää, onko kysymyksessä ylöspäin vai alaspäin aukeava paraabeli. Molemmissa tapauksissa riittää siis katsoa, onko korkeimman asteen termin kerroin positiivinen vai negatiivinen.
+                </p>
+                <p>
+                    Kuvaajien avulla voi laatia merkkikaavion:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/KAk17.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Tulon merkin voi päätellä tulon tekijöiden merkkien avulla. Pitää vain muistaa, että kahden negatiivisen luvun tulo on aina positiivinen. Tarkasteltu epäyhtälö siis toteutuu, jos ja vain jos $-1 < x < \dfrac{5}{2}$ tai $x > 3$.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="korkeammat19-ex">
+                <div class="tehtava" id="a147d719-3247-4a42-b39e-74bea52a8027">
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#korkeammat19">
                                 Korkeamman asteen epäyhtälö
                             </a>
@@ -822,7 +871,7 @@ topnav: maa2
                             <li> $(x+5)(2x-1)(3-x) \geq 0$ </li>
                             <li> $(4-3x)(x^2+2x+3) < 0$</li>
                         </ol>
-                            Tarkista vastauksesi piirtämällä funktioiden $f(x) = (x+5)(2x-1)(3-x)$ ja $g(x) = (4-3x)(x^2+2x+3)$ kuvaajat laskimella tai tietokoneella. 
+                        Tarkista vastauksesi piirtämällä funktioiden $f(x) = (x+5)(2x-1)(3-x)$ ja $g(x) = (4-3x)(x^2+2x+3)$ kuvaajat laskimella tai tietokoneella.
                         </p>
                     </div>
                 </div>
@@ -832,7 +881,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku4-tehtavasarja2">
                     TEHTÄVÄSARJA II
@@ -843,9 +892,10 @@ topnav: maa2
         <div id="luku4-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="korkeammat34-ex">
+            <div class="tehtava" id="09a2e264-61c8-4dee-8bb0-f0a763f09ab6">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat34">
                             Juuret ja potenssiyhtälön ratkaiseminen
                         </a>
@@ -854,12 +904,12 @@ topnav: maa2
                 <div id="korkeammat34">
                     <p>
                         Ratkaise seuraavat yhtälöt. Anna ratkaisujen tarkkojen arvojen lisäksi niiden likiarvot kolmen merkitsevän numeron tarkkuudella.
-                        <ol class="a">
-                            <li> $x^4 = 4096$ </li>
-                            <li> $3x^5 = 630$ </li>
-                            <li> $30x^7 = -6$ </li>
-                            <li> $9x^6 = 10000$ </li>
-                        </ol> 
+                    <ol class="a">
+                        <li> $x^4 = 4096$ </li>
+                        <li> $3x^5 = 630$ </li>
+                        <li> $30x^7 = -6$ </li>
+                        <li> $9x^6 = 10000$ </li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#korkeammat34_v">
@@ -873,15 +923,16 @@ topnav: maa2
                             <li> $x = \sqrt[5]{210} \approx 2{,}91$ </li>
                             <li> $x = \sqrt[7]{-\dfrac{1}{5}} \approx -0{,}795$ </li>
                             <li> $x = \sqrt[6]{\dfrac{10000}{9}} \approx 3{,}22$ tai $x = -\sqrt[6]{\dfrac{10000}{9}} \approx -3{,}22$ </li>
-                        </ol> 
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat35-ex">
+            <div class="tehtava" id="7f931e64-68df-4ef5-a875-36bc08c9e251">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat35">
                             Juuret ja potenssiyhtälön ratkaiseminen
                         </a>
@@ -890,10 +941,10 @@ topnav: maa2
                 <div id="korkeammat35">
                     <p>
                         Peppi teki 4500 euron talletuksen kahdeksaksi vuodeksi. Vuotuinen korkoprosentti pysyi koko ajan samana, eli pääoma kasvoi joka vuosi samalla kertoimella $q$.
-                        <ol class="a">
-                            <li> Jos korko olisi ollut 5 %, kuinka suureksi summaksi 4500 olisi kasvanut kahdeksan vuoden aikana? Mikä tässä tapauksessa olisi ollut kertoimen $q$ arvo? </li>
-                            <li> Todellisuudessa pääoma kasvoi kahdeksan vuoden aikana 4500 eurosta 5398 euroon. Mikä oli vuosittaista kasvua vastaava kerroin $q$? Mikä oli talletuksen vuosittainen korkoprosentti? </li>
-                        </ol> 
+                    <ol class="a">
+                        <li> Jos korko olisi ollut 5 %, kuinka suureksi summaksi 4500 olisi kasvanut kahdeksan vuoden aikana? Mikä tässä tapauksessa olisi ollut kertoimen $q$ arvo? </li>
+                        <li> Todellisuudessa pääoma kasvoi kahdeksan vuoden aikana 4500 eurosta 5398 euroon. Mikä oli vuosittaista kasvua vastaava kerroin $q$? Mikä oli talletuksen vuosittainen korkoprosentti? </li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#korkeammat35_v">
@@ -905,15 +956,16 @@ topnav: maa2
                         <ol class="a">
                             <li> 6648,55 euroksi, $q = 1{,}05$</li>
                             <li> $q \approx 1{,}023$ ja vuosikorko 2,3 % </li>
-                        </ol> 
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat36-ex">
+            <div class="tehtava" id="7d6403ea-6358-476c-9b09-4947e4a6ab3d">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat36">
                             Juuret ja potenssiyhtälön ratkaiseminen
                         </a>
@@ -921,10 +973,10 @@ topnav: maa2
                 </header>
                 <div id="korkeammat36">
                     <p> Jatkoa edelliseen tehtävään.
-                        <ol class="a">
-                            <li> Kuinka suuri vuotuisen koron pitäisi olla, jotta Pepin 4500 euron talletus kolminkertaistuisi kymmenessä vuodessa? </li>
-                            <li> Osoita, että edellisen kohdan tulos ei riipu talletussummasta vaan samaan tulokseen päädytään, jos talletussumma on $a$ euroa.</li>
-                        </ol> 
+                    <ol class="a">
+                        <li> Kuinka suuri vuotuisen koron pitäisi olla, jotta Pepin 4500 euron talletus kolminkertaistuisi kymmenessä vuodessa? </li>
+                        <li> Osoita, että edellisen kohdan tulos ei riipu talletussummasta vaan samaan tulokseen päädytään, jos talletussumma on $a$ euroa.</li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#korkeammat36_v">
@@ -935,15 +987,16 @@ topnav: maa2
                         <p>
                         <ol class="a">
                             <li> Suurempi kuin 11,6 %.</li>
-                        </ol> 
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat36b-ex">
+            <div class="tehtava" id="3caf49bd-8e2d-4576-92b8-56cdcb754674">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat36b">
                             Juuret ja potenssiyhtälön ratkaiseminen
                         </a>
@@ -952,10 +1005,10 @@ topnav: maa2
                 <div id="korkeammat36b">
                     <p>
                         Liikenneonnettomuuksien lukumäärää halutaan vähentää viidessä vuodessa 22 %.
-                        <ol class="a">
-                            <li> Jos liikenneonnettomuuksia onnistutaan vähentämään vuosittain 3 %, kuinka monta prosenttia ne vähenevät viiden vuoden aikana? Mikä tässä tapauksessa on vuosittaista vähentymistä vastaava kerroin $q$?</li>
-                            <li> Mikä pitäisi asettaa vuotuiseksi vähentämistavoitteeksi, jotta liikenneonnettomuudet vähenisivät viidessä vuodessa 22 %? </li>
-                        </ol> 
+                    <ol class="a">
+                        <li> Jos liikenneonnettomuuksia onnistutaan vähentämään vuosittain 3 %, kuinka monta prosenttia ne vähenevät viiden vuoden aikana? Mikä tässä tapauksessa on vuosittaista vähentymistä vastaava kerroin $q$?</li>
+                        <li> Mikä pitäisi asettaa vuotuiseksi vähentämistavoitteeksi, jotta liikenneonnettomuudet vähenisivät viidessä vuodessa 22 %? </li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#korkeammat36b_v">
@@ -967,15 +1020,16 @@ topnav: maa2
                         <ol class="a">
                             <li> Noin 14 %, $q = 0{,}97$ </li>
                             <li> Noin 4,8 % </li>
-                        </ol> 
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat40-ex">
+            <div class="tehtava" id="e87952cb-bff1-4056-8176-50e5c5afe95b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat40">
                             Juuret ja potenssiyhtälön ratkaiseminen
                         </a>
@@ -998,9 +1052,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat37-ex">
+            <div class="tehtava" id="dcf032e9-32e1-4e4c-bb9b-e7dec1c06d78">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat37">
                             Juuret ja murtopotenssit
                         </a>
@@ -1009,12 +1064,12 @@ topnav: maa2
                 <div id="korkeammat37">
                     <p>
                         Ilmaise seuraavat luvut juurimerkinnän avulla:
-                        <ol class="a">
-                            <li> $3^\frac{4}{5}$ </li>
-                            <li> $9^{-\frac{1}{3}}$ </li>
-                            <li> $10^{-\frac{5}{2}}$ </li>
-                            <li> $7^{2{,}5}$ </li>
-                        </ol> 
+                    <ol class="a">
+                        <li> $3^\frac{4}{5}$ </li>
+                        <li> $9^{-\frac{1}{3}}$ </li>
+                        <li> $10^{-\frac{5}{2}}$ </li>
+                        <li> $7^{2{,}5}$ </li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#korkeammat37_v">
@@ -1028,15 +1083,16 @@ topnav: maa2
                             <li> $\dfrac{1}{\sqrt[3]{9}}$ </li>
                             <li> $\dfrac{1}{\sqrt{10^5}} = \dfrac{1}{100\sqrt{10}}$ </li>
                             <li> $49\sqrt{7}$ </li>
-                        </ol> 
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat38-ex">
+            <div class="tehtava" id="edd8bff8-7641-4294-b8fc-7277b4400b75">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat38">
                             Juuret ja murtopotenssit
                         </a>
@@ -1045,15 +1101,15 @@ topnav: maa2
                 <div id="korkeammat38">
                     <p>
                         Ilmaise luvun 3 potenssina:
-                        <ol class="a">
-                            <li> $\sqrt{27}$ </li>
-                            <li> $3\sqrt{3}$ </li>
-                            <li> $1$ </li>
-                            <li> $\dfrac{1}{\sqrt{3}}$ </li>
-                            <li> $\dfrac{1}{3}$</li>
-                            <li> $\dfrac{1}{9}$ </li>
-                            <li> $\dfrac{1}{9\sqrt{3}}$ </li>
-                        </ol> 
+                    <ol class="a">
+                        <li> $\sqrt{27}$ </li>
+                        <li> $3\sqrt{3}$ </li>
+                        <li> $1$ </li>
+                        <li> $\dfrac{1}{\sqrt{3}}$ </li>
+                        <li> $\dfrac{1}{3}$</li>
+                        <li> $\dfrac{1}{9}$ </li>
+                        <li> $\dfrac{1}{9\sqrt{3}}$ </li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#korkeammat38_v">
@@ -1070,15 +1126,16 @@ topnav: maa2
                             <li> $3^{-1}$ </li>
                             <li> $3^{-2}$ </li>
                             <li> $3^{-\frac{5}{2}}$ </li>
-                        </ol> 
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat39-ex">
+            <div class="tehtava" id="a628b3ff-d425-44b4-adf2-32f531df0eb9">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat39">
                             Juuret ja murtopotenssit
                         </a>
@@ -1087,13 +1144,13 @@ topnav: maa2
                 <div id="korkeammat39">
                     <p>
                         Oletetaan, että $a$ on positiivinen reaaliluku. Ilmaise luvun $a$ potenssina:
-                        <ol class="a">
-                            <li> $\dfrac{1}{a}$</li>
-                            <li> $\dfrac{1}{\sqrt{a}}$ </li>
-                            <li> $\dfrac{1}{a\sqrt{a}}$ </li>
-                            <li> $\dfrac{1}{a^3}$ </li>
-                            <li> $a^3\sqrt{a}$ </li>
-                        </ol> 
+                    <ol class="a">
+                        <li> $\dfrac{1}{a}$</li>
+                        <li> $\dfrac{1}{\sqrt{a}}$ </li>
+                        <li> $\dfrac{1}{a\sqrt{a}}$ </li>
+                        <li> $\dfrac{1}{a^3}$ </li>
+                        <li> $a^3\sqrt{a}$ </li>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#korkeammat39_v">
@@ -1108,15 +1165,16 @@ topnav: maa2
                             <li> $a^{-\frac{3}{2}}$ </li>
                             <li> $a^{-3}$ </li>
                             <li> $a^\frac{7}{2}$</li>
-                        </ol> 
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat23-ex">
+            <div class="tehtava" id="90595776-eb23-4201-8c4b-e5c97786f22c">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat23">
                             Korkeamman asteen yhtälö
                         </a>
@@ -1129,7 +1187,7 @@ topnav: maa2
                         <li> $(x+5)(2x^2+5x-3) = 0$ </li>
                         <li> $5x^4+8x^3-4x^2 = 0$ </li>
                         <li> $x^3 - 2x^2 - 2x + 4 = 0$ </li>
-                    </ol> 
+                    </ol>
                     Vihje c-kohtaan: käytä ryhmittelyä samaan tapaan kuin tehtävässä 4.14.
                     </p>
                     <h2>
@@ -1149,9 +1207,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat31-ex">
+            <div class="tehtava" id="5ba66912-8ade-43e6-af50-f2170b8b6910">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat31">
                             Korkeamman asteen yhtälö
                         </a>
@@ -1168,15 +1227,16 @@ topnav: maa2
                     </h2>
                     <div id="korkeammat31_v" class="collapse">
                         <p>
-                        $a < 0$ tai $0 < a < \dfrac{1}{4}$
+                            $a < 0$ tai $0 < a < \dfrac{1}{4}$
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat32-ex">
+            <div class="tehtava" id="91e61668-4836-4698-8407-7b8c4052e32e">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat32">
                             Korkeamman asteen yhtälö
                         </a>
@@ -1184,12 +1244,12 @@ topnav: maa2
                 </header>
                 <div id="korkeammat32">
                     <p>
-                        Tutki, kuinka monta ratkaisua yhtälöllä $x^3+ax^2+2ax-4x = 0$ on vakion $a$ eri arvoilla.  
+                        Tutki, kuinka monta ratkaisua yhtälöllä $x^3+ax^2+2ax-4x = 0$ on vakion $a$ eri arvoilla.
                     </p>
                     <ol class="a">
                         <li> Mistä nähdään, että ratkaisuja on aina ainakin yksi? Mikä tämä ratkaisu on? </li>
                         <li> Onko olemassa sellainen vakion $a$ arvo, että ratkaisuja on vain yksi? </li>
-                        <li> Millä vakion $a$ arvoilla ratkaisuja on kaksi? Entä millä vakion $a$ arvoilla ratkaisuja on kolme? </li>    
+                        <li> Millä vakion $a$ arvoilla ratkaisuja on kaksi? Entä millä vakion $a$ arvoilla ratkaisuja on kolme? </li>
                     </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#korkeammat32_v">
@@ -1208,9 +1268,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat43-ex">
+            <div class="tehtava" id="3e36211e-a473-4865-a105-d8b0c3093b7b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat43">
                             Korkeamman asteen yhtälö
                         </a>
@@ -1218,11 +1279,11 @@ topnav: maa2
                 </header>
                 <div id="korkeammat43">
                     <p>
-                        Ratkaise yhtälö  
+                        Ratkaise yhtälö
                     </p>
                     <ol class="a">
                         <li> $x^4-3x^2-4 = 0$ </li>
-                        <li> $4x^3-5x^2 = 2x-3x^2$ </li>    
+                        <li> $4x^3-5x^2 = 2x-3x^2$ </li>
                     </ol>
                     [Pitkä S2010/2c &amp; S2008/3b]
                     <h2>
@@ -1241,9 +1302,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat24-ex">
+            <div class="tehtava" id="a64fbd4e-0c9b-4c3d-9e66-fa878565c7b6">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat24">
                             Nollakohtien ja tekijöiden yhteys
                         </a>
@@ -1256,7 +1318,7 @@ topnav: maa2
                         <li> $x+1$ </li>
                         <li> $x-\sqrt{2}$ </li>
                         <li> $x+2$ </li>
-                    </ol> 
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#korkeammat24_v">
@@ -1275,9 +1337,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat25-ex">
+            <div class="tehtava" id="b241a805-2346-4bec-b631-f28cb741801b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat25">
                             Nollakohtien ja tekijöiden yhteys
                         </a>
@@ -1294,15 +1357,16 @@ topnav: maa2
                     </h2>
                     <div id="korkeammat25_v" class="collapse">
                         <p>
-                        $a = -6$
+                            $a = -6$
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat26-ex">
+            <div class="tehtava" id="4648cc4e-4749-4a32-bfc2-961dec4fe5b2">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat26">
                             Nollakohtien ja tekijöiden yhteys
                         </a>
@@ -1319,15 +1383,16 @@ topnav: maa2
                     </h2>
                     <div id="korkeammat26_v" class="collapse">
                         <p>
-                        $P(x) = -2x^4-2x^3+2x^2-2x+4$
+                            $P(x) = -2x^4-2x^3+2x^2-2x+4$
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat29-ex">
+            <div class="tehtava" id="797a46a8-43d1-494d-a56d-11f46519abd5">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat29">
                             Korkeamman asteen epäyhtälö
                         </a>
@@ -1339,7 +1404,7 @@ topnav: maa2
                     <ol class="a">
                         <li> $(x-2)(x+3)(x-4) < 0$ </li>
                         <li> $x(x+4)^2 < 0$ </li>
-                    </ol> 
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#korkeammat29_v">
@@ -1357,9 +1422,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat30-ex">
+            <div class="tehtava" id="b44cb04f-8642-4400-8738-d17908f5c8da">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat30">
                             Korkeamman asteen epäyhtälö
                         </a>
@@ -1371,7 +1437,7 @@ topnav: maa2
                     <ol class="a">
                         <li> $x^2(x-1)^2 \leq 0$ </li>
                         <li> $4x^3-9x \leq 0$ </li>
-                    </ol> 
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#korkeammat30_v">
@@ -1393,7 +1459,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku4-tehtavasarja3">
                     TEHTÄVÄSARJA III
@@ -1404,9 +1470,10 @@ topnav: maa2
         <div id="luku4-tehtavasarja3" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-             <div class="tehtava" id="pf13-ex">
+            <div class="tehtava" id="b59d5abd-9d25-4603-8649-6315e1cb0c82">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf13">
 
                         </a>
@@ -1414,13 +1481,13 @@ topnav: maa2
                 </header>
                 <div id="pf13">
                     <p>
-                        <ol class="a">
+                    <ol class="a">
                         <li> Laske lausekkeen $\left(\sqrt{a} + \sqrt{b}\right)^2$ tarkka arvo, kun positiiviset luvut $a$ ja $b$ ovat toistensa käänteislukuja ja lukujen $a$ ja $b$ keskiarvo on $2$. </li>
                         <li> Sievennä lauseke
                             $$\left(x^\frac{1}{3} + y^\frac{1}{3}\right) \cdot \left(x^\frac{2}{3}-x^\frac{1}{3}y^\frac{1}{3} + y^\frac{2}{3}\right)$$
                         </li>
-                        </ol> 
-                        [Pitkä K2013/3]
+                    </ol>
+                    [Pitkä K2013/3]
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf13_v">
@@ -1438,28 +1505,29 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="pf14-ex">
+            <div class="tehtava" id="d094c234-211d-4cfd-9cf1-5e936d2f96c6">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf14">
 
                         </a>
                     </h1>
                 </header>
                 <div id="pf14">
-                    <p> 
+                    <p>
                         Saksalainen tähtitieteilijä Johannes Kepler (1571−1630) keksi planeetan etäisyyden ja kiertoajan välisen yhteyden. Planeetan kiertoaikaa Auringon ympäri merkitään symbolilla $x$ ja sen etäisyyttä Auringosta symbolilla $y$. Alla olevassa taulukossa on viiden Aurinkoa lähinnä olevan planeetan kiertoaika vuosina ja etäisyys astronomisen yksikön avulla lausuttuna.
                     </p>
                     <p>
-                    <img src="/kurssit/maa2/kuvat/PFk6.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa2/kuvat/PFk6.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <p>
-                        <ol class="a">
+                    <ol class="a">
                         <li> Kopioi taulukko vastauspaperiisi ja täydennä puuttuvat kohdat kolmen desimaalin tarkkuudella. </li>
                         <li> Päättele, mikä on Keplerin kaava etäisyydelle $y$ kiertoajan $x$ avulla lausuttuna. </li>
                         <li> Saturnuksen kiertoaika on $29{,}457$ vuotta. Mikä on sen etäisyys Auringosta?</li>
-                        </ol> 
-                        [Lyhyt S2012/7]
+                    </ol>
+                    [Lyhyt S2012/7]
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf14_v">
@@ -1468,21 +1536,22 @@ topnav: maa2
                     </h2>
                     <div id="pf14_v" class="collapse">
                         <p>
-                        <ol class="a">
-                            <li> <p>
-                    <img src="/kurssit/maa2/kuvat/KAk19.png" max-width: 100%; width: auto; height: auto;/> 
+                            <ol class="a">
+                                <li> <p>
+                        <img src="/kurssit/maa2/kuvat/KAk19.png" max-width: 100%; width: auto; height: auto;/>
                     </p> </li>
-                            <li> $y = x^\frac{2}{3}$ </li>
-                            <li> $29{,}457^\frac{2}{3} \approx 9{,}538$ astronomista yksikköä. </li>
+                        <li> $y = x^\frac{2}{3}$ </li>
+                        <li> $29{,}457^\frac{2}{3} \approx 9{,}538$ astronomista yksikköä. </li>
                         </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat20-ex">
+            <div class="tehtava" id="814b80fc-2293-4a45-ab92-c1e38f906dbe">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat20">
 
                         </a>
@@ -1490,7 +1559,7 @@ topnav: maa2
                 </header>
                 <div id="korkeammat20">
                     <p>
-                        Polynomi $P(x) = 2x^3 + ax^2 -4x + b$ on jaollinen binomeilla $x-1$ ja $x + 3$. Ratkaise yhtälö $P(x) = 0$. 
+                        Polynomi $P(x) = 2x^3 + ax^2 -4x + b$ on jaollinen binomeilla $x-1$ ja $x + 3$. Ratkaise yhtälö $P(x) = 0$.
                         <br> [Pitkä S2015/12]
                     </p>
                     <h2>
@@ -1506,9 +1575,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat28-ex">
+            <div class="tehtava" id="fc4db4e3-4d62-491d-916c-c593e74618f9">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat28">
 
                         </a>
@@ -1521,7 +1591,7 @@ topnav: maa2
                         <li> $(3x^2-4x+1)^2 = 0$ </li>
                         <li> $4x^4-5x^2+1 = 0$ </li>
                         <li> $(2x^2-6x+7)^2 = 1$ </li>
-                    </ol> 
+                    </ol>
                     Vihje c-kohtaan: ajattele yhtälöä aluksi toisen asteen potenssiyhtälönä.
                     </p>
                     <h2>
@@ -1541,9 +1611,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat27-ex">
+            <div class="tehtava" id="5cc99618-cf4f-45fd-9f0e-2b30c07ec368">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat27">
 
                         </a>
@@ -1560,16 +1631,17 @@ topnav: maa2
                     </h2>
                     <div id="korkeammat27_v" class="collapse">
                         <p>
-                        $a + b + c = 3$ tai $a + b + c = -17$
+                            $a + b + c = 3$ tai $a + b + c = -17$
                         </p>
                     </div>
                 </div>
             </div>
 
 
-            <div class="tehtava" id="korkeammat33-ex">
+            <div class="tehtava" id="b02fb16c-3cef-4f31-8e01-77c17476e063">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat33">
 
                         </a>
@@ -1594,9 +1666,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat41-ex">
+            <div class="tehtava" id="4051fc06-f1ba-48e3-a5e6-d98c09313a90">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat41">
 
                         </a>
@@ -1621,9 +1694,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat42-ex">
+            <div class="tehtava" id="f222aeea-01f1-48bb-9a1f-0faf0cf7dda9">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat42">
 
                         </a>
@@ -1651,9 +1725,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="korkeammat44-ex">
+            <div class="tehtava" id="1b0c597d-2ab6-4a09-8450-9e905675c922">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#korkeammat44">
 
                         </a>
@@ -1661,7 +1736,7 @@ topnav: maa2
                 </header>
                 <div id="korkeammat44">
                     <p>
-                        Yhdistyneet kansakunnat asetti vuosituhannen vaihteessa yhdeksi tavoitteekseen, että maailman hiilidioksidipäästöt olisivat vuonna 2015 merkittävästi pienemmät kuin vuonna 1990. Tavoite ei näytä toteutuvan, sillä vuosina 1990−2008 päästöjen määrä kasvoi 39 %. Oletetaan, että päästöjen vuotuinen kasvuprosentti on ollut aikavälillä 1990−2008 vakio. Kuinka monta prosenttia päästöt kasvavat yhteensä vuosina 1990−2015, jos niiden vuotuinen kasvuprosentti pysyy edelleen samana? Anna vastaus prosenttiyksikön tarkkuudella. 
+                        Yhdistyneet kansakunnat asetti vuosituhannen vaihteessa yhdeksi tavoitteekseen, että maailman hiilidioksidipäästöt olisivat vuonna 2015 merkittävästi pienemmät kuin vuonna 1990. Tavoite ei näytä toteutuvan, sillä vuosina 1990−2008 päästöjen määrä kasvoi 39 %. Oletetaan, että päästöjen vuotuinen kasvuprosentti on ollut aikavälillä 1990−2008 vakio. Kuinka monta prosenttia päästöt kasvavat yhteensä vuosina 1990−2015, jos niiden vuotuinen kasvuprosentti pysyy edelleen samana? Anna vastaus prosenttiyksikön tarkkuudella.
                         <br>
                         [Lyhyt S2014/12]
                     </p>
@@ -1677,13 +1752,13 @@ topnav: maa2
                     </div>
                 </div>
             </div>
-            
+
 
         </div>
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#L4itsearviointi">
                     Itsearviointitehtävät
@@ -1692,7 +1767,7 @@ topnav: maa2
         </header>
         <div id="L4itsearviointi" class="collapse">
             <p>
-                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1720">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1720">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
             </p>
         </div>
     </section>

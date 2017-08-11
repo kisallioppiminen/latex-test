@@ -1,5 +1,5 @@
 ---
-title: MAA2 - Polynomifunktiot ja -yhtälöt 
+title: MAA2 - Polynomifunktiot ja -yhtälöt
 layout: material
 sitemap: true
 main-class: has-atop
@@ -14,6 +14,8 @@ topnav: maa2
         padding: 5px;
     }
 </style>
+
+{% include bottomnav.html %}
 
 <input type="hidden" id="chapterNumber" value="1"/>
 
@@ -36,10 +38,10 @@ topnav: maa2
             <div class="objective">
 
                 <p>
-                    Tämän luvun tavoitteena on, että saat vankan käsityksen ensimmäisen asteen polynomifunktioista ja ratkaiset sujuvasti ensimmäisen asteen yhtälöitä ja epäyhtälöitä. Osaat 
+                    Tämän luvun tavoitteena on, että saat vankan käsityksen ensimmäisen asteen polynomifunktioista ja ratkaiset sujuvasti ensimmäisen asteen yhtälöitä ja epäyhtälöitä. Osaat
                 <ul>
                     <li> hahmotella vakiofunktion ja ensimmäisen asteen polynomifunktion kuvaajan ja tiedät, miten funktion lauseke vaikuttaa kuvaajan muotoon</li>
-<!--                     <li> tunnistaa vakiofunktion ja ensimmäisen asteen polynomifunktion lausekkeen ja kuvaajan sekä tutkia funktioiden ominaisuuksia niiden avulla</li> -->
+                    <!--                     <li> tunnistaa vakiofunktion ja ensimmäisen asteen polynomifunktion lausekkeen ja kuvaajan sekä tutkia funktioiden ominaisuuksia niiden avulla</li> -->
                     <li> tutkia vakiofunktioiden ja ensimmäisen asteen polynomifunktioiden ominaisuuksia sekä lausekkeiden että kuvaajien avulla </li>
                     <li> laskea polynomien summan, erotuksen ja tulon sekä erottaa yhteisen tekijän </li>
                     <li> ratkaista ensimmäisen asteen yhtälön ja epäyhtälön.</li>
@@ -51,7 +53,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#1asteenPolynomifunktio">
                     Ensimmäisen asteen polynomifunktio ja vakiofunktio
@@ -60,22 +62,25 @@ topnav: maa2
         </header>
         <div id="1asteenPolynomifunktio" class="collapse">
 
-            <p>
-                Tässä kappaleessa tutkitaan vakiofunktioita sekä ensimmäisen asteen polynomifunktioita, joihin tutustuttiin jo MAY1-kurssilla. Palautetaan aluksi mieleen MAY1-kurssilta tuttu funktion nollakohdan määritelmä:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: FUNKTION NOLLAKOHTA</h3>
+            <div class="teoria">
                 <p>
-                    Funktion $f$ <em>nollakohta</em> tarkoittaa sellaista muuttujan $x$ arvoa, jolla funktio saa arvon nolla eli $f(x) = 0$.
+                    Tässä kappaleessa tutkitaan vakiofunktioita sekä ensimmäisen asteen polynomifunktioita, joihin tutustuttiin jo MAY1-kurssilla. Palautetaan aluksi mieleen MAY1-kurssilta tuttu funktion nollakohdan määritelmä:
                 </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: FUNKTION NOLLAKOHTA</h3>
+                    <p>
+                        Funktion $f$ <em>nollakohta</em> tarkoittaa sellaista muuttujan $x$ arvoa, jolla funktio saa arvon nolla eli $f(x) = 0$.
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="firstEx">
+                <div class="tehtava" id="287c3ee4-8ac7-4d9b-8bc2-cfc3e87bb4e2">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste1">
                                 Funktion kuvaajan tulkitseminen
                             </a>
@@ -95,28 +100,31 @@ topnav: maa2
                         </ol>
                         </p>
                         <p>
-                            <img src="/kurssit/maa2/kuvat/EAk1.png" style="max-width: 100%; width: auto; height: auto;" /> 
+                            <img src="/kurssit/maa2/kuvat/EAk1.png" style="max-width: 100%; width: auto; height: auto;" />
                         </p>
                     </div>
                 </div>
             </div>
 
-            <p>
-                Funktiota, joka saa joka kohdassa saman arvon, sanotaan vakiofunktioksi:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: VAKIOFUNKTIO</h3>
+            <div class="teoria">
                 <p>
-                    Funktiota $f$, joka on muotoa $f(x) = a$, missä $a$ on reaaliluku, sanotaan <em>vakiofunktioksi</em>.
+                    Funktiota, joka saa joka kohdassa saman arvon, sanotaan vakiofunktioksi:
                 </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: VAKIOFUNKTIO</h3>
+                    <p>
+                        Funktiota $f$, joka on muotoa $f(x) = a$, missä $a$ on reaaliluku, sanotaan <em>vakiofunktioksi</em>.
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste2-ex">
+                <div class="tehtava" id="0e89b75f-dd3f-48f1-9a16-29cfbf8a21d4">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste2">
                                 Vakiofunktio
                             </a>
@@ -127,33 +135,36 @@ topnav: maa2
                             Mitkä alla olevista kuvaajista ovat jonkin vakiofunktion kuvaajia? Jos kysymyksessä on vakiofunktion $f(x) = a$ kuvaaja, päättele, mikä on vakion $a$ arvo.
                         </p>
                         <p>
-                        <img src="/kurssit/maa2/kuvat/EAk2.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
-                        <img src="/kurssit/maa2/kuvat/funktio21b.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/EAk2.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/funktio21b.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">
                         <p style="clear: both;"></p>
                         <p>
-                        <img src="/kurssit/maa2/kuvat/EAk3.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
-                        <img src="/kurssit/maa2/kuvat/funktio21d.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">  </p>
+                            <img src="/kurssit/maa2/kuvat/EAk3.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/funktio21d.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">  </p>
                         <p style="clear: both;"></p>
                     </div>
                 </div>
             </div>
 
-            <p>
-                Palautetaan seuraavaksi mieleen MAY1-kurssista tuttu ensimmäisen asteen polynomifunktion määritelmä:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: ENSIMMÄISEN ASTEEN POLYNOMIFUNKTIO</h3>
+            <div class="teoria">
                 <p>
-                    Funktiota $f$, joka on muotoa $f(x) = ax+b$, missä $a\neq 0$, sanotaan <em>ensimmäisen asteen polynomifunktioksi</em>.
+                    Palautetaan seuraavaksi mieleen MAY1-kurssista tuttu ensimmäisen asteen polynomifunktion määritelmä:
                 </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: ENSIMMÄISEN ASTEEN POLYNOMIFUNKTIO</h3>
+                    <p>
+                        Funktiota $f$, joka on muotoa $f(x) = ax+b$, missä $a\neq 0$, sanotaan <em>ensimmäisen asteen polynomifunktioksi</em>.
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste3-ex">
+                <div class="tehtava" id="92a22518-c1c5-465a-a708-d3f4d70d40f8">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste3">
                                 Ensimmäisen asteen polynomifunktio
                             </a>
@@ -161,18 +172,18 @@ topnav: maa2
                     </header>
                     <div id="1aste3" class="collapse">
                         <p>
-                        <img src="/kurssit/maa2/kuvat/EAk4.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
-                        <img src="/kurssit/maa2/kuvat/EAk5.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/EAk4.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/EAk5.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">
                         <p style="clear: both;"></p>
                         <p>
-                        <img src="/kurssit/maa2/kuvat/EAk6.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
-                        <img src="/kurssit/maa2/kuvat/EAk7.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">  </p>
+                            <img src="/kurssit/maa2/kuvat/EAk6.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/EAk7.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">  </p>
                         <p style="clear: both;"></p>
                         <p>
                             Yllä on näkyvissä ensimmäisen asteen polynomifunktioiden kuvaajia. Kopioi alla oleva taulukko vihkoosi ja täydennä se yhdistämällä oikea kuvaaja jokaiseen funktioon. Päättele sen jälkeen vastaukset alla oleviin kysymyksiin.
                         </p>
                         <div align="center">
-                            <table style="width = 75%"> 
+                            <table style="width = 75%">
                                 <tr>
                                     <th> Funktio </th>
                                     <th> Kuvaaja </th>
@@ -193,9 +204,9 @@ topnav: maa2
                                     <td> $\ k(x) = -x+2 \ $ </td>
                                     <td>  </td>
                                 </tr>
-                            </table> 
+                            </table>
                         </div>
-                        <p> Miten funktion $f(x) = ax + b$ lausekkeesta voi päätellä,                        
+                        <p> Miten funktion $f(x) = ax + b$ lausekkeesta voi päätellä,
                         <ol class="a">
                             <li>  onko kuvaaja nouseva suora (kuten kuvissa A ja C) vai laskeva suora (kuten kuvissa B ja D)?</li>
                             <li> millä korkeudella kuvaaja leikkaa $y$-akselin?</li>
@@ -206,32 +217,37 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Funktion $f$ kuvaaja muodostuu pisteistä, joiden $y$-koordinaatti on funktion arvo eli $y = f(x)$. Esimerkiksi alla olevassa kuvassa on ensimmäisen asteen polynomifunktion 
-                $$f(x) = -\dfrac{1}{3}x + \dfrac{5}{3}$$
-                kuvaaja. Sen kuvaajan pisteet ovat muotoa
-                $$\left(x, -\dfrac{1}{3}x + \dfrac{5}{3}\right).$$
-            </p>
-            <p>
-                <img src="/kurssit/maa2/kuvat/EAk8.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-
-            <p>
-                Ensimmäisen asteen polynomifunktion $f(x) = ax + b$ kuvaaja muodostuu siis pisteistä, joiden $y$-koordinaatti on funktion arvo eli $y = ax + b$. Tällaiset pisteet muodostavat aina suoran. Muuttujan $x$ kerrointa sanotaan suoran kulmakertoimeksi:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: KULMAKERROIN</h3>
+            <div class="teoria">
                 <p>
-                    Suoran yhtälössä $y = ax + b$ esiintyvä kerroin $a$ on kyseisen suoran <em>kulmakerroin</em>.
+                    Funktion $f$ kuvaaja muodostuu pisteistä, joiden $y$-koordinaatti on funktion arvo eli $y = f(x)$. Esimerkiksi alla olevassa kuvassa on ensimmäisen asteen polynomifunktion
+                    $$f(x) = -\dfrac{1}{3}x + \dfrac{5}{3}$$
+                    kuvaaja. Sen kuvaajan pisteet ovat muotoa
+                    $$\left(x, -\dfrac{1}{3}x + \dfrac{5}{3}\right).$$
                 </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/EAk8.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+
+                <p>
+
+                    Suoran yhtälössä $y = ax + b$ esiintyvä kerroin $a$ on kyseisen suoran <em>kulmakerroin</em>.
+
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KULMAKERROIN</h3>
+                    <p>
+                        Oletetaan, että $a \neq 0$ ja $b$ on mikä tahansa reaaliluku. Suoran yhtälössä $y = ax + b$ esiintyvä kerroin $a$ on kyseisen suoran <em>kulmakerroin</em>.
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste4a-ex">
+                <div class="tehtava" id="b6925a07-5620-47ff-9b8b-f889d5a33450">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste4a">
                                 Kulmakerroin
                             </a>
@@ -250,15 +266,18 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Kuten edellisessä tehtävässä havaittiin, suora $y = ax + b$ on nouseva, jos $a > 0$ eli kulmakerroin on positiivinen, ja laskeva, jos $a < 0$ eli kulmakerroin on negatiivinen. Lisäksi kulmakerroin vaikuttaa suoran jyrkkyyteen: mitä lähempänä nollaa kulmakerroin on, sitä loivemmin suora nousee tai laskee.
-            </p>
+            <div class="teoria">
+                <p>
+                    Kuten edellisessä tehtävässä havaittiin, suora $y = ax + b$ on nouseva, jos $a > 0$ eli kulmakerroin on positiivinen, ja laskeva, jos $a < 0$ eli kulmakerroin on negatiivinen. Lisäksi kulmakerroin vaikuttaa suoran jyrkkyyteen: mitä lähempänä nollaa kulmakerroin on, sitä loivemmin suora nousee tai laskee.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste4-ex">
+                <div class="tehtava" id="6b5a0d57-b072-49da-b15b-df26df027946">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste4">
                                 Kuvaajan piirtäminen
                             </a>
@@ -266,7 +285,7 @@ topnav: maa2
                     </header>
                     <div id="1aste4" class="collapse">
                         <p>
-                            Koska ensimmäisen asteen polynomifunktion kuvaaja on aina suora, voi kuvaajan piirtää monella tavalla. 
+                            Koska ensimmäisen asteen polynomifunktion kuvaaja on aina suora, voi kuvaajan piirtää monella tavalla.
                         <ol class="a">
                             <li> Piirrä funktion $f(x) = \frac{2}{3}x-1$ kuvaaja määrittämällä jotkin kaksi pistettä, joiden kautta kuvaaja kulkee, ja piirtämällä näiden kautta kulkeva suora.</li>
                             <li> Piirrä funktion $g(x) = -2x+3$ kuvaaja päättelemällä funktion lausekkeesta, millä korkeudella kuvaaja leikkaa $y$-akselin ja mikä on kuvaajan kulmakerroin.</li>
@@ -281,7 +300,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#polynomilaskentaa">
                     Polynomien summa, erotus ja tulo
@@ -290,21 +309,24 @@ topnav: maa2
         </header>
         <div id="polynomilaskentaa" class="collapse">
 
-            <p>
-                Tässä kappaleessa palautetaan mieleen, miten niin sanotuilla polynomeilla lasketaan. Polynomi tarkoittaa lauseketta, joka on muodostettu muuttujista (eli kirjaimista) ja vakioista (eli luvuista) käyttämällä yhteen-, vähennys- ja kertolaskua. Esimerkiksi
-                $$2x^3-5x^2 + 8x -3$$
-                on polynomi, samoin
-                $$7x^4-9.$$
-                Polynomissa voi olla myös useampia muuttujia. Esimerkiksi 
-                $$5xy^2-3x+5y^3-3$$
-                on niin sanottu kahden muuttujan polynomi. Tällä kurssilla keskitytään yhden muuttujan polynomeihin.
-            </p>
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa palautetaan mieleen, miten niin sanotuilla polynomeilla lasketaan. Polynomi tarkoittaa lauseketta, joka on muodostettu muuttujista (eli kirjaimista) ja vakioista (eli luvuista) käyttämällä yhteen-, vähennys- ja kertolaskua. Esimerkiksi
+                    $$2x^3-5x^2 + 8x -3$$
+                    on polynomi, samoin
+                    $$7x^4-9.$$
+                    Polynomissa voi olla myös useampia muuttujia. Esimerkiksi
+                    $$5xy^2-3x+5y^3-3$$
+                    on niin sanottu kahden muuttujan polynomi. Tällä kurssilla keskitytään yhden muuttujan polynomeihin.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste11-ex">
+                <div class="tehtava" id="15f2915a-cb7a-4a97-83df-3d3a48054e97">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste11">
                                 Polynomit
                             </a>
@@ -326,37 +348,40 @@ topnav: maa2
                 </div>
             </div>
 
-            <p> 
-                Polynomien yhteen- ja vähennyslaskussa yhdistetään samaa astetta olevat termit. Seuraavat laskut havainnollistavat ideaa: 
-            </p>
-            <p>
-                Matkan viimeisenä päivänä reppureissaaja löytää lompakostaan 35 euroa, 25 puntaa ja 150 Japanin jeniä. Hänen kaverillaan on puolestaan taskussaan 15 euroa, 7 puntaa ja 95 jeniä. Kuinka paljon rahaa kaveruksilla on yhteensä?
-                \begin{align*}
-                &\quad (35 \,€ + 25 \,£ + 150 \,¥)
-                + (15 \,€ + 7 \,£ + 95 \,¥) \\
-                &= 50 \,€ + 32 \,£ + 245 \,¥.
-                \end{align*}
-                Paluumatkalla kaverukset ostavat tuliaisia ja käyvät syömässä. Tähän kuluu yhteensä 40 euroa, 27 puntaa ja 195 jeniä. Kuinka paljon rahaa jää jäljelle?
-                \begin{align*}
-                &\quad (50 \,€ + 32 \,£ + 245 \,¥) \textcolor{red}{-} (40 \,€ + 27 \,£ + 195 \,¥) \\
-                &= 50 \,€ + 32 \,£ + 245 \,¥ \textcolor{red}{-} 40 \,€ \textcolor{red}{-} 27 \,£ \textcolor{red}{-} 195 \,¥ \\
-                &= 10 \,€ + 5 \,£ + 50 \,¥.
-                \end{align*}
-                Huomaa, että polynomien vähennyslaskussa jälkimmäisen polynomin jokainen merkki vaihtuu samaan tapaan kuin edellisessä laskussa.
-            </p>
+            <div class="teoria">
+                <p>
+                    Polynomien yhteen- ja vähennyslaskussa yhdistetään samaa astetta olevat termit. Seuraavat laskut havainnollistavat ideaa:
+                </p>
+                <p>
+                    Matkan viimeisenä päivänä reppureissaaja löytää lompakostaan 35 euroa, 25 puntaa ja 150 Japanin jeniä. Hänen kaverillaan on puolestaan taskussaan 15 euroa, 7 puntaa ja 95 jeniä. Kuinka paljon rahaa kaveruksilla on yhteensä?
+                    \begin{align*}
+                    &\quad (35 \,€ + 25 \,£ + 150 \,¥)
+                    + (15 \,€ + 7 \,£ + 95 \,¥) \\
+                    &= 50 \,€ + 32 \,£ + 245 \,¥.
+                    \end{align*}
+                    Paluumatkalla kaverukset ostavat tuliaisia ja käyvät syömässä. Tähän kuluu yhteensä 40 euroa, 27 puntaa ja 195 jeniä. Kuinka paljon rahaa jää jäljelle?
+                    \begin{align*}
+                    &\quad (50 \,€ + 32 \,£ + 245 \,¥) \textcolor{red}{-} (40 \,€ + 27 \,£ + 195 \,¥) \\
+                    &= 50 \,€ + 32 \,£ + 245 \,¥ \textcolor{red}{-} 40 \,€ \textcolor{red}{-} 27 \,£ \textcolor{red}{-} 195 \,¥ \\
+                    &= 10 \,€ + 5 \,£ + 50 \,¥.
+                    \end{align*}
+                    Huomaa, että polynomien vähennyslaskussa jälkimmäisen polynomin jokainen merkki vaihtuu samaan tapaan kuin edellisessä laskussa.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste12-ex">
+                <div class="tehtava" id="0d9b88f0-7be5-449d-9293-912a872641c7">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste12">
                                 Polynomien yhteen- ja vähennyslasku
                             </a>
                         </h1>
                     </header>
                     <div id="1aste12" class="collapse">
-                        <p> Muodosta ja laske polynomien $x^2+3x-6$ ja $-4x^2+x-2$ 
+                        <p> Muodosta ja laske polynomien $x^2+3x-6$ ja $-4x^2+x-2$
                         <ol class="a">
                             <li> summa</li>
                             <li> erotus.</li>
@@ -367,17 +392,18 @@ topnav: maa2
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste13-ex">
+                <div class="tehtava" id="d3aeaf9a-03d5-498b-a32c-64f42c3aeb17">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste13">
                                 Polynomien yhteen- ja vähennyslasku
                             </a>
                         </h1>
                     </header>
                     <div id="1aste13" class="collapse">
-                        <p> Muodosta ja laske polynomien $4x^3-2x^2+3x+1$ ja $-3x^2-3x+2$ 
+                        <p> Muodosta ja laske polynomien $4x^3-2x^2+3x+1$ ja $-3x^2-3x+2$
                         <ol class="a">
                             <li> summa</li>
                             <li> erotus.</li>
@@ -387,38 +413,41 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Sellaiset murtolausekkeet, joiden osoittajana on polynomi ja nimittäjänä jokin luku, ovat itsekin polynomeja. Esimerkiksi murtolauseketta
-                \begin{align*}
-                \frac{x-2}{3}
-                \end{align*}
-                voidaan muokata seuraavasti:
-                \begin{align*}
-                \frac{x-2}{3} &= \frac{1}{3}\left(x-2\right) = \frac{1}{3}x - \frac{2}{3}
-                \end{align*}
-                Viimeisestä muodosta nähdään, että kysymyksessä on ensimmäisen asteen polynomi.
-            </p>
-            <p>
-                Murtolausekkeena kirjoitettujen polynomien summia ja erotuksia laskettaessa lausekkeet on lavennettava samannimisiksi samaan tapaan kuin murtoluvuilla laskettaessa. Lisäksi pitää huomata, että miinusmerkki murtolausekkeen edessä vaikuttaa koko osoittajaan. Esimerkiksi
-                \begin{align*}
-                \frac{x^2+5x-7}{2}\textcolor{red}{-}\frac{x-2}{3} &= \frac{3(x^2+5x-7)}{6}\textcolor{red}{-}\frac{2(x-2)}{6} \\
-                &= \frac{3x^2+15x-21\textcolor{red}{-}2x\textcolor{red}{+}4}{6} \\
-                &= \frac{3x^2+13x-17}{6}
-                \end{align*}
-            </p>
+            <div class="teoria">
+                <p>
+                    Sellaiset murtolausekkeet, joiden osoittajana on polynomi ja nimittäjänä jokin luku, ovat itsekin polynomeja. Esimerkiksi murtolauseketta
+                    \begin{align*}
+                    \frac{x-2}{3}
+                    \end{align*}
+                    voidaan muokata seuraavasti:
+                    \begin{align*}
+                    \frac{x-2}{3} &= \frac{1}{3}\left(x-2\right) = \frac{1}{3}x - \frac{2}{3}
+                    \end{align*}
+                    Viimeisestä muodosta nähdään, että kysymyksessä on ensimmäisen asteen polynomi.
+                </p>
+                <p>
+                    Murtolausekkeena kirjoitettujen polynomien summia ja erotuksia laskettaessa lausekkeet on lavennettava samannimisiksi samaan tapaan kuin murtoluvuilla laskettaessa. Lisäksi pitää huomata, että miinusmerkki murtolausekkeen edessä vaikuttaa koko osoittajaan. Esimerkiksi
+                    \begin{align*}
+                    \frac{x^2+5x-7}{2}\textcolor{red}{-}\frac{x-2}{3} &= \frac{3(x^2+5x-7)}{6}\textcolor{red}{-}\frac{2(x-2)}{6} \\
+                    &= \frac{3x^2+15x-21\textcolor{red}{-}2x\textcolor{red}{+}4}{6} \\
+                    &= \frac{3x^2+13x-17}{6}
+                    \end{align*}
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste23-ex">
+                <div class="tehtava" id="fe415093-9e37-4e03-afc4-4728fa43eb36">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste23">
                                 Polynomien yhteen- ja vähennyslasku
                             </a>
                         </h1>
                     </header>
                     <div id="1aste23" class="collapse">
-                        <p> Muodosta ja laske lausekkeiden $\dfrac{3x+1}{2}$ ja $\dfrac{x-4}{5}$ 
+                        <p> Muodosta ja laske lausekkeiden $\dfrac{3x+1}{2}$ ja $\dfrac{x-4}{5}$
                         <ol class="a">
                             <li> summa</li>
                             <li> erotus.</li>
@@ -428,27 +457,30 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Kun polynomia kerrotaan monomilla, kerrotaan jokainen polynomin termi erikseen samaan tapaan kuin seuraavassa laskussa: 
-            </p>
-            <p>
-                Kun reppureissaaja ja hänen kaverinsa palasivat Suomeen, he päättivät lahjoittaa viidesosan jäljelle jääneistä rahoista hyväntekeväisyyteen ja jakaa loput rahoista tasan. Kuinka paljon he lahjoittivat hyväntekeväisyyteen?
-                \begin{align*}
-                \frac{1}{5} (10 \,€ + 5 \,£ + 50 \,¥) &= \frac{10}{5} \,€ + \frac{5}{5} \,£ + \frac{50}{5} \,¥ \\[1mm]
-                &= 2 \,€ + 1 \,£ + 10 \,¥ 
-                \end{align*}
-                Huomaa, että jos molemmissa tulon tekijöissä on kirjainosa, sievennetään lopputuloksen kirjainosa potenssin määritelmän ja laskusääntöjen mukaan. Esimerkiksi monomien $-2x^3$ ja $-4x^2$ tulo on
-                \begin{align*}
-                -2x^3\cdot (-4x^2) &= -2 \cdot (-4) \cdot xxxxx \\
-                &= 8x^5
-                \end{align*}
-            </p>
+            <div class="teoria">
+                <p>
+                    Kun polynomia kerrotaan monomilla, kerrotaan jokainen polynomin termi erikseen samaan tapaan kuin seuraavassa laskussa:
+                </p>
+                <p>
+                    Kun reppureissaaja ja hänen kaverinsa palasivat Suomeen, he päättivät lahjoittaa viidesosan jäljelle jääneistä rahoista hyväntekeväisyyteen ja jakaa loput rahoista tasan. Kuinka paljon he lahjoittivat hyväntekeväisyyteen?
+                    \begin{align*}
+                    \frac{1}{5} (10 \,€ + 5 \,£ + 50 \,¥) &= \frac{10}{5} \,€ + \frac{5}{5} \,£ + \frac{50}{5} \,¥ \\[1mm]
+                    &= 2 \,€ + 1 \,£ + 10 \,¥
+                    \end{align*}
+                    Huomaa, että jos molemmissa tulon tekijöissä on kirjainosa, sievennetään lopputuloksen kirjainosa potenssin määritelmän ja laskusääntöjen mukaan. Esimerkiksi monomien $-2x^3$ ja $-4x^2$ tulo on
+                    \begin{align*}
+                    -2x^3\cdot (-4x^2) &= -2 \cdot (-4) \cdot xxxxx \\
+                    &= 8x^5
+                    \end{align*}
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste14-ex">
+                <div class="tehtava" id="116785de-9769-4f92-a01f-457fe46b7cb8">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste14">
                                 Monomin ja polynomin tulo
                             </a>
@@ -466,20 +498,22 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Edellisessä tehtävässä laskettiin monomin ja polynomin tuloja kertomalla sulut auki. Joissakin tilanteissa on tarpeen tehdä sama asia päinvastaiseen suuntaan ja kirjoittaa polynomi tulomuodossa. Tämä onnistuu, jos polynomin jokaisessa termissä on sama tulon tekijä. Esimerkiksi polynomin 
+            <div class="teoria"><p>
+                Edellisessä tehtävässä laskettiin monomin ja polynomin tuloja kertomalla sulut auki. Joissakin tilanteissa on tarpeen tehdä sama asia päinvastaiseen suuntaan ja kirjoittaa polynomi tulomuodossa. Tämä onnistuu, jos polynomin jokaisessa termissä on sama tulon tekijä. Esimerkiksi polynomin
                 $$12x^4-16x^2 + 8x$$
                 kaikki kertoimet ovat luvun 4 monikertoja ja kaikissa kirjainosissa on mukana $x$. Tämä polynomi voidaankin kirjoittaa muodossa
                 $$\textcolor{red}{4x} \cdot 3x^3 - \textcolor{red}{4x} \cdot 4x + \textcolor{red}{4x} \cdot 2,$$
                 josta nähdään, että yhteiseksi tekijäksi voidaan erottaa $\textcolor{red}{4x}$. Siis
                 $$12x^4-16x^2 + 8x = \textcolor{red}{4x}(3x^3-4x+2).$$
             </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste15-ex">
+                <div class="tehtava" id="afe8396d-001f-4264-b85a-32093f1982e5">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste15">
                                 Yhteisen tekijän erottaminen
                             </a>
@@ -498,21 +532,24 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Kahden polynomin tulo lasketaan vaiheittain niin, että ensimmäisen tulon tekijän jokaisella termillä kerrotaan jälkimmäinen tulon tekijä samaan tapaan kuin monimin ja polynomin tuloa laskettaessa. Esimerkiksi tulon
-                $$(2x-3)(-4x^2+x-5)$$
-                tapauksessa kerrotaan jälkimmäisen polynomin kaikki termit ensin monomilla $2x$ ja sen jälkeen monomilla $-3$:
-                \begin{align*}
-                &\quad (\textcolor{blue}{2x}\textcolor{red}{-3})(-4x^2+x-5) \\
-                &= \textcolor{blue}{-8x^3+2x^2-10x}\textcolor{red}{+12x^2-3x+15}
-                \end{align*}
-            </p>
+            <div class="teoria">
+                <p>
+                    Kahden polynomin tulo lasketaan vaiheittain niin, että ensimmäisen tulon tekijän jokaisella termillä kerrotaan jälkimmäinen tulon tekijä samaan tapaan kuin monimin ja polynomin tuloa laskettaessa. Esimerkiksi tulon
+                    $$(2x-3)(-4x^2+x-5)$$
+                    tapauksessa kerrotaan jälkimmäisen polynomin kaikki termit ensin monomilla $2x$ ja sen jälkeen monomilla $-3$:
+                    \begin{align*}
+                    &\quad (\textcolor{blue}{2x}\textcolor{red}{-3})(-4x^2+x-5) \\
+                    &= \textcolor{blue}{-8x^3+2x^2-10x}\textcolor{red}{+12x^2-3x+15}
+                    \end{align*}
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste16-ex">
+                <div class="tehtava" id="cbf29beb-f668-46af-bcf0-7f81211c4da1">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste16">
                                 Polynomien tulo
                             </a>
@@ -534,7 +571,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#1asteenYhtalo">
                     Ensimmäisen asteen yhtälö
@@ -543,25 +580,28 @@ topnav: maa2
         </header>
         <div id="1asteenYhtalo" class="collapse">
 
-            <p>
-                Kun tutkitaan, missä kohdassa jokin ensimmäisen asteen polynomifunktio saa tietyn arvon, päädytään niin sanottuun ensimmäisen asteen yhtälöön. Esimerkiksi jos halutaan tietää, missä kohdassa funktio $f(x) = \frac{2}{3}x - 1$ saa arvon $2$, joudutaan tutkimaan yhtälöä
-                $$f(x) = 2$$
-                eli yhtälöä
-                $$\dfrac{2}{3}x - 1 = 2.$$
-                Tätä yhtälöä voidaan havainnollistaa piirtämällä funktion $f(x) = \frac{2}{3}x - 1$ kuvaaja ja vakiofunktion $g(x) = 2$ kuvaaja samaan koordinaatistoon:
-            </p>
-            <p>
-                <img src="/kurssit/maa2/kuvat/EAk9.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Piirroksesta nähdään, että kuvaajat leikkaavat eli funktiot saavat saman arvon kohdassa $x = 4{,}5$. 
-            </p>
+            <div class="teoria">
+                <p>
+                    Kun tutkitaan, missä kohdassa jokin ensimmäisen asteen polynomifunktio saa tietyn arvon, päädytään niin sanottuun ensimmäisen asteen yhtälöön. Esimerkiksi jos halutaan tietää, missä kohdassa funktio $f(x) = \frac{2}{3}x - 1$ saa arvon $2$, joudutaan tutkimaan yhtälöä
+                    $$f(x) = 2$$
+                    eli yhtälöä
+                    $$\dfrac{2}{3}x - 1 = 2.$$
+                    Tätä yhtälöä voidaan havainnollistaa piirtämällä funktion $f(x) = \frac{2}{3}x - 1$ kuvaaja ja vakiofunktion $g(x) = 2$ kuvaaja samaan koordinaatistoon:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/EAk9.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Piirroksesta nähdään, että kuvaajat leikkaavat eli funktiot saavat saman arvon kohdassa $x = 4{,}5$.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste5-ex">
+                <div class="tehtava" id="6d3d82f2-6b5c-4380-8a9c-9a49e2ed73f9">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste5">
                                 Ensimmäisen asteen yhtälö
                             </a>
@@ -571,7 +611,7 @@ topnav: maa2
                         <p>
                             Tehtävänä on ratkaista ensimmäisen asteen yhtälö
                             $$-\dfrac{4}{3}x + 7 = 1$$
-                            graafisesti samaan tapaan kuin edellisessä esimerkissä. 
+                            graafisesti samaan tapaan kuin edellisessä esimerkissä.
                         <ol class="a">
                             <li> Piirrä samaan koordinaatistoon ensimmäisen asteen polynomifunktion $f(x) = -\frac{4}{3}x+7$ ja vakiofunktion $g(x) = 1$ kuvaajat.</li>
                             <li> Päättele yhtälön ratkaisu piirroksen avulla.</li>
@@ -582,18 +622,21 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: YHTÄLÖN RATKAISU</h3>
-                <p>
-                    Yhtälön <em>ratkaisu</em> eli <em>juuri</em> tarkoittaa lukua, joka muuttujan paikalle sijoitettuna tekee yhtälön vasemmasta ja oikeasta puolesta yhtä suuria.
-                </p>
+            <div class="teoria">
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: YHTÄLÖN RATKAISU</h3>
+                    <p>
+                        Yhtälön <em>ratkaisu</em> eli <em>juuri</em> tarkoittaa lukua, joka muuttujan paikalle sijoitettuna tekee yhtälön vasemmasta ja oikeasta puolesta yhtä suuria.
+                    </p>
+                </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste6-ex">
+                <div class="tehtava" id="970e2fe7-cbe0-4ba2-872b-e975ad35c899">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste6">
                                 Yhtälön ratkaisu
                             </a>
@@ -601,7 +644,7 @@ topnav: maa2
                     </header>
                     <div id="1aste6" class="collapse">
                         <p>
-                            Tutki sijoittamalla, ovatko seuraavat luvut yhtälön 
+                            Tutki sijoittamalla, ovatko seuraavat luvut yhtälön
                             $$\frac{2}{x+1} = \frac{2x+3}{3}$$
                             ratkaisuja. Laske erikseen yhtälön vasemmalla puolella olevan lausekkeen arvo ja oikealla puolella olevan lausekkeen arvo ja vertaa tuloksia sen jälkeen.
                         <ol class="a">
@@ -614,34 +657,37 @@ topnav: maa2
                 </div>
             </div>
 
-            <p> 
-                Sijoittamalla voidaan tutkia, onko jokin yksittäinen luku tarkasteltavan yhtälön ratkaisu. Usein on kuitenkin tarpeen etsiä yhtälön kaikki ratkaisut tai selvittää, onko yhtälöllä ylipäätään olemassa ratkaisua. Yhtälön ratkaiseminen tarkoittaakin sitä, että etsitään yhtälön kaikki ratkaisut. Seuraavaksi harjoitellaan tekemään tämä ensimmäisen asteen yhtälön tapauksessa.
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: ENSIMMÄISEN ASTEEN YHTÄLÖ</h3>
+            <div class="teoria">
                 <p>
-                    <em>Ensimmäisen asteen yhtälö</em> tarkoittaa yhtälöä, joka voidaan esittää muodossa
-                    $$ax + b = 0,$$
-                    missä $a \neq 0$.
+                    Sijoittamalla voidaan tutkia, onko jokin yksittäinen luku tarkasteltavan yhtälön ratkaisu. Usein on kuitenkin tarpeen etsiä yhtälön kaikki ratkaisut tai selvittää, onko yhtälöllä ylipäätään olemassa ratkaisua. Yhtälön ratkaiseminen tarkoittaakin sitä, että etsitään yhtälön kaikki ratkaisut. Seuraavaksi harjoitellaan tekemään tämä ensimmäisen asteen yhtälön tapauksessa.
                 </p>
-            </div>
 
-            <p>
-                Kun yhtälöä muokataan, on äärimmäisen tärkeää huolehtia siitä, että sen ratkaisut eivät muutu (muuten saadaan vääriä tuloksia). On mahdollista osoittaa, että seuraavat operaatiot eivät vaikuta yhtälön ratkaisuihin, joten niitä voidaan käyttää yhtälön muokkaamiseen:
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: ENSIMMÄISEN ASTEEN YHTÄLÖ</h3>
+                    <p>
+                        <em>Ensimmäisen asteen yhtälö</em> tarkoittaa yhtälöä, joka voidaan esittää muodossa
+                        $$ax + b = 0,$$
+                        missä $a \neq 0$.
+                    </p>
+                </div>
+
+                <p>
+                    Kun yhtälöä muokataan, on äärimmäisen tärkeää huolehtia siitä, että sen ratkaisut eivät muutu (muuten saadaan vääriä tuloksia). On mahdollista osoittaa, että seuraavat operaatiot eivät vaikuta yhtälön ratkaisuihin, joten niitä voidaan käyttää yhtälön muokkaamiseen:
                 <ol>
                     <li> Yhtälön molemmille puolille voidaan lisätä sama luku tai lauseke.</li>
                     <li> Yhtälön molemmilta puolilta voidaan vähentää sama luku tai lauseke.</li>
                     <li> Yhtälön molemmat puolet voidaan kertoa tai jakaa samalla nollasta erovalla luvulla tai lausekkeella</li>
                     <!-- <li>yhtälön molemmat puolet voidaan jakaa samalla nollasta eroavalla luvulla tai lausekkeella.</li> -->
                 </ol>
-            </p>
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste7-ex">
+                <div class="tehtava" id="43a102ab-6f29-42c6-8fa0-4367b7596e1b">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste7">
                                 Yhtälön ratkaiseminen
                             </a>
@@ -660,10 +706,11 @@ topnav: maa2
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste8-ex">
+                <div class="tehtava" id="2d444682-6479-4e1f-99ef-923734e1bde3">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste8">
                                 Yhtälön ratkaiseminen
                             </a>
@@ -681,28 +728,31 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Tämän kappaleen alussa tarkasteltiin yhtälöä
-                $$\dfrac{2}{3}x - 1 = 2.$$
-                Kun se ratkaistaan yhtälöä muokkaamalla, lisätään aluksi yhtälön molemmille puolille luku $1$. Näin päädytään yhtälöön
-                $$\dfrac{2}{3}x = 3.$$
-                Sen jälkeen yhtälön molemmat puolet voidaan esimerkiksi kertoa kertoimen $\frac{2}{3}$ käänteisluvulla $\frac{3}{2}$. Näin päädytään yhtälöön
-                $$x = \frac{3}{2} \cdot 3$$
-                eli yhtälöön
-                $$x = \frac{9}{2}.$$
-                Näitä yhtälöitä on havainnollistettu alla olevissa kuvissa. Niistä nähdään, että kaikilla kolmella yhtälöllä on sama ratkaisu, kuten pitääkin olla.
-            </p>
-            <p>
-                <img src="/kurssit/maa2/kuvat/EAk10.png" float: left; max-width: 90%; width: auto; height: auto; margin-left: 5%; margin-bottom: 0.5em;>  
-                <img src="/kurssit/maa2/kuvat/EAk11.png" float: left; max-width: 90%; width: auto; height: auto; margin-left: 5%; margin-bottom: 0.5em;>
-                <img src="/kurssit/maa2/kuvat/EAk12.png" float: left; max-width: 90%; width: auto; height: auto; margin-left: 5%; margin-bottom: 0.5em;>
-            <p style="clear: both;"></p>
+            <div class="teoria">
+                <p>
+                    Tämän kappaleen alussa tarkasteltiin yhtälöä
+                    $$\dfrac{2}{3}x - 1 = 2.$$
+                    Kun se ratkaistaan yhtälöä muokkaamalla, lisätään aluksi yhtälön molemmille puolille luku $1$. Näin päädytään yhtälöön
+                    $$\dfrac{2}{3}x = 3.$$
+                    Sen jälkeen yhtälön molemmat puolet voidaan esimerkiksi kertoa kertoimen $\frac{2}{3}$ käänteisluvulla $\frac{3}{2}$. Näin päädytään yhtälöön
+                    $$x = \frac{3}{2} \cdot 3$$
+                    eli yhtälöön
+                    $$x = \frac{9}{2}.$$
+                    Näitä yhtälöitä on havainnollistettu alla olevissa kuvissa. Niistä nähdään, että kaikilla kolmella yhtälöllä on sama ratkaisu, kuten pitääkin olla.
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/EAk10.png" float: left; max-width: 90%; width: auto; height: auto; margin-left: 5%; margin-bottom: 0.5em;>
+                    <img src="/kurssit/maa2/kuvat/EAk11.png" float: left; max-width: 90%; width: auto; height: auto; margin-left: 5%; margin-bottom: 0.5em;>
+                    <img src="/kurssit/maa2/kuvat/EAk12.png" float: left; max-width: 90%; width: auto; height: auto; margin-left: 5%; margin-bottom: 0.5em;>
+                <p style="clear: both;"></p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste9-ex">
+                <div class="tehtava" id="41ce783e-6c3a-4782-be9c-9fef6294dcbd">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste9">
                                 Yhtälön ratkaiseminen
                             </a>
@@ -720,47 +770,50 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Yhtälön ulkonäöstä ei aina voi päätellä, onko kysymyksessä ensimmäisen asteen yhtälö. Esimerkiksi yhtälö
-                $$5x-8x + 9 = 3(3-x)$$
-                näyttää ensimmäisen asteen yhtälöltä, koska siinä esiintyy vain muuttujan $x$ ensimmäinen potenssi. Kun yhtälön vasen ja oikea puoli sievennetään, se saadaan muotoon
-                $$-3x + 9 = 9-3x.$$
-                Kun yhtälön molemmilta puolilta vähennetään luku $9$, päädytään yhtälöön
-                $$-3x = -3x.$$
-                Tästä nähdään, että yhtälö toteutuu, sijoitetaanpa muuttujan $x$ paikalle mikä tahansa luku. Tarkastellun yhtälön ratkaisuja ovat siis kaikki reaaliluvut.
-            </p>
-            <p>
-                Jos yhtälön molemmille puolille lisätään vielä $3x$, päädytään yhtälöön
-                $$0 = 0.$$
-                Tämäkin yhtälö on tosi riippumatta muuttujan $x$ arvosta. Huomataan, että kysymyksessä ei ollut ensimmäisen asteen yhtälö, sillä tarkasteltua yhtälöä ei voinut esittää muodossa $ax+b = 0$, missä $a \neq 0$.
-            </p>
-            <p>
-                Tutkitaan vielä yhtälöä
-                $$2(x+1) = -3x+1-(2-5x).$$
-                Kun sen vasen ja oikea puoli sievennetään, yhtälö saadaan muotoon
-                $$2x + 2 = 2x-1.$$
-                Kun yhtälön molemmilta puolilta vähennetään $2x$, päädytään yhtälöön
-                $$2 = -1.$$
-                Huomataan, että tämä yhtälö on epätosi riippumatta muuttujan $x$ arvosta. Yhtälöllä ei siis ole yhtään ratkaisua. 
-            </p>   
+            <div class="teoria">
+                <p>
+                    Yhtälön ulkonäöstä ei aina voi päätellä, onko kysymyksessä ensimmäisen asteen yhtälö. Esimerkiksi yhtälö
+                    $$5x-8x + 9 = 3(3-x)$$
+                    näyttää ensimmäisen asteen yhtälöltä, koska siinä esiintyy vain muuttujan $x$ ensimmäinen potenssi. Kun yhtälön vasen ja oikea puoli sievennetään, se saadaan muotoon
+                    $$-3x + 9 = 9-3x.$$
+                    Kun yhtälön molemmilta puolilta vähennetään luku $9$, päädytään yhtälöön
+                    $$-3x = -3x.$$
+                    Tästä nähdään, että yhtälö toteutuu, sijoitetaanpa muuttujan $x$ paikalle mikä tahansa luku. Tarkastellun yhtälön ratkaisuja ovat siis kaikki reaaliluvut.
+                </p>
+                <p>
+                    Jos yhtälön molemmille puolille lisätään vielä $3x$, päädytään yhtälöön
+                    $$0 = 0.$$
+                    Tämäkin yhtälö on tosi riippumatta muuttujan $x$ arvosta. Huomataan, että kysymyksessä ei ollut ensimmäisen asteen yhtälö, sillä tarkasteltua yhtälöä ei voinut esittää muodossa $ax+b = 0$, missä $a \neq 0$.
+                </p>
+                <p>
+                    Tutkitaan vielä yhtälöä
+                    $$2(x+1) = -3x+1-(2-5x).$$
+                    Kun sen vasen ja oikea puoli sievennetään, yhtälö saadaan muotoon
+                    $$2x + 2 = 2x-1.$$
+                    Kun yhtälön molemmilta puolilta vähennetään $2x$, päädytään yhtälöön
+                    $$2 = -1.$$
+                    Huomataan, että tämä yhtälö on epätosi riippumatta muuttujan $x$ arvosta. Yhtälöllä ei siis ole yhtään ratkaisua.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste10-ex">
+                <div class="tehtava" id="aa76ce97-c0cb-48ab-8509-3e7ee9403955">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste10">
                                 Yhtälön ratkaiseminen
                             </a>
                         </h1>
                     </header>
                     <div id="1aste10" class="collapse">
-                        <p> 
+                        <p>
                         <ol class="a">
                             <li> Onko edellisessä esimerkissä tarkasteltu yhtälö $2(x+1) = -3x+1-(2-5x)$ ensimmäisen asteen yhtälö? Selitä omin sanoin.</li>
-                            <li> Ratkaise yhtälö 
+                            <li> Ratkaise yhtälö
                                 $$3x - \frac{1-2x}{2} = 4x.$$ Vinkki: Kerro yhtälön molemmat puolet luvulla $2$, jotta pääset eroon murtolausekkeesta.</li>
-                            <li> Ratkaise yhtälö 
+                            <li> Ratkaise yhtälö
                                 $$\frac{2x-1}{3} - \frac{x}{2} = \frac{x-2}{6}.$$ Vinkki: Kerro yhtälön molemmat puolet luvulla $6$, jotta pääset eroon murtolausekkeista.</li>
                         </ol>
                         </p>
@@ -772,7 +825,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#1asteenEpayhtalo">
                     Ensimmäisen asteen epäyhtälö
@@ -781,25 +834,28 @@ topnav: maa2
         </header>
         <div id="1asteenEpayhtalo" class="collapse">
 
-            <p>
-                Kun tutkitaan ensimmäisen asteen polynomifunktion arvoja, voidaan päätyä myös niin sanottuun ensimmäisen asteen epäyhtälöön. Esimerkiksi jos halutaan tietää, millä muuttujan $x$ arvoilla funktion $f(x) = \frac{2}{3}x - 1$ arvot ovat pienempiä kuin $2$, joudutaan tutkimaan epäyhtälöä
-                $$f(x) < 2$$
-                eli epäyhtälöä
-                $$\dfrac{2}{3}x - 1 < 2.$$
-                Tätä epäyhtälöä voidaan havainnollistaa samaan tapaan kuin vastaavaa yhtälöä eli piirtämällä funktion $f(x) = \frac{2}{3}x - 1$ kuvaaja ja vakiofunktion $g(x) = 2$ kuvaaja samaan koordinaatistoon:
-            </p>
-            <p>
-                <img src="/kurssit/maa2/kuvat/EAk9.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p>
-                Piirroksesta nähdään, että funktion $f$ arvot ovat pienempiä kuin $2$, jos ja vain jos $x < 4{,}5$. 
-            </p>
+            <div class="teoria">
+                <p>
+                    Kun tutkitaan ensimmäisen asteen polynomifunktion arvoja, voidaan päätyä myös niin sanottuun ensimmäisen asteen epäyhtälöön. Esimerkiksi jos halutaan tietää, millä muuttujan $x$ arvoilla funktion $f(x) = \frac{2}{3}x - 1$ arvot ovat pienempiä kuin $2$, joudutaan tutkimaan epäyhtälöä
+                    $$f(x) < 2$$
+                    eli epäyhtälöä
+                    $$\dfrac{2}{3}x - 1 < 2.$$
+                    Tätä epäyhtälöä voidaan havainnollistaa samaan tapaan kuin vastaavaa yhtälöä eli piirtämällä funktion $f(x) = \frac{2}{3}x - 1$ kuvaaja ja vakiofunktion $g(x) = 2$ kuvaaja samaan koordinaatistoon:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/EAk9.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Piirroksesta nähdään, että funktion $f$ arvot ovat pienempiä kuin $2$, jos ja vain jos $x < 4{,}5$.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste17-ex">
+                <div class="tehtava" id="0ad7f769-74f7-428c-b028-8473b0f7d1ee">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste17">
                                 Ensimmäisen asteen epäyhtälö
                             </a>
@@ -809,7 +865,7 @@ topnav: maa2
                         <p>
                             Tehtävänä on ratkaista ensimmäisen asteen epäyhtälö
                             $$-\dfrac{4}{3}x + 7 < 3$$
-                            graafisesti samaan tapaan kuin edellisessä esimerkissä. 
+                            graafisesti samaan tapaan kuin edellisessä esimerkissä.
                         <ol class="a">
                             <li> Piirrä samaan koordinaatistoon ensimmäisen asteen polynomifunktion $f(x) = -\frac{4}{3}x+7$ ja vakiofunktion $g(x) = 3$ kuvaajat.</li>
                             <li> Päättele epäyhtälön ratkaisu piirroksen avulla.</li>
@@ -819,29 +875,32 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Epäyhtälön ratkaisuna saadaan yleensä yksittäisen luvun sijaan suuri määrä lukuja. Esimerkiksi luvun alussa tarkastellun epäyhtälön toteuttivat kaikki lukua $4{,}5$ pienemmät reaaliluvut. Nämä luvut muodostavat tarkastellun epäyhtälön ratkaisujoukon.
-            </p>
+            <div class="teoria">
+                <p>
+                    Epäyhtälön ratkaisuna saadaan yleensä yksittäisen luvun sijaan suuri määrä lukuja. Esimerkiksi luvun alussa tarkastellun epäyhtälön toteuttivat kaikki lukua $4{,}5$ pienemmät reaaliluvut. Nämä luvut muodostavat tarkastellun epäyhtälön ratkaisujoukon.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste18-ex">
+                <div class="tehtava" id="c013d196-6d61-4c05-af2c-80fbe6b58047">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste18">
                                 Ensimmäisen asteen epäyhtälö
                             </a>
                         </h1>
                     </header>
                     <div id="1aste18" class="collapse">
-                        <p> 
-                        <ol class="a">
-                            <li> Päättele alla olevan kuva avulla, mitkä luvut toteuttavat epäyhtälön $$\frac{1}{2}x > -1.$$
-                                <p>
-                                <img src="/kurssit/maa2/kuvat/EAk13.png" max-width: 100%; width: auto; height: auto;/> 
-                                </p>
-                            </li>
-                            <li> Ratkaise epäyhtälö kertomalla sen molemmat puolet luvulla $2$. Vertaa tulosta edellisen kohdan tulokseen. Ovatko tulokset samat?</li>
+                        <p>
+                            <ol class="a">
+                                <li> Päättele alla olevan kuva avulla, mitkä luvut toteuttavat epäyhtälön $$\frac{1}{2}x > -1.$$
+                        <p>
+                            <img src="/kurssit/maa2/kuvat/EAk13.png" max-width: 100%; width: auto; height: auto;/>
+                        </p>
+                        </li>
+                        <li> Ratkaise epäyhtälö kertomalla sen molemmat puolet luvulla $2$. Vertaa tulosta edellisen kohdan tulokseen. Ovatko tulokset samat?</li>
                         </ol>
                         </p>
                     </div>
@@ -849,46 +908,50 @@ topnav: maa2
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste19-ex">
+                <div class="tehtava" id="e3987722-f340-43ec-8288-c251632310cb">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste19">
                                 Ensimmäisen asteen epäyhtälö
                             </a>
                         </h1>
                     </header>
                     <div id="1aste19" class="collapse">
-                        <p> 
-                        <ol class="a">
-                            <li> Päättele alla olevan kuva avulla, mitkä luvut toteuttavat epäyhtälön $$-\frac{1}{2}x > -1.$$
-                                <p>
-                                <img src="/kurssit/maa2/kuvat/EAk14.png" max-width: 100%; width: auto; height: auto;/> 
-                                </p>
-                            </li>
-                            <li> Ratkaise epäyhtälö kertomalla sen molemmat puolet luvulla $-2$. Vertaa tulosta edellisen kohdan tulokseen. Kumpi tuloksista on oikein?</li>
-                            <li> Jos epäyhtälön molemmat puolet kertoo jollakin negatiivisella luvulla, on vaarana, että saa vääriä tuloksia. Selitä omin sanoin, mitä epäyhtälölle pitää tehdä, jotta tulokset ovat oikein myös negatiivisella luvulla kerrottaessa.</li>
+                        <p>
+                            <ol class="a">
+                                <li> Päättele alla olevan kuva avulla, mitkä luvut toteuttavat epäyhtälön $$-\frac{1}{2}x > -1.$$
+                        <p>
+                            <img src="/kurssit/maa2/kuvat/EAk14.png" max-width: 100%; width: auto; height: auto;/>
+                        </p>
+                        </li>
+                        <li> Ratkaise epäyhtälö kertomalla sen molemmat puolet luvulla $-2$. Vertaa tulosta edellisen kohdan tulokseen. Kumpi tuloksista on oikein?</li>
+                        <li> Jos epäyhtälön molemmat puolet kertoo jollakin negatiivisella luvulla, on vaarana, että saa vääriä tuloksia. Selitä omin sanoin, mitä epäyhtälölle pitää tehdä, jotta tulokset ovat oikein myös negatiivisella luvulla kerrottaessa.</li>
                         </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <p>
-                Ensimmäisen asteen epäyhtälöä voidaan muokata samaan tapaan kuin ensimmäisen asteen yhtälöä. Erona on, että negatiivisella luvulla kerrottaessa tai jaettaessa täytyy epäyhtälömerkin suunta vaihtaa, jotta saadaan oikeita tuloksia. Sallitut operaatiot ovat siis seuraavat:
+            <div class="teoria">
+                <p>
+                    Ensimmäisen asteen epäyhtälöä voidaan muokata samaan tapaan kuin ensimmäisen asteen yhtälöä. Erona on, että negatiivisella luvulla kerrottaessa tai jaettaessa täytyy epäyhtälömerkin suunta vaihtaa, jotta saadaan oikeita tuloksia. Sallitut operaatiot ovat siis seuraavat:
                 <ol>
                     <li> Epäyhtälön molemmille puolille voidaan lisätä sama luku tai lauseke.</li>
                     <li> Epäyhtälön molemmilta puolilta voidaan vähentää sama luku tai lauseke.</li>
                     <li> Epäyhtälön molemmat puolet voidaan kertoa tai jakaa samalla <em>positiivisella</em> luvulla. </li>
                     <li> Epäyhtälön molemmat puolet voidaan kertoa tai jakaa samalla <em>negatiivisella</em> luvulla, jos samalla vaihdetaan epäyhtälömerkin suunta.</li>
                 </ol>
-            </p>
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste20-ex">
+                <div class="tehtava" id="9752b8d2-b151-4441-961a-887e63a67328">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste20">
                                 Epäyhtälön ratkaiseminen
                             </a>
@@ -906,23 +969,26 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Edellisessä luvussa kohdattiin tilanteita, joissa tarkastellulla yhtälölllä ei ollut yhtään ratkaisua. Näin voi käydä myös epäyhtälön tapauksessa. Esimerkiksi epäyhtälö
-                $$x-3(x+1) > 2(1-x)$$
-                saadaan sieventämällä muotoon
-                $$x-3x-3 > 2-2x$$
-                ja edelleen muotoon
-                $$-2x-3 > 2 -2x.$$
-                Kun tämän epäyhtälön molemmille puolille lisätään $2x$, päädytään epäyhtälöön
-                $$-3 > 2.$$
-                Se on epätosi kaikilla muuttujan $x$ arvoilla, joten tarkastellulla epäyhtälöllä ei ole lainkaan ratkaisuja. 
-            </p>
+            <div class="teoria">
+                <p>
+                    Edellisessä luvussa kohdattiin tilanteita, joissa tarkastellulla yhtälölllä ei ollut yhtään ratkaisua. Näin voi käydä myös epäyhtälön tapauksessa. Esimerkiksi epäyhtälö
+                    $$x-3(x+1) > 2(1-x)$$
+                    saadaan sieventämällä muotoon
+                    $$x-3x-3 > 2-2x$$
+                    ja edelleen muotoon
+                    $$-2x-3 > 2 -2x.$$
+                    Kun tämän epäyhtälön molemmille puolille lisätään $2x$, päädytään epäyhtälöön
+                    $$-3 > 2.$$
+                    Se on epätosi kaikilla muuttujan $x$ arvoilla, joten tarkastellulla epäyhtälöllä ei ole lainkaan ratkaisuja.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="1aste21-ex">
+                <div class="tehtava" id="07a8e5c7-4148-44cd-af7f-6f063048f807">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste21">
                                 Epäyhtälön ratkaiseminen
                             </a>
@@ -939,21 +1005,24 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Joidenkin epäyhtälöiden ratkaisujoukko muodostuu kaikista reaaliluvuista. Esimerkiksi kun epäyhtälön
-                $$-\frac{x}{2} + 3 \geq 1 - \frac{1}{2}x$$
-                molemmat puolet kerrotaan positiivisella luvulla $2$, päädytään epäyhtälöön
-                $$-x+6 \geq 1-x.$$
-                Kun tämän molemmille puolille lisätään $x$, saadaan epäyhtälö
-                $$6 \geq 1.$$
-                Tämä epäyhtälö on tosi riippumatta muuttujan $x$ arvosta, joten tarkastellun epäyhtälön ratkaisujoukon muodostavat kaikki reaaliluvut.
-            </p>
-            
+            <div class="teoria">
+                <p>
+                    Joidenkin epäyhtälöiden ratkaisujoukko muodostuu kaikista reaaliluvuista. Esimerkiksi kun epäyhtälön
+                    $$-\frac{x}{2} + 3 \geq 1 - \frac{1}{2}x$$
+                    molemmat puolet kerrotaan positiivisella luvulla $2$, päädytään epäyhtälöön
+                    $$-x+6 \geq 1-x.$$
+                    Kun tämän molemmille puolille lisätään $x$, saadaan epäyhtälö
+                    $$6 \geq 1.$$
+                    Tämä epäyhtälö on tosi riippumatta muuttujan $x$ arvosta, joten tarkastellun epäyhtälön ratkaisujoukon muodostavat kaikki reaaliluvut.
+                </p>
+            </div>
+
             <div class="tehtavat">
-                <div class="tehtava" id="1aste22-ex">
+                <div class="tehtava" id="ef8b6541-8105-4ad7-a96d-5b6040faee1f">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#1aste22">
                                 Epäyhtälön ratkaiseminen
                             </a>
@@ -974,7 +1043,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja2">
                     TEHTÄVÄSARJA II
@@ -985,9 +1054,10 @@ topnav: maa2
         <div id="luku1-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="1aste25-ex">
+            <div class="tehtava" id="eded6108-5a9b-4ee9-83b5-10ee10f2c436">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste25">
                             Ensimmäisen asteen polynomifunktio
                         </a>
@@ -1001,7 +1071,7 @@ topnav: maa2
                         <li> $(0,2)$ </li>
                         <li> $(2,-3)$ </li>
                         <li> $(1,-1)$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste25_v">
                             Vastaus
@@ -1019,9 +1089,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste31-ex">
+            <div class="tehtava" id="e2fd7577-5afd-4d9a-a987-cc9c6092ec9e">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste31">
                             Ensimmäisen asteen polynomifunktio
                         </a>
@@ -1029,14 +1100,14 @@ topnav: maa2
                 </header>
                 <div id="1aste31">
                     <p>
-                        Olkoon $f(x) = -2x+5$. Määritä 
+                        Olkoon $f(x) = -2x+5$. Määritä
                     <ol class="a">
                         <li> funktion $f$ arvo kohdassa nolla </li>
                         <li> funktion $f$ nollakohta </li>
                         <li> piste, jossa funktion $f$ kuvaaja leikkaa $x$-akselin </li>
                         <li> piste, jossa funktion $f$ kuvaaja leikkaa $y$-akselin. </li>
-                    </ol> 
-                        Vertaa kohtien (a)-(d) vastauksia toisiinsa. Selitä havaintosi omin sanoin.
+                    </ol>
+                    Vertaa kohtien (a)-(d) vastauksia toisiinsa. Selitä havaintosi omin sanoin.
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste31_v">
@@ -1056,9 +1127,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste26-ex">
+            <div class="tehtava" id="ed7fae2c-94c4-4d73-8f2f-396f48d1bddc">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste26">
                             Ensimmäisen asteen polynomifunktio
                         </a>
@@ -1072,7 +1144,7 @@ topnav: maa2
                         <li> Tiedetään, että $f(3) = 3$ ja funktion $f$ kuvaaja leikkaa $y$-akselin korkeudella $-3$. </li>
                         <li> Tiedetään, että $f(1) = 2$ ja $f(2) = -1$. </li>
                         <li> Tiedetään, että $f(0) = 2$ ja funktiolla $f$ on nollakohta $x = 4$. </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste26_v">
                             Vastaus
@@ -1090,9 +1162,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste40-ex">
+            <div class="tehtava" id="9ee9d41b-c2d8-4623-ae04-2cb8747db73f">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste40">
                             Ensimmäisen asteen polynomifunktio
                         </a>
@@ -1100,13 +1173,13 @@ topnav: maa2
                 </header>
                 <div id="1aste40">
                     <p>
-                        Keksi kaksi esimerkkiä ensimmäisen asteen polynomifunktiosta, 
+                        Keksi kaksi esimerkkiä ensimmäisen asteen polynomifunktiosta,
                     <ol class="a">
                         <li> jonka kuvaaja leikkaa $y$-akselin pisteessä $(0,4)$ </li>
                         <li> jolla on nollakohta $x = -1$ </li>
                         <li> jonka kuvaajan kulmakerroin on $2$.  </li>
-                    </ol> 
-                        Piirrä keksimiesi funktioiden kuvaajat.
+                    </ol>
+                    Piirrä keksimiesi funktioiden kuvaajat.
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste40_v">
@@ -1125,22 +1198,23 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste41-ex">
+            <div class="tehtava" id="8a5fbb95-b9f0-4197-b96b-09ccafad35fe">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste41">
                             1. ASTEEN POLYNOMIFUNKTIO JA VAKIOFUNKTIO
                         </a>
                     </h1>
                 </header>
                 <div id="1aste41">
-                    <p> Millä vakion $a$ arvoilla funktion $f(x) = (12-3a)x + 7a$ kuvaaja on 
+                    <p> Millä vakion $a$ arvoilla funktion $f(x) = (12-3a)x + 7a$ kuvaaja on
                     <ol class="a">
                         <li> nouseva suora </li>
                         <li> laskeva suora </li>
                         <li> $x$-akselin suuntainen suora?</li>
                         <li> Missä pisteessä c-kohdan suora leikkaa $y$-akselin?</li>
-                    </ol> 
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste41_v">
@@ -1160,9 +1234,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste42-ex">
+            <div class="tehtava" id="17ddf5c5-4893-4f31-a68d-bd3f95611210">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste42">
                             Ensimmäisen asteen polynomifunktio
                         </a>
@@ -1173,7 +1248,7 @@ topnav: maa2
                     <ol class="a">
                         <li> Määritä se vakion $a$ arvo, jolla funktion $f$ nollakohta on $x = 4{,}5$. </li>
                         <li> Onko olemassa sellainen piste $(x,y)$, jonka kautta funktion $f$ kuvaaja kulkee aina vakion $a$ arvosta riippumatta? Perustele vastauksesi omin sanoin ja sopivien laskujen tai piirrosten avulla.</li>
-                    </ol> 
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste42_v">
@@ -1191,9 +1266,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste42b-ex">
+            <div class="tehtava" id="670d9d68-4b16-45fd-8aa2-4180986f27a3">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste42b">
                             Ensimmäisen asteen polynomifunktio
                         </a>
@@ -1204,7 +1280,7 @@ topnav: maa2
                     <ol class="a">
                         <li> Määritä se vakion $b$ arvo, jolla funktion $g$ nollakohta on $x = 0{,}5$. </li>
                         <li> Onko olemassa sellainen piste $(x,y)$, jonka kautta funktion $g$ kuvaaja kulkee aina vakion $b$ arvosta riippumatta? Perustele vastauksesi omin sanoin ja sopivien laskujen tai piirrosten avulla.</li>
-                    </ol> 
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste42b_v">
@@ -1222,9 +1298,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste27-ex">
+            <div class="tehtava" id="ac1bb2ba-c1ef-4220-8c3d-3425306b133f">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste27">
                             Polynomien summa, erotus ja tulo
                         </a>
@@ -1237,7 +1314,7 @@ topnav: maa2
                     <ol class="a">
                         <li> $(2x^2-3x+1) + (3x^2+3x+2)$ </li>
                         <li> $(2x^3-3x^2+4x) - (-3x^2+4x-1)$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste27_v">
                             Vastaus
@@ -1254,9 +1331,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste28-ex">
+            <div class="tehtava" id="d66d9f6a-4ac4-4588-b6f3-475f06ddc974">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste28">
                             Polynomien summa, erotus ja tulo
                         </a>
@@ -1269,7 +1347,7 @@ topnav: maa2
                     <ol class="a">
                         <li> $4x(2x^2-3x)$ </li>
                         <li> $(5x-2)(2x-5)$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste28_v">
                             Vastaus
@@ -1286,9 +1364,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste29-ex">
+            <div class="tehtava" id="af116d77-77dd-4611-b801-5e12377aa291">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste29">
                             Polynomien summa, erotus ja tulo
                         </a>
@@ -1301,7 +1380,7 @@ topnav: maa2
                     <ol class="a">
                         <li> $x(x-6)-(x-2)(x-4)$ </li>
                         <li> $x^2(x+3)-(x+3)(x^2-1)$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste29_v">
                             Vastaus
@@ -1318,9 +1397,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste30-ex">
+            <div class="tehtava" id="90d443c5-b908-427a-8ea7-97a161e47efb">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste30">
                             Polynomien summa, erotus ja tulo
                         </a>
@@ -1334,7 +1414,7 @@ topnav: maa2
                         <li> $3x^2-6x$ </li>
                         <li> $4x^4+7x^2$ </li>
                         <li> $10x^3-5x$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste30_v">
                             Vastaus
@@ -1352,9 +1432,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste43-ex">
+            <div class="tehtava" id="172f8502-973b-416f-b6c9-c9ee7d1130ab">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste43">
                             Polynomien summa, erotus ja tulo
                         </a>
@@ -1364,13 +1445,13 @@ topnav: maa2
                     <p> Kolme arkkitehtiopiskelijaa suunnitteli taloa, jonka pohjapiirroksen karkea luonnos on näkyvissä alla. Opiskelija A laski talon pinta-alan olevan $9\cdot 10 - 6x$ neliömetriä, mutta opiskelija B oli eri mieltä, sillä hänen laskujensa mukaan pinta-ala oli $3\cdot 10 + 6 \cdot (10-x)$ neliömetriä. Opiskelijan C mielestä sekä A että B olivat väärässä, sillä hän oli saanut tulokseksi $9 \cdot (10-x) + 3x$ neliömetriä.
                     </p>
                     <p>
-                        <img src="/kurssit/maa2/kuvat/EAk16.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa2/kuvat/EAk16.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <ol class="a">
                         <li> Miten opiskelijat A, B ja C olivat laskeneet pinta-alan? Havainnollista kunkin opiskelijan ajattelutapaa piirroksella. </li>
                         <li> Saiko joku opiskelijoista väärän tuloksen? Perustele vastauksesi sieventämällä pinta-alojen lausekkeet. </li>
                         <li> Määritä se muuttujan $x$ arvo, jolla talon pinta-alaksi tulee $60 \text{ m}^2$.</li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste43_v">
                             Vastaus
@@ -1388,9 +1469,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste33-ex">
+            <div class="tehtava" id="629cae68-382c-4657-b655-f9df3f574aa3">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste33">
                             Ensimmäisen asteen yhtälö
                         </a>
@@ -1404,7 +1486,7 @@ topnav: maa2
                         <li> $3x-5(2x-6) = 0$ </li>
                         <li> $\dfrac{2x-3}{4} = \dfrac{5x-6}{7}$ </li>
                         <li> $3x - \dfrac{x-1}{2} = 4$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste33_v">
                             Vastaus
@@ -1422,9 +1504,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste34-ex">
+            <div class="tehtava" id="cd130297-4738-4e1d-a0d5-9599a4b45459">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste34">
                             Ensimmäisen asteen yhtälö
                         </a>
@@ -1447,9 +1530,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste35-ex">
+            <div class="tehtava" id="5e9673fc-904d-4a8d-bfe7-9e06c98d70cc">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste35">
                             Ensimmäisen asteen yhtälö
                         </a>
@@ -1472,16 +1556,17 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste45-ex">
+            <div class="tehtava" id="02d96719-6053-4ee8-871c-6f05aa284391">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste45">
                             Ensimmäisen asteen yhtälö
                         </a>
                     </h1>
                 </header>
                 <div id="1aste45">
-                    <p> 
+                    <p>
                         Kaksi työntekijää otti urakakseen huolehtia rästiin jääneiden tilausten toimittamisen asiakkaille. Urakkapalkkioksi sovittiin 1800 euroa. Lisäksi sovittiin, että palkkio jaetaan työntekijöille heidän tekemiensä työtuntien suhteessa ja viikonlopulle osuneista työtunneista saa kaksinkertaisen korvauksen. Työntekijälle A kertyi 45 työtuntia ja työntekijälle B 40 tuntia, joista 12 tuntia hän oli tehnyt viikonloppuisin. Miten urakkapalkkio piti jakaa työntekijöiden kesken?
                     </p>
                     <h2>
@@ -1497,9 +1582,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste36-ex">
+            <div class="tehtava" id="6b271c22-e036-49fb-9cc1-39fe5e3f2d38">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste36">
                             Ensimmäisen asteen epäyhtälö
                         </a>
@@ -1512,7 +1598,7 @@ topnav: maa2
                     <ol class="a">
                         <li> $4(2-x) \geq 2x-1$ </li>
                         <li> $5-3(x+1) < 2x + 3$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste36_v">
                             Vastaus
@@ -1529,9 +1615,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste37-ex">
+            <div class="tehtava" id="eae995bd-265f-415e-a416-8353e5bef28a">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste37">
                             Ensimmäisen asteen epäyhtälö
                         </a>
@@ -1544,7 +1631,7 @@ topnav: maa2
                     <ol class="a">
                         <li> $2(3x-4) \leq 3(4x-3) + 1$ </li>
                         <li> $2-(x-1) \leq 1-2(x+1)$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste37_v">
                             Vastaus
@@ -1561,9 +1648,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste38-ex">
+            <div class="tehtava" id="8bdc4cc7-7a90-4049-a605-e51ad4369c99">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste38">
                             Ensimmäisen asteen epäyhtälö
                         </a>
@@ -1571,7 +1659,7 @@ topnav: maa2
                 </header>
                 <div id="1aste38">
                     <p>
-                       Kauppaan palautetaan 20 pulloa. Pienten muovipullojen pantti on 0,20 euroa ja isojen 0,40 euroa. Kuinka monen pulloista täytyy olla isoja, jotta rahaa saataisiin vähintään 7 euroa?
+                        Kauppaan palautetaan 20 pulloa. Pienten muovipullojen pantti on 0,20 euroa ja isojen 0,40 euroa. Kuinka monen pulloista täytyy olla isoja, jotta rahaa saataisiin vähintään 7 euroa?
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste38_v">
@@ -1586,9 +1674,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste39-ex">
+            <div class="tehtava" id="aca3b86d-3a82-4d50-acae-9ed2ce1cbf50">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste39">
                             Ensimmäisen asteen epäyhtälö
                         </a>
@@ -1596,10 +1685,10 @@ topnav: maa2
                 </header>
                 <div id="1aste39">
                     <p>
-                       Tasakylkisen kolmion kanta on 6 metriä pitempi kuin kylki. Kuinka pitkä kolmion yksi kylki voi olla, jos kolmion piiri on enintään 30 metriä?
+                        Tasakylkisen kolmion kanta on 6 metriä pitempi kuin kylki. Kuinka pitkä kolmion yksi kylki voi olla, jos kolmion piiri on enintään 30 metriä?
                     </p>
                     <p>
-                        <img src="/kurssit/maa2/kuvat/EAk15.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa2/kuvat/EAk15.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste39_v">
@@ -1614,20 +1703,21 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste44-ex">
+            <div class="tehtava" id="f77d03b9-dc66-4689-a453-27699fc1f6a4">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste44">
                             Ensimmäisen asteen epäyhtälö
                         </a>
                     </h1>
                 </header>
                 <div id="1aste44">
-                    <p> Lauralla on säästössä 650 euroa ja Saaralla 890 euroa. Laura päättää säästää jatkossa 80 euroa kuukaudessa ja Saara 60 euroa kuukaudessa.  
+                    <p> Lauralla on säästössä 650 euroa ja Saaralla 890 euroa. Laura päättää säästää jatkossa 80 euroa kuukaudessa ja Saara 60 euroa kuukaudessa.
                     <ol class="a">
                         <li> Kuinka pitkän ajan kuluttua Lauralla on säästössä vähintään 2000 euroa? </li>
                         <li> Kuinka pitkän ajan kuluttua Lauralla on säästössä suurempi summa kuin Saaralla? Kuinka suuri summa Lauralla on tällöin säästössä?</li>
-                    </ol> 
+                    </ol>
                     Anna vastaukset kuukauden tarkkuudella.
                     </p>
                     <h2>
@@ -1646,9 +1736,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste50-ex">
+            <div class="tehtava" id="521f07b3-5d8f-424c-b26c-8ab4f9ce7374">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste50">
                             Ensimmäisen asteen epäyhtälö
                         </a>
@@ -1658,7 +1749,7 @@ topnav: maa2
                     <p>
                         Millä muuttujan $x$ arvoilla funktion $f(x) = \frac{1}{3}x + 2$ kuvaaja on funktion $f(x) = \frac{2}{5}x - 4$ kuvaajan alapuolella?
                     </p>
-                    
+
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste50_v">
                             Vastaus
@@ -1677,7 +1768,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja3">
                     TEHTÄVÄSARJA III
@@ -1688,9 +1779,10 @@ topnav: maa2
         <div id="luku1-tehtavasarja3" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="1aste24-ex">
+            <div class="tehtava" id="76865479-f645-4eb9-947a-2247bd8ee794">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste24">
 
                         </a>
@@ -1698,11 +1790,11 @@ topnav: maa2
                 </header>
                 <div id="1aste24">
                     <ol class="a">
-                        <li> Ratkaise yhtälö $2(x+4)-3(x-3) = 0$. 
+                        <li> Ratkaise yhtälö $2(x+4)-3(x-3) = 0$.
                             <br>[Lyhyt K2013/1a] </li>
-                        <li> Millä muttujan $x$ arvoilla $4x+17$ on suurempi kuin $2-x$? 
+                        <li> Millä muttujan $x$ arvoilla $4x+17$ on suurempi kuin $2-x$?
                             <br>[Lyhyt K2013/2a]</li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste24_v">
                             Vastaus
@@ -1719,9 +1811,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste23-ex">
+            <div class="tehtava" id="9866b023-d8d2-47d1-897b-a4afd077aa56">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste23">
 
                         </a>
@@ -1729,14 +1822,14 @@ topnav: maa2
                 </header>
                 <div id="1aste23">
                     <ol class="a">
-                        <li> Sievennä lauseke $x − \left(2x^2 − (3x − 4x^2)\right)$. 
+                        <li> Sievennä lauseke $x − \left(2x^2 − (3x − 4x^2)\right)$.
                             <br>[Pitkä K2016/2a] </li>
-                        <li> Määritä sellainen vakio $a$, että luku 2015 on yhtälön $ax = 2015 + a$ juuri. 
+                        <li> Määritä sellainen vakio $a$, että luku 2015 on yhtälön $ax = 2015 + a$ juuri.
                             <br>[Pitkä S2015/1a]</li>
-                        <li> Ratkaise epäyhtälö 
-                            $$\frac{3}{5}x - \frac{7}{10} < -\frac{2}{15}x$$ 
+                        <li> Ratkaise epäyhtälö
+                            $$\frac{3}{5}x - \frac{7}{10} < -\frac{2}{15}x$$
                             <br>[Pitkä K2013/1b]</li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste23_v">
                             Vastaus
@@ -1754,9 +1847,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste46-ex">
+            <div class="tehtava" id="43f05c76-1e05-4341-a71a-5f3a3bba69ed">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste46">
 
                         </a>
@@ -1770,7 +1864,7 @@ topnav: maa2
                     <ol class="a">
                         <li> on ratkaisu $x = -2$ </li>
                         <li> ei ole ratkaisua?</li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste46_v">
                             Vastaus
@@ -1787,9 +1881,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste47-ex">
+            <div class="tehtava" id="1837002f-60b3-453e-bafa-02d7ed791901">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste47">
 
                         </a>
@@ -1799,7 +1894,7 @@ topnav: maa2
                     <p>
                         Ratkaise $x$ yhtälöstä $a(x-1) = x + a$. Onko olemassa jokin sellainen vakion $a$ arvo, jolla yhtälö toteutuu muuttujan $x$ arvosta riippumatta? Entä onko olemassa jokin sellainen vakion $a$ arvo, jolla yhtälö ei toteudu millään muuttujan $x$ arvolla?
                     </p>
-                    
+
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste47_v">
                             Vastaus
@@ -1807,18 +1902,19 @@ topnav: maa2
                     </h2>
                     <div id="1aste47_v" class="collapse">
                         <p>
-                        $$\begin{cases}
-                        x = \dfrac{2a}{a-1} &\text{ jos $a \neq 1$} \\[1mm]
-                        \text{Ei ratkaisua} &\text{ jos $a = 1$} 
-                        \end{cases}$$
+                            $$\begin{cases}
+                            x = \dfrac{2a}{a-1} &\text{ jos $a \neq 1$} \\[1mm]
+                            \text{Ei ratkaisua} &\text{ jos $a = 1$}
+                            \end{cases}$$
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste48-ex">
+            <div class="tehtava" id="9d3b27e5-d7aa-4002-bca6-4291c8530558">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste48">
 
                         </a>
@@ -1830,7 +1926,7 @@ topnav: maa2
                         $$\dfrac{x + 2a}{3} \geq x-2$$
                         toteutuu, jos ja vain jos $x \leq 9$.
                     </p>
-                    
+
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste48_v">
                             Vastaus
@@ -1838,15 +1934,16 @@ topnav: maa2
                     </h2>
                     <div id="1aste48_v" class="collapse">
                         <p>
-                        $a = 6$
+                            $a = 6$
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste49-ex">
+            <div class="tehtava" id="696aa24b-b5fd-4469-82d3-ab59d41fa05a">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste49">
 
                         </a>
@@ -1855,12 +1952,12 @@ topnav: maa2
                 <div id="1aste49">
                     <p>
                         Ratkaise muuttujan $x$ suhteen epäyhtälö
-                        <ol class="a">
+                    <ol class="a">
                         <li> $x > 3 - ax$ </li>
                         <li> $k^2x > 10 - x$ </li>
-                        </ol> 
+                    </ol>
                     </p>
-                    
+
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste49_v">
                             Vastaus
@@ -1868,26 +1965,27 @@ topnav: maa2
                     </h2>
                     <div id="1aste49_v" class="collapse">
                         <ol class="a">
-                        <li> 
-                            $$\begin{cases}
-                            x > \dfrac{3}{a+1} &\text{ jos $a > -1$} \\[1mm]
-                            \text{Ei ratkaisua} &\text{ jos $a = -1$} \\[1mm]
-                            x < \dfrac{3}{a+1} &\text{ jos $a < -1$}
-                            \end{cases}$$ 
-                        </li>
-                        <li> 
-                            $x > \dfrac{10}{k^2 + 1}$ 
-                        </li>
-                        </ol> 
+                            <li>
+                                $$\begin{cases}
+                                x > \dfrac{3}{a+1} &\text{ jos $a > -1$} \\[1mm]
+                                \text{Ei ratkaisua} &\text{ jos $a = -1$} \\[1mm]
+                                x < \dfrac{3}{a+1} &\text{ jos $a < -1$}
+                                \end{cases}$$
+                            </li>
+                            <li>
+                                $x > \dfrac{10}{k^2 + 1}$
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste51-ex">
+            <div class="tehtava" id="231013a3-1bb5-4762-bf49-5e688ca2038a">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste51">
-                            
+
                         </a>
                     </h1>
                 </header>
@@ -1895,7 +1993,7 @@ topnav: maa2
                     <p>
                         Määritä vakio $a$ siten, että funktio $f(x) = \frac{2}{3}x + a$ saa positiivisia arvoja, jos ja vain jos $x > -\frac{1}{2}$.
                     </p>
-                    
+
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste51_v">
                             Vastaus
@@ -1909,19 +2007,20 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste52-ex">
+            <div class="tehtava" id="7a0260d4-864a-4faa-984a-17ff4a83fa34">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste52">
-                            
+
                         </a>
                     </h1>
                 </header>
                 <div id="1aste52">
                     <p>
-                        Kaksinumeroisen luonnollisen luvun kymmeniä ilmoittava numero saadaan ykkösiä ilmoittavasta numerosta lisäämällä siihen kolme (kuten esimerkiksi luvun 41 tapauksessa). Lisäksi tiedetään, että kyseisen luvun ja numeroiden paikat vaihtamalla saadun luvun summa on 143 (tämä ehto ei toteudu luvun 41 tapauksessa, sillä $41 + 14 = 55$). Mikä on tämä tuntematon luku? 
+                        Kaksinumeroisen luonnollisen luvun kymmeniä ilmoittava numero saadaan ykkösiä ilmoittavasta numerosta lisäämällä siihen kolme (kuten esimerkiksi luvun 41 tapauksessa). Lisäksi tiedetään, että kyseisen luvun ja numeroiden paikat vaihtamalla saadun luvun summa on 143 (tämä ehto ei toteudu luvun 41 tapauksessa, sillä $41 + 14 = 55$). Mikä on tämä tuntematon luku?
                     </p>
-                    
+
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste52_v">
                             Vastaus
@@ -1935,11 +2034,12 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste53-ex">
+            <div class="tehtava" id="85f9fab5-8090-4261-bc05-b1210c865192">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste53">
-                            
+
                         </a>
                     </h1>
                 </header>
@@ -1947,7 +2047,7 @@ topnav: maa2
                     <p>
                         Iiris ja Henrik viipyivät 200 km matkalla 3 tuntia. Alkumatkan he kulkivat keskinopeudella 50 km/h ja loppumatkan keskinopeudella 80 km/h. Kuinka pitkän matkan he kulkivat pienemmällä keskinopeudella?
                     </p>
-                    
+
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste53_v">
                             Vastaus
@@ -1961,23 +2061,24 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste54-ex">
+            <div class="tehtava" id="04a047b7-5a86-4396-8cb7-aa3fbad16dd1">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste54">
-                            
+
                         </a>
                     </h1>
                 </header>
                 <div id="1aste54">
                     <p>
-                        Onko olemassa neljä peräkkäistä kokonaislukua, joiden summa on 
-                        <ol class="a">
+                        Onko olemassa neljä peräkkäistä kokonaislukua, joiden summa on
+                    <ol class="a">
                         <li> $322$ </li>
                         <li> $644$? </li>
-                        </ol> 
+                    </ol>
                     </p>
-                    
+
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste54_v">
                             Vastaus
@@ -1985,18 +2086,19 @@ topnav: maa2
                     </h2>
                     <div id="1aste54_v" class="collapse">
                         <ol class="a">
-                        <li> On. </li>
-                        <li> Ei ole. </li>
+                            <li> On. </li>
+                            <li> Ei ole. </li>
                         </ol>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste55-ex">
+            <div class="tehtava" id="fe7ba39d-e9c2-42c6-ad31-697576276e0d">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste55">
-                            
+
                         </a>
                     </h1>
                 </header>
@@ -2005,7 +2107,7 @@ topnav: maa2
                         Uutta siltaa varten suunnitellaan palkkeja. Oheinen kuvio esittää yhden palkin poikkileikkausta. Ilmaise poikkileikkauksen pinta-ala kirjainten $a$ ja $b$ avulla.
                     </p>
                     <p>
-                        <img src="/kurssit/maa2/kuvat/EAk19.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa2/kuvat/EAk19.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste55_v">
@@ -2020,22 +2122,23 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="1aste56-ex">
+            <div class="tehtava" id="3d231a9e-9114-435c-8eae-02b566e1ffbb">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#1aste56">
-                            
+
                         </a>
                     </h1>
                 </header>
                 <div id="1aste56">
                     <p>
                         Ratkaise seuraavat niin sanotut kaksoisepäyhtälöt:
-                        <ol class="a">
+                    <ol class="a">
                         <li> $1 < 4x - 3 \leq 5$ </li>
                         <li> $0 \leq \dfrac{2x}{3} - 1 < \dfrac{1}{2}$ </li>
                         <li> $-4 \leq 3 -2x < 5$ </li>
-                        </ol>
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste56_v">
@@ -2044,9 +2147,9 @@ topnav: maa2
                     </h2>
                     <div id="1aste56_v" class="collapse">
                         <ol class="a">
-                        <li> $1 < x \leq 2$ </li>
-                        <li> $\dfrac{3}{2} \leq x < \dfrac{9}{4}$ </li>
-                        <li> $-1 < x \leq \dfrac{7}{2}$ </li>
+                            <li> $1 < x \leq 2$ </li>
+                            <li> $\dfrac{3}{2} \leq x < \dfrac{9}{4}$ </li>
+                            <li> $-1 < x \leq \dfrac{7}{2}$ </li>
                         </ol>
                     </div>
                 </div>
@@ -2065,7 +2168,7 @@ topnav: maa2
         </header>
         <div id="L1itsearviointi" class="collapse">
             <p>
-                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1665">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1665">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
             </p>
         </div>
     </section>

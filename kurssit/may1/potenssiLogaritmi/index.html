@@ -18,6 +18,8 @@ topnav: may1
 
 <input type="hidden" id="chapterNumber" value="2"/>
 
+{% include bottomnav.html %}
+
 <article>
 
     <section>
@@ -52,7 +54,7 @@ topnav: may1
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#potenssi1luku">
                     Potenssin määritelmä ja potensseilla laskeminen
@@ -60,7 +62,7 @@ topnav: may1
             </h1>
         </header>
         <div id="potenssi1luku" class="collapse">
-
+            <div class="teoria">
             <p>
                 Summa, jossa kaikki yhteenlaskettavat ovat samoja, voidaan kirjoittaa tulona. Esimerkiksi
                 \begin{align*}
@@ -83,13 +85,13 @@ topnav: may1
                     Potenssilausekkeessa $a^n$ luku $a$ on <em>kantaluku</em> ja luku $n$ on <em>eksponentti</em>.
                 </p>
             </div>
-
+            </div>
             <div class="tehtavat">
 
-                <div class="tehtava" id="firstEx">
+                <div class="tehtava" id="b0cff442-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi1">
                                 Potenssin määritelmä
                             </a>
@@ -112,10 +114,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi2-ex">
+                <div class="tehtava" id="b0cff7d0-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi2">
                                 Potenssin määritelmä
                             </a>
@@ -137,17 +139,18 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <p>
                 Jos kantaluku on negatiivinen, tarvitaan potenssimerkinnässä sulut. Esimerkiksi luvun $-1$ kolmas potenssi on 
                 $$(-1)^3 = (-1) \cdot (-1) \cdot (-1) = 1 \cdot (-1) = -1$$
                 ja neljäs potenssi on 
                 $$(-1)^4 = (-1) \cdot (-1) \cdot (-1) \cdot (-1) = 1 \cdot 1 = 1.$$
             </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi2b-ex">
+                <div class="tehtava" id="b0cff9b0-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi2b">
                                 Potenssin määritelmä
                             </a>
@@ -166,9 +169,9 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi2c-ex">
+                <div class="tehtava" id="b0cffb22-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi2c">
                                 Potenssin määritelmä
                             </a>
@@ -186,18 +189,18 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <p>
                 Jos miinusmerkki on potenssimerkinnän edessä ilman sulkuja, vaikuttaa se koko potenssilausekkeeseen:
                 $$-a^n = -(a^n).$$
                 Esimerkiksi merkintä $-3^6$ tarkoittaa potenssin $3^6 = 729$ vastalukua:
                 $$-3^6 = -(3^6) = -(3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3) = -729.$$
             </p>    
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi3-ex">
+                <div class="tehtava" id="b0cffc94-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi3">
                                 Potenssin määritelmä
                             </a>
@@ -216,7 +219,7 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <p>
                 Potenssilausekkeita voidaan sieventää purkamalla ne tulomuotoon potenssin määritelmän mukaisesti, laskemalla kaikki mahdolliset laskut ja kokoamalla tulos jälleen potenssimuotoon. Esimerkiksi
                 \begin{align*}
@@ -224,11 +227,11 @@ topnav: may1
                 &= 25 \cdot \underbrace{a \cdot a \cdot a \cdot a \cdots a}_\text{14 kappaletta} = 25a^{14}
                 \end{align*}
             </p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi3b-ex">
+                <div class="tehtava" id="b0d002e8-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi3b">
                                 Tulon potenssi
                             </a>
@@ -248,9 +251,9 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi3d-ex">
+                <div class="tehtava" id="b0d0043c-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi3d">
                                 Osamäärän potenssi
                             </a>
@@ -270,9 +273,9 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi3c-ex">
+                <div class="tehtava" id="b0d0050e-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi3c">
                                 Tulon ja osamäärän potenssi
                             </a>
@@ -290,16 +293,16 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <p>
                 Potenssilausekkeiden sieventämisessä pääsee aina alkuun, kun muistaa potenssin määritelmän eli sopimuksen siitä, mitä potenssi tarkoittaa. Niin myös seuraavissa tehtävissä.
             </p>
-
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi9-ex">
+                <div class="tehtava" id="b0d005d6-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi9">
                                 Potenssin potenssi
                             </a>
@@ -321,10 +324,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi9b-ex">
+                <div class="tehtava" id="b0d006a8-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi9b">
                                 Potenssin potenssi
                             </a>
@@ -341,7 +344,7 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <p>
                 Edellä havaittuja potenssien laskusääntöjä voi käyttää myös toiseen suuntaan. Siis
                 \begin{align*}
@@ -351,11 +354,11 @@ topnav: may1
                 \end{align*}
                 Seuraavaksi tutkitaan, mitä eksponenteille tapahtuu, jos kerrotaan tai jaetaan potensseja, joilla on sama kantaluku.
             </p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi4-ex">
+                <div class="tehtava" id="b0d00a5e-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi4">
                                 Samankantaisten potenssien tulo
                             </a>
@@ -376,9 +379,9 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi4c-ex">
+                <div class="tehtava" id="b0d00b4e-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi4c">
                                 Samankantaisten potenssien osamäärä
                             </a>
@@ -399,9 +402,9 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi4b-ex">
+                <div class="tehtava" id="b0d00c16-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi4b">
                                 Samankantaisten potenssien tulo ja osamäärä
                             </a>
@@ -424,7 +427,7 @@ topnav: may1
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#eksponenttiNolla">
                     Negatiivinen eksponentti ja eksponentti nolla
@@ -432,7 +435,7 @@ topnav: may1
             </h1>
         </header>
         <div id="eksponenttiNolla" class="collapse">
-
+            <div class="teoria">
             <p>Edellisessä kappaleessa sovittiin, mitä tarkoitetaan potenssilla $a^n$, missä $n$ on positiivinen kokonaisluku. Sen jälkeen tutkittiin, millaisia laskulakeja potenssilausekkeet noudattavat. Huomattiin esimerkiksi, että samankantaisten potenssien osamäärälle pätee sääntö
                 $$\frac{a^m}{a^n} = a^{m-n}.$$
                 Jos tässä luku $m$ sattuu olemaan pienempi kuin luku $n$, joudutaan kuitenkin ongelmalliseen tilanteeseen. Esimerkiksi 
@@ -451,12 +454,12 @@ topnav: may1
                     Potenssin $a^0$ arvo on siis $1$ ja potenssi $a^{-n}$ on potenssin $a^n$ käänteisluku.
                 </p>
             </div>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi13-ex">
+                <div class="tehtava" id="b0d00cde-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi13">
                                 Negatiivinen eksponentti ja eksponentti nolla
                             </a>
@@ -479,10 +482,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi14-ex">
+                <div class="tehtava" id="b0d00db0-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi14">
                                 Negatiivinen eksponentti ja eksponentti nolla
                             </a>
@@ -503,18 +506,18 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <p>
                 Edellä esitetystä potenssin määritelmästä seuraa erityisesti, että 
                 $$a^{-1} = \frac{1}{a^1} = \frac{1}{a}.$$
                 Potenssi $a^{-1}$ on siis luvun $a$ käänteisluku. 
             </p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi14b-ex">
+                <div class="tehtava" id="b0d01184-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi14b">
                                 Eksponentti -1
                             </a>
@@ -536,9 +539,9 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi15-ex">
+                <div class="tehtava" id="b0d0126a-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi15">
                                 Potenssin potenssi
                             </a>
@@ -560,9 +563,9 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi17-ex">
+                <div class="tehtava" id="b0d01468-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi17">
                                 Samankantaisten potenssien tulo
                             </a>
@@ -583,7 +586,7 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <p>
                 Kun potenssi määriteltiin negatiivisten eksponenttien ja eksponentin nolla tapauksessa, tehtiin määritelmästä tarkoituksella sellainen, että aikaisemmin havaitut potenssien laskusäännöt toimivat edelleen. Nämä laskusäännöt on koottu seuraavaan teoreemaan. Teoreemat (toiselta nimeltään lauseet) ovat matemaattisia tosiasioita, jotka voidaan perustella todeksi määritelmien pohjalta. Tällä kertaa perustelu kuitenkin sivuutetaan, koska se ei ole tämän kurssin kannalta oleellinen.
             </p>
@@ -609,11 +612,11 @@ topnav: may1
             <p>
                 Seuraavassa tehtävässä jatketaan negatiivisten eksponenttien ominaisuuksien tutkimista.
             </p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi19-ex">
+                <div class="tehtava" id="b0d01788-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi19">
                                 Negatiivinen eksponentti
                             </a>
@@ -632,7 +635,7 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <p>
                 Edellisen tehtävän havaintojen pohjalta voidaan päätyä seuraavaan teoreemaan. Tällä kertaa myös teoreeman perustelu (eli todistus) on kirjoitettu näkyviin. Lue se huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
             </p>
@@ -654,15 +657,15 @@ topnav: may1
                     </p>
                 </div>
             </div>
-
+            </div>
             <p>
                 Seuraavissa tehtävissä harjoitellaan äsken perustellun teoreeman 2 soveltamista.
             </p>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi20-ex">
+                <div class="tehtava" id="b0d01882-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi20">
                                 Negatiivinen eksponentti 
                             </a>
@@ -681,9 +684,9 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi21-ex">
+                <div class="tehtava" id="b0d01954-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi21">
                                 Negatiivinen eksponentti 
                             </a>
@@ -705,7 +708,7 @@ topnav: may1
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#kymmenpotenssiluku">
                     Kymmenpotenssimuoto ja merkitsevät numerot
@@ -713,7 +716,7 @@ topnav: may1
             </h1>
         </header>
         <div id="kymmenpotenssiluku" class="collapse">
-
+            <div class="teoria">
             <p> 
                 Kymmenpotenssimuotoa käytetään usein hyvin suurten tai pienten positiivisten lukujen merkisemiseen. Esimerkiksi Suomen väkiluku oli heinäkuussa 2016 noin $5{,}497$ miljoonaa eli $5{,}497 \cdot 10^6 = 5\,497\,000$. Yhden vesimolekyylin massa puolestaan on noin $2{,}9915 \cdot 10^{-23}$ grammaa. 
             </p>
@@ -724,12 +727,12 @@ topnav: may1
                     Positiivisen luvun <em>kymmenpotenssimuoto</em> tarkoittaa luvun esittämistä muodossa $a\cdot 10^n$, missä $n$ on kokonaisluku ja kerroin $a$ on vähintään yksi ja pienempi kuin kymmenen: $1 \leq a < 10$.
                 </p>
             </div>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi22-ex">
+                <div class="tehtava" id="b0d01e68-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi22">
                                 Kymmenen potenssit 
                             </a>
@@ -750,10 +753,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi24-ex">
+                <div class="tehtava" id="b0d01f80-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi24">
                                 Kymmennen potenssit
                             </a>
@@ -773,10 +776,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi23-ex">
+                <div class="tehtava" id="b0d02048-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi23">
                                 Kymmenpotenssimuoto 
                             </a>
@@ -793,7 +796,7 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <p>
                 Edellisessä tehtävässä ilmaistiin erilaisia etäisyyksiä kymmenpotenssimuodossa. Kaikki niistä olivat jonkinlaisia likiarvoja. Mistä tietää, millä tarkkuudella nämä etäisyydet oli tehtävässä ilmoitettu? 
             </p>
@@ -806,12 +809,12 @@ topnav: may1
                 $$\textcolor{red}{31}0\,000$$
                 on kaksi merkitsevää numeroa.
             </p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi24a-ex">
+                <div class="tehtava" id="b0d02106-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi24a">
                                 Merkitsevät numerot
                             </a>
@@ -830,9 +833,9 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="potenssi25-ex">
+                <div class="tehtava" id="b0d021ce-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi25">
                                 Kymmenpotenssimuoto 
                             </a>
@@ -853,7 +856,7 @@ topnav: may1
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#logaritmi1luku">
                     Logaritmi ja eksponentin ratkaiseminen
@@ -861,18 +864,18 @@ topnav: may1
             </h1>
         </header>
         <div id="logaritmi1luku" class="collapse">
-
+            <div class="teoria">
             <p>
                 Potenssin määritelmän mukaan $2^3 = 2\cdot 2 \cdot 2 = 8$. Jossain tilanteissa halutaan tarkastella erityisesti potenssilausekkeessa esiintyvää eksponenttia, joka on tässä tapauksessa $3$. Jos kantaluku (tässä tapauksessa $2$) ja potenssiin korotuksen tulos (tässä tapauksessa $8$) tiedetään, voidaan eksponentista puhua logaritmin avulla. Tässä tilanteessa voidaan sanoa, että
                 $$\log_2(8) = 3$$
                 eli luvun kahdeksan $2$-kantainen logaritmi on $3$. Logaritmi kertoo siis eksponentin arvon.
             </p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="logaritmi0-ex">
+                <div class="tehtava" id="b0d0228c-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#logaritmi0">
                                 Eksponentin arvo
                             </a>
@@ -889,7 +892,7 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <div class="definition">
                 <h3>MÄÄRITELMÄ: LOGARITMI</h3>
                 <p>
@@ -898,12 +901,12 @@ topnav: may1
             </div>
 
             <p> Edellisessä tehtävässä selvitit siis logaritmit $\log_7(49)$, $\log_2(32)$ ja $\log_3(27)$.</p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="logaritmi1-ex">
+                <div class="tehtava" id="b0d0284a-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#logaritmi1">
                                 Logaritmi
                             </a>
@@ -922,10 +925,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="logaritmi2-ex">
+                <div class="tehtava" id="b0d02a16-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#logaritmi2">
                                 Logaritmi
                             </a>
@@ -942,15 +945,15 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <p>
                 Logaritmin avulla voidaan ilmaista sellaisiakin eksponentteja, jotka eivät ole kokonaislukuja. Esimerkiksi yhtälön $2^x = 10$ ratkaisu ei ole kokonaisluku, sillä $2^3 = 8 < 10$ ja $2^4 = 16 > 10$. Näistä tietoista voidaan päätellä, että luku $x$ on kolmea suurempi ja neljää pienempi eli $3 < x < 4$. Logaritmin määritelmän mukaan voidaan merkitä $x = \log_2(10)$. Laskimen tai tietokokeen avulla saadaan likiarvo $\log_2(10) \approx 3{,}32$.
             </p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="logaritmi3-ex">
+                <div class="tehtava" id="b0d02b10-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#logaritmi3">
                                 Eksponenttiyhtälön ratkaisu
                             </a>
@@ -967,7 +970,7 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
+            <div class="teoria">
             <p>
                 Jos eksponenttiyhtälön molemmat puolet onnistutaan ilmaisemaan saman kantaluvun potensseina, onnistuu yhtälön ratkaiseminen potenssin laskusääntöjen avulla ilman logaritmia. Esimerkiksi yhtälö
                 $$5^x = 25^3$$
@@ -977,11 +980,11 @@ topnav: may1
                 $$5^x = 5^6.$$
                 Tästä voidaan päätellä, että yhtälön ratkaisu on $x = 6$.
             </p>
-
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="logaritmi4-ex">
+                <div class="tehtava" id="b0d02bd8-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#logaritmi4">
                                 Eksponenttiyhtälön ratkaisu
                             </a>
@@ -1003,7 +1006,7 @@ topnav: may1
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja2">
                     TEHTÄVÄSARJA II
@@ -1014,9 +1017,9 @@ topnav: may1
         <div id="tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="PL6-ex">
+            <div class="tehtava" id="b0d02ca0-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL6">
                             Potenssi
                         </a>
@@ -1061,9 +1064,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL7-ex">
+            <div class="tehtava" id="b0d02d72-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL7">
                             Potenssi
                         </a>
@@ -1098,9 +1101,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL15-ex">
+            <div class="tehtava" id="b0d02e3a-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL15">
                             Potenssi
                         </a>
@@ -1134,9 +1137,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL15b-ex">
+            <div class="tehtava" id="b0d03204-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL15b">
                             Potenssi
                         </a>
@@ -1170,9 +1173,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL16-ex">
+            <div class="tehtava" id="b0d032ea-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL16">
                             Negatiivinen eksponentti ja eksponentti nolla
                         </a>
@@ -1205,9 +1208,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL17-ex">
+            <div class="tehtava" id="b0d033b2-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL17">
                             Negatiivinen eksponentti ja eksponentti nolla
                         </a>
@@ -1238,9 +1241,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL18-ex">
+            <div class="tehtava" id="b0d03470-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL18">
                             Negatiivinen eksponentti
                         </a>
@@ -1285,9 +1288,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="potenssi6-ex">
+            <div class="tehtava" id="b0d03542-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#potenssi6">
                             Samankantaiset potenssit
                         </a>
@@ -1319,9 +1322,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="potenssi8-ex">
+            <div class="tehtava" id="b0d03a4c-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#potenssi8">
                             Samankantaiset potenssit
                         </a>
@@ -1353,9 +1356,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL5-ex">
+            <div class="tehtava" id="b0d03b82-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL5">
                             Potenssin potenssi ja samankantaiset potenssit
                         </a>
@@ -1392,9 +1395,9 @@ topnav: may1
             </div>
 
 
-            <div class="tehtava" id="Potenssi10-ex">
+            <div class="tehtava" id="b0d03c4a-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Potenssi10">
                             Potenssien tulo, osamäärä ja potenssin potenssi
                         </a>
@@ -1427,9 +1430,9 @@ topnav: may1
                 </div>
             </div>
 
-                <div class="tehtava" id="potenssipeli-ex">
+                <div class="tehtava" id="b0d03d12-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-target="#potenssipeli">
                                 Potenssien laskusäännöt
                             </a>
@@ -1442,9 +1445,9 @@ topnav: may1
                     </div>
                 </div>
 
-            <div class="tehtava" id="PL19-ex">
+            <div class="tehtava" id="b0d03dda-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL19">
                             Potenssien laskusäännöt
                         </a>
@@ -1475,9 +1478,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL20-ex">
+            <div class="tehtava" id="b0d03ea2-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL20">
                             Potenssien laskusäännöt
                         </a>
@@ -1506,9 +1509,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL21-ex">
+            <div class="tehtava" id="b0d04244-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL21">
                             Potenssien laskusäännöt
                         </a>
@@ -1538,31 +1541,9 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
-            <!--         <div class="tehtava" id="Potenssi11-ex">
-                        <header>
-                            <h1>
-                                <a data-target="#Potenssi11">
-                                    Eksponenttiyhtälön ratkaisu
-                                </a>
-                            </h1>
-                        </header>
-            
-                        <div id="Potenssi11">
-            
-                            <p>Päättele tai selvitä kokeilemalla, mihin potenssiin luku $2$ pitää korottaa, että saadaan
-                            <ol class="a">
-                              <li> $8$</li>
-                              <li> $32$</li>
-                              <li> $\frac{1}{4}$?</li>                  
-                            </ol>
-                            </p>
-                        </div>
-                    </div> -->
-
-            <div class="tehtava" id="PL2-ex">
+            <div class="tehtava" id="b0d0432a-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL2">
                             Eksponenttiyhtälö
                         </a>
@@ -1600,31 +1581,9 @@ topnav: may1
                 </div>
             </div>
 
-
-            <!--     <p>Edellisessä tehtävässä pääteltiin ratkaisuja eksponenttiyhtälöön $2^x=a$, jossa luku $a$ oli $8,32$ tai $\frac{1}{4}$. Kyseisen yhtälön ratkaisua sanotaan luvun $a$ $2$-kantaiseksi logaritmiksi, esimerkiksi yhtälön $2^x=8$ ratkaisu on luvun $8$ 2-kantainen logaritmi ja sitä merkitään $\log_2 8.$ Edellisessä tehtävässä selvisi, että $\log_2 8=3$ eli $2^3=8$.</p> -->
-
-
-            <!--         <div class="tehtava" id="Potenssi12-ex">
-                        <header>
-                            <h1>
-                                <a data-target="#Potenssi12">
-                                    Eksponenttiyhtälön ratkaisu ja logaritmi
-                                </a>
-                            </h1>
-                        </header>
-                        <div id="Potenssi12">
-                            <p>Tarkastellaan vielä yhtälön $2^x=a$ ratkaisuja eli $2$-kantaisia logaritmeja.
-                            <ol class="a">
-                              <li> Päättele, mitä on $\log_2 4$, eli mihin potenssiin luku $2$ pitää korottaa, että saadaan $4$.</li>
-                              <li> Päättele, mitä on $\log_2 16$ ja $\log_2 \frac{1}{8}$.</li>              
-                            </ol>
-                            </p>
-                        </div>
-                    </div> -->
-
-            <div class="tehtava" id="PL3-ex">
+            <div class="tehtava" id="b0d043f2-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL3">
                             Kymmenpotenssimuoto ja merkitsevät numerot
                         </a>
@@ -1658,9 +1617,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL8b-ex">
+            <div class="tehtava" id="b0d044b0-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL8b">
                             Kymmenpotenssimuoto
                         </a>
@@ -1740,9 +1699,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL9-ex">
+            <div class="tehtava" id="b0d04578-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL9">
                             Logaritmi
                         </a>
@@ -1773,9 +1732,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL10-ex">
+            <div class="tehtava" id="b0d04636-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL10">
                             Logaritmi
                         </a>
@@ -1808,9 +1767,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL11-ex">
+            <div class="tehtava" id="b0d046fe-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL11">
                             Eksponenttiyhtälön ratkaisu
                         </a>
@@ -1841,9 +1800,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL1-ex">
+            <div class="tehtava" id="b0d04a82-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL1">
                             Eksponenttiyhtälön ratkaisu  
                         </a>
@@ -1868,7 +1827,7 @@ topnav: may1
     </section>  
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja3">
                     TEHTÄVÄSARJA III
@@ -1879,9 +1838,9 @@ topnav: may1
         <div id="tehtavasarja3" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="PL12-ex">
+            <div class="tehtava" id="b0d04b4a-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL12">
 
                         </a>
@@ -1906,9 +1865,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL13-ex">
+            <div class="tehtava" id="b0d04c12-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL13">
 
                         </a>
@@ -1938,9 +1897,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL4-ex">
+            <div class="tehtava" id="b0d04cda-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL4">
 
                         </a>
@@ -1974,9 +1933,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL4b-ex">
+            <div class="tehtava" id="b0d04da2-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL4b">
 
                         </a>
@@ -2006,9 +1965,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL14-ex">
+            <div class="tehtava" id="b0d04e6a-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL14">
 
                         </a>
@@ -2042,9 +2001,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL14b-ex">
+            <div class="tehtava" id="b0d0525c-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL14b">
 
                         </a>
@@ -2080,9 +2039,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL14c-ex">
+            <div class="tehtava" id="b0d05356-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL14c">
 
                         </a>
@@ -2177,9 +2136,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL14d-ex">
+            <div class="tehtava" id="b0d054e6-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL14d">
 
                         </a>
@@ -2211,9 +2170,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="PL22-ex">
+            <div class="tehtava" id="b0d055e0-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#PL22">
 
                         </a>
@@ -2432,46 +2391,6 @@ topnav: may1
                     </p>
                 </div>
             </div>
-
-            <!--         <div class="tehtava" id="potenssi16-ex">
-                        <header>
-                            <h1>
-                                <a data-target="#potenssi16">
-                                    Potenssin potenssi
-                                </a>
-                            </h1>
-                        </header>
-                        <div id="potenssi16">
-                            <p> 
-                              <ol class="a">
-                                <li> Kirjoita lauseke $(a^{-3})^4$ ensin tulomuodossa. Kirjoita lopputulos sen jälkeen potenssimerkintää käyttäen.</li>
-                                <li> Kirjoita lauseke $(a^3)^{-4}$ ensin tulomuodossa. Kirjoita lopputulos sen jälkeen potenssimerkintää käyttäen.</li>
-                                <li> Mitä eroa a- ja b-kohdilla on? Selitä omin sanoin.</li>
-                                <li> Mitä yhteistä a- ja b-kohdilla on? Selitä omin sanoin.</li>
-                              </ol>
-                            </p>
-                        </div>
-                    </div>
-            
-                    <div class="tehtava" id="potenssi18-ex">
-                        <header>
-                            <h1>
-                                <a data-target="#potenssi18">
-                                    Samankantaisten potenssien tulo
-                                </a>
-                            </h1>
-                        </header>
-                        <div id="potenssi18">
-                            <p> 
-                              <ol class="a">
-                                <li> Kirjoita lauseke $a^{-7}\cdot a^2$ ensin tulomuodossa. Kirjoita lopputulos sen jälkeen potenssimerkintää käyttäen.</li>
-                                <li> Kirjoita lauseke $a^7\cdot a^{-2}$ ensin tulomuodossa. Kirjoita lopputulos sen jälkeen potenssimerkintää käyttäen.</li>
-                                <li> Miten tehtävän a- ja b-kohtien vastaukset liittyvät toisiinsa? Selitä omin sanoin.</li>
-                              </ol>
-                            </p>
-                        </div>
-                    </div> -->
-
         </div>
     </section>  
 

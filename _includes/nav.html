@@ -2,8 +2,6 @@
 	<a id="menu_toggle">&#9776;</a>
 	<ul>
 		{% for site in site.navigation %}
-		
 		<li><a href="{{ site[1] | prepend: site.baseurl }}"{% if site[1] == page.url %} class="current"{% endif %} onclick="ga('send','event','navbar','click','{{site[0]}}')">{{site[0]}}</a></li>
 		{% endfor %}
-	</ul>
 </nav>

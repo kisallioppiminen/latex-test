@@ -1,5 +1,5 @@
 ---
-title: MAA2 - Polynomifunktiot ja -yhtälöt 
+title: MAA2 - Polynomifunktiot ja -yhtälöt
 layout: material
 sitemap: true
 main-class: has-atop
@@ -14,6 +14,8 @@ topnav: maa2
         padding: 5px;
     }
 </style>
+
+{% include bottomnav.html %}
 
 <input type="hidden" id="chapterNumber" value="2"/>
 
@@ -36,8 +38,8 @@ topnav: maa2
             <div class="objective">
 
                 <p>
-                    Tämän luvun tavoitteena on, että tunnet toisen asteen potenssifunktion ja tiedät, mitä luvun neliöjuurella tarkoitetaan. 
-                    Osaat 
+                    Tämän luvun tavoitteena on, että tunnet toisen asteen potenssifunktion ja tiedät, mitä luvun neliöjuurella tarkoitetaan.
+                    Osaat
                 <ul>
                     <li> määrittää neliöjuurten tarkkoja arvoja neliöjuuren määritelmän perusteella tapauksissa, joissa tuloksena on luonnollinen luku tai rationaaliluku</li>
                     <li> ratkaista muotoa $x^2 = a$ olevat neliöyhtälöt neliöjuurten avulla</li>
@@ -51,7 +53,7 @@ topnav: maa2
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#2asteenPotenssifunktio">
                     Toisen asteen potenssifunktio ja neliöjuuri
@@ -60,29 +62,32 @@ topnav: maa2
         </header>
         <div id="2asteenPotenssifunktio" class="collapse">
 
-            <p>
-            Tässä kappaleessa tutustutaan niin sanottuun toisen asteen potenssifunktioon ja palautetaan mieleen, mitä luvun neliöjuuri tarkoittaa. 
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: TOISEN ASTEEN POTENSSIFUNKTIO</h3>
+            <div class="teoria">
                 <p>
-                    Funktiota $f(x) = x^2$ sanotaan <em>toisen asteen potenssifunktioiksi</em>.
+                    Tässä kappaleessa tutustutaan niin sanottuun toisen asteen potenssifunktioon ja palautetaan mieleen, mitä luvun neliöjuuri tarkoittaa.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: TOISEN ASTEEN POTENSSIFUNKTIO</h3>
+                    <p>
+                        Funktiota $f(x) = x^2$ sanotaan <em>toisen asteen potenssifunktioiksi</em>.
+                    </p>
+                </div>
+
+                <p>
+                    Toisen asteen potenssifunktion kuvaaja on piirretty alla olevaan kuvaan. Se on muodoltaan <em>paraabeli</em>.
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk1.png" max-width: 100%; width: auto; height: auto;/>
                 </p>
             </div>
 
-            <p>
-                Toisen asteen potenssifunktion kuvaaja on piirretty alla olevaan kuvaan. Se on muodoltaan <em>paraabeli</em>.
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/PFk1.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="firstEx">
+                <div class="tehtava" id="5ed55bb3-b627-4422-8b35-dc2e49287dec">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf1">
                                 Toisen asteen potenssifunktio
                             </a>
@@ -102,44 +107,47 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Toisen asteen potenssifunktion $f(x) = x^2$ kuvaajasta nähdään, että yhtälöllä $x^2 = 7$ on kaksi ratkaisua:
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/PFk2.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-            <p> 
-                Positiivista ratkaisua, joka on merkitty kuvaan kirjaimella $b$, sanotaan luvun $7$ neliöjuureksi. Luvun $7$ neliöjuuri on siis sellainen positiivinen luku, jonka toinen potenssi on seitsemän. Vastaavasti määritellään muidenkin epänegatiivisten lukujen neliöjuuret. 
-            </p>
-            <p>
-                Epänegatiivisia lukuja ovat luku nolla sekä kaikki positiiviset luvut. Luku $a$ on siis epänegatiivinen, jos ja vain jos $a \geq 0$. Negatiivisille luvuille neliöjuurta ei määritellä.
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: NELIÖJUURI</h3>
+            <div class="teoria">
                 <p>
-                    Luvun $a \geq 0$ <em>neliöjuuri</em> tarkoittaa lukua $b \geq 0$, jolle pätee 
-                    $$b^2 = a.$$
-                    Luvun $a$ neliöjuurelle käytetään merkintää $\sqrt{a}.$
+                    Toisen asteen potenssifunktion $f(x) = x^2$ kuvaajasta nähdään, että yhtälöllä $x^2 = 7$ on kaksi ratkaisua:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk2.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Positiivista ratkaisua, joka on merkitty kuvaan kirjaimella $b$, sanotaan luvun $7$ neliöjuureksi. Luvun $7$ neliöjuuri on siis sellainen positiivinen luku, jonka toinen potenssi on seitsemän. Vastaavasti määritellään muidenkin epänegatiivisten lukujen neliöjuuret.
+                </p>
+                <p>
+                    Epänegatiivisia lukuja ovat luku nolla sekä kaikki positiiviset luvut. Luku $a$ on siis epänegatiivinen, jos ja vain jos $a \geq 0$. Negatiivisille luvuille neliöjuurta ei määritellä.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: NELIÖJUURI</h3>
+                    <p>
+                        Luvun $a \geq 0$ <em>neliöjuuri</em> tarkoittaa lukua $b \geq 0$, jolle pätee
+                        $$b^2 = a.$$
+                        Luvun $a$ neliöjuurelle käytetään merkintää $\sqrt{a}.$
+                    </p>
+                </div>
+
+                <p>
+                    Jos luvun $a$ neliöjuurelle käytetään merkintää $\sqrt{a}$, pätee sille siis määritelmän mukaan kaksi asiaa: $\sqrt{a} \geq 0$ ja $\left(\sqrt{a}\right)^2 = a$.
+                </p>
+
+                <p>
+                    Neliöjuuren merkintää käyttäen edellinen kuva näyttää tältä:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk3.png" max-width: 100%; width: auto; height: auto;/>
                 </p>
             </div>
 
-            <p>
-                Jos luvun $a$ neliöjuurelle käytetään merkintää $\sqrt{a}$, pätee sille siis määritelmän mukaan kaksi asiaa: $\sqrt{a} \geq 0$ ja $\left(\sqrt{a}\right)^2 = a$.
-            </p>
-
-            <p>
-                Neliöjuuren merkintää käyttäen edellinen kuva näyttää tältä:
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/PFk3.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="pf2-ex">
+                <div class="tehtava" id="6621f6a0-a4f2-4db9-9233-0b418a45bec4">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf2">
                                 Neliöjuuri
                             </a>
@@ -158,16 +166,19 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Luvun $a$ neliöjuurelta vaaditaan neliöjuuren määritelmän mukaan kaksi asiaa: sen pitää olla epänegatiivinen ja sen toisen potenssin pitää olla yhtä suuri kuin luku $a$. Esimerkiksi luvulle $\frac{1}{2}$ pätee $\frac{1}{2} \geq 0$ ja $\left(\frac{1}{2}\right)^2 = \frac{1}{2}\cdot \frac{1}{2} = \frac{1}{4}$, joten se on luvun $\frac{1}{4}$ neliöjuuri. Voidaan siis merkitä
-                $$\sqrt{\frac{1}{4}} = \frac{1}{2.}$$
-            </p>
+            <div class="teoria">
+                <p>
+                    Luvun $a$ neliöjuurelta vaaditaan neliöjuuren määritelmän mukaan kaksi asiaa: sen pitää olla epänegatiivinen ja sen toisen potenssin pitää olla yhtä suuri kuin luku $a$. Esimerkiksi luvulle $\frac{1}{2}$ pätee $\frac{1}{2} \geq 0$ ja $\left(\frac{1}{2}\right)^2 = \frac{1}{2}\cdot \frac{1}{2} = \frac{1}{4}$, joten se on luvun $\frac{1}{4}$ neliöjuuri. Voidaan siis merkitä
+                    $$\sqrt{\frac{1}{4}} = \frac{1}{2.}$$
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="pf3-ex">
+                <div class="tehtava" id="b033e834-7b6b-4724-a62d-2cd6c33c7169">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf3">
                                 Neliöjuuri
                             </a>
@@ -187,10 +198,11 @@ topnav: maa2
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="pf4-ex">
+                <div class="tehtava" id="995c822d-7c26-46c6-97aa-c4253470a40a">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf4">
                                 Neliöjuuri
                             </a>
@@ -210,10 +222,11 @@ topnav: maa2
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="pf5-ex">
+                <div class="tehtava" id="d8ad52eb-84b2-4ef1-903e-8ddf29dbad92">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf5">
                                 Neliöjuuri
                             </a>
@@ -230,18 +243,21 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Toisen asteen potenssifunktion kuvaajan avulla voidaan ratkaista sellaisia toisen asteen yhtälöitä, jotka ovat muotoa $x^2 = a$. Esimerkiksi alla olevasta kuvasta nähdään, että yhtälöllä $x^2 = 7$ on kaksi ratkaisua: $x_1 = \sqrt{7}$ ja $x_2 = -\sqrt{7}$. Sama asia voidaan ilmaista myös sanomalla, että yhtälö $x^2 = 7$ toteutuu, jos ja vain jos $x = \sqrt{7}$ tai $x = -\sqrt{7}$.
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/PFk4.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
+            <div class="teoria">
+                <p>
+                    Toisen asteen potenssifunktion kuvaajan avulla voidaan ratkaista sellaisia toisen asteen yhtälöitä, jotka ovat muotoa $x^2 = a$. Esimerkiksi alla olevasta kuvasta nähdään, että yhtälöllä $x^2 = 7$ on kaksi ratkaisua: $x_1 = \sqrt{7}$ ja $x_2 = -\sqrt{7}$. Sama asia voidaan ilmaista myös sanomalla, että yhtälö $x^2 = 7$ toteutuu, jos ja vain jos $x = \sqrt{7}$ tai $x = -\sqrt{7}$.
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk4.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="pf6-ex">
+                <div class="tehtava" id="9cd6fdd0-5101-45df-b863-76faa5c60f40">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf6">
                                 Yhtälön ratkaiseminen
                             </a>
@@ -260,25 +276,28 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Kaikki sellaiset toisen asteen yhtälöt, joissa esiintyy vain tuntemattoman toinen potenssi, saadaan ratkaistua samaan tapaan kuin edellä. Ensin yhtälö täytyy vain muuttaa muotoon $x^2 = a$. Tarkastellaan esimerkiksi yhtälöä $$4x^2 - 3 = 0.$$
-                Kun sen molemmille puolille lisätään luku $3$, päädytään yhtälöön
-                $$4x^2 = 3.$$
-                Tämä yhtälön molemmat puolet voidaan jakaa luvulla $4$, jolloin saadaan yhtälö
-                $$x^2 = \frac{3}{4}.$$
-                Tämä yhtälö toteutuu, jos ja vain jos 
-                $$x = \sqrt{\frac{3}{4}} \quad \text{ tai } \quad x = -\sqrt{\frac{3}{4}}.$$
-                Ratkaisun aikana tarkasteltuja yhtälöitä ja niiden ratkaisuja on havainnollistettu alla olevassa kuvassa. Huomaa, että kaikilla yhtälöillä on samat ratkaisut kuten pitääkin.
-            </p>
-            <p>
-            <img src="/kurssit/maa2/kuvat/PFk5.png" max-width: 100%; width: auto; height: auto;/> 
-            </p>
+            <div class="teoria">
+                <p>
+                    Kaikki sellaiset toisen asteen yhtälöt, joissa esiintyy vain tuntemattoman toinen potenssi, saadaan ratkaistua samaan tapaan kuin edellä. Ensin yhtälö täytyy vain muuttaa muotoon $x^2 = a$. Tarkastellaan esimerkiksi yhtälöä $$4x^2 - 3 = 0.$$
+                    Kun sen molemmille puolille lisätään luku $3$, päädytään yhtälöön
+                    $$4x^2 = 3.$$
+                    Tämä yhtälön molemmat puolet voidaan jakaa luvulla $4$, jolloin saadaan yhtälö
+                    $$x^2 = \frac{3}{4}.$$
+                    Tämä yhtälö toteutuu, jos ja vain jos
+                    $$x = \sqrt{\frac{3}{4}} \quad \text{ tai } \quad x = -\sqrt{\frac{3}{4}}.$$
+                    Ratkaisun aikana tarkasteltuja yhtälöitä ja niiden ratkaisuja on havainnollistettu alla olevassa kuvassa. Huomaa, että kaikilla yhtälöillä on samat ratkaisut kuten pitääkin.
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk5.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="pf7-ex">
+                <div class="tehtava" id="49e5ff15-be9f-428e-a380-7268d9f5bc9d">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf7">
                                 Yhtälön ratkaiseminen
                             </a>
@@ -301,7 +320,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#neliojuuri">
                     Neliöjuurilla laskeminen
@@ -310,24 +329,27 @@ topnav: maa2
         </header>
         <div id="neliojuuri" class="collapse">
 
-            <p>
-                Edellisessä kappaleessa ratkaistiin yhtälö $4x^2 - 3 = 0$. Ratkaisuiksi saatiin
-                $$x_1 = \sqrt{\frac{3}{4}} \quad \text{ ja } \quad x_2 = -\sqrt{\frac{3}{4}}.$$
-                Tässä kappaleessa harjoitellaan neliöjuurilla laskemista ja opitaan muun muassa sieventämään nämä ratkaisut toiseen muotoon.
-            </p>
+            <div class="teoria">
+                <p>
+                    Edellisessä kappaleessa ratkaistiin yhtälö $4x^2 - 3 = 0$. Ratkaisuiksi saatiin
+                    $$x_1 = \sqrt{\frac{3}{4}} \quad \text{ ja } \quad x_2 = -\sqrt{\frac{3}{4}}.$$
+                    Tässä kappaleessa harjoitellaan neliöjuurilla laskemista ja opitaan muun muassa sieventämään nämä ratkaisut toiseen muotoon.
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="pf8-ex">
+                <div class="tehtava" id="9f08d994-a92f-423b-953e-9291a36131ae">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf8">
                                 Neliöjuurten tulo ja osamäärä
                             </a>
                         </h1>
                     </header>
                     <div id="pf8" class="collapse">
-                        <p> 
+                        <p>
                         <ol class="a">
                             <li> Laske laskimella, mitä on $\sqrt{2}\sqrt{8}$. Onko saamasi tulos jonkin kokonaisluvun neliöjuuri? Miten samaan tulokseen voisi päätyä käyttämällä neliöjuurta vain kerran?</li>
                             <li> Laske laskimella, mitä on $\dfrac{\sqrt{12}}{\sqrt{3}}$. Onko saamasi tulos jonkin kokonaisluvun neliöjuuri? Miten samaan tulokseen voisi päätyä käyttämällä neliöjuurta vain kerran?</li>
@@ -337,44 +359,47 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Neliöjuuren määritelmän mukaan luku $x$ on luvun $y \geq 0$ neliöjuuri, jos se toteuttaa kaksi ehtoa: 
+            <div class="teoria">
+                <p>
+                    Neliöjuuren määritelmän mukaan luku $x$ on luvun $y \geq 0$ neliöjuuri, jos se toteuttaa kaksi ehtoa:
                 <ol>
                     <li>luvun $x$ pitää olla epänegatiivinen eli $x \geq 0$ </li>
-                    <li> luvun $x$ toisen potenssin pitää olla yhtä suuri kuin $y$ eli $x^2 = y$.</li> 
+                    <li> luvun $x$ toisen potenssin pitää olla yhtä suuri kuin $y$ eli $x^2 = y$.</li>
                 </ol>
-            </p>
-            <p>
-                Seuraavan teoreeman perustelussakin tarkistetaan nämä kaksi ehtoa, kun osoitetaan, että neliöjuurten tulo on yhtä suuri kuin tulon neliöjuuri. 
-            </p>
-
-            <div class="theorem">
-                <h3>TEOREEMA</h3>
-                <p>
-                    Oletetaan, että $a \geq 0$ ja $b \geq 0$. Lukujen $a$ ja $b$ neliöjuurten tulo on luvun $ab$ neliöjuuri eli
-                    $$\sqrt{a}\sqrt{b} = \sqrt{ab}$$
                 </p>
-                <div class="proof">
+                <p>
+                    Seuraavan teoreeman perustelussakin tarkistetaan nämä kaksi ehtoa, kun osoitetaan, että neliöjuurten tulo on yhtä suuri kuin tulon neliöjuuri.
+                </p>
+
+                <div class="theorem">
+                    <h3>TEOREEMA</h3>
                     <p>
-                        Perustelu: Näytetään, että tulo $\sqrt{a}\sqrt{b}$ toteuttaa luvun $ab$ neliöjuurelta vaaditut ehdot.
+                        Oletetaan, että $a \geq 0$ ja $b \geq 0$. Lukujen $a$ ja $b$ neliöjuurten tulo on luvun $ab$ neliöjuuri eli
+                        $$\sqrt{a}\sqrt{b} = \sqrt{ab}$$
                     </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Näytetään, että tulo $\sqrt{a}\sqrt{b}$ toteuttaa luvun $ab$ neliöjuurelta vaaditut ehdot.
+                        </p>
                         <ol>
                             <li> Neliöjuuren määritelmän mukaan $\sqrt{a} \geq 0$ ja $\sqrt{b} \geq 0$. Kahden epänegatiivisen luvun tulo on epänegatiivinen, joten $\sqrt{a}\sqrt{b} \geq 0$.</li>
                             <li> Lasketaan tulon $\sqrt{a}\sqrt{b}$ toinen potenssi potenssin laskusääntöjen avulla:
                                 $$\left(\sqrt{a}\sqrt{b}\right)^2 = \left(\sqrt{a}\right)^2\left(\sqrt{b}\right)^2 = ab$$
                             </li>
                         </ol>
-                    <p>
-                        Tulo $\sqrt{a}\sqrt{b}$ on siis epänegatiivinen ja sen toinen potenssi on yhtä suuri kuin $ab$. Siis $\sqrt{a}\sqrt{b} = \sqrt{ab}$.
-                    </p>
+                        <p>
+                            Tulo $\sqrt{a}\sqrt{b}$ on siis epänegatiivinen ja sen toinen potenssi on yhtä suuri kuin $ab$. Siis $\sqrt{a}\sqrt{b} = \sqrt{ab}$.
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="pf9-ex">
+                <div class="tehtava" id="2351cc63-62c9-42f6-aeff-be340986c534">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf9">
                                 Neliöjuurten osamäärä
                             </a>
@@ -386,7 +411,7 @@ topnav: maa2
                             <li> Lue edellinen teoreema ja sen perustelu huolellisesti. Mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.</li>
                             <li> Oletetaan, että $a \geq 0$ ja $b > 0$. Selitä omin sanoin, miksi osamäärä $\dfrac{\sqrt{a}}{\sqrt{b}}$ on määritelty. Mikä on pienin arvo, jonka se voi saada? Voiko kyseinen osamäärä olla negatiivinen?</li>
                             <li> Sievennä lauseke $\left(\dfrac{\sqrt{a}}{\sqrt{b}}\right)^2$ mahdollisimman pitkälle potenssin laskusääntöjen tai potenssin määritelmän avulla. Muista myös neliöjuuren määritelmä.</li>
-                            <li> Selitä omin sanoin, miten edelliset kohdat osoittavat, että 
+                            <li> Selitä omin sanoin, miten edelliset kohdat osoittavat, että
                                 $$\dfrac{\sqrt{a}}{\sqrt{b}} = \sqrt{\frac{a}{b}}$$</li>
                         </ol>
                         </p>
@@ -394,27 +419,26 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Seuraava teoreema perusteltiin äskeisessä tehtävässä:
-            </p>
-
-            <div class="theorem">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Oletetaan, että $a \geq 0$ ja $b > 0$. Lukujen $a$ ja $b$ neliöjuurten osamäärä on luvun $\dfrac{a}{b}$ neliöjuuri eli
-                    $$\dfrac{\sqrt{a}}{\sqrt{b}} = \sqrt{\frac{a}{b}}$$
+                    Seuraava teoreema perusteltiin äskeisessä tehtävässä:
                 </p>
+
+                <div class="theorem">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että $a \geq 0$ ja $b > 0$. Lukujen $a$ ja $b$ neliöjuurten osamäärä on luvun $\dfrac{a}{b}$ neliöjuuri eli
+                        $$\dfrac{\sqrt{a}}{\sqrt{b}} = \sqrt{\frac{a}{b}}$$
+                    </p>
+                </div>
             </div>
 
-            <p>
-
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="pf10-ex">
+                <div class="tehtava" id="6164f868-7af1-4411-b348-37adacdd1993">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf10">
                                 Neliöjuurten tulo ja osamäärä
                             </a>
@@ -433,21 +457,24 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Kokonaislukujen neliöjuuret sievennetään yleensä muotoon, jossa juurrettavana on mahdollisimman pieni kokonaisluku. Sieventäminen onnistuu teoreeman 1 avulla, jos juurrettavalla on tekijänä jonkin kokonaisluvun neliö. Esimerkiksi 
-                \begin{align*}
-                \sqrt{72} &= \sqrt{2 \cdot 36} \\
-                &= \sqrt{2}\cdot \sqrt{36} \\
-                &= \sqrt{2}\cdot 6 \\
-                &= 6\sqrt{2}
-                \end{align*}
-            </p>
+            <div class="teoria">
+                <p>
+                    Kokonaislukujen neliöjuuret sievennetään yleensä muotoon, jossa juurrettavana on mahdollisimman pieni kokonaisluku. Sieventäminen onnistuu teoreeman 1 avulla, jos juurrettavalla on tekijänä jonkin kokonaisluvun neliö. Esimerkiksi
+                    \begin{align*}
+                    \sqrt{72} &= \sqrt{2 \cdot 36} \\
+                    &= \sqrt{2}\cdot \sqrt{36} \\
+                    &= \sqrt{2}\cdot 6 \\
+                    &= 6\sqrt{2}
+                    \end{align*}
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="pf11-ex">
+                <div class="tehtava" id="9e15ece8-48a2-4014-be5a-9b369a046991">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf11">
                                 Neliöjuurten sieventäminen
                             </a>
@@ -466,29 +493,32 @@ topnav: maa2
                 </div>
             </div>
 
-            <p>
-                Neliöjuurten sieventäminen helpottaa niiden yhteen- ja vähennyslaskua. Esimerkiksi lauseke $\sqrt{12} - \sqrt{27}$ saadaan sieventämällä huomattavasti yksinkertaisempaan muotoon:
-                \begin{align*}
-                \sqrt{12} - \sqrt{27} &= \sqrt{4\cdot 3} - \sqrt{9 \cdot 3} \\
-                &= \sqrt{4}\sqrt{3} - \sqrt{9}\sqrt{3} \\
-                &= 2\sqrt{3} - 3\sqrt{3} \\
-                &= (2-3)\sqrt{3}\\
-                &= - \sqrt{3}
-                \end{align*}
-            </p>
+            <div class="teoria">
+                <p>
+                    Neliöjuurten sieventäminen helpottaa niiden yhteen- ja vähennyslaskua. Esimerkiksi lauseke $\sqrt{12} - \sqrt{27}$ saadaan sieventämällä huomattavasti yksinkertaisempaan muotoon:
+                    \begin{align*}
+                    \sqrt{12} - \sqrt{27} &= \sqrt{4\cdot 3} - \sqrt{9 \cdot 3} \\
+                    &= \sqrt{4}\sqrt{3} - \sqrt{9}\sqrt{3} \\
+                    &= 2\sqrt{3} - 3\sqrt{3} \\
+                    &= (2-3)\sqrt{3}\\
+                    &= - \sqrt{3}
+                    \end{align*}
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="pf12-ex">
+                <div class="tehtava" id="e8c2e2b8-034e-485b-81ad-9af1bf931848">
 
                     <header>
                         <h1>
+                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#pf12">
                                 Neliöjuurten sieventäminen
                             </a>
                         </h1>
                     </header>
                     <div id="pf12" class="collapse">
-                        <p> 
+                        <p>
                         <ol class="a">
                             <li> Laske laskimella, mitä on $\sqrt{20} + \sqrt{45}$. Onko saamasi tulos jonkin kokonaisluvun neliöjuuri? Onko neliöjuurten summalla samanlainen ominaisuus kuin teoreemassa 1 todistettiin neliöjuurten tulolle? </li>
                             <li> Sievennä neliöjuuret $\sqrt{20}$ ja $\sqrt{45}$ mahdollisimman pitkälle teoreeman 1 tulosta käyttäen samaan tapaan kuin edellisessä tehtävässä.</li>
@@ -504,8 +534,9 @@ topnav: maa2
 
     <!-- <section class="panel">
         <header>
-            <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#nelioyhtalo">
+<h1>
+ <div class="checkbox-group"></div>
+<a data-toggle="collapse" class="collapsed" data-target="#nelioyhtalo">
                     Neliöyhtälö
                 </a>
             </h1>
@@ -516,7 +547,7 @@ topnav: maa2
     </section> -->
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku2-tehtavasarja2">
                     TEHTÄVÄSARJA II
@@ -527,9 +558,10 @@ topnav: maa2
         <div id="luku2-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="pf13-ex">
+            <div class="tehtava" id="06a34d6d-d02a-49b8-9f18-7566e66940ae">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf13">
                             Neliöjuuri
                         </a>
@@ -537,20 +569,21 @@ topnav: maa2
                 </header>
                 <div id="pf13">
                     <p>
-                        Päättele seuraavien neliöjuurten arvo käyttämättä laskimen neliöjuurinappulaa. 
+                        Päättele seuraavien neliöjuurten arvo käyttämättä laskimen neliöjuurinappulaa.
                     </p>
                     <ol class="a">
                         <li> $\sqrt{81}$ </li>
                         <li> $\sqrt{121}$ </li>
                         <li> $\sqrt{64}$ </li>
                         <li> $\sqrt{144}$ </li>
-                    </ol> 
+                    </ol>
                 </div>
             </div>
 
-            <div class="tehtava" id="pf19-ex">
+            <div class="tehtava" id="57d21eeb-0e71-4877-9fd2-0f93ade0abed">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf19">
                             Neliöjuuri
                         </a>
@@ -565,7 +598,7 @@ topnav: maa2
                         <li> $\sqrt{(-5)^2}$ </li>
                         <li> $\sqrt{(\sqrt{3}-1)^2}$ </li>
                         <li> $\sqrt{(\sqrt{3}-2)^2}$ </li>
-                    </ol> 
+                    </ol>
                     <p>
                         Vihje c- ja d-kohtiin: päättele ensin, onko juurrettavassa ensiintyvän potenssin kantaluku positiivinen vai negatiivinen.
                     </p>
@@ -587,9 +620,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="pf14-ex">
+            <div class="tehtava" id="ef5033b6-84e4-42ba-b3a1-6682fc832173">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf14">
                             Yhtälön ratkaiseminen
                         </a>
@@ -597,14 +631,14 @@ topnav: maa2
                 </header>
                 <div id="pf14">
                     <p>
-                        Ratkaise seuraavat yhtälöt. Jos yhtälöllä ei ole yhtään ratkaisua, selitä omin sanoin, miksi näin on. 
+                        Ratkaise seuraavat yhtälöt. Jos yhtälöllä ei ole yhtään ratkaisua, selitä omin sanoin, miksi näin on.
                     </p>
                     <ol class="a">
                         <li> $2x^2-2 = 0$ </li>
                         <li> $x^2+5 = 0$ </li>
                         <li> $8-x^2 = 0$ </li>
                         <li> $-4x^2 = 0$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf14_v">
                             Vastaus
@@ -623,9 +657,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="pf15-ex">
+            <div class="tehtava" id="b1c865de-e105-415f-a1ca-d9fe322287cb">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf15">
                             Neliöjuurilla laskeminen
                         </a>
@@ -640,7 +675,7 @@ topnav: maa2
                         <li> $\sqrt{1600}$ </li>
                         <li> $\dfrac{\sqrt{60}}{\sqrt{15}}$ </li>
                         <li> $\sqrt{\dfrac{16}{81}}$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf15_v">
                             Vastaus
@@ -659,9 +694,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="pf16-ex">
+            <div class="tehtava" id="9fa3ec01-f393-40b4-a3ac-62f63ce0fa6e">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf16">
                             Neliöjuurilla laskeminen
                         </a>
@@ -675,7 +711,7 @@ topnav: maa2
                         <li> $\sqrt{2\frac{1}{4}}$ </li>
                         <li> $\sqrt{1\frac{9}{16}}$ </li>
                         <li> $\sqrt{5\frac{4}{9}}$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf16_v">
                             Vastaus
@@ -693,9 +729,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="pf22-ex">
+            <div class="tehtava" id="7119f89d-b920-4788-8366-d56acdcf379c">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf22">
                             Yhtälön ratkaiseminen
                         </a>
@@ -705,7 +742,7 @@ topnav: maa2
                     <ol class="a">
                         <li> Selvitä itsellesi, miten neliön pinta-ala lasketaan, jos neliön sivun pituus on $a$. Voit kysyä vaikka kaverilta tai katsoa netistä. </li>
                         <li> Neliön pinta-ala on $169 \text{ cm}^2$. Mikä on sen sivun pituus? </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf22_v">
                             Vastaus
@@ -722,9 +759,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="pf23-ex">
+            <div class="tehtava" id="e25db3eb-5006-412e-ac81-89120c3f185a">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf23">
                             Yhtälön ratkaiseminen
                         </a>
@@ -733,7 +771,7 @@ topnav: maa2
                 <div id="pf23">
                     <p>
                         Neliön muotoisen huoneen lattia päällystettiin 15 cm leveällä laudalla, jota kului 153,6 m. Mitkä olivat lattian mitat? Anna vastaus kahden merkitsevän numeron tarkkuudella.
-                    </p>    
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf23_v">
                             Vastaus
@@ -748,9 +786,10 @@ topnav: maa2
             </div>
 
 
-            <div class="tehtava" id="pf17-ex">
+            <div class="tehtava" id="bca1bf88-7da7-427d-ab89-43a67a10ec1f">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf17">
                             Yhtälön ratkaiseminen
                         </a>
@@ -762,7 +801,7 @@ topnav: maa2
                         $$c^2 = a^2 + b^2.$$
                     </p>
                     <p>
-                    <img src="/kurssit/maa2/kuvat/PFk7.png" max-width: 100%; width: auto; height: auto;/> 
+                        <img src="/kurssit/maa2/kuvat/PFk7.png" max-width: 100%; width: auto; height: auto;/>
                     </p>
                     <p>
                         Laske suorakulmaisen kolmion kolmas sivu, jos
@@ -770,7 +809,7 @@ topnav: maa2
                     <ol class="a">
                         <li> kateettien pituudet ovat 12 ja 5 </li>
                         <li> hypotenuusan pituus on 16 ja toisen kateetin pituus on 15. </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf17_v">
                             Vastaus
@@ -787,9 +826,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="pf18-ex">
+            <div class="tehtava" id="860335dd-68d9-4abc-9d32-60431b4d426b">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf18">
                             Neliöjuurten sieventäminen
                         </a>
@@ -803,7 +843,7 @@ topnav: maa2
                         <li> $\sqrt{18}$ </li>
                         <li> $\sqrt{\dfrac{3}{16}}$ </li>
                         <li> $\sqrt{5}\sqrt{15}$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf18_v">
                             Vastaus
@@ -821,9 +861,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="pf20-ex">
+            <div class="tehtava" id="822d55a9-a2f4-4f06-8f4e-1558a33e3883">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf20">
                             Neliöjuurten sieventäminen
                         </a>
@@ -837,7 +878,7 @@ topnav: maa2
                         <li> $\sqrt{2} + \sqrt{8}$ </li>
                         <li> $\sqrt{8} - \sqrt{16} + \sqrt{18} + \sqrt{36}- \sqrt{98}$ </li>
                         <li> $\dfrac{2 + \sqrt{12}}{2}$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf20_v">
                             Vastaus
@@ -855,9 +896,10 @@ topnav: maa2
                 </div>
             </div>
 
-            <div class="tehtava" id="pf21-ex">
+            <div class="tehtava" id="0884ad55-b9e2-4334-a215-8915730fdd49">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf21">
                             Neliöjuurten sieventäminen
                         </a>
@@ -872,7 +914,7 @@ topnav: maa2
                         <li> $\dfrac{2}{\sqrt{2}}$ </li>
                         <li> $\dfrac{15}{\sqrt{5}}$ </li>
                         <li> $\dfrac{\sqrt{6}}{2\sqrt{3}}$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf21_v">
                             Vastaus
@@ -895,7 +937,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#luku2-tehtavasarja3">
                     TEHTÄVÄSARJA III
@@ -906,9 +948,10 @@ topnav: maa2
         <div id="luku2-tehtavasarja3" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="pf29-ex">
+            <div class="tehtava" id="ea2c62e0-9370-49be-aec7-f9ec6cea6ad0">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf29">
 
                         </a>
@@ -929,16 +972,17 @@ topnav: maa2
                     </h2>
                     <div id="pf29_v" class="collapse">
                         <ol class="a">
-                        <li> 10 424,41 €, $q = 1{,}021$ </li>
-                        <li> $4{,}5 \ \%$ </li>
-                    </ol>
+                            <li> 10 424,41 €, $q = 1{,}021$ </li>
+                            <li> $4{,}5 \ \%$ </li>
+                        </ol>
                     </div>
                 </div>
             </div>
 
-           <div class="tehtava" id="pf27-ex">
+            <div class="tehtava" id="38e8b8ec-7f98-45ad-9e93-bb0bd0fad7fb">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf27">
 
                         </a>
@@ -957,15 +1001,16 @@ topnav: maa2
                     </h2>
                     <div id="pf27_v" class="collapse">
                         <p>
-                        Noin $22{,}5 \ \%$.
+                            Noin $22{,}5 \ \%$.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="pf30-ex">
+            <div class="tehtava" id="07d1dc80-c936-491e-9878-f9f6db8e2bec">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf30">
 
                         </a>
@@ -976,7 +1021,7 @@ topnav: maa2
                     <ol class="a">
                         <li> Palauta mieleesi tai tarkista esimerkiksi netistä, miten ympyrän pinta-ala lasketaan, jos sen säde tunnetaan. </li>
                         <li> Neliöllä ja ympyrällä on sama pinta-ala. Kuinka monta prosenttia ympyrän säde on neliön sivusta? </li>
-                    </ol> 
+                    </ol>
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf30_v">
@@ -985,16 +1030,17 @@ topnav: maa2
                     </h2>
                     <div id="pf30_v" class="collapse">
                         <ol class="a">
-                        <li> </li>
-                        <li> Noin 56,4 %. </li>
-                        </ol> 
+                            <li> </li>
+                            <li> Noin 56,4 %. </li>
+                        </ol>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="pf28-ex">
+            <div class="tehtava" id="83437532-bfce-4966-b006-5fa0e8065cee">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf28">
 
                         </a>
@@ -1004,7 +1050,7 @@ topnav: maa2
                     <p>
                         Jos heilurin heilahduskulma on pieni, yhden edestakaisen heilahduksen heilauhdusajalle $T$ on voimassa likiarvokaava
                         $$T = 2\pi\sqrt{\dfrac{L}{g}},$$
-                        missä $L$ on heilurin varren pituus ja $g$ on painovoiman aiheuttama putoamiskiihtyvyys. 
+                        missä $L$ on heilurin varren pituus ja $g$ on painovoiman aiheuttama putoamiskiihtyvyys.
                     </p>
                     <p>
                         Sadan (edestakaisen) heilahduksen kokonaisajaksi mitattiin 160 s ja heilurin varren pituudeksi $0{,}637$ m. Kuinka suuri putoamiskiihtyvyys $g$ mittauspaikalla mittausten perusteella on?
@@ -1016,15 +1062,16 @@ topnav: maa2
                     </h2>
                     <div id="pf28_v" class="collapse">
                         <p>
-                        Noin $9{,}82 \,\dfrac{\text{m}}{\text{s}^2}$ 
+                            Noin $9{,}82 \,\dfrac{\text{m}}{\text{s}^2}$
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="pf24-ex">
+            <div class="tehtava" id="35be9553-01ed-44b6-af80-5a1c6cceb10f">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf24">
 
                         </a>
@@ -1041,15 +1088,16 @@ topnav: maa2
                     </h2>
                     <div id="pf24_v" class="collapse">
                         <p>
-                        Sekä summaksi että tuloksi saadaan $\dfrac{3}{\sqrt{3}-1}$.
+                            Sekä summaksi että tuloksi saadaan $\dfrac{3}{\sqrt{3}-1}$.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="pf25-ex">
+            <div class="tehtava" id="0ea53403-2c81-4fa8-8e90-410530e367a4">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf25">
 
                         </a>
@@ -1057,7 +1105,7 @@ topnav: maa2
                 </header>
                 <div id="pf25">
                     <p>
-                        Ratkaise yhtälö $\sqrt{6}(x-\sqrt{2}) = \sqrt{3}$. Ilmoita vastaus muodossa, jossa nimittäjässä ei ole juuria. 
+                        Ratkaise yhtälö $\sqrt{6}(x-\sqrt{2}) = \sqrt{3}$. Ilmoita vastaus muodossa, jossa nimittäjässä ei ole juuria.
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf25_v">
@@ -1066,15 +1114,16 @@ topnav: maa2
                     </h2>
                     <div id="pf25_v" class="collapse">
                         <p>
-                        $x = \dfrac{3\sqrt{2}}{2}$
+                            $x = \dfrac{3\sqrt{2}}{2}$
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="pf26-ex">
+            <div class="tehtava" id="894e11ce-412d-41c9-8c76-7a83d00ad04e">
                 <header>
                     <h1>
+                        <div class="checkbox-group"></div>
                         <a data-target="#pf26">
 
                         </a>
@@ -1088,7 +1137,7 @@ topnav: maa2
                         <li> $\sqrt{5x+1}$ </li>
                         <li> $\dfrac{1}{\sqrt{x-4}}$ </li>
                         <li> $\sqrt{2x-1} + \sqrt{3-x}$ </li>
-                    </ol> 
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#pf26_v">
                             Vastaus
@@ -1096,10 +1145,10 @@ topnav: maa2
                     </h2>
                     <div id="pf26_v" class="collapse">
                         <ol class="a">
-                        <li> $x \geq -\frac{1}{5}$ </li>
-                        <li> $x > 4$ </li>
-                        <li> $\frac{1}{2} \leq x \leq 3$ </li>
-                        </ol> 
+                            <li> $x \geq -\frac{1}{5}$ </li>
+                            <li> $x > 4$ </li>
+                            <li> $\frac{1}{2} \leq x \leq 3$ </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -1109,7 +1158,7 @@ topnav: maa2
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#L2itsearviointi">
                     Itsearviointitehtävät
@@ -1118,7 +1167,7 @@ topnav: maa2
         </header>
         <div id="L2itsearviointi" class="collapse">
             <p>
-                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1669">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1669">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
             </p>
         </div>
     </section>

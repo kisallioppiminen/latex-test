@@ -17,6 +17,8 @@ topnav: may1
 
 <input type="hidden" id="chapterNumber" value="5"/>
 
+{% include bottomnav.html %}
+
 <article>
     <section>
         <header>
@@ -53,7 +55,7 @@ topnav: may1
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#prosenttiosuus">
                     Prosenttiosuus
@@ -61,38 +63,38 @@ topnav: may1
             </h1>
         </header>
         <div id="prosenttiosuus" class="collapse">
-
-            <p>
-                Suhteellisten osuuksien ilmaisemiseen käytetään usein prosentteja (kuvankaappauksia <a href="http://yle.fi/uutiset/">Yle Uutisten sivuilta</a>):
-            </p>  
-            <p>
-                <img src="/kurssit/may1/kuvat/p7.png" style="float: left; width: 80%; margin-right: 2%; margin-left: 10%; margin-bottom: 1em;">   
-                <img src="/kurssit/may1/kuvat/p6.png" style="float: left; width: 80%; margin-right: 2%; margin-left: 10%; margin-bottom: 1em;">
-                <img src="/kurssit/may1/kuvat/p5.png" style="float: left; width: 80%; margin-right: 2%; margin-left: 10%; margin-bottom: 1em;">     
-            <p style="clear: both;">                    
-            </p>
-
-            <p>
-                Aloitetaan määrittelemällä, mitä prosentilla tarkoitetaan:
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: PROSENTTI</h3>
+            <div class="teoria">
                 <p>
-                    <em>Prosentti</em> on yksi sadasosa:
-                    $$1 \ \% = \frac{1}{100} = 0{,}01.$$
+                    Suhteellisten osuuksien ilmaisemiseen käytetään usein prosentteja (kuvankaappauksia <a href="http://yle.fi/uutiset/">Yle Uutisten sivuilta</a>):
+                </p>  
+                <p>
+                    <img src="/kurssit/may1/kuvat/p7.png" style="float: left; width: 80%; margin-right: 2%; margin-left: 10%; margin-bottom: 1em;">   
+                    <img src="/kurssit/may1/kuvat/p6.png" style="float: left; width: 80%; margin-right: 2%; margin-left: 10%; margin-bottom: 1em;">
+                    <img src="/kurssit/may1/kuvat/p5.png" style="float: left; width: 80%; margin-right: 2%; margin-left: 10%; margin-bottom: 1em;">     
+                <p style="clear: both;">                    
+                </p>
+
+                <p>
+                    Aloitetaan määrittelemällä, mitä prosentilla tarkoitetaan:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: PROSENTTI</h3>
+                    <p>
+                        <em>Prosentti</em> on yksi sadasosa:
+                        $$1 \ \% = \frac{1}{100} = 0{,}01.$$
+                    </p>
+                </div>
+
+                <p>
+                    Esimerkiksi $0{,}04 = 4 \ \%$, koska kumpikin merkintä tarkoittaa neljää sadasosaa eri tavoilla kirjoitettuna. Samaan tapaan $0{,}597 = 59{,}7 \ \%$.
                 </p>
             </div>
-
-            <p>
-                Esimerkiksi $0{,}04 = 4 \ \%$, koska kumpikin merkintä tarkoittaa neljää sadasosaa eri tavoilla kirjoitettuna. Samaan tapaan $0{,}597 = 59{,}7 \ \%$.
-            </p>
-
             <div class="tehtavat">
-                <div class="tehtava" id="firstEx">
+                <div class="tehtava" id="b0d056a8-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti1">
                                 Prosentti
                             </a>
@@ -113,10 +115,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti2-ex">
+                <div class="tehtava" id="b0d05770-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti2">
                                 Prosentti
                             </a>
@@ -136,20 +138,20 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
-            <p>
-                Kun halutaan tietää, kuinka monta prosenttia luku $a$ on luvusta $b$, muodostetaan suhde
-                $$\frac{a}{b}$$
-                ja ilmaistaan se sadasosina eli prosentteina. Esimerkiksi suhteesta
-                $$\frac{7}{13} = 0{,}5384615\ldots$$
-                nähdään, että luku $7$ on noin $53{,}8\ \%$ luvusta 13.
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Kun halutaan tietää, kuinka monta prosenttia luku $a$ on luvusta $b$, muodostetaan suhde
+                    $$\frac{a}{b}$$
+                    ja ilmaistaan se sadasosina eli prosentteina. Esimerkiksi suhteesta
+                    $$\frac{7}{13} = 0{,}5384615\ldots$$
+                    nähdään, että luku $7$ on noin $53{,}8\ \%$ luvusta 13.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti2b-ex">
+                <div class="tehtava" id="b0d05b26-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti2b">
                                 Prosenttiosuus
                             </a>
@@ -170,10 +172,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti2c-ex">
+                <div class="tehtava" id="b0d05c02-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti2c">
                                 Prosenttiosuus
                             </a>
@@ -192,10 +194,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti2d-ex">
+                <div class="tehtava" id="b0d05cca-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti2d">
                                 Prosenttiosuus
                             </a>
@@ -214,10 +216,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti2e-ex">
+                <div class="tehtava" id="b0d05d92-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti2e">
                                 Prosenttiosuus
                             </a>
@@ -235,16 +237,17 @@ topnav: may1
                     </div>
                 </div>
             </div>
-            <p>
-                Joissakin tilanteissa tiedetään prosenttiosuus ja halutaan laskea sitä vastaava määrä. Toisin sanottuna halutaan laskea, kuinka paljon on $p$ prosenttia luvusta $b$. Tällöin prosenttiosuus ilmaistaan desimaalimuodossa ilman prosenttimerkkiä. Sitä vastaava osuus saadaan kertolaskulla. Esimerkiksi jos halutaan tietää, kuinka paljon on $32 \ \%$ luvusta 478, lasketaan
-                $$0{,}32 \cdot 478 = 152{,}96.$$
-                Siis $32 \ \%$ luvusta $478$ on $152{,}96$.
-            </p>
+            <div class="teoria">
+                <p>
+                    Joissakin tilanteissa tiedetään prosenttiosuus ja halutaan laskea sitä vastaava määrä. Toisin sanottuna halutaan laskea, kuinka paljon on $p$ prosenttia luvusta $b$. Tällöin prosenttiosuus ilmaistaan desimaalimuodossa ilman prosenttimerkkiä. Sitä vastaava osuus saadaan kertolaskulla. Esimerkiksi jos halutaan tietää, kuinka paljon on $32 \ \%$ luvusta 478, lasketaan
+                    $$0{,}32 \cdot 478 = 152{,}96.$$
+                    Siis $32 \ \%$ luvusta $478$ on $152{,}96$.
+                </p>
+            </div>
 
-
-            <div class="tehtava" id="prosentti3-ex">
+            <div class="tehtava" id="b0d05edc-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-toggle="collapse" class="collapsed" data-target="#prosentti3">
                             Prosenttiosuutta vastaava määrä
                         </a>
@@ -264,10 +267,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti4-ex">
+                <div class="tehtava" id="b0d0604e-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti4">
                                 Prosenttiosuutta vastaava määrä
                             </a>
@@ -286,19 +289,19 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
-            <p>
-                Prosenttiosuutta vastaavan määrän laskemista voi ajatella myös seuraavasti: Jos halutaan tietää, kuinka paljon on $32 \ \%$ luvusta 478, voidaan muodostaa yhtälö
-                $$\frac{a}{478} = 0{,}32.$$
-                Tässä siis kokonaismäärä $b = 478$ ja prosenttiosuus $r = 0{,}32$. Prosenttiosuutta vastaava määrä $a$ saadaan tästä kertolaskulla kuten jo edellä todettiin:
-                $$a = 0{,}32 \cdot 478 = 152{,}96.$$
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Prosenttiosuutta vastaavan määrän laskemista voi ajatella myös seuraavasti: Jos halutaan tietää, kuinka paljon on $32 \ \%$ luvusta 478, voidaan muodostaa yhtälö
+                    $$\frac{a}{478} = 0{,}32.$$
+                    Tässä siis kokonaismäärä $b = 478$ ja prosenttiosuus $r = 0{,}32$. Prosenttiosuutta vastaava määrä $a$ saadaan tästä kertolaskulla kuten jo edellä todettiin:
+                    $$a = 0{,}32 \cdot 478 = 152{,}96.$$
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti4b-ex">
+                <div class="tehtava" id="b0d06986-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti4b">
                                 Prosenttiosuutta vastaava määrä
                             </a>
@@ -316,10 +319,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti4c-ex">
+                <div class="tehtava" id="b0d06ae4-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti4c">
                                 Prosenttiosuutta vastaava määrä
                             </a>
@@ -337,10 +340,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti4d-ex">
+                <div class="tehtava" id="b0d06bb6-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti4d">
                                 Prosenttiosuutta vastaava määrä
                             </a>
@@ -357,21 +360,21 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
-            <p>
-                Joskus tiedetään prosenttiosuus ja sitä vastaava määrä, mutta ei kokonaismäärää, johon verrataan. Tällöin kysymys on, mistä luvusta luku $a$ on $p$ prosenttia. Esimerkiksi halutaan selvittää, mistä luvusta luku 264 on $32$ prosenttia. Tätä tilannetta vastaa yhtälö
-                $$\frac{264}{b} = 0{,}32.$$
-                Tässä siis prosenttiosuutta vastaava määrä $a = 264$ ja prosenttiosuus $r = 0{,}32$.
-                Jos yhtälön molemmat puolet kerrotaan luvulla $b$, se voidaan kirjoittaa muodossa
-                $$0{,}32b = 264.$$
-                Kokonaismäärä $b$ saadaan tästä jakolaskulla:
-                $$b = \frac{264}{0{,}32}= 825.$$
-                Siis luku 264 on $32 \ \%$ luvusta 825.
-            </p>
-
-            <div class="tehtava" id="prosentti5-ex">
+            <div class="teoria">
+                <p>
+                    Joskus tiedetään prosenttiosuus ja sitä vastaava määrä, mutta ei kokonaismäärää, johon verrataan. Tällöin kysymys on, mistä luvusta luku $a$ on $p$ prosenttia. Esimerkiksi halutaan selvittää, mistä luvusta luku 264 on $32$ prosenttia. Tätä tilannetta vastaa yhtälö
+                    $$\frac{264}{b} = 0{,}32.$$
+                    Tässä siis prosenttiosuutta vastaava määrä $a = 264$ ja prosenttiosuus $r = 0{,}32$.
+                    Jos yhtälön molemmat puolet kerrotaan luvulla $b$, se voidaan kirjoittaa muodossa
+                    $$0{,}32b = 264.$$
+                    Kokonaismäärä $b$ saadaan tästä jakolaskulla:
+                    $$b = \frac{264}{0{,}32}= 825.$$
+                    Siis luku 264 on $32 \ \%$ luvusta 825.
+                </p>
+            </div>
+            <div class="tehtava" id="b0d06c92-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-toggle="collapse" class="collapsed" data-target="#prosentti5">
                             Kokonaismäärä
                         </a>
@@ -392,10 +395,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti6-ex">
+                <div class="tehtava" id="b0d06d64-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti6">
                                 Kokonaismäärä
                             </a>
@@ -416,9 +419,9 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti7-ex">
+                <div class="tehtava" id="b0d06e2c-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti7">
                                 Kokonaismäärä
                             </a>
@@ -436,10 +439,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti8-ex">
+                <div class="tehtava" id="b0d071b0-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti8">
                                 Kokonaismäärä
                             </a>
@@ -457,10 +460,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti9-ex">
+                <div class="tehtava" id="b0d072a0-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti9">
                                 Kokonaismäärä
                             </a>
@@ -482,7 +485,7 @@ topnav: may1
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#vertailu">
                     Prosentit ja vertailu
@@ -490,30 +493,30 @@ topnav: may1
             </h1>
         </header>
         <div id="vertailu" class="collapse">
+            <div class="teoria">
+                <p>
+                    Prosentteja voidaan käyttää määrien vertailuun. Esimerkiksi, jos halutaan tietää, kuinka monta prosenttia luku 365 on suurempi kuin luku 310, voidaan laskea näiden lukujen suhde:
+                    $$\frac{365}{310} = 1{,}177419\ldots $$
+                    Tästä nähdään, että luku  365 on noin $117{,}7 \ \%$ luvusta 310, joten luku 365 on noin $17{,}7 \ \%$ suurempi kuin luku 310.
+                </p>
 
-            <p>
-                Prosentteja voidaan käyttää määrien vertailuun. Esimerkiksi, jos halutaan tietää, kuinka monta prosenttia luku 365 on suurempi kuin luku 310, voidaan laskea näiden lukujen suhde:
-                $$\frac{365}{310} = 1{,}177419\ldots $$
-                Tästä nähdään, että luku  365 on noin $117{,}7 \ \%$ luvusta 310, joten luku 365 on noin $17{,}7 \ \%$ suurempi kuin luku 310.
-            </p>
+                <p>
+                    Toinen tapa saman tuloksen saamiseen on laskea ensin vertailtavien lukujen erotus: 
+                    $$365- 310 = 55.$$
+                    Sen jälkeen lasketaan, kuinka monta prosenttia erotus on siitä luvusta, johon verrataan:
+                    $$\frac{55}{310} = 0{,}177419\ldots$$
+                    Tästä voidaan päätellä, että luku 365 on noin $17{,}7 \ \%$ suurempi kuin luku 310.
+                </p>
 
-            <p>
-                Toinen tapa saman tuloksen saamiseen on laskea ensin vertailtavien lukujen erotus: 
-                $$365- 310 = 55.$$
-                Sen jälkeen lasketaan, kuinka monta prosenttia erotus on siitä luvusta, johon verrataan:
-                $$\frac{55}{310} = 0{,}177419\ldots$$
-                Tästä voidaan päätellä, että luku 365 on noin $17{,}7 \ \%$ suurempi kuin luku 310.
-            </p>
-
-            <p>
-                Huomaa, että vertailussa jakajana on aina se luku, johon verrataan. Esimerkiksi edellä kysymys oli, kuinka monta prosenttia luku 365 on suurempi <b>kuin luku 310</b>, minkä vuoksi jakajana käytettiin lukua 310.
-            </p>
-
+                <p>
+                    Huomaa, että vertailussa jakajana on aina se luku, johon verrataan. Esimerkiksi edellä kysymys oli, kuinka monta prosenttia luku 365 on suurempi <b>kuin luku 310</b>, minkä vuoksi jakajana käytettiin lukua 310.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti10-ex">
+                <div class="tehtava" id="b0d07368-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti10">
                                 Vertailuprosentti
                             </a>
@@ -532,10 +535,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti11-ex">
+                <div class="tehtava" id="b0d07430-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti11">
                                 Vertailuprosentti
                             </a>
@@ -552,26 +555,26 @@ topnav: may1
                     </div>
                 </div>
             </div>
+            <div class="teoria">
+                <p>
+                    Jos halutaan tietää, kuinka monta prosenttia jokin luku on pienempi kuin jokin toinen luku, voidaan laskea samaan tapaan kuin edellä. Esimerkiksi, jos halutaan tietää, kuinka monta prosenttia luku 310 on pienempi kuin luku 365, voidaan laskea näiden lukujen suhde:
+                    $$\frac{310}{365} = 0{,}849315\ldots $$
+                    Tästä nähdään, että luku  310 on noin $84{,}9 \ \%$ luvusta 365, joten luku 310 on noin $100 - 84{,}9 \ \% = 15{,}1 \ \%$ pienempi kuin luku 365. Huomaa, että jälleen jakana on se luku, johon verrataan.
+                </p>
 
-            <p>
-                Jos halutaan tietää, kuinka monta prosenttia jokin luku on pienempi kuin jokin toinen luku, voidaan laskea samaan tapaan kuin edellä. Esimerkiksi, jos halutaan tietää, kuinka monta prosenttia luku 310 on pienempi kuin luku 365, voidaan laskea näiden lukujen suhde:
-                $$\frac{310}{365} = 0{,}849315\ldots $$
-                Tästä nähdään, että luku  310 on noin $84{,}9 \ \%$ luvusta 365, joten luku 310 on noin $100 - 84{,}9 \ \% = 15{,}1 \ \%$ pienempi kuin luku 365. Huomaa, että jälleen jakana on se luku, johon verrataan.
-            </p>
-
-            <p>
-                Toinen tapa saman tuloksen saamiseen on laskea ensin vertailtavien lukujen erotus: 
-                $$365- 310 = 55.$$
-                Sen jälkeen lasketaan, kuinka monta prosenttia erotus on siitä luvusta, johon verrataan:
-                $$\frac{55}{365} = 0{,}15068\ldots$$
-                Tästä voidaan päätellä, että luku 310 on noin $15{,}1 \ \%$ pienempi kuin luku 365.
-            </p>
-
+                <p>
+                    Toinen tapa saman tuloksen saamiseen on laskea ensin vertailtavien lukujen erotus: 
+                    $$365- 310 = 55.$$
+                    Sen jälkeen lasketaan, kuinka monta prosenttia erotus on siitä luvusta, johon verrataan:
+                    $$\frac{55}{365} = 0{,}15068\ldots$$
+                    Tästä voidaan päätellä, että luku 310 on noin $15{,}1 \ \%$ pienempi kuin luku 365.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti12-ex">
+                <div class="tehtava" id="b0d074ee-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti12">
                                 Vertailuprosentti
                             </a>
@@ -590,10 +593,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti13-ex">
+                <div class="tehtava" id="b0d075b6-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti13">
                                 Vertailuprosentti
                             </a>
@@ -610,24 +613,24 @@ topnav: may1
                     </div>
                 </div>
             </div>
+            <div class="teoria">
+                <p>
+                    Joskus halutaan vertailla prosentteina ilmoitettuja lukuja keskenään. Tällöin vertailu voidaan tehdä joko tutkimalla lukujen suhdetta tai erotusta. Jos lukuja verrataan laskemalla niiden erotus, ilmoitetaan tulos <em>prosenttiyksikköinä</em>. Esimerkiksi, jos säästötilin korko on $2{,}5 \ \%$ ja käyttötilin korko $1 \ \%$, on korkojen erotus $2{,}5 - 1 = 1{,}5$ prosenttiyksikköä. Voidaan sanoa, että säästötilin korko on $1{,}5$ prosenttiyksikköä korkeampi kuin käyttötilin korko, tai että käyttötilin korko on $1{,}5$ prosenttiyksikköä matalampi kuin säästötilin korko.
+                </p>
 
-            <p>
-                Joskus halutaan vertailla prosentteina ilmoitettuja lukuja keskenään. Tällöin vertailu voidaan tehdä joko tutkimalla lukujen suhdetta tai erotusta. Jos lukuja verrataan laskemalla niiden erotus, ilmoitetaan tulos <em>prosenttiyksikköinä</em>. Esimerkiksi, jos säästötilin korko on $2{,}5 \ \%$ ja käyttötilin korko $1 \ \%$, on korkojen erotus $2{,}5 - 1 = 1{,}5$ prosenttiyksikköä. Voidaan sanoa, että säästötilin korko on $1{,}5$ prosenttiyksikköä korkeampi kuin käyttötilin korko, tai että käyttötilin korko on $1{,}5$ prosenttiyksikköä matalampi kuin säästötilin korko.
-            </p>
-
-            <p> 
-                Vertaaminen voidaan tehdä myös suhteen avulla:
-                $$\frac{1}{2{,}5} = 0{,}4,$$
-                joten käyttötilin korko on $40 \ \%$ säästötilin korosta. Käyttötilin korko on siis $100 \ \% - 40 \ \% = 60 \ \%$ pienempi kuin käyttötilin korko. Toisesta näkökulmasta
-                $$\frac{2{,}5}{1} = 2{,}5,$$
-                joten säästötilin korko on $250\ \%$ käyttötilin korosta. Säästötilin korko on siten $250 \ \% - 100 \ \% = 150 \ \%$ suurempi kuin käyttötilin korko.
-            </p>
-
+                <p> 
+                    Vertaaminen voidaan tehdä myös suhteen avulla:
+                    $$\frac{1}{2{,}5} = 0{,}4,$$
+                    joten käyttötilin korko on $40 \ \%$ säästötilin korosta. Käyttötilin korko on siis $100 \ \% - 40 \ \% = 60 \ \%$ pienempi kuin käyttötilin korko. Toisesta näkökulmasta
+                    $$\frac{2{,}5}{1} = 2{,}5,$$
+                    joten säästötilin korko on $250\ \%$ käyttötilin korosta. Säästötilin korko on siten $250 \ \% - 100 \ \% = 150 \ \%$ suurempi kuin käyttötilin korko.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti14-ex">
+                <div class="tehtava" id="b0d07688-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti14">
                                 Prosenttien vertailu
                             </a>
@@ -651,7 +654,7 @@ topnav: may1
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#muutos">
                     Prosentit ja muutos
@@ -659,17 +662,18 @@ topnav: may1
             </h1>
         </header>
         <div id="muutos" class="collapse">
-            <p>
-                Prosentteja käytetään myös muutoksen suuruuden ilmaisemiseen. Laskutapa on samanlainen kuin vertailtaessa. Erityistä huomiota pitää kiinnittää siihen, että jakajana käytetään alkuperäistä, muutosta edeltävää arvoa. Esimerkiksi jos kunnan väkiluku nousi 5 617 asukkaasta 6 221 asukkaaseen, saadaan väkiluvun muutos pääteltyä suhteesta
-                $$\frac{6221}{5617} = 1{,}1075307\ldots$$
-                Tästä nähdään, että uusi väkiluku oli noin $110{,}8 \ \%$ vanhasta väkiluvusta eli väkiluku kasvoi noin $10{,}8 \ \%$. Jakajana käytettiin siis alkuperäistä väkilukua 5 617.
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Prosentteja käytetään myös muutoksen suuruuden ilmaisemiseen. Laskutapa on samanlainen kuin vertailtaessa. Erityistä huomiota pitää kiinnittää siihen, että jakajana käytetään alkuperäistä, muutosta edeltävää arvoa. Esimerkiksi jos kunnan väkiluku nousi 5 617 asukkaasta 6 221 asukkaaseen, saadaan väkiluvun muutos pääteltyä suhteesta
+                    $$\frac{6221}{5617} = 1{,}1075307\ldots$$
+                    Tästä nähdään, että uusi väkiluku oli noin $110{,}8 \ \%$ vanhasta väkiluvusta eli väkiluku kasvoi noin $10{,}8 \ \%$. Jakajana käytettiin siis alkuperäistä väkilukua 5 617.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti15-ex">
+                <div class="tehtava" id="b0d07a3e-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti15">
                                 Muutosprosentti
                             </a>
@@ -688,10 +692,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti16-ex">
+                <div class="tehtava" id="b0d07b2e-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti16">
                                 Muutosprosentti
                             </a>
@@ -708,19 +712,20 @@ topnav: may1
                     </div>
                 </div>
             </div>
-
-            <p>
-                Joissakin tilanteissa tiedetään alkuperäinen arvo ja muutoksen suhteellinen suuruus prosentteina. Tällöin uusi, muuttunut arvo saadaan laskettua kertolaskun avulla. Ensin täytyy kuitenkin päätellä, mikä on muutosprosenttia vastaava kerroin. Esimerkiksi, jos palkka on aluksi 1 450 euroa ja sitä korotetaan $2{,}5 \ \%$, on uusi palkka $102{,}5 \ \%$ vanhaan palkkaan verrattuna. Uusi palkka saadaan siten kertomalla luvulla $1{,}025$:
-                $$1{,}025 \cdot 1 450 \, \unicode{0x20AC} = 1 486{,}25 \, \unicode{0x20AC}.$$
-                Jos taas pyörän hinta on aluksi 390 euroa ja sitä alennetaan $15 \ \%$, on uusi hinta $100 - 15 = 85$ prosenttia vanhasta hinnasta. Uusi hinta saadaan siten kertomalla luvulla $0{,}85$:
-                $$0{,}85 \cdot 390 \, \unicode{0x20AC} = 331{,}50 \, \unicode{0x20AC}.$$
-            </p>
+            <div class="teoria">
+                <p>
+                    Joissakin tilanteissa tiedetään alkuperäinen arvo ja muutoksen suhteellinen suuruus prosentteina. Tällöin uusi, muuttunut arvo saadaan laskettua kertolaskun avulla. Ensin täytyy kuitenkin päätellä, mikä on muutosprosenttia vastaava kerroin. Esimerkiksi, jos palkka on aluksi 1 450 euroa ja sitä korotetaan $2{,}5 \ \%$, on uusi palkka $102{,}5 \ \%$ vanhaan palkkaan verrattuna. Uusi palkka saadaan siten kertomalla luvulla $1{,}025$:
+                    $$1{,}025 \cdot 1 450 \, \unicode{0x20AC} = 1 486{,}25 \, \unicode{0x20AC}.$$
+                    Jos taas pyörän hinta on aluksi 390 euroa ja sitä alennetaan $15 \ \%$, on uusi hinta $100 - 15 = 85$ prosenttia vanhasta hinnasta. Uusi hinta saadaan siten kertomalla luvulla $0{,}85$:
+                    $$0{,}85 \cdot 390 \, \unicode{0x20AC} = 331{,}50 \, \unicode{0x20AC}.$$
+                </p>
+            </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti17-ex">
+                <div class="tehtava" id="b0d07bf6-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti17">
                                 Muutosprosenttia vastaava kerroin
                             </a>
@@ -740,10 +745,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti18-ex">
+                <div class="tehtava" id="b0d08556-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti18">
                                 Muuttunut arvo
                             </a>
@@ -757,10 +762,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti19-ex">
+                <div class="tehtava" id="b0d086d2-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti19">
                                 Muutosprosenttia vastaava kerroin
                             </a>
@@ -780,10 +785,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti20-ex">
+                <div class="tehtava" id="b0d08808-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti20">
                                 Muuttunut arvo
                             </a>
@@ -797,10 +802,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti20b-ex">
+                <div class="tehtava" id="b0d08bfa-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti20b">
                                 Muuttunut arvo
                             </a>
@@ -820,10 +825,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti21-ex">
+                <div class="tehtava" id="b0d08cf4-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti21">
                                 Peräkkäiset muutokset
                             </a>
@@ -843,10 +848,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti22-ex">
+                <div class="tehtava" id="b0d08dc6-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti22">
                                 Peräkkäiset muutokset
                             </a>
@@ -869,7 +874,7 @@ topnav: may1
     </section>
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#Ratkaisustrategioita">
                     PROSENTTILASKENNAN STRATEGIOITA
@@ -877,16 +882,16 @@ topnav: may1
             </h1>
         </header>
         <div id="Ratkaisustrategioita" class="collapse">
-
-            <p>
-                Seuraavissa tehtävissä harjoitellaan ratkaisemaan prosenttilaskentaan liittyviä ongelmia, joiden yleinen ratkaisu vaatii kirjainlausekkeiden käyttämistä. Ratkaisu kuitenkin helpottuu usein, jos ongelman ratkaisee ensin yhdessä erityistapauksessa joillakin itse valitsemillaan luvuilla. Varsinainen ratkaisu on tällöin helpompi muodostaa. Lisäksi tuloksen järkevyyttä voi arvioida vertaamalla eri tavoilla saamiaan tuloksia.
-            </p>
-
+            <div class="teoria">
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan ratkaisemaan prosenttilaskentaan liittyviä ongelmia, joiden yleinen ratkaisu vaatii kirjainlausekkeiden käyttämistä. Ratkaisu kuitenkin helpottuu usein, jos ongelman ratkaisee ensin yhdessä erityistapauksessa joillakin itse valitsemillaan luvuilla. Varsinainen ratkaisu on tällöin helpompi muodostaa. Lisäksi tuloksen järkevyyttä voi arvioida vertaamalla eri tavoilla saamiaan tuloksia.
+                </p>
+            </div>
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti23-ex">
+                <div class="tehtava" id="b0d08e84-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti23">
                                 Ratkaisun hahmottelu lukuarvoilla
                             </a>
@@ -927,10 +932,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti24-ex">
+                <div class="tehtava" id="b0d08f4c-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti24">
                                 Ratkaisu prosenttilausekkeita käyttäen
                             </a>
@@ -971,10 +976,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti25-ex">
+                <div class="tehtava" id="b0d09014-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti25">
                                 Ratkaisun hahmottelu lukuarvoilla
                             </a>
@@ -1007,10 +1012,10 @@ topnav: may1
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="prosentti26-ex">
+                <div class="tehtava" id="b0d09352-7dfa-11e7-bb31-be2e44b06b34">
 
                     <header>
-                        <h1>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#prosentti26">
                                 Ratkaisu prosenttilausekkeita käyttäen
                             </a>
@@ -1048,7 +1053,7 @@ topnav: may1
 
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja2">
                     TEHTÄVÄSARJA II
@@ -1059,9 +1064,9 @@ topnav: may1
         <div id="tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="prosentti_1-ex">
+            <div class="tehtava" id="b0d09438-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_1">
                             Prosenttiosuus
                         </a>
@@ -1080,15 +1085,15 @@ topnav: may1
                     </h2>
                     <div id="prosentti_1_v" class="collapse">
                         <p>
-                        Noin 23,7 %.
+                            Noin 23,7 %.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_1_a-ex">
+            <div class="tehtava" id="b0d09500-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_1_a">
                             Prosenttiosuus
                         </a>
@@ -1115,9 +1120,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_2-ex">
+            <div class="tehtava" id="b0d095c8-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_2">
                             Prosenttiosuutta vastaava määrä
                         </a>
@@ -1135,15 +1140,15 @@ topnav: may1
                     </h2>
                     <div id="prosentti_2_v" class="collapse">
                         <p>
-                        Noin 26.
+                            Noin 26.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_2_a-ex">
+            <div class="tehtava" id="b0d09686-7dfa-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_2_a">
                             Prosenttiosuutta vastaava määrä
                         </a>
@@ -1170,9 +1175,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_3-ex">
+            <div class="tehtava" id="b483d7a2-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_3">
                             Kokonaismäärä
                         </a>
@@ -1190,15 +1195,15 @@ topnav: may1
                     </h2>
                     <div id="prosentti_3_v" class="collapse">
                         <p>
-                        83,30 euroa.
+                            83,30 euroa.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_3_a-ex">
+            <div class="tehtava" id="b483dcac-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_3_a">
                             Kokonaismäärä
                         </a>
@@ -1224,9 +1229,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_4-ex">
+            <div class="tehtava" id="b483ddba-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_4">
                             Vertailuprosentti
                         </a>
@@ -1248,17 +1253,17 @@ topnav: may1
                     <div id="prosentti_4_v" class="collapse">
                         <p>
                         <ol class="a">
-                        <li> Noin 44,4 % vähemmän.</li>
-                        <li> Noin 79,9 % enemmän.</li>
-                    </ol>
+                            <li> Noin 44,4 % vähemmän.</li>
+                            <li> Noin 79,9 % enemmän.</li>
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_4_a-ex">
+            <div class="tehtava" id="b483deaa-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_4_a">
                             Vertailuprosentti
                         </a>
@@ -1284,9 +1289,9 @@ topnav: may1
 
 
 
-            <div class="tehtava" id="prosentti_5-ex">
+            <div class="tehtava" id="b483e0c6-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_5">
                             Prosenttien vertailu
                         </a>
@@ -1309,17 +1314,17 @@ topnav: may1
                     <div id="prosentti_5_v" class="collapse">
                         <p>
                         <ol class="a">
-                        <li> 0,8 prosenttiyksikköä.</li>
-                        <li> Noin 23,5 %.</li>
-                    </ol>
+                            <li> 0,8 prosenttiyksikköä.</li>
+                            <li> Noin 23,5 %.</li>
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_5_a-ex">
+            <div class="tehtava" id="b483e33c-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_5_a">
                             Prosenttien vertailu
                         </a>
@@ -1353,9 +1358,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_6a-ex">
+            <div class="tehtava" id="b483e418-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_6a">
                             Muutosprosentti
                         </a>
@@ -1374,15 +1379,15 @@ topnav: may1
                     </h2>
                     <div id="prosentti_6a_v" class="collapse">
                         <p>
-                        50 %.
+                            50 %.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_6_a-ex">
+            <div class="tehtava" id="b483e63e-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_6_a">
                             Muutosprosentti
                         </a>
@@ -1408,9 +1413,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_6-ex">
+            <div class="tehtava" id="b483e724-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_6">
                             Muuttunut arvo
                         </a>
@@ -1434,9 +1439,9 @@ topnav: may1
                     <div id="prosentti_6_v" class="collapse">
                         <p>
                         <ol class="a">
-                        <li> 367,20 euroa.</li>
-                        <li> 440,64 euroa.</li>
-                    </ol>
+                            <li> 367,20 euroa.</li>
+                            <li> 440,64 euroa.</li>
+                        </ol>
                         </p>
                     </div>
                 </div>
@@ -1444,9 +1449,9 @@ topnav: may1
 
 
 
-            <div class="tehtava" id="prosentti_7-ex">
+            <div class="tehtava" id="b483e878-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_7">
                             Peräkkäiset muutokset
                         </a>
@@ -1472,9 +1477,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="Prosentti_7_b-ex">
+            <div class="tehtava" id="b483eac6-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Prosentti_7_b">
                             Peräkkäiset muutokset
                         </a>
@@ -1511,9 +1516,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="Prosentti_7_a-ex">
+            <div class="tehtava" id="b483ec4c-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Prosentti_7_a">
                             Prosenttilaskennan strategioita
                         </a>
@@ -1556,9 +1561,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="Prosentti_8_a-ex">
+            <div class="tehtava" id="b483edf0-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Prosentti_8_a">
                             Prosenttilaskennan strategioita
                         </a>
@@ -1582,9 +1587,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="Prosentti_8-ex">
+            <div class="tehtava" id="b483f084-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Prosentti_8">
                             Prosenttilaskennan strategioita
                         </a>
@@ -1619,7 +1624,7 @@ topnav: may1
     </section>  
 
     <section class="panel">
-        <header>
+        <header class="otsikko">
             <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja3">
                     TEHTÄVÄSARJA III
@@ -1630,9 +1635,9 @@ topnav: may1
         <div id="tehtavasarja3" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="Prosentti_9_a-ex">
+            <div class="tehtava" id="b483f17e-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Prosentti_9_a">
 
                         </a>
@@ -1656,9 +1661,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_3c-ex">
+            <div class="tehtava" id="b483f340-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_3c">
 
                         </a>
@@ -1677,15 +1682,15 @@ topnav: may1
                     </h2>
                     <div id="prosentti_3c_v" class="collapse">
                         <p>
-                        Noin 23 %.
+                            Noin 23 %.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="prosentti_2c-ex">
+            <div class="tehtava" id="b483f412-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_2c">
 
                         </a>
@@ -1703,7 +1708,7 @@ topnav: may1
                     </h2>
                     <div id="prosentti_2c_v" class="collapse">
                         <p>
-                        Tulot kasvoivat 3,5 %.
+                            Tulot kasvoivat 3,5 %.
                         </p>
                     </div>
                 </div>
@@ -1711,9 +1716,9 @@ topnav: may1
 
 
 
-            <div class="tehtava" id="Prosentti_9-ex">
+            <div class="tehtava" id="b483f62e-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Prosentti_9">
 
                         </a>
@@ -1740,9 +1745,9 @@ topnav: may1
             </div>
 
 
-            <div class="tehtava" id="prosentti_1c-ex">
+            <div class="tehtava" id="b483f700-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#prosentti_1c">
 
                         </a>
@@ -1766,17 +1771,17 @@ topnav: may1
                     <div id="prosentti_1c_v" class="collapse">
                         <p>
                         <ol class="a">
-                        <li> 60 %</li>
-                        <li> Noin 61,2 %</li>
-                    </ol>
+                            <li> 60 %</li>
+                            <li> Noin 61,2 %</li>
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="Prosentti_10-ex">
+            <div class="tehtava" id="b483f8fe-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Prosentti_10">
 
                         </a>
@@ -1797,9 +1802,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="Prosentti_11-ex">
+            <div class="tehtava" id="b483fb60-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Prosentti_11">
 
                         </a>
@@ -1825,9 +1830,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="Prosentti_12-ex">
+            <div class="tehtava" id="b483fe9e-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Prosentti_12">
 
                         </a>
@@ -1853,9 +1858,9 @@ topnav: may1
                 </div>
             </div>
 
-            <div class="tehtava" id="Prosentti_12b-ex">
+            <div class="tehtava" id="b4840178-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Prosentti_12b">
 
                         </a>
@@ -1881,17 +1886,17 @@ topnav: may1
                     <div id="prosentti_12b_v" class="collapse">
                         <p>
                         <ol class="a">
-                        <li> Noin 6,3 %.</li>
-                        <li> </li>
-                    </ol>
+                            <li> Noin 6,3 %.</li>
+                            <li> </li>
+                        </ol>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="Prosentti_12c-ex">
+            <div class="tehtava" id="b4840286-7dff-11e7-bb31-be2e44b06b34">
                 <header>
-                    <h1>
+                    <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#Prosentti_12c">
 
                         </a>
@@ -1914,9 +1919,9 @@ topnav: may1
                     <div id="prosentti_12c_v" class="collapse">
                         <p>
                         <ol class="a">
-                        <li> $y = -0{,}02x + 12660$</li>
-                        <li> </li>
-                    </ol>
+                            <li> $y = -0{,}02x + 12660$</li>
+                            <li> </li>
+                        </ol>
                         </p>
                     </div>
                 </div>
