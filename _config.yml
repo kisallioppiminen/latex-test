@@ -1,6 +1,6 @@
 # Site settings
 title: Kisallioppiminen.fi
-backendbaseurl: "https://beta-kisallioppiminen.github.io/"
+backendbaseurl: "https://kisallioppiminen.github.io/"
 
 # Build settings
 markdown: kramdown
