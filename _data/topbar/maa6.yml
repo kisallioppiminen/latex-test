@@ -2,23 +2,23 @@ header:
 path: 
 navigation:
   -
-    name: 1. Kurssin etusivu
+    name: Kurssin etusivu
     path: /kurssit/maa6/
   -
-    name: 2. Derivaatta
+    name: 1. Derivaatta
     path: /kurssit/maa6/luku1/
   -
-    name: 3. Raja-arvot ja jatkuvuus
+    name: 2. Raja-arvot ja jatkuvuus
     path: /kurssit/maa6/luku2/
   -
-    name: 4. Rationaalifunktiot
+    name: 3. Rationaalifunktiot
     path: /kurssit/maa6/luku3/
   -
-    name: 5. Derivointisääntöjä I
+    name: 4. Derivointisääntöjä I
     path: /kurssit/maa6/luku4/
   -
-    name: 6. Funktion kulku
+    name: 5. Funktion kulku
     path: /kurssit/maa6/luku5/
   -
-    name: 7. Derivontisääntöjä II
+    name: 6. Derivontisääntöjä II
     path: /kurssit/maa6/luku6/
