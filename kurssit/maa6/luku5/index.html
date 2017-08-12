@@ -1150,7 +1150,7 @@ topnav: maa6
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA6s2t501">
-                            Suoran yhtälö
+                            Funktion kulku
                         </a>
                     </h1>
                 </header>
@@ -1181,7 +1181,46 @@ topnav: maa6
                     </div>
                 </div>
             </div>
-            
+
+            <div class="tehtava" id="MAA6s2t502-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t502">
+                            Funktion kulku
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t502">
+                    <p>
+                        Tarkastellaan yhtälöä $x^3 + x + a = 0$.
+                    </p>
+                    <ol class="a">
+                        <li> Osoita, että tällä yhtälöllä on täsmälleen yksi ratkaisu riippumatta vakion $a$ arvosta. </li>
+                        <li> Millä vakion $a$ arvoilla ratkaisu on välillä $\pa 1, 2\pe$? </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t502_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t502_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> Polynomifunktion $f(x) = x^3 + x + a$ derivaattafunktio $f'(x) = 3x^2 + 1$ on aina positiivinen, joten funktio $f$ on aidosti kasvava koko lukusuoralla. Sillä on siis enintään yksi nollakohta. Lisäksi
+                            <ul>
+                                <li> jos $a > 0$, niin $f(0) = a > 0$ ja $f(-a) = -a^3 < 0$ </li>
+                                <li> jos $a = 0$, niin $f(0) = 0$ </li>
+                                <li> jos $a < 0$, niin $f(0) = a < 0$ ja $f(-a) = -a^3 > 0$</li>
+                            </ul>  
+                            joten funktiolla $f$ on ainakin yksi nollakohta. Tästä voidaan päätellä, että yhtälöllä $x^3 + x + a = 0$ on täsmälleen yksi ratkaisu riippumatta vakion $a$ arvosta.
+                            </li>
+                            <li> $-10 < a < -2$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#luku5-tehtavasarja2">
                     Sulje kappale
