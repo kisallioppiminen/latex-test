@@ -1198,7 +1198,7 @@ topnav: maa6
                             <br>
                             Funktio E ja sen derivaattafunktio A
                             <br>
-                            Funktio F ja sen derivaattafunktio B
+                            Funktio F ja sen derivaattafunktio B.
                         </p>
                     </div>
                 </div>
@@ -1551,6 +1551,60 @@ topnav: maa6
                         </li>
                         <li>
                             Funktio on aidosti kasvava välillä $[8{,}8; \infty\pe$, joten $f(10{,}00001)$ on suurempi.
+                        </li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA6s2t512-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t512">
+                            Funktion kulku
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t512">
+                    <p>
+                        Tarkastellaan funktiota
+                        $$
+                        g(x) = 4x^3 - 3x^2 + 6x + 2.
+                        $$
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Osoita, että funktio $g$ on kaikkialla aidosti kasvava.
+                        </li>
+                        <li>
+                            Missä kohdassa funktion $g$ arvot kasvavat hitaimmin? Toisin sanottuna, missä kohdassa funktion $g$ kuvaaja nousee loivimmin?
+                            <br>
+                            Vinkki: etsi kasvunopeuden eli derivaatan $g'(x)$ minimikohta tutkimalla derivaattafunktion derivaattaa eli funktion $g$ <em>toista derivaattaa</em> $g''(x)$.
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t512_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t512_v" class="collapse">
+                        <ol class="a">
+                        <li> 
+                            Derivaattafunktio $g'(x) = 12x^2 - 6x + 6$ on kaikkialla positiivinen. Tämä voidaan perustella ainakin kahdella tavalla:
+                            <br>
+                            Toisen asteen ratkaisukaavalla nähdään, että yhtälöllä $g'(x) = 0$ ei ole ratkaisuja ja lisäksi esimerkiksi $g'(0) = 6 > 0$. 
+                            <br>
+                            Derivaattafunktion lauseke on myös mahdollista täydentää neliöksi:
+                            \begin{align*}
+                            g'(x) &= 12\left(x^2 - \frac{1}{2}x + \frac{1}{2}\right) \\[2mm]
+                            &=12\left(x^2 - 2\cdot \frac{1}{4}x + \frac{1}{4^2} - \frac{1}{4^2} + \frac{1}{2}\right) \\[2mm]
+                            &=12\left(\left(x - \frac{1}{4}\right)^2 - \frac{1}{4^2} + \frac{1}{2}\right) \\[2mm]
+                            &=12\left(\left(x - \frac{1}{4}\right)^2 + \frac{7}{16}\right) \\[2mm]
+                            &=12\left(x - \frac{1}{4}\right)^2 + \frac{21}{4} > 0.
+                            \end{align*}
+                        </li>
+                        <li>
+                            Toisella derivaatalla $g''(x) = 24x - 6$ on nollakohta $x = \frac{1}{4}$. Kun laaditaan toiselle derivaatalle merkkikaavio ja täydennetään sen funktion $g'$ kulkukaavioksi, havaitaan, että  derivaattafunktio $g'$ saa pienimmäin arvonsa kohdassa $x = \frac{1}{4}$. Funktion $g$ arvot kasvavat siis hitaimmin kohdassa $x = \frac{1}{4}$.
                         </li>
                     </ol>
                     </div>
