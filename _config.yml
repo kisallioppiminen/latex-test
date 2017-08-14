@@ -15,6 +15,7 @@ navigation:
   "Materiaalit": "/"
   "Blogi": "http://blogs.helsinki.fi/kisallioppiminenlukiossa"
   "Tietoa": "/tietoa.html"
+  "BETA": "https://beta-kisallioppiminen.github.io"
   # Login button added with js
 
 resources:
