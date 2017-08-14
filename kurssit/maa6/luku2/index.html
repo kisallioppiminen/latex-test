@@ -1109,6 +1109,35 @@ topnav: maa6
                 </div>
             </div>
 
+            <div class="tehtava" id="MAA6s2t205b">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t205b">
+                            Funktion jatkuvuus
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t205b">
+                    <p>
+                        Oletetaan, että funktio $f$ on määritelty ja jatkuva suljetulla välillä $[a,b]$. Tehtävänä on osoittaa, että funktio saa välillä $\pa a, b\pe$ ainakin kerran jokaisen arvon, joka on päätepistearvojen $f(a)$ ja $f(b)$ välissä.
+                        <br>
+                        <img src="/kurssit/maa6/kuvat/kuva112.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Ohje: Oleta, että $f(a) < c < f(b)$ ja sovella Bolzanon lausetta funktioon $g(x) = f(x) - c$. Muista tarkistaa, että funktio $g$ toteuttaa Bolzanon lauseen ehdot, ks. teoreema 1. 
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t205b_v">
+                            VASTAUS
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t205b_v" class="collapse">
+                        <p>
+                            Funktio $g$ on määritelty välillä $[a,b]$. Koska funktio $f$ on jatkuva ja funktio $g$ saadaan siitä vähentämällä vakio $c$, on myös funktio $g$ jatkuva (niiden kuvaajat ovat muuten identtiset mutta koordinaatistossa eri korkeudella). Lisäksi $g(a) = f(a)-c < 0$ ja $g(b) = f(b) - c > 0$, joten Bolzanon lauseen nojalla funktiolla $g$ on ainakin yksi nollakohta välillä $\pa a, b\pe$. Tästä seuraa, että funktiolla $f$ on välillä $\pa a, b\pe$ ainakin yksi kohta, jossa se saa arvon $c$. Tämä päättely toimii mille tahansa vakiolle $c$, jolle pätee $f(a) < c < f(b)$, joten funktio saa välillä $\pa a, b\pe$ ainakin kerran jokaisen arvon, joka on päätepistearvojen $f(a)$ ja $f(b)$ välissä.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#luku2-tehtavasarja2">
                     Sulje kappale
