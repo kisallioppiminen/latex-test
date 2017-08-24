@@ -1,0 +1,16 @@
+header: 
+path: 
+navigation:
+  -
+    name: Kurssin etusivu
+    path: /kurssit/maa7/
+  -
+    name: 1. Trigonometriaa yksikköympyrässä
+    path: /kurssit/maa7/luku1/
+  -
+    name: 2. Trigonometriset funktiot
+    path: /kurssit/maa7/luku2/
+  -
+    name: 3. Yhdistetty funktio
+    path: /kurssit/maa7/luku3/
+
