@@ -2,7 +2,7 @@ header:
 path: 
 navigation:
   -
-    name: Kurssin etusivu
+    name: Kurssin etusivu (MAA7)
     path: /kurssit/maa7/
   -
     name: 1. Trigonometriaa yksikköympyrässä
