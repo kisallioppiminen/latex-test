@@ -2,7 +2,7 @@ header:
 path: 
 navigation:
   -
-    name: Kurssin etusivu
+    name: MAA4
     path: /kurssit/maa4/
   -
     name: 1. Vektorit ja <i>xy</i>-koordinaatisto

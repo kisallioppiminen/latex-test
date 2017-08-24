@@ -2,7 +2,7 @@ header:
 path: 
 navigation:
   -
-    name: Kurssin etusivu
+    name: MAA6
     path: /kurssit/maa6/
   -
     name: 1. Derivaatta

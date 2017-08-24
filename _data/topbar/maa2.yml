@@ -2,7 +2,7 @@ header:
 path: 
 navigation:
   -
-    name: Kurssin etusivu
+    name: MAA2
     path: /kurssit/maa2/
   -
     name: 1. Ensimmäisen asteen polynomifunktio
