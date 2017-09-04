@@ -634,11 +634,560 @@ topnav: maa7
         </header>
         <div id="kosini1" class="collapse">
             <div class="teoria">
+
                 <p>
-                    
+                    Tässä kappaleessa yleistetään kulman kosinin käsite kaikille suunnatuille kulmille, tutkitaan kosinin ominaisuuksia ja opitaan ratkaisemaan erilaisia kosiniyhtälöitä yksikköympyrän avulla. Aloitetaan palauttamalla mieleen kulman kosinin aikaisempia määritelmiä.
+                </p>
+                
+                <p>
+                    <a href="http://kisallioppiminen.fi/kurssit/maa3/luku1/">Kurssilla MAA3</a> kulman kosini määriteltiin aluksi suorakulmaisen kolmion avulla: 
+                    Suorakulmaisessa kolmiossa terävän kulman $\alpha$ kosini tarkoittaa kulman viereisen kateetin suhdetta hypoteenuusaan. Alla olevan kuvion merkinnöillä
+                    \begin{align*}
+                    \sin \alpha &= \textcolor{red}{\dfrac{\boldsymbol{b}}{\boldsymbol{c}}} 
+                    \end{align*}
+                    <img src="/kurssit/maa7/kuvat/MAA7kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    Myöhemmin samalla kurssilla otettiin käyttöön uusi määritelmä, joka kattaa myös tylppäkulmaiset kolmiot. Jos  $0^\circ \leq \alpha \leq 180^\circ$, määritellään kulman $\alpha$ kosini seuraavasti: Piirretään origosta lähtevä jana, jonka pituus on 1 ja joka muodostaa positiivisen $x$-akselin kanssa kulman $\alpha$. Kulman $\alpha$ kosini on tämän janan toisen päätepisteen $x$-koordinaatti:
+                    <br>
+                    <img src="/kurssit/maa7/kuvat/MAA7kuva001.png" style="max-width: 100%; width: auto; height: auto;"/>
                 </p>
             </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t108-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t108">
+                                Kulman kosini
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t108" class="collapse">
+                        <p>
+                            Tarkastele alla olevaa kuvaa.
+                        </p>
+                        <ol class="a">
+                            <li> Määritä $\sin \beta$. </li>
+                            <li> 
+                                Selvitä laskimella kulman $\beta$ suuruus. Anna vastaus kolmen merkitsevän numeron tarkkuudella. Kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa3/luku1/">MAA3-kurssin</a> tehtävä 1.20 ja sitä edeltävä teoriaosuus. 
+                            </li>
+                            <li> 
+                                Merkitse kulma $\beta$ koordinaatistoon ja päättele jokin toinen kulma, jolla on sama sinin arvo. Kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa3/luku1/">MAA3-kurssin</a> tehtävä 1.27. 
+                            </li>
+                        </ol>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva013.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t108_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t108_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    $\sin \beta = \dfrac{55}{73}$. 
+                                </li>
+                                <li> 
+                                    $\beta \approx 48{,}9^\circ$
+                                </li>
+                                <li> 
+                                    Sopiva kulma on $180^\circ - 48{,}9^\circ = 131{,}1^\circ$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Mikä tahansa kulma voidaan sijoittaa koordinaatistoon niin, että kulman kärki on origossa ja kulman toinen kylki on positiivisella $x$-akselilla. Kulman toisen kyljen ja yksikköympyrän leikkauspistettä sanotaan kulman kehäpisteeksi:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: YKSIKKÖYMPYRÄ JA KULMAN KEHÄPISTE</h3>
+                    <p>
+                        Ympyrää, jonka keskipiste on origo ja säde 1, sanotaan <em>yksikköympyräksi</em>. Jos kulma $\alpha$ sijoitetaan koordinaatistoon niin, että sen kärki on origossa ja toinen kylki positiivisella $x$-akselilla, <em>kulman $\alpha$ kehäpiste</em> on kulman toisen kyljen ja yksikköympyrän leikkauspiste $A$:
+                    <br>
+                    <img src="/kurssit/maa7/kuvat/MAA7kuva004.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                </div>
+
+                <p>
+                    Yllä oleva määritelmä ei vielä riittävän tarkasti määrää, miten esimerkiksi $55^\circ$ kulma on sijoitettava koordinaatistoon. Alla on näkyvissä kaksi mahdollista tapaa, joissa molemmissa kulman kärki on origossa ja toinen kylki positiivisella $x$-akselilla:
+                    <br>
+                    <img src="/kurssit/maa7/kuvat/MAA7kuva005.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Ongelma ratkaistaan ottamalla käyttöön suunnatun kulman käsite:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SUUNNATTU KULMA</h3>
+                    <p>
+                        <em>Suunnattu kulma</em> ilmaisee kierron suunnan ja suuruuden. Kierto vastapäivään on positiivinen:
+                        <br>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva006a.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        Kierto myötäpäivään on negatiivinen:
+                        <br>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva006b.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                </div>
+
+                <p>
+                    Monella eri kulmalla voi olla sama kehäpiste. Esimerkiksi alla olevassa kuvassa koordinaatistoon on merkitty kulmat $\beta$ ja $\gamma$, joilla on sama kehäpiste. Sama kehäpiste on esimerkiksi myös kulmalla $\alpha = 665^\circ$, joka saadaan kulmasta $\gamma$ lisäämällä yksi kierros eli täyskulma: $\alpha = \gamma + 360^\circ$.
+                    <br>
+                    <img src="/kurssit/maa7/kuvat/MAA7kuva007.png" style="max-width: 100%; width: auto; height: auto;"/>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t102-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t102">
+                                Kulman kehäpiste
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t102" class="collapse">
+                        <p>
+                            Keksi neljä kulmaa, joilla on sama kehäpiste kuin alla olevissa kuvissa:
+                        </p>
+                        <ol class ="a">
+                            <li>
+                                <img src="/kurssit/maa7/kuvat/MAA7kuva014.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/maa7/kuvat/MAA7kuva015.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/maa7/kuvat/MAA7kuva016.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t102_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t102_v" class="collapse">
+                           <ol class ="a">
+                                <li>
+                                    Esimerkiksi $-90^\circ$, $270^\circ$, $630^\circ$ ja $990^\circ$.
+                                </li>
+                                <li>
+                                    Esimerkiksi $-315^\circ$, $45^\circ$, $405^\circ$ ja $765^\circ$.
+                                </li>
+                                <li>
+                                    Esimerkiksi $-225^\circ$, $135^\circ$, $495^\circ$ ja $855^\circ$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="teoria">
+
+                <p>
+                    Kehäpisteen käsitteen avulla voimme nyt laajentaa sinin määritelmän kaikille suunnattuille kulmille:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SUUNNATUN KULMAN SINI</h3>
+                    <p>
+                        Kulman $\alpha$ <em>sini</em> on kulman $\alpha$ kehäpisteen $y$-koordinaatti:
+                        <br>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva008.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t103a-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t103a">
+                                Suunnatun kulman sini
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t103a" class="collapse">
+                        <p>
+                            Määritä tämän <a href="https://www.geogebra.org/m/R2yH5ZX2">Geogebra-havainnollistuksen</a> avulla seuraavat sinin arvot kahden desimaalin tarkkuudella:
+                        </p>
+                        <ol class="a">
+                            <li> $\sin 15^\circ$ </li>
+                            <li> $\sin 120^\circ$ </li>
+                            <li> $\sin 185^\circ$ </li>
+                            <li> $\sin (-160^\circ )$ </li>
+                            <li> $\sin (-55^\circ )$ </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t103a_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t103a_v" class="collapse">
+                           <ol class="a">
+                                <li> $\sin 15^\circ \approx 0{,}26$ </li>
+                                <li> $\sin 120^\circ \approx 0{,}87$ </li>
+                                <li> $\sin 185^\circ \approx -0{,}09$ </li>
+                                <li> $\sin (-160^\circ ) \approx -0{,}34$ </li>
+                                <li> $\sin (-55^\circ ) \approx -0{,}82$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+
+            <div class="teoria">
+                <p>
+                    Seuraavissa tehtävissä tutkitaan sinin ominaisuuksia yksikköympyrän avulla. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t103-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t103">
+                                Sinin arvot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t103" class="collapse">
+                        <p>
+                            Päättele vastaukset seuraaviin kysymyksiin. Voit käyttää apuna alla näkyvää yksikköympyrää tai edellisen tehtävän Geogebra-havainnollistusta.
+                        </p>
+                        <ol class="a">
+                            <li> Mikä on suurin arvo, jonka kulman sini voi saada?  </li>
+                            <li> Mikä on pienin arvo, jonka kulman sini voi saada? </li>
+                            <li> Onko sinin suurimman ja pienimmän arvon välillä jonkin arvo, jota sini ei koskaan saa? Selitä omin sanoin.  </li>
+                        </ol>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva008.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t103_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t103_v" class="collapse">
+                           <ol class="a">
+                                <li> Sinin suurin mahdollinen arvo on $1$.  </li>
+                                <li> Sinin pienin mahdollinen arvo on $-1$. </li>
+                                <li> 
+                                    Sini saa kaikki arvo väliltä $[-1,1]$. 
+                                    <br>
+                                    Perustelu: Valitaan jokin arvo väliltä $[-1,1]$. Otetaan tätä arvoa vastaavalta korkeudelta yksikköympyrän kehäpiste. Tätä kehäpistettä vastaavan kulman sini on yhtä suuri kuin valittu arvo.  
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t104-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t104">
+                                Sinin merkki
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t104" class="collapse">
+                        <p>
+                            Päättele vastaukset seuraaviin kysymyksiin. Voit käyttää apuna alla näkyvää yksikköympyrää tai edellisen tehtävän Geogebra-havainnollistusta.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Keksi jokin kulma, joka on välillä $\pa 90^\circ, 270^\circ \pe$ ja jonka sini on positiivinen.  
+                            </li>
+                            <li> 
+                                Keksi jokin kulma, joka on välillä $\pa 0^\circ, 360^\circ \pe$ ja jonka sini on negatiivinen.  
+                            </li>
+                            <li>
+                                Missä koordinaatiston neljänneksessä kulman toisen kyljen pitää olla, jotta kulman sini on positiivinen?
+                                <br>
+                                Kertaa tarvittaessa koordinaatiston neljännesten numerointi kurssin MAA4 <a href="http://kisallioppiminen.fi/kurssit/maa4/xy-taso/">luvusta 1</a>.
+                            </li>
+                            <li>
+                                Missä koordinaatiston neljänneksessä kulman toisen kyljen pitää olla, jotta kulman sini on negatiivinen?
+                            </li>
+                        </ol>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva008.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t104_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t104_v" class="collapse">
+                           <li> 
+                                Mikä tahansa kulma väliltä $\pa 90^\circ, 180^\circ \pe$.
+                            </li>
+                            <li> 
+                                Mikä tahansa kulma väliltä $\pa 180^\circ, 360^\circ \pe$.
+                            </li>
+                            <li>
+                                I tai II neljänneksessä, koska silloin kehäpisteen $y$-koordinaatti on positiivinen.
+                            </li>
+                            <li>
+                                III tai IV neljänneksessä, koska silloin kehäpisteen $y$-koordinaatti on negatiivinen.
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+
+            <div class="teoria">
+
+                <p>
+                    Edellisten tehtävien tuloksista saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="SININ OMINAISUUKSIA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kulman sinin arvo on aina lukujen $-1$ ja $1$ välissä: kaikilla kulmilla $\alpha$ pätee
+                        $$
+                        -1 \leq \sin \alpha \leq 1.
+                        $$
+                        Kulman sini on positiivinen, jos kulman toinen kylki on koordinaatiston I tai II neljänneksessä. Muussa tapauksessa kulman sini on negatiivinen.
+                        <br>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva009.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävissä 1.3-1.4.
+                        </p>      
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t105-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t105">
+                                Sinin ominaisuuksia
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t105" class="collapse">
+                        <p>
+                            Tässä tehtävässä tutkitaan, miten sinin arvo muuttuu, jos suunnatun kulman kehäpiste ja loppukylki peilataan $y$- tai $x$-akselin suhteen. Peilaus $y$-akselin suhteen tehdään kuvittelemalla $y$-akseli peiliksi ja miettimällä, mihin kehäpisteen ja loppukyljen peilikuva muodostuu. Peilaus $x$-akselin suhteen tehdään vastaavasti, mutta peiliksi kuvitellaan $x$-akseli.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Jos alla näkyvän suunnatun kulman $\beta$ kehäpiste ja loppukylki peilataan $y$-akselin suhteen, saadaan kulma $\gamma$. Mitä pystyt päättelemään luvuista $\sin \beta$ ja $\sin \gamma$? Selitä omin sanoin ja piirroksin.
+                            </li>
+                            <li> 
+                                Jos alla näkyvän suunnatun kulman $\beta$ kehäpiste ja loppukylki peilataan $x$-akselin suhteen, saadaan kulma $\alpha$. Mitä pystyt päättelemään luvuista $\sin \beta$ ja $\sin \alpha$? Selitä omin sanoin ja piirroksin.  
+                            </li>
+                        </ol>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva017.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t105_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t105_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Sinin arvot ovat samat:
+                                    $\sin \beta = \sin \gamma$.
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva018.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Sinin arvot ovat toistensa vastalukuja:
+                                    $\sin \beta = -\sin \alpha$.
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva019.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+
+            <div class="teoria">
+
+                <p>
+                    Tehtävän 1.6 johtopäätöksistä saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="PEILAUKSET AKSELIEN SUHTEEN">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kulmalla $\alpha$ ja sen suplementtikulmalla $180^\circ - \alpha$ on sama sini:
+                        $$
+                        \sin(180^\circ - \alpha) = \sin \alpha
+                        $$
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva011.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        Kulman $\alpha$ ja sen vastakulman $-\alpha$ sinit ovat toistensa vastalukuja:
+                        $$
+                        \sin(-\alpha) = -\sin \alpha
+                        $$
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva010.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 1.6.
+                        </p>      
+                    </div>
+                </div>
+
+                <p>
+                    Seuraavassa tehtävässä ryhdytään tutkimaan siniyhtälöiden ratkaisuja. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t106-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t106">
+                                Siniyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t106" class="collapse">
+                        <p>
+                            Tarkastellaan siniyhtälöä
+                            $$
+                            \sin \alpha = \frac{1}{\sqrt{2}}.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Ratkaise laskimella yksi kulma, joka toteuttaa yhtälön. Löydät sen nappulan $\bbox[3px,border:2px solid black]{\texttt{sin}^{-1}}\ $ avulla.
+                            </li>
+                            <li> 
+                                 Piirrä yksikköympyrä ja siihen a-kohdassa löytämäsi kulma. Millä toisella kulmalla on sama sini?
+                                 <br>
+                                 Vinkki: edellinen teoreema.
+                            </li>
+                            <li>
+                                Mitä ovat ne kulmat, joilla on sama kehäpiste kuin a-kohdan kulmalla?
+                            </li>
+                            <li>
+                                Mitä ovat ne kulmat, joilla on sama kehäpiste kuin b-kohdan kulmalla?
+                            </li>
+                            <li>
+                                Milloin yhtälö $\,\sin \alpha = \dfrac{1}{\sqrt{2}}\,$ toteutuu?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t106_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t106_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Laskin antaa kulman $45^\circ$.
+                                </li>
+                                <li> 
+                                    Sama sini on suplementtikulmalla $180^\circ - 45^\circ = 135^\circ$.
+                                </li>
+                                <li>
+                                    Kulmat saadaan a-kohdan kulmasta lisäämällä tai vähentämällä mikä tahansa määrä täysiä kierroksia eli täyskulmia: $45^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li>
+                                    Kulmat saadaan b-kohdan kulmasta lisäämällä tai vähentämällä mikä tahansa määrä täysiä kierroksia eli täyskulmia: $135^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li>
+                                    Yhtälö $$\sin \alpha = \dfrac{1}{\sqrt{2}}$$ 
+                                    toteutuu, jos ja vain jos 
+                                    \begin{align*}
+                                    \alpha &= 45^\circ + n\cdot 360^\circ \text{ tai} \\
+                                    \alpha &= 135^\circ + n\cdot 360^\circ,
+                                    \end{align*}
+                                    missä $n$ on kokonaisluku.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
+                <p>
+                    Edellisen tehtävän päättelyä voidaan soveltaa minkä tahansa kulman tapauksessa, joten saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="SINIYHTÄLÖN RATKAISU">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että $\alpha_0$ on yksi kulma, joka toteuttaa yhtälön $\sin \alpha = a$.
+                        Yhtälön ratkaisu on tällöin
+                        \begin{align*}
+                        \alpha &= \alpha_0 + n \cdot 360^\circ \text{ tai} \\
+                        \alpha &= 180^\circ - \alpha_0 + n \cdot 360^\circ,
+                        \end{align*}
+                        missä $n$ on kokonaisluku.
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva012.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu samaan tapaan kuin tehtävässä 1.7.
+                        </p>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t107-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t107">
+                                Siniyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t107" class="collapse">
+                        <p>
+                            Ratkaise seuraavat yhtälöt ja havainnollista ratkaisuja yksikköympyrässä:
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $\sin \alpha = 0{,}5$
+                            </li>
+                            <li> 
+                                $\sin \alpha = 1$
+                            </li>
+                            <li>
+                                $\sin \alpha = 0$
+                            </li>
+                            <li>
+                                $\sin \alpha = -1$
+                            </li>
+                            <li> 
+                                $\sin \alpha = -\dfrac{\sqrt{3}}{2}$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t107_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t107_v" class="collapse">
+                            <ol class="a">
+                                <li> $\alpha = 30^\circ + n\cdot 360^\circ$ tai $\alpha = 150^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li> $\alpha = 90^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li> $\alpha = n\cdot 180^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li> $\alpha = 270^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li> $\alpha = -60^\circ + n\cdot 360^\circ$ tai $\alpha = 240^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
 
             <div class="close-section">
