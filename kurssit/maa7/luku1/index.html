@@ -1381,9 +1381,663 @@ topnav: maa7
         </header>
         <div id="tangentti1" class="collapse">
             <div class="teoria">
+
                 <p>
-                    
+                    Tässä kappaleessa laajennetaan kulman tangentin määritelmää yksikköympyrän avulla, tutkitaan tangentin ominaisuuksia ja opitaan ratkaisemaan erilaisia tangenttiyhtälöitä yksikköympyrän avulla. 
                 </p>
+                
+                <p>
+                    <a href="http://kisallioppiminen.fi/kurssit/maa3/luku1/">Kurssilla MAA3</a> kulman tangentti määriteltiin aluksi suorakulmaisen kolmion avulla: 
+                    Suorakulmaisessa kolmiossa terävän kulman $\alpha$ tangentti tarkoittaa kulman vastaisen kateetin suhdetta viereiseen kateettiin. Alla olevan kuvion merkinnöillä
+                    \begin{align*}
+                    \tan \alpha &= \textcolor{red}{\dfrac{\boldsymbol{a}}{\boldsymbol{b}}} 
+                    \end{align*}
+                    <img src="/kurssit/maa7/kuvat/MAA7kuva033.png" style="max-width: 100%; width: auto; height: auto;"/>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t115-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t115">
+                                Kulman tangentti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t115" class="collapse">
+                        <p>
+                            Tarkastele alla olevaa kuvaa.
+                        </p>
+                        <ol class="a">
+                            <li> Määritä $\tan \gamma$. </li>
+                            <li> 
+                                Selvitä laskimella kulman $\gamma$ suuruus. Anna vastaus kolmen merkitsevän numeron tarkkuudella. Kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa3/luku1/">MAA3-kurssin</a> tehtävä 1.20 ja sitä edeltävä teoriaosuus.
+                            </li>
+                        </ol>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva034.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t115_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t115_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    $\tan \gamma = \dfrac{56}{33}$. 
+                                </li>
+                                <li> 
+                                    $\gamma \approx 59{,}5^\circ$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="teoria">
+                <p>
+                    Kosinin määritelmä voidaan laajentaa kaikille suunnattuille kulmille vastaavalla tavalla kuin sinin tapauksessa tehtiin:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SUUNNATUN KULMAN KOSINI</h3>
+                    <p>
+                        Kulman $\alpha$ <em>kosini</em> on kulman $\alpha$ kehäpisteen $x$-koordinaatti:
+                        <br>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva023.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t109-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t109">
+                                Suunnatun kulman kosini
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t109" class="collapse">
+                        <p>
+                            Määritä tämän <a href="https://www.geogebra.org/m/R2yH5ZX2">Geogebra-havainnollistuksen</a> avulla seuraavat kosinin arvot kahden desimaalin tarkkuudella:
+                        </p>
+                        <ol class="a">
+                            <li> $\cos 40^\circ$ </li>
+                            <li> $\cos 105^\circ$ </li>
+                            <li> $\cos 205^\circ$ </li>
+                            <li> $\cos (-60^\circ )$ </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t109_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t109_v" class="collapse">
+                           <ol class="a">
+                                <li> $\cos 40^\circ \approx 0{,}77$ </li>
+                                <li> $\cos 105^\circ \approx -0{,}26$ </li>
+                                <li> $\cos 205^\circ \approx -0{,}91$ </li>
+                                <li> $\cos (-60^\circ ) = 0{,}5$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+
+            <div class="teoria">
+                <p>
+                    Seuraavissa tehtävissä tutkitaan kosinin ominaisuuksia yksikköympyrän avulla. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t110-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t110">
+                                Kosinin arvot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t110" class="collapse">
+                        <p>
+                            Päättele vastaukset seuraaviin kysymyksiin. Voit käyttää apuna alla näkyvää yksikköympyrää tai edellisen tehtävän Geogebra-havainnollistusta.
+                        </p>
+                        <ol class="a">
+                            <li> Mikä on suurin arvo, jonka kulman kosini voi saada?  </li>
+                            <li> Mikä on pienin arvo, jonka kulman kosini voi saada? </li>
+                            <li> Onko kosinin suurimman ja pienimmän arvon välillä jonkin arvo, jota kosini ei koskaan saa? Selitä omin sanoin.  </li>
+                        </ol>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva023.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t110_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t110_v" class="collapse">
+                            <ol class="a">
+                                <li> Kosinin suurin mahdollinen arvo on $1$.  </li>
+                                <li> Kosinin pienin mahdollinen arvo on $-1$. </li>
+                                <li> 
+                                    Kosini saa kaikki arvo väliltä $[-1,1]$. 
+                                    <br>
+                                    Perustelu: Valitaan jokin arvo väliltä $[-1,1]$. Otetaan tätä arvoa vastaavalta $x$-akselin kohdalta yksikköympyrän kehäpiste. Tätä kehäpistettä vastaavan kulman kosini on yhtä suuri kuin valittu arvo.  
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t111-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t111">
+                                Kosinin merkki
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t111" class="collapse">
+                        <p>
+                            Päättele vastaukset seuraaviin kysymyksiin. Voit käyttää apuna alla näkyvää yksikköympyrää tai edellisen tehtävän Geogebra-havainnollistusta.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Keksi jokin kulma, joka on välillä $\pa 180^\circ, 360^\circ \pe$ ja jonka kosini on positiivinen.  
+                            </li>
+                            <li> 
+                                Keksi jokin kulma, joka on välillä $\pa 0^\circ, 180^\circ \pe$ ja jonka kosini on negatiivinen.  
+                            </li>
+                            <li>
+                                Missä koordinaatiston neljänneksessä kulman toisen kyljen pitää olla, jotta kulman kosini on positiivinen?
+                                <br>
+                                Kertaa tarvittaessa koordinaatiston neljännesten numerointi kurssin MAA4 <a href="http://kisallioppiminen.fi/kurssit/maa4/xy-taso/">luvusta 1</a>.
+                            </li>
+                            <li>
+                                Missä koordinaatiston neljänneksessä kulman toisen kyljen pitää olla, jotta kulman kosini on negatiivinen?
+                            </li>
+                        </ol>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva023.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t111_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t111_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Mikä tahansa kulma väliltä $\pa 270^\circ, 360^\circ]$.
+                                </li>
+                                <li> 
+                                    Mikä tahansa kulma väliltä $\pa 90^\circ, 180^\circ]$.
+                                </li>
+                                <li>
+                                    I tai IV neljänneksessä, koska silloin kehäpisteen $x$-koordinaatti on positiivinen.
+                                </li>
+                                <li>
+                                    II tai III neljänneksessä, koska silloin kehäpisteen $x$-koordinaatti on negatiivinen.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+
+            <div class="teoria">
+
+                <p>
+                    Edellisten tehtävien tuloksista saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="Kosinin ominaisuuksia">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kulman kosinin arvo on aina lukujen $-1$ ja $1$ välissä: kaikilla kulmilla $\alpha$ pätee
+                        $$
+                        -1 \leq \cos \alpha \leq 1.
+                        $$
+                        Kulman kosini on positiivinen, jos kulman toinen kylki on koordinaatiston I tai IV neljänneksessä. Muussa tapauksessa kulman kosini on negatiivinen.
+                        <br>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva024.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävissä 1.12-1.13.
+                        </p>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t105b-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t105b">
+                                Kosinin arvot ja merkki
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t105b" class="collapse">
+                        <p>
+                            Matematiikan professori löytää salkustaan taulukkokirjasta irtirepeytyneen sivun, josta näkyy, että 
+                            $$\cos 108^\circ = -\frac{1}{4}\left(\sqrt{5} - 1\right).$$ 
+                            Merkitse kulma $108^\circ$ yksikköympyrään ja päättele symmetrioiden avulla seuraavat kosinin arvot:
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $\cos 72^\circ$
+                            </li>
+                            <li> 
+                                $\cos (-72^\circ)$  
+                            </li>
+                            <li>
+                                $\cos 252^\circ$
+                            </li>
+                        </ol>
+                        <p>
+                            Vinkki: Aloita merkitsemällä jokainen kulma yksikköympyrään.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t105a_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t105a_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $\cos 72^\circ = \frac{1}{4}\left(\sqrt{5} - 1\right)$
+                                </li>
+                                <li> 
+                                    $\cos (-72^\circ) = \frac{1}{4}\left(\sqrt{5} - 1\right)$  
+                                </li>
+                                <li>
+                                    $\cos 252^\circ = -\frac{1}{4}\left(\sqrt{5} - 1\right)$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t112-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t112">
+                                Kosinin ominaisuuksia
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t112" class="collapse">
+                        <p>
+                            Tässä tehtävässä tutkitaan, miten kosinin arvo muuttuu, jos suunnatun kulman kehäpiste ja loppukylki peilataan $x$- tai $y$-akselin suhteen. Peilaus $x$-akselin suhteen tehdään kuvittelemalla $x$-akseli peiliksi ja miettimällä, mihin kehäpisteen ja loppukyljen peilikuva muodostuu. Peilaus $y$-akselin suhteen tehdään vastaavasti, mutta peiliksi kuvitellaan $y$-akseli.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Jos alla näkyvän suunnatun kulman $\beta$ kehäpiste ja loppukylki peilataan $x$-akselin suhteen, saadaan kulma $\alpha$. Mitä pystyt päättelemään luvuista $\cos \beta$ ja $\cos \alpha$? Selitä omin sanoin ja piirroksin.  
+                            </li>
+                            <li> 
+                                Jos alla näkyvän suunnatun kulman $\beta$ kehäpiste ja loppukylki peilataan $y$-akselin suhteen, saadaan kulma $\gamma$. Mitä pystyt päättelemään luvuista $\cos \beta$ ja $\cos \gamma$? Selitä omin sanoin ja piirroksin.
+                            </li>
+                        </ol>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva025.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t112_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t112_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kosinin arvot ovat samat:
+                                    $\cos \beta = \cos \alpha$.
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva026.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Kosinin arvot ovat toistensa vastalukuja:
+                                    $\cos \beta = -\cos \gamma$.
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva027.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+
+            <div class="teoria">
+
+                <p>
+                    Tehtävän 1.15 johtopäätöksistä saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="PEILAUKSET AKSELIEN SUHTEEN">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kulmalla $\alpha$ ja sen vastakulmalla $-\alpha$ on sama kosini:
+                        $$
+                        \cos(-\alpha) = \cos \alpha
+                        $$
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva028.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        Kulman $\alpha$ ja sen suplementtikulman $180^\circ - \alpha$ kosinit ovat toistensa vastalukuja:
+                        $$
+                        \cos(180^\circ - \alpha) = -\cos \alpha
+                        $$
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva029.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 1.15.
+                        </p>      
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t112b-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t112b">
+                                Sinin ja kosinin yhteys
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t112b" class="collapse">
+                        <p>
+                            Tässä tehtävässä johdetaan yhtälö, joka yhdistää toisiinsa kulman sinin ja kosinin arvot.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Piirrä yksikköympyrä ja siihen jonkin kulma $\alpha$, jonka kehäpiste ei ole koordinaattiakseleilla. Voit katsoa mallia alla olevasta kuvasta.   
+                            </li>
+                            <li> 
+                                Täydennä kuvaan suorakulmainen kolmio, jonka 
+                                <ul>
+                                    <li> kateetit ovat koordinaattiakselien suuntaiset </li>
+                                    <li> hypotenuusa yhdistää origon ja kulman $\alpha$ kehäpisteen $(a,b)$. </li>
+                                </ul>  
+                                Mitkä ovat kateettien pituudet? Entä hypotenuusan pituus?
+                            </li>
+                            <li>
+                                Miten b-kohdan kolmion sivujen pituudet liittyvät toisiinsa Pythagoraan lauseen mukaan?
+                            </li>
+                            <li>
+                                Lausu kulman $\alpha$ kehäpisteen koordinaatit kosinin ja sinin avulla. Sijoita ne c-kohdan yhtälöön.
+                            </li>
+                            <li>
+                                Toteutuuko d-kohdan yhtälö, jos kulman $\alpha$ kehäpiste on koordinaattiakselilla? Tarkista kaikki neljä mahdollista tapausta.
+                            </li>
+                        </ol>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva031.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t112b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t112b_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    
+                                </li>
+                                <li> 
+                                    Esimerkiksi alla olevassa kuvassa kateettien pituudet ovat $\left|a\right|$ ja $b$. Hypotenuusan pituus on 1, koska kysymyksessä on yksikköympyrä.
+                                    <br>
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva032.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li>
+                                    Pythagoraan lauseen mukaan $a^2 + b^2 = 1$. Huomaa, ettei itseisarvomerkkejä tarvita toiseen potenssiin korotuksen vuoksi.
+                                </li>
+                                <li>
+                                    Kehäpiste on $(a,b) = (\cos \alpha, \sin \alpha)$. Yhtälö on 
+                                    $$
+                                    (\cos \alpha)^2 + (\sin \alpha)^2 = 1.
+                                    $$
+                                </li>
+                                <li>
+                                    Jos kehäpiste on koordinaattiakselilla, se on $(1,0)$, $(-1,0)$, $(0,1)$ tai $(0,-1)$. Havaitaan, että d-kohdan yhtälö toteutuu myös näissä tapauksissa.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
+                <p>
+                    Sinin ja kosinin potenssit merkitään yleensä kirjoittamalla eksponentti jo ennen kulmaa: $\sin^2\alpha$ ja $\cos^2 \alpha$. Nämä ovat siis lyhennysmerkintöjä, joiden avulla voidaan yhdet sulut jättää pois:
+                    \begin{align*}
+                    \sin^2\! \alpha &= (\sin \alpha)^2 \\
+                    \cos^2\! \alpha &= (\cos \alpha)^2
+                    \end{align*}
+                    Muotoillaan tehtävän 1.16 tuloksena syntyvä teoreema näitä merkintöjä käyttäen:
+                </p>
+
+                <div class="theorem" id="SINI, KOSINI JA PYTHAGORAS">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jokaisen kulman sinin ja kosinin neliöiden summa on 1:
+                        $$
+                        \sin^2\! \alpha + \cos^2 \! \alpha = 1.
+                        $$
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva028.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 1.16.
+                        </p>      
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t113a-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113a">
+                                Sinin ja kosinin yhteys
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t113a" class="collapse">
+                        <p>
+                            Tehtävänä on määritää kulman $\alpha$ sinin tarkka arvo, kun tiedetään, että 
+                            $$
+                            \cos \alpha = \frac{35}{37}
+                            $$
+                            ja että $180^\circ \leq \alpha \leq 360^\circ$.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Selvitä edellisen teoreeman avulla, mikä on lausekkeen $\sin^2\! \alpha$ tarkka arvo.
+                            </li>
+                            <li> 
+                                Mitä voit päätellä kulman $\alpha$ sinin merkistä tiedon $180^\circ \leq \alpha \leq 360^\circ$ perusteella?
+                            </li>
+                            <li>
+                                Päättele a- ja b-kohtien perusteella, mikä on kulman $\alpha$ sinin tarkka arvo.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113a_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t113a_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $\sin^2\! \alpha = \dfrac{144}{1369}$
+                                </li>
+                                <li> 
+                                    Sinin arvo on negatiivinen (tai nolla).
+                                </li>
+                                <li>
+                                    $\sin \alpha = -\sqrt{\dfrac{144}{1369}} = -\dfrac{12}{37}$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Seuraavassa tehtävässä ryhdytään tutkimaan kosiniyhtälöiden ratkaisuja. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t113-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113">
+                                Kosiniyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t113" class="collapse">
+                        <p>
+                            Tarkastellaan kosiniyhtälöä
+                            $$
+                            \cos \alpha = \frac{1}{2}.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Ratkaise laskimella yksi kulma, joka toteuttaa yhtälön. Löydät sen nappulan $\bbox[3px,border:2px solid black]{\texttt{cos}^{-1}}\ $ avulla.
+                            </li>
+                            <li> 
+                                 Piirrä yksikköympyrä ja siihen a-kohdassa löytämäsi kulma. Millä toisella kulmalla on sama kosini?
+                                 <br>
+                                 Vinkki: edellinen teoreema.
+                            </li>
+                            <li>
+                                Mitä ovat ne kulmat, joilla on sama kehäpiste kuin a-kohdan kulmalla?
+                            </li>
+                            <li>
+                                Mitä ovat ne kulmat, joilla on sama kehäpiste kuin b-kohdan kulmalla?
+                            </li>
+                            <li>
+                                Milloin yhtälö $\,\cos \alpha = \dfrac{1}{2}\,$ toteutuu?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t113_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Laskin antaa kulman $60^\circ$.
+                                </li>
+                                <li> 
+                                    Sama kosini on vastakulmalla $-60^\circ$.
+                                </li>
+                                <li>
+                                    Kulmat saadaan a-kohdan kulmasta lisäämällä tai vähentämällä mikä tahansa määrä täysiä kierroksia eli täyskulmia: $60^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li>
+                                    Kulmat saadaan b-kohdan kulmasta lisäämällä tai vähentämällä mikä tahansa määrä täysiä kierroksia eli täyskulmia: $-60^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li>
+                                    Yhtälö $$\cos \alpha = \dfrac{1}{2}$$ 
+                                    toteutuu, jos ja vain jos 
+                                    \begin{align*}
+                                    \alpha &= \phantom{-}60^\circ + n\cdot 360^\circ \text{ tai} \\
+                                    \alpha &= -60^\circ + n\cdot 360^\circ,
+                                    \end{align*}
+                                    missä $n$ on kokonaisluku.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
+                <p>
+                    Edellisen tehtävän päättelyä voidaan soveltaa minkä tahansa kulman tapauksessa, joten saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="KOSINIYHTÄLÖN RATKAISU">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että $\alpha_0$ on yksi kulma, joka toteuttaa yhtälön $\cos \alpha = a$.
+                        Yhtälön ratkaisu on tällöin
+                        \begin{align*}
+                        \alpha &= \phantom{-}\alpha_0 + n \cdot 360^\circ \text{ tai} \\
+                        \alpha &= -\alpha_0 + n \cdot 360^\circ,
+                        \end{align*}
+                        missä $n$ on kokonaisluku.
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva030.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu samaan tapaan kuin tehtävässä 1.18.
+                        </p>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t114-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t114">
+                                Kosiniyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t114" class="collapse">
+                        <p>
+                            Ratkaise seuraavat yhtälöt ja havainnollista ratkaisuja yksikköympyrässä:
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $\cos \alpha = 0$
+                            </li>
+                            <li> 
+                                $\cos \alpha = \dfrac{\sqrt{3}}{2}$
+                            </li>
+                            <li>
+                                $\cos \alpha = 1$
+                            </li>
+                            <li>
+                                $\cos \alpha = -1$
+                            </li>
+                            <li> 
+                                $\cos \alpha = -\dfrac{1}{\sqrt{2}}$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t114_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t114_v" class="collapse">
+                            <ol class="a">
+                                <li> $\alpha = 90^\circ + n\cdot 180^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li> $\alpha = 30^\circ + n\cdot 360^\circ$ tai $\alpha = -30^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li> $\alpha = n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li> $\alpha = 180^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                                <li> $\alpha = 135^\circ + n\cdot 360^\circ$ tai $\alpha = -135^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             
