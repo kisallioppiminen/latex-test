@@ -1060,153 +1060,7 @@ topnav: maa7
                 
             </div>
 
-            <div class="tehtavat">
-                <div class="tehtava" id="MAA7t112b-ex">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t112b">
-                                Sinin ja kosinin yhteys
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAA7t112b" class="collapse">
-                        <p>
-                            Tässä tehtävässä johdetaan yhtälö, joka yhdistää toisiinsa kulman sinin ja kosinin arvot.
-                        </p>
-                        <ol class="a">
-                            <li> 
-                                Piirrä yksikköympyrä ja siihen jonkin kulma $\alpha$, jonka kehäpiste ei ole koordinaattiakseleilla. Voit katsoa mallia alla olevasta kuvasta.   
-                            </li>
-                            <li> 
-                                Täydennä kuvaan suorakulmainen kolmio, jonka 
-                                <ul>
-                                    <li> kateetit ovat koordinaattiakselien suuntaiset </li>
-                                    <li> hypotenuusa yhdistää origon ja kulman $\alpha$ kehäpisteen $(a,b)$. </li>
-                                </ul>  
-                                Mitkä ovat kateettien pituudet? Entä hypotenuusan pituus?
-                            </li>
-                            <li>
-                                Miten b-kohdan kolmion sivujen pituudet liittyvät toisiinsa Pythagoraan lauseen mukaan?
-                            </li>
-                            <li>
-                                Lausu kulman $\alpha$ kehäpisteen koordinaatit kosinin ja sinin avulla. Sijoita ne c-kohdan yhtälöön.
-                            </li>
-                            <li>
-                                Toteutuuko d-kohdan yhtälö, jos kulman $\alpha$ kehäpiste on koordinaattiakselilla? Tarkista kaikki neljä mahdollista tapausta.
-                            </li>
-                        </ol>
-                        <img src="/kurssit/maa7/kuvat/MAA7kuva031.png" style="max-width: 100%; width: auto; height: auto;"/>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t112b_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="MAA7t112b_v" class="collapse">
-                            <ol class="a">
-                                <li> 
-                                    
-                                </li>
-                                <li> 
-                                    Esimerkiksi alla olevassa kuvassa kateettien pituudet ovat $\left|a\right|$ ja $b$. Hypotenuusan pituus on 1, koska kysymyksessä on yksikköympyrä.
-                                    <br>
-                                    <img src="/kurssit/maa7/kuvat/MAA7kuva032.png" style="max-width: 100%; width: auto; height: auto;"/>
-                                </li>
-                                <li>
-                                    Pythagoraan lauseen mukaan $a^2 + b^2 = 1$. Huomaa, ettei itseisarvomerkkejä tarvita toiseen potenssiin korotuksen vuoksi.
-                                </li>
-                                <li>
-                                    Kehäpiste on $(a,b) = (\cos \alpha, \sin \alpha)$. Yhtälö on 
-                                    $$
-                                    (\cos \alpha)^2 + (\sin \alpha)^2 = 1.
-                                    $$
-                                </li>
-                                <li>
-                                    Jos kehäpiste on koordinaattiakselilla, se on $(1,0)$, $(-1,0)$, $(0,1)$ tai $(0,-1)$. Havaitaan, että d-kohdan yhtälö toteutuu myös näissä tapauksissa.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="teoria">
-
-                <p>
-                    Sinin ja kosinin potenssit merkitään yleensä kirjoittamalla eksponentti jo ennen kulmaa: $\sin^2\alpha$ ja $\cos^2 \alpha$. Nämä ovat siis lyhennysmerkintöjä, joiden avulla voidaan yhdet sulut jättää pois:
-                    \begin{align*}
-                    \sin^2\! \alpha &= (\sin \alpha)^2 \\
-                    \cos^2\! \alpha &= (\cos \alpha)^2
-                    \end{align*}
-                    Muotoillaan tehtävän 1.16 tuloksena syntyvä teoreema näitä merkintöjä käyttäen:
-                </p>
-
-                <div class="theorem" id="SINI, KOSINI JA PYTHAGORAS">
-                    <h3>TEOREEMA</h3>
-                    <p>
-                        Jokaisen kulman sinin ja kosinin neliöiden summa on 1:
-                        $$
-                        \sin^2\! \alpha + \cos^2 \! \alpha = 1.
-                        $$
-                        <img src="/kurssit/maa7/kuvat/MAA7kuva035.png" style="max-width: 100%; width: auto; height: auto;"/>
-                    </p>
-                    <div class="proof">
-                        <p>
-                            Perustelu tehtävässä 1.16.
-                        </p>      
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="MAA7t113a-ex">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113a">
-                                Sinin ja kosinin yhteys
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAA7t113a" class="collapse">
-                        <p>
-                            Tehtävänä on määritää kulman $\alpha$ sinin tarkka arvo, kun tiedetään, että 
-                            $$
-                            \cos \alpha = \frac{35}{37}
-                            $$
-                            ja että $180^\circ \leq \alpha \leq 360^\circ$.
-                        </p>
-                        <ol class="a">
-                            <li> 
-                                Selvitä edellisen teoreeman avulla, mikä on lausekkeen $\sin^2\! \alpha$ tarkka arvo.
-                            </li>
-                            <li> 
-                                Mitä voit päätellä kulman $\alpha$ sinin merkistä tiedon $180^\circ \leq \alpha \leq 360^\circ$ perusteella?
-                            </li>
-                            <li>
-                                Päättele a- ja b-kohtien perusteella, mikä on kulman $\alpha$ sinin tarkka arvo.
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113a_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="MAA7t113a_v" class="collapse">
-                            <ol class="a">
-                                <li> 
-                                    $\sin^2\! \alpha = \dfrac{144}{1369}$
-                                </li>
-                                <li> 
-                                    Sinin arvo on negatiivinen (tai nolla).
-                                </li>
-                                <li>
-                                    $\sin \alpha = -\sqrt{\dfrac{144}{1369}} = -\dfrac{12}{37}$
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
             <div class="teoria">
                 <p>
@@ -1355,6 +1209,154 @@ topnav: maa7
                                 <li> $\alpha = 180^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
                                 </li>
                                 <li> $\alpha = 135^\circ + n\cdot 360^\circ$ tai $\alpha = -135^\circ + n\cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t112b-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t112b">
+                                Sinin ja kosinin yhteys
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t112b" class="collapse">
+                        <p>
+                            Tässä tehtävässä johdetaan yhtälö, joka yhdistää toisiinsa kulman sinin ja kosinin arvot.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Piirrä yksikköympyrä ja siihen jonkin kulma $\alpha$, jonka kehäpiste ei ole koordinaattiakseleilla. Voit katsoa mallia alla olevasta kuvasta.   
+                            </li>
+                            <li> 
+                                Täydennä kuvaan suorakulmainen kolmio, jonka 
+                                <ul>
+                                    <li> kateetit ovat koordinaattiakselien suuntaiset </li>
+                                    <li> hypotenuusa yhdistää origon ja kulman $\alpha$ kehäpisteen $(a,b)$. </li>
+                                </ul>  
+                                Mitkä ovat kateettien pituudet? Entä hypotenuusan pituus?
+                            </li>
+                            <li>
+                                Miten b-kohdan kolmion sivujen pituudet liittyvät toisiinsa Pythagoraan lauseen mukaan?
+                            </li>
+                            <li>
+                                Lausu kulman $\alpha$ kehäpisteen koordinaatit kosinin ja sinin avulla. Sijoita ne c-kohdan yhtälöön.
+                            </li>
+                            <li>
+                                Toteutuuko d-kohdan yhtälö, jos kulman $\alpha$ kehäpiste on koordinaattiakselilla? Tarkista kaikki neljä mahdollista tapausta.
+                            </li>
+                        </ol>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva031.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t112b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t112b_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    
+                                </li>
+                                <li> 
+                                    Esimerkiksi alla olevassa kuvassa kateettien pituudet ovat $\left|a\right|$ ja $b$. Hypotenuusan pituus on 1, koska kysymyksessä on yksikköympyrä.
+                                    <br>
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva032.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li>
+                                    Pythagoraan lauseen mukaan $a^2 + b^2 = 1$. Huomaa, ettei itseisarvomerkkejä tarvita toiseen potenssiin korotuksen vuoksi.
+                                </li>
+                                <li>
+                                    Kehäpiste on $(a,b) = (\cos \alpha, \sin \alpha)$. Yhtälö on 
+                                    $$
+                                    (\cos \alpha)^2 + (\sin \alpha)^2 = 1.
+                                    $$
+                                </li>
+                                <li>
+                                    Jos kehäpiste on koordinaattiakselilla, se on $(1,0)$, $(-1,0)$, $(0,1)$ tai $(0,-1)$. Havaitaan, että d-kohdan yhtälö toteutuu myös näissä tapauksissa.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
+                <p>
+                    Sinin ja kosinin potenssit merkitään yleensä kirjoittamalla eksponentti jo ennen kulmaa: $\sin^2\alpha$ ja $\cos^2 \alpha$. Nämä ovat siis lyhennysmerkintöjä, joiden avulla voidaan yhdet sulut jättää pois:
+                    \begin{align*}
+                    \sin^2\! \alpha &= (\sin \alpha)^2 \\
+                    \cos^2\! \alpha &= (\cos \alpha)^2
+                    \end{align*}
+                    Muotoillaan tehtävän 1.16 tuloksena syntyvä teoreema näitä merkintöjä käyttäen:
+                </p>
+
+                <div class="theorem" id="SINI, KOSINI JA PYTHAGORAS">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jokaisen kulman sinin ja kosinin neliöiden summa on 1:
+                        $$
+                        \sin^2\! \alpha + \cos^2 \! \alpha = 1.
+                        $$
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva035.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 1.16.
+                        </p>      
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t113a-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113a">
+                                Sinin ja kosinin yhteys
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t113a" class="collapse">
+                        <p>
+                            Tehtävänä on määritää kulman $\alpha$ sinin tarkka arvo, kun tiedetään, että 
+                            $$
+                            \cos \alpha = \frac{35}{37}
+                            $$
+                            ja että $180^\circ \leq \alpha \leq 360^\circ$.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Selvitä edellisen teoreeman avulla, mikä on lausekkeen $\sin^2\! \alpha$ tarkka arvo.
+                            </li>
+                            <li> 
+                                Mitä voit päätellä kulman $\alpha$ sinin merkistä tiedon $180^\circ \leq \alpha \leq 360^\circ$ perusteella?
+                            </li>
+                            <li>
+                                Päättele a- ja b-kohtien perusteella, mikä on kulman $\alpha$ sinin tarkka arvo.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113a_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t113a_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $\sin^2\! \alpha = \dfrac{144}{1369}$
+                                </li>
+                                <li> 
+                                    Sinin arvo on negatiivinen (tai nolla).
+                                </li>
+                                <li>
+                                    $\sin \alpha = -\sqrt{\dfrac{144}{1369}} = -\dfrac{12}{37}$
                                 </li>
                             </ol>
                         </div>
@@ -1603,7 +1605,7 @@ topnav: maa7
                     </p>
                     <div class="proof">
                         <p>
-                            Perustelu tehtävissä 1.12-1.13.
+                            Perustelu tehtävässä 1.23.
                         </p>      
                     </div>
                 </div>
