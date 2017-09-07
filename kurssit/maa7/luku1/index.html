@@ -154,6 +154,7 @@ topnav: maa7
                         Kierto myötäpäivään on negatiivinen:
                         <br>
                         <img src="/kurssit/maa7/kuvat/MAA7kuva006b.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        Suunnattu kulma merkitään koordinaatistoon niin, että sen <em>alkukylki</em> on positiivisella $x$-akselilla. Kierron suuruus määrää, mihin suunnatun kulman <em>loppukylki</em> asettuu.
                     </p>
                 </div>
 
@@ -375,7 +376,7 @@ topnav: maa7
                         $$
                         -1 \leq \sin \alpha \leq 1.
                         $$
-                        Kulman sini on positiivinen, jos kulman toinen kylki on koordinaatiston I tai II neljänneksessä. Muussa tapauksessa kulman sini on negatiivinen.
+                        Kulman sini on positiivinen, jos kulman loppukylki on koordinaatiston I tai II neljänneksessä. Muussa tapauksessa kulman sini on negatiivinen.
                         <br>
                         <img src="/kurssit/maa7/kuvat/MAA7kuva009.png" style="max-width: 100%; width: auto; height: auto;"/>
                     </p>
@@ -920,7 +921,7 @@ topnav: maa7
                         $$
                         -1 \leq \cos \alpha \leq 1.
                         $$
-                        Kulman kosini on positiivinen, jos kulman toinen kylki on koordinaatiston I tai IV neljänneksessä. Muussa tapauksessa kulman kosini on negatiivinen.
+                        Kulman kosini on positiivinen, jos kulman loppukylki on koordinaatiston I tai IV neljänneksessä. Muussa tapauksessa kulman kosini on negatiivinen.
                         <br>
                         <img src="/kurssit/maa7/kuvat/MAA7kuva024.png" style="max-width: 100%; width: auto; height: auto;"/>
                     </p>
@@ -1579,7 +1580,7 @@ topnav: maa7
                                 <li>
                                     Kulman tangentti saa kaikki reaalilukuarvot, kun kulma käy läpi esimerkiksi välin $\pa -90^\circ, 90^\circ$.
                                     <br>
-                                    Perustelu: Valitaan jokin reaaliluku $t$. Piirretään jana, joka yhdistää pisteen $(1,t)$ origoon. Tämä jana on jonkin kulman $-90^\circ < \alpha < 90^\circ$ toinen kylki ja piste $(1,t)$ on kulman $\alpha$ tangenttipiste. Siten $\tan \alpha = t$.
+                                    Perustelu: Valitaan jokin reaaliluku $t$. Piirretään jana, joka yhdistää pisteen $(1,t)$ origoon. Tämä jana on jonkin kulman $-90^\circ < \alpha < 90^\circ$ loppukylki ja piste $(1,t)$ on kulman $\alpha$ tangenttipiste. Siten $\tan \alpha = t$.
                                 </li>
                             </ol>
                         </div>
@@ -1587,77 +1588,18 @@ topnav: maa7
                 </div>
             </div>       
 
-            <div class="tehtavat">
-                <div class="tehtava" id="MAA7t111-ex">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t111">
-                                Kosinin merkki
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAA7t111" class="collapse">
-                        <p>
-                            Päättele vastaukset seuraaviin kysymyksiin. Voit käyttää apuna alla näkyvää yksikköympyrää tai edellisen tehtävän Geogebra-havainnollistusta.
-                        </p>
-                        <ol class="a">
-                            <li> 
-                                Keksi jokin kulma, joka on välillä $\pa 180^\circ, 360^\circ \pe$ ja jonka kosini on positiivinen.  
-                            </li>
-                            <li> 
-                                Keksi jokin kulma, joka on välillä $\pa 0^\circ, 180^\circ \pe$ ja jonka kosini on negatiivinen.  
-                            </li>
-                            <li>
-                                Missä koordinaatiston neljänneksessä kulman toisen kyljen pitää olla, jotta kulman kosini on positiivinen?
-                                <br>
-                                Kertaa tarvittaessa koordinaatiston neljännesten numerointi kurssin MAA4 <a href="http://kisallioppiminen.fi/kurssit/maa4/xy-taso/">luvusta 1</a>.
-                            </li>
-                            <li>
-                                Missä koordinaatiston neljänneksessä kulman toisen kyljen pitää olla, jotta kulman kosini on negatiivinen?
-                            </li>
-                        </ol>
-                        <img src="/kurssit/maa7/kuvat/MAA7kuva023.png" style="max-width: 100%; width: auto; height: auto;"/>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t111_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="MAA7t111_v" class="collapse">
-                            <ol class="a">
-                                <li> 
-                                    Mikä tahansa kulma väliltä $\pa 270^\circ, 360^\circ]$.
-                                </li>
-                                <li> 
-                                    Mikä tahansa kulma väliltä $\pa 90^\circ, 180^\circ]$.
-                                </li>
-                                <li>
-                                    I tai IV neljänneksessä, koska silloin kehäpisteen $x$-koordinaatti on positiivinen.
-                                </li>
-                                <li>
-                                    II tai III neljänneksessä, koska silloin kehäpisteen $x$-koordinaatti on negatiivinen.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>     
-
             <div class="teoria">
-
                 <p>
-                    Edellisten tehtävien tuloksista saadaan seuraava teoreema:
+                    Edellisen tehtävän tuloksista saadaan seuraava teoreema:
                 </p>
 
-                <div class="theorem" id="KOSININ OMINAISUUKSIA">
+                <div class="theorem" id="TANGENTIN OMINAISUUKSIA">
                     <h3>TEOREEMA</h3>
                     <p>
-                        Kulman kosinin arvo on aina lukujen $-1$ ja $1$ välissä: kaikilla kulmilla $\alpha$ pätee
-                        $$
-                        -1 \leq \cos \alpha \leq 1.
-                        $$
-                        Kulman kosini on positiivinen, jos kulman toinen kylki on koordinaatiston I tai IV neljänneksessä. Muussa tapauksessa kulman kosini on negatiivinen.
+                        Kulman tangentti voi olla mikä tahansa reaaliluku.
+                        Kulman tangentti on positiivinen, jos kulman loppukylki on koordinaatiston I tai III neljänneksessä. Muussa tapauksessa kulman tangentti on negatiivinen.
                         <br>
-                        <img src="/kurssit/maa7/kuvat/MAA7kuva024.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva038.png" style="max-width: 100%; width: auto; height: auto;"/>
                     </p>
                     <div class="proof">
                         <p>
