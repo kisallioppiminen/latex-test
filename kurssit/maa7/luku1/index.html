@@ -1967,51 +1967,116 @@ topnav: maa7
                     </div>
                 </div>
 
+                <p>
+                    Teoreeman 11 avulla voidaan määrittää tangentin tarkkoja arvoja ja ratkaista joitakin trigonometrisia yhtälöitä kuten seuraavissa tehtävissä tehdään.
+                </p>
+
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="MAA7t113a-ex">
+                <div class="tehtava" id="MAA7t124-ex">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113a">
-                                Sinin ja kosinin yhteys
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t124">
+                                Tangentin yhteys siniin ja kosiniin
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA7t113a" class="collapse">
+                    <div id="MAA7t124" class="collapse">
                         <p>
-                            Tehtävänä on määritää kulman $\alpha$ sinin tarkka arvo, kun tiedetään, että 
+                            Määritä $\tan \alpha$, kun tiedetään, että 
                             $$
-                            \cos \alpha = \frac{35}{37}
+                            \sin \alpha = \dfrac{12}{37}
                             $$
-                            ja että $180^\circ \leq \alpha \leq 360^\circ$.
+                            ja että
+                            $$
+                            \cos \alpha = -\frac{35}{37}.
+                            $$ 
+                            Missä neljänneksessä kulman $\alpha$ kehäpiste sijaitsee?
                         </p>
-                        <ol class="a">
-                            <li> 
-                                Selvitä edellisen teoreeman avulla, mikä on lausekkeen $\sin^2\! \alpha$ tarkka arvo.
-                            </li>
-                            <li> 
-                                Mitä voit päätellä kulman $\alpha$ sinin merkistä tiedon $180^\circ \leq \alpha \leq 360^\circ$ perusteella?
-                            </li>
-                            <li>
-                                Päättele a- ja b-kohtien perusteella, mikä on kulman $\alpha$ sinin tarkka arvo.
-                            </li>
-                        </ol>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113a_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t124_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA7t113a_v" class="collapse">
+                        <div id="MAA7t124_v" class="collapse">
+                            <p>
+                                Sinin ja kosinin merkeistä voidaan päätellä, että kulman $\alpha$ kehäpiste sijaitsee II neljänneksessä. Tangentin arvo on 
+                                $$
+                                \tan \alpha = -\dfrac{12}{35} 
+                                $$
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t125-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t125">
+                                Tangentin yhteys siniin ja kosiniin
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t125" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista asteen kymmenesosan tarkkuudella yhtälö 
+                            $$
+                            4\sin \alpha - 9 \cos \alpha = 0.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Toteutuuko yhtälö, jos $\cos \alpha = 0$?
+                                <br>
+                                Vinkki: Mieti yksikköympyrän avulla, mitä on $\sin \alpha$, jos $\cos \alpha = 0$.
+                            </li>
+                            <li> 
+                                Muokkaa yhtälöä niin, että saat selville suhteen
+                                $$
+                                \frac{\sin\alpha}{\cos \alpha}.
+                                $$
+                                Miksi voit olettaa, että jakaja $\cos \alpha \neq 0$?
+                                <br>
+                                Vinkki: a-kohta.
+                            </li>
+                            <li> 
+                                Muodosta vastaava tangenttiyhtälö teoreeman 11 avulla ja ratkaise se.
+                                <br>
+                                Vinkki: teoreema 10.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t125_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t125_v" class="collapse">
                             <ol class="a">
-                                <li> 
-                                    $\sin^2\! \alpha = \dfrac{144}{1369}$
-                                </li>
-                                <li> 
-                                    Sinin arvo on negatiivinen (tai nolla).
-                                </li>
                                 <li>
-                                    $\sin \alpha = -\sqrt{\dfrac{144}{1369}} = -\dfrac{12}{37}$
+                                    Yhtälö ei toteudu, jos $\cos \alpha = 0$. Nimittäin tässä tapauksessa $\sin \alpha = \pm 1$ ja 
+                                    $$
+                                    4\sin \alpha - 9 \cos \alpha = \pm 4 \neq 0.
+                                    $$
+                                </li>
+                                <li> 
+                                    Koska yhtälö ei toteudu, kun $\cos \alpha = 0$, voidaan olettaa, että $\cos \alpha \neq 0$. Tällöin yhtälöstä saadaan ratkaistua
+                                    $$
+                                    \frac{\sin\alpha}{\cos \alpha} = \frac{9}{4}.
+                                    $$
+                                </li>
+                                <li> 
+                                    Yhtälön 
+                                    $$
+                                    \tan \alpha = \frac{9}{4}
+                                    $$
+                                    ratkaisuiksi saadaan laskimen ja yksikköympyrän avulla 
+                                    $$
+                                    \alpha \approx 66{,}0^\circ + n \cdot 180^\circ,
+                                    $$
+                                    missä $n$ on kokonaisluku.
                                 </li>
                             </ol>
                         </div>
