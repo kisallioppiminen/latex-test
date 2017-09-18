@@ -621,7 +621,7 @@ topnav: maa7
             </h1>
         </header>
         <div id="kosini2" class="collapse">
-                        <div class="teoria">
+            <div class="teoria">
                 <p>
                     Kosinifunktion kuvaaja saadaan muodostettua yksikköympyrän avulla samaan tapaan kuin edellisessä luvussa. Kuvaajaa hahmotellaan seuraavissa tehtävissä.
                 </p>
@@ -910,7 +910,7 @@ topnav: maa7
                                 <li>
                                     Vakio $a = -\frac{\pi}{2} + n\cdot 2\pi$, missä $n$ on kokonaisluku. Siis
                                     $$
-                                    \cos \left(x -\frac{\pi}{2} + n \cdot 2\pi\right) = \sin x
+                                    \cos \left(x -\frac{\pi}{2} + n \cdot 2\pi\right) = \sin x.
                                     $$
                                 </li>
                             </ol>
@@ -939,8 +939,248 @@ topnav: maa7
         <div id="tangentti2" class="collapse">
             <div class="teoria">
                 <p>
-                   Tulossa 
+                    Tangenttifunktion kuvaaja saadaan muodostettua yksikköympyrän avulla samaan tapaan kuin edellisessä luvussa. Kuvaajaa hahmotellaan seuraavissa tehtävissä.
                 </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t215-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t215">
+                                Tangenttifunktion kuvaaja
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t215" class="collapse">
+                        <p>
+                            Tutki tangettifunktion kuvaajaa tämän <a href="https://ggbm.at/YRnE38T6">Geogebra-havainnollistuksen</a> avulla. Päättele vastaukset seuraaviin kysymyksiin:
+                        </p>
+                        <ol class="a">
+                            <li> Miten kulma $\alpha$ näkyy yksikköympyrässä? Entä tangenttifunktion kuvaajassa? </li>
+                            <li> Miten tangentin arvo $\tan\alpha$ näkyy yksikköympyrässä? Entä tangenttifunktion kuvaajassa? </li>
+                            <li> Missä $x$-akselin kohdissa tangenttifunktio ei ole määritelty? </li>
+                            <li> Missä $x$-akselin kohdissa tangenttifunktio saa arvon nolla? </li>
+                            <li> Miten kuvaajasta näkyy, että tangenttifunktio on jaksollinen funktio? Mikä on sen jakso?  </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t215_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t215_v" class="collapse">
+                           <ol class="a">
+                                <li> Kulma $\alpha$ näkyy yksikköympyrässä suunnattuna kulmana ja tangenttifunktion kuvaajassa kuvaajan pisteen $x$-koordinaattina. </li>
+                                <li> Tangentin arvo $\tan\alpha$ on tangenttipisteen $y$-koordinaatti ja tangenttifunktion kuvaajan pisteen $y$-koordinaatti. </li>
+                                <li> Kohdissa $x = \frac{\pi}{2} + n\pi$, missä $n$ on kokonaisluku. </li>
+                                <li> Kohdissa $x = n\pi$, missä $n$ on kokonaisluku. </li>
+                                <li> Tangenttifunktion arvot toistuvat aina $\pi$ välein eli $\tan (x + \pi) = \tan x$ kaikilla kulmilla $x \neq \frac{\pi}{2} + n\pi$, $n \in \Z$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kootaan edellisen tehtävän havainnot vielä teoreemaksi. Perustelussa voidaan nojautua yksikköympyrään.
+                </p>
+
+                <div class="theorem" id="KOSINIFUNKTION OMINAISUUKSIA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kosinifunktion arvojoukko on suljettu väli $[-1,1]$. 
+                        <br>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva067.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        Kosinifunktio on jaksollinen funktio. Sen jakso on $2\pi$ eli kaikilla muuttujan $x$ arvoilla pätee
+                        $$
+                        \cos(x + 2\pi) = \cos x.
+                        $$
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: 
+                            <ul>
+                                <li>
+                                    Yksikköympyrästä nähdään, että kosinin suurin mahdollinen arvo on $1$, pienin mahdollinen arvo $-1$ ja kosini saa kaikki arvot väliltä $[-1,1]$. Asiaa on käsitelty tarkemmin tehtävässä 1.13.
+                                </li>
+                                <li>
+                                    Kulmilla $x$ ja $x + 2\pi$ on yksikköympyrässä sama kehäpiste, joten $\cos(x + 2\pi) = \cos x$.
+                                </li>
+                            </ul>
+                            <img src="/kurssit/maa7/kuvat/MAA7kuva068.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>      
+                    </div>
+                </div>
+
+                <p>
+                    Kosinifunktio saa kaikki arvonsa millä tahansa välillä, jonka pituus on jakson pituus $2\pi$. Alla on näkyvissä joitakin esimerkkejä, joissa kosinifunktion yksi jakso on merkitty punaisella:
+                    <img src="/kurssit/maa7/kuvat/MAA7kuva069.png" style="max-width: 100%; width: auto; height: auto;"/>
+                </p>    
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t212-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t212">
+                                Kosinifunktion kuvaaja
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t212" class="collapse">
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva067.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <p>
+                            Päättele yllä näkyvän kosinifunktion kuvaajan avulla vastaukset seuraaviin kysymyksiin:
+                        </p>
+                        <ol class="a">
+                            <li>  
+                                Teoreeman 5 mukaan kulman ja sen vastakulman kosinit ovat samat eli $$\cos(-x) = -\cos x$$ 
+                                kaikilla kulmilla $x$. Miten tämä näkyy kosinifunktion kuvaajassa? Selitä omin sanoin. </li>
+                            <li> 
+                                Onko kosinifunktio jatkuva?
+                            </li>
+                            <li> 
+                                Onko kosinifunktio derivoituva? 
+
+                            </li>
+                        </ol>
+                        <p>
+                            Vinkki: Kertaa tarvittaessa b- ja c-kohdissa MAA6-kurssin <a href="http://kisallioppiminen.fi/kurssit/maa6/luku2/">luku 2</a>.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t212_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t212_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Kuvaaja on symmetrinen $y$-akselin suhteen:
+                                    <br>
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva070.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Kosinifunktion kuvaaja on katkematon käyrä, joten kosinifunktio näyttäisi olevan jatkuva. 
+                                </li>
+                                <li>
+                                    Kosinifunktion kuvaajan jokaiseen pisteeseen voidaan asettaa tangentti tasan yhdellä tavalla, joten kosinifunktio näyttäisi olevan derivoituva.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t213-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t213">
+                                Kertoimien vaikutus kosinifunktioon
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t213" class="collapse">
+                        <p>
+                            Yhdistä funktio ja sen kuvaaja. Vastaa sen jälkeen tehtävän lopussa oleviin kysymyksiin.
+                        </p>
+                        <ul>
+                            <li> $f(x) = \cos \frac{x}{2}$ </li>
+                            <li> $g(x) = -\cos 4x$ </li>
+                            <li> $h(x) = 0{,}5\cos x$ </li>
+                        </ul>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva071.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <ol class="a">
+                            <li>  
+                                Mikä on funktion $h(x) = 0{,}5\cos x$ suurin arvo? Entä pienin? Mikä on funktion $h$ jakso?
+                            </li>
+                            <li> 
+                                Mikä on funktion $g(x) = -\cos 4x$ suurin arvo? Entä pienin? Kuinka monta funktion $g$ jaksoa mahtuu $2\pi$ mittaisen välin sisään? Mikä on funktion $g$ jakso?
+                            </li>
+                            <li> 
+                                Mikä on funktion $f(x) = \cos \frac{x}{2}$ jakso?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t213_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t213_v" class="collapse">
+                            <p>
+                                Funktion $f$ kuvaaja on C.
+                                <br>
+                                Funktion $g$ kuvaaja on A.
+                                <br>
+                                Funktion $h$ kuvaaja on B.
+                            </p>
+                            <ol class="a">
+                                <li> 
+                                    Funktion $h(x) = 0{,}5\cos x$ suurin arvo on $0{,}5$ ja pienin $-0{,}5$. Sen jakso on $2\pi$.
+                                </li>
+                                <li> 
+                                    Funktion $g(x) = -\cos 4x$ suurin arvo on $1$ ja pienin $-1$. Neljä sen jaksoa mahtuu $2\pi$ mittaisen välin sisään, joten yhden jakson pituus on $\frac{2\pi}{4} = \frac{\pi}{2}$.
+                                    <br>
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva072.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li>
+                                    Funktion $f(x) = \cos \frac{x}{2}$ jakso on $4\pi$.
+                                    <br>
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva073.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t214-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t214">
+                                Vakioiden vaikutus kosinifunktioon
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t214" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Miten vakio $a$ vaikuttaa funktion $g(x) = \cos x + a$ kuvaajaan? Tutki asiaa  tämän <a href="https://ggbm.at/cVrwMXbc">Geogebra-havainnollistuksen</a> avulla.
+                            </li>
+                            <li>  
+                                Miten vakio $a$ vaikuttaa funktion $f(x) = \cos (x+a)$ kuvaajaan? Tutki asiaa tämän <a href="https://ggbm.at/vXXN7wZA">Geogebra-havainnollistuksen</a> avulla.
+                            </li>
+                            <li>
+                                Mikä pitää valita vakion $a$ arvoksi, jotta funktion $f(x)$ kuvaaja on sama kuin sinifunktion kuvaaja?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t214_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t214_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kuvaaja siirtyy $y$-akselin suunnassa ylös tai alas.
+                                </li>
+                                <li> 
+                                    Kuvaaja siirtyy $x$-akselin suunnassa oikealle tai vasemmalle.
+                                </li>
+                                <li>
+                                    Vakio $a = -\frac{\pi}{2} + n\cdot 2\pi$, missä $n$ on kokonaisluku. Siis
+                                    $$
+                                    \cos \left(x -\frac{\pi}{2} + n \cdot 2\pi\right) = \sin x.
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             
