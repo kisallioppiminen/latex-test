@@ -939,7 +939,7 @@ topnav: maa7
         <div id="tangentti2" class="collapse">
             <div class="teoria">
                 <p>
-                    Tangenttifunktion kuvaaja saadaan muodostettua yksikköympyrän avulla samaan tapaan kuin edellisessä luvussa. Kuvaajaa hahmotellaan seuraavissa tehtävissä.
+                    Edellisessä luvussa tangentti määriteltiin kaikille suunnatuille kulmille, joiden kehäpiste ei ole $y$-akselilla. Tämä tarkoittaa, että tangenttifunktio on määritelty, jos ja vain jos $x \neq \frac{\pi}{2} + n\pi$, missä $n$ on kokonaisluku. Tangenttifunktion kuvaaja saadaan muodostettua yksikköympyrän ja tangentin määritelmän avulla. Sitä tutkitaan seuraavassa tehtävässä.
                 </p>
             </div>
 
@@ -983,19 +983,23 @@ topnav: maa7
 
             <div class="teoria">
                 <p>
-                    Kootaan edellisen tehtävän havainnot vielä teoreemaksi. Perustelussa voidaan nojautua yksikköympyrään.
+                    Edellisen tehtävän havaintojen pohjalta saadaan seuraava teoreema:
                 </p>
 
-                <div class="theorem" id="KOSINIFUNKTION OMINAISUUKSIA">
+                <div class="theorem" id="TANGENTTIFUNKTION OMINAISUUKSIA">
                     <h3>TEOREEMA</h3>
                     <p>
-                        Kosinifunktion arvojoukko on suljettu väli $[-1,1]$. 
-                        <br>
-                        <img src="/kurssit/maa7/kuvat/MAA7kuva067.png" style="max-width: 100%; width: auto; height: auto;"/>
-                        <br>
-                        Kosinifunktio on jaksollinen funktio. Sen jakso on $2\pi$ eli kaikilla muuttujan $x$ arvoilla pätee
+                        Tangenttifunktio on määritelty, jos ja vain jos 
                         $$
-                        \cos(x + 2\pi) = \cos x.
+                        x \neq \frac{\pi}{2} + n\pi,
+                        $$
+                        missä $n$ on kokonaisluku. Tangenttifunktion arvojoukko on koko lukusuora $\R$. 
+                        <br>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva074.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        Tangenttifunktio on jaksollinen funktio. Sen jakso on $\pi$ eli määrittelyjoukossa kaikilla muuttujan $x$ arvoilla pätee
+                        $$
+                        \tan(x + 2\pi) = \tan x.
                         $$
                     </p>
                     <div class="proof">
@@ -1003,13 +1007,13 @@ topnav: maa7
                             Perustelu: 
                             <ul>
                                 <li>
-                                    Yksikköympyrästä nähdään, että kosinin suurin mahdollinen arvo on $1$, pienin mahdollinen arvo $-1$ ja kosini saa kaikki arvot väliltä $[-1,1]$. Asiaa on käsitelty tarkemmin tehtävässä 1.13.
+                                    Tangentin arvojoukkoa on tutkittu tehtävässä 1.24.
                                 </li>
                                 <li>
-                                    Kulmilla $x$ ja $x + 2\pi$ on yksikköympyrässä sama kehäpiste, joten $\cos(x + 2\pi) = \cos x$.
+                                    Kulmilla $x$ ja $x + \pi$ on sama tangenttipiste, joten $\tan(x + 2\pi) = \tan x$.
                                 </li>
                             </ul>
-                            <img src="/kurssit/maa7/kuvat/MAA7kuva068.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            <img src="/kurssit/maa7/kuvat/MAA7kuva075.png" style="max-width: 100%; width: auto; height: auto;"/>
                         </p>      
                     </div>
                 </div>
