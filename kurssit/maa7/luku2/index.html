@@ -1250,6 +1250,66 @@ topnav: maa7
                 </p>
             </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t219-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t219">
+                                Tangenttifunktion derivaattafunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t219" class="collapse">
+                        <p>
+                            Tässä tehtävässä määritetään tangenttifunktion derivaattafunktio.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Ilmaise $\tan x$ sinin ja kosinin avulla. Sovella sen jälkeen osamäärän derivointisääntöä ja sievennä tulos.
+                                <br>
+                                Vinkki: <a href="http://kisallioppiminen.fi/kurssit/maa7/luku1/">edellisen luvun</a> teoreema 11 ja <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6-kurssin</a> teoreema 15.
+                            </li>
+                            <li> 
+                                Millaiseen muotoon tangenttifunktion derivaattafunktio sievenee, jos sovellat teoreeman 7 kaavaa $\sin^2\! x + \cos^2\! x = 1$?
+                            </li>
+                            <li> 
+                                Millaiseen muotoon tangenttifunktion derivaattafunktio sievenee, jos suoritat jakolaskun termeittäin ja sovellat teoreemaa 11 toiseen suuntaan?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t219_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t219_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    \begin{align*}
+                                    \mathrm{D} \tan x &= \mathrm{D} \frac{\sin x}{\cos x} \\[2mm]
+                                    &= \frac{\cos x\cos x - \sin x (-\sin x)}{\cos^2\! x} \\[2mm]
+                                    &= \frac{\cos^2\! x + \sin^2\! x}{\cos^2\! x}
+                                    \end{align*}
+                                </li>
+                                <li> 
+                                    \begin{align*}
+                                    \mathrm{D} \tan x &= \frac{1}{\cos^2\! x}
+                                    \end{align*}
+                                </li>
+                                <li> 
+                                    \begin{align*}
+                                    \mathrm{D} \tan x &= \frac{\cos^2\! x}{\cos^2\! x} + \frac{\sin^2\! x}{\cos^2\! x} \\[2mm]
+                                    &= 1 + \left(\frac{\sin x}{\cos}\right)^2 \\[2mm]
+                                    &= 1 + \tan^2\! x
+                                    \end{align*}
+                                </li>
+                                <li>
+                                    Kosinifunktion derivaattafunktio on sinifunktio kerrottuna luvulla $-1$ eli $\mathrm{D} \cos x = -\sin x$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#derivaatat">
