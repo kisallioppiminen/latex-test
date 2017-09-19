@@ -25,8 +25,8 @@ article section.panel>header,
 .objective,
 section > header,
 blockquote,
-.panel > div > ol,
-.panel > div > ul{
+.panel > div > div > ol,
+.panel > div > div> ul{
     display: none;
 }
 
