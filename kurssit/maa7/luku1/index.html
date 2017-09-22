@@ -1408,6 +1408,10 @@ topnav: maa7
                         </p>      
                     </div>
                 </div>
+
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan kosiniyhtälöiden ratkaisemista. Vastaavia siniyhtälöitä ratkotiin jo aikaisemmin tehtävissä 1.10-1.12.
+                </p>
             </div>
 
             <div class="tehtavat">
@@ -1545,6 +1549,12 @@ topnav: maa7
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Tutkitaan seuraavaksi, miten kulman sini ja kosini liittyvät toisiinsa. Tässä auttaa Pythagoraan lause (<a href="http://kisallioppiminen.fi/kurssit/maa3/luku1/">MAA3-kurssin</a> teoreema 4).
+                </p>
             </div>
 
             <div class="tehtavat">
@@ -1695,6 +1705,74 @@ topnav: maa7
                 </div>
             </div>
             
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t113b-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113b">
+                                Sinin ja kosinin yhteys
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t113b" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista yhtälö 
+                            $$
+                            2\sin^2\! \alpha + \cos \alpha = \frac{3}{2}.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Muokkaa yhtälöä teoreeman 7 avulla niin, että siinä esiintyy vain kosinin potensseja. Toisin sanottuna korvaa $\sin^2\! \alpha$ sopivalla lausekkeella.
+                            </li>
+                            <li> 
+                                Muokkaa yhtälö muotoon
+                                $$
+                                a\cos^2\! \alpha + b\cos \alpha + c = 0.
+                                $$
+                            </li>
+                            <li>
+                                Ratkaise $\cos \alpha$ toisen asteen yhtälön ratkaisukaavalla (<a href="http://kisallioppiminen.fi/kurssit/maa2/luku3/">MAA2-kurssin</a> teoreema 5).
+                            </li>
+                            <li>
+                                Kohdan (c) tuloksena saat kaksi yhtälöä kulman $\alpha$ kosinille. Ratkaise nämä yhtälöt normaaliin tapaan.
+                                <br>
+                                Vinkki: katso tarvittaessa mallia tehtävästä 1.19.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t113b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t113b_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Teoreeman 7 mukaan $\sin^2\! \alpha = 1 - \cos^2\! \alpha$. Tällä sijoituksella yhtälö saadaan muotoon
+                                    $$
+                                    2 - 2\cos^2\! \alpha + \cos \alpha = \frac{3}{2}
+                                    $$
+                                </li>
+                                <li> 
+                                    $$
+                                    - 2\cos^2\! \alpha + \cos \alpha  + \frac{1}{2} = 0
+                                    $$
+                                </li>
+                                <li>
+                                    $$
+                                    \cos \alpha = \frac{-1 \pm \sqrt{5}}{-4}
+                                    $$
+                                </li>
+                                <li>
+                                    Yhtälö $\cos \alpha = \frac{-1 + \sqrt{5}}{-4}$ toteutuu, jos ja vain jos $\alpha = 108^\circ + n \cdot 360^\circ$ tai $\alpha = -108^\circ + n \cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                    <br>
+                                    Yhtälö $\cos \alpha = \frac{-1 - \sqrt{5}}{-4}$ toteutuu, jos ja vain jos $\alpha = 36^\circ + n \cdot 360^\circ$ tai $\alpha = -36^\circ + n \cdot 360^\circ$, missä $n$ on kokonaisluku.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#kosini1">
