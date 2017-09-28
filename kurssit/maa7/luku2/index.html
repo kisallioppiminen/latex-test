@@ -56,7 +56,7 @@ topnav: maa7
         <div id="radiaani1" class="collapse">
             <div class="teoria">
                 <p>
-                    Edellisessä luvussa määriteltiin kulman $\alpha$ sini ja kosini yksikköympyrän avulla. Jokaista suunnattua kulmaa vastaa täsmälleen yksi sinin ja kosinin arvo, joten siniä ja kosinia voidaan ajatella myös funktioina. Jotta näiden funktioiden kuvaajat voidaan piirtää normaaliin koordinaatistoon, pitää niiden määrittely- eli lähtöjoukkona olla reaalilukujen joukko. Tämä tarkoittaa, että kulman suuruus pitää ilmaista asteiden sijaan reaalilukuna. Tätä varten määritellään uusi kulman yksikkö radiaani.
+                    Edellisessä luvussa määriteltiin kulman $\alpha$ sini ja kosini yksikköympyrän avulla. Jokaista suunnattua kulmaa vastaa täsmälleen yksi sinin ja kosinin arvo, joten siniä ja kosinia voidaan ajatella myös funktioina. Jotta näiden funktioiden kuvaajat voidaan piirtää tavalliseen koordinaatistoon, pitää niiden määrittely- eli lähtöjoukkona olla reaalilukujen joukko. Tämä tarkoittaa, että kulman suuruus pitää ilmaista asteiden sijaan reaalilukuna. Tätä varten määritellään uusi kulman yksikkö radiaani.
                 </p>
 
                 <div class="definition">
@@ -258,7 +258,7 @@ topnav: maa7
                     Kulman yksikkö voidaan vaihtaa asteista radiaaneiksi tai päinvastoin myös verrannon avulla. Seuraavassa selvitetään esimerkin vuoksi, kuinka monta astetta on 1 radiaani. 
                 </p>
                 <p>
-                    Tiedetään, että $\pi$ radiaania vastaa $180^\circ$. Voidaan muodostaa verranto
+                    Tiedetään, että $180^\circ$ vastaa $\pi$ radiaania. Voidaan muodostaa verranto
                     $$
                     \frac{x}{1} = \frac{180^\circ}{\pi},
                     $$  
@@ -287,8 +287,8 @@ topnav: maa7
                         <ol class="a">
                             <li> $15^\circ$ </li>
                             <li> $1^\circ$ </li>
-                            <li> $\frac{1}{5}\pi$ </li>
-                            <li> $\frac{7}{10}\pi$ </li>
+                            <li> $\dfrac{1}{5}\pi$ </li>
+                            <li> $\dfrac{7}{10}\pi$ </li>
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t204_v">
@@ -297,14 +297,32 @@ topnav: maa7
                         </h2>
                         <div id="MAA7t204_v" class="collapse">
                            <ol class="a">
-                                <li> $\frac{1}{12}\pi \approx 0{,}262$ </li>
-                                <li> $\frac{1}{180}\pi \approx 0{,}017$ </li>
+                                <li> $\dfrac{1}{12}\pi \approx 0{,}262$ </li>
+                                <li> $\dfrac{1}{180}\pi \approx 0{,}017$ </li>
                                 <li> $36^\circ$ </li>
                                 <li> $126^\circ$ </li>
                             </ol>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Palataan vielä hetkeksi pohtimaan edellä esitettyä radiaanin määritelmää. Riippuuko sen antama kulman suuruus siitä, miten mittauksessa käytetty ympyrä valitaan? Jos ympyrän sädettä kasvatetaan, antaako määritelmä kuitenkin kulmalle saman arvon?
+                </p>
+                <p>
+                    <a href="http://kisallioppiminen.fi/kurssit/maa3/luku2/">MAA3-kurssin</a> teoreemassa 14 osoitettiin, että ympyrän kaaren pituus $b$ riippuu keskuskulmasta $\alpha$ ja ympryrän säteestä $r$:
+                    $$
+                        b = \frac{\alpha}{360^\circ} \cdot 2\pi r.
+                    $$
+                    Radiaanin määritelmässä esiintyvä osamäärä ei siis riipu ympyrän säteestä:
+                    \begin{align*}
+                    \frac{b}{r} &= \frac{\alpha}{360^\circ} \cdot \frac{2\pi r}{r} \\[2mm]
+                    &= \frac{\alpha}{360^\circ} \cdot 2\pi.
+                    \end{align*}
+                    Havaitaan, että kulman $\alpha$ suuruus radiaaneina saadaan myös vertaamalla kulmaa $\alpha$ täyskulmaan ja ottamalla vastaava osuus luvusta $2\pi$.
+                </p>
             </div>
 
             <div class="close-section">
