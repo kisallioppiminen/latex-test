@@ -899,7 +899,7 @@ topnav: maa7
 
             <div class="teoria">
                 <p>
-                    Tehtävissä 2.8 ja 2.13 havaittiin, että sini- ja kosinifunktioiden jaksoa voidaan muuttaa sopivien kertoimien avulla. Seuraavissa tehtävissä tarkastellaan erityisesti funktioita $x \mapsto \sin 2x$ ja $x \mapsto \cos 2x$.
+                    Tehtävissä 2.8 ja 2.13 havaittiin, että sini- ja kosinifunktioiden jaksoa voidaan muuttaa sopivien kertoimien avulla. Seuraavissa tehtävissä tarkastellaan erityisesti funktioita, joilla kerroin on kaksi. 
                 </p>
             </div>
 
@@ -914,7 +914,7 @@ topnav: maa7
                     </header>
                     <div id="MAA7t224" class="collapse">
                         <p>
-                            Alla on näkyvissä kolmen eri funktion kuvaajat. Koordinaatiston ruudun leveys on $\frac{1}{2}\pi$ ja korkeus $1$.
+                            Alla on näkyvissä kolmen eri funktion kuvaajat. 
                         </p>
                         <ol class="a">
                             <li> 
@@ -933,6 +933,9 @@ topnav: maa7
                                 Mikä pitää valita kertoimen $k$ arvoksi, jotta $f(x) = k\cdot v(x)$?
                             </li>
                         </ol>
+                        <p>
+                            Koordinaatiston ruudun leveys on $\frac{1}{2}\pi$ ja korkeus $1$.
+                        </p>
                         <img src="/kurssit/maa7/kuvat/MAA7kuva100.png" style="max-width: 100%; width: auto; height: auto;"/>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t224_v">
@@ -959,6 +962,69 @@ topnav: maa7
                                 </li>
                                 <li>
                                     Sopiva kerroin on $k = 2$. Siis $f(x) = 2v(x)$ eli $\sin 2x = 2\sin x\cos x$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t225-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t225">
+                                Kaksinkertaisen kulman kosini
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t225" class="collapse">
+                        <p>
+                            Alla on näkyvissä eri funktioiden kuvaajia. 
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Ylimmässä kuvassa A on funktion $f(x) = \cos 2x$ kuvaaja. Mikä on sen jakson pituus?
+                            </li>
+                            <li>  
+                                Alimmassa kuvassa C on funktioiden $g(x) = \sin x$ ja $h(x) = \cos x$ kuvaajat. Millä operaatiolla niistä saadaan muodostettua funktiot $v(x)$ ja $w(x)$, joiden kuvaajat ovat keskimmäisessä kuvassa B?  
+                            </li>
+                            <li>
+                                Muodosta kuvan B funktioista $v(x)$ ja $w(x)$ jollakin laskutoimituksella uusi funktio $s(x)$, jolla on samat nollakohdat kuin kuvan A funktiolla.
+                            </li>
+                            <li>
+                                Piirrä funktion $s$ kuvaaja laskimella tai tietokoneella ja vertaa sitä kuvassa A näkyvään funktion $f(x) = \cos 2x$ kuvaajaan. Mitä havaitset?
+                            </li>
+                        </ol>
+                        <p>
+                            Koordinaatiston ruudun leveys on $\frac{1}{2}\pi$ ja korkeus $1$.
+                        </p>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva102.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t225_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t225_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Funktion $f(x) = \cos 2x$ jakson pituus on $\pi$.
+                                </li>
+                                <li>  
+                                    Toiseen potenssiin korotus muuttaa negatiivisetkin arvot positiivisiksi: $v(x) = \sin^2\! x$ ja $w(x) = \cos^2\! x$.
+                                </li>
+                                <li>
+                                    $s(x) = w(x) - v(x) = \cos^2\! x - \sin^2\! x$
+                                </li>
+                                <li>
+                                    Keskellä kuvassa D näkyvissä funktion $s(x) = \cos^2\! x - \sin^2\! x$ kuvaaja:
+                                    <br>
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva103.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                    <br>
+                                    Havaitaan, että nollakohdat ovat oikein, mutta funktion suurin ja pienin arvo ovat itseisarvoltaan liian pieniä verrattuna funktion $f(x) = \sin 2x$ kuvaajaan.
+                                </li>
+                                <li>
+                                    Havaitaan, että $f(x) = w(x) - v(x)$ eli $\cos 2x = \cos^2\! x - \sin^2\! x$.
                                 </li>
                             </ol>
                         </div>
