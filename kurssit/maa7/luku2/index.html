@@ -1171,7 +1171,7 @@ topnav: maa7
 
             <div class="teoria">
                 <p>
-                    Tehtävästä 2.17 saadaan seuraava teoreema:
+                    Tehtävästä 2.17 saadaan seuraava teoreema, joka vahvistaa tehtävän 2.16 havainnon:
                 </p>
 
                 <div class="theorem" id="SININ JA KOSININ YHTEYS">
@@ -1198,93 +1198,11 @@ topnav: maa7
                     <img src="/kurssit/maa7/kuvat/MAA7kuva108.png" style="max-width: 100%; width: auto; height: auto;"/>
                     Vastaavasti sinifunktio saa kaikki arvot $\frac{\pi}{2}$ verran kosinifunktion jälkeen:
                     <img src="/kurssit/maa7/kuvat/MAA7kuva109.png" style="max-width: 100%; width: auto; height: auto;"/>
-                    Sinifunktion ja kosinifunktion niin sanottu vaihe-ero on siis $\frac{\pi}{2}$.
+                    Sinifunktion ja kosinifunktion niin sanottu vaihe-ero on siis $\frac{\pi}{2}$ eli neljäsosa niiden jakson pituudesta.
                 </p>
 
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="MAA7t231-ex">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t231">
-                                Kaksinkertaisen kulman sini ja kosini
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAA7t231" class="collapse">
-                        <p>
-                            Tässä tehtävässä tutkitaan, miten $\sin 2x$ ja $\cos 2x$ voidaan esittää kulman $x$ sinin ja kosinin avulla.
-                            <br>
-                            Sovella teoreemaa 15 ja sievennä mahdollisimman pitkälle lauseke
-                        </p>
-                        <ol class="a">
-                            <li> 
-                                $\sin 2x$
-                            </li>
-                            <li>  
-                                $\cos 2x$.
-                            </li>
-                        </ol>
-                        <p>
-                            Vinkki: miten voit kirjoittaa kulman $2x$ kahden kulman summana?
-                        </p>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t231_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="MAA7t231_v" class="collapse">
-                            <ol class="a">
-                                <li> 
-                                    \begin{align*}
-                                    \sin 2x &= \sin (x + x) \\
-                                    &= \sin x \cos x + \cos x \sin x \\
-                                    &= 2 \sin x \cos x
-                                    \end{align*}
-                                </li>
-                                <li>  
-                                    \begin{align*}
-                                    \cos 2x &= \cos(x + x) \\
-                                    &= \cos x \cos x - \sin x \sin x \\
-                                    &= \cos^2\! x - \sin^2\! x
-                                    \end{align*}
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="teoria">
                 <p>
-                    Tehtävästä 2.18 saadaan seuraava teoreema:
-                </p>
-
-                <div class="theorem" id="KAKSINKERTAISEN KULMAN SINI JA KOSINI">
-                    <h3>TEOREEMA</h3>
-                    <p>
-                        Kulman $2x$ sini ja kosini saadaan laskettua kulman $x$ sinin ja kosinin avulla:
-                        \begin{align*}
-                        \sin 2x &= 2\sin x \cos x \\
-                        \cos 2x &= \cos^2\! x - \sin^2\! x
-                        \end{align*}
-                    </p>
-                    <div class="proof">
-                        <p>
-                            Perustelu tehtävässä 2.18.
-                        </p>      
-                    </div>
-                </div>
-
-                <p>
-                    Seuraavissa tehtävissä harjoitellaan teoreeman 16 soveltamista.
-                </p>
-            </div>
-
-            <div class="teoria">
-                <p>
-                     havaittiin, että sini- ja kosinifunktioiden jaksoa voidaan muuttaa sopivien kertoimien avulla. Seuraavissa tehtävissä tarkastellaan erityisesti funktioita, joilla kerroin on kaksi. 
+                    Tehtävissä 2.8 ja 2.15 tutkittiin erilaisten kertoimien vaikutusta sini- ja kosinifunktioiden jakson pituuteen. Seuraavaksi tutkitaan tarkemmin funktioita, jotka määritellään lausekkeilla $\sin 2x$ ja $\cos 2x$. 
                 </p>
             </div>
             
@@ -1294,7 +1212,7 @@ topnav: maa7
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t224">
-                                Kaksinkertaisen kulman sini
+                                Funktio $f(x) = \sin 2x$
                             </a>
                         </h1>
                     </header>
@@ -1362,7 +1280,7 @@ topnav: maa7
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t225">
-                                Kaksinkertaisen kulman kosini
+                                Funktio $f(x) = \cos 2x$
                             </a>
                         </h1>
                     </header>
@@ -1422,8 +1340,86 @@ topnav: maa7
                 </div>
             </div>
 
+            <p>
+                Edellisten tehtävien havainnot voidaan perustella yleispätevästi teoreeman 15 avulla.
+            </p>
             
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t231-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t231">
+                                Kaksinkertaisen kulman sini ja kosini
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t231" class="collapse">
+                        <p>
+                            Sovella teoreemaa 15 ja sievennä mahdollisimman pitkälle lauseke
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $\sin 2x$
+                            </li>
+                            <li>  
+                                $\cos 2x$.
+                            </li>
+                        </ol>
+                        <p>
+                            Vinkki: miten voit kirjoittaa kulman $2x$ kahden kulman summana?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t231_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t231_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    \begin{align*}
+                                    \sin 2x &= \sin (x + x) \\
+                                    &= \sin x \cos x + \cos x \sin x \\
+                                    &= 2 \sin x \cos x
+                                    \end{align*}
+                                </li>
+                                <li>  
+                                    \begin{align*}
+                                    \cos 2x &= \cos(x + x) \\
+                                    &= \cos x \cos x - \sin x \sin x \\
+                                    &= \cos^2\! x - \sin^2\! x
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="teoria">
+                <p>
+                    Tehtävästä 2.18 saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="KAKSINKERTAISEN KULMAN SINI JA KOSINI">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kulman $2x$ sini ja kosini saadaan laskettua kulman $x$ sinin ja kosinin avulla:
+                        \begin{align*}
+                        \sin 2x &= 2\sin x \cos x \\
+                        \cos 2x &= \cos^2\! x - \sin^2\! x
+                        \end{align*}
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 2.18.
+                        </p>      
+                    </div>
+                </div>
+
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan teoreeman 16 soveltamista.
+                </p>
+            </div>
             
 
             <div class="tehtavat">
@@ -1521,9 +1517,6 @@ topnav: maa7
                 </div>
             </div>
 
-            
-
-            
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#kosinisini">
                     Sulje kappale
