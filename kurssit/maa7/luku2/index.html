@@ -1127,7 +1127,9 @@ topnav: maa7
                                     Funktion $f(x) = \cos 2x$ jakson pituus on $\pi$.
                                 </li>
                                 <li>  
-                                    Toiseen potenssiin korotus muuttaa negatiivisetkin arvot positiivisiksi: $v(x) = \sin^2\! x$ ja $w(x) = \cos^2\! x$.
+                                    Toiseen potenssiin korotus muuttaa negatiivisetkin arvot positiivisiksi: $v(x) = \sin^2\! x$ ja $w(x) = \cos^2\! x$. 
+                                    <br>
+                                    Huomaa, että tässä käytetään jälleen potenssin lyhennysmerkintää: $\cos^2\! x = (\cos x)^2$ ja  $\sin^2\! x = (\sin x)^2$.
                                 </li>
                                 <li>
                                     \begin{align*}
@@ -1465,6 +1467,74 @@ topnav: maa7
                                     Tangenttifunktion kuvaajan jokaiseen pisteeseen voidaan asettaa tangentti tasan yhdellä tavalla, joten tangenttifunktio näyttäisi olevan derivoituva.
                                 </li>
                             </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t230-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t230">
+                                Kaksinkertaisen kulman tangentti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t230" class="collapse">
+                        <p>
+                            Tehtävänä on osoittaa, että kulman $2x$ tangentti saadaan kulman $x$ tangentista kaavalla
+                            $$
+                                \tan 2x = \frac{2\tan x}{1 - \tan^2\! x}.
+                            $$
+                            Tutkitaan yhtälön vasenta ja oikeaa puolta erikseen.
+                        </p>
+                        <ol class="a">
+                            <li>  
+                                Ilmaise $\tan 2x$ sinin ja kosinin avulla. Sovella sen jälkeen kaksinkertaisen kulman sinin ja kosinin kaavoja. 
+                                <br>
+                                Vinkki: teoreemat 11 &amp; 15.
+                            </li>
+                            <li>
+                                Ilmaise $\tan x$ sinin ja kosinin avulla. Mihin muotoon lauseke
+                                $$
+                                 \frac{2\tan x}{1 - \tan^2\! x}
+                                $$ 
+                                sievenee? 
+                                <br>
+                                Vinkki: lavenna lausekkeella $\cos^2\! x$.
+                            </li>
+                            <li>
+                                Vertaa a- ja b-kohdan tuloksia. Mitä huomaat?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t230_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t230_v" class="collapse">
+                            <ol class="a">
+                            <li>  
+                                \begin{align*}
+                                \tan 2x &= \frac{\sin 2x}{\cos 2x} \\[2mm]
+                                &= \frac{2\sin x\cos x}{\cos^2\! x - \sin^2\! x}
+                                \end{align*}
+                            </li>
+                            <li>
+                                \begin{align*}
+                                \frac{2\tan x}{1 - \tan^2\! x} &= \frac{2\frac{\sin x}{\cos x}}{1 - \left(\frac{\sin x}{\cos x}\right)^2} \\[2mm]
+                                &= \frac{\cos^2\!x}{\cos^2\!x} \cdot \frac{2\frac{\sin x}{\cos x}}{1 - \frac{\sin^2\! x}{\cos^2\! x}} \\[2mm]
+                                &= \frac{2\sin x\cos x}{\cos^2\! x - \sin^2\! x}
+                                \end{align*}
+                            </li>
+                            <li>
+                                Tulokset ovat samat, joten 
+                                $$
+                                \tan 2x = \frac{2\tan x}{1 - \tan^2\! x}.
+                                $$
+                            </li>
+                        </ol>
                         </div>
                     </div>
                 </div>
