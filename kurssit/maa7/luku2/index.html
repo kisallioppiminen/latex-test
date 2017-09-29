@@ -1164,7 +1164,78 @@ topnav: maa7
 
             <div class="teoria">
                 <p>
-                    Edellisten tehtävien havainnot voidaan todistaa oikeiksi, jolloin saadaan seuraava teoreema. Sen yleispätevä ja yksityiskohtainen perustelu on kuitenkin sen verran työläs, että siihen ei tässä syvennytä. 
+                    Edellisten tehtävien havainnot voidaan todistaa oikeiksi sinin ja kosinin niin sanottujen summakaavojen avulla. Nämä on koottu seuraavaan teoreemaan, jonka yleispätevä ja yksityiskohtainen perustelu on sen verran työläs, että siihen ei tässä syvennytä. 
+                </p>
+
+                <div class="theorem" id="KULMIEN SUMMAN JA EROTUKSEN SINI JA KOSINI">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kulmien $\alpha + \beta$ ja $\alpha - \beta$ sini ja kosini saadaan laskettua seuraavasti:
+                        \begin{align*}
+                        \sin(\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+                        \sin(\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+                        \cos(\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+                        \cos(\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta \\
+                        \end
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t231-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t231">
+                                Kaksinkertaisen kulman sini ja kosini
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t231" class="collapse">
+                        <p>
+                            Tässä tehtävässä perustellaan tehtävien 2.18 ja 2.19 havainnot oikeaksi teoreeman 15 avulla.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Sovella teoreemaa 15 lausekkeeseen $\sin 2x$ ja sievennä mahdollisimman pitkälle.
+                                <br>
+                                Vinkki: miten voit kirjoittaa kulman $2x$ kahden kulman summana?
+                            </li>
+                            <li>  
+                                Sovella teoreemaa 15 lausekkeeseen $\cos 2x$ ja sievennä mahdollisimman pitkälle.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t231_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t231_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    \begin{align*}
+                                    \sin 2x &= \sin (x + x) \\
+                                    &= \sin x \cos x + \cos x \sin x \\
+                                    &= 2 \sin x \cos x
+                                    \end{align*}
+                                </li>
+                                <li>  
+                                    \begin{align*}
+                                    \cos 2x &= \cos(x + x) \\
+                                    &= \cos x \cos x - \sin x \sin x \\
+                                    &= \cos^2\! x - \sin^2\! x
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
+                <p>
+                    Tehtävän 2.?? havainnoista saadaan tehtävän 2.??? avulla seuraava teoreema:
                 </p>
 
                 <div class="theorem" id="KAKSINKERTAISEN KULMAN SINI JA KOSINI">
@@ -1176,10 +1247,15 @@ topnav: maa7
                         \cos 2x &= \cos^2\! x - \sin^2\! x
                         \end{align*}
                     </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 2.???
+                        </p>      
+                    </div>
                 </div>
 
                 <p>
-                    Seuraavissa tehtävissä harjoitellaan teoreeman 15 soveltamista.
+                    Seuraavissa tehtävissä harjoitellaan teoreeman 16 soveltamista.
                 </p>
             </div>
 
@@ -1247,7 +1323,7 @@ topnav: maa7
                                 Erota yhteinen tekijä ja sovella tulon nollasääntöä. Millaisiin yhtälöihin päädyt?
                             </li>
                             <li>
-                                Mitkä ovat yhtälön ratkaisut? 
+                                Mitkä ovat yhtälön ratkaisut? Varmista yksikköympyrän avulla, että löydät kaikki ratkaisut.
                             </li>
                         </ol>
                         <h2>
@@ -1328,6 +1404,27 @@ topnav: maa7
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän havainto sinin ja kosinin yhteydestä voidaan todistaa oikeaksi, jolloin saadaan seuraava teoreema. 
+                </p>
+
+                <div class="theorem" id="KOMPLEMENTTIKULMAN SINI JA KOSINI">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kaikilla kulmilla $x$ pätee
+                        \begin{align*}
+                        \cos \left(x -\frac{\pi}{2}\right) &= \sin x \\[2mm]
+                        \sin \left(x -\frac{\pi}{2}\right) &= \cos x
+                        \end{align*}
+                    </p>
+                </div>
+
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan teoreeman 15 soveltamista.
+                </p>
             </div>
 
             <div class="close-section">
