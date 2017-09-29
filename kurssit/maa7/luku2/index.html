@@ -1411,20 +1411,70 @@ topnav: maa7
                     Edellisen tehtävän havainto sinin ja kosinin yhteydestä voidaan todistaa oikeaksi, jolloin saadaan seuraava teoreema. 
                 </p>
 
-                <div class="theorem" id="KOMPLEMENTTIKULMAN SINI JA KOSINI">
+                <div class="theorem" id="SININ JA KOSININ YHTEYS">
                     <h3>TEOREEMA</h3>
                     <p>
                         Kaikilla kulmilla $x$ pätee
                         \begin{align*}
                         \cos \left(x -\frac{\pi}{2}\right) &= \sin x \\[2mm]
-                        \sin \left(x -\frac{\pi}{2}\right) &= \cos x
+                        \sin \left(x + \frac{\pi}{2}\right) &= \cos x
                         \end{align*}
                     </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 2.22.
+                        </p>      
+                    </div>
                 </div>
 
-                <p>
-                    Seuraavissa tehtävissä harjoitellaan teoreeman 15 soveltamista.
-                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t232-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t232">
+                                Sinin ja kosinin yhteys
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t232" class="collapse">
+                        <p>
+                            Tässä tehtävässä todistetaan teoreema 17 oikeaksi teoreeman 15 avulla.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Sovella teoreemaa 15 lausekkeeseen $\cos \left(x -\frac{\pi}{2}\right)$ ja sievennä mahdollisimman pitkälle. 
+                            </li>
+                            <li>  
+                                Sovella teoreemaa 15 lausekkeeseen $\sin \left(x -\frac{\pi}{2}\right)$ ja sievennä mahdollisimman pitkälle.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t232_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t232_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    \begin{align*}
+                                    \cos \left(x -\frac{\pi}{2}\right) &= \cos x \cos \frac{\pi}{2} + \sin x \sin \frac{\pi}{2} \\
+                                    &= 0 + \sin x \cdot 1\\
+                                    &= \sin x
+                                    \end{align*}
+                                </li>
+                                <li>  
+                                    \begin{align*}
+                                    \sin \left(x +\frac{\pi}{2}\right) &= \sin x \cos \frac{\pi}{2} + \cos x \sin \frac{\pi}{2} \\
+                                    &= 0 + \cos x \cdot 1 \\
+                                    &= \cos x
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="close-section">
