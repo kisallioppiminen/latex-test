@@ -2558,20 +2558,27 @@ topnav: maa7
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA7s2t209">
-                            
+                            Sinifunktio
                         </a>
                     </h1>
                 </header>
                 <div id="MAA7s2t209">
-                   
-
+                    <p>
+                        Määritä funktion 
+                        $$
+                            f(x) = 6 - 7\sin^2\! x
+                        $$
+                        suurin ja pienin arvo.
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t209_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA7s2t209_v" class="collapse">
-                        
+                        <p>
+                            Koska $0 \leq \sin^2\! x \leq 1$ kaikilla kulmilla $x$, niin funktion $f$ suurin arvo on $6$ ja pienin arvo on $-1$.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -2580,20 +2587,58 @@ topnav: maa7
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA7s2t210">
-                            
+                            Sinifunktio
                         </a>
                     </h1>
                 </header>
                 <div id="MAA7s2t210">
-                   
-
+                    <p>
+                        Kun vuorovesi-ilmiötä tutkittiin Fundynlahdella Kanadan itärannikolla, havaittiin että veden syvyyttä (metreinä) voidaan mittauspaikkassa kuvata funktiolla 
+                        $$
+                            f(t) = 6{,}5 \text{ m }+ 5\sin\left(\frac{2\pi t}{12{,}27} + \pi\right),
+                        $$ 
+                        missä aika $t$ ilmoitetaan tunteina.
+                    </p>
+                    <ol class="a">
+                        <li> Millä välillä veden syvyys vaihtelee? </li>
+                        <li> Kuinka pitkä veden syvyysvaihtelun jakso? </li>
+                        <li> Kuinka pitkän aikaa voi mittauspaikalla viettää laiva, jonka syväys on 8 metriä? </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t210_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA7s2t210_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li> Syvyys on pienimmillään 1,5 metriä ja suurimmillaan 11,5 metriä. </li>
+                            <li> 
+                                Jakso on 12,27 tuntia. Tämän voi päätellä esimerkiksi siitä, että vesi on syvimmillään, kun sini saa arvon yksi eli 
+                                $$
+                                 \frac{2\pi t}{12{,}27} + \pi = \frac{\pi}{2} + n \cdot 2\pi,
+                                $$
+                                missä $n$ on kokonaisluku, ja vastaavat ajanhetket ovat
+                                $$
+                                t \approx -3{,}068 + n \cdot 12{,}27.
+                                $$
+                                Vesi saavuttaa suurimman syvyyden siis aina 12,27 tunnin välein.
+                            </li>
+                            <li> 
+                                Yhtälö
+                                $$
+                                    6{,}5 \text{ m }+ 5\sin\left(\frac{2\pi t}{12{,}27} + \pi\right) = 8
+                                $$
+                                toteutuu, jos ja vain jos
+                                $$
+                                    t \approx -5{,}540 + n \cdot 12{,}27 
+                                $$
+                                tai
+                                $$
+                                    t \approx -1{,}190 + n \cdot 12{,}27 
+                                $$
+                                missä $n$ on kokonaisluku. Veden syvyys on vähintään 8 metriä välillä $[-5{,}540, -1{,}190]$ eli noin 4,35 tuntia (4 h 21 min).
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
