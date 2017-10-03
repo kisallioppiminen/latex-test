@@ -3231,15 +3231,69 @@ topnav: maa7
                     </h1>
                 </header>
                 <div id="MAA7s2t230">
-                   
-
+                    <p>
+                        Paikka A on 13,0 km etäisyydellä paikoista B ja C, joiden välimatka on 10,0 km. Nämä kolme paikkaa halutaan yhdistää toisiinsa pisteestä P alkavilla valokuitukaapeleilla niin, että kaapelit $PB$ ja $PC$ ovat yhtä pitkiä. Tehtävänä on määrittää tällaiseen kytkentään tarvittavan valokuitukaapelin pienin mahdollinen määrä. 
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Piirrä tilanteesta mallikuva. Määritä kolmion $ABC$ korkeusjanan pituus. 
+                        </li>
+                        <li> 
+                            Valitse muuttujaksi esimerkiksi kulma $x = \sphericalangle CBP$. Ilmaise janan $PB$ pituus kulman $x$ avulla. 
+                        </li>
+                        <li> 
+                            Ilmaise janan $AP$ pituus kulman $x$ avulla. 
+                            <br>
+                            Vinkki: Hyödynnä suorakulmaista kolmiota $BPD$, missä $D$ on janan $BC$ keskipiste. Muista, että a-kohdassa selvitit kolmion $ABC$ korkeusjanan pituuden.
+                        </li>
+                        <li>
+                            Muodosta funktio $f$, joka ilmaisee valokuituverkon pituuden. Millä välillä kulma $x$ voi tehtävän tilanteessa vaihdella?
+                        </li>
+                        <li>
+                            Määritä funktion $f$ pienin arvo tarkasteluvälillä.
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t230_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA7s2t230_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li> 
+                                Mallikuva
+                                <br>
+                                <img src="/kurssit/maa7/kuvat/MAA7kuva111.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                <br>
+                                Korkeusjanan pituus on $\left| AD \right| = \sqrt{13^2 - 5^2} = 12$.
+                            </li>
+                            <li> 
+                                $\left| PB \right| = \dfrac{5}{\cos x}$ 
+                            </li>
+                            <li> 
+                                $\left| AP \right| = 12 - 5\tan x$ 
+                            </li>
+                            <li>
+                                $f(x) = 2\cdot \dfrac{5}{\cos x} - 5\tan x$, missä $0 \leq x \lesssim 1{,}18$.
+                            </li>
+                            <li>
+                                Derivaattafunktiolla
+                                \begin{align*}
+                                f'(x) &= \frac{10\sin x}{\cos^2\! x} - \frac{5}{\cos^2\! x} \\[2mm]
+                                &= \frac{10\sin x - 5}{\cos^2\! x}
+                                \end{align*}
+                                on tarkasteluvälillä nollakohta
+                                $$
+                                x = \frac{\pi}{6}.
+                                $$
+                                Funktio $f$ saa pienimmän arvonsa joko derivaatan nollakohdassa tai tarkasteluvälin päätepisteissä. Derivaatan nollakohdassa sen arvo on
+                                $$
+                                f\left(\frac{\pi}{6}\right) \approx 20{,}7.
+                                $$
+                                Tarkasteluvälin päätepisteissä joko $P = D$ tai $P = A$. Tällöin 
+                                funktion arvo on joko $12 + 10 = 22$ tai $2\cdot 13 = 26$. Valokuitukaapelin pienin tarvittava määrä on siis noin 20,7 km.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
