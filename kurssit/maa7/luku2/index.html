@@ -3239,15 +3239,37 @@ topnav: maa7
                     </h1>
                 </header>
                 <div id="MAA7s2t229">
-                   
-
+                    <p>
+                        Kylän etäisyys toisesta kohtisuoraan risteävästä tiestä on 20,0 km ja toisesta 15,0 km. Kylän kautta suunnitellaan rakennettavaksi teitä yhdistävä suora yhdystie. Kuinka pitkä lyhin mahdollinen tie on? Missä kohdassa lyhin tie erkaantuu itään kulkevalta tieltä? 
+                        <br>
+                        Ratkaise ongelma valitsemalla muuttujaksi kulma.
+                        <br>
+                        <img src="/kurssit/maa7/kuvat/MAA7kuva111.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t229_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA7s2t229_v" class="collapse">
-                        
+                        <p>
+                            Lyhin tie on noin 49,3 km pitkä ja se erkanee itään kulkevalta tieltä noin 36,5 km risteyksestä itään.
+                            <br>
+                            Jos $x$ on yhdystien ja itään kulkevan tien välinen terävä kulma, niin tien pituus on
+                            $$
+                                f(x) = \frac{15}{\sin x} + \frac{20}{\cos x},
+                            $$
+                            missä $x$ on välillä $\left]0, \frac{\pi}{2}\right[$. Derivaattafunktion 
+                            \begin{align*}
+                            f'(x) &= -\frac{15\cos x}{\sin^2\! x} + \frac{20\sin x}{\cos^2\! x} \\[2mm]
+                            &= \frac{-15\cos^3\! x + 20 \sin^3\! x}{\sin^2\! x\cos^2\! x}
+                            \end{align*}
+                            arvo on nolla, jos ja vain jos osoittaja on nolla eli 
+                            $$
+                            \tan^3\! x = \frac{3}{4}.
+                            $$
+                            Tarkasteluvälillä on yksi nollakohta $x \approx 0{,}7375$. Kun laaditaan kulkukaavio, havaitaan, että funktio $f$ saa tässä derivaatan nollakohdassa pienimmän arvonsa. 
+                        </p>
                     </div>
                 </div>
             </div>
