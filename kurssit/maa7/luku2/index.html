@@ -2884,20 +2884,62 @@ topnav: maa7
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA7s2t218">
-                            
+                            Sinin ja kosinin yhteyksiä
                         </a>
                     </h1>
                 </header>
                 <div id="MAA7s2t218">
-                   
-
+                    <p>
+                        Suorakulmaisen kolmion terävät kulmat ovat $\alpha$ ja $\beta$. Tehtävänä on osoittaa, että 
+                        $$
+                        \sin(\alpha + \beta) < \sin \alpha + \sin \beta.
+                        $$
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Ilmaise lauseke $\sin(\alpha + \beta)$ toisella tavalla teoreeman 15 avulla. 
+                        </li>
+                        <li> 
+                            Mitä pystyt tehtävän tilanteessa päättelemään luvuista $\cos \alpha$ ja $\cos \beta$? Kuinka suuria ovat niiden mahdolliset arvot? 
+                        </li>
+                        <li> 
+                            Kirjoita a- ja b-kohtien avulla perustelu väitteelle, jonka mukaan suorakulmaisen kolmion teräville kulmille $\alpha$ ja $\beta$ pätee epäyhtälö
+                            $$
+                            \sin(\alpha + \beta) < \sin \alpha + \sin \beta.
+                            $$
+                        </li>
+                        <li> 
+                            Keksi esimerkki, joka osoittaa, että tämän tehtävän epäyhtälö ei päde kaikilla kulmilla $\alpha$ ja $\beta$.
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t218_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA7s2t218_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li>
+                                $\sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta$ 
+                            </li>
+                            <li> 
+                                Koska $0 < \alpha < \frac{\pi}{2}$, niin $0 < \cos \alpha < 1$. Vastaavasti koska $0 < \beta < \frac{\pi}{2}$, niin $0 < \cos \beta < 1$.
+                            </li>
+                            <li> 
+                                Edellisten kohtien avulla saadaan pääteltyä, että
+                                \begin{align*}
+                                \sin(\alpha + \beta) &= \sin\alpha\cos\beta + \cos\alpha\sin\beta \\
+                                &< (\sin \alpha) \cdot 1 + 1\cdot \sin \beta \\
+                                &= \sin \alpha + \sin \beta
+                                \end{align*}
+                            </li>
+                            <li> 
+                                Valitaan esimerkiksi $\alpha = \frac{\pi}{2}$ ja $\beta = \frac{\pi}{2}$. Tällöin $\sin(\alpha + \beta) = \sin \pi = 0$ ja $\sin \alpha + \sin \beta = 1 + 1 = 2$. Siis
+                                $$
+                                \sin(\alpha + \beta) \not < \sin \alpha + \sin \beta.
+                                $$
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
