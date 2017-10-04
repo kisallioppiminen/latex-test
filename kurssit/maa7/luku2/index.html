@@ -3208,9 +3208,22 @@ topnav: maa7
                     <div id="MAA7s2t227_v" class="collapse">
                         <p>
                             Kaapeli kannattaa vetää muuntajalta $A$ rantaa pitkin pisteeseen $P$, joka on 16,5 km etäisyydellä muuntajasta, ja tästä suoraan saareen.
-                        </p>
-                        <p>
-                            
+                            <br>
+                            <img src="/kurssit/maa7/kuvat/MAA7kuva116.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            <br>
+                            Koska kustannukset merellä kilometriä kohden ovat 2,5-kertaiset verrattuna kaapelointikustannuksiin maalla, voidaan tutkia funktiota
+                            $$
+                            f(x) = 2{,}5\cdot \frac{8}{\sin x} + 20 - \frac{8}{\tan x},
+                            $$
+                            missä kulma $x$ on välillä $\left[0, \frac{\pi}{2}\righ]$. Sen derivaattafunktio on 
+                            \begin{align*}
+                            f'(x) &= \frac{-20\cos x}{\sin^2\! x} + \frac{8(1 + \tan^2\! x)}{\tan^2\! x}\\[2mm]
+                            &= \frac{-20\cos x}{\sin^2\! x} + \frac{8}{\tan^2\! x} + 8 \\[2mm]
+                            &= \frac{-20\cos x}{\sin^2\! x} + \frac{8\cos^2\! x)}{\sin^2\! x} + \frac{8\sin^2\! x}{\sin^2\! x} \\[2mm]
+                            &= \frac{-20\cos x + 8}{\sin^2\! x}.
+                            \end{align*}
+                            Derivaattafunktiolla on välillä $\left[0, \frac{\pi}{2}\righ]$ yksi nollakohta $x \approx 1{,}159$. 
+                            Esimerkiksi kulkukaavion avulla havaitaan, että funktio $f$ saa siinä pienimmän arvonsa välillä $\left[0, \frac{\pi}{2}\righ]$.
                         </p>
                     </div>
                 </div>
