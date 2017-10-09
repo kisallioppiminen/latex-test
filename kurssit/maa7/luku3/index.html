@@ -222,19 +222,42 @@ topnav: maa7
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t303">
-                                
+                                Yhdistetty funktio
                             </a>
                         </h1>
                     </header>
                     <div id="MAA7t303" class="collapse">
-                       
+                        <p>
+                            Merkitään $f(x) = x^2 - 4$ ja $g(x) = \dfrac{1}{x}$. Muodosta yhdistetty funktio ja päättele, mikä on sen määrittelyjoukko:
+                        </p>
+                        <ol class="a">
+                            <li> $g \circ f$ </li>
+                            <li> $f \circ g$ </li>
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t303_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="MAA7t303_v" class="collapse">
-                           
+                            <ol class="a">
+                                <li> Yhdistetty funktio on 
+                                    \begin{align*}
+                                    (g \circ f)(x) &= g(f(x)) \\
+                                    &= g(x^2 - 4) \\
+                                    &= \frac{1}{x^2 - 4}.
+                                    \end{align*} 
+                                    Se on määritelty, jos ja vain jos $x\neq 2$ ja $x \neq -2$.
+                                </li>
+                                <li> 
+                                    \begin{align*}
+                                    (f \circ g)(x) &= f(g(x)) \\[2mm]
+                                    &= f\left(\dfrac{1}{x}\right) \\[2mm]
+                                    &=  \left(\dfrac{1}{x}\right)^2 - 4 \\[2mm]
+                                    &= \dfrac{1}{x^2} - 4
+                                    \end{align*}
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
