@@ -65,9 +65,9 @@ topnav: maa7
                     $$
                     Tässä tapauksessa funktion $f$ arvo siis lasketaan ensin ja tulos syötetään funktioon $g$ muuttujan paikalle:
                     $$
-                    \textcolor{blue}{x} \mapsto \textcolor{red}{f(x)} \mapsto g\left(\textcolor{red}{f(x)}\right).
+                    \textcolor{blue}{x} \mapsto \textcolor{red}{f(x)} \mapsto g(\textcolor{red}{f(x)}).
                     $$
-                    Sitä funktiota, jonka arvo lasketaan ensimmäisenä, sanotaan sisäfunktioksi. Tässä tapauksessa sisäfunktio on siis funktio $f(x) = 2x$. Nimitys juontaa juurensa siitä, että tämä funktio päätyy lopulta toisen funktion sisälle: lopputuloksena tässä tapauksessa on $g\left(\textcolor{red}{f(x)}\right)$.
+                    Sitä funktiota, jonka arvo lasketaan ensimmäisenä, sanotaan sisäfunktioksi. Tässä tapauksessa sisäfunktio on siis funktio $f(x) = 2x$. Nimitys juontaa juurensa siitä, että tämä funktio päätyy lopulta toisen funktion sisälle: lopputuloksena tässä tapauksessa on $g(\textcolor{red}{f(x)})$.
                 </p>
 
                 <div class="definition">
@@ -75,13 +75,13 @@ topnav: maa7
                     <p>
                         Funktioista $f$ ja $g$ <em>yhdistetty funktio</em> tarkoittaa funktiota $h$, jonka arvo lasketaan sijoittamalla funktion $f$ arvo muuttujan paikalle funktioon $g$:
                         $$
-                        h(x) = g\left(f(x)\right).
+                        h(x) = g(f(x)).
                         $$
                         Tässä funktio $f$ on <em>sisäfunktio</em> ja funktio $g$ on <em>ulkofunktio</em>. 
                     <br>
                         Funktioista $f$ ja $g$ yhdistettyä funktiota merkintään $g \circ f$. Siis 
                         $$
-                        (g \circ f)(x) = g\left(f(x)\right).
+                        (g \circ f)(x) = g(f(x)).
                         $$ 
                     </p>
                 </div>
@@ -103,7 +103,7 @@ topnav: maa7
                     </header>
                     <div id="MAA7t301" class="collapse">
                         <p>
-                            Päättele, mikä on sisäfunktio $f(x)$ ja mikä on ulkofunktio $g(x)$, jos yhdistetylle funktiolle $h(x) = g\left(f(x)\right)$ pätee
+                            Päättele, mikä on sisäfunktio $f(x)$ ja mikä on ulkofunktio $g(x)$, jos yhdistetylle funktiolle $h(x) = g(f(x))$ pätee
                         </p>
                         <ol class="a">
                             <li> $h(x) = \cos 3x$ </li>
@@ -163,7 +163,7 @@ topnav: maa7
                     <br>
                     Tässä tapauksessa ulkofunktio siis kaksinkertaistaa sisäfunktion tuloksen. Yhdistetyn funktion lausekkeeksi saadaan
                     $$
-                    (f \circ g)(x) = f\left(g(x)\right) = f(\sin x) = 2\sin x.
+                    (f \circ g)(x) = f(g(x)) = f(\sin x) = 2\sin x.
                     $$
                     <br>
                     <img src="/kurssit/maa7/kuvat/MAA7kuva122.png" style="max-width: 100%; width: auto; height: auto;"/>
