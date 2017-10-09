@@ -264,27 +264,106 @@ topnav: maa7
                 </div>
             </div>
 
+            <div class="a">
+                <p>
+                    Seuraavassa tehtävässä tarkastellaan yhdistetyn funktion $f(x) = \sin kx$ jaksoa. Kertoimen $k$ vaikutusta sinifunktion jakson pituuteen on tutkittu jo aikaisemmin tehtävissä 2.8 ja 2.9.
+                </p>
+            </div>
+
             <div class="tehtavat">
                 <div class="tehtava" id="92775b59-32d6-4dc8-afd4-2d61dfcd8883">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t304">
-                                
+                                Funktion $F(X) = SIN KX$ jakso
                             </a>
                         </h1>
                     </header>
                     <div id="MAA7t304" class="collapse">
-                       
+                        <p>
+                            Oletetaan, että $k > 0$. Osoita, että funktio $f(x) = \sin kx$ saa saman arvon aina  
+                            $$
+                            \dfrac{2\pi}{k}
+                            $$
+                            välein. Toisin sanottuna osoita, että 
+                            $$
+                            f\left(x + \frac{2\pi}{k}\right) = f(x).
+                            $$
+                            Vinkki: Sievennä lauseke $f\left(x + \frac{2\pi}{k}\right)$ mahdollisimman pitkälle. Muista teoreema 13.
+                        </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t304_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="MAA7t304_v" class="collapse">
-                           
+                            \begin{align*}
+                                f\left(x + \frac{2\pi}{k}\right) &= \sin k\left(x + \frac{2\pi}{k}\right) \\[2mm]
+                                &= \sin \left(kx + \frac{k \cdot 2\pi}{k}\right) \\[2mm]
+                                &= \sin (kx + 2\pi) \\
+                                &= \sin kx \\
+                                &= f(x)
+                            \end{align*}
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="teoria">
+
+                <p>
+                    Tehtävän 3.4 avulla saadaan perusteltua seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="FUNKTIOIDEN F(X) = SIN KX ja G(X) = COS KX JAKSO">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että $k > 0$. Yhdistettyjen funktioiden $f(x) = \sin kx$ ja $g(x) = \cos kx$ jakso on 
+                        $$
+                        \frac{2\pi}{k}.
+                        $$
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Merkitään funktion $f$ jaksoa kirjaimella $a$.
+                            <ul>
+                                <li>
+                                    Funktion $f$ arvot toistuvat jakson välein: $f(x + a) = f(x)$ eli 
+                                    $$
+                                    \sin (kx + ka) = \sin kx.
+                                    $$
+                                    Jos merkitään $z = kx$, yhtälö saadaan muotoon
+                                    $$
+                                    \sin (y + ka) = \sin y
+                                    $$.
+                                    Tiedetään, että sinifunktion jakso on $2\pi$, joten $ka \geq 2\pi$. Koska $k > 0$, seuraa tästä, että 
+                                    $$
+                                    a \geq \frac{2\pi}{k}.
+                                    $$
+                                </li>
+                                <li> 
+                                    Tehtävässä 3.4 osoitettiin, että 
+                                    $$
+                                    f\left(x + \frac{2\pi}{k}\right) = f(x).
+                                    $$
+                                    Funktion $f$ arvot toistuvat siis aina $\dfrac{2\pi}{k}$ välein, joten funktion $f$ jakso ei voi olla tätä suurempi:
+                                    $$
+                                        a \leq \dfrac{2\pi}{k}.
+                                    $$
+                                </li>
+                            </ul>
+                            Edellä on päätelty, että  
+                            $$
+                            \dfrac{2\pi}{k} \leq a \leq \dfrac{2\pi}{k},
+                            $$
+                            joten ainoaksi mahdollisuudeksi jää
+                            $$
+                            a = \dfrac{2\pi}{k}.
+                            $$
+                        </p>      
+                    </div>
+                </div>
+
             </div>
 
             <div class="tehtavat">
