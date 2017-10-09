@@ -63,7 +63,35 @@ topnav: maa7
                     $$
                     \textcolor{blue}{x} \mapsto \textcolor{red}{2x} \mapsto \sin \textcolor{red}{2x}
                     $$
+                    Tässä tapauksessa funktion $f$ arvo siis lasketaan ensin ja tulos syötetään funktioon $g$ muuttujan paikalle:
+                    $$
+                    \textcolor{blue}{x} \mapsto \textcolor{red}{f(x)} \mapsto g\left(\textcolor{red}{f(x)}\right).
+                    $$
+                    Sitä funktiota, jonka arvo lasketaan ensimmäisenä, sanotaan sisäfunktioksi. Tässä tapauksessa sisäfunktio on siis funktio $f(x) = 2x$. Nimitys juontaa juurensa siitä, että tämä funktio päätyy lopulta toisen funktion sisälle: lopputuloksena tässä tapauksessa on $g\left(\textcolor{red}{f(x)}\right)$.
                 </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: YHDISTETTY FUNKTIO</h3>
+                    <p>
+                        Funktioista $f$ ja $g$ <em>yhdistetty funktio</em> tarkoittaa funktiota $h$, jonka arvo saadaan laskettua sijoittamalla funktion $f$ arvo funktioon $g$ muuttujan paikalle:
+                        $$
+                        h(x) = g\left(f(x)\right).
+                        $$
+                        Tässä funktio $f$ on <em>sisäfunktio</em> ja funktio $g$ on <em>ulkofunktio</em>. 
+                    </p>
+                    <p>
+                        Funktioista $f$ ja $g$ yhdistettyä funktiota merkintään $g \circ f$. Siis 
+                        $$
+                        (g \circ f)(x) = g\left(f(x)\right).
+                        $$ 
+                    </p>
+                </div>
+
+                <p>
+                    Yhdistetyn funktion merkinnässä esiintyä $\circ$-merkki luetaan "pallo": funktion $g$ pallo $f$ arvo kohdassa $x$ on funktion $g$ arvo kohdassa $f(x)$.
+                </p>
+
+
             </div>
 
             <div class="tehtavat">
