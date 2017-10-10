@@ -520,7 +520,7 @@ topnav: maa7
                     </header>
                     <div id="MAA7t308" class="collapse">
                         <p>
-                            Tutkitaan funktioita $f(x) = -3x$ ja $g(x) = x^2$ sekä niistä yhdistettyä funktiota $g \circ f$.
+                            Tutkitaan funktioita $f(x) = 2x^2$ ja $g(x) = 1 - x^3$ sekä niistä yhdistettyä funktiota $g \circ f$.
                         </p>
                         <ol class="a">
                             <li> Määritä yhdistetty funktio $(g \circ f)(x)$ ja sievennä sen lauseke mahdollisimman pitkälle. </li>
@@ -530,7 +530,11 @@ topnav: maa7
                                 Vinkki: kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa6/luku4/">MAA6-kurssin</a> teoreemat 7 ja 9.
                             </li>
                             <li> Määritä derivaattafunktiot $f'(x)$ ja $g'(x)$. </li>
-                            <li> Määritä yhdistetty funktio $(g' \circ f)(x)$ ja sievennä sen lauseke mahdollisimman pitkälle. </li>
+                            <li> 
+                                Määritä yhdistetty funktio $(g' \circ f)(x)$ ja sievennä sen lauseke mahdollisimman pitkälle. 
+                                <br>
+                                Huomaa, että kysymyksessä on funktiosta $f$  ja derivaattafunktiosta $g'$ muodostettu funktio.
+                            </li>
                             <li> 
                                 Vertaa c- ja d-kohdan tuloksia b-kohdan tulokseen. Miten voit muodostaa yhdistetyn funktion derivaattafunktion $(g \circ f)'(x)$ c- ja d-kohtien tuloksista?
                             </li>
@@ -542,14 +546,35 @@ topnav: maa7
                         </h2>
                         <div id="MAA7t308_v" class="collapse">
                             <ol class="a">
-                                <li> $(g \circ f)(x) = g(f(x)) = 9x^2$ </li>
                                 <li> 
-                                    $(g \circ f)'(x) = 9\cdot 2x = 18x$.  
+                                    \begin{align*}
+                                    (g \circ f)(x) &= g(f(x)) \\ 
+                                    &= g(2x^2) \\
+                                    &= 1-(2x^2)^3 \\
+                                    &= 1 - 8x^6
+                                    \end{align*}
                                 </li>
-                                <li> $f'(x) = -3$ ja $g'(x) = 2x$. </li>
-                                <li> $(g' \circ f)(x) = g'(f(x)) = 2\cdot (-3x) = -6x$. </li>
                                 <li> 
-                                    Tulona $(g' \circ f)(x) \cdot f'(x) = -6x\cdot -3 = 18x$
+                                    \begin{align*}
+                                    (g \circ f)'(x) &= -8\cdot 6x^5 \\
+                                    &= -48x^5
+                                    \end{align*}
+                                </li>
+                                <li> $f'(x) = 4x$ ja $g'(x) = -3x^2$. </li>
+                                <li> 
+                                    \begin{align*}
+                                    (g' \circ f)(x) &= g'(f(x)) \\
+                                    &= g'(2x^2) \\
+                                    &= -3(2x^2)^2 \\
+                                    &= -3\cdot 4x^4 \\
+                                    &= -12x^4
+                                    \end{align*} 
+                                </li>
+                                <li> 
+                                    Havaitaan, että yhdistetyn funktion derivaattafunktio saadaan tulona $(g' \circ f)(x) \cdot f'(x)$ eli
+                                    $$
+                                    (g \circ f)'(x) = g'(f(x)) \cdot f'(x).
+                                    $$
                                 </li>
                             </ol>   
                         </div>
