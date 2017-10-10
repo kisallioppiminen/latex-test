@@ -660,8 +660,59 @@ topnav: maa7
 
             <div class="teoria">
                 <p>
-                    Edellisen tehtävän havainto osoittautuu pitävän paikkansa kaikilla yhdistetyillä funktioilla. 
+                    Edellisen tehtävän havainto osoittautuu pitävän paikkansa kaikilla yhdistetyillä funktioilla. Seuraavassa teoreemassa tämä todistetaan tietynlaisille funktioille. Yleinen todistus vaatii keinoja, joihin perehdytään yliopistotasolla. 
                 </p>
+                <p>
+                    Lue teoreema ja sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+                </p>
+
+                <div class="theorem" id="YHDISTETYN FUNKTION DERIVAATTA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että funktiot $f$ ja $g$ ovat derivoituvia. Yhdistetyn funktion $g \circ f$ derivaatta kohdassa $x$ on ulkofunktion derivaatta kohdassa $f(x)$ kerrottuna sisäfunktion derivaatalla:
+                        $$
+                        \mathop{\mathrm{D}} g(f(x)) = g'(f(x))f'(x).
+                        $$
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Määritetään erotusosamäärän avulla yhdistetyn funktion $g \circ f$ derivaatta kohdassa $a$. 
+                            <br>
+                            Funktion $g \circ f$ erotusosamäärä kohdassa $a$ on 
+                            $$
+                            \frac{g(f(x)) - g(f(a))}{x-a}.
+                            $$
+                            Oletetaan, että kohdan $a$ läheisyydessä $f(x) \neq f(a)$. Silloin $f(x) - f(a) \neq 0$, ja erotusosamäärä voidaan laventaa lausekkeella $f(x) - f(a)$:
+                            \begin{align*}
+                            \frac{g(f(x)) - g(f(a))}{x-a} &= \frac{g(f(x)) - g(f(a))}{x-a} \cdot \frac{\textcolor{red}{f(x) - f(a)}}{\textcolor{red}{f(x) - f(a)}} \\[2mm]
+                            &= \frac{g(f(x)) - g(f(a))}{\textcolor{red}{f(x) - f(a)}} \cdot \frac{\textcolor{red}{f(x) - f(a)}}{x-a}
+                            \end{align*}
+                            Jälkimmäinen tulon tekijä on funktion $f$ erotusosamäärä kohdassa $a$:
+                            $$
+                            \frac{\textcolor{red}{f(x) - f(a)}}{x-a} \xrightarrow[x\rightarrow a]{} f'(a)
+                            $$
+                            Merkitään ensimmäisessä tulon tekijässä $y = f(x)$ ja $b = f(a)$, jolloin saadaan
+                            $$
+                            \frac{g(f(x)) - g(f(a))}{\textcolor{red}{f(x) - f(a)}} = \frac{g(y) - g(b)}{y-b}.
+                            $$
+                            Tämä on funktion $g$ erotusosamäärä kohdassa $b$:
+                            $$
+                            \frac{g(y) - g(b)}{y-b} \xrightarrow[y \rightarrow b]{} g'(b).
+                            $$
+                            Koska funktio $f$ on derivoituva, se on jatkuva ja näin ollen 
+                            $$
+                            \lim_{x \rightarrow a} f(x) = f(a).
+                            $$
+                            Tämä tarkoittaa, että jos $x \rightarrow a$, niin $y \rightarrow b$ ja
+                            \begin{align*}
+                            \frac{g(f(x)) - g(f(a))}{x-a} &= \frac{g(f(x)) - g(f(a))}{\textcolor{red}{f(x) - f(a)}} \cdot \frac{\textcolor{red}{f(x) - f(a)}}{x-a} \\[2mm]
+                            &= \frac{g(y) - g(b)}{y-b} \cdot \frac{\textcolor{red}{f(x) - f(a)}}{x-a} \rightarrow g'(b)f'(a) \\[2mm]
+                            &= g'(f(a))f'(a).
+                            \end{align*}
+                        </p>   
+                    </div>
+                </div>
+
             </div>
 
 
