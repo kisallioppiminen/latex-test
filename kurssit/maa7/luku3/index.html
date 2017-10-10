@@ -582,28 +582,88 @@ topnav: maa7
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    Testataan edellisen tehtävän tulosta vielä toisessa tapauksessa. Oliko kysymyksessä vain sattuma vai ilmeneekö tässä jokin yleispätevä lainalaisuus?
+                </p>
+            </div>
+
             <div class="tehtavat">
                 <div class="tehtava" id="b31ffa1d-6f3e-4571-a566-f69ba0c72912">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t309">
-                                
+                                Yhdistetyn funktion derivaatta
                             </a>
                         </h1>
                     </header>
                     <div id="MAA7t309" class="collapse">
-                       
+                        <p>
+                            Tutkitaan funktioita $f(x) = x^2-x$ ja $g(x) = x^5$ sekä niistä yhdistettyä funktiota $g \circ f$.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Määritä yhdistetty funktio $(g \circ f)(x)$. 
+                                <br>
+                                Vinkki: sulkuja ei nyt kannata lähteä avaamaan.
+                            </li>
+                            <li> 
+                                Määritä a-kohdan funktion derivaattafunktio $(g \circ f)'(x)$.  
+                                <br>
+                                Vinkki: kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6-kurssin</a> teoreema 14.
+                            </li>
+                            <li> Määritä derivaattafunktiot $f'(x)$ ja $g'(x)$. </li>
+                            <li> 
+                                Määritä funktion $g$ derivaatan arvo kohdassa $f(x)$ eli $g'(f(x))$.
+                            </li>
+                            <li> 
+                                Pitääkö tehtävän 3.8 havainto paikkansa tässäkin tapauksessa?
+                            </li>
+                        </ol>   
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t309_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="MAA7t309_v" class="collapse">
-                           
+                            <ol class="a">
+                                <li> 
+                                    \begin{align*}
+                                    (g \circ f)(x) &= g(f(x)) \\ 
+                                    &= g(x^2 - x) \\
+                                    &= (x^2 - x)^5 
+                                    \end{align*}
+                                </li>
+                                <li> Funktion potenssin derivointisäännön avulla saadaan 
+                                    \begin{align*}
+                                    (g \circ f)'(x) &= 5(x^2-x)^4(2x-1) 
+                                    \end{align*}
+                                </li>
+                                <li> $f'(x) = 2x-1$ ja $g'(x) = 5x^4$. </li>
+                                <li> 
+                                    \begin{align*}
+                                    g'(f(x)) &= g'(x^2-x) \\
+                                    &= 5(x^2-x)^4 
+                                    \end{align*} 
+                                </li>
+                                <li> 
+                                    Tehtävän 3.8 havainto pitää paikkansa tässäkin tapauksessa: 
+                                    $$
+                                    (g \circ f)'(x) = g'(f(x)) \cdot f'(x).
+                                    $$
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän havainto osoittautuu pitävän paikkansa 
+                </p>
+            </div>
+
 
             <div class="tehtavat">
                 <div class="tehtava" id="3e5b6d35-a9e2-4656-88a2-db0ab998885b">
