@@ -1360,19 +1360,19 @@ topnav: maa7
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-target="#MAA7t324">
-                                
+                                Yhdistetyn funktion derivaatta
                             </a>
                         </h1>
                     </header>
                     <div id="MAA7t324">
-                       
+                        
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t324_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="MAA7t324_v" class="collapse">
-                           
+                            
                         </div>
                     </div>
                 </div>
@@ -1382,19 +1382,50 @@ topnav: maa7
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-target="#MAA7t325">
-                                
+                                Yhdistetyn funktion derivaatta
                             </a>
                         </h1>
                     </header>
                     <div id="MAA7t325">
-                       
+                        <p>
+                            Osoita, että funktio $f$ on kaikkialla aidosti kasvava, jos
+                        </p>
+                        <ol class="a">
+                            <li> $f(x) = x + \sin x\cos x$ </li>
+                            <li> $f(x) = 3x + \sin 2x - 4\sin x$ </li>
+                        </ol>
+                        <p>
+                            Vinkki: Kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssin</a> teoreema 10. Kohdassa (b) myös tämän kurssin teoreemoista 7 ja 17 on apua.
+                        </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t325_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="MAA7t325_v" class="collapse">
-                           
+                            <ol class="a">
+                                <li> 
+                                    Derivaattafunktio on 
+                                    \begin{align*}
+                                    f'(x) &= 1 - \sin^2\! x + \cos^2\! x \\
+                                    &=  \cos^2\! x + \cos^2\! x \\
+                                    &= 2\cos^2\! x.
+                                    \end{align*}
+                                    Havaitaan, että sen arvot ovat epänegatiiviset ja se saa arvon nolla vain yksittäisissä kohdissa. (Huomaa lyhennysmerkintä: $\cos^2\! x = (\cos x)^2$.)
+                                </li>
+                                <li> $f(x) = 3x + \sin 2x - 4\sin x$ 
+                                    Derivaattafunktio on 
+                                    \begin{align*}
+                                    f'(x) &= 3 + 2\cos 2x - 4\cos x \\
+                                    &=  3 + 2(\cos^2\! x - \sin^2\! x) - 4\cos x \\
+                                    &= 3 + 2\cos^2\! x - 2(1 -\cos^2\! x) - 4\cos x \\
+                                    &= 3 + 2\cos^2\! x - 2 + 2\cos^2\! x - 4\cos x \\
+                                    &= 4\cos^2\! x - 4\cos x + 1 \\
+                                    &= (2\cos^2\! x - 1)^2
+                                    \end{align*}
+                                    Havaitaan, että sen arvot ovat epänegatiiviset ja se saa arvon nolla vain yksittäisissä kohdissa. 
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
