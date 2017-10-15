@@ -2022,14 +2022,37 @@ topnav: maa7
                     </h1>
                 </header>
                 <div id="MAA7s2t314">
-                                  
+                    <p>
+                        Puistossa on kaksi toisiaan vastaan kohtisuoraa käytävää sekä koirien suosima puu, jonka etäisyys toisesta käytävästä on 60 m, toisesta 100 m. Käytävien väliin on muodostunut lyhin mahdollinen suora oikopolku, joka sivuaa puuta. Minkä kulman tämä oikopolku muodostaa puuta lähempänä olevan käytävän kanssa? Anna vastaus kahden merkitsevän numeron tarkkuudella.
+                        <br>
+                        [Pitkä S1990/8b]
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t314_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA7s2t314_v" class="collapse">
-                        
+                        <p>
+                            Polun pituus saadaan funktiosta
+                            $$
+                            f(x) = \frac{60}{\sin x} + \frac{100}{\cos x},
+                            $$
+                            missä $x$ on kysytty kulma (välillä $\left[0, \frac{\pi}{2}\right]$). Derivaattafunktio on 
+                            \begin{align*}
+                            f'(x) &= \frac{5\sin x}{\cos^2\! x} - \frac{3\cos x}{\sin^2\! x}. 
+                            \end{align*}
+                            Sen nollakohdat löydetään ratkaisemalla yhtälö
+                            $$
+                            \frac{\sin^3\! x}{\cos^3\! x} = \frac{3}{5}
+                            $$
+                            eli yhtälö
+                            $$
+                            \tan^3\! x = \frac{3}{5}.
+                            $$
+                            Välillä $\left[0, \frac{\pi}{2}\right]$ on yksi nollakohta $x \approx 0{,}70$ (radiaania). Kulkukaavion avulla havaitaan, että tämä on minimikohta. Kysytty kulma on siis noin 40 astetta.
+
+                        </p>
                     </div>
                 </div>
             </div>
