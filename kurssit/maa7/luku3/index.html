@@ -2115,15 +2115,51 @@ topnav: maa7
                     </h1>
                 </header>
                 <div id="MAA7s2t316">
-                   
-
+                    <p>
+                        Kourua pitkin valuu $0{,}2 \text{ m}^3/\text{min }$ seulottua hiekkaa ympyräpohjaisen kartion muotoiseen kasaan. Hiekkakasan korkeuden kasvaessa myös pohjaympyrän halkaisija $d$ kasvaa niin, että se on koko ajan 50 % kasan korkeutta suurempi. Tehtävänä on selvittää, millä nopeudella hiekkakasan korkeus kasvaa hetkellä, jolloin sen korkeus on 1,5 metriä.
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Piirrä tilanteesta mallikuva ja muodosta yhtälö, joka kertoo, miten pohjaympyrän halkaisija $d$ riippuu kasan korkeudesta $h$. 
+                        </li>
+                        <li>
+                            Muodosta yhtälö ympyräpohjaisen kartion tilavuudelle ja muokkaa sitä niin, että siinä esiintyy vain tilavuus $V$, korkeus $h$ sekä vakioita.
+                            <br>
+                            Vinkki: kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa3/luku3/">MAA3-kurssin</a> teoreema 25.
+                        </li>
+                        <li>
+                            Hiekkakasan tilavuus ja korkeus riippuvat kumpikin ajasta eli ne ovat ajan funktioita $V(t)$ ja $h(t)$. Derivoimalla b-kohdassa johtamasi tilavuuden lausekkeen saat lausekkeen tilavuuden muutosnopeudelle $V'(t)$. 
+                            <br>
+                            Vinkki: Nyt tarvitset yhdistetyn funktion derivointisääntöä (teoreema 23).
+                        </li>
+                        <li>
+                            Selvitä c-kohdan yhtälön avulla, millä nopeudella hiekkakasan korkeus kasvaa hetkellä, jolloin sen korkeus on 1,5 metriä.
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t316_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA7s2t316_v" class="collapse">
-                        
+                        <ol class="a">
+                        <li> 
+                            $d = 1{,}5h$
+                        </li>
+                        <li>
+                            $V = \dfrac{3\pi h^3}{16}$
+                        </li>
+                        <li>
+                            $V'(t) = \dfrac{3\pi \cdot 3 (h(t))^2 \cdot h'(t)}{16}$
+                        </li>
+                        <li>
+                            \begin{align*}
+                            h'(t) &= \dfrac{16V'(t)}{9\pi (h(t))^2} \\[2mm]
+                            &= \dfrac{16 \cdot 0{,}2 \text{ m}^3/\text{min}}{9\pi \cdot (1{,}5 \text{ m})^2} \\[2mm]
+                            &\approx 0{,}050 \text{ m/min}
+                            \end{align*}
+                        </li>
+                    </ol>
                     </div>
                 </div>
             </div>
