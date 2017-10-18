@@ -1,0 +1,16 @@
+header: 
+path: 
+navigation:
+  -
+    name: MAA8
+    path: /kurssit/maa8/
+  -
+    name: 1. Juurifunktiot
+    path: /kurssit/maa8/luku1/
+  -
+    name: 2. Eksponenttifunktiot
+    path: /kurssit/maa8/luku2/
+  -
+    name: 3. Logaritmifunktiot
+    path: /kurssit/maa8/luku3/
+
