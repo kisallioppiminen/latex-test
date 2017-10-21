@@ -1,3 +1,13 @@
+
+article table, article th, article td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+article th, article td {
+        padding: 5px;
+        text-align: center;
+}
+
 .navbar-inverse {
     background-color: rgba(196, 218, 135, 0.5);
     border-color: #C4DA87;
