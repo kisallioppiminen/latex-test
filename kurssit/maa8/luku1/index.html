@@ -989,10 +989,6 @@ topnav: maa8
                     \end{align*}
                     Tätä ehtoa kutsutaan <em>neliöönkorotusehdoksi</em> ja sen avulla voidaan tehtävässä 1.11 löydetyistä ratkaisuehdokkaista poimia todelliset ratkaisut: ehdokas $x_1 = 1$ ei toteuta neliöönkorotusehtoa $x \geq 1{,}5$ mutta ehdokas $x_2 = 2{,}25$ toteuttaa sen. Yhtälöllä on siis täsmälleen yksi ratkaisu, joka on $x = 2{,}25$.
                 </p>
-
-                <p>
-                    Seuraavissa tehtävissä vertaillaan näitä kahta neliöjuuriyhtälön ratkaisutapaa.
-                </p>
             </div>
 
             <div class="tehtavat">
@@ -1054,6 +1050,21 @@ topnav: maa8
                     </div>
                 </div>
             </div>
+
+            <p>
+                Neliöönkorotusehto muodostetaan tutkimalla, millä ehdolla yhtälön vasen ja oikea puoli ovat saman merkkisiä. Aina sekään ei riitä sulkemaan kaikkia valeratkaisuja pois. Esimerkiksi yhtälön
+                $$
+                \sqrt{x^2 - 1} = \sqrt{2x - 1}
+                $$
+                kumpikin puoli on aina epänegatiivinen, joten mitään neliönkorotusehtoa ei ole. Päätellään samaan tapaan kuin edellä:
+                \begin{align*}
+                \sqrt{x^2 - 1} &= \sqrt{2x - 1} \quad \mid (\phantom{1})^2 \\
+                x^2 - 1 &= 2x - 1 \\
+                x^2 - 2x &= 0 \\
+                x(x-2) &= 0 \\
+                x = 0 &\text{ tai } x = 2
+                \end{align*}
+            </p>
 
             <div class="tehtavat">
                 <div class="tehtava" id="MAA8t114-ex">
@@ -1121,6 +1132,8 @@ topnav: maa8
                     </div>
                 </div>
             </div>
+
+
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri2">
