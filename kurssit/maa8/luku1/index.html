@@ -1064,7 +1064,52 @@ topnav: maa8
                 x(x-2) &= 0 \\
                 x = 0 \ &\text{ tai } \ x = 2
                 \end{align*}
+                Jos ratkaisut tarkistaa sijoittamalla alkuperäiseen yhtälöön, huomaa, että joukkoon on kuitenkin jälleen soluttautunut valeratkaisu. Nimittäin jos $x = 0$, niin alkuperäisen yhtälön vasen puoli on
+                $$
+                \sqrt{x^2 - 1} = \sqrt{0^2-1} = \sqrt{-1},
+                $$
+                mikä ei ole määritelty. Ehdokas $x = 0$ ei siis kelpaa ratkaisuksi. Jos $x = 2$, alkuperäisen yhtälön vasen puoli on 
+                $$
+                \sqrt{x^2 - 1} = \sqrt{2^2-1} = \sqrt{3}
+                $$
+                ja
+                oikea puoli on 
+                $$
+                \sqrt{2x - 1} = \sqrt{2\cdot 2 - 1} = \sqrt{3}.
+                $$
+                Yhtälöllä $$
+                \sqrt{x^2 - 1} = \sqrt{2x - 1\phantom{ {}^2 }}
+                $$.
+                on siis täsmälleen yksi ratkaisu $x = 2$.
             </p>
+
+            <p>
+                Neliöönkorotuksen avulla muodostettu uusi yhtälö voi siis tuottaa myös sellaisia valeratkaisuja, joilla alkuperäinen neliöjuuriyhtälö ei ole määritelty. Kaikkien valeratkaisujen tunnistamiseksi pitää siis neliöönkorotusehdon lisäksi tutkia, millä ehdoilla yhtälö on määritelty. (Aikaisemmissa esimerkeissä ja tehtävissä on tainnut käydä hyvä tuuri, koska siellä ei ole ollut enempää valeratkaisuja.) 
+            </p>
+
+            <p>
+                Jos kaikkien neliöönkorotus- ja määrittelyehtojen tutkiminen tuntuu liian työläältä, toinen vaihtoehto on seuloa todelliset ratkaisut valeratkaisuista sijoittamalla kaikki ratkaisuehdokkaat alkuperäiseen yhtälöön. Sijoittamalla tarkistaminen toimii aina. Neliöjuuriyhtälön ratkaisemiseksi on siis kaksi tapaa:
+            </p>
+            <ol>
+                <li> 
+                    Neliöönkorotus ja tarkistus sjoittamalla: 
+                    <ul>
+                        <li> Hankkiudu eroon neliöjuurista korottamalla yhtälön kumpikin puoli toiseen potenssiin. </li>
+                        <li> Ratkaise näin saamasi yhtälö normaalisti. </li>
+                        <li> Tutki alkuperäiseen yhtälöön sijoittamalla, mitkä ratkaisuehdokkaista ovat todellisia ratkaisuja. </li>
+                    </ul>
+                </li>
+                <li> 
+                    Määrittely- ja neliöönkorotusehtojen avulla: 
+                    <ul>
+                        <li> Kirjaa ylös ehdot, joilla yhtälö on määritelty. </li>
+                        <li> Muodosta neliöönkorotusehto päättelemällä, millä ehdolla yhtälön vasen ja oikea puoli ovat saman merkkiset. </li>
+                        <li> Hankkiudu eroon neliöjuurista korottamalla yhtälön kumpikin puoli toiseen potenssiin. </li>
+                        <li> Ratkaise näin saamasi yhtälö normaalisti. </li>
+                        <li> Päättele määrittely- ja neliöönkorotusehtojen avulla, mitkä ratkaisuehdokkaista ovat todellisia ratkaisuja. </li>
+                    </ul>
+                </li>
+            </ol>
 
             <div class="tehtavat">
                 <div class="tehtava" id="MAA8t114-ex">
