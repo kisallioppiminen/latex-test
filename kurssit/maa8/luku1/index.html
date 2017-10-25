@@ -1051,62 +1051,127 @@ topnav: maa8
                 </div>
             </div>
 
-            <p>
-                Neliöönkorotusehto muodostetaan tutkimalla, millä ehdolla yhtälön vasen ja oikea puoli ovat saman merkkisiä. Aina sekään ei riitä sulkemaan kaikkia valeratkaisuja pois. Esimerkiksi yhtälön
-                $$
-                \sqrt{x^2 - 1} = \sqrt{2x - 1\phantom{ {}^2 }}
-                $$
-                kumpikin puoli on aina epänegatiivinen, joten mitään neliönkorotusehtoa ei ole. Päätellään samaan tapaan kuin edellä:
-                \begin{align*}
-                \sqrt{x^2 - 1} &= \sqrt{2x - 1\phantom{ {}^2 }} \quad \mid (\phantom{1})^2 \\
-                x^2 - 1 &= 2x - 1 \\[1mm]
-                x^2 - 2x &= 0 \\[1mm]
-                x(x-2) &= 0 \\[1mm]
-                x = 0 \ &\text{ tai } \ x = 2
-                \end{align*}
-                Jos ratkaisut tarkistaa sijoittamalla alkuperäiseen yhtälöön, huomaa, että joukkoon on kuitenkin jälleen soluttautunut valeratkaisu. Nimittäin jos $x = 0$, niin alkuperäisen yhtälön vasen puoli on
-                $$
-                \sqrt{x^2 - 1} = \sqrt{0^2-1} = \sqrt{-1},
-                $$
-                joka ei ole määritelty. Ehdokas $x = 0$ ei siis kelpaa ratkaisuksi. Jos $x = 2$, alkuperäisen yhtälön vasen puoli on 
-                $$
-                \sqrt{x^2 - 1} = \sqrt{2^2-1} = \sqrt{3}
-                $$
-                ja
-                oikea puoli on 
-                $$
-                \sqrt{2x - 1} = \sqrt{2\cdot 2 - 1} = \sqrt{3}.
-                $$
-                Alkuperäisellä yhtälöllä on siis täsmälleen yksi ratkaisu $x = 2$.
-            </p>
+            <div class="teoria">
+                <p>
+                    Neliöönkorotusehto muodostetaan tutkimalla, millä ehdolla yhtälön vasen ja oikea puoli ovat saman merkkisiä. Aina sekään ei riitä sulkemaan kaikkia valeratkaisuja pois. Esimerkiksi yhtälön
+                    $$
+                    \sqrt{x^2 - 1} = \sqrt{2x - 1\phantom{ {}^2 }}
+                    $$
+                    kumpikin puoli on aina epänegatiivinen, joten mitään neliönkorotusehtoa ei ole. Päätellään samaan tapaan kuin edellä:
+                    \begin{align*}
+                    \sqrt{x^2 - 1} &= \sqrt{2x - 1\phantom{ {}^2 }} \quad \mid (\phantom{1})^2 \\
+                    x^2 - 1 &= 2x - 1 \\[1mm]
+                    x^2 - 2x &= 0 \\[1mm]
+                    x(x-2) &= 0 \\[1mm]
+                    x = 0 \ &\text{ tai } \ x = 2
+                    \end{align*}
+                    Jos ratkaisut tarkistaa sijoittamalla alkuperäiseen yhtälöön, huomaa, että joukkoon on kuitenkin jälleen soluttautunut valeratkaisu. Nimittäin jos $x = 0$, niin alkuperäisen yhtälön vasen puoli on
+                    $$
+                    \sqrt{x^2 - 1} = \sqrt{0^2-1} = \sqrt{-1},
+                    $$
+                    joka ei ole määritelty. Ehdokas $x = 0$ ei siis kelpaa ratkaisuksi. Jos $x = 2$, alkuperäisen yhtälön vasen puoli on 
+                    $$
+                    \sqrt{x^2 - 1} = \sqrt{2^2-1} = \sqrt{3}
+                    $$
+                    ja
+                    oikea puoli on 
+                    $$
+                    \sqrt{2x - 1} = \sqrt{2\cdot 2 - 1} = \sqrt{3}.
+                    $$
+                    Alkuperäisellä yhtälöllä on siis täsmälleen yksi ratkaisu $x = 2$.
+                </p>
 
-            <p>
-                Neliöönkorotuksen avulla muodostettu uusi yhtälö voi siis tuottaa myös sellaisia valeratkaisuja, joilla alkuperäinen neliöjuuriyhtälö ei ole määritelty. Kaikkien valeratkaisujen tunnistamiseksi pitää neliöönkorotusehdon lisäksi tutkia, millä ehdoilla yhtälö on määritelty. (Aikaisemmissa esimerkeissä ja tehtävissä on tainnut käydä hyvä tuuri, koska siellä ei ole ollut enempää valeratkaisuja. Vai ovatko ne vain jääneet huomaamatta?) 
-            </p>
+                <p>
+                    Neliöönkorotuksen avulla muodostettu uusi yhtälö voi siis tuottaa myös sellaisia valeratkaisuja, joilla alkuperäinen neliöjuuriyhtälö ei ole määritelty. Kaikkien valeratkaisujen tunnistamiseksi pitää neliöönkorotusehdon lisäksi tutkia, millä ehdoilla yhtälö on määritelty. (Aikaisemmissa esimerkeissä ja tehtävissä on tainnut käydä hyvä tuuri, koska siellä ei ole ollut enempää valeratkaisuja. Vai ovatko ne vain jääneet huomaamatta?) 
+                </p>
+            </div>
 
-            <p>
-                Jos kaikkien neliöönkorotus- ja määrittelyehtojen tutkiminen tuntuu liian työläältä, toinen vaihtoehto on seuloa todelliset ratkaisut valeratkaisuista sijoittamalla kaikki ratkaisuehdokkaat alkuperäiseen yhtälöön. Sijoittamalla tarkistaminen toimii aina. Neliöjuuriyhtälön ratkaisemiseksi on siis kaksi tapaa:
-            </p>
-            <ol>
-                <li> 
-                    Neliöönkorotus ja tarkistus sjoittamalla: 
-                    <ul>
-                        <li> Hankkiudu eroon neliöjuurista korottamalla yhtälön kumpikin puoli toiseen potenssiin. </li>
-                        <li> Ratkaise näin saamasi yhtälö normaalisti. </li>
-                        <li> Tutki alkuperäiseen yhtälöön sijoittamalla, mitkä ratkaisuehdokkaista ovat todellisia ratkaisuja. </li>
-                    </ul>
-                </li>
-                <li> 
-                    Määrittely- ja neliöönkorotusehtojen avulla: 
-                    <ul>
-                        <li> Kirjaa ylös ehdot, joilla yhtälö on määritelty. </li>
-                        <li> Muodosta neliöönkorotusehto päättelemällä, millä ehdolla yhtälön vasen ja oikea puoli ovat saman merkkiset. </li>
-                        <li> Hankkiudu eroon neliöjuurista korottamalla yhtälön kumpikin puoli toiseen potenssiin. </li>
-                        <li> Ratkaise näin saamasi yhtälö normaalisti. </li>
-                        <li> Päättele määrittely- ja neliöönkorotusehtojen avulla, mitkä ratkaisuehdokkaista ovat todellisia ratkaisuja. </li>
-                    </ul>
-                </li>
-            </ol>
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t114-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t114">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t114" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista yhtälö
+                            $$
+                                \sqrt{x^2 + 2x - 15} = \sqrt{3x-13}.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Millä ehdolla yhtälön vasen puoli on määritelty?
+                                <br>
+                                Vinkki: kertaa tarvittaessa toisen asteen epäyhtälön ratkaiseminen MAA2-kurssin <a href="http://kisallioppiminen.fi/kurssit/maa2/luku3/">luvusta 3</a>.
+                            </li>
+                            <li>
+                                Millä ehdolla yhtälön oikea puoli on määritelty?
+                            </li>
+                            <li>
+                                Liittykö yhtälöön neliöönkorotusehtoa?
+                            </li>
+                            <li>
+                                Ratkaise yhtälö normaaliin tapaan korottamalla kumpikin puoli toiseen potenssiin. Karsi valeratkaisut todellisista ratkaisuista määrittely- ja neliöönkorotusehtojen avulla.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t114_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t114_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Yhtälön vasen puoli on määritelty, jos ja vain jos $x \leq -5$ tai $x \geq 3$.
+                                </li>
+                                <li>
+                                    Yhtälön oikea puoli on määritelty, jos ja vain jos $x \geq \frac{13}{3} \approx 4{,}33$.
+                                </li>
+                                <li>
+                                    Yhtälön kumpikin puoli on epänegatiivinen kaikilla muuttujan arvoilla, joten yhtälöön ei liity neliöönkorotusehtoa.
+                                </li>
+                                <li>
+                                    Yhtälöstä 
+                                    $$
+                                        x^2 + 2x - 15 = 3x - 13
+                                    $$
+                                    saadaan ratkaisuehdokkaat $x_1 = -1$ ja $x_2 = 2$. Kumpikaan niistä ei toteuta määrittelyehtoja, joten yhtälöllä ei ole yhtään ratkaisua.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="teoria">
+                <p>
+                    Jos kaikkien neliöönkorotus- ja määrittelyehtojen tutkiminen tuntuu liian työläältä, toinen vaihtoehto on seuloa todelliset ratkaisut valeratkaisuista sijoittamalla kaikki ratkaisuehdokkaat alkuperäiseen yhtälöön. Sijoittamalla tarkistaminen toimii aina. Neliöjuuriyhtälön ratkaisemiseksi on siis kaksi tapaa:
+                </p>
+                <ol>
+                    <li> 
+                        Neliöönkorotus ja tarkistus sjoittamalla: 
+                        <ul>
+                            <li> Hankkiudu eroon neliöjuurista korottamalla yhtälön kumpikin puoli toiseen potenssiin. </li>
+                            <li> Ratkaise näin saamasi yhtälö normaalisti. </li>
+                            <li> Tutki alkuperäiseen yhtälöön sijoittamalla, mitkä ratkaisuehdokkaista ovat todellisia ratkaisuja. </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        Määrittely- ja neliöönkorotusehtojen avulla: 
+                        <ul>
+                            <li> Kirjaa ylös ehdot, joilla yhtälö on määritelty. </li>
+                            <li> Muodosta neliöönkorotusehto päättelemällä, millä ehdolla yhtälön vasen ja oikea puoli ovat saman merkkiset. </li>
+                            <li> Hankkiudu eroon neliöjuurista korottamalla yhtälön kumpikin puoli toiseen potenssiin. </li>
+                            <li> Ratkaise näin saamasi yhtälö normaalisti. </li>
+                            <li> Päättele määrittely- ja neliöönkorotusehtojen avulla, mitkä ratkaisuehdokkaista ovat todellisia ratkaisuja. </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
 
             <div class="tehtavat">
                 <div class="tehtava" id="MAA8t114-ex">
