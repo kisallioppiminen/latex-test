@@ -981,8 +981,107 @@ topnav: maa8
                     2x &\geq 3 \\[1.5mm]
                     x &\geq \frac{3}{2}
                     \end{align*}
-                    Tämän tiedon avulla voidaan tehtävässä 1.11 löydetyistä ratkaisuehdokkaista poimia todelliset ratkaisut: ehdokas $x_1 = 1$ ei toteuta ehtoa $x \geq 1{,}5$ mutta ehdokas $x_2 = 2{,}25$ toteuttaa sen. Yhtälöllä on siis täsmälleen yksi ratkaisu, joka on $x = 2{,}25$.
+                    Tätä ehtoa kutsutaan <em>neliöönkorotusehdoksi</em> ja sen avulla voidaan tehtävässä 1.11 löydetyistä ratkaisuehdokkaista poimia todelliset ratkaisut: ehdokas $x_1 = 1$ ei toteuta neliöönkorotusehtoa $x \geq 1{,}5$ mutta ehdokas $x_2 = 2{,}25$ toteuttaa sen. Yhtälöllä on siis täsmälleen yksi ratkaisu, joka on $x = 2{,}25$.
                 </p>
+
+                <p>
+                    Seuraavissa tehtävissä vertaillaan näitä kahta neliöjuuriyhtälön ratkaisutapaa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t113-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t113">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t113" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista yhtälö
+                            $$
+                                \sqrt{2x-1} = 4x-5.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Mikä ehto yhtälön oikean puolen pitää toteuttaa, että yhtälö voi toteutua? Muodosta ja kirjaa ylös tämä neliöönkorotusehto.
+                                <br>
+                                Vinkki: mitä voit sanoa yhtälön vasemman puolen merkistä?
+                            </li>
+                            <li>
+                                Ratkaise yhtälö normaaliin tapaan korottamalla kumpikin puoli toiseen potenssiin. Karsi valeratkaisut todellisista ratkaisuista a-kohdan neliöönkorotusehdon avulla.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t113_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t113_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Neliöönkorotusehto on $4x - 5 \geq 0$ eli 
+                                    $$
+                                    x \geq \frac{5}{4}.
+                                    $$
+                                    Koska yhtälön vasen puoli on neliöjuurena aina epänegatiivinen, täytyy yhtälön oikeankin puolen olla epänegatiivinen, jotta yhtälö voi toteutua. 
+                                </li>
+                                <li>
+                                    Kun yhtälö ratkaistaan, saadaan ratkaisuehdokkaat $x_1 = \frac{13}{8} = 1{,}625$ ja $x_2 = 1$. Näistä neliöönkorotusehdon $x \geq 1{,}25$ toteuttaa vain ehdokas $x_1$. Yhtälö $\sqrt{2x-1} = 4x-5$ siis toteutuu, jos ja vain jos 
+                                    $$x = \dfrac{13}{8}.$$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t112-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t112">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t112" class="collapse">
+                        <p>
+                            Onko seuraavilla yhtälöillä ratkaisuja? Päättele ensin ja tarkista päättelysi piirtämällä funktioiden kuvaajat samaan koordinaatistoon esimerkiksi Geogebralla.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $\sqrt{7-x} = -4$
+                            </li>
+                            <li>
+                                $\sqrt{3x-5} = -x^2-1$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t112_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t112_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Yhtälöllä ei ole yhtään ratkaisua, koska sen vasen puoli on aina epänegatiivinen ja oikea puoli on aina negatiivinen. Vasen ja oikea puoli ovat siis erimerkkiset riippumatta muuttujan $x$ arvosta.
+                                </li>
+                                <li>
+                                    Yhtälöllä ei ole yhtään ratkaisua, koska sen vasen ja oikea puoli ovat erimerkkiset riippumatta muuttujan $x$ arvosta. Yhtälön vasen puoli on neliöjuurena aina epänegatiivinen. Yhtälön oikea puoli on aina negatiivinen. Tämä seuraa siitä, että $x^2 \geq 0$ kaikilla reaaliluvuilla $x$:
+                                    \begin{align*}
+                                    x^2 &\geq 0 \\
+                                    -x^2 &\leq 0 \\
+                                    -x^2 - 1 &\leq -1.
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="close-section">
