@@ -209,14 +209,55 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s3t101">
-                    
+                    <p>
+                        Tiedetään, että $h(x) = g(f(x))$, $f(x) = e^x$ ja $g(x)=2x^2 + 1$. Elmeri ja Uolevi laskevat derivaatan h'(x) seuraavalla tavalla:
+                    </p>
+                    <p>
+                        Elmerin ratkaisu:
+                        <br>
+                        $f(x) = e^x$
+                        <br>
+                        $g'(x) = 4x$
+                        <br>
+                        joten $h'(x) = g'(f(x)) = 4e^x$
+                    </p>
+                    <p>
+                        Uolevin ratkaisu:
+                        \begin{align*}
+                        h(x) &= g(f(x)) \\
+                        &= 2(e^x)^2 + 1\\
+                        &= 2e^{x^2} + 1 \\[1mm]
+                        h'(x) &= 2e^{x^2}\cdot (2x)
+                        \end{align*}
+                        joten $h'(x) = 4xe^{x^2}$.
+                        <br>
+                        joten $h'(x) = g'(f(x)) = 4e^x$
+                    </p>
+                    <p>
+                        Mari saa laskimella vastaukseksi $4e^{2x}$. Kenen vastaus on oikein? Etsi väärien ratkaisujen virheet ja esitä korjatut ratkaisut.
+                        <br>
+                        [Pitkä K2017/10]
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t101_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s3t101_v" class="collapse">
-                        
+                        <p>
+                            Marin vastaus on oikein. Elmerin ratkaisussa yhdistetyn funktion derivointisäännön mukaan
+                            $$
+                            h'(x) = g'(f(x))\cdot f'(x) = 4e^x\cdot e^x = 4(e^x)^2 = 4e^{2x}.
+                            $$
+                            Uolevin ratkaisussa yhdistetty funktio on 
+                            $$
+                            h(x) = g(f(x)) = 2(e^x)^2 + 1 = 2e^{2x} + 1.
+                            $$
+                            Sen derivaatta on 
+                            $$
+                            h'(x) = 2e^{2x} \cdot 2 = 4e^{2x}.
+                            $$
+                        </p>
                     </div>
                 </div>
             </div>
