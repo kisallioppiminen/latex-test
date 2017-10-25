@@ -1046,43 +1046,56 @@ topnav: maa8
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="MAA8t112-ex">
+                <div class="tehtava" id="MAA8t114-ex">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t112">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t114">
                                 Juuriyhtälö
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA8t112" class="collapse">
+                    <div id="MAA8t114" class="collapse">
                         <p>
-                            Onko seuraavilla yhtälöillä ratkaisuja? Päättele ensin ja tarkista päättelysi piirtämällä funktioiden kuvaajat samaan koordinaatistoon esimerkiksi Geogebralla.
+                            Tehtävänä on ratkaista yhtälö
+                            $$
+                                2\sqrt{x} = 3-x.
+                            $$
                         </p>
                         <ol class="a">
-                            <li> 
-                                $\sqrt{7-x} = -4$
+                            <li>
+                                Ratkaise yhtälö normaaliin tapaan korottamalla kumpikin puoli toiseen potenssiin. Millaisia ratkaisuehdokkaita saat?
                             </li>
                             <li>
-                                $\sqrt{3x-5} = -x^2-1$
+                                Karsi valeratkaisut todellisista ratkaisuista sijoittamalla ehdokkaat erikseen yhtälön vasemmalle ja oikealle puolelle.
                             </li>
                         </ol>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t112_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t114_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t112_v" class="collapse">
+                        <div id="MAA8t114_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    Yhtälöllä ei ole yhtään ratkaisua, koska sen vasen puoli on aina epänegatiivinen ja oikea puoli on aina negatiivinen. Vasen ja oikea puoli ovat siis erimerkkiset riippumatta muuttujan $x$ arvosta.
+                                    Ratkaisuehdokkaiksi saadaan $x_1 = 9$ ja $x_2 = 1$. 
                                 </li>
                                 <li>
-                                    Yhtälöllä ei ole yhtään ratkaisua, koska sen vasen ja oikea puoli ovat erimerkkiset riippumatta muuttujan $x$ arvosta. Yhtälön vasen puoli on neliöjuurena aina epänegatiivinen. Yhtälön oikea puoli on aina negatiivinen. Tämä seuraa siitä, että $x^2 \geq 0$ kaikilla reaaliluvuilla $x$:
-                                    \begin{align*}
-                                    x^2 &\geq 0 \\
-                                    -x^2 &\leq 0 \\
-                                    -x^2 - 1 &\leq -1.
-                                    \end{align*}
+                                    Sijoittamalla havaitaan, että ehdokas $x_1$ ei toteuta yhtälöä: jos $x = 9$, niin
+                                    $$
+                                    2\sqrt{x} = 2\sqrt{9} = 2\cdot 3 = 6
+                                    $$
+                                    mutta
+                                    $$
+                                    3-x = 3-9 = -6.
+                                    $$
+                                    Ehdokas $x_2$ toteuttaa yhtälön: jos $x = 1$, niin 
+                                    $$
+                                    2\sqrt{x} = 2\sqrt{1} = 2\cdot 1 = 2
+                                    $$
+                                    ja
+                                    $$
+                                    3-x = 3-1 = 2.
+                                    $$
                                 </li>
                             </ol>
                         </div>
