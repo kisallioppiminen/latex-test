@@ -1287,35 +1287,85 @@ topnav: maa8
                 </div>
             </div>
 
-            <p>
-                Tarkastellaan tämän kappaleen lopuksi vielä korkeampien juuriyhtälöiden ratkaisemista. Jos yhtälössä esiintyy $n$:s juuri, voi ratkaisussa käyttää potenssiin $n$ korotusta. Muut huomioitavat asiat riippuvat siitä, onko kysymyksessä pariton vai parillinen juuri.
-            </p>
-            <p>
-                Jos yhtälössä esiintyy pariton juuri, esimerkiksi kuutiojuuri tai viides juuri, valeratkaisuista ei tarvitse huolehtia. Tämä johtuu siitä, että parittomat potenssifunktiot saavat jokaisen arvonsa vain kerran. Esimerkiksi alla olevasta kolmannen asteen potenssifunktion kuvaajasta nähdään, että 
-                $$
-                    x = \sqrt[3]{2} \Rightarrow x^3 = 2
-                $$
-                ja
-                $$
-                    x^3 = 2 \Rightarrow x = \sqrt[3]{2}.
-                $$
-                <img src="/kurssit/maa8/kuvat/MAA8kuva023.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Jos yhtälön molemmat puolet korotetaan parittomaan potenssiin, on uusi yhtälö yhtäpitävä alkuperäisen yhtälön kanssa, sillä parittomaan potenssiin korotus voidaan kumota ottamalla yhtälön molemmista puolista vastaava $n$:s juuri.
-            </p>
-            <p>
-                Jos yhtälössä esiintyy mikä tahansa parillinen juuri, valeratkaisut täytyy tunnistaa ja karsia pois samalla tavalla kuin neliöjuuren tapauksessa tehtiin. Tämä johtuu siitä, että parilliset potenssifunktiot saavat kaikki positiiviset arvonsa kahdessa eri kohdassa. Esimerkiksi alla olevasta neljännen asteen potenssifunktion kuvaajasta nähdään, että 
-                $$
-                    x = \sqrt[4]{2} \Rightarrow x^4 = 2
-                $$
-                mutta
-                $$
-                    x^4 = 2 \Rightarrow x = \sqrt[4]{2} \ \text{ tai } \ x = -\sqrt[4]{2}.
-                $$
-                <img src="/kurssit/maa8/kuvat/MAA8kuva022.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                Parilliseen potenssiin korotusta ei siis voi kumota niin, että tuloksena olisi varmasti sama yhtälö mistä lähdettiin.
-            </p>
+            <div class="teoria">
+                <p>
+                    Tarkastellaan tämän kappaleen lopuksi vielä korkeampien juuriyhtälöiden ratkaisemista. Jos yhtälössä esiintyy $n$:s juuri, voi ratkaisussa käyttää potenssiin $n$ korotusta. Muut huomioitavat asiat riippuvat siitä, onko kysymyksessä pariton vai parillinen juuri.
+                </p>
+                <p>
+                    Jos yhtälössä esiintyy pariton juuri, esimerkiksi kuutiojuuri tai viides juuri, valeratkaisuista ei tarvitse huolehtia. Tämä johtuu siitä, että parittomat potenssifunktiot saavat jokaisen arvonsa vain kerran. Esimerkiksi alla olevasta kolmannen asteen potenssifunktion kuvaajasta nähdään, että 
+                    $$
+                        x = \sqrt[3]{2} \Rightarrow x^3 = 2
+                    $$
+                    ja
+                    $$
+                        x^3 = 2 \Rightarrow x = \sqrt[3]{2}.
+                    $$
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva023.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Jos yhtälön molemmat puolet korotetaan parittomaan potenssiin, on uusi yhtälö siis yhtäpitävä alkuperäisen yhtälön kanssa, sillä parittomaan potenssiin korotus voidaan kumota ottamalla yhtälön molemmista puolista vastaava $n$:s juuri.
+                </p>
+                <p>
+                    Jos yhtälössä esiintyy mikä tahansa parillinen juuri, valeratkaisut täytyy tunnistaa ja karsia pois samalla tavalla kuin neliöjuuren tapauksessa tehtiin. Tämä johtuu siitä, että parilliset potenssifunktiot saavat kaikki positiiviset arvonsa kahdessa eri kohdassa. Esimerkiksi alla olevasta neljännen asteen potenssifunktion kuvaajasta nähdään, että 
+                    $$
+                        x = \sqrt[4]{2} \Rightarrow x^4 = 2
+                    $$
+                    mutta
+                    $$
+                        x^4 = 2 \Rightarrow x = \sqrt[4]{2} \ \text{ tai } \ x = -\sqrt[4]{2}.
+                    $$
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva022.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Parilliseen potenssiin korotusta ei siis voi kumota niin, että tuloksena olisi varmasti sama yhtälö mistä lähdettiin. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t117-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t117">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t117" class="collapse">
+                        <p>
+                            Ratkaise seuraava yhtälöt:
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $\sqrt[3]{x + 6} + 2 = 0$
+                            </li>
+                            <li>
+                                $\sqrt[3]{2x^3 + x} = 3x$
+                            </li>
+                            <li>
+                                $\sqrt{2-x} = \sqrt[4]{x}$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t117_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t117_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $x = -14$
+                                </li>
+                                <li>
+                                    $x = 0$ tai $x = -\dfrac{1}{5}$ tai $x = \dfrac{1}{5}$
+                                </li>
+                                <li>  
+                                    $x = 1$
+                                    <br>
+                                    (Toinen ratkaisuehdokas $x = 4$ ei toteuta alkuperäisen yhtälön määrittelyehtoa.)
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri2">
