@@ -1469,7 +1469,7 @@ topnav: maa8
                     $$
                         f(x) = x^{\frac{1}{2}}
                     $$
-                    Kurssilla <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6</a> osoitettiin, että potenssifunktion $g(x) =x^n$ derivaattafunktio on 
+                    <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6-kurssin</a> teoreemassa 17 osoitettiin, että potenssifunktion $g(x) =x^n$ derivaattafunktio on 
                     $$
                         g'(x) = nx^{n-1}
                     $$
@@ -1477,9 +1477,9 @@ topnav: maa8
                 </p>
 
                 <p>
-                    On mahdollista osoittaa, että jos $m$ ja $n$ ovat kokonaislukuja ja $n \neq 0$, niin funktio 
+                    On mahdollista osoittaa, että jos $r$ on mikä tahansa rationaaliluku, niin funktio 
                     $$
-                        h(x) = x^{\frac{m}{n}}
+                        h(x) = x^{r}
                     $$
                     on derivoituva välillä $\pa 0, \infty \pe$. Perustelu vaatii kuitenkin taustalleen niin paljon teoriaa, että sitä ei tässä kurssissa käsitellä. 
                 </p>
@@ -1502,6 +1502,24 @@ topnav: maa8
                             $$
                             \left(h(x)\right)^n = \left(x^{\frac{m}{n}}\right)^n = x^{\frac{m}{n} \cdot n} = x^m
                             $$
+                            Funktio $\left(h(x)\right)^n$ on siis potenssifunktio $x \mapsto x^m$, joten se derivaatta voidaan muodostaa <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6-kurssin</a> teoreeman 17 avulla:
+                            $$
+                            \mathop{\mathrm{D}} \left(h(x)\right)^n = mx^{m-1}.
+                            $$
+                            Toisaalta, koska funktio $h$ on derivoituva (kuten aiemmin todettiin, tämä on mahdollista perustella, mutta me emme sitä nyt perustele), voidaan sen derivaatta muodostaa myös <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6-kurssin</a> teoreeman 16 avulla:
+                            $$
+                            \mathop{\mathrm{D}} \left(h(x)\right)^n = n\left(h(x)\right)^{n-1}h'(x).
+                            $$
+                            Näistä kahdesta eri esitysmuodosta saadaan yhtälö, josta voidaan ratkaista $h'(x)$:
+                            \begin{align*}
+                            n\left(h(x)\right)^{n-1}h'(x) &= mx^{m-1} \\[2mm]
+                            h'(x) &= \frac{m}{n} \frac{x^{m-1}}{h(x)^{n-1}}\\[2mm]
+                            &= \frac{m}{n} \frac{x^{m-1} \textcolor{blue}{h(x)}}{h(x)^{n-1}\textcolor{blue}{h(x)} } \\[2mm]
+                            &= \frac{m}{n} \frac{x^{m-1} \textcolor{blue}{h(x)}}{\textcolor{red}{h(x)^n} } \\[2mm]
+                            &= \frac{m}{n} \frac{x^{m-1} \textcolor{blue}{x^{\frac{m}{n}}}}{\textcolor{red}{x^m} } \\[2mm]
+                            &= \frac{m}{n} \frac{\textcolor{blue}{x^{\frac{m}{n}} }}{x} \\[2mm]
+                            &= \frac{m}{n} x^{\frac{m}{n}-1}
+                            \end{align*}
                         </p> 
                     </div>
                 </div>
