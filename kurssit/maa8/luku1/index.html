@@ -1389,16 +1389,16 @@ topnav: maa8
         </header>
         <div id="juuri3" class="collapse">
             <div class="teoria">
-
                 <p>
                    Tässä kappaleessa tutkitaan juurifunktioiden derivaattoja ja ratkaistaan niiden avulla erilaisia ääriarvosovelluksia. Kurssissa <a href="http://kisallioppiminen.fi/kurssit/maa6/luku1/">MAA6</a> opittiin, että derivaatan arvo on funktion kuvaajalle asetetun tangentin kulmakerroin. 
                    <br>
                    <img src="/kurssit/maa7/kuvat/MAA7kuva077.png" style="max-width: 100%; width: auto; height: auto;"/>
                    <br>
-                   Kun määritetään tällaisen tangentin kulmakerroin $k$ mahdollisimman monessa kohdassa $a$ ja pisteet $(a,k)$ merkitään koordinaatistoon, piirtyy näkyviin derivaattafunktion kuvaaja. Seuraavissa tehtävissä hahmotellaan neliö- ja kuutiojuurifunktioiden derivaattafunktioiden kuvaajat tällä menetelmällä.
+                   Kun määritetään tällaisen tangentin kulmakerroin $k$ mahdollisimman monessa kohdassa $a$ ja pisteet $(a,k)$ merkitään koordinaatistoon, piirtyy näkyviin derivaattafunktion kuvaaja. Seuraavassa tehtävässä hahmotellaan neliöjuurifunktioiden derivaattafunktion kuvaajaa tällä menetelmällä.
                 </p>
+            </div>
 
-                <div class="tehtavat">
+            <div class="tehtavat">
                 <div class="tehtava" id="MAA8t118-ex">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
@@ -1440,7 +1440,7 @@ topnav: maa8
                                     Tangentin kulmakerroin kasvaa nopeasti hyvin suureksi. Derivaattafunktion kuvaaja nousee hyvin korkealle ja lähestyy $y$-akselia.
                                 </li>
                                 <li>
-                                    Kun lähestytään kohtaa $x = 0$, tangenttisuora nousee aina vain jyrkemmin ja on lopulta pystysuora. Koska $y$-akselin suuntaisella suoralla ei ole kulmakerrointa, ei myöskään derivaattaa ole olemassa kohdassa $x = 0$.
+                                    Kun lähestytään kohtaa $x = 0$, tangenttisuora nousee aina vain jyrkemmin ja on lopulta pystysuora. Koska $y$-akselin suuntaisella suoralla ei ole kulmakerrointa, ei myöskään derivaatta ole olemassa kohdassa $x = 0$.
                                 </li>
                             </ol>
                         </div>
@@ -1448,6 +1448,65 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    Geogebra-havainnollistuksesta huomaa, että neliöjuurifunktion derivaattafunktion tarkempi tutkiminen kohdan $x = 0$ lähellä vaatii muita keinoja. Kurssilla <a href="http://kisallioppiminen.fi/kurssit/maa2/luku4/">MAA2</a> määriteltiin murtopotenssit seuraavasti:
+                </p>    
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: POTENSSI</h3>
+                    <p>
+                        Oletetaan, että $a > 0$. Oletetaan lisäksi, että $m$ ja $n$ ovat positiivisia kokonaislukuja. Potenssit $a^\frac{m}{n}$ ja $a^{-\frac{m}{n}}$ määritellään seuraavasti:
+                        \begin{align*}
+                        a^\frac{m}{n} &= \sqrt[n]{a^m} \\[1mm]
+                        a^{-\frac{m}{n}} &= \frac{1}{\sqrt[n]{a^m}}
+                        \end{align*}
+                    </p>
+                </div>
+
+                <p>
+                    Neliöjuurifunktio $f(x) = \sqrt{x}\,$ voidaan siis ilmaista avoimella välillä $\pa 0, \infty\pe$ murtopotenssin avulla:
+                    $$
+                        f(x) = x^{\frac{1}{2}}
+                    $$
+                    Kurssilla <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6</a> osoitettiin, että potenssifunktion $g(x) =x^n$ derivaattafunktio on 
+                    $$
+                        g'(x) = nx^{n-1}
+                    $$
+                    kaikilla kokonaisluvuilla $n$. Voisiko samanlainen sääntö päteä myös tapauksessa, jossa eksponenttina on murtoluku? 
+                </p>
+
+                <p>
+                    On mahdollista osoittaa, että jos $m$ ja $n$ ovat kokonaislukuja ja $n \neq 0$, niin funktio 
+                    $$
+                        h(x) = x^{\frac{m}{n}}
+                    $$
+                    on derivoituva välillä $\pa 0, \infty \pe$. Perustelu vaatii kuitenkin taustalleen niin paljon teoriaa, että sitä ei tässä kurssissa käsitellä. 
+                </p>
+
+                <div class="theorem" id="POTENSSIFUNKTION DERIVOINTISÄÄNNÖN YLEISTYS">
+                    <h3>TEOREEMA</h3>
+                        <p>
+                            Oletetaan, että $r$ on rationaaliluku. Funktion $h(x) = x^r$ derivaattafunktio on 
+                            $$
+                                h'(x) = rx^{r-1}.
+                            $$
+                        </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Jokainen rationaaliluku voidaan esittää murtolukumuodossa, joten funktio $h$ voidaan ilmaista muodossa
+                            $$
+                                h(x) = x^{\frac{m}{n}},
+                            $$
+                            missä $m$ ja $n$ ovat kokonaislukuja ja $n \neq 0$. Korotetaan funktio $h$ potenssiin $n$ ja sovelletaan potenssien laskusääntöjä:
+                            $$
+                            \left(h(x)\right)^n = \left(x^{\frac{m}{n}}\right)^n = x^{\frac{m}{n} \cdot n} = x^m
+                            $$
+                        </p> 
+                    </div>
+                </div>
+
+            </div>
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri3">
