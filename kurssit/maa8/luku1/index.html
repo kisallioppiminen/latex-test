@@ -1515,9 +1515,11 @@ topnav: maa8
                             n\left(h(x)\right)^{n-1}h'(x) &= mx^{m-1} \\[2mm]
                             h'(x) &= \frac{m}{n} \frac{x^{m-1}}{h(x)^{n-1}}\\[2mm]
                             &= \frac{m}{n} \frac{x^{m-1} \textcolor{blue}{h(x)}}{h(x)^{n-1}\textcolor{blue}{h(x)} } \\[2mm]
+                            &= \frac{m}{n} \frac{x^{m-1} \textcolor{blue}{h(x)}}{\textcolor{red}{h(x)^{n-1}h(x)} } \\[2mm]
                             &= \frac{m}{n} \frac{x^{m-1} \textcolor{blue}{h(x)}}{\textcolor{red}{h(x)^n} } \\[2mm]
                             &= \frac{m}{n} \frac{x^{m-1} \textcolor{blue}{x^{\frac{m}{n}}}}{\textcolor{red}{x^m} } \\[2mm]
-                            &= \frac{m}{n} \frac{\textcolor{blue}{x^{\frac{m}{n}} }}{x} \\[2mm]
+                            &= \frac{m}{n} \frac{\textcolor{purple}{x^{m-1}} \textcolor{blue}{x^{\frac{m}{n}}}}{\textcolor{purple}{x^m} } \\[2mm]
+                            &= \frac{m}{n} \frac{\textcolor{blue}{x^{\frac{m}{n}} }}{\textcolor{purple}{x} } \\[2mm]
                             &= \frac{m}{n} x^{\frac{m}{n}-1}
                             \end{align*}
                         </p> 
