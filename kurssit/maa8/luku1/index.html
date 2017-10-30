@@ -1390,7 +1390,10 @@ topnav: maa8
         <div id="juuri3" class="collapse">
             <div class="teoria">
                 <p>
-                   Tässä kappaleessa tutkitaan juurifunktioiden derivaattoja ja ratkaistaan niiden avulla erilaisia ääriarvosovelluksia. Kurssissa <a href="http://kisallioppiminen.fi/kurssit/maa6/luku1/">MAA6</a> opittiin, että derivaatan arvo on funktion kuvaajalle asetetun tangentin kulmakerroin. 
+                   Tässä kappaleessa tutkitaan juurifunktioiden derivaattoja ja ratkaistaan niiden avulla erilaisia ääriarvosovelluksia. 
+               </p>
+               <p>
+                   Kurssissa <a href="http://kisallioppiminen.fi/kurssit/maa6/luku1/">MAA6</a> opittiin, että derivaatan arvo on funktion kuvaajalle asetetun tangentin kulmakerroin. 
                    <br>
                    <img src="/kurssit/maa7/kuvat/MAA7kuva077.png" style="max-width: 100%; width: auto; height: auto;"/>
                    <br>
@@ -1450,7 +1453,7 @@ topnav: maa8
 
             <div class="teoria">
                 <p>
-                    Geogebra-havainnollistuksesta huomataan, että neliöjuurifunktion derivaattafunktion tarkempi tutkiminen kohdan $x = 0$ lähellä vaatii muita keinoja. Kurssilla <a href="http://kisallioppiminen.fi/kurssit/maa2/luku4/">MAA2</a> määriteltiin murtopotenssit seuraavasti:
+                    Geogebra-havainnollistuksesta huomataan, että neliöjuurifunktion derivaattafunktion tarkempi tutkiminen kohdan $x = 0$ lähellä vaatii muita keinoja. Sopivaksi työkaluksi paljastuu murtopotenssin käsite. Kurssilla <a href="http://kisallioppiminen.fi/kurssit/maa2/luku4/">MAA2</a> määriteltiin murtopotenssit seuraavasti:
                 </p>    
 
                 <div class="definition">
@@ -1481,7 +1484,7 @@ topnav: maa8
                     $$
                         h(x) = x^{r}
                     $$
-                    on derivoituva välillä $\pa 0, \infty \pe$. Perustelu vaatii kuitenkin taustalleen niin paljon teoriaa, että sitä ei tässä kurssissa käsitellä. Sen sijaan seuraavassa teoreemassa yleistetään potenssifunktion derivointisääntö koskemaan myös murtopotensseja tähän tietoon nojautuen.
+                    on derivoituva välillä $\pa 0, \infty \pe$. Perustelu vaatii kuitenkin taustalleen niin paljon teoriaa, että sitä ei tässä kurssissa käsitellä. Sen sijaan tähän tietoon nojautuen seuraavassa teoreemassa yleistetään potenssifunktion derivointisääntö koskemaan myös murtopotensseja.
                 </p>
 
                 <div class="theorem" id="POTENSSIFUNKTION DERIVOINTISÄÄNNÖN YLEISTYS">
@@ -1526,6 +1529,58 @@ topnav: maa8
                     </div>
                 </div>
 
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t119-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t119">
+                                Neliöjuurifunktion derivaattafunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t119" class="collapse">
+                        <p>
+                            Tässä tehtävässä määritetään neliöjuurifunktion derivaattafunktio teoreeman 4 avulla.
+                        </p>
+                        <ol class="a">
+                            <li> Ilmaise neliöjuurifunktio $f(x) = \sqrt{x}$ murtopotenssin avulla. </li>
+                            <li> 
+                                Määritä derivaattafunktio $f'(x)$ teoreeman 4 avulla.
+                            </li>
+                            <li> 
+                                Ilmaise derivaattafunktion $f'(x)$ lauseke juurten avulla. Milloin se on määritelty?
+                            </li>
+                            <li>
+                                Piirrä derivaattafunktion $f'(x)$ kuvaaja esimerkiksi Geogebralla. Näyttääkö tulos samalta kuin tehtävässä 1.18?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t119_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t119_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $f(x) = x^\frac{1}{2}$
+                                </li>
+                                <li>
+                                    $f'(x) = \frac{1}{2} \cdot x^{-\frac{1}{2}}$
+                                </li>
+                                <li>  
+                                    $f'(x) = \frac{1}{2\sqrt{x}}$
+                                </li>
+                                <li>
+                                    Kuvaaja:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva024.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="close-section">
