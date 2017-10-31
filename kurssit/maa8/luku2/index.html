@@ -359,6 +359,63 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="tehtava" id="MAA8s3t104">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA8s3t104">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA8s3t104">
+                    <ol class="a">
+                        <li> 
+                            Osoita, että funktio 
+                            $$
+                                f(x) = \frac{e^x}{1 + e^x}
+                            $$
+                            on aidosti kasvava, kun $x \in \R$.
+                        </li>
+                        <li>
+                            Määritä funktion $f(x)$ raja-arvo, kun $x$ kasvaa rajatta.
+                        </li>
+                        <li>
+                            Päteekö kaikilla $x \geq 10$ epäyhtälö $f(x) \geq 0{,}999$?
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä S2014/11]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t104_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA8s3t104_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Derivaattafunktion 
+                                $$
+                                f'(x) = \frac{e^x}{(1 + e^x)^2}
+                                $$
+                                arvo on positiivinen kaikilla muuttujan $x$ arvoilla, joten funktio $f$ on aidosti kasvava koko lukusuoralla.
+                            </li>
+                            <li>
+                                Supistetaan lausekkeella $e^x$:
+                                \begin{align*}
+                                    f(x) &= \frac{e^x}{1 + e^x} \\[2mm]
+                                    &= \frac{1}{\frac{1}{e^x} + 1} \\[2mm]
+                                    &\xrightarrow[x \rightarrow \infty]{} \frac{1}{0+1} = 1
+                                \end{align*}
+                            </li>
+                            <li>
+                                Koska $$f(10) = 0{,}99995\ldots > 0{,}999$$ ja funktio $f$ on aidosti kasvava, niin epäyhtälö pätee.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku2-tehtavasarja3">
