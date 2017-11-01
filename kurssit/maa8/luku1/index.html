@@ -1930,7 +1930,70 @@ topnav: maa8
             </h1>
         </header>
         <div id="juuri4" class="collapse">
-    
+            <div class="teoria">
+                <p>
+                    Kurssissa <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6</a> opittiin tutkimaan funktioiden kasvamista ja vähenemistä sekä ääriarvoja derivaatan avulla. Tässä kappaleessa sovelletaan näitä taitoja juurifunktioiden kulun tutkimiseen. 
+                </p>
+
+                <p>
+                    Aloitetaan tutkimalla neliöjuurifunktion $f(x) = \sqrt{x}\,$ kulkua. Neliöjuurifunktion kuvaajan perusteella voitaisiin ajatella, että funktio on kasvava. Varmistetaan asia kuitenkin vielä derivaatan avulla.
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Neliöjuurifunktion derivaatta on tehtävän 1.21 mukaan
+                    $$
+                        f'(x) = \frac{1}{2\sqrt{x}}.
+                    $$
+                    Se on määritelty avoimella välillä $\pa 0, \infty \pe$ ja sen arvo on aina positiivinen (neliöjuuren arvo ei koskaan ole negatiivinen, joten osoittaja ja nimittäjä ovat kumpikin positiivisia). Tästä voidaan päätellä, että neliöjuurifunktio on aidosti kasvava koko määrittelyjoukossaan eli välillä $[0, \infty\pe$. Se, että derivaatta ei ole määritelty välin toisessa päätepisteessä eli kohdassa $x = 0$, ei haittaa. Kulkukaavioon nämä yksityiskohdat on kuitenkin merkittävä: 
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva026.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Katkoviiva kulkukaaviossa tarkoittaa, että funktio ei ole määritelty kyseisessä kohdassa. Yllä olevasta kulkukaaviosta voidaan siis lukea, että neliöjuurifunktio on määritelty kohdassa $x = 0$ mutta sen derivaattafunktio ei ole määritelty kohdassa $x = 0$. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t126-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t126">
+                                Juurifunktion kulun tutkiminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t126" class="collapse">
+                        <p>
+                            Tässä tehtävässä osoitetaan, että neliöjuurifunktio $f(x) = \sqrt{x}\,$ on aidosti kasvava koko määrittelyjoukossaan.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Määritä derivaattafunktio $f'(x)$.
+                            </li>
+                            <li> 
+                                Onko derivaattafunktiolla nollakohtia? 
+                            </li>
+                        </ol>
+                        <p>
+                            Vinkki: Aloita ilmaisemalla juuret murtopotensseina. Kertaa tarvittaessa tulon ja osamäärän derivointisäännöt <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6-kurssin</a> teoreemoista 13 ja 15.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t125_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t125_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $f'(x) = \dfrac{3(1-x)}{2\sqrt{2-x}}$
+                                </li>
+                                <li> 
+                                    $g'(x) = -\dfrac{1}{x^2\sqrt{x^2 + 1}}$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
