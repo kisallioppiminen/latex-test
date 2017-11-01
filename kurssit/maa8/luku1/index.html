@@ -1963,31 +1963,48 @@ topnav: maa8
                     </header>
                     <div id="MAA8t126" class="collapse">
                         <p>
-                            Tässä tehtävässä osoitetaan, että neliöjuurifunktio $f(x) = \sqrt{x}\,$ on aidosti kasvava koko määrittelyjoukossaan.
+                            Tehtävänä on tutkia, missä funktio 
+                            $$
+                            f(x) = \sqrt{x-1} - x
+                            $$
+                            on aidosti kasvava ja missä vähenevä.
                         </p>
                         <ol class="a">
                             <li> 
-                                Määritä derivaattafunktio $f'(x)$.
+                                Määritä derivaattafunktio $f'(x)$. Kertaa tarvittaessa tehtävä 1.24.
                             </li>
                             <li> 
-                                Onko derivaattafunktiolla nollakohtia? 
+                                Etsi derivaattafunktion nollakohdat. Kertaa tarvittaessa tehtävää 1.15 edeltävät ohjeet.
+                            </li>
+                            <li>
+                                Laske derivaattafunktion arvo nollakohtien eri puolilla ja muodosta derivaattafunktion merkkikaavio.
+                            </li>
+                            <li>
+                                Täydennä derivaattafunktion merkkikaavio funktion $f$ kulkukaavioksi. Missä funktio $f$ on aidosti kasvava? Entä aidosti vähenevä? Tarkista vastaustesi järkevyys piirtämällä funktion $f$ kuvaaja esimerkiksi Geogebralla.
                             </li>
                         </ol>
-                        <p>
-                            Vinkki: Aloita ilmaisemalla juuret murtopotensseina. Kertaa tarvittaessa tulon ja osamäärän derivointisäännöt <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6-kurssin</a> teoreemoista 13 ja 15.
-                        </p>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t125_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t126_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t125_v" class="collapse">
+                        <div id="MAA8t126_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    $f'(x) = \dfrac{3(1-x)}{2\sqrt{2-x}}$
+                                    $f'(x) = \dfrac{1}{2\sqrt{x-1}} - 1$
                                 </li>
                                 <li> 
-                                    $g'(x) = -\dfrac{1}{x^2\sqrt{x^2 + 1}}$
+                                    $f'(x) = 0$, jos ja vain jos $x = \frac{5}{4} = 1{,}25$
+                                </li>
+                                <li>
+                                    Esimerkiksi $f'(1{,}2) \approx 0{,}12$ ja $f'(2) = -0{,}5$.
+                                </li>
+                                <li>
+                                    Kulkukaavio:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva027.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                    <br>
+                                    Funktio on aidosti kasvava välillä $\left[0, \frac{5}{4}\right]$ ja aidosti vähenevä välillä $\left[\frac{5}{4}, \infty\right[$.
                                 </li>
                             </ol>
                         </div>
