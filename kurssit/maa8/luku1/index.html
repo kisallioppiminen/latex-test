@@ -2016,28 +2016,120 @@ topnav: maa8
 
             <div class="teoria">
                 <p>
-                    Juurifunktioiden ääriarvot löydetään derivaatan nollakohdista, ja kulkukaavion avulla voidaan päätellä, onko kysymyksessä maksimi- vai minimiarvo. Esimerkiksi edellisen tehtävän funktion 
+                    Juurifunktioiden ääriarvot löydetään derivaatan nollakohdista, ja kulkukaavion avulla voidaan päätellä, onko kysymyksessä maksimi- vai minimiarvo. Suljetulla välillä suurin ja pienin arvo löytyvät <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssin</a> teoreeman 12 mukaisesti derivaatan nollakohdista tai välin päätepisteistä. Jos tarkasteluväli ei ole suljettu, suurimman ja pienimmän arvon olemassaolon selvittäminen voi vaatia enemmän työtä. 
+                </p>
+                <p>
+                    Tarkastellaan esimerkiksi funktiota 
                     $$
-                    f(x) = \sqrt{x-1} - x
+                    f(x) = \frac{2\sqrt{x}}{x + 1},
                     $$
-                    kulkukaaviosta
+                    jonka määrittelyjoukko on $[0, \infty\pe$. Osamäärän derivointisäännön (<a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6</a> teoreema 15) avulla derivaattafunktioksi saadaan
+                    \begin{align*}
+                    f'(x) &= \frac{2 \cdot \frac{1}{2}x^{-\frac{1}{2}}(x+1) - 2\sqrt{x}}{(x+1)^2} \\[2mm]
+                    &= \frac{x^{-\frac{1}{2}}(x+1) - 2\sqrt{x}}{(x+1)^2} \\[2mm]
+                    &= \frac{\frac{(x+1)}{\sqrt{x}} - 2\sqrt{x}}{(x+1)^2} 
+                    \end{align*}
+                    Derivaattafunktion nollakohdat löytyvät osoittajan nollakohdista:
+                    \begin{align*}
+                    \frac{(x+1)}{\sqrt{x}} - 2\sqrt{x} &= 0 \\[2mm]
+                    \frac{(x+1)}{\sqrt{x}} &= 2\sqrt{x} \\[2mm]
+                    x+1 &=2x \\[2mm]
+                    1 &= x
+                    \end{align*}
+                    Lasketaan derivaattafunktion arvo nollakohdan eri puolilla. Laskimen avulla saadaan esimerkiksi
+                    \begin{align*}
+                    f'(0{,}25) &= 0{,}96 > 0 \\
+                    f'(4) &= -0{,}06 < 0
+                    \end{align*}
+                    Näin saadaan muodostettua kulkukaavio:
                     <br>
-                    <img src="/kurssit/maa8/kuvat/MAA8kuva027.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva028.png" style="max-width: 100%; width: auto; height: auto;"/>
                     <br>
-                    nähdään, että funktiolla on maksimikohta $x = \frac{5}{4}$ mutta ei muita ääriarvokohtia. Kulkukaaviosta voidaan myös päätellä, että maksimiarvo
+                    Kulkukaaviosta nähdään, että funktiolla $f$ on maksimikohta $x = 1$ mutta ei muita ääriarvokohtia. Lisäksi voidaan päätellä, että  maksimiarvo
                     $$
-                    f\left(\frac{5}{4}\right) = \sqrt{\frac{5}{4} - 1} - \frac{5}{4} = -\frac{3}{4}
+                    f\left(1\right) = \frac{2\sqrt{1}}{1 + 1} = 1
                     $$
                     on funktion $f$ suurin arvo. Pienimmän arvo olemassaoloa ei voida tässä tapauksessa päätellä pelkän kulkukaavion perusteella. Määrittelyvälin vasemmassa päätepisteessä funktio saa arvon
                     $$
-                    f(1) = \sqrt{1-1} - 1 = -1.
+                    f(0) = \frac{2\sqrt{0}}{0 + 1} = 0.
                     $$
-                    Funktio on kuitenkin aidosti vähenevä välillä $\left[\frac{5}{4}, \infty\right[$, joten on tutkittava, millaisia arvoja se saa tällä välillä. Huomataan, että esimerkiksi 
-                    $$
-                    f(10) = \sqrt{10-1} -10 = -7 < f(1).
-                    $$
-                    Funktiolla ei siis ole pienintä arvoa, vaan se saa aina vain pienempiä arvoja muuttujan kasvaessa rajatta.
+                    Funktio on kuitenkin aidosti vähenevä välillä $\left[1, \infty\right[$, joten on tutkittava, millaisia arvoja se saa tällä välillä. Pysyvätkö arvot epänegatiivisina vai saako funktio jonkin nollaa pienemmän arvon? 
                 </p>
+                <p>
+                    Jos $x \geq 1$, osoittajan $2\sqrt{x}$ arvo on positiivinen, samoin nimittäjän $x + 1$ arvo. Siis välillä $\left[1, \infty\right[$ funktion
+                    $$
+                    f(x) = \frac{2\sqrt{x}}{x+1}
+                    $$
+                    arvo on positiivinen. Tästä voidaan päätellä, että $f(0) = 0$ on funktion $f$ pienin arvo. Myös funktion kuvaaja tukee näitä johtopäätöksiä:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva029.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Huomaa, että pelkän kuvaajan perusteella ei voida olla täysin varmoja, kuinka suuria tai pieniä arvoja funktio saa, kun muuttuja kasvaa tai pienenee rajatta. Edellä tehty päättely kuitenkin takaa, että $f(1)=1$ ja $f(0)=0$ ovat todella funktion suurin ja pienin arvo.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t127-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t127">
+                                Juurifunktion kulun tutkiminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t127" class="collapse">
+                        <p>
+                            Tehtävässä 1.26 muodostettiin funktiolle
+                            $$
+                            f(x) = \sqrt{x-1} - x
+                            $$
+                            kulkukaavio
+                            <br>
+                            <img src="/kurssit/maa8/kuvat/MAA8kuva027.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Onko funktiolla $f$ minimi- tai maksimikohtia? Mitä ne ovat?
+                            </li>
+                            <li> 
+                                Määritä funktion $f$ suurin arvo tai perustele, että sitä ei ole olemassa.
+                            </li>
+                            <li>
+                                Määritä funktion $f$ pienin arvo tai perustele, että sitä ei ole olemassa.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t127_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t127_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kulkukaaviosta nähdään, että funktiolla $f$ on maksimikohta $x = \frac{5}{4}$ mutta ei muita ääriarvokohtia.
+                                </li>
+                                <li> 
+                                    Kulkukaaviosta voidaan päätellä, että maksimiarvo
+                                    $$
+                                    f\left(\frac{5}{4}\right) = \sqrt{\frac{5}{4} - 1} - \frac{5}{4} = -\frac{3}{4}
+                                    $$
+                                    on funktion $f$ suurin arvo.
+                                </li>
+                                <li>
+                                    Pienimmän arvo olemassaoloa ei voida tässä tapauksessa päätellä pelkän kulkukaavion perusteella. Määrittelyvälin vasemmassa päätepisteessä funktio saa arvon
+                                    $$
+                                    f(1) = \sqrt{1-1} - 1 = -1.
+                                    $$
+                                    Funktio on kuitenkin aidosti vähenevä välillä $\left[\frac{5}{4}, \infty\right[$, joten on tutkittava, millaisia arvoja se saa tällä välillä. Huomataan, että esimerkiksi 
+                                    $$
+                                    f(10) = \sqrt{10-1} -10 = -7 < f(1).
+                                    $$
+                                    Funktiolla ei siis ole pienintä arvoa, vaan se saa aina vain pienempiä arvoja muuttujan kasvaessa rajatta.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="close-section">
