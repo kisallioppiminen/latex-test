@@ -2136,6 +2136,81 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t128-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t128">
+                                Juurifunktion suurin ja pienin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t128" class="collapse">
+                        <p>
+                            Tehtävänä on tutkia, onko funktiolla
+                            $$
+                            g(x) = (x-1)\sqrt{36-x^2}
+                            $$
+                            suurin ja pienin arvo, ja määrittää ne, jos ne ovat olemassa.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Mikä on funktion $g$ määrittelyjoukko?
+                            </li>
+                            <li> 
+                                Onko funktiolla $g$ ääriarvokohtia?
+                            </li>
+                            <li>
+                                Onko funktiolla $g$ suurinta tai pienintä arvoa? Mitä ne ovat?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t128_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t128_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Funktio $g$ on määritelty, jos ja vain jos juurrettava on epänegatiivinen eli $-6 \leq x \leq 6$.
+                                </li>
+                                <li> 
+                                    Derivaattafunktio on 
+                                    \begin{align*}
+                                    g'(x) = \frac{-x^2+x}{\sqrt{36-x^2}} + \sqrt{36 - x^2}.
+                                    \end{align*}
+                                    Se on määritelty, jos ja vain jos $-6 < x < 6$. Derivaattafunktion nollakohdat löydetään ratkaisemalla yhtälö $g'(x) = 0$:
+                                    \begin{align*}
+                                    \frac{-x^2+x}{\sqrt{36-x^2}} + \sqrt{36 - x^2} &= 0 \\[2mm]
+                                    \sqrt{36 - x^2} &= \frac{x^2-x}{\sqrt{36-x^2}}  \\[2mm]
+                                    36-x^2 &= x^2 - x \\[2mm]
+                                    -2x^2 + x + 36 &= 0 \\[2mm]
+                                    \end{align*}
+                                    Toisen asteen yhtälön ratkaisukaavalla saadaan ratkaisut $x_1 = \frac{9}{2}$ ja $x_2 = -4$. Lasketaan derivaattafunktion arvo nollakohtien välissä:
+                                    \begin{align*}
+                                    g'(-5) &\approx -35{,}9 \\
+                                    g'(0) &= 6 \\
+                                    g'(5) &\approx -32{,}9
+                                    \end{align*}
+                                </li>
+                                <li>
+                                    Pienimmän arvo olemassaoloa ei voida tässä tapauksessa päätellä pelkän kulkukaavion perusteella. Määrittelyvälin vasemmassa päätepisteessä funktio saa arvon
+                                    $$
+                                    f(1) = \sqrt{1-1} - 1 = -1.
+                                    $$
+                                    Funktio on kuitenkin aidosti vähenevä välillä $\left[\frac{5}{4}, \infty\right[$, joten on tutkittava, millaisia arvoja se saa tällä välillä. Huomataan, että esimerkiksi 
+                                    \begin{align*}
+                                    f(10) &= \sqrt{10-1} -10 \\
+                                    &= -7 < f(1).
+                                    \end{align*}
+                                    Funktiolla ei siis ole pienintä arvoa, vaan se saa aina vain pienempiä arvoja muuttujan kasvaessa rajatta.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
                     Sulje kappale
