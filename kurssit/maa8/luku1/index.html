@@ -2157,9 +2157,6 @@ topnav: maa8
                             <li> 
                                 Mikä on funktion $g$ määrittelyjoukko?
                             </li>
-                            <li> 
-                                Onko funktiolla $g$ ääriarvokohtia?
-                            </li>
                             <li>
                                 Onko funktiolla $g$ suurinta tai pienintä arvoa? Mitä ne ovat?
                             </li>
@@ -2175,35 +2172,33 @@ topnav: maa8
                                     Funktio $g$ on määritelty, jos ja vain jos juurrettava on epänegatiivinen eli $-6 \leq x \leq 6$.
                                 </li>
                                 <li> 
+                                    Funktio $g$ on jatkuva suljetulla välillä $[-6,6]$ ja derivoituva avoimella välillä $-6 < x < 6$, joten <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssin</a> teoreeman 12 mukaan funktio $g$ saa suurimman ja pienimmän arvonsa derivaattafunktion nollakohdissa tai välin päätepisteissä.
+                                    <br>
                                     Derivaattafunktio on 
                                     \begin{align*}
                                     g'(x) = \frac{-x^2+x}{\sqrt{36-x^2}} + \sqrt{36 - x^2}.
                                     \end{align*}
-                                    Se on määritelty, jos ja vain jos $-6 < x < 6$. Derivaattafunktion nollakohdat löydetään ratkaisemalla yhtälö $g'(x) = 0$:
+                                    Derivaattafunktion nollakohdat löydetään ratkaisemalla yhtälö $g'(x) = 0$:
                                     \begin{align*}
                                     \frac{-x^2+x}{\sqrt{36-x^2}} + \sqrt{36 - x^2} &= 0 \\[2mm]
                                     \sqrt{36 - x^2} &= \frac{x^2-x}{\sqrt{36-x^2}}  \\[2mm]
                                     36-x^2 &= x^2 - x \\[2mm]
                                     -2x^2 + x + 36 &= 0 \\[2mm]
                                     \end{align*}
-                                    Toisen asteen yhtälön ratkaisukaavalla saadaan ratkaisut $x_1 = \frac{9}{2}$ ja $x_2 = -4$. Lasketaan derivaattafunktion arvo nollakohtien välissä:
+                                    Toisen asteen yhtälön ratkaisukaavalla saadaan ratkaisut $x_1 = \frac{9}{2}$ ja $x_2 = -4$.
+                                    <br>
+                                    Lasketaan funktion arvo määrittelyvälin päätepisteissä ja derivaatan nollakohdissa:
                                     \begin{align*}
-                                    g'(-5) &\approx -35{,}9 \\
-                                    g'(0) &= 6 \\
-                                    g'(5) &\approx -32{,}9
+                                    g(-6) &= 0 \\
+                                    g(-4) &= -5\sqrt{20} = -10\srqt{5} \\
+                                    g\left(\frac{9}{2}\right) &= \frac{7}{2}\sqrt{\frac{63}{4}} = \frac{7}{4}\sqrt{63} \\
+                                    g(6) &= 0
                                     \end{align*}
-                                </li>
-                                <li>
-                                    Pienimmän arvo olemassaoloa ei voida tässä tapauksessa päätellä pelkän kulkukaavion perusteella. Määrittelyvälin vasemmassa päätepisteessä funktio saa arvon
+                                    Funktion $g$ suurin arvo on siis 
                                     $$
-                                    f(1) = \sqrt{1-1} - 1 = -1.
+                                    g\left(\frac{9}{2}\right) = \frac{7}{4}\sqrt{63} \approx 13{,}9
                                     $$
-                                    Funktio on kuitenkin aidosti vähenevä välillä $\left[\frac{5}{4}, \infty\right[$, joten on tutkittava, millaisia arvoja se saa tällä välillä. Huomataan, että esimerkiksi 
-                                    \begin{align*}
-                                    f(10) &= \sqrt{10-1} -10 \\
-                                    &= -7 < f(1).
-                                    \end{align*}
-                                    Funktiolla ei siis ole pienintä arvoa, vaan se saa aina vain pienempiä arvoja muuttujan kasvaessa rajatta.
+                                    ja pienin arvo on $g(-4) = -10\sqrt{5} \approx -22{,}4$.
                                 </li>
                             </ol>
                         </div>
