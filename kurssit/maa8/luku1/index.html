@@ -2286,10 +2286,11 @@ topnav: maa8
 
             <div class="teoria">
                 <p>
-                    Seuraavan teoreeman avulla voidaan joissakin tilanteissa välttää juurilausekkeiden derivointi:
+                    Seuraavan teoreeman avulla voidaan joissakin tilanteissa välttää juurilausekkeiden derivointi.
+                    Lue teoreema ja sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
                 </p>
             
-                <div class="theorem" id="">
+                <div class="theorem" id="FUNKTIOIDEN f(x) = &radic; v(x) JA g(x) = u(x) &radic; v(x) SUURIN JA PIENIN ARVO">
                     <h3>TEOREEMA</h3>
                         <p> 
                             Funktio 
@@ -2339,7 +2340,79 @@ topnav: maa8
                 </div>
             </div>
 
-
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t130-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t130">
+                                Juurifunktion suurin ja pienin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t130" class="collapse">
+                        <p>
+                            Tehtävänä on tutkia, onko funktiolla
+                            $$
+                            f(x) = \frac{1}{x} + \sqrt{x}
+                            $$
+                            suurin ja pienin arvo, ja määrittää ne, jos ne ovat olemassa.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Mikä on funktion $f$ määrittelyjoukko?
+                            </li>
+                            <li>
+                                Onko funktiolla $f$ suurinta tai pienintä arvoa? Mitä ne ovat?
+                            </li>
+                        </ol>
+                        <p>
+                            Tarkista vastaustesi järkevyys piirtämällä funktion $f$ kuvaaja esimerkiksi Geogebralla.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t129_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t129_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Funktio $f$ on määritelty, jos ja vain jos $x > 0$. (Tällöin juurrettava on epänegatiivinen ja nimittäjä ei ole nolla.)
+                                </li>
+                                <li> 
+                                    Derivaattafunktioksi saadaan
+                                    $$
+                                    f'(x) = -\frac{1}{x^2} + \frac{1}{2\sqrt{x}}.
+                                    $$
+                                    Derivaattafunktiolla on yksi nollakohta 
+                                    $$x = \sqrt[3]{4} = 2^{\frac{2}{3}} \approx 1{,}59.$$ 
+                                    Lasketaan derivaattafunktion arvot sen eri puolilla. Esimerkiksi
+                                    \begin{align*}
+                                    f'(1) &= -0{,}5  \\
+                                    f'(4) &= 0{,}1875.
+                                    \end{align*}
+                                    Kulkukaavion avulla voidaan nyt päätellä, että funktiolla $f$ on pienin arvo mutta ei suurinta arvoa:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva030.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                    <br>
+                                    Funktion $f$ pienin arvo on 
+                                    \begin{align*}
+                                    f(\sqrt[3]{4}) &= \frac{1}{\sqrt[3]{4}} + \sqrt{\sqrt[3]{4}} \\[2mm]
+                                    &= \frac{\left(\sqrt[3]{4}\right)^2}{\left(\sqrt[3]{4}\right)^3} + (4^\frac{1}{3})^\frac{1}{2} \\[2mm]
+                                    &= \frac{\left(4^\frac{1}{3}\right)^2}{4} + (4^\frac{1}{2})^\frac{1}{3} \\[2mm]
+                                    &= \frac{\left(4^2\right)^\frac{1}{3}}{4} + \sqrt[3]{2} \\[2mm]
+                                    &= \frac{\sqrt[3]{16}}{4} + \sqrt[3]{2} \\[2mm]
+                                    &= \frac{\sqrt[3]{8\cdot 2}}{4} + \sqrt[3]{2} \\[2mm]
+                                    &= \frac{2\sqrt[3]{2}}{4} + \sqrt[3]{2} \\[2mm]
+                                    &= \frac{\sqrt[3]{2}}{2} + \sqrt[3]{2} \\[2mm]
+                                    &= \frac{3\sqrt[3]{2}}{2} 
+                                    \approx 1{,}89.
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
