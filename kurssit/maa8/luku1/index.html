@@ -2056,7 +2056,164 @@ topnav: maa8
 
             <div class="teoria">
                 <p>
-                    Juurifunktioiden ääriarvot löydetään derivaatan nollakohdista, ja kulkukaavion avulla voidaan päätellä, onko kysymyksessä maksimi- vai minimiarvo. Suljetulla välillä suurin ja pienin arvo löytyvät <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssin</a> teoreeman 12 mukaisesti derivaatan nollakohdista tai välin päätepisteistä. Jos tarkasteluväli ei ole suljettu, suurimman ja pienimmän arvon olemassaolon selvittäminen voi vaatia enemmän työtä. 
+                    Juurifunktioiden ääriarvot löydetään derivaatan nollakohdista, ja kulkukaavion avulla voidaan päätellä, onko kysymyksessä maksimi- vai minimiarvo. Suljetulla välillä suurin ja pienin arvo löytyvät <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssin</a> teoreeman 12 mukaisesti derivaatan nollakohdista tai välin päätepisteistä. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t128-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t128">
+                                Juurifunktion suurin ja pienin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t128" class="collapse">
+                        <p>
+                            Tehtävänä on tutkia, onko funktiolla
+                            $$
+                            g(x) = (x-1)\sqrt{36-x^2}
+                            $$
+                            suurin ja pienin arvo, ja määrittää ne, jos ne ovat olemassa.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Mikä on funktion $g$ määrittelyjoukko?
+                            </li>
+                            <li>
+                                Onko funktiolla $g$ suurinta tai pienintä arvoa? Mitä ne ovat?
+                            </li>
+                        </ol>
+                        <p>
+                            Tarkista vastaustesi järkevyys piirtämällä funktion $g$ kuvaaja esimerkiksi Geogebralla.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t128_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t128_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Funktio $g$ on määritelty, jos ja vain jos juurrettava on epänegatiivinen eli $-6 \leq x \leq 6$.
+                                </li>
+                                <li> 
+                                    Funktio $g$ on jatkuva suljetulla välillä $[-6,6]$ ja derivoituva avoimella välillä $-6 < x < 6$, joten <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssin</a> teoreeman 12 mukaan funktio $g$ saa suurimman ja pienimmän arvonsa derivaattafunktion nollakohdissa tai välin päätepisteissä.
+                                    <br>
+                                    Tulon derivointisäännön avulla derivaattafunktioksi saadaan
+                                    $$
+                                    g'(x) = \frac{-x^2+x}{\sqrt{36-x^2}} + \sqrt{36 - x^2}.
+                                    $$
+                                    Derivaattafunktion nollakohdat löydetään ratkaisemalla yhtälö $g'(x) = 0$:
+                                    \begin{align*}
+                                    \frac{-x^2+x}{\sqrt{36-x^2}} &+ \sqrt{36 - x^2} = 0 \\[2mm]
+                                    \sqrt{36 - x^2} &= \frac{x^2-x}{\sqrt{36-x^2}}  \\[2mm]
+                                    36-x^2 &= x^2 - x \\[2mm]
+                                    -2x^2 + x + 36 &= 0 \\[2mm]
+                                    \end{align*}
+                                    Toisen asteen yhtälön ratkaisukaavalla saadaan ratkaisut $x_1 = \frac{9}{2}$ ja $x_2 = -4$.
+                                    <br>
+                                    Lasketaan funktion arvo määrittelyvälin päätepisteissä ja derivaatan nollakohdissa:
+                                    \begin{align*}
+                                    g(-6) &= 0 \\[1mm]
+                                    g(-4) &= -5\sqrt{20} = -10\sqrt{5} \\[1mm]
+                                    g\left(\frac{9}{2}\right) &= \frac{7}{2}\sqrt{\frac{63}{4}} = \frac{7}{4}\sqrt{63} \\[1mm]
+                                    g(6) &= 0
+                                    \end{align*}
+                                    Funktion $g$ suurin arvo on siis 
+                                    $$
+                                    g\left(\frac{9}{2}\right) = \frac{7}{4}\sqrt{63} \approx 13{,}9
+                                    $$
+                                    ja pienin arvo on 
+                                    $$g(-4) = -10\sqrt{5} \approx -22{,}4.$$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t131-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t131">
+                                Juurifunktion suurin ja pienin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t131" class="collapse">
+                        <p>
+                            Pitkin $x$-akselia kulkee polku. Muu koordinaatisto on hankalakulkuista metsää, jossa kilometriä kohti kuluu kaksi kertaa niin paljon aikaa kuin polkua pitkin juostessa. Tehtävänä on selvittää, mikä on paras reitti suunnistajalle, joka lähtee pisteestä $(6,0)$ pisteessä $(0,3)$ olevalle rastille.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Piirrä tilanteesta mallikuva. 
+                            </li>
+                            <li>
+                                Ajatellaan, että suunnistaja poistuu polulta pisteessä $(x,0)$, joka sijaitsee $x$-akselilla jossain origon ja pisteen $(6,0)$ välillä. Ilmaise suunnistajan kulkema matka muuttujan $x$ avulla. 
+                            </li>
+                            <li>
+                                Lisää lausekkeeseen sopivat kertoimet, jotta se kuvaa suunnistajan matkaan käyttämää aikaa.
+                            </li>
+                            <li>
+                                Selvitä derivaatan avulla, mikä on paras reitti.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t131_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t131_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Mallikuva:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva032.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Matkan ilmaisee funktio
+                                    $$
+                                    f(x) = (6-x) + \sqrt{x^2 + 9},
+                                    $$
+                                    jossa $0 \leq x \leq 6$.
+                                </li>
+                                <li>
+                                    Olkoon $a > 0$ on suunnistajan juoksutahti polulla (min / km). Juoksutahti metsässä on silloin $2a$ ja matkaan kuluvaa aikaa kuvaa funktio
+                                    $$
+                                    g(x) = a(6-x) + 2a\sqrt{x^2 + 9}.
+                                    $$
+                                    (Vakio $a$ ei vaikuta lopputulokseen, joten kertoimina voi käyttää pelkkiä lukuja 1 ja 2.) 
+                                </li>
+                                <li> 
+                                    Funktion $g$ pienin arvo löytyy tarkasteluvälin päätepisteestä tai derivaatan nollakohdasta.
+                                    Derivaattafunktioksi saadaan
+                                    \begin{align*}
+                                    g'(x) &= -a +\frac{2ax}{\sqrt{x^2 + 9}} 
+                                    \end{align*}
+                                    Derivaattafunktiolla on yksi nollakohta: $x = \sqrt{3}$.
+                                    Lasketaan derivaattafunktion arvo sen eri puolilla:
+                                    \begin{align*}
+                                    g'(1) &= -a + \frac{2}{\sqrt{10}}a < 0  \\[2mm]
+                                    g'(4) &= -a + \frac{8}{5}a > 0 
+                                    \end{align*}
+                                    Kulkukaaviosta nähdään, että funktio $g$ saa kohdassa $x = \sqrt{3}$ pienimmän arvonsa: 
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva031.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                    <br>
+                                    Suunnistajan kannattaa siis kääntyä polulta rastille pisteessä $(\sqrt{3},0)$, kun hän on edennyt polkua pitkin matkan $6-\sqrt{3} \approx 4{,}3$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jos tarkasteluväli ei ole suljettu, suurimman ja pienimmän arvon olemassaolon selvittäminen voi vaatia enemmän työtä. 
                 </p>
                 <p>
                     Tarkastellaan esimerkiksi funktiota 
@@ -2177,80 +2334,6 @@ topnav: maa8
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="MAA8t128-ex">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t128">
-                                Juurifunktion suurin ja pienin arvo
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAA8t128" class="collapse">
-                        <p>
-                            Tehtävänä on tutkia, onko funktiolla
-                            $$
-                            g(x) = (x-1)\sqrt{36-x^2}
-                            $$
-                            suurin ja pienin arvo, ja määrittää ne, jos ne ovat olemassa.
-                        </p>
-                        <ol class="a">
-                            <li> 
-                                Mikä on funktion $g$ määrittelyjoukko?
-                            </li>
-                            <li>
-                                Onko funktiolla $g$ suurinta tai pienintä arvoa? Mitä ne ovat?
-                            </li>
-                        </ol>
-                        <p>
-                            Tarkista vastaustesi järkevyys piirtämällä funktion $g$ kuvaaja esimerkiksi Geogebralla.
-                        </p>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t128_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="MAA8t128_v" class="collapse">
-                            <ol class="a">
-                                <li> 
-                                    Funktio $g$ on määritelty, jos ja vain jos juurrettava on epänegatiivinen eli $-6 \leq x \leq 6$.
-                                </li>
-                                <li> 
-                                    Funktio $g$ on jatkuva suljetulla välillä $[-6,6]$ ja derivoituva avoimella välillä $-6 < x < 6$, joten <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssin</a> teoreeman 12 mukaan funktio $g$ saa suurimman ja pienimmän arvonsa derivaattafunktion nollakohdissa tai välin päätepisteissä.
-                                    <br>
-                                    Tulon derivointisäännön avulla derivaattafunktioksi saadaan
-                                    $$
-                                    g'(x) = \frac{-x^2+x}{\sqrt{36-x^2}} + \sqrt{36 - x^2}.
-                                    $$
-                                    Derivaattafunktion nollakohdat löydetään ratkaisemalla yhtälö $g'(x) = 0$:
-                                    \begin{align*}
-                                    \frac{-x^2+x}{\sqrt{36-x^2}} &+ \sqrt{36 - x^2} = 0 \\[2mm]
-                                    \sqrt{36 - x^2} &= \frac{x^2-x}{\sqrt{36-x^2}}  \\[2mm]
-                                    36-x^2 &= x^2 - x \\[2mm]
-                                    -2x^2 + x + 36 &= 0 \\[2mm]
-                                    \end{align*}
-                                    Toisen asteen yhtälön ratkaisukaavalla saadaan ratkaisut $x_1 = \frac{9}{2}$ ja $x_2 = -4$.
-                                    <br>
-                                    Lasketaan funktion arvo määrittelyvälin päätepisteissä ja derivaatan nollakohdissa:
-                                    \begin{align*}
-                                    g(-6) &= 0 \\[1mm]
-                                    g(-4) &= -5\sqrt{20} = -10\sqrt{5} \\[1mm]
-                                    g\left(\frac{9}{2}\right) &= \frac{7}{2}\sqrt{\frac{63}{4}} = \frac{7}{4}\sqrt{63} \\[1mm]
-                                    g(6) &= 0
-                                    \end{align*}
-                                    Funktion $g$ suurin arvo on siis 
-                                    $$
-                                    g\left(\frac{9}{2}\right) = \frac{7}{4}\sqrt{63} \approx 13{,}9
-                                    $$
-                                    ja pienin arvo on 
-                                    $$g(-4) = -10\sqrt{5} \approx -22{,}4.$$
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
                 <div class="tehtava" id="MAA8t129-ex">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
@@ -2317,83 +2400,6 @@ topnav: maa8
                                     &= \frac{3\sqrt[3]{2}}{2} 
                                     \approx 1{,}89.
                                     \end{align*}
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="MAA8t131-ex">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t131">
-                                Juurifunktion suurin ja pienin arvo
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAA8t131" class="collapse">
-                        <p>
-                            Pitkin $x$-akselia kulkee polku. Muu koordinaatisto on hankalakulkuista metsää, jossa kilometriä kohti kuluu kaksi kertaa niin paljon aikaa kuin polkua pitkin juostessa. Tehtävänä on selvittää, mikä on paras reitti suunnistajalle, joka lähtee pisteestä $(6,0)$ pisteessä $(0,3)$ olevalle rastille.
-                        </p>
-                        <ol class="a">
-                            <li> 
-                                Piirrä tilanteesta mallikuva. 
-                            </li>
-                            <li>
-                                Ajatellaan, että suunnistaja poistuu polulta pisteessä $(x,0)$, joka sijaitsee $x$-akselilla jossain origon ja pisteen $(6,0)$ välillä. Ilmaise suunnistajan kulkema matka muuttujan $x$ avulla. 
-                            </li>
-                            <li>
-                                Lisää lausekkeeseen sopivat kertoimet, jotta se kuvaa suunnistajan matkaan käyttämää aikaa.
-                            </li>
-                            <li>
-                                Selvitä derivaatan avulla, mikä on paras reitti.
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t131_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="MAA8t131_v" class="collapse">
-                            <ol class="a">
-                                <li>
-                                    Mallikuva:
-                                    <br>
-                                    <img src="/kurssit/maa8/kuvat/MAA8kuva032.png" style="max-width: 100%; width: auto; height: auto;"/>
-                                </li>
-                                <li> 
-                                    Matkan ilmaisee funktio
-                                    $$
-                                    f(x) = (6-x) + \sqrt{x^2 + 9},
-                                    $$
-                                    jossa $0 \leq x \leq 6$.
-                                </li>
-                                <li>
-                                    Olkoon $a > 0$ on suunnistajan juoksutahti polulla (min / km). Juoksutahti metsässä on silloin $2a$ ja matkaan kuluvaa aikaa kuvaa funktio
-                                    $$
-                                    g(x) = a(6-x) + 2a\sqrt{x^2 + 9}.
-                                    $$
-                                    (Vakio $a$ ei vaikuta lopputulokseen, joten kertoimina voi käyttää pelkkiä lukuja 1 ja 2.) 
-                                </li>
-                                <li> 
-                                    Funktion $g$ pienin arvo löytyy tarkasteluvälin päätepisteestä tai derivaatan nollakohdasta.
-                                    Derivaattafunktioksi saadaan
-                                    \begin{align*}
-                                    g'(x) &= -a +\frac{2ax}{\sqrt{x^2 + 9}} 
-                                    \end{align*}
-                                    Derivaattafunktiolla on yksi nollakohta: $x = \sqrt{3}$.
-                                    Lasketaan derivaattafunktion arvo sen eri puolilla:
-                                    \begin{align*}
-                                    g'(1) &= -a + \frac{2}{\sqrt{10}}a < 0  \\[2mm]
-                                    g'(4) &= -a + \frac{8}{5}a > 0 
-                                    \end{align*}
-                                    Kulkukaaviosta nähdään, että funktio $g$ saa kohdassa $x = \sqrt{3}$ pienimmän arvonsa: 
-                                    <br>
-                                    <img src="/kurssit/maa8/kuvat/MAA8kuva031.png" style="max-width: 100%; width: auto; height: auto;"/>
-                                    <br>
-                                    Suunnistajan kannattaa siis kääntyä polulta rastille pisteessä $(\sqrt{3},0)$, kun hän on edennyt polkua pitkin matkan $6-\sqrt{3} \approx 4{,}3$.
                                 </li>
                             </ol>
                         </div>
