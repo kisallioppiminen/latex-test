@@ -2284,6 +2284,43 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    Seuraavan teoreeman avulla voidaan joissakin tilanteissa välttää juurilausekkeiden derivointi:
+                </p>
+            
+                <div class="theorem" id="">
+                    <h3>TEOREEMA</h3>
+                        <ul>
+                            <li> 
+                                Funktio $f(x) = \sqrt{v(x)}\,$ saa suurimman arvon kohdassa, jossa juurrettava $v(x)$ saa suurimman arvonsa, ja pienimmän arvon kohdassa, jossa juurrettava $v(x)$ saa pienimmän (epänegatiivisen) arvonsa. 
+                            </li>
+                            <li>  
+                                Funktio $g(x) = u(x)\sqrt{v(x)}$, missä $u(x) \geq 0$, saa suurimman arvon kohdassa, jossa funktio $h(x) = u(x)^2v(x)$ saa suurimman arvonsa, ja pienimmän arvon kohdassa, jossa funktio $h(x) = u(x)^2v(x)$ saa pienimmän (epänegatiivisen) arvonsa.
+                            </li>
+                        </ul>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Ennen tehtävää 1.26 osoitettiin, että neliöjuurifunktio on aidosti kasvava. Neliöjuuren arvo on siis sitä suurempi, mitä suurempi juurrettava on. 
+                            <br>
+                            Koska oletuksen mukaan $u(x) \geq 0$, niin voidaan kirjoittaa
+                            $$
+                            u(x) = \sqrt{u(x)^2}.
+                            $$
+                            (Asiaa on tutkittu <a href="http://kisallioppiminen.fi/kurssit/maa2/luku2/">MAA2-kurssin</a> tehtävässä 2.5.) Funktion $g$ lauseke saadaan sievennettyä neliöjuuren laskusääntöjen avulla:
+                            \begin{align*}
+                            g(x) &= u(x)\sqrt{v(x)} \\
+                            &= \sqrt{u(x)^2} \sqrt{v(x)} \\
+                            &= \sqrt{u(x)^2v(x)}.
+                            \end{align*}
+                            Viimeisestä muodosta havaitaan, että funktio $g$ saa suurimman arvon kohdassa, jossa funktio $h(x) = u(x)^2v(x)$ saa suurimman arvonsa, ja pienimmän arvon kohdassa, jossa funktio $h(x) = u(x)^2v(x)$ saa pienimmän (epänegatiivisen) arvonsa. Huomaa, että neliöjuuri ei ole määritelty, jos juurrettava on negatiivinen.
+                        </p> 
+                    </div>
+                </div>
+            </div>
+
+
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
                     Sulje kappale
