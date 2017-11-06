@@ -2410,6 +2410,83 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t131-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t131">
+                                Juurifunktion suurin ja pienin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t131" class="collapse">
+                        <p>
+                            Pitkin $x$-akselia kulkee polku. Muu koordinaatisto on hankalakulkuista metsää, jossa kilometriä kohti kuluu kaksi kertaa niin paljon aikaa kuin polkua pitkin juostessa. Tehtävänä on selvittää, mikä on paras reitti suunnistajalle, joka lähtee pisteestä $(6,0)$ pisteessä $(0,3)$ olevalle rastille.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Piirrä tilanteesta mallikuva. 
+                            </li>
+                            <li>
+                                Ajatellaan, että suunnistaja poistuu polulta pisteessä $(x,0)$, joka sijaitsee $x$-akselilla jossain origon ja pisteen $(6,0)$ välillä. Ilmaise suunnistajan kulkema matka muuttujan $x$ avulla. 
+                            </li>
+                            <li>
+                                Lisää lausekkeeseen sopivat kertoimet, jotta se kuvaa suunnistajan matkaan käyttämää aikaa.
+                            </li>
+                            <li>
+                                Selvitä derivaatan avulla, mikä on paras reitti.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t131_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t131_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Mallikuva:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva032.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Matkan ilmaisee funktio
+                                    $$
+                                    f(x) = (6-x) + \sqrt{x^2 + 9},
+                                    $$
+                                    jossa $0 \leq x \leq 6$.
+                                </li>
+                                <li>
+                                    Olkoon $a > 0$ on suunnistajan juoksutahti polulla (min / km). Juoksutahti metsässä on silloin $2a$ ja matkaan kuluvaa aikaa kuvaa funktio
+                                    $$
+                                    g(x) = a(6-x) + 2a\sqrt{x^2 + 9}.
+                                    $$
+                                    (Vakio $a$ ei vaikuta lopputulokseen, joten kertoimina voi käyttää pelkkiä lukuja 1 ja 2.) 
+                                </li>
+                                <li> 
+                                    Funktion $g$ pienin arvo löytyy tarkasteluvälin päätepisteestä tai derivaatan nollakohdasta.
+                                    Derivaattafunktioksi saadaan
+                                    \begin{align*}
+                                    g'(x) &= -a +\frac{2ax}{\sqrt{x^2 + 9}} 
+                                    \end{align*}
+                                    Derivaattafunktiolla on yksi nollakohta: $x = \sqrt{3}$.
+                                    Lasketaan derivaattafunktion arvo sen eri puolilla:
+                                    \begin{align*}
+                                    g'(1) &= -a + \frac{2}{\sqrt{10}}a < 0  \\
+                                    g'(4) &= -a + \frac{8}{5}a > 0 
+                                    \end{align*}
+                                    Kulkukaaviosta nähdään, että funktio $g$ saa kohdassa $x = \sqrt{3}$ pienimmän arvonsa: 
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva031.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                    <br>
+                                    Suunnistajan kannattaa siis kääntyä polulta rastille, kun hän on edennyt polkua pitkin matkan $6-\sqrt{3} \approx 4{,}3$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
                     Sulje kappale
