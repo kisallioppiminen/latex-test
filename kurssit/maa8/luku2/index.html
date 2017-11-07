@@ -484,6 +484,68 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="tehtava" id="MAA8s3t107">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA8s3t107">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA8s3t107">
+                    <p>
+                        Eräässä huippuyliopistossa on 5 000 opiskelijaa, joista yksi sairastuu hiihtolomalta palattuaan influenssaan. Virus alkaa levitä kampuksella, ja siihen sairastuneiden opiskelijoiden lukumäärää kuvaa funktio
+                        $$
+                        f(t) = \frac{5000}{1 + 4999e^{-0{,}8t}},
+                        $$
+                        jossa aika $t \geq 0$ lasketaan vuorokausina ensimmäisestä sairastumisesta alkaen.
+                    </p> 
+                    <ol class="a">
+                        <li>
+                            Luennot peruutetaan, jos yli 50 % opiskelijoista on sairaana. Kuinka monen vuorokauden kuluttua ensimmäisestä sairastumisesta näin tapahtuu?
+                        </li>
+                        <li>
+                            Näytä, että $f(t)$ on kasvava funktio, kun $t > 0$.
+                        </li>
+                        <li>
+                            Laske 
+                            $$
+                            \lim_{t \rightarrow \infty} f(t).
+                            $$
+                            [Pitkä K2012/8]
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t107_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA8s3t107_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                11 vuorokauden kuluttua:
+                                $$
+                                t > \frac{\ln 4999}{0{,}8} \approx 10{,}6.
+                                $$
+                            </li>
+                            <li>
+                                Derivaattafunktio
+                                $$
+                                f'(t) = \frac{19996000e^{-0{,}8t}}{(1 + 4999e^{-0{,}8t})^2} > 0,
+                                $$
+                                joten funktio $f$ on aidosti kasvava.
+                            </li>
+                            <li>
+                                $$
+                                \lim_{t \rightarrow \infty} f(t) = \frac{5000}{1 + 0} = 5000.
+                                $$
+                                [Pitkä K2012/8]
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku2-tehtavasarja3">
                     Sulje kappale
