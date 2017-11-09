@@ -2762,8 +2762,8 @@ topnav: maa8
                         Kangas on muodoltaan neliö, jonka sivujen pituudet ovat 8,0 metriä. Neliön nurkista leikataan pois samanlaiset keskipisteeseen ulottuvat palat. Jäljelle jäävä kangas ommellaan säännöllisen nelisivuisen pyramidin muotoisen teltan katoksi.
                     </p>
                         <ol class="a">
-                            <li> Määritä leikkauskohtien etäisyys nurkista niin, että teltan tilavuus on mahdollisimman suuri. </li>
-                            <li> Kuinka suuri on tällaisessa teltassa se lattiapinta-ala, jossa 180 cm pitkä henkilö mahtuu seisomaan suorana? </li>
+                            <li> Määritä leikkauskohtien etäisyys nurkista niin, että teltan tilavuus on mahdollisimman suuri. Anna vastauksen tarkka arvo sekä likiarvon kolmen merkitsevän numeron tarkkuudella. </li>
+                            <li> Kuinka suuri on tällaisessa teltassa se lattiapinta-ala, jossa 180 cm pitkä henkilö mahtuu seisomaan suorana? Anna vastaus kahden merkitsevän numeron tarkkuudella. </li>
                         </ol>
                         <img src="/kurssit/maa8/kuvat/MAA8kuva037.png" style="max-width: 100%; width: auto; height: auto;"/>
                     <h2>
@@ -2773,8 +2773,26 @@ topnav: maa8
                     </h2>
                     <div id="MAA8s2t107_v" class="collapse">
                         <ol>
-                            <li> Määritä leikkauskohtien etäisyys nurkista niin, että teltan tilavuus on mahdollisimman suuri. </li>
-                            <li> Kuinka suuri on tällaisessa teltassa se lattiapinta-ala, jossa 180 cm pitkä henkilö mahtuu seisomaan suorana? </li>
+                            <li> 
+                                Leikkauskohdan etäisyys nurkasta on 
+                                $$
+                                \left(4 - \frac{4}{3}\sqrt{6}\right) \text{ m} \approx 0{,}734 \text{ m.}
+                                $$
+                                Vinkki: Teltan tilavuutta voi kuvata esimerkiksi funktiolla
+                                $$
+                                f(x) = \frac{1}{3}(8-2x)^2\sqrt{8x-x^2},
+                                $$
+                                missä $x$ on kysytty leikkauskohdan etäisyys kankaan nurkasta. Pohjan ala on $(8-2x)^2$ ja korkeus saadaan yhtälöstä $$
+                                h^2 = 4^2 - (4-x)^2.
+                                $$
+                            </li>
+                            <li>  
+                                Kysytty lattiapinta-ala on noin $0{,}52 \text{ m}^2$. 
+                                <br>
+                                Vinkki: teltan poikkileikkauksen yhdenmuotoiset kolmiot:
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva038.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
                         </ol>
                     </div>
                 </div>
