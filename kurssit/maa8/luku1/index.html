@@ -2841,90 +2841,6 @@ topnav: maa8
                 </div>
             </div>
 
-            <div class="tehtava" id="MAA8s2t116">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA8s2t116">
-                            Juurifunktion derivaatta
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA8s2t116">
-                    <p>
-                        Pallon tilavuus on alussa nolla ja kasvaa sen jälkeen tasaisella nopeudella $120 \text{ cm}^3$ sekunnissa. 
-                    </p>
-                    <ol class="a">
-                        <li>
-                            Muodosta funktio $V(t)$, joka ilmaisee pallon tilavuuden $t$ sekunnin kuluttua.
-                        </li>
-                        <li>
-                            Jos tunnet pallon tilavuuden, miten saat selville pallon säteen? Muodosta funktio $r(t)$, joka ilmaisee pallon säteen $t$ sekunnin kuluttua.
-                            <br>
-                            Vinkki: kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa3/luku3/">MAA3-kurssin</a> teoreema 21.
-                        </li>
-                        <li>
-                            Millä nopeudella pallon säde kasvaa 2 sekunnin kuluttua? Entä 4 sekunnin kuluttua? Anna vastaukset millimetrin tarkkuudella.
-                        </li>
-                        <li>
-                            Millä nopeudella pallon pinta-ala kasvaa 0,5 sekunnin kuluttua? Entä 3 sekunnin kuluttua? Anna vastaukset neliömillimetrin tarkkuudella. 
-                            <br>
-                            Vinkki: <a href="http://kisallioppiminen.fi/kurssit/maa3/luku3/">MAA3-kurssin</a> teoreema 21 ja <a href="http://kisallioppiminen.fi/kurssit/maa7/luku3/">MAA7-kurssin</a> teoreema 23.
-                        </li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t116_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA8s2t116_v" class="collapse">
-                        <ol class="a">
-                            <li>
-                                $V(t) = 120t$.
-                            </li>
-                            <li>
-                                Yhtälöstä
-                                $$V = \frac{4\pi r^3}{3}$$ saadaan ratkaistua
-                                $$
-                                r = \sqrt[3]{\frac{3V}{4\pi}}.
-                                $$
-                                Siten 
-                                $$
-                                r(t) = \sqrt[3]{\frac{90t}{\pi}}.
-                                $$
-                            </li>
-                            <li>
-                                Derivaattafunktio on 
-                                $$
-                                r'(t) = \frac{30}{\pi}\sqrt[3]{\frac{\pi^2}{8100t^2}}.
-                                $$
-                                Siten 
-                                \begin{align*}
-                                r'(2) &\approx 0{,}6 \text{ cm/s} \\
-                                r'(4) &\approx 0{,}4 \text{ cm/s.}
-                                \end{align*}
-                            </li>
-                            <li>
-                                Pinta-alan ilmaisee funktio
-                                $$
-                                A(t) = 4\pi (r(t))^2.
-                                $$
-                                Sen derivaattafunktio on 
-                                \begin{align*}
-                                A'(t) &= 4\pi\cdot 2r(t) \cdot r'(t) \\[2mm]
-                                &=8\pi \sqrt[3]{\frac{90t}{\pi}} \frac{30}{\pi}\sqrt[3]{\frac{\pi^2}{8100t^2}} \\[2mm]
-                                &= 240 \sqrt[3]{\frac{\pi}{90t}}.
-                                \end{align*}
-                                Siten 
-                                \begin{align*}
-                                A'(2) &\approx 62{,}25 \text{ cm}^2/\text{s} \\
-                                A'(4) &\approx 49{,}41 \text{ cm}^2/\text{s.}
-                                \end{align*}
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
             <div class="tehtava" id="MAA8s2t101">
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
@@ -3720,6 +3636,90 @@ topnav: maa8
                         <p>
                             Poisleikatun sektorin keskuskulma on noin $66^\circ$.
                         </p>     
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA8s2t116">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA8s2t116">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA8s2t116">
+                    <p>
+                        Pallon tilavuus on alussa nolla ja kasvaa sen jälkeen tasaisella nopeudella $120 \text{ cm}^3$ sekunnissa. 
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Muodosta funktio $V(t)$, joka ilmaisee pallon tilavuuden $t$ sekunnin kuluttua.
+                        </li>
+                        <li>
+                            Jos tunnet pallon tilavuuden, miten saat selville pallon säteen? Muodosta funktio $r(t)$, joka ilmaisee pallon säteen $t$ sekunnin kuluttua.
+                            <br>
+                            Vinkki: kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa3/luku3/">MAA3-kurssin</a> teoreema 21.
+                        </li>
+                        <li>
+                            Millä nopeudella pallon säde kasvaa 2 sekunnin kuluttua? Entä 4 sekunnin kuluttua? Anna vastaukset millimetrin tarkkuudella.
+                        </li>
+                        <li>
+                            Millä nopeudella pallon pinta-ala kasvaa 0,5 sekunnin kuluttua? Entä 3 sekunnin kuluttua? Anna vastaukset neliömillimetrin tarkkuudella. 
+                            <br>
+                            Vinkki: <a href="http://kisallioppiminen.fi/kurssit/maa3/luku3/">MAA3-kurssin</a> teoreema 21 ja <a href="http://kisallioppiminen.fi/kurssit/maa7/luku3/">MAA7-kurssin</a> teoreema 23.
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t116_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA8s2t116_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $V(t) = 120t$.
+                            </li>
+                            <li>
+                                Yhtälöstä
+                                $$V = \frac{4\pi r^3}{3}$$ saadaan ratkaistua
+                                $$
+                                r = \sqrt[3]{\frac{3V}{4\pi}}.
+                                $$
+                                Siten 
+                                $$
+                                r(t) = \sqrt[3]{\frac{90t}{\pi}}.
+                                $$
+                            </li>
+                            <li>
+                                Derivaattafunktio on 
+                                $$
+                                r'(t) = \frac{30}{\pi}\sqrt[3]{\frac{\pi^2}{8100t^2}}.
+                                $$
+                                Siten 
+                                \begin{align*}
+                                r'(2) &\approx 0{,}6 \text{ cm/s} \\
+                                r'(4) &\approx 0{,}4 \text{ cm/s.}
+                                \end{align*}
+                            </li>
+                            <li>
+                                Pinta-alan ilmaisee funktio
+                                $$
+                                A(t) = 4\pi (r(t))^2.
+                                $$
+                                Sen derivaattafunktio on 
+                                \begin{align*}
+                                A'(t) &= 4\pi\cdot 2r(t) \cdot r'(t) \\[2mm]
+                                &=8\pi \sqrt[3]{\frac{90t}{\pi}} \frac{30}{\pi}\sqrt[3]{\frac{\pi^2}{8100t^2}} \\[2mm]
+                                &= 240 \sqrt[3]{\frac{\pi}{90t}}.
+                                \end{align*}
+                                Siten 
+                                \begin{align*}
+                                A'(2) &\approx 62{,}25 \text{ cm}^2/\text{s} \\
+                                A'(4) &\approx 49{,}41 \text{ cm}^2/\text{s.}
+                                \end{align*}
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
