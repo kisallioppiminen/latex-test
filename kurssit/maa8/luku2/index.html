@@ -109,11 +109,11 @@ topnav: maa8
                             </li>
                         </ol>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t201_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t101_v" class="collapse">
+                        <div id="MAA8t201_v" class="collapse">
                            <ol class="a">
                                 <li> 
                                     $a > 1$
@@ -126,6 +126,75 @@ topnav: maa8
                                 </li>
                                 <li>
                                     Eksponenttifunktiot saavat vain positiivisia arvoja.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Eksponenttifunktioiden avulla voidaan kuvata eksponentiaalista kasvua ja vähenemistä. Nämä ovat ilmiöitä, joissa jokin asia kasvaa tai vähenee niin, että se säännöllisin väliajoin tulee $a$-kertaiseksi aina edelliseen tilanteeseen verrattuna. Seuraavissa tehtävissä tutustutaan joihinkin esimerkkeihin.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t202-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t202">
+                                Eksponenttifunktiot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t202" class="collapse">
+                        <p>
+                            Intian väliluku oli noin 616 miljoonaa vuonna 1979 ja vuotta myöhemmin noin 630 miljoonaa. Tuolloin laadittiin väestöennuste vuodelle 2000 olettaen, että vuotuinen väestönkasvuprosentti pysyy samana. 
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Mikä oli Intian vuotuinen väestönkasvuprosentti 1970-luvun lopussa? Anna vastaus kolmen merkitsevän numeron tarkkuudella.
+                            </li>
+                            <li> 
+                                Muodosta funktio $f(t)$, joka antaa ennusteen Intian väkiluvulle, kun vuodesta 1979 on kulunut $t$ vuotta. Miten tämä funktio liittyy eksponenttifunktioihin?
+                            </li>
+                            <li> 
+                                Mikä Intian väkiluku oli ennusteen mukaan vuonna 2000? 
+                            </li>
+                            <li>
+                                Intian väkiluku oli vuonna 2013 noin 1 221 miljoonaa. Kuinka monta prosenttia suurempi tai pienempi oli vuodelle 2013 ennustettu väkiluku?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t202_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t202_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Vuotuinen väestönkasvu oli noin 2,27 %.
+                                </li>
+                                <li> 
+                                    Ennuste saadaan funktiosta
+                                    $$
+                                    f(t) = 616 \cdot 10^6 \cdot \left(\frac{630}{616}\right)^t.
+                                    $$
+                                    Tässä vuosittaiselle kasvukertoimelle on käytetty tarkkaa arvoa, jotta ennusteeseen tulee mahdollisimman vähän pyöristysvirhettä. Huomaa kuitenkin, että vuosittainen kasvukerroin on 
+                                    $$
+                                    \frac{630}{616} \approx 1{,}0227.
+                                    $$
+                                    Funktio $f$ on eksponenttifunktio vakiolla $616 \cdot 10^6$ kerrottuna. Kantalukuna on kasvukerroin 
+                                    $$
+                                    \frac{630}{616}.
+                                    $$
+                                </li>
+                                <li> 
+                                    Ennusteen mukaan Intian väkiluku vuonna 2000 oli $f(21) \approx 988$ miljoonaa.
+                                </li>
+                                <li>
+                                    Ennusteen mukaan Intian väkiluku vuonna 2013 oli $f(34) \approx 1\,323$ miljoonaa. Tämä oli noin 8,27 % suurempi kuin todellinen väkiluku.
                                 </li>
                             </ol>
                         </div>
