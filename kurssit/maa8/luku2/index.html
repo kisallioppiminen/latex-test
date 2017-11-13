@@ -7,7 +7,7 @@ topnav: maa8
 ---
 
 <input type="hidden" id="chapterNumber" name="theoremStart" value="2"/>
-<input type="hidden" id="theoremStart" value="1"/>
+<input type="hidden" id="theoremStart" value="6"/>
 
 {% include bottomnav.html %}
 
@@ -58,9 +58,81 @@ topnav: maa8
             <div class="teoria">
 
                 <p>
-                    
+                    Kurssissa <a href="http://kisallioppiminen.fi/kurssit/maa2/luku4/">MAA2</a> tutustuttiin niin sanottuihin potenssifunktioihin, jotka ovat muotoa $f(x) = x^n$, missä $n$ on positiivinen kokonaisluku. Tuttuja esimerkkejä potenssifunktioista ovat toisen asteen potenssifunktio $f(x) = x^2$:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva045.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    ja kolmannen asteen potenssifunktio $g(x) = x^3$:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva046.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Jos muuttuja vaihdetaan kantaluvun paikalta eksponentiksi, saadaan joukko funktioita, joita kutsutaan eksponenttifunktioiksi.
                 </p>
 
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: EKSPONENTTIFUNKTIO</h3>
+                    <p>
+                        Oletetaan, että $a \neq 1$ on positiivinen reaaliluku. Funktioita, jotka ovat muotoa $f(x) = a^x$, sanotaan <em>eksponenttifunktioiksi</em>.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="FirstEx">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t201">
+                                Eksponenttifunktiot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t201" class="collapse">
+                        <p>
+                            Tutki tämän <a href="https://ggbm.at/kYkBdgXF">Geogebra-havainnollistuksen</a> avulla, miltä erilaisten eksponenttifunktioiden kuvaajat näyttävät, ja vastaa seuraaviin kysymyksiin:
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Mikä ehto kantaluvun $a > 0$ pitää toteuttaa, jotta eksponenttifunktion $f(x) = a^x$ kuvaaja näyttää samantyyppiseltä kuin alla?
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva047.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                            <li> 
+                                Mikä ehto kantaluvun $a > 0$ pitää toteuttaa, jotta eksponenttifunktion $f(x) = a^x$ kuvaaja näyttää samantyyppiseltä kuin alla?
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva048.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                            <li> 
+                                Miksi funktiota $f(x) = 1^x$ ei yleensä kutsuta eksponenttifunktioksi? Mikä on sille osuvampi nimi?
+                            </li>
+                            <li>
+                                Millaisia arvoja eksponenttifunktiot saavat?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t101_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    $a > 1$
+                                </li>
+                                <li> 
+                                    $0 < a < 1$ 
+                                </li>
+                                <li> 
+                                    Funktio $f(x) = 1^x$ on vakiofunktio $x \mapsto 1$.
+                                </li>
+                                <li>
+                                    Eksponenttifunktiot saavat vain positiivisia arvoja.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#eksponentti1">
