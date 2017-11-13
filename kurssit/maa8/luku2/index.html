@@ -202,6 +202,80 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t203-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t203">
+                                Eksponenttifunktiot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t203" class="collapse">
+                        <p>
+                            Thsernobylin ydinvoimalaonnettomuudessa 26.4.1986 vapautui ilmaan mm. radioaktiivista cesiumia, jonka puoliintumisaika on noin 30 vuotta. Tämä tarkoittaa, että 30 vuoden aikana aina puolet jäljellä olevista cesium-atomeista hajoaa toisen alkuaineen atomeiksi. 
+                        </p>
+                        <p>
+                            Jäljellä olevan radioaktiivisen cesiumin suhteellista osuutta voidaan kuvata funktiolla
+                            $$
+                            f(t) = a^{\frac{t}{T}},
+                            $$
+                            missä muuttuja $t$ ilmaisee alkuhetkestä kuluneen ajan vuosina.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Tiedetään, että 30 vuoden kuluttua radioaktiivisesta cesiumista on jäljellä puolet eli
+                                $$
+                                f(30) = 0{,}5.
+                                $$
+                                Päättele tämän tiedon avulla, mitkä luvut pitää valita kantaluvuksi $a$ ja vakioksi $T$. 
+                                <br>
+                                Vinkki: voit kokeilla erilaisia ideoita ja katsoa, mikä antaa oikean tuloksen.
+                            </li>
+                            <li> 
+                                Kuinka suuri osuus radioaktiivisesta cesiumista on jäljellä 60 vuorokauden kuluttua? Tarkista, että saat saman tuloksen sekä päättelemällä että a-kohdan funktion avulla. 
+                            </li>
+                            <li> 
+                                Kuinka monta prosenttia radioaktiivisesta cesiumista on jäljellä 26.4.2025? Anna vastaus kahden merkitsevän numeron tarkkuudella.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t203_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t203_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kantaluku on $a = 0{,}5$ ja vakio $T = 30$. Siis
+                                    $$
+                                    f(t) = 0{,}5^{\frac{t}{30}},
+                                    $$
+                                    missä $t$ on kulunut aika vuosina.
+                                </li>
+                                <li> 
+                                    Kun 60 vuotta on kulunut, cesiumin määrä on ehtinyt puoliintua kaksi kertaa, joten jäljellä on neljäsosa.
+                                    $$
+                                    f(60) = 0{,}5^{\frac{60}{30}} = 0{,}5^2 = 0{,}25.
+                                    $$
+                                </li>
+                                <li> 
+                                    Vuosia ehtii kulua
+                                    $$
+                                    2025-1986 = 39,
+                                    $$
+                                    joten jäljellä olevan cesiumin osuus on 
+                                    $$
+                                    f(39) = 0{,}5^{\frac{39}{30}} \approx 0{,}41
+                                    $$
+                                    eli noin 41 %.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#eksponentti1">
                     Sulje kappale
