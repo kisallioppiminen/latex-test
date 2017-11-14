@@ -333,6 +333,30 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="teoria">
+
+                <div class="theorem" id="EKSPONENTTIFUNKTIOT">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että $k \neq 1$ on positiivinen reaaliluku. Eksponenttifunktion
+                        $$
+                        f(x) = k^x
+                        $$  
+                        määrittelyjoukko on koko lukusuora $\R$ ja arvojoukko on väli $\pa 0, \infty \pe$. 
+                        <br>
+                        Jos kantaluku $k > 1$, eksponenttifunktio on aidosti kasvava:
+                        <br>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva049b.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        Jos kantaluku $0 < k < 1$, eksponenttifunktio on aidosti vähenevä:
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva050b.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#eksponentti1">
                     Sulje kappale
@@ -349,16 +373,43 @@ topnav: maa8
                 </a>
             </h1>
         </header>
-        <div id="eksponentti2" class="collapse">
+        <div id="eksponentti2" class="collapse"> -->
             <div class="teoria">
 
                 <p>
-                    
+                    Kun tutkitaan, missä kohdassa eksponenttifunktio saa tietyn arvon, päädytään ratkaisemaan niin sanottu eksponenttiyhtälö. Esimerkiksi alla olevasta eksponenttifunktion $f(x) = 2^x$ kuvaajasta nähdään, että yhtälöllä 
+                    $$
+                    2^x = 3
+                    $$
+                    on täsmälleen yksi ratkaisu:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva051.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Ratkaisua, joka on merkitty kuvaan kirjaimella $b$, sanotaan luvun 3 kaksikantaiseksi logaritmiksi kuten kurssilla <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1</a> opittiin. Siis
+                    $$
+                    2^x = 3, \text{ jos ja vain jos } x = \log_2(3).
+                    $$
                 </p>
 
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: LOGARITMI</h3>
+                    <p>
+                        Oletetaan, että kantaluku $k$ on positiivinen ja $k \neq 1$. Positiivisen luvun $a$ <em>$k$-kantainen logaritmi</em> tarkoittaa yhtälön 
+                        $$k^x = a$$
+                        ratkaisua. Sitä merkintään $\log_k(a)$.
+                    </p>
+                </div>
+
+                <p>
+                    Logaritmin merkintää käyttäen edellinen kuva näyttää tältä:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva052.png" style="max-width: 100%; width: auto; height: auto;"/>
+                </p>
+
+            </div>            
 
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#eksponentti2">
+                <a data-toggle="collapse" class="collapsed" data-target="#eksponentti1">
                     Sulje kappale
                 </a>
             </div>
