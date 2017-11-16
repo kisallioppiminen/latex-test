@@ -903,6 +903,70 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    Kun eksponenttifunktion derivaattafunktio nyt tunnetaan, voidaan entistä useampien funktioiden kulkua tutkia derivaatan avulla kuten <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssilla</a> opittiin. Tätä harjoitellaan seuraavassa tehtävässä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t212-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t212">
+                                Eksponenttifunktion derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t212" class="collapse">
+                        <p>
+                            Tehtävänä on osoittaa, että käyrä $y = e^x - x - 1$ on suoran $2x - 2y - 1 = 0$ yläpuolella.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Muokkaa suoran yhtälö muotoon $y = kx + h$.
+                            </li>
+                            <li> 
+                                Mikä ehto lausekkeiden $e^x - x - 1$ ja $kx + h$ pitää toteuttaa, jotta käyrä on suoran yläpuolella? 
+                            </li>
+                            <li> 
+                                Muodosta sopiva funktio ja määritä sen pienin arvo. Päättele tästä, että b-kohdan ehto toteutuu.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t212_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t212_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $y = x - \frac{1}{2}$. 
+                                </li>
+                                <li> 
+                                    $e^x - x - 1 > x - \frac{1}{2}$ kaikilla muuttujan $x$ arvoilla.
+                                </li>
+                                <li> 
+                                    Funktioksi voidaan valita 
+                                    $$
+                                    f(x) = e^x - 2x - \frac{1}{2}.
+                                    $$
+                                    Sen derivaattafunktiolla
+                                    $$
+                                    f'(x) = e^x - 2
+                                    $$
+                                    on yksi nollakohta $x = \ln 2$.
+                                    Kulkukaaviosta nähdään, että funktio $f$ saa tässä pienimmän arvonsa
+                                    $f(\ln 2) = \frac{3}{2} - 2\ln 2 \approx 0{,}11 > 0.$
+                                    Siis $f(x) > 0$ kaikilla muuttujan $x$ arvoilla, joten 
+                                    $e^x - x - 1 > x - \frac{1}{2}$ kaikilla muuttujan $x$ arvoilla.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#eksponentti4">
                     Sulje kappale
