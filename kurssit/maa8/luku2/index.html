@@ -903,6 +903,64 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t213-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t213">
+                                Eksponenttifunktion derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t213" class="collapse">
+                        <p>
+                            Eksponenttifunktion $f(x) = e^x$ kuvaajalle piirretään origon kautta kulkeva tangentti. Tehtävänä on selvittää, missä pisteessä tangentti sivuaa kuvaajaa.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Piirrä tilanteesta mallikuva.
+                            </li>
+                            <li> 
+                                Mitä voit päätellä tangentin yhtälöstä sen perusteella, että tangentti kulkee origon kautta? 
+                            </li>
+                            <li> 
+                                Merkitään sivuamispisteen $x$-koordinaattia kirjaimella $a$. Mikä on sivuamispisteen $y$-koordinaatti? Entä mikä on tangentin kulmakerroin?
+                            </li>
+                            <li>
+                                Sivuamispisteen koordinaatit toteuttavat tangenttisuoran yhtälön. Muodosta tämän tiedon avulla sopiva yhtälö ja selvitä, missä pisteessä tangentti sivuaa kuvaajaa.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t213_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t213_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva055.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Tangentin yhtälö on muotoa $y = kx$ eli vakiotermi $h = 0$.
+                                </li>
+                                <li> 
+                                    Sivuamispisteen $y$-koordinaatti on funktion arvo $f(a) = e^a$. Tangentin kulmakerroin on derivaatan arvo $f'(a) = e^a$.
+                                </li>
+                                <li>
+                                    Kun yhtälöön 
+                                    $$y = kx$$
+                                    sijoitetaan $y = e^a$, $k = e^a$ ja $x = a$, saadaan yhtälö
+                                    $$
+                                    e^a = e^a\cdot a,
+                                    $$
+                                    josta saadaan ratkaistua $a = 1$. Sivuamispiste on siis $(1,e)$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="teoria">
                 <p>
                     Kun eksponenttifunktion derivaattafunktio nyt tunnetaan, voidaan entistä useampien funktioiden kulkua tutkia derivaatan avulla kuten <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssilla</a> opittiin. Tätä harjoitellaan seuraavassa tehtävässä.
@@ -963,64 +1021,6 @@ topnav: maa8
                                     $$f(\ln 2) = \frac{3}{2} - 2\ln 2 \approx 0{,}11 > 0.$$
                                     Siis $f(x) > 0$ kaikilla muuttujan $x$ arvoilla, joten 
                                     $$e^x - x - 1 > x - \frac{1}{2}$$ kaikilla muuttujan $x$ arvoilla.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="MAA8t213-ex">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t213">
-                                Eksponenttifunktion derivaatta
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAA8t213" class="collapse">
-                        <p>
-                            Eksponenttifunktion $f(x) = e^x$ kuvaajalle piirretään origon kautta kulkeva tangentti. Tehtävänä on selvittää, missä pisteessä tangentti sivuaa kuvaajaa.
-                        </p>
-                        <ol class="a">
-                            <li> 
-                                Piirrä tilanteesta mallikuva.
-                            </li>
-                            <li> 
-                                Mitä voit päätellä tangentin yhtälöstä sen perusteella, että tangentti kulkee origon kautta? 
-                            </li>
-                            <li> 
-                                Merkitään sivuamispisteen $x$-koordinaattia kirjaimella $a$. Mikä on sivuamispisteen $y$-koordinaatti? Entä mikä on tangentin kulmakerroin?
-                            </li>
-                            <li>
-                                Sivuamispisteen koordinaatit toteuttavat tangenttisuoran yhtälön. Muodosta tämän tiedon avulla sopiva yhtälö ja selvitä, missä pisteessä tangentti sivuaa kuvaajaa.
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t213_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="MAA8t213_v" class="collapse">
-                            <ol class="a">
-                                <li> 
-                                    <img src="/kurssit/maa8/kuvat/MAA8kuva055.png" style="max-width: 100%; width: auto; height: auto;"/>
-                                </li>
-                                <li> 
-                                    Tangentin yhtälö on muotoa $y = kx$ eli vakiotermi $h = 0$.
-                                </li>
-                                <li> 
-                                    Sivuamispisteen $y$-koordinaatti on funktion arvo $f(a) = e^a$. Tangentin kulmakerroin on derivaatan arvo $f'(a) = e^a$.
-                                </li>
-                                <li>
-                                    Kun yhtälöön 
-                                    $$y = kx$$
-                                    sijoitetaan $y = e^a$, $k = e^a$ ja $x = a$, saadaan yhtälö
-                                    $$
-                                    e^a = e^a\cdot a,
-                                    $$
-                                    josta saadaan ratkaistua $a = 1$. Sivuamispiste on siis $(1,e)$.
                                 </li>
                             </ol>
                         </div>
@@ -1152,7 +1152,7 @@ topnav: maa8
                                 Vinkki: Potenssien laskusääntöjä voit kerrata <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1-kurssin</a> teoreemasta 1.
                             </li>
                             <li> 
-                                Määritä eksponenttifunktion derivaattafunktio. 
+                                Määritä funktion $f$ derivaattafunktio. 
                                 <br>
                                 Vinkki: b-kohdan lauseke ja yhdistetyn funktion derivointisääntö.
                             </li>
@@ -1171,13 +1171,12 @@ topnav: maa8
                                     $$
                                 </li>
                                 <li>  
-                                    \begin{align*}
-                                    f(x) &= \left(e^{\ln k}\right)^x \\
-                                    &= e^{x\ln k}
-                                    \end{align*}
+                                    $$
+                                    f(x) = k^x = \left(e^{\ln k}\right)^x = e^{x\ln k}
+                                    $$
                                 </li>
                                 <li>
-                                    $f'(x) &= e^{x\ln k} \ln k$
+                                    $$f'(x) = e^{x\ln k} \ln k$$
                                 </li>
                             </ol>
                         </div>
