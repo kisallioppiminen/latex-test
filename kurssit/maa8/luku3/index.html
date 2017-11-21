@@ -348,6 +348,82 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    <a href="http://kisallioppiminen.fi/kurssit/maa8/luku2/">Edellisessä luvussa</a> määriteltiin luonnollinen logaritmi $\ln$, jonka kantalukuna on Neperin luku $e$. Muita kantalukuja, joita vastaavilla logaritmeilla on omat merkintänsä, ovat kymmenkantainen logaritmi $\lg$ ja kaksikantainen logaritmi $\mathop{\mathrm{lb}}$. Kymmenkantaista logaritmia käytetään monissa luonnontieteiden sovelluksissa ja kaksikantainen logaritmi on puolestaan käytössä tietojenkäsittelytieteen sovelluksissa.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: ERITYISIÄ LOGARITMEJA</h3>
+                    <p>
+                        Kymmenkantaista logaritmia merkitään 
+                        $$\lg = \log_{10}.$$
+                        Kaksikantaista logaritmia merkitään 
+                        $$\mathop{\mathrm{lb}} = \log_2.$$
+                        Luonnollista logaritmia, jonka kantalukuna on Neperin luku $e$, merkitään
+                        $$\ln = \log_e.$$
+                    </p>
+                </div>
+
+                <p>
+                    Luonnontieteissä logaritmifunktioiden avulla voidaan kuvata esimerkiksi liuoksen happamuutta, maanjäristysten voimakkuutta ja ihmisen aistimaa äänen voimakkuutta. Viimeksi mainittuun sovellukseen tutustutaan seuraavassa esimerkikssä. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t304-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t304">
+                                Logaritmifunktiot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t304" class="collapse">
+                        <p>
+                            Äänen voimakkuuden fysikaalinen yksikkö on äänen <em>intensiteetti</em> $I$. Sen yksikkö on W/m$^2$ (wattia neliömetriä kohti) eli intensiteetti ilmaisee äänen tehon pinta-alaa kohden. Kokeelliset havainnot kuitenkin osoittavat, että äänen intensiteetin avulla ei pystytä kuvaamaan ihmisen aistimaa äänen voimakkuutta. Äänen voimakkuus ilmaistaan tämän vuoksi usein kuulohavaintoa paremmin vastaavana <em>melutasona</em> $L$. Se saadaan yhtälöstä
+                            $$
+                            L = 120 + 10 \lg I,
+                            $$
+                            missä $I$ on äänen intensiteetti. Melutason yksikkö on desibeli (dB). Mikä on melutaso, jos äänen intensiteetti on
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                noin $10^{-10} \text{ W/M^2}$ (kuiskaus)
+                            </li>
+                            <li> 
+                                noin $10^{-6} \text{ W/M^2}$ (normaali keskustelu)
+                            </li>
+                            <li> 
+                                noin $0{,}01 \text{ W/M^2}$ (konsertti)?
+                            </li>
+                            <li> 
+                                Miten paljon kuiskauksen, normaalin keskustelun ja konsertin äänien intensiteetit eroavat toisistaan? Entä melutasot?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t303_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t303_v" class="collapse">
+                            <p> Funktio $f$ on määritelty, jos ja vain jos logaritmin sisällä oleva lauseke on positiivinen eli</p>
+                            <ol class="a">
+                                <li> 
+                                    $x > 1$
+                                </li>
+                                <li> 
+                                    $-2 < x < 2$
+                                </li>
+                                <li> 
+                                    $x < -1$ tai $x > 0$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
@@ -372,6 +448,61 @@ topnav: maa8
                     
                 </p>
 
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t304-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t304">
+                                Logaritmifunktiot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t304" class="collapse">
+                        <p>
+                            Voimakkaissa maanjäristyksissä vapautuu lyhyessä ajassa suuri määrä maankuoren jännitteisiin patoutunutta energiaa. Maanjäristyksen voimakkuutta kuvataan nykyään yleensä momenttimagnitudiasteikolla aiemmin käytetyn Richterin asteikon sijaan. Maanjäristyksen momenttimagnitudi $M_W$ saadaan yhtälöstä
+                            $$
+                            M_W = \frac{2}{3}(\lg E - 4{,}8).
+                            $$
+                            Tässä $E$ on vapautuneen energian määrä jouleina (J).
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $f(x) = \log_2 (x-1)$
+                            </li>
+                            <li> 
+                                $f(x) = \log_{10}(4-x^2)$
+                            </li>
+                            <li> 
+                                $f(x) = \ln \left(\dfrac{x}{x+1}\right)$
+                            </li>
+                        </ol>
+                        <p>
+                            Vinkki: kertaa tarvittaessa rationaaliepäyhtälön ratkaiseminen MAA6-kurssin <a href="http://kisallioppiminen.fi/kurssit/maa6/luku3/">luvusta 3</a>.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t303_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t303_v" class="collapse">
+                            <p> Funktio $f$ on määritelty, jos ja vain jos logaritmin sisällä oleva lauseke on positiivinen eli</p>
+                            <ol class="a">
+                                <li> 
+                                    $x > 1$
+                                </li>
+                                <li> 
+                                    $-2 < x < 2$
+                                </li>
+                                <li> 
+                                    $x < -1$ tai $x > 0$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri2">
