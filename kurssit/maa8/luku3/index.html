@@ -57,10 +57,208 @@ topnav: maa8
         <div id="juuri1" class="collapse">
             <div class="teoria">
 
+                <div class="teoria">
                 <p>
-                    
+                    <a href="http://kisallioppiminen.fi/kurssit/maa8/luku2/">Edellisessä luvussa</a> ilmaistiin eksponenttiyhtälöiden ratkaisuja logaritmien avulla. Tässä kappaleessa erilaisia logaritmeja tutkitaan funktioiden näkökulmasta. 
                 </p>
+                    <!-- Esimerkiksi neliöjuurta voidaan ajatella funktiona, jonka määrittelyjoukko on epänegatiivisten reaalilukujen joukko:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva001.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br> -->
+                <p>
+                    Aloitetaan palauttamalla mieleen logaritmin määritelmä.
+                </p>
+            </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="FirstEx">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t301">
+                                Logaritmin määritelmä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t301" class="collapse">
+                        <p>
+                            Kertaa tarvittaessa logaritmin määritelmän kaksi hiukan erilaista muotoilua kursseilta <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1</a> ja <a href="http://kisallioppiminen.fi/kurssit/maa8/luku2/">MAA8</a>. Päättele sen jälkeen seuraavien juurten arvot ja perustele vastauksesi.
+                        </p>
+                        <ol class="a">
+                            <li> $\log_{10} 100$ </li>
+                            <li> 
+                                $\log_2 32$ 
+                            </li>
+                            <li> 
+                                $\log_3 81$
+                            </li>
+                            <li>
+                                $\ln 1$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t301_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t301_v" class="collapse">
+                           <ol class="a">
+                                <li> $\log_{10} 100 = 2$, sillä $10^2 = 100$ </li>
+                                <li> 
+                                    $\log_2 32 = 5$, sillä $2^5 = 32$ 
+                                </li>
+                                <li> 
+                                    $\log_3 81 = 4$, sillä $3^4 = 81$
+                                </li>
+                                <li>
+                                    $\ln 1 = 0$, sillä $e^0 = 1$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Logaritmit määriteltiin <a href="http://kisallioppiminen.fi/kurssit/maa8/luku2/">edellisessä luvussa</a> ekponenttiyhtälön ratkaisuina. Seuraavassa tehtävässä tutkitaan 2-kantaisen logaritmifunktion ominaisuuksia tältä pohjalta.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t302-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t302">
+                                Logaritmifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t302" class="collapse">
+                        <p>
+                            Logaritmin määritelmän mukaan positiivisen luvun $a$ 2-kantainen logaritmi $\log_2 a$ on se luku $b$, jolla pätee
+                            $$
+                                2^b = a.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Kirjoita näkyviin, mitä tarkoittaa positiivisen luvun $x$ 2-kantainen logaritmi $\log_2 x$. 
+                            </li>
+                            <li> 
+                                Päättele, mikä on logaritmifunktion $f(x) = \log_2 x$ määrittelyjoukko. Selitä omin sanoin, miten päättelit. 
+                            </li>
+                            <li> 
+                                Täydennä alla oleva taulukko ja hahmottele sen avulla 2-kantaisen logaritmifunktion kuvaaja.
+                                <div align="center">
+                                    <table style="width:75%"> 
+                                        <tr>
+                                            <th>Muuttujan arvo</th>
+                                            <th>Funktion arvo</th>       
+                                        </tr>
+                                        <tr>
+                                            <td>$x$</td>
+                                            <td>$f(x) = \log_2 x$</td>      
+                                        </tr>
+                                        <tr>
+                                            <td>$16$</td>
+                                            <td>$f(16) = \phantom{\log_2 16}$</td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$8$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$4$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$2$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$1$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$\frac{1}{2}$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$\frac{1}{4}$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$\frac{1}{8}$</td>
+                                            <td></td>        
+                                        </tr>
+                                    </table> 
+                                </div>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t302_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t302_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Positiivisen luvun $x$ 2-kantainen logaritmi $\log_2 x$ on se luku $b$, jolla pätee
+                                    $$
+                                        2^b = x.
+                                    $$
+                                </li>
+                                <li> 
+                                    Logaritmifunktio $f(x) = \log_2 x$ on määritelty, jos muuttuja on positiivinen eli $x > 0$. Logaritmifunktion määrittelyjoukko on siis $\pa 0, \infty\pe$.
+                                    Syynä on logaritmin määritelmä: "positiivisen luvun $a$ 2-kantainen logaritmi on $\ldots$". 
+                                </li>
+                                <li> 
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width: 75%"> 
+                                            <tr>
+                                                <th>Muuttujan arvo</th>
+                                                <th>Funktion arvo</th>       
+                                            </tr>
+                                            <tr>
+                                                <td>$x$</td>
+                                                <td>$f(x) = \sqrt{x}$</td>      
+                                            </tr>
+                                            <tr>
+                                                <td>$0$</td>
+                                                <td>$f(0) = 0$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$1$</td>
+                                                <td>$f(1) = 1$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$4$</td>
+                                                <td>$f(4) = 2$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$9$</td>
+                                                <td>$f(9) = 3$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$16$</td>
+                                                <td>$f(16) = 4$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$25$</td>
+                                                <td>$f(25) = 5$</td>        
+                                            </tr>
+                                        </table> 
+                                    </div>
+                                    Kuvaaja:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva001.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
