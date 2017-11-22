@@ -553,7 +553,7 @@ topnav: maa8
                             <li> 
                                 Kerro a-kohdan eksponenttiyhtälöiden vasemmat puolet keskenään ja oikeat puolet keskenään. Sievennä samankantaisten potenssien tulo.
                                 <br>
-                                Vinkki: kertaa tarvittaessa samankantaisen potenssien tulo <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1-kurssin</a> teoreemasta 1.
+                                Vinkki: kertaa tarvittaessa samankantaisen potenssien tulon sievennys <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1-kurssin</a> teoreemasta 1.
                             </li>
                             <li> 
                                 Tutki b-kohdassa johtamaasi yhtälöä. Mikä on eksponenttiyhtälön
@@ -601,17 +601,30 @@ topnav: maa8
                     </header>
                     <div id="MAA8t307" class="collapse">
                         <p>
-                            
+                            Oletetaan, että $k \neq 1$ on positiivinen reaaliluku, $a > 0$ ja $b > 0$. Tässä tehtävässä tutkitaan, miten voidaan sieventää osamäärän logaritmi
+                            $$
+                            \log_k \frac{a}{b}.
+                            $$  
                         </p>
                         <ol class="a">
                             <li> 
-                               
+                               Merkitään luvun $a$ logaritmia kirjaimella $r$ ja luvun $b$ logaritmia kirjaimella $s$. Siis 
+                               $$r = \log_k a \text{ ja } s = \log_k b.$$ 
+                               Millaisen eksponenttiyhtälön luku $r$ toteuttaa? Entä luku $s$?
+                               <br>
+                               Vinkki: logaritmin määritelmä.
                             </li>
                             <li> 
-                                
+                                Jaa a-kohdan eksponenttiyhtälöiden vasemmat puolet keskenään ja oikeat puolet keskenään niin, että saat muodostettua osamäärän $\frac{a}{b}$. Sievennä samankantaisten potenssien osamäärä.
+                                <br>
+                                Vinkki: kertaa tarvittaessa samankantaisen potenssien osamäärän sievennys <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1-kurssin</a> teoreemasta 1.
                             </li>
                             <li> 
-                                
+                                Tutki b-kohdassa johtamaasi yhtälöä. Mikä on eksponenttiyhtälön
+                                $$k^x = \frac{a}{b}$$
+                                ratkaisu? Toisin sanottuna, mitä on $\log_k \dfrac{a}{b}$?
+                                <br>
+                                Vinkki: palauta tarvittaessa a-kohdasta mieleen, mitä kirjaimilla $r$ ja $s$ merkittiinkään.
                             </li>
                         </ol>
                         <h2>
@@ -622,13 +635,20 @@ topnav: maa8
                         <div id="MAA8t307_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    
+                                    $k^r = a$ ja $k^s = b$
                                 </li>
                                 <li> 
-                                    
+                                    $\dfrac{a}{b} = \dfrac{k^r}{k^s} = k^{r-s}$
                                 </li>
                                 <li> 
-                                    
+                                    Eksponenttiyhtälön 
+                                    $$k^x = \frac{a}{b}$$ 
+                                    ratkaisu on b-kohdan perusteella 
+                                    $$x = r-s = \log_k a - \log_k b.$$ 
+                                    Siis 
+                                    $$
+                                    \log_k \frac{a}{b} = \log_k a - \log_k b.
+                                    $$
                                 </li>
                             </ol>
                         </div>
