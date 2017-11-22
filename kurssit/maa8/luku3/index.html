@@ -535,17 +535,30 @@ topnav: maa8
                     </header>
                     <div id="MAA8t306" class="collapse">
                         <p>
-                            
+                            Oletetaan, että $k \neq 1$ on positiivinen reaaliluku, $a > 0$ ja $b > 0$. Tässä tehtävässä tutkitaan, miten voidaan sieventää tulon logaritmi
+                            $$
+                            \log_k ab.
+                            $$  
                         </p>
                         <ol class="a">
                             <li> 
-                               
+                               Merkitään luvun $a$ logaritmia kirjaimella $r$ ja luvun $b$ logaritmia kirjaimella $s$. Siis $r = \log_k a$ ja $s = \log_k b$. Millaisen eksponenttiyhtälön luku $r$ toteuttaa? Entä luku $s$?
+                               <br>
+                               Vinkki: logaritmin määritelmä.
                             </li>
                             <li> 
-                                
+                                Kerro a-kohdan yhtälöiden vasemmat puolet keskenään ja oikeat puolet keskenään. Sievennä samankantaisten potenssien tulo.
+                                <br>
+                                Vinkki: kertaa tarvittaessa samankantaisen potenssien tulo <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1-kurssin</a> teoreemasta 1.
                             </li>
                             <li> 
-                                
+                                Tutki b-kohdassa johtamaasi yhtälöä. Mikä on eksponenttiyhtälön
+                                $$
+                                k^x = ab
+                                $$
+                                ratkaisu? Toisin sanottuna, mitä on $\log_k ab$?
+                                <br>
+                                Vinkki: palauta tarvittaessa a-kohdasta mieleen, mitä kirjaimilla $r$ ja $s$ merkittiinkään.
                             </li>
                         </ol>
                         <h2>
@@ -556,13 +569,16 @@ topnav: maa8
                         <div id="MAA8t306_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    
+                                    $k^r = a$ ja $k^s = b$
                                 </li>
                                 <li> 
-                                    
+                                    $ab = k^r \cdot k^s = k^{r+s}$
                                 </li>
                                 <li> 
-                                    
+                                    Eksponenttiyhtälön $k^x = ab$ ratkaisu on b-kohdan perusteella $x = r+s = \log_k a + \log_k b$. Siis 
+                                    $$
+                                    \log_k ab = \log_k a + \log_k b.
+                                    $$
                                 </li>
                             </ol>
                         </div>
