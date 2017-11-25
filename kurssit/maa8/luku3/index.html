@@ -1228,6 +1228,56 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    On mahdollista osoittaa, että luonnollinen logaritmifunktio on derivoituva koko määrittelyjoukossaan $\pa 0, \infty \pe$. Edellisen tehtävän havainnollistuksessa tämä näkyy siitä, että kuvaajan jokaiseen pisteeseen voidaan asettaa yksikäsitteinen tangentti, jolla on kulmakerroin. Tarkempaan perusteluun ei tällä kurssilla ole tarkoituksenmukaista syventyä, mutta seuraavassa teoreemassa johdetaan luonnollisen logaritmin derivaattafunktion lauseke.
+                </p>
+
+                <div class="theorem" id="LUONNOLLISEN LOGARITMIN DERIVAATTAFUNKTIO">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Logaritmifunktio $f(x) = \ln x$ on derivoituva koko määrittelyjoukossaan $\pa 0, \infty \pe$ ja sen derivaattafunktio on 
+                        $$
+                        f'(x) = \frac{1}{x}.
+                        $$  
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Luonnollisen logaritmin määritelmän mukaan luvun $a > 0$ logaritmi tarkoittaa eksponenttia, johon Neperin luku pitää korottaa luvun $a$ saamiseksi:
+                            $$
+                            e^{\ln a} = a.                            
+                            $$
+                            Funktio $g(x) = x$, missä $x > 0$, voidaan tämän vuoksi kirjoittaa myös muodossa $g(x) = e^{\ln x}$. Derivaattafunktio $g'(x)$ voidaan muodostaa kahdella tavalla:
+                        </p>
+                        <ol>
+                            <li> 
+                                Potenssifunktioiden derivointisäännön mukaan funktion $g(x) = x$ derivaattafunktio on 
+                                $$g'(x) = 1.$$
+                            </li>
+                            <li>
+                                Yhdistetyn funktion derivointisäännön mukaan funktion $g(x) = e^{\ln x}$ derivaattafunktio on 
+                                \begin{align*}
+                                g'(x) &= e^{\ln x} \cdot \mathop{\mathrm{D}} \ln x \\
+                                &= x \cdot \mathop{\mathrm{D}} \ln x.
+                                \end{align*}
+                            </li>
+                        </ol>
+                        <p>
+                            Kosk kysymyksessä on kuitenkin yksi ja sama funktio $g$, ovat eri tavoin muodostetut derivaattafunktiotkin sama funktio. Siis
+                            $$
+                            x \cdot \mathop{\mathrm{D}} \ln x = 1.
+                            $$
+                            Tästä yhtälöstä saadaan ratkaistua
+                            $$
+                            \mathop{\mathrm{D}} \ln x = \frac{1}{x}.
+                            $$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#log4">
                     Sulje kappale
