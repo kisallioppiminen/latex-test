@@ -1327,7 +1327,7 @@ topnav: maa8
 
             <div class="teoria">
                 <p>
-                    Kun $e$-kantaisen logaritmifunktion derivaattafunktio nyt tunnetaan, voidaan entistä useampien funktioiden kulkua tutkia derivaatan avulla kuten <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssilla</a> opittiin. Tätä harjoitellaan seuraavassa tehtävässä.
+                    Kun luonnollisen logaritmifunktion derivaattafunktio nyt tunnetaan, voidaan entistä useampien funktioiden kulkua tutkia derivaatan avulla kuten <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssilla</a> opittiin. Tätä harjoitellaan seuraavassa tehtävässä.
                 </p>
             </div>
             
@@ -1369,6 +1369,62 @@ topnav: maa8
                                 \end{align*}
                                 on yksi nollakohta $x = e^{-1}$. Kulkukaavion perusteella päätellään, että funktio saa tässä kohdassa pienimmän arvonsa.
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Yhdistetyn funktion derivointisäännön avulla pystytään derivoimaan erilaisia luonnollisesta logaritmifunktiosta yhdistettyjä funktioita. Joissain tilanteissa on mahdollista sieventää funktion lauseketta ennen derivointia logaritmin laskusääntöjen avulla.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t318-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t318">
+                                Logaritmifunktion derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t318" class="collapse">
+                        <p>
+                            Derivoi seuraavat funktiot. Kertaa tarvittaessa yhdistetyn funktion derivointisääntö <a href="http://kisallioppiminen.fi/kurssit/maa7/luku3/">MAA7-kurssin</a> teoreemasta 23. Missä kohdissa voit sieventää funktion lauseketta ennen derivointia logaritmin laskusääntöjen avulla?
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $f(x) = \ln (x^2)$
+                            </li>
+                            <li> 
+                                $g(x) = \ln (e^x + 1)$
+                            </li>
+                            <li> 
+                                $h(x) = \ln \left(\dfrac{x - 1}{x^2 + 1}\right)$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t318_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t318_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $f'(x) = \dfrac{2}{x}$
+                                    <br>
+                                    Huom. potenssin logaritmin laskusäännön avulla funktion lausekkeen saa ennen derivointia muotoon $f(x) = 2 \ln x$. 
+                                </li>
+                                <li> 
+                                    $g'(x) = \dfrac{1}{e^x + 1} \cdot e^x = \dfrac{e^x}{e^x + 1}$.
+                                </li>
+                                <li> 
+                                    $h'(x) = \dfrac{1 + 2x - x^2}{(x-1)(x^2 + 1)}$
+                                    <br>
+                                    Huom. osamäärän logaritmin laskusäännön avulla funktion lausekkeen saa ennen derivointia muotoon $h(x) = \ln(x-1) - \ln(x^2 + 1)$. 
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
