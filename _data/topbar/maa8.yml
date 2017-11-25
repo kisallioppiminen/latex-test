@@ -13,4 +13,6 @@ navigation:
   -
     name: 3. Logaritmifunktiot
     path: /kurssit/maa8/luku3/
-
+  -
+    name: 4. Käänteisfunktio
+    path: /kurssit/maa8/luku4/
