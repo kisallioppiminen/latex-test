@@ -30,22 +30,22 @@ topnav: maa8
 
             <div class="objective">
                 <p> 
-                    Tämän luvun tavoitteena on, että tunnet logaritmifunktioiden ominaisuudet ja tutustut logaritmien käyttöön sovelluksissa. Osaat
+                    Tämän luvun tavoitteena on, että hallitset logaritmifunktioiden ominaisuudet ja pystyt hyödyntämään niitä sovellusongelmien ratkaisemisessa. Osaat
                 <ul>
                     <li> 
                         hahmotella tärkeimpien logaritmifunktioiden kuvaajat
                     </li>
                     <li>
-                        käyttää logaritmien laskusääntöjä 
+                        käyttää logaritmien laskusääntöjä lausekkeiden sieventämiseen
                     </li>
                     <li>
-                        ratkaista logaritmi- ja eksponenttiyhtälöt
+                        ratkaista logaritmi- ja eksponenttiyhtälöitä
                     </li>
                     <li>
                         määrittää logaritmifunktion derivaattafunktion
                     </li>
                     <li>
-                        soveltaa aiemmin oppimiasi derivointisääntöjä logaritmifunktioista muodostettujen funktioiden kulun tutkimiseen
+                        soveltaa aiemmin oppimiasi derivointisääntöjä logaritmifunktioista muodostettujen funktioiden kulun tutkimiseen.
                     </li>
                 </ul> 
                 </p>
@@ -754,7 +754,124 @@ topnav: maa8
 
             <div class="teoria">
                 <p>
-                    Logaritmien laskusääntöjä voidaan hyödyntää erilaisten yhtälöiden ratkaisemisessa. Niiden avulla eksponenttiyhtälöitä voidaan ratkaista käyttäen luonnollista logaritmia $\ln$ tai kymmenkantaista logaritmia $\lg$, jotka löytyvät useimmista laskimista. (Monissa laskimissa kymmenkantainen logaritmi saadaan nappulasta $\bbox[3px,border:2px solid black]{\phantom{ {}^I }\texttt{log}\phantom{ {}^I } }\,$.)
+                    Logaritmien laskusääntöjen avulla voidaan tutkia suuria kokonaislukuja erityisesti siinä tapauksessa, että käytettävissä on vain perinteinen taskulaskin tai esimerkiksi kännykän laskin. Koska käytämme 10-kantaista lukujärjestelmää, on 10-kantainen logaritmi $\lg$ erityisen käyttökelpoinen suurien kokonaislukujen tutkimiseen. (Monissa laskimissa kymmenkantainen logaritmi saadaan nappulasta $\bbox[3px,border:2px solid black]{\phantom{ {}^I }\texttt{log}\phantom{ {}^I } }\,$.)
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t311b-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t311b">
+                                Logaritmi ja suuret luvut
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t311b" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Täydennä alla oleva taulukko. Mitä havaitset kokonaisluvun numeroiden määrästä verrattuna 10-kantaisen logaritmin arvoon?
+                                <br>
+                                Vinkki: voit kirjoittaa kymmenpotenssimuodossa esitetyt luvut näkyviin tavallisessa muodossa ja laskea sitten niiden numeroiden määrän.
+                                <div align="center">
+                                    <table style="width:75%"> 
+                                        <tr>
+                                            <th>Luku $a$ </th>
+                                            <th>Logaritmi $\lg a$</th>
+                                            <th>Luvussa $a$ numeroita</th>
+                                        </tr>
+                                        <tr>
+                                            <td>$10^2$</td>
+                                            <td> </td>  
+                                            <td> </td>     
+                                        </tr>
+                                        <tr>
+                                            <td>$10^4$</td>
+                                            <td> </td>  
+                                            <td> </td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$3\cdot 10^5$</td>
+                                            <td> </td>  
+                                            <td> </td>      
+                                        </tr>
+                                        <tr>
+                                            <td>$7\cdot 10^8$</td>
+                                            <td> </td>  
+                                            <td> </td>         
+                                        </tr>
+                                        <tr>
+                                            <td>$2{,}5\cdot 10^9$</td>
+                                            <td> </td>  
+                                            <td> </td>       
+                                        </tr>
+                                    </table> 
+                                </div>
+                            </li>
+                            <li>
+                                Määritä kokonaisluvun $2^{123456}$ kymmenkantainen logaritmi potenssin logaritmisäännön avulla. Päättele, kuinka monta numeroa kokonaisluvussa $2^{123456}$ on.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t311b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t311b_v" class="collapse">
+                            <ol class="a">
+                                <li> Kokonaisluvun numeroiden määrä on 10-kantaisen logaritmin arvoa seuraava kokonaisluku:
+                                    <div align="center">
+                                    <table style="width:75%"> 
+                                        <tr>
+                                            <th>Luku $a$ </th>
+                                            <th>Logaritmi $\lg a$</th>
+                                            <th>Luvussa $a$ numeroita</th>       
+                                        </tr>
+                                        <tr>
+                                            <td>$10^2$</td>
+                                            <td> 2 </td>  
+                                            <td> 3 </td>     
+                                        </tr>
+                                        <tr>
+                                            <td>$10^4$</td>
+                                            <td> 4 </td>  
+                                            <td> 5 </td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$3\cdot 10^5$</td>
+                                            <td> n. 5,5 </td>  
+                                            <td> 6 </td>      
+                                        </tr>
+                                        <tr>
+                                            <td>$7\cdot 10^8$</td>
+                                            <td> n. 8,8 </td>  
+                                            <td> 9 </td>         
+                                        </tr>
+                                        <tr>
+                                            <td>$2{,}5\cdot 10^9$</td>
+                                            <td> n. 9,4 </td>  
+                                            <td> 10 </td>       
+                                        </tr>
+                                    </table> 
+                                </div>
+                                </li>
+                                <li> 
+                                    Potenssin logaritmisäännöllä saadaan
+                                    \begin{align*}
+                                    \lg (2^{123456}) &= 123456 \cdot \lg 2 \\
+                                    &\approx 37163{,}96,
+                                    \end{align*}
+                                    joten luvussa $2^{123456}$ on 37164 numeroa.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Logaritmien laskusääntöjä voidaan hyödyntää myös erilaisten yhtälöiden ratkaisemisessa. Niiden avulla eksponenttiyhtälöitä voidaan ratkaista käyttäen luonnollista logaritmia $\ln$ tai kymmenkantaista logaritmia $\lg$, jotka löytyvät useimmista laskimista. 
                 </p>
             </div>
 
@@ -931,123 +1048,6 @@ topnav: maa8
                                 </li>
                                 <li> 
                                     $f(x) = \dfrac{\lb x}{3}$
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="teoria">
-                <p>
-                    Logaritmien laskusääntöjen avulla voidaan tutkia suuria lukuja siinäkin tapauksessa, että käytettävissä ei ole tarpeeksi tehokkaita teknisiä apuvälineitä. Koska käytämme 10-kantaista lukujärjestelmää, on 10-kantainen logaritmi $\lg$ tässä erityisen käyttökelpoinen. 
-                </p>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="MAA8t311b-ex">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t311b">
-                                Logaritmi ja suuret luvut
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAA8t311b" class="collapse">
-                        <ol class="a">
-                            <li>
-                                Täydennä alla oleva taulukko. Mitä havaitset kokonaisluvun numeroiden määrästä verrattuna 10-kantaisen logaritmin arvoon?
-                                <br>
-                                Vinkki: voit kirjoittaa kymmenpotenssimuodossa esitetyt luvut näkyviin tavallisessa muodossa ja laskea sitten niiden numeroiden määrän.
-                                <div align="center">
-                                    <table style="width:75%"> 
-                                        <tr>
-                                            <th>Luku $a$ </th>
-                                            <th>Logaritmi $\lg a$</th>
-                                            <th>Luvussa $a$ numeroita</th>
-                                        </tr>
-                                        <tr>
-                                            <td>$10^2$</td>
-                                            <td> </td>  
-                                            <td> </td>     
-                                        </tr>
-                                        <tr>
-                                            <td>$10^4$</td>
-                                            <td> </td>  
-                                            <td> </td>        
-                                        </tr>
-                                        <tr>
-                                            <td>$3\cdot 10^5$</td>
-                                            <td> </td>  
-                                            <td> </td>      
-                                        </tr>
-                                        <tr>
-                                            <td>$7\cdot 10^8$</td>
-                                            <td> </td>  
-                                            <td> </td>         
-                                        </tr>
-                                        <tr>
-                                            <td>$2{,}5\cdot 10^9$</td>
-                                            <td> </td>  
-                                            <td> </td>       
-                                        </tr>
-                                    </table> 
-                                </div>
-                            </li>
-                            <li>
-                                Määritä kokonaisluvun $2^{123456}$ kymmenkantainen logaritmi potenssin logaritmisäännön avulla. Päättele, kuinka monta numeroa kokonaisluvussa $2^{123456}$ on.
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t311b_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="MAA8t311b_v" class="collapse">
-                            <ol class="a">
-                                <li> Kokonaisluvun numeroiden määrä on 10-kantaisen logaritmin arvoa seuraava kokonaisluku:
-                                    <div align="center">
-                                    <table style="width:75%"> 
-                                        <tr>
-                                            <th>Luku $a$ </th>
-                                            <th>Logaritmi $\lg a$</th>
-                                            <th>Luvussa $a$ numeroita</th>       
-                                        </tr>
-                                        <tr>
-                                            <td>$10^2$</td>
-                                            <td> 2 </td>  
-                                            <td> 3 </td>     
-                                        </tr>
-                                        <tr>
-                                            <td>$10^4$</td>
-                                            <td> 4 </td>  
-                                            <td> 5 </td>        
-                                        </tr>
-                                        <tr>
-                                            <td>$3\cdot 10^5$</td>
-                                            <td> n. 5,5 </td>  
-                                            <td> 6 </td>      
-                                        </tr>
-                                        <tr>
-                                            <td>$7\cdot 10^8$</td>
-                                            <td> n. 8,8 </td>  
-                                            <td> 9 </td>         
-                                        </tr>
-                                        <tr>
-                                            <td>$2{,}5\cdot 10^9$</td>
-                                            <td> n. 9,4 </td>  
-                                            <td> 10 </td>       
-                                        </tr>
-                                    </table> 
-                                </div>
-                                </li>
-                                <li> 
-                                    Potenssin logaritmisäännöllä saadaan
-                                    \begin{align*}
-                                    \lg (2^{123456}) &= 123456 \cdot \lg 2 \\
-                                    &\approx 37163{,}96,
-                                    \end{align*}
-                                    joten luvussa $2^{123456}$ on 37164 numeroa.
                                 </li>
                             </ol>
                         </div>
