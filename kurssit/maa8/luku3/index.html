@@ -1083,18 +1083,24 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    Logaritmiyhtälön ratkaisemisen taitoa tarvitaan monissa logaritmien käytännön sovelluksissa. Seuraavassa tehtävässä tutkitaan maanjäristyksissä vapautuvaa energiaa.
+                </p>
+            </div>
+
             <div class="tehtavat">
-                <div class="tehtava" id="MAA8t304-ex">
+                <div class="tehtava" id="MAA8t314-ex">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t304">
-                                Logaritmifunktiot
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t314">
+                                Logaritmiyhtälö
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA8t304" class="collapse">
+                    <div id="MAA8t314" class="collapse">
                         <p>
-                            Voimakkaissa maanjäristyksissä vapautuu lyhyessä ajassa suuri määrä maankuoren jännitteisiin patoutunutta energiaa. Maanjäristyksen voimakkuutta kuvataan nykyään yleensä momenttimagnitudiasteikolla aiemmin käytetyn Richterin asteikon sijaan. Maanjäristyksen momenttimagnitudi $M_W$ saadaan yhtälöstä
+                            Voimakkaissa maanjäristyksissä vapautuu lyhyessä ajassa suuri määrä maankuoren jännitteisiin patoutunutta energiaa. Maanjäristyksen voimakkuutta kuvataan nykyään usein niin sanotulla momenttimagnitudiasteikolla aiemmin käytetyn Richterin asteikon sijaan. Maanjäristyksen momenttimagnitudi $M_W$ saadaan yhtälöstä
                             $$
                             M_W = \frac{2}{3}(\lg E - 4{,}8).
                             $$
@@ -1105,34 +1111,39 @@ topnav: maa8
                         </p>
                         <ol class="a">
                             <li> 
-                                Kuinka paljon energiaa vapautui Chiapasin maanjäristyksessä? Anna vastaus sekä jouleina että megawattitunteina (MWh). Megawattitunti tarkoittaa 3,6 gigajoulea eli $1 \text{ MWh } = 3{,}6 \text{ GJ } = 3{,}6 \cdot 10^9 \text{ J}$.
+                                Kuinka paljon energiaa vapautui Chiapasin maanjäristyksessä? Anna vastaus kahden merkitsevän numeron tarkkuudella sekä jouleina että megawattitunteina (MWh). Megawattitunti tarkoittaa 3,6 gigajoulea eli $1 \text{ MWh } = 3{,}6 \text{ GJ } = 3{,}6 \cdot 10^9 \text{ J}$.
                             </li>
                             <li> 
-                                $f(x) = \log_{10}(4-x^2)$
+                                Loviisan ydinvoimalaitoksen 1. yksikkö tuottaa viikossa energiaa noin 12 000 MWh. Kuinka monessa viikossa voimalaitos tuottaa yhtä paljon energiaa kuin Chiapasin maanjäristyksessä vapautui?
                             </li>
                             <li> 
-                                $f(x) = \ln \left(\dfrac{x}{x+1}\right)$
+                                Kuinka monta prosenttia vähemmän energiaa vapautui Puelban maanjäristyksessä kuin Chiapasin maanjäristyksessä?
                             </li>
                         </ol>
-                        <p>
-                            Vinkki: kertaa tarvittaessa rationaaliepäyhtälön ratkaiseminen MAA6-kurssin <a href="http://kisallioppiminen.fi/kurssit/maa6/luku3/">luvusta 3</a>.
-                        </p>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t303_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t314_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t303_v" class="collapse">
-                            <p> Funktio $f$ on määritelty, jos ja vain jos logaritmin sisällä oleva lauseke on positiivinen eli</p>
+                        <div id="MAA8t314_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    $x > 1$
+                                    Energiaa vapautui noin $8{,}9 \cdot 10^16 \text{ J } = 2{,}5 \cdot 10^7 \text{ MWh}.$
+                                    <br>
+                                    Vapautuneen energian määrä saadaan yhtälöstä
+                                    $$  
+                                    \lg E = \frac{3}{2} \cdot 8{,}1 + 4{,}8.
+                                    $$
+                                    Siis
+                                    $$
+                                        E = 10^{16{,}95} \approx 8{,}9 \cdot 10^16 \text{ J.}
+                                    $$
                                 </li>
                                 <li> 
-                                    $-2 < x < 2$
+                                    Noin 2083 viikossa eli noin 40 vuodessa.
                                 </li>
                                 <li> 
-                                    $x < -1$ tai $x > 0$
+                                    Puelban maanjäristyksessä energiaa vapautui noin $2{,}8 \cdot 10^{15} \text{ J }$. Se on noin 97 % vähemmän kuin Chiapasin järistyksessä.
                                 </li>
                             </ol>
                         </div>
