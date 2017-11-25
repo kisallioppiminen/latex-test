@@ -1327,7 +1327,7 @@ topnav: maa8
 
             <div class="teoria">
                 <p>
-                    Kun luonnollisen logaritmifunktion derivaattafunktio nyt tunnetaan, voidaan entistä useampien funktioiden kulkua tutkia derivaatan avulla kuten <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssilla</a> opittiin. Tätä harjoitellaan seuraavassa tehtävässä.
+                    Kun luonnollisen logaritmifunktion derivaattafunktio nyt tunnetaan, voidaan entistä useampien funktioiden kulkua tutkia derivaatan avulla kuten <a href="http://kisallioppiminen.fi/kurssit/maa6/luku5/">MAA6-kurssilla</a> opittiin. Tätä harjoitellaan seuraavissa tehtävissä.
                 </p>
             </div>
             
@@ -1368,6 +1368,58 @@ topnav: maa8
                                 &= \ln x + 1
                                 \end{align*}
                                 on yksi nollakohta $x = e^{-1}$. Kulkukaavion perusteella päätellään, että funktio saa tässä kohdassa pienimmän arvonsa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t317b-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t317b">
+                                Logaritmifunktion derivaatta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t317b" class="collapse">
+                        <p>
+                            Tarkastellaan suorakulmiota, jonka yksi sivu on suoralla $y = 3$, toinen sivu on suoralla $x = 0$ ja yksi kärkipiste käyrällä $y = \ln x$ alla olevan kuvan tapaan. Tehtävänä on tutkia, mikä on tällaisen suorakulmion suurin mahdollinen pinta-ala.
+                            <br>
+                            <img src="/kurssit/maa8/kuvat/MAA8kuva063.png" max-width: 100%; width: auto; height: auto;/>
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Muodosta funktio, joka ilmaisee suorakulmion pinta-alan.
+                                <br>
+                                Vinkki: Jos käyrällä $y = \ln x$ sijaitsevan kärkipisteen $x$-koordinaatti on $x = t$, mikä on sen $y$-koordinaatti? Entä mitä ovat muiden kärkipisteiden koordinaatit? 
+                            </li>
+                            <li>
+                                Määritä a-kohdan funktion suurin arvo tai perustele, ettei sitä ole olemassa.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t317b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t317b_v" class="collapse">
+                            <p>
+                                Jos käyrällä $y = \ln x$ sijaitsevan kärkipisteen $x$-koordinaatti on $x = t$, sen $y$-koordinaatti on $\ln t$. Suorakulmion pinta-ala saadaan tällöin funktiosta
+                                $$
+                                A(t) = t(3-\ln t) = 3t - t\ln t.
+                                $$
+                            </p>
+                            <p>
+                                Derivaattafunktiolla
+                                \begin{align*}
+                                A'(t) &= 2 - \ln t
+                                \end{align*}
+                                on yksi nollakohta $t = e^2$. Kulkukaavion perusteella päätellään, että funktio saa tässä kohdassa suurimman arvonsa. Pinta-alan suurin arvo on 
+                                $$
+                                A(e^2) = e^2(3 - \ln e^2) = e^2.
+                                $$
                             </p>
                         </div>
                     </div>
