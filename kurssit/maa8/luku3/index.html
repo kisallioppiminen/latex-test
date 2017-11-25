@@ -945,11 +945,134 @@ topnav: maa8
         </header>
         <div id="log3" class="collapse">
             <div class="teoria">
-
                 <p>
-                    
+                    Kun tutkitaan, missä kohdassa jokin logaritmifunktio saa tietyn arvon, päädytään niin sanottuun logaritmiyhtälöön. Esimerkiksi jos halutaan tietää, missä kohdassa funktio 
+                    $$f(x) = \ln x$$ 
+                    saa arvon $1{,}5$, joudutaan tutkimaan yhtälöä
+                    $$f(x) = 1{,}5$$
+                    eli yhtälöä
+                    $$\ln x = 1{,}5.$$
+                    Tätä yhtälöä voidaan havainnollistaa piirtämällä logaritmifunktion $f(x) = \ln x$ kuvaaja ja vakiofunktion $g(x) = 1{,}5$ kuvaaja samaan koordinaatistoon:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva061.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Piirroksesta nähdään, että kuvaajat leikkaavat yhdessä kohdassa eli yhtälöllä on täsmälleen yksi ratkaisu $x \approx 4{,}5$. (Tähän päätelmään tarvitaan toki myös tieto siitä, että logaritmifunktio saa aina vain suurempia arvoja muuttujan kasvaessa. Muuten kuvan ulkopuolella voisi olla lisää leikkauskohtia.)
                 </p>
+                <p>
+                    Ratkaisun tarkan arvon selvittäminen ei onnistu pelkän piirroksen avulla vaan tarvitaan muita keinoja. Määritelmän mukaan luvun $a$ logaritmi on eksponentti, johon kantaluku pitää korottaa luvun $a$ saamiseksi:
+                    $$
+                    k^{\log_k a} = a
+                    $$
+                    kaikilla $a > 0$. Logaritmista päästään siis eroon, kun siirrytään tarkastelemaan vastaavia kantalukujen potensseja:
+                    \begin{align*}
+                    \ln x &= 1{,}5  \quad \mid e^{(\ )}\\
+                    e^{\ln x} &= e^{1{,}5} \\
+                    x &= e^{1{,}5} \approx 4{,}48.\\
+                    \end{align*}
+                    Yhtälön ratkaisu on siis $x = e^{1{,}5} \approx 4{,}48$.
+                </p>
+            </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t312-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t312">
+                                Logaritmiyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t312" class="collapse">
+                        <p>
+                            Ratkaise yhtälö
+                            $$
+                            \ln{2x-5} = 2
+                            $$
+                            samaan tapaan kuin edellä tehtiin. Tarkista vastauksen järkevyys piirtämällä samaan koordinaatistoon funktioiden $f(x) = \ln{2x - 5}$ ja $g(x) = 2$ kuvaajat esimerkiksi Geogebralla.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t312_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t312_v" class="collapse">
+                           <p>
+                                Yhtälö toteutuu, jos ja vain jos 
+                                $$x = \dfrac{e^2 + 5}{2} \approx 6{,}19.$$ 
+                                Kuvasta nähdään, että tulos on järkevä:
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva062.png" max-width: 100%; width: auto; height: auto;/>
+                           </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Monimutkaisempia logaritmiyhtälöiden ratkaisu onnistuu logaritmien laskusääntöjen avulla. Tällöin täytyy kuitenkin olla tarkkana sen suhteen, mikä on alkuperäisen yhtälön määrittelyjoukko. Muuten ratkaisujen joukkoon voi päästä livahtamaan valeratkaisuja samaan tapaan kuin juuriyhtälöissä. Kannattaa muistaa, että ratkaisut voi aina tarkistaa myös jälkikäteen sijoittamalla ne alkuperäiseen yhtälöön.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t313-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t313">
+                                Logaritmiyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t313" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista yhtälö
+                            $$
+                            \lg(x-6) + \lg(x+9) = 2.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Päättele, millä ehdolla yhtälön vasen puoli on määritelty. 
+                                <br>
+                                Vinkki: tutki kummmankin logaritmilausekkeen määrittelyjoukot erikseen ja päättele niistä vastaus.
+                            </li>
+                            <li>
+                                Muokkaa yhtälön vasen puoli toiseen muotoon logaritmien laskusääntöjen avulla.
+                            </li>
+                            <li>
+                                Ratkaise yhtälö samaan tapaan kuin tehtävässä XXX. Karsi valeratkaisut pois a-kohdan määrittelyehdon avulla tai sijoittamalla alkuperäiseen yhtälöön.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t313_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t313_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Yhtälön vasen puoli on määritelty, jos ja vain jos $x > 6$. (Tällöin toteutuvat molemmat ehdot $x > 6$ ja $x > -9$.)
+                                </li>
+                                <li>
+                                    Logaritmien summa on tulon logaritmi:
+                                    $$
+                                    \lg((x-6)(x+9)) = 2.
+                                    $$
+                                </li>
+                                <li>
+                                    Ratkaistaan yhtälö siirtymällä kymmenen potensseihin:
+                                    \begin{align*}
+                                    \lg((x-6)(x+9)) &= 2  \quad \mid 10^{(\ )}\\
+                                    10^{\lg((x-6)(x+9))} &= 10^2 \\
+                                    (x-6)(x+9) &= 100 \\
+                                    x^2 + 3x - 154 &= 0
+                                    \end{align*}
+                                    Ratkaisuiksi saadaan $x_1 = 11$ ja $x_2 = -14$. Näistä määrittelyehdon toteuttaa vain $x_1$. Yhtälöllä on siis tasan yksi ratkaisu $x = 11$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="tehtavat">
