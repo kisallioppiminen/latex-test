@@ -1089,13 +1089,12 @@ topnav: maa8
                 <p>
                     Ratkaisun tarkan arvon selvittäminen ei onnistu pelkän piirroksen avulla vaan tarvitaan muita keinoja. Määritelmän mukaan luvun $a$ logaritmi tarkoittaa eksponenttia, johon kantaluku pitää korottaa luvun $a$ saamiseksi:
                     $$
-                    e^{\ln a} = a.
+                    \ln a = b, \text{ jos ja vain jos } e^b = a.
                     $$
-                    Logaritmista päästään siis eroon, kun siirrytään tarkastelemaan vastaavia kantalukujen potensseja:
+                    Yksinkertaiset logaritmiyhtälöt saadaan ratkaistua tämän avulla. Esimerkiksi yhtälö $\ln x = 1{,}5$ ratkeaa logaritmin määritelmän perusteella:
                     \begin{align*}
-                    \ln x &= 1{,}5  \quad \mid e^{(\ )}\\
-                    e^{\ln x} &= e^{1{,}5} \\
-                    x &= e^{1{,}5}
+                    \ln x &= 1{,}5 \\
+                    e^{1{,}5} &= x
                     \end{align*}
                     Yhtälön ratkaisu on siis $x = e^{1{,}5} \approx 4{,}48$.
                 </p>
@@ -1128,7 +1127,7 @@ topnav: maa8
                                 Logaritmista päästään eroon, kun siirrytään tarkastelemaan vastaavia kantalukujen potensseja:
                                 \begin{align*}
                                 \ln (2x-5) &= 2  \quad \mid e^{(\ )}\\
-                                e^{\ln (2x-5)} &= e^2 \\
+                                e^2 &= 2x - 5 \\
                                 2x-5 &= e^2\\
                                 2x &= e^2  + 5 \\[1mm]
                                 x &= \frac{e^2 + 5}{2}.
@@ -1199,7 +1198,7 @@ topnav: maa8
                                     Ratkaistaan yhtälö siirtymällä kymmenen potensseihin:
                                     \begin{align*}
                                     \lg((x-6)(x+9)) &= 2  \quad \mid 10^{(\ )}\\
-                                    10^{\lg((x-6)(x+9))} &= 10^2 \\
+                                    10^2 &= (x-6)(x+9) \\
                                     (x-6)(x+9) &= 100 \\
                                     x^2 + 3x - 154 &= 0
                                     \end{align*}
