@@ -738,16 +738,16 @@ topnav: maa8
                         <div id="MAA8t210_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    $x = \ln 2 \approx 0{,}693$. 
+                                    $x = \ln(2) \approx 0{,}693$. 
                                 </li>
                                 <li> 
-                                    $x = \ln 3 \approx 1{,}10$.
+                                    $x = \ln(3) \approx 1{,}10$.
                                 </li>
                                 <li> 
                                     $x = \dfrac{1}{3} \approx 0{,}333$.
                                     <br>
                                     Huom. välivaiheena saadaan yhtälö 
-                                    $$3x - 1 = \ln 1$$ 
+                                    $$3x - 1 = \ln(1)$$ 
                                     eli yhtälö
                                     $$3x - 1 = 0.$$
                                 </li>
@@ -772,13 +772,13 @@ topnav: maa8
                         </p>
                         <ol class="a">
                             <li> 
-                                $e^{\ln 5}$
+                                $e^{\ln(5)}$
                             </li>
                             <li> 
                                 $\ln (e^8)$
                             </li>
                             <li> 
-                                $e^{\ln 1}$
+                                $e^{\ln(1)}$
                             </li>
                             <li>
                                 $\ln (e^{-1})$
@@ -792,16 +792,16 @@ topnav: maa8
                         <div id="MAA8t219_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    Luonnollisen logaritmin määritelmän mukaan $\ln 5$ on yhtälön $e^x = 5$ ratkaisu. Siten 
-                                    $$e^{\ln 5} = 5.$$
+                                    Luonnollisen logaritmin määritelmän mukaan $\ln(5)$ on yhtälön $e^x = 5$ ratkaisu. Siten 
+                                    $$e^{\ln(5)} = 5.$$
                                 </li>
                                 <li> 
                                     Luonnollisen logaritmin määritelmän mukaan $\ln (e^8)$ on yhtälön $e^x = e^8$ ratkaisu. Koska funktion $f(x) = e^x$ on aidosti kasvava ja saa jokaisen arvonsa vain kerran, niin yhtälö toteutuu, jos ja vain jos eksponentit ovat samat eli $x = 8$. Siis
                                     $$\ln (e^8) = 8.$$
                                 </li>
                                 <li> 
-                                    Luonnollisen logaritmin määritelmän mukaan $\ln 1$ on yhtälön $e^x = 1$ ratkaisu. Siten 
-                                    $$e^{\ln 1} = 1.$$
+                                    Luonnollisen logaritmin määritelmän mukaan $\ln(1)$ on yhtälön $e^x = 1$ ratkaisu. Siten 
+                                    $$e^{\ln(1)} = 1.$$
                                 </li>
                                 <li>
                                     Luonnollisen logaritmin määritelmän mukaan $\ln (e^{-1})$ on yhtälön $e^x = e^{-1}$ ratkaisu. Koska funktion $f(x) = e^x$ on aidosti kasvava ja saa jokaisen arvonsa vain kerran, niin yhtälö toteutuu, jos ja vain jos eksponentit ovat samat eli $x = -1$. Siis
@@ -1022,9 +1022,9 @@ topnav: maa8
                                     $$
                                     f'(x) = e^x - 2
                                     $$
-                                    on yksi nollakohta $x = \ln 2$.
+                                    on yksi nollakohta $x = \ln (2)$.
                                     Kulkukaaviosta nähdään, että funktio $f$ saa tässä pienimmän arvonsa
-                                    $$f(\ln 2) = \frac{3}{2} - 2\ln 2 \approx 0{,}11 > 0.$$
+                                    $$f(\ln(2)) = \frac{3}{2} - 2\ln(2) \approx 0{,}11 > 0.$$
                                     Siis $f(x) > 0$ kaikilla muuttujan $x$ arvoilla, joten 
                                     $$e^x - x - 1 > x - \frac{1}{2}$$ kaikilla muuttujan $x$ arvoilla.
                                 </li>
@@ -1175,16 +1175,19 @@ topnav: maa8
                                 <li>  
                                     Luonnollisen logaritmin määritelmästä seuraa, että
                                     $$
-                                    e^{\ln k} = k.
+                                    e^{\ln(k)} = k.
                                     $$
                                 </li>
                                 <li>  
                                     $$
-                                    f(x) = k^x = \left(e^{\ln k}\right)^x = e^{x\ln k}
+                                    f(x) = k^x = \left(e^{\ln(k)}\right)^x = e^{x\ln(k)}
                                     $$
                                 </li>
                                 <li>
-                                    $$f'(x) = e^{x\ln k} \ln k$$
+                                    \begin{align*}
+                                    f'(x) &= e^{x\ln (k)} \ln (k)\\
+                                    &= k^x \ln(k)
+                                    \end{align*}
                                 </li>
                             </ol>
                         </div>
@@ -1203,7 +1206,7 @@ topnav: maa8
                     <p>
                         Oletetaan, että $k \neq 1$ on positiivinen reaaliluku. Eksponenttifunktio $f(x) = k^x$ on kaikkialla derivoituva ja sen derivaattafunktio on 
                         $$
-                        f'(x) = k^x \ln k.
+                        f'(x) = k^x \ln(k).
                         $$  
                     </p>
                     <div class="proof">
@@ -1247,13 +1250,13 @@ topnav: maa8
                         <div id="MAA8t217_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    $f'(x) = 2^x \ln 2$. 
+                                    $f'(x) = 2^x \ln(2)$. 
                                 </li>
                                 <li> 
-                                    $g'(x) = -3^{-x} \ln 3$.
+                                    $g'(x) = -3^{-x} \ln(3)$.
                                 </li>
                                 <li> 
-                                    $h'(x) = 2 \ln 10 \cdot 10^{2x}$
+                                    $h'(x) = 2 \ln(10) \cdot 10^{2x}$
                                 </li>
                             </ol>
                         </div>
@@ -1296,14 +1299,14 @@ topnav: maa8
                                     Kantaluku voidaan valita kahdella tavalla:
                                     $$B(t) = 1500 \cdot 7{,}9^t$$
                                     tai
-                                    $$B(t) = 1500 \cdot e^{t \ln 7{,}9}.$$
+                                    $$B(t) = 1500 \cdot e^{t \ln (7{,}9)}.$$
                                 </li>
                                 <li> 
                                     Noin 33 000 kpl.
                                 </li>
                                 <li> 
                                     Derivaattafunktio on 
-                                    $$B'(t) = 1500 \cdot \ln 7{,}9 \cdot 7{,}9^t,$$
+                                    $$B'(t) = 1500 \cdot \ln (7{,}9) \cdot 7{,}9^t,$$
                                     joten 
                                     $$
                                     B'(1{,}5) \approx 69\,0000
@@ -1537,7 +1540,7 @@ topnav: maa8
                     <div id="MAA8s3t102_v" class="collapse">
                         <ol class="a">
                             <li> 
-                                $t \geq \dfrac{\ln 20}{0{,}6} \approx 5$ minuuttia.
+                                $t \geq \dfrac{\ln (20)}{0{,}6} \approx 5$ minuuttia.
                             </li>
                             <li>
                                 Noin 0,2 astetta minuutissa.
@@ -1770,7 +1773,7 @@ topnav: maa8
                             <li>
                                 11 vuorokauden kuluttua:
                                 $$
-                                t > \frac{\ln 4999}{0{,}8} \approx 10{,}6.
+                                t > \frac{\ln (4999)}{0{,}8} \approx 10{,}6.
                                 $$
                             </li>
                             <li>
