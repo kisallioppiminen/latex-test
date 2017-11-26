@@ -1075,12 +1075,12 @@ topnav: maa8
             <div class="teoria">
                 <p>
                     Kun tutkitaan, missä kohdassa jokin logaritmifunktio saa tietyn arvon, päädytään niin sanottuun logaritmiyhtälöön. Esimerkiksi jos halutaan tietää, missä kohdassa funktio 
-                    $$f(x) = \ln x$$ 
+                    $$f(x) = \ln (x)$$ 
                     saa arvon $1{,}5$, joudutaan tutkimaan yhtälöä
                     $$f(x) = 1{,}5$$
                     eli yhtälöä
-                    $$\ln x = 1{,}5.$$
-                    Tätä yhtälöä voidaan havainnollistaa piirtämällä logaritmifunktion $f(x) = \ln x$ kuvaaja ja vakiofunktion $g(x) = 1{,}5$ kuvaaja samaan koordinaatistoon:
+                    $$\ln (x) = 1{,}5.$$
+                    Tätä yhtälöä voidaan havainnollistaa piirtämällä logaritmifunktion $f(x) = \ln (x)$ kuvaaja ja vakiofunktion $g(x) = 1{,}5$ kuvaaja samaan koordinaatistoon:
                     <br>
                     <img src="/kurssit/maa8/kuvat/MAA8kuva061.png" max-width: 100%; width: auto; height: auto;/>
                     <br>
@@ -1092,9 +1092,9 @@ topnav: maa8
                     \log_k (a) = b, \ \text{ jos ja vain jos }\  k^b = a.
                     $$
                     Yksinkertaiset logaritmiyhtälöt saadaan ratkaistua tämän tiedon avulla. 
-                    Esimerkiksi yhtälön $\ln x = 1{,}5$ ratkaisuksi saadaan
+                    Esimerkiksi yhtälön $\ln (x) = 1{,}5$ ratkaisuksi saadaan
                     \begin{align*}
-                    \ln x &= 1{,}5 \\
+                    \ln (x) &= 1{,}5 \\
                     e^{1{,}5} &= x \\
                     x &= e^{1{,}5} \approx 4{,}48.
                     \end{align*}
@@ -1294,7 +1294,7 @@ topnav: maa8
                         <p>
                             Voimakkaissa maanjäristyksissä vapautuu lyhyessä ajassa suuri määrä maankuoren jännitteisiin patoutunutta energiaa. Maanjäristyksen voimakkuutta kuvataan nykyään momenttimagnitudiasteikolla aiemmin käytetyn Richterin asteikon sijaan. Maanjäristyksen momenttimagnitudi $M_W$ saadaan yhtälöstä
                             $$
-                            M_W = \frac{2}{3}(\lg E - 4{,}8).
+                            M_W = \frac{2}{3}(\lg (E) - 4{,}8).
                             $$
                             Tässä $E$ on vapautuneen energian määrä jouleina (J).
                         </p>
@@ -1324,8 +1324,8 @@ topnav: maa8
                                     <br>
                                     Vapautuneen energian määrä saadaan ratkaisemalla logaritmiyhtälö:
                                     \begin{align*} 
-                                    \lg E &= \frac{3}{2} \cdot 8{,}1 + 4{,}8 \\[1mm]
-                                    \lg E &= 16{,}95 \\[1mm]
+                                    \lg (E) &= \frac{3}{2} \cdot 8{,}1 + 4{,}8 \\[1mm]
+                                    \lg (E) &= 16{,}95 \\[1mm]
                                     E &= 10^{16{,}95} \approx 8{,}9 \cdot 10^{16} \text{ J.}
                                     \end{align*}
                                 </li>
@@ -1384,7 +1384,7 @@ topnav: maa8
                     </header>
                     <div id="MAA8t315" class="collapse">
                         <p>
-                            Tutki funktion $f(x) = \ln x$ derivaattaa tämän <a href="https://ggbm.at/ZjeWn5Ur">Geogebra-havainnollistuksen</a> avulla. Päättele vastaukset seuraaviin kysymyksiin:
+                            Tutki funktion $f(x) = \ln (x)$ derivaattaa tämän <a href="https://ggbm.at/ZjeWn5Ur">Geogebra-havainnollistuksen</a> avulla. Päättele vastaukset seuraaviin kysymyksiin:
                         </p>
                         <ol class="a">
                             <li> Miten oranssin pisteen $y$-koordinaatti ja tangentin kulmakerroin liittyvät toisiinsa? </li>
@@ -1395,7 +1395,7 @@ topnav: maa8
                                 Mitä tangentin kulmakertoimelle tapahtuu, kun muuttujan $x$ arvo lähestyy nollaa? Miten tämä näkyy derivaattafunktion kuvaajassa?
                             </li>
                             <li>
-                                Mikä tuttu funktio saattaisi olla funktion $f(x) = \ln x$ derivaattafunktio? Tee arvaus derivaattafunktion kuvaajaan perustuen.
+                                Mikä tuttu funktio saattaisi olla funktion $f(x) = \ln (x)$ derivaattafunktio? Tee arvaus derivaattafunktion kuvaajaan perustuen.
                             </li>
                         </ol>
                         <h2>
@@ -1431,7 +1431,7 @@ topnav: maa8
                 <div class="theorem" id="LUONNOLLISEN LOGARITMIN DERIVAATTAFUNKTIO">
                     <h3>TEOREEMA</h3>
                     <p>
-                        Logaritmifunktio $f(x) = \ln x$ on derivoituva koko määrittelyjoukossaan $\pa 0, \infty \pe$ ja sen derivaattafunktio on 
+                        Logaritmifunktio $f(x) = \ln (x)$ on derivoituva koko määrittelyjoukossaan $\pa 0, \infty \pe$ ja sen derivaattafunktio on 
                         $$
                         f'(x) = \frac{1}{x}.
                         $$  
@@ -1440,9 +1440,9 @@ topnav: maa8
                         <p>
                             Perustelu: Luonnollisen logaritmin määritelmän mukaan luvun $a > 0$ logaritmi tarkoittaa eksponenttia, johon Neperin luku pitää korottaa luvun $a$ saamiseksi:
                             $$
-                            e^{\ln a} = a.                            
+                            e^{\ln (a)} = a.                            
                             $$
-                            Funktio $g(x) = x$, missä $x > 0$, voidaan tämän vuoksi kirjoittaa myös muodossa $g(x) = e^{\ln x}$. Derivaattafunktio $g'(x)$ voidaan näin muodostaa kahdella tavalla:
+                            Funktio $g(x) = x$, missä $x > 0$, voidaan tämän vuoksi kirjoittaa myös muodossa $g(x) = e^{\ln (x)}$. Derivaattafunktio $g'(x)$ voidaan näin muodostaa kahdella tavalla:
                         </p>
                         <ol>
                             <li> 
@@ -1450,21 +1450,21 @@ topnav: maa8
                                 $$g'(x) = 1.$$
                             </li>
                             <li>
-                                Yhdistetyn funktion derivointisäännön mukaan funktion $g(x) = e^{\ln x}$ derivaattafunktio on 
+                                Yhdistetyn funktion derivointisäännön mukaan funktion $g(x) = e^{\ln (x)}$ derivaattafunktio on 
                                 \begin{align*}
-                                g'(x) &= e^{\ln x} \cdot \mathop{\mathrm{D}} \ln x \\
-                                &= x \cdot \mathop{\mathrm{D}} \ln x.
+                                g'(x) &= e^{\ln (x)} \cdot \mathop{\mathrm{D}} \ln (x) \\
+                                &= x \cdot \mathop{\mathrm{D}} \ln (x).
                                 \end{align*}
                             </li>
                         </ol>
                         <p>
                             Koska kysymyksessä on kuitenkin yksi ja sama funktio $g$, ovat eri tavoin muodostetut derivaattafunktiotkin sama funktio. Siis
                             $$
-                            x \cdot \mathop{\mathrm{D}} \ln x = 1.
+                            x \cdot \mathop{\mathrm{D}} \ln (x) = 1.
                             $$
                             Tästä yhtälöstä saadaan ratkaistua
                             $$
-                            \mathop{\mathrm{D}} \ln x = \frac{1}{x}.
+                            \mathop{\mathrm{D}} \ln (x) = \frac{1}{x}.
                             $$
                         </p>
                     </div>
@@ -1486,13 +1486,13 @@ topnav: maa8
                         </p>
                         <ol class="a">
                             <li> 
-                                $f(x) = x^2 + \ln x$
+                                $f(x) = x^2 + \ln (x)$
                             </li>
                             <li> 
-                                $g(x) = 4\ln x$
+                                $g(x) = 4\ln (x)$
                             </li>
                             <li> 
-                                $h(x) = \ln 4x$
+                                $h(x) = \ln (4x)$
                             </li>
                         </ol>
                         <h2>
@@ -1536,7 +1536,7 @@ topnav: maa8
                         <p>
                             Tutki, onko funktiolla
                             $$
-                            f(x) = x\ln x
+                            f(x) = x\ln (x)
                             $$
                             suurinta tai pienintä arvoa. Jos kyseinen arvo on olemassa, mikä se on?
                         </p>
@@ -1556,8 +1556,8 @@ topnav: maa8
                             <p>
                                 Derivaattafunktiolla
                                 \begin{align*}
-                                f'(x) &= 1 \cdot \ln x + x \cdot \frac{1}{x}  \\
-                                &= \ln x + 1
+                                f'(x) &= 1 \cdot \ln (x) + x \cdot \frac{1}{x}  \\
+                                &= \ln (x) + 1
                                 \end{align*}
                                 on yksi nollakohta $x = e^{-1}$. Kulkukaavion perusteella päätellään, että funktio saa tässä kohdassa pienimmän arvonsa.
                             </p>
@@ -1577,7 +1577,7 @@ topnav: maa8
                     </header>
                     <div id="MAA8t317b" class="collapse">
                         <p>
-                            Tarkastellaan suorakulmiota, jonka yksi sivu on suoralla $y = 3$, toinen sivu on suoralla $x = 0$ ja yksi kärkipiste käyrällä $y = \ln x$ alla olevan kuvan tapaan. Tehtävänä on tutkia, mikä on tällaisen suorakulmion suurin mahdollinen pinta-ala.
+                            Tarkastellaan suorakulmiota, jonka yksi sivu on suoralla $y = 3$, toinen sivu on suoralla $x = 0$ ja yksi kärkipiste käyrällä $y = \ln (x)$ alla olevan kuvan tapaan. Tehtävänä on tutkia, mikä on tällaisen suorakulmion suurin mahdollinen pinta-ala.
                             <br>
                             <img src="/kurssit/maa8/kuvat/MAA8kuva063.png" max-width: 100%; width: auto; height: auto;/>
                         </p>
@@ -1585,7 +1585,7 @@ topnav: maa8
                             <li>
                                 Muodosta funktio, joka ilmaisee suorakulmion pinta-alan.
                                 <br>
-                                Vinkki: Jos käyrällä $y = \ln x$ sijaitsevan kärkipisteen $x$-koordinaatti on $x = t$, mikä on sen $y$-koordinaatti? Entä mitä ovat muiden kärkipisteiden koordinaatit? 
+                                Vinkki: Jos käyrällä $y = \ln (x)$ sijaitsevan kärkipisteen $x$-koordinaatti on $x = t$, mikä on sen $y$-koordinaatti? Entä mitä ovat muiden kärkipisteiden koordinaatit? 
                             </li>
                             <li>
                                 Määritä a-kohdan funktion suurin arvo tai perustele, ettei sitä ole olemassa.
@@ -1598,19 +1598,19 @@ topnav: maa8
                         </h2>
                         <div id="MAA8t317b_v" class="collapse">
                             <p>
-                                Jos käyrällä $y = \ln x$ sijaitsevan kärkipisteen koordinaatit ovat $(t, \ln t)$. Suorakulmion pinta-ala saadaan funktiosta
+                                Jos käyrällä $y = \ln (x)$ sijaitsevan kärkipisteen koordinaatit ovat $(t, \ln (t))$. Suorakulmion pinta-ala saadaan funktiosta
                                 $$
-                                A(t) = t(3-\ln t) = 3t - t\ln t.
+                                A(t) = t(3-\ln (t)) = 3t - t\ln (t).
                                 $$
                             </p>
                             <p>
                                 Derivaattafunktiolla
                                 \begin{align*}
-                                A'(t) &= 2 - \ln t
+                                A'(t) &= 2 - \ln (t)
                                 \end{align*}
                                 on yksi nollakohta $t = e^2$. Kulkukaavion perusteella päätellään, että funktio saa tässä kohdassa suurimman arvonsa. Pinta-alan suurin arvo on 
                                 $$
-                                A(e^2) = e^2(3 - \ln e^2) = e^2.
+                                A(e^2) = e^2(3 - \ln (e^2)) = e^2.
                                 $$
                             </p>
                         </div>
@@ -1659,7 +1659,7 @@ topnav: maa8
                                     $f'(x) = \dfrac{2}{x} \\$
                                     <br>
                                     Huom. potenssin logaritmisäännön avulla funktion saa ennen derivointia muotoon 
-                                    $$f(x) = 2 \ln x.$$
+                                    $$f(x) = 2 \ln (x).$$
                                 </li>
                                 <li> 
                                     $g'(x) = \dfrac{e^x}{e^x + 1}\\$.
@@ -1753,7 +1753,7 @@ topnav: maa8
                     </header>
                     <div id="MAA8t319" class="collapse">
                         <p>
-                            Oletetaan, että $k \neq 1$ on positiivinen reaaliluku. Tehtävänä on määrittää logaritmifunktion $f(x) = \log_k x$ derivaattafunktio.
+                            Oletetaan, että $k \neq 1$ on positiivinen reaaliluku. Tehtävänä on määrittää logaritmifunktion $f(x) = \log_k (x)$ derivaattafunktio.
                         </p>
                         <ol class="a">
                             <li> 
@@ -1775,10 +1775,10 @@ topnav: maa8
                         <div id="MAA8t319_v" class="collapse">
                             <ol class="a">
                                 <li>  
-                                    $f(x) = \dfrac{1}{\ln k} \cdot \ln x$
+                                    $f(x) = \dfrac{1}{\ln (k)} \cdot \ln (x)$
                                 </li>
                                 <li>  
-                                    $f(x) = \dfrac{1}{\ln k} \cdot \dfrac{1}{x} = \dfrac{1}{x\ln k}$
+                                    $f(x) = \dfrac{1}{\ln (k)} \cdot \dfrac{1}{x} = \dfrac{1}{x\ln (k)}$
                                 </li>
                             </ol>
                         </div>
@@ -1795,9 +1795,9 @@ topnav: maa8
                 <div class="theorem" id="LOGARITMIFUNKTION DERIVAATTAFUNKTIO">
                     <h3>TEOREEMA</h3>
                     <p>
-                        Oletetaan, että $k \neq 1$ on positiivinen reaaliluku. Logaritmifunktio $f(x) = \log_k x$ on kaikkialla derivoituva ja sen derivaattafunktio on 
+                        Oletetaan, että $k \neq 1$ on positiivinen reaaliluku. Logaritmifunktio $f(x) = \log_k (x)$ on kaikkialla derivoituva ja sen derivaattafunktio on 
                         $$
-                        f'(x) = \frac{1}{x \ln k}.
+                        f'(x) = \frac{1}{x \ln (k)}.
                         $$  
                     </p>
                     <div class="proof">
@@ -1824,10 +1824,10 @@ topnav: maa8
                         </p>
                         <ol class="a">
                             <li> 
-                                Määritä funktion $g(x) = \lg x$ kasvunopeus kohdassa $x = 6$. Anna vastauksen likiarvo kahden merkitsevän numeron tarkkuudella.
+                                Määritä funktion $g(x) = \lg (x)$ kasvunopeus kohdassa $x = 6$. Anna vastauksen likiarvo kahden merkitsevän numeron tarkkuudella.
                             </li>
                             <li> 
-                                Määritä funktion $h(x) = \lb x$ kuvaajalle kohtaan $x = 8$ asetetun tangentin yhtälö.
+                                Määritä funktion $h(x) = \lb (x)$ kuvaajalle kohtaan $x = 8$ asetetun tangentin yhtälö.
                             </li>
                         </ol>
                         <p>
@@ -1841,12 +1841,12 @@ topnav: maa8
                         <div id="MAA8t320_v" class="collapse">
                             <ol class="a">
                                 <li>  
-                                    $g'(x) = \dfrac{1}{6\cdot \ln 10} \approx 0{,}072$.
+                                    $g'(x) = \dfrac{1}{6\cdot \ln (10)} \approx 0{,}072$.
                                 </li>
                                 <li>  
                                     Tangentin yhtälö on 
                                     $$
-                                    y = \frac{1}{8\ln 2}\cdot x + 3 - \frac{1}{\ln 2}
+                                    y = \frac{1}{8\ln (2)}\cdot x + 3 - \frac{1}{\ln (2)}
                                     $$
                                     (Tangentin sivuamispiste on $(8,3)$ ja kulmakerroin $h'(8)$.)
                                 </li>
@@ -1931,14 +1931,14 @@ topnav: maa8
                 </header>
                 <div id="MAA8s3t101">
                     <p>
-                        Digitaalisten sovellusten ansiosta binäärilogaritmin $\mathop{\mathrm{lb}} x = \log_2 x$ käyttö on yleistynyt.
+                        Digitaalisten sovellusten ansiosta binäärilogaritmin $\mathop{\mathrm{lb}} x = \log_2 (x)$ käyttö on yleistynyt.
                     </p>
                     <ol class="a">
                         <li> 
                             Ratkaise yhtälö 
                             $$\mathop{\mathrm{lb}}(x + 1) - \mathop{\mathrm{lb}}(4x) = 1.$$ 
                         </li>
-                        <li> Millä arvoilla $n = 1, 2, 3, \ldots$ on voimassa $2 \leq \mathop{\mathrm{lb}} n \leq 3$?</li>
+                        <li> Millä arvoilla $n = 1, 2, 3, \ldots$ on voimassa $2 \leq \mathop{\mathrm{lb}} (n) \leq 3$?</li>
                     </ol>
                     <p>
                         [Pitkä S2016/3]
@@ -1951,7 +1951,7 @@ topnav: maa8
                     <div id="MAA8s3t101_v" class="collapse">
                         <ol class="a">
                             <li> $x = \dfrac{1}{7}$ </li>
-                            <li> Koska $\mathop{\mathrm{lb}} 4 = 2$ ja $\mathop{\mathrm{lb}} 8 = 3$, niin epäyhtälön toteuttavat arvot $4 \leq n \leq 8$.</li>
+                            <li> Koska $\mathop{\mathrm{lb}} (4) = 2$ ja $\mathop{\mathrm{lb}} (8) = 3$, niin epäyhtälön toteuttavat arvot $4 \leq n \leq 8$.</li>
                         </ol>
                     </div>
                 </div>
@@ -2053,14 +2053,14 @@ topnav: maa8
                         <li> 
                             Sievennä lauseke 
                             $$
-                            \ln\left(\frac{1}{3x^2}\right) + \ln 3 + 2\ln x,
+                            \ln\left(\frac{1}{3x^2}\right) + \ln (3) + 2\ln (x),
                             $$ 
                             kun $x > 0$.
                         </li>
                         <li> 
                             Sievennä lauseke 
                             $$
-                            \ln \frac{x}{2} + \ln \frac{e^x}{x} + \ln 2
+                            \ln \left(\frac{x}{2}\right) + \ln \left(\frac{e^x}{x}\right) + \ln (2)
                             $$
                         </li>
                     </ol>
@@ -2096,7 +2096,7 @@ topnav: maa8
                 <div id="MAA8s3t105">
                     <p>
                         Millä muuttujan $x$ arvolla jono 
-                        $$\ln 2, \,\ln(2^x - 2), \,\ln(2^x + 2)$$ 
+                        $$\ln (2), \,\ln(2^x - 2), \,\ln(2^x + 2)$$ 
                         on aritmeettinen?
                         <br>
                         Vinkki: kertaa aritmeettisen jonon määritelmä kurssista <a href="http://kisallioppiminen.fi/kurssit/may1/lukujonotSummat/">MAY1</a>.
@@ -2110,7 +2110,7 @@ topnav: maa8
                     </h2>
                     <div id="MAA8s3t105_v" class="collapse">
                         <p>
-                            $x = \dfrac{\ln 6}{\ln 2}$
+                            $x = \dfrac{\ln (6)}{\ln (2)}$
                         </p>
                     </div>
                 </div>
@@ -2128,7 +2128,7 @@ topnav: maa8
                     <p>
                         Määritä funktion
                         $$
-                        f(x) = \frac{\ln x}{x}
+                        f(x) = \frac{\ln (x)}{x}
                         $$
                         suurin arvo, kun $x > 0$.
                         <br>
