@@ -1084,12 +1084,12 @@ topnav: maa8
                     <br>
                     <img src="/kurssit/maa8/kuvat/MAA8kuva061.png" max-width: 100%; width: auto; height: auto;/>
                     <br>
-                    Piirroksesta nähdään, että kuvaajat leikkaavat yhdessä kohdassa eli yhtälöllä on täsmälleen yksi ratkaisu $x \approx 4{,}5$. (Tähän päätelmään tarvitaan toki myös tieto siitä, että logaritmifunktio saa aina vain suurempia arvoja muuttujan kasvaessa. Muuten kuvan ulkopuolella voisi olla lisää leikkauskohtia.)
+                    Piirroksesta nähdään, että kuvaajat leikkaavat yhdessä kohdassa eli yhtälöllä on täsmälleen yksi ratkaisu $x \approx 4{,}5$. (Tähän päätelmään tarvitaan toki myös tieto siitä, että luonnollinen logaritmifunktio on aidosti kasvava eli saa aina vain suurempia arvoja muuttujan kasvaessa. Muuten kuvan ulkopuolella voisi olla lisää leikkauskohtia.)
                 </p>
                 <p>
-                    Ratkaisun tarkan arvon selvittäminen ei onnistu pelkän piirroksen avulla vaan tarvitaan muita keinoja. Määritelmän mukaan luvun $a$ logaritmi tarkoittaa eksponenttia, johon kantaluku pitää korottaa luvun $a$ saamiseksi:
+                    Ratkaisun tarkan arvon selvittäminen ei onnistu pelkän piirroksen avulla vaan on turvauduttava logaritmin määritelmään. Sen mukaan luvun $a$ logaritmi tarkoittaa eksponenttia, johon kantaluku pitää korottaa luvun $a$ saamiseksi:
                     $$
-                    \ln a = b, \text{ jos ja vain jos } e^b = a.
+                    \log_k (a) = b, \text{ jos ja vain jos } k^b = a.
                     $$
                     Yksinkertaiset logaritmiyhtälöt saadaan ratkaistua tämän avulla. Esimerkiksi yhtälö $\ln x = 1{,}5$ ratkeaa logaritmin määritelmän perusteella:
                     \begin{align*}
@@ -1124,9 +1124,9 @@ topnav: maa8
                         </h2>
                         <div id="MAA8t312_v" class="collapse">
                            <p>
-                                Logaritmista päästään eroon, kun siirrytään tarkastelemaan vastaavia kantalukujen potensseja:
+                                Yhtälö ratkeaa logaritmin määritelmän avulla:
                                 \begin{align*}
-                                \ln (2x-5) &= 2  \quad \mid e^{(\ )}\\
+                                \ln (2x-5) &= 2 \\
                                 e^2 &= 2x - 5 \\
                                 2x-5 &= e^2\\
                                 2x &= e^2  + 5 \\[1mm]
@@ -1195,9 +1195,9 @@ topnav: maa8
                                     $$
                                 </li>
                                 <li>
-                                    Ratkaistaan yhtälö siirtymällä kymmenen potensseihin:
+                                    Yhtälö ratkeaa logaritmin määritelmän avulla:
                                     \begin{align*}
-                                    \lg((x-6)(x+9)) &= 2  \quad \mid 10^{(\ )}\\
+                                    \lg((x-6)(x+9)) &= 2 \\
                                     10^2 &= (x-6)(x+9) \\
                                     (x-6)(x+9) &= 100 \\
                                     x^2 + 3x - 154 &= 0
