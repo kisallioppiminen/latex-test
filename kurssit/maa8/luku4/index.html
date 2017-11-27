@@ -97,15 +97,53 @@ topnav: maa8
                     </header>
                     <div id="MAA8t401" class="collapse">
                         <p>
-                            
+                            Tässä tehtävässä tutkitaan 10-kantaista logaritmifunktiota $f(x) = \lg(x)$.
                         </p>
+                        <ol class="a">
+                            <li> 
+                                Päättele, mikä voisi olla funktion $f(x) = \lg(x)$ käänteisfunktio. 
+                            </li>
+                            <li> 
+                                Piirrä funktion $f$ ja sen käänteisfunktion kuvaajat <a href="https://www.geogebra.org/graphing">Geogebralla</a> samaan koordinaatistoon. 
+                            </li>
+                            <li> 
+                                Piirrä b-kohdan koordinaatistoon myös suora $y = x$ ja funktion $f$ kuvaajan peilikuva sen suhteen. (Tämä onnistuu Geogebran peilaus suoran suhteen -työkalulla.) Mitä havaitset? 
+                            </li>
+                            <li>
+                                Olkoon funktion $f$ käänteisfunktio nimeltään $g$. Muodosta yhdistetyt funktiot $(f\circ g)(x)$ ja $(g\circ f)(x)$. Mitä havaitset?
+                            </li>
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA8t401_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="MAA8t401_v" class="collapse">
-                           
+                            <ol class="a">
+                                <li> 
+                                    Kymmenkantaisen logaritmifunktion käänteisfunktio on kymmenkantainen eksponenttifunktio $g(x) = 10^x$. 
+                                </li>
+                                <li> 
+                                    Funktioiden $f(x) = \lg(x)$ ja $g(x) = 10^x$ kuvaajat:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuvaG01.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li> 
+                                    Funktion $f(x) = \lg(x)$ kuvaaja ja sen peilikuva suoran $y = x$ suhteen::
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuvaG02.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Funktion $f$ kuvaajan peilikuva suoran $y = x$ suhteen on sama kuin käänteisfunktion $g(x) = 10^x$ kuvaaja.
+                                </li>
+                                <li>
+                                    Yhdistetyt funktiot: 
+                                    \begin{align*}
+                                    (f\circ g)(x) &= f(g(x)) = \lg(10^x) = x \\
+                                    (g\circ f)(x) &= g(f(x)) = 10^{\lg(x)} = x.
+                                    \end{align*}
+                                    Funktio ja sen käänteisfunktio kumoavat toistensa vaikutuksen ja lopputuloksena on alkuperäinen muuttujan arvo.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
