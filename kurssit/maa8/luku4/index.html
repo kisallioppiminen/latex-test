@@ -183,6 +183,69 @@ topnav: maa8
                 </p>
             </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t402-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t402">
+                                Käänteisfunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t402" class="collapse">
+                        <p>
+                            Tässä tehtävässä tutkitaan 3. asteen potenssifunktiota $f(x) = x^3$.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Päättele, mikä voisi olla funktion $f(x) = x^3$ käänteisfunktio. 
+                            </li>
+                            <li> 
+                                Piirrä funktion $f$ ja sen käänteisfunktion kuvaajat <a href="https://www.geogebra.org/graphing">Geogebralla</a> samaan koordinaatistoon. 
+                            </li>
+                            <li> 
+                                Piirrä b-kohdan koordinaatistoon myös suora $y = x$ ja funktion $f$ kuvaajan peilikuva sen suhteen. (Tämä onnistuu Geogebran peilaus suoran suhteen -työkalulla.) Mitä havaitset? 
+                            </li>
+                            <li>
+                                Olkoon funktion $f$ käänteisfunktio nimeltään $g$. Muodosta yhdistetyt funktiot $(f\circ g)(x)$ ja $(g\circ f)(x)$. Mitä havaitset?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t402_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t402_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kolmannen asteen potenssifunktion käänteisfunktio on kuutiojuurifunktio $g(x) = \sqrt[3]{x}$. 
+                                </li>
+                                <li> 
+                                    Funktioiden $f(x) = x^3$ ja $g(x) = \sqrt[3]{x}$ kuvaajat:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuvaG03.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li> 
+                                    Funktion $f(x) = x^3$ kuvaaja ja sen peilikuva suoran $y = x$ suhteen:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuvaG04.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Funktion $f$ kuvaajan peilikuva suoran $y = x$ suhteen on sama kuin käänteisfunktion $g(x) = \sqrt[3]{x}$ kuvaaja.
+                                </li>
+                                <li>
+                                    Yhdistetyt funktiot: 
+                                    \begin{align*}
+                                    (f\circ g)(x) &= f(g(x)) = \left(\sqrt[3]{x}\right)^3 = x \\
+                                    (g\circ f)(x) &= g(f(x)) = \sqrt[3]{x^3} = x.
+                                    \end{align*}
+                                    Funktio ja sen käänteisfunktio kumoavat toistensa vaikutuksen ja lopputuloksena on alkuperäinen muuttujan arvo.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#kf1">
