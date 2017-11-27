@@ -149,6 +149,40 @@ topnav: maa8
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    Juuri- ja potenssifunktiot tarjoavat lisää esimerkkejä funktion ja sen käänteisfunktion muodostamista pareista. Esimerkiksi neliöjuuri määriteltiin toisen asteen potenssiyhtälön epänegatiivisena ratkaisuna:
+                    $$
+                    \sqrt{a} = b, \ \text{ jos ja vain jos } \ b \geq 0 ja b^2 = a.
+                    $$
+                    Tästä seuraa yhteys neliöjuurifunktion ja toisen asteen potenssifunktion kuvaajien välille. Huomaa, että tässä toisen asteen potenssifunktio on rajattu välille $[0, \infty\pe$, koska luvun $a$ neliöjuuri määritellään yhtälön
+                    $$
+                    x^2 = a
+                    $$
+                    epänegatiivisena ratkaisuna.
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva067.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Havaitaan, että kuvaajat saadaan toisistaan vaihtamalla $x$- ja $y$-akselien roolit eli peilaamalla suoran $y = x$ suhteen:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva068.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Oletus $x \geq 0$ on välttämätön myös siihen, että neliöjuurifunktio $f(x) = \sqrt{x}$ ja potenssifunktio $g(x) = x^2$ kumoavat toistensa vaikutuksen. Esimerkiksi
+                    \begin{align*}
+                    (f\circ g)(-2) &= f(g(-2)) = \sqrt{(-2)^2} 
+                    &= \sqrt{4} = 2 \neq -2
+                    \end{align*}
+                    mutta jos $x \geq 0$, tuloksena on alkuperäinen muuttujan arvo:
+                    $$
+                    (f\circ g)(x) = f(g(x)) = \sqrt{x^2} = \left|x\right| = x
+                    $$
+                    ja
+                    $$
+                    (g\circ f)(x) = g(f(x)) = \left(\sqrt{x}\right)^2 = x.
+                    $$
+                </p>
+            </div>
+
             
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#kf1">
