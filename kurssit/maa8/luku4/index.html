@@ -359,7 +359,7 @@ topnav: maa8
             <div class="teoria">
 
                 <p>
-                    Käänteisfunktion määritelmästä saadaan johdettua seuraava teoreema, joka auttaa käänteisfunktioden määrittämisessä. Lue teoreema ja sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+                    Käänteisfunktion määritelmästä saadaan johdettua seuraava teoreema, joka auttaa käänteisfunktioden etsimisessä. Lue teoreema ja sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
                 </p>
 
                 <div class="theorem" id="KÄÄNTEISFUNKTIO">
@@ -396,14 +396,21 @@ topnav: maa8
                 </div>
 
                 <p>
-                    Käytännössä käänteisfunktio kannattaa ensin etsiä teoreeman 14 avulla ja sen jälkeen tarkistaa, että se toteuttaa käänteisfunktion määritelmän ehdot. Näin varmistetaan, että löydetty funktio todella on käänteisfunktio. Esimerkiksi funktion $f(x) = 2x - 1$ käänteisfunktio muodostamalla yhtälö $f(a) = b$ ja ratkaisemalla siitä $a$:
+                    Jos funktio on aidosti kasvava tai aidosti vähenevä, sillä on teoreeman 14 nojalla käänteisfunktio. Käänteisfunktio löydetään tämän jälkeen teoreeman 15 avulla. 
+                </p>
+                <p>
+                    Esimerkiksi funktio $f(x) = 2x - 1$ on aidosti kasvava koko määrittelyjoukossaan, sillä sen kuvaaja on nouseva suora:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva073.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Funktiolla $f$ on siis teoreeman 14 nojalla käänteisfunktio $f^{-1}$. Se löydetään muodostamalla yhtälö $f(a) = b$ ja ratkaisemalla siitä $a$:
                     \begin{align*}
                     f(a) &= b \\[1mm]
                     2a - 1 &= b \\[1mm]
                     2a &= b + 1 \\[1mm]
                     a &= \frac{b + 1}{2}.
                     \end{align*}
-                    Teoreeman 14 mukaan $f(a) = b$, jos ja vain jos $a = f^{-1}(b)$, joten yhtälön ratkaisun tuloksena on löydetty käänteisfunktion lauseke:
+                    Teoreeman 15 mukaan $f(a) = b$, jos ja vain jos $a = f^{-1}(b)$, joten yhtälön ratkaisun tuloksena on löydetty käänteisfunktion lauseke:
                     $$
                     f^{-1}(b) = \frac{b + 1}{2}.
                     $$
