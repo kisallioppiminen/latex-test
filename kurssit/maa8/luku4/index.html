@@ -115,21 +115,22 @@ topnav: maa8
                     </header>
                     <div id="MAA8t401" class="collapse">
                         <p>
-                            Tässä tehtävässä tutkitaan 10-kantaista logaritmifunktiota $f(x) = \lg(x)$.
+                            Tässä tehtävässä määritetään 10-kantaisen logaritmifunktion $f(x) = \lg(x)$ käänteisfunktio.
                         </p>
                         <ol class="a">
                             <li> 
                                 Päättele tai arvaa, mikä funktio $g(x)$ voisi olla funktion $f(x) = \lg(x)$ käänteisfunktio. 
                             </li>
-                            <li> 
-                                Piirrä funktioiden $f$ ja $g$ kuvaajat <a href="https://www.geogebra.org/graphing">Geogebralla</a> samaan koordinaatistoon. 
-                            </li>
-                            <li> 
-                                Piirrä b-kohdan koordinaatistoon myös suora $y = x$ ja funktion $f$ kuvaajan peilikuva sen suhteen. (Tämä onnistuu Geogebran peilaus suoran suhteen -työkalulla.) Onko funktion $g$ kuvaaja funktion $f$ kuvaajan peilikuva?
-                            </li>
                             <li>
-                                Muodosta yhdistetyt funktiot $(f\circ g)(x)$ ja $(g\circ f)(x)$. Onko tuloksena molemmissa tapauksissa alkuperäinen muuttuja $x$? 
+                                Muodosta yhdistetyt funktiot $(f\circ g)(x)$ ja $(g\circ f)(x)$. Onko tuloksena molemmissa tapauksissa alkuperäinen muuttuja $x$? Toisin sanottuna, onko funktio $g$ todella funktion $f$ käänteisfunktio?
                             </li>
+                            <li> 
+                                Piirrä funktion $f$ ja sen käänteisfunktion kuvaajat <a href="https://www.geogebra.org/graphing">Geogebralla</a> samaan koordinaatistoon. 
+                            </li>
+                            <li> 
+                                Piirrä c-kohdan koordinaatistoon myös suora $y = x$ ja funktion $f$ kuvaajan peilikuva sen suhteen. (Tämä onnistuu Geogebran peilaus suoran suhteen -työkalulla.) Tarkista, että funktion $g$ kuvaaja on funktion $f$ kuvaajan peilikuva.
+                            </li>
+                            
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA8t401_v">
@@ -141,6 +142,14 @@ topnav: maa8
                                 <li> 
                                     Kymmenkantaisen logaritmifunktion käänteisfunktio on kymmenkantainen eksponenttifunktio $g(x) = 10^x$. 
                                 </li>
+                                <li>
+                                    Yhdistetyt funktiot: 
+                                    \begin{align*}
+                                    (f\circ g)(x) &= f(g(x)) = \lg(10^x) = x \\
+                                    (g\circ f)(x) &= g(f(x)) = 10^{\lg(x)} = x.
+                                    \end{align*}
+                                    Lopputuloksena on alkuperäinen muuttujan arvo, joten funktio $g$ on funktion $f$ käänteisfunktio. Voidaan siis merkitä $f^{-1} = g$.
+                                </li>
                                 <li> 
                                     Funktioiden $f(x) = \lg(x)$ ja $g(x) = 10^x$ kuvaajat:
                                     <br>
@@ -151,15 +160,7 @@ topnav: maa8
                                     <br>
                                     <img src="/kurssit/maa8/kuvat/MAA8kuvaG02.png" max-width: 100%; width: auto; height: auto;/>
                                     <br>
-                                    Funktion $g$ kuvaaja on funktion $f$ kuvaajan peilikuva suoran $y = x$ suhteen.
-                                </li>
-                                <li>
-                                    Yhdistetyt funktiot: 
-                                    \begin{align*}
-                                    (f\circ g)(x) &= f(g(x)) = \lg(10^x) = x \\
-                                    (g\circ f)(x) &= g(f(x)) = 10^{\lg(x)} = x.
-                                    \end{align*}
-                                    Lopputuloksena on alkuperäinen muuttujan arvo, joten funktio $g$ on funktion $f$ käänteisfunktio. Voidaan siis merkitä $f^{-1} = g$.
+                                    Käänteisfunktion kuvaaja on funktion $f$ kuvaajan peilikuva suoran $y = x$ suhteen.
                                 </li>
                             </ol>
                         </div>
