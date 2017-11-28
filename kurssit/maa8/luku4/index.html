@@ -281,6 +281,94 @@ topnav: maa8
             <div class="teoria">
 
                 <p>
+                    Kaikilla funktioilla ei ole käänteisfunktiota. Seuraavan teoreeman mukaan funktioita, joilla ei ole käänteiskuvausta, ovat sellaiset funktiot, jotka saavat määrittelyjoukkonsa kahdessa eri kohdassa saman arvon. Teoreeman tarkka perustelu on sen verran työläs, ettei siihen nyt syvennytä.
+                </p>
+
+                <div class="theorem" id="KÄÄNTEISFUNKTION OLEMASSAOLO">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Funktiolla $f$ on käänteisfunktio $f^{-1}$, jos ja vain jos funktio $f$ saa jokaisen arvonsa vain yhdessä määrittelyjoukkonsa kohdassa. Käänteisfunktion määrittelyjoukko on sama kuin funktion $f$ arvojoukko.
+                        <br>
+                        Erityisesti jos funktio $f$ on aidosti kasvava tai aidosti vähenevä, niin sillä on käänteisfunktio $f^{-1}$.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t403-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t403">
+                                Käänteisfunktion olemassaolo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t403" class="collapse">
+                        <p>
+                            Päättele kuvaajien ja edellisen teoreeman avulla, millä alla mainituista funktioista on olemassa käänteisfunktio.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $f(x) = \sin x$, missä $0 \leq x \leq 2\pi$: 
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva069.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                $f(x) = \cos x$, missä $0 \leq x \leq \pi$: 
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva070.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li> 
+                                $f(x) = 0{,}25x^3 - 2x^2 + 4x$: 
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva071.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li> 
+                                $f(x) = 2-0{,}5x$: 
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva072.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t402_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t402_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kolmannen asteen potenssifunktion käänteisfunktio on kuutiojuurifunktio $g(x) = \sqrt[3]{x}$. 
+                                </li>
+                                <li>
+                                    Yhdistetyt funktiot: 
+                                    \begin{align*}
+                                    (f\circ g)(x) &= f(g(x)) = \left(\sqrt[3]{x}\right)^3 = x \\
+                                    (g\circ f)(x) &= g(f(x)) = \sqrt[3]{x^3} = x.
+                                    \end{align*}
+                                    Lopputuloksena on alkuperäinen muuttujan arvo, joten funktio $g$ on funktion $f$ käänteisfunktio. Voidaan siis merkitä $f^{-1} = g$.
+                                </li>
+                                <li> 
+                                    Funktion $f(x) = x^3$ kuvaaja ja sen peilikuva suoran $y = x$ suhteen:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuvaG04.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li> 
+                                    Funktioiden $f(x) = x^3$ ja $g(x) = \sqrt[3]{x}$ kuvaajat:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuvaG03.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Käänteisfunktion kuvaaja on funktion $f$ kuvaajan peilikuva suoran $y = x$ suhteen.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
+                <p>
                     Käänteisfunktion määritelmästä saadaan johdettua seuraava teoreema, joka auttaa käänteisfunktioden määrittämisessä. Lue teoreema ja sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
                 </p>
 
