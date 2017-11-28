@@ -316,9 +316,87 @@ topnav: maa8
                         </p>      
                     </div>
                 </div>
+
+                <p>
+                    Käytännössä käänteisfunktio kannattaa ensin etsiä teoreeman 14 avulla ja sen jälkeen tarkistaa, että se toteuttaa käänteisfunktion määritelmän ehdot. Näin varmistetaan, että löydetty funktio todella on käänteisfunktio. Esimerkiksi funktion $f(x) = 2x - 1$ käänteisfunktio muodostamalla yhtälö $f(a) = b$ ja ratkaisemalla siitä $a$:
+                    \begin{align*}
+                    f(a) &= b \\[1mm]
+                    2a - 1 &= b \\[1mm]
+                    2a &= b + 1 \\[1mm]
+                    a &= \frac{b + 1}{2}.
+                    \end{align*}
+                    Teoreeman 14 mukaan $f(a) = b$, jos ja vain jos $a = f^{-1}(b)$, joten yhtälön ratkaisun tuloksena on löydetty käänteisfunktion lauseke:
+                    $$
+                    f^{-1}(b) = \frac{b + 1}{2}.
+                    $$
+                </p>
             </div>
 
-            
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t403-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t403">
+                                Käänteisfunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t403" class="collapse">
+                        <p>
+                            Tehtävänä on tutkia, onko funktiolla $f(x) = 2x - 1$ käänteisfunktiota.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Päättele tai arvaa, mikä voisi olla funktion $f(x) = x^3$ käänteisfunktio $g(x)$. 
+                            </li>
+                            <li>
+                                Muodosta yhdistetyt funktiot $(f\circ g)(x)$ ja $(g\circ f)(x)$. Onko tuloksena molemmissa tapauksissa alkuperäinen muuttuja $x$? Toisin sanottuna, onko funktio $g$ todella funktion $f$ käänteisfunktio?
+                            </li>
+                            <li> 
+                                Piirrä <a href="https://www.geogebra.org/graphing">Geogebralla</a> funktion $f$ kuvaaja, suora $y = x$ ja funktion $f$ kuvaajan peilikuva suoran $y = x$ suhteen. 
+                                <br>
+                                Vinkki: käytä Geogebran "peilaus suoran suhteen"-työkalua.
+                            </li>
+                            <li> 
+                                Piirrä c-kohdan koordinaatistoon myös käänteisfunktion kuvaaja. Mitä huomaat?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t402_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t402_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kolmannen asteen potenssifunktion käänteisfunktio on kuutiojuurifunktio $g(x) = \sqrt[3]{x}$. 
+                                </li>
+                                <li>
+                                    Yhdistetyt funktiot: 
+                                    \begin{align*}
+                                    (f\circ g)(x) &= f(g(x)) = \left(\sqrt[3]{x}\right)^3 = x \\
+                                    (g\circ f)(x) &= g(f(x)) = \sqrt[3]{x^3} = x.
+                                    \end{align*}
+                                    Lopputuloksena on alkuperäinen muuttujan arvo, joten funktio $g$ on funktion $f$ käänteisfunktio. Voidaan siis merkitä $f^{-1} = g$.
+                                </li>
+                                <li> 
+                                    Funktion $f(x) = x^3$ kuvaaja ja sen peilikuva suoran $y = x$ suhteen:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuvaG04.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li> 
+                                    Funktioiden $f(x) = x^3$ ja $g(x) = \sqrt[3]{x}$ kuvaajat:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuvaG03.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Käänteisfunktion kuvaaja on funktion $f$ kuvaajan peilikuva suoran $y = x$ suhteen.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#kf1">
                     Sulje kappale
