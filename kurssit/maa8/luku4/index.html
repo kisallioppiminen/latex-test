@@ -423,63 +423,58 @@ topnav: maa8
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="MAA8t403-ex">
+                <div class="tehtava" id="MAA8t404-ex">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t403">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t404">
                                 Käänteisfunktio
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA8t403" class="collapse">
+                    <div id="MAA8t404" class="collapse">
                         <p>
-                            Tehtävänä on tutkia, onko funktiolla $f(x) = 2x - 1$ käänteisfunktiota.
+                            Tehtävänä on määrittää funktion 
+                            $$f(x) = \frac{5-3x}{2}$$ 
+                            käänteisfunktio tai perustella, ettei käänteisfunktiota ole olemassa.
                         </p>
                         <ol class="a">
                             <li> 
-                                Päättele tai arvaa, mikä voisi olla funktion $f(x) = x^3$ käänteisfunktio $g(x)$. 
+                                Tutki derivaatan avulla, onko funktio $f$ aidosti kasvava tai aidosti vähenevä.
                             </li>
                             <li>
-                                Muodosta yhdistetyt funktiot $(f\circ g)(x)$ ja $(g\circ f)(x)$. Onko tuloksena molemmissa tapauksissa alkuperäinen muuttuja $x$? Toisin sanottuna, onko funktio $g$ todella funktion $f$ käänteisfunktio?
+                                Onko funktiolla $f$ käänteisfunktiota? Perustele vastauksesi.
                             </li>
                             <li> 
-                                Piirrä <a href="https://www.geogebra.org/graphing">Geogebralla</a> funktion $f$ kuvaaja, suora $y = x$ ja funktion $f$ kuvaajan peilikuva suoran $y = x$ suhteen. 
-                                <br>
-                                Vinkki: käytä Geogebran "peilaus suoran suhteen"-työkalua.
-                            </li>
-                            <li> 
-                                Piirrä c-kohdan koordinaatistoon myös käänteisfunktion kuvaaja. Mitä huomaat?
+                                Jos käänteisfunktio on olemassa, määritä se teoreeman 15 avulla samaan tapaan kuin edellä tehtiin.
                             </li>
                         </ol>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t402_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t404_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t402_v" class="collapse">
+                        <div id="MAA8t404_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    Kolmannen asteen potenssifunktion käänteisfunktio on kuutiojuurifunktio $g(x) = \sqrt[3]{x}$. 
+                                    Funktio voidaan kirjoittaa muodossa
+                                    $$
+                                    f(x) = \frac{5}{2} - \frac{3}{2}\cdot x,
+                                    $$
+                                    joten sen derivaattafunktio on 
+                                    $$
+                                    f'(x) = -\frac{3}{2}.
+                                    $$
+                                    Koska derivaattafunktion arvo on kaikkialla negatiivinen, on funktio $f$ kaikialla aidosti vähenevä. 
                                 </li>
                                 <li>
-                                    Yhdistetyt funktiot: 
-                                    \begin{align*}
-                                    (f\circ g)(x) &= f(g(x)) = \left(\sqrt[3]{x}\right)^3 = x \\
-                                    (g\circ f)(x) &= g(f(x)) = \sqrt[3]{x^3} = x.
-                                    \end{align*}
-                                    Lopputuloksena on alkuperäinen muuttujan arvo, joten funktio $g$ on funktion $f$ käänteisfunktio. Voidaan siis merkitä $f^{-1} = g$.
+                                    Koska funktio $f$ on aidosti vähenevä, sillä on käänteisfunktio teoreeman 14 nojalla.
                                 </li>
                                 <li> 
-                                    Funktion $f(x) = x^3$ kuvaaja ja sen peilikuva suoran $y = x$ suhteen:
-                                    <br>
-                                    <img src="/kurssit/maa8/kuvat/MAA8kuvaG04.png" max-width: 100%; width: auto; height: auto;/>
-                                </li>
-                                <li> 
-                                    Funktioiden $f(x) = x^3$ ja $g(x) = \sqrt[3]{x}$ kuvaajat:
-                                    <br>
-                                    <img src="/kurssit/maa8/kuvat/MAA8kuvaG03.png" max-width: 100%; width: auto; height: auto;/>
-                                    <br>
-                                    Käänteisfunktion kuvaaja on funktion $f$ kuvaajan peilikuva suoran $y = x$ suhteen.
+                                    Käänteisfunktio on 
+                                    $$
+                                    f^{-1}(x) = \frac{5-2x}{3}.
+                                    $$
+                                    Se löydetään ratkaisemalla $a$ yhtälöstä $f(a) = b$.
                                 </li>
                             </ol>
                         </div>
