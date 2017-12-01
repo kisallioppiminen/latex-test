@@ -2395,6 +2395,8 @@ topnav: maa8
                 <div id="MAA8s3t108">
                     <p>
                         Tutki, kuinka monta ratkaisua yhtälöllä $e^{x + a} = x$ on vakion $a \in \R$ eri arvoilla.
+                        <br>
+                        [Pitkä S2012/10]
                     </p> 
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t108_v">
@@ -2430,7 +2432,13 @@ topnav: maa8
                 </header>
                 <div id="MAA8s3t109">
                     <p>
-                        
+                        Millä vakion $a$ arvoilla funktio
+                        $$
+                        f(x) = e^x - a\left|x-1\right|
+                        $$
+                        on kaikkialla kasvava?
+                        <br>
+                        [Pitkä K2008/10]
                     </p> 
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t109_v">
@@ -2439,7 +2447,34 @@ topnav: maa8
                     </h2>
                     <div id="MAA8s3t109_v" class="collapse">
                         <p>
-
+                            Funktio $f$ on kaikkialla jatkuva. Tarkastellaan erikseen tilanteet, joissa itseisarvojen sisällä oleva lauseke on positiivinen tai negatiivinen.
+                        </p> 
+                        <ul>
+                            <li> 
+                                Jos $x > 1$, niin
+                                $$
+                                f(x) = e^x - a(x-1)
+                                $$
+                                ja derivaattafunktio on 
+                                $$
+                                f'(x) = e^x - a.
+                                $$
+                                Derivaattafunktio on siis positiivinen tai nolla, jos ja vain jos $e^x > a$. Koska eksponenttifunktio on aidosti kasvava, tämä epäyhtälö toteutuu tarkasteltavalla välillä $\pa 1, \infty\pe$, jos ja vain jos $e^1 \geq a$ eli $a \leq e$.
+                            </li>
+                            <li>
+                                Jos $x < 1$, niin
+                                $$
+                                f(x) = e^x - a(1-x)
+                                $$
+                                ja derivaattafunktio on 
+                                $$
+                                f'(x) = e^x + a.
+                                $$
+                                Derivaattafunktio on siis positiivinen tai nolla, jos ja vain jos $e^x > -a$. Koska eksponenttifunktion arvot lähenevät nollaa muuttujan arvon pienentyessä rajatta, tämä epäyhtälö toteutuu tarkasteltavalla välillä $\pa -\infty, 1\pe$, jos ja vain jos $-a \leq 0$ eli $a \geq 0$. 
+                            </li>
+                        </ul>
+                        <p>
+                            Jos siis $0 \leq a \leq e$, on jatkuva funktio $f$ kasvava sekä välillä $\pa -\infty, 1\pe$ että välillä $\pa 1, \infty\pe$, jolloin se on kasvava kaikkialla.
                         </p>
                     </div>
                 </div>
