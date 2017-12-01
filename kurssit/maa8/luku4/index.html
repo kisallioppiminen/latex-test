@@ -462,15 +462,23 @@ topnav: maa8
                     <div id="MAA8t404" class="collapse">
                         <p>
                             Tehtävänä on määrittää funktion 
-                            $$f(x) = \frac{5-3x}{2}$$ 
+                            $$f(x) = \sqrt{x} + 2$$ 
                             käänteisfunktio tai perustella, ettei käänteisfunktiota ole olemassa.
                         </p>
                         <ol class="a">
                             <li>
+                                Mikä on funktion $f$ määrittelyjoukko? Entä arvojoukko?
+                            </li>
+                            <li>
                                 Onko funktiolla $f$ käänteisfunktiota? Perustele vastauksesi teoreeman 15 avulla.
+                                <br>
+                                Vinkki: voit tutkia derivaatan avulla, onko funktio aidosti monotoninen.
                             </li>
                             <li> 
-                                Jos käänteisfunktio on olemassa, määritä se teoreeman 16 avulla samaan tapaan kuin edellä tehtiin.
+                                Jos käänteisfunktio on olemassa, määritä se teoreeman 16 avulla samaan tapaan kuin edellä tehtiin. Jos käänteisfunktio on olemassa, mikä on sen määrittelyjoukko? Entä arvjoukko?
+                            </li>
+                            <li>
+                                Piirrä funktion $f$ kuvaaja. Jos käänteisfunktio on olemassa, piirrä myös sen kuvaaja.
                             </li>
                         </ol>
                         <h2>
@@ -480,23 +488,28 @@ topnav: maa8
                         </h2>
                         <div id="MAA8t404_v" class="collapse">
                             <ol class="a">
+                                <li>
+                                    Funktion $f$ määrittelyjoukko on $[0, \infty\pe$. Funktion $f$ arvojoukko on $[2, \infty\pe$, sillä se saa pienimmän arvonsa $2$ kohdassa $x = 0$ ja kun muuttujan arvoa kasvatetaan, myös funktion arvo kasvaa.
+                                </li>
                                 <li> 
-                                    Funktio voidaan kirjoittaa muodossa
+                                    Derivaattafunktio on 
                                     $$
-                                    f(x) = \frac{5}{2} - \frac{3}{2}\,x,
+                                    f'(x) = \frac{1}{2\sqrt{x}}
                                     $$
-                                    joten sen derivaattafunktio on 
-                                    $$
-                                    f'(x) = -\frac{3}{2}.
-                                    $$
-                                    Koska derivaattafunktion arvo on kaikkialla negatiivinen, on funktio $f$ kaikialla aidosti vähenevä. Näin ollen sillä on käänteisfunktio teoreeman 15 nojalla.
+                                    ja se on määritelty kaikilla $x > 0$.
+                                    Neliöjuuren arvo on derivaattafunktion määrittelyjoukossa aina positiivinen, joten derivaattafunktion arvo on kaikkialla positiivinen. Funktio $f$ on siten kaikialla aidosti kasvava ja sillä on käänteisfunktio teoreeman 15 nojalla.
                                 </li>
                                 <li> 
                                     Käänteisfunktio on 
                                     $$
-                                    f^{-1}(x) = \frac{5-2x}{3}.
+                                    f^{-1}(x) = (x - 2)^2.
                                     $$
-                                    Se löydetään ratkaisemalla $a$ yhtälöstä $f(a) = b$.
+                                    Se löydetään ratkaisemalla $a$ yhtälöstä $f(a) = b$. 
+                                    <br>
+                                    Käänteisfunktion määrittelyjoukko on $[2, \infty\pe$ ja arvojoukko on $[0, \infty\pe$.
+                                </li>
+                                <li>
+                                     <img src="/kurssit/maa8/kuvat/MAA8kuvaG05.png" max-width: 100%; width: auto; height: auto;/>
                                 </li>
                             </ol>
                         </div>
@@ -521,10 +534,16 @@ topnav: maa8
                         </p>
                         <ol class="a">
                             <li>
+                                Mikä on funktion $f$ määrittelyjoukko? Entä arvojoukko?
+                            </li>
+                            <li>
                                 Onko funktiolla $f$ käänteisfunktiota? Perustele vastauksesi teoreeman 15 avulla.
                             </li>
                             <li> 
-                                Jos käänteisfunktio on olemassa, määritä se teoreeman 16 avulla samaan tapaan kuin edellä tehtiin.
+                                Jos käänteisfunktio on olemassa, määritä se teoreeman 16 avulla samaan tapaan kuin edellä tehtiin. Jos käänteisfunktio on olemassa, mikä on sen määrittelyjoukko? Entä arvjoukko?
+                            </li>
+                            <li>
+                                Piirrä funktion $f$ kuvaaja. Jos käänteisfunktio on olemassa, piirrä myös sen kuvaaja.
                             </li>
                         </ol>
                         <h2>
@@ -534,6 +553,11 @@ topnav: maa8
                         </h2>
                         <div id="MAA8t405_v" class="collapse">
                             <ol class="a">
+                                <li>
+                                    Funktion $f$ määrittelyjoukko on reaalilukujen joukko $\R$. Funktion arvojoukko on $[-12, \infty\pe$.
+                                    <br>
+                                    Arvojoukko voidaan päätellä esimerkiksi niin, että funktion $f$ kuvaaja on ylöspäin aukeva paraabeli, joka saa pienimmän arvonsa nollakohtien $x = 0$ ja $x = 4$ puolivälissä kohdassa $x = 2$.
+                                </li>
                                 <li> 
                                     Funktiolla $f$ ei ole käänteisfunktiota, koska se saa saman arvon kahdessa eri kohdassa. Esimerkiksi
                                     $$
@@ -543,6 +567,9 @@ topnav: maa8
                                 </li>
                                 <li>
                                     Käänteisfunktiota ei ole olemassa.
+                                </li>
+                                <li>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuvaG06.png" max-width: 100%; width: auto; height: auto;/>
                                 </li>
                             </ol>
                         </div>
