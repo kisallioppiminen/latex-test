@@ -2592,7 +2592,13 @@ topnav: maa8
                 </header>
                 <div id="MAA8s3t112">
                     <p>
-                        
+                        Olkoon $x \geq 1$. Osoita, että 
+                        $$
+                        x^x - e^{x - 1} \geq 0.
+                        $$
+                        Millä muuttujan $x$ arvoilla pätee yhtäsuuruus?
+                        <br>
+                        [Pitkä K2004/11]
                     </p> 
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t112_v">
@@ -2601,7 +2607,27 @@ topnav: maa8
                     </h2>
                     <div id="MAA8s3t112_v" class="collapse">
                         <p>
-
+                            Epäyhtälön vasen puoli määrittelee funktion 
+                            $$
+                            f(x) = e^{x\ln x} - e^{x-1}.
+                            $$
+                            Koska eksponenttifunktio on aidosti kasvava, on $f(x) \geq 0$ eli 
+                            $$e^{x\ln x} - e^{x-1} \geq 0,$$ 
+                            jos ja vain jos 
+                            $$x\ln x \geq x - 1.$$
+                            Tutkitaan erotusfunktiota 
+                            $$
+                            g(x) = x\ln x - x + 1.
+                            $$
+                            Sen derivaattafunktioksi saadaan 
+                            $$
+                            g'(x) = \ln x.
+                            $$
+                            Oletuksen mukaan $x \geq 1$. Jos $x > 1$, niin $g'(x) = \ln x > 0$. Lisäksi $g'(1) = 0$, joten funktio $g$ on aidosti kasvava välillä $[1, \infty\pe$. Pienimmän arvonsa se saa välin vasemmassa päätepisteessä:
+                            $$
+                            g(1) = 0.
+                            $$
+                            Tästä voidaan päätellä, että $g(x) \geq 0$ eli $x\ln x \geq x - 1$ kaikilla $x \geq 1$. Lisäksi yhtäsuuruus pätee, jos ja vain jos $x = 1$.
                         </p>
                     </div>
                 </div>
