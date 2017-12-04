@@ -1643,19 +1643,58 @@ topnav: maa8
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA8s2t107">
-                            
+                            Eksponentiaalinen kasvu ja väheneminen
                         </a>
                     </h1>
                 </header>
                 <div id="MAA8s2t107">
-                   
+                    <p>
+                        Elävät kasvit sisältävät radioaktiivista hiilen isotooppia ${}^{14}\text{C}$. Tämän vuoksi kasvien radioaktiivisuus massayksikköä kohti on
+                        $$
+                        \frac{A_0}{m} \approx 0{,}23 \, \frac{\text{Bq}}{\text{g}}.
+                        $$
+                        Tässä $A_0$ on kasvinäytteen aktiivisuus (yksikkönä Becquerel) ja $m$ on kasvinäytteen sisältämän hiilen massa (yksikkönä gramma). Kasvin kuoltua hiilen aktiivisuuden vähenemistä voidaan kuvata funktiolla
+                        $$
+                        A(t) = A_0e^{-kt}.
+                        $$
+                        Tässä $A(t)$ on kasvinäytteen aktiivisuus $t$ vuoden kuluttua ja $k \approx 1{,}20968\cdot 10^{-4}$. 
+                    </p>
+                    <p>
+                        Tehtävänä on selvittää, kuinka monta prosenttia kasvin radioaktiivisuus massayksikköä kohti vähenee 2000 vuoden aikana kasvin kuoltua (olettaen, että kasvi ei maadu vaan säilyy esimerkiksi ikiroudan suojassa). 
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Elävästä kasvista otetaan näyte, joka sisältää 1 gramman hiiltä. Mikä on näytteen aktiivisuus $A_0$?
+                        </li>
+                        <li> 
+                            Mikä on yhden hiiligramman aktiivisuus 2000 vuoden kuluttua?
+                        </li>
+                        <li> 
+                            Kuinka monta prosenttia kasvin radioaktiivisuus massayksikköä kohti on vähentynyt 2000 vuoden aikana kasvin kuoltua?
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t107_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t107_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li> 
+                                $A_0 \approx 0{,}23 \text{ Bq}.$ 
+                            </li>
+                            <li> 
+                                \begin{align*}
+                                A(2000) &\approx 0{,}23e^{-1{,}20968\cdot 10^{-4} \cdot 2000} \text{ Bq} \\
+                                &\approx 0{,}18 \text{ Bq}.
+                                \end{align*}
+                            </li>
+                            <li> 
+                                Noin 21,4 %.
+                                <br>
+                                Tämä on laskettu b-kohdan pyöristämättömällä tuloksella $0{,}180574477234\ldots \text{ Bq}$.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -1665,19 +1704,43 @@ topnav: maa8
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA8s2t108">
-                            
+                            Eksponentiaalinen kasvu ja väheneminen
                         </a>
                     </h1>
                 </header>
                 <div id="MAA8s2t108">
-                   
+                    <p>
+                        Elektronisessa laitteessa on sähkökatkosten varalta kondensaattori, jonka jännite turvaa laitteen muistissa olevat tiedot. Kun sähkökatkos alkaa, kondensaattori alkaa purkautua ja sen jännite $u(t)$ ajan funktiona pienenee yhtälön
+                        $$
+                        u(t) = 12 V \cdot e^{-0{,}1054t}
+                        $$
+                        mukaisesti. (Tässä V tarkoittaa jännitteen yksikköä voltti.)
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Kuinka monta prosenttia kondensaattorin jännite pienenee sähkökatkoksen ensimmäisen tunnin aikana?
+                        </li>
+                        <li>
+                            Tiedetään, että tiedot säilyvät laitteen muistissa niin kauan kuin kondensaattorin jännite on vähintään 50 % sen jännitteestä sähkökatkoksen alussa. 
+                            Piirrä kondensaattorin jännitettä kuvaavan funktion kuvaaja esimerkiksi Geogebralla. Tutki sen avulla graafisesti, kuinka pitkän sähkökatkoksen ajan kondensaattori pystyy turvaamaan laitteen muistissa olevat tiedot.
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t108_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t108_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li>
+                                Noin 10,0 %.
+                            </li>
+                            <li>
+                                Kuvaajasta voidaan lukea, että kondensaattorin jännite turvaa tiedot noin 6,5 tunnin sähkökatkoksen ajan:
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8G07.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -1774,58 +1837,19 @@ topnav: maa8
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA8t209">
-                            Eksponentiaalinen kasvu ja väheneminen
+                            
                         </a>
                     </h1>
                 </header>
                 <div id="MAA8t209">
-                    <p>
-                        Elävät kasvit sisältävät radioaktiivista hiilen isotooppia ${}^{14}\text{C}$. Tämän vuoksi kasvien radioaktiivisuus massayksikköä kohti on
-                        $$
-                        \frac{A_0}{m} \approx 0{,}23 \, \frac{\text{Bq}}{\text{g}}.
-                        $$
-                        Tässä $A_0$ on kasvinäytteen aktiivisuus (yksikkönä Becquerel) ja $m$ on kasvinäytteen sisältämän hiilen massa (yksikkönä gramma). Kasvin kuoltua hiilen aktiivisuuden vähenemistä voidaan kuvata funktiolla
-                        $$
-                        A(t) = A_0e^{-kt}.
-                        $$
-                        Tässä $A(t)$ on kasvinäytteen aktiivisuus $t$ vuoden kuluttua ja $k \approx 1{,}20968\cdot 10^{-4}$. 
-                    </p>
-                    <p>
-                        Tehtävänä on selvittää, kuinka monta prosenttia kasvin radioaktiivisuus massayksikköä kohti vähenee 2000 vuoden aikana kasvin kuoltua (olettaen, että kasvi ei maadu vaan säilyy esimerkiksi ikiroudan suojassa). 
-                    </p>
-                    <ol class="a">
-                        <li> 
-                            Elävästä kasvista otetaan näyte, joka sisältää 1 gramman hiiltä. Mikä on näytteen aktiivisuus $A_0$?
-                        </li>
-                        <li> 
-                            Mikä on yhden hiiligramman aktiivisuus 2000 vuoden kuluttua?
-                        </li>
-                        <li> 
-                            Kuinka monta prosenttia kasvin radioaktiivisuus massayksikköä kohti on vähentynyt 2000 vuoden aikana kasvin kuoltua?
-                        </li>
-                    </ol>
+                    
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8t209_v">
                             VASTAUS
                         </a>
                     </h2>
                     <div id="MAA8t209_v" class="collapse">
-                        <ol class="a">
-                            <li> 
-                                $A_0 \approx 0{,}23 \text{ Bq}.$ 
-                            </li>
-                            <li> 
-                                \begin{align*}
-                                A(2000) &\approx 0{,}23e^{-1{,}20968\cdot 10^{-4} \cdot 2000} \text{ Bq} \\
-                                &\approx 0{,}18 \text{ Bq}.
-                                \end{align*}
-                            </li>
-                            <li> 
-                                Noin 21,4 %.
-                                <br>
-                                Tämä on laskettu b-kohdan pyöristämättömällä tuloksella $0{,}180574477234\ldots \text{ Bq}$.
-                            </li>
-                        </ol>
+                        
                     </div>
                 </div>
             </div>
