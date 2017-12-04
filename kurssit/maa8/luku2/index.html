@@ -2767,7 +2767,15 @@ topnav: maa8
                 </header>
                 <div id="MAA8s3t116">
                     <p>
-                        
+                        Olkoon 
+                        $$
+                        f(x) = e^{-x} + 1,
+                        $$
+                        missä $x \in [1,2]$. Osoita, että 
+                        $$
+                        1 < f(x) < 2 \ \text{ ja } \ \left|f'(x) \right| < 0{,}4.
+                        $$
+                        Tiedetään, että tällöin yhtälö $x = f(x)$ voidaan ratkaista numeerisesti muodostamalla yhtälön ratkaisua kohden suppeneva jono $x_0$, $x_1$, $x_2$, $x_3, \ldots$ seuraavalla tavalla: valitaan jokin $x_0 \in [1,2]$ ja määritellään $x_n = f(x_{n-1})$, kun $n = 1, 2, 3, \ldots$. Määritä tällä tavoin yhtälön ratkaisu neljän merkitsevän numeron tarkkuudella lähtemällä arvosta $x_0 = 1{,}3$. Ilmoita laskemasi jonon termit.
                     </p> 
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t116_v">
@@ -2776,7 +2784,14 @@ topnav: maa8
                     </h2>
                     <div id="MAA8s3t116_v" class="collapse">
                         <p>
-
+                            Derivaattafunktion $f'(x) = -e^{-x}$ arvot ovat aina negatiivisia, joten $f$ on aidosti vähenevä. Funktion suurin arvo välillä $[1,2]$ on siten $f(1) = e^{-1} + 1 < 2$ ja pienin arvo $f(2) = e^{-2} + 1 > 1$. Siis $1 < f(x) < 2$ kaikilla $x \in [1,2]$. 
+                        </p>
+                        <p>
+                            Toisen derivaatan $f''(x) = e^{-x}$ arvot ovat aina positiivisia, joten derivaattafunktio $f'$ on aidosti kasvava. Derivaattafunktion arvot ovat aina negatiivisia, joten se saa itseisarvoltaan suurimman arvon välillä $[1,2]$ kohdassa $x = 1$:
+                            $$\left|f'(1)\right| = \left|-e^{-1}\right| < 0{,}4.$$
+                        </p>
+                        <p>
+                            Etsitty ratkaisu on $x \approx 1{,}278$. 
                         </p>
                     </div>
                 </div>
