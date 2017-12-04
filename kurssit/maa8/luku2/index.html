@@ -2728,7 +2728,11 @@ topnav: maa8
                 </header>
                 <div id="MAA8s3t115">
                     <p>
-                        
+                        Reaalilukujen joukossa määritellyn funktion $f$ kuvaajan pisteenseen $(x,y)$ piirretyn tangentin kulmakerroin on 
+                        $$
+                        k(x) = 1 - e^{-2x}.
+                        $$
+                        Funktion pienin arvo on $2$. Määritä funktio $f$.
                     </p> 
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t115_v">
@@ -2737,7 +2741,17 @@ topnav: maa8
                     </h2>
                     <div id="MAA8s3t115_v" class="collapse">
                         <p>
-
+                            Kokeilemalla huomataan, että funktio on muotoa
+                            $$
+                            f(x) = x + \frac{1}{2}e^{-2x} + C,
+                            $$
+                            missä $C$ on mikä tahansa reaalilukuvakio. (Tällöin $f'(x) = k(x)$ kuten pitääkin.)
+                        </p>
+                        <p>
+                            Derivaattafunktiolla $k$ on yksi nollakohta $x = 0$. Kulkukaaviosta nähdään, että funktio $f$ saa siinä pienimmän arvonsa. Yhtälöstä $f(0) = 2$ saadaan ratkaistua $C = 1{,}5$. Siis
+                            $$
+                            f(x) = x + \frac{1}{2}e^{-2x} + \frac{3}{2}.
+                            $$
                         </p>
                     </div>
                 </div>
