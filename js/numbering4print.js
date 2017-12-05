@@ -9,7 +9,7 @@ var SITE = {
         $(".tehtava").each(function(index, value) {
             
             // reset excercise counter
-            if (this.id === 'firstEx') {
+            if ($(this).hasClass( "first-exercise" )) {
                exReset = index;
                chapterNumber++;
             };
