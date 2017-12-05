@@ -2082,7 +2082,11 @@ topnav: maa8
                 </header>
                 <div id="MAA8s2t115">
                     <p>
-                        Määritä fun
+                        Määritä funktion 
+                        $$
+                        f(x) = x^2e^{-x}
+                        $$
+                        ääriarvot. Onko funktiolla suurinta tai pienintä arvoa? 
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t115_v">
@@ -2090,7 +2094,22 @@ topnav: maa8
                         </a>
                     </h2>
                     <div id="MAA8s2t115_v" class="collapse">
-                        
+                        <p>
+                            Funktiolla on minimiarvo $f(0) = 0$ ja maksimiarvo $f(2) = 4e^{-2}$.
+                        </p>
+                        <p>
+                            Derivaattafunktiolla
+                            $$
+                            f'(x) = (2x-x^2)e^{-x}
+                            $$
+                            on kaksi nollakohtaa: $x_1 = 0$ ja $x_2 = 2$. Kulkukaavion avulla saadaan selville, että $x_1 = 0$ on minimikohta ja $x_2 = 2$ on maksimikohta. 
+                        </p>
+                        <p>
+                            Tiedetään, että kaikilla $x \in \R$ pätee $x^2 \geq 0$ ja $e^{-x} > 0$, joten funktion $f$ arvot ovat aina epänegatiivisia. Siten $f(0) = 0$ on funktion $f$ pienin arvo.
+                        </p>
+                        <p>
+                            Funktio $f$ on välillä $\pa -\infty, 0]$ aidosti vähenevä ja esimerkiksi $f(-2) = 4e^{2} \approx 29{,}6$ on suurempi kuin maksimiarvo $f(2)$, joten funktiolla $f$ ei ole suurinta arvoa.
+                        </p>
                     </div>
                 </div>
             </div>
