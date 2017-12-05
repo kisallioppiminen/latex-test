@@ -1916,14 +1916,39 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8t209">
-                    
+                    <p>
+                        Osoita sopivan funktion kulkua tutkimalla, että yhtälöllä
+                    </p>
+                    <ol class="a">
+                        <li>
+                            $e^x = 2x$ ei ole yhtään ratkaisua
+                        </li>
+                        <li>
+                            $e^x = 3x$ on täsmälleen kaksi ratkaisua.
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8t209_v">
                             VASTAUS
                         </a>
                     </h2>
                     <div id="MAA8t209_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li>
+                                Funktion $f(x) = e^x - 2x$ derivaattafunktiolla $f'(x) = e^x - 2$ on tasan yksi nollakohta $x = \ln (2)$. Kulkukaaviosta nähdään, että funktio saa siinä pienimmän arvonsa. Koska pienin arvo on
+                                $$
+                                f(\ln (2)) = 2 - 2\ln(2) \approx 0{,}62 > 0,
+                                $$
+                                ovat funktion kaikki arvot positiivisia. Funktiolla ei siis ole nollakohtia eikä alkuperäisellä yhtälöllä ole ratkaisuja.
+                            </li>
+                            <li>
+                                Funktion $g(x) = e^x - 3x$ derivaattafunktiolla $g'(x) = e^x - 3$ on tasan yksi nollakohta $x = \ln (3)$. Kulkukaaviosta nähdään, että funktio saa siinä pienimmän arvonsa. Tämä on 
+                                $$
+                                g(\ln(3)) = 3 - 3\ln(3) \approx -0{,}30 < 0.
+                                $$
+                                Lisäksi $g(0) = 1 > 0$ ja $g(2) = e^2 - 6 \approx 1{,}4 > 0$, joten jatkuvalla funktiolla $g$ on Bolzanon lauseen mukaan ainakin yksi nollakohta välillä $\pa 0, \ln(3)\pe$ ja ainakin yksi nollakohta välillä $\pa \ln(3), 2\pe$ (<a href="http://kisallioppiminen.fi/kurssit/maa6/luku2/">MAA6</a>, teoreema 1). Kulkukaavion mukaan $g$ on aidosti vähenevä välillä $\pa 0, \ln(3)\pe$ ja aidosti kasvava välillä $\pa \ln(3), 2\pe$, joten kummallakin välillä nollakohtia on enintään yksi.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
