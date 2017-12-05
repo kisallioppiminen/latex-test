@@ -2020,14 +2020,42 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s2t114">
-                   
+                    <p>
+                        Oletetaan, että $a \neq 0$. Käyrälle
+                        $$
+                        y = ae^{-\frac{1}{2}x^2}
+                        $$
+                        piirretään tangentti kohtaan $x = 1$. Osoita, että tangentti leikkaa $x$-akselin samassa pisteessä vakion $a$ arvosta riippumatta. Mikä tämä leikkauspiste on?
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t114_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t114_v" class="collapse">
-                        
+                        <p>
+                            Käyrälle piirretyn tangentin kulmakerroin on funktion 
+                            $$
+                            f(x) = ae^{-\frac{1}{2}x^2}
+                            $$
+                            derivaattafunktion
+                            $$
+                            f'(x) = -axe^{-\frac{1}{2}x^2}
+                            $$
+                            arvo kohdassa $x = 1$:
+                            $$
+                            f'(1) = -ae^{-\frac{1}{2}} = -\frac{a}{\sqrt{e}}.
+                            $$
+                            Sivuamispiste on $(1, f(1)) = \left(1, \frac{a}{\sqrt{e}}\right)$, joten tangentin yhtälö on 
+                            $$
+                            y = -\frac{a}{\sqrt{e}} x + \frac{2a}{\sqrt{e}}.
+                            $$
+                            Sen ja $x$-akselin leikkauspisteen $y$-koordinaatti on nolla. Yhtälön
+                            $$
+                            -\frac{a}{\sqrt{e}} x + \frac{2a}{\sqrt{e}} = 0
+                            $$
+                            ratkaisuksi saadaan $x = 2$. Leikkauspiste on siis $(2,0)$.
+                        </p>
                     </div>
                 </div>
             </div>
