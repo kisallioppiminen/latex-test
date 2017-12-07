@@ -2586,7 +2586,7 @@ topnav: maa8
                             $$
                             y = -x + 1.
                             $$
-                            Normaalin ja suoran $y = x$ leikkauspiste on $\left(\frac{1}{2}, \frac{1}{2}\right)$.
+                            Normaalin ja suoran $y = x$ leikkauspiste on $\left(\frac{1}{2}, \frac{1}{2}\right)$. Tämä on etsitty piste.
                         </p>
                     </div>
                 </div>
@@ -2602,14 +2602,43 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s2t125">
-                   
+                    <p>
+                        Oletetaan, että $k > 0$ ja $k \neq 1$. Eksponenttifunktion 
+                        $$
+                        f(x) = k^x
+                        $$
+                        kuvaajalle piirretään origon kautta kulkeva tangentti. Osoita, että sivuamispisteen $y$-koordinaatti ei riipu kantaluvusta $k$.
+                        <br>
+                        Vinkki: tehtävä 2.12 ja tehtävä 2.17 (a).
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t125_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t125_v" class="collapse">
-                        
+                        <p>
+                            Olkoon sivuamispisteen $x$-koordinaatti $a$. Sivuamispiste on silloin $(a, k^a)$ ja tangentin kulmakerroin on 
+                            $$
+                            f'(a) = k^a\ln(k).
+                            $$
+                            Koska tangentti kulkee origon kautta, sen yhtälö on
+                            $$
+                            y = k^a\ln(k)x.
+                            $$
+                            Sivuamispisteen koordinaatit toteuttavat tangentin yhtälön, joten saadaan yhtälö
+                            $$
+                            k^a = k^a\ln(k)a.
+                            $$
+                            Siitä saadaan ratkaistua
+                            $$
+                            a = \frac{1}{\ln(k)}.
+                            $$
+                            Sivuamispisteen $y$-koordinaatti on siten
+                            $$
+                            k^a = e^{\ln(k)a} = e^{\ln(k)\frac{1}{\ln(k)}} = e^1 = e.
+                            $$
+                        </p>
                     </div>
                 </div>
             </div>
