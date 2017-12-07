@@ -2321,9 +2321,9 @@ topnav: maa8
                             f\left(\frac{\pi}{4}\right) &= e^{-\frac{\pi}{4}} \frac{1}{\sqrt{2}} \approx 0{,}322 \\[2mm]
                             f\left(\frac{\pi}{2}\right) &= e^{-\frac{\pi}{2}} \approx 0{,}208.
                             \end{align*}
-                            Funktion pienin arvo välillä $\left[0, \frac{\pi}{2}\right]$ on siis $f(0) = 0$ ja suurin arvo
+                            Funktion pienin arvo välillä $\left[0, \frac{\pi}{2}\right]$ on siis $f(0) = 0$ ja suurin arvo on
                             $$
-                            f\left(\frac{\pi}{4}\right) = \frac{e^{-\frac{\pi}{4}}}{\sqrt{2}}.
+                            f\left(\frac{\pi}{4}\right) = \frac{1}{\sqrt{2}}e^{-\frac{\pi}{4}}.
                             $$
                         </p>
                     </div>
@@ -2340,14 +2340,56 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s2t120">
-                   
+                    <p>
+                        Radioaktiivista jodia käytetään joissakin tilanteissa lääketieteellisenä hoitona. Tällöin on otettava huomioon, että potilas on hoidon aikana itsekin radioaktiivinen ja hänet on eristettävä ympäristöstä, jotta muut ihmiset eivät altistu haitalliselle säteilylle. 
+                    </p>
+                    <p>
+                        Potilaalle annettiin radiojodiannos, jonka aktiivisuus oli 3{,}0 GBq eli $3{,}0 \cdot 10^9$ Bq. Jodin radioaktiivisen isotoopin jodi-131 puoliintumisaika on 8,0 vuorokautta, joten aktiivisuus puolittuu aina kahdeksan vuorokauden kuluessa.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Muodosta funktio $A(t)$, joka ilmaisee aktiivisuuden $t$ vuorokauden kuluttua radiojodiannoksen antamisesta. 
+                        </li>
+                        <li>
+                            Millä nopeudella aktiivisuus pienenee yhden vuorokauden kuluttua radiojodiannoksen antamisen jälkeen?
+                        </li>
+                        <li>
+                            Millä nopeudella aktiivisuus pienenee viikon kuluttua radiojodiannoksen antamisen jälkeen?
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t120_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t120_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li>
+                                Funktio on
+                                \begin{align*}
+                                A(t) &= 3 \text{ GBq} \cdot \left(\frac{1}{2}\right)^\frac{t}{8} \\[2mm]
+                                &= 3 \text{ GBq} \cdot e^{\ln\left(\frac{1}{2}\right)\cdot \frac{t}{8}} 
+                                \end{align*}
+                            </li>
+                            <li>
+                                Derivaattafunktio on 
+                                $$
+                                A'(t) = 3 \text{ GBq} \cdot \ln\left(\frac{1}{2}\right) \cdot \frac{1}{8} e^{\ln\left(\frac{1}{2}\right)\cdot \frac{t}{8}}, 
+                                $$
+                                joten vuorokauden kuluttua 
+                                $$
+                                A'(1) \approx -0{,}24 \text{ GBq}.
+                                $$
+                                Aktiivisuus siis pienenee noin $0{,}24 \text{ GBq}$ vuorokaudessa.
+                            </li>
+                            <li>
+                                Seitsemän vuorokauden kuluttua muutosnopeus on
+                                $$
+                                A'(7) \approx -0{,}14 \text{ GBq}.
+                                $$
+                                Aktiivisuus siis pienenee noin $0{,}14 \text{ GBq}$ vuorokaudessa.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
