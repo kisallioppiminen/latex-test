@@ -2492,14 +2492,55 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s2t123">
-                   
+                    <p>
+                        Millä vakion $a$ arvoilla funktio
+                        $$
+                        g(x) = xe^{ax} + a
+                        $$
+                        saa vain positiivisia arvoja?
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t123_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t123_v" class="collapse">
-                        
+                        <p>
+                            Jos $a = 0$, funktio on $g(x) = x$. Tämä funktio saa myös negatiivisia arvoja, esim. $g(-1) = -1$.
+                        </p>
+                        <p>
+                            Oletetaan, että $a \neq 0$.
+                            Tutkitaan funktion $g$ pienintä arvoa. Derivaattafunktiolla
+                            $$
+                            g'(x) = (ax + 1)e^{ax}
+                            $$
+                            on tasan yksi nollakohta $x = -\frac{1}{a}$. Lausekkeen $e^{ax}$ arvo on aina positiivinen, joten derivaatan arvo määräytyy lausekkeen $ax + 1$ arvon mukaan. 
+                        </p>
+                        <ul>
+                            <li>
+                                Jos $a > 0$, $y = ax + 1$ on nouseva suora, eli derivaatan arvo on negatiivinen nollakohdan vasemmalla puolella ja positiivinen nollakohdan oikealla puolella. Derivaatan nollakohdassa funktio saa pienimmän arvonsa:
+                                $$
+                                g\left(-\frac{1}{a}\right) = -\frac{1}{a}e^{-1} + a.
+                                $$
+                                Tämä on positiivinen, jos ja vain jos 
+                                \begin{align*}
+                                a &> \frac{1}{a}e^{-1} \\[2mm]
+                                a^2 &> \frac{1}{e} \\[2mm]
+                                \left(a < -\frac{1}{\sqrt{e}} &\text{ tai }\right) a > \frac{1}{\sqrt{e}}
+                                \end{align*}
+                                Huomaa, että epäyhtälön ratkaisussa käytettiin oletusta $a > 0$ kahdessa kohdassa.
+                            </li>
+                            <li>
+                                Jos $a < 0$, $y = ax + 1$ on laskeva suora, eli derivaatan arvo on positiivinen nollakohdan vasemmalla puolella ja negatiivinen nollakohdan oikealla puolella. Kokeilemalla huomataan, että esimerkiksi
+                                $g(0) = a < 0$. Tässä tilanteessa funktio saa siis negatiivisen arvon ainakin kohdassa $x = 0$.
+                            </li>
+                        </ul>
+                        <p>
+                            Funktio $g$ saa siis vain positiivisia arvoja, jos ja vain jos 
+                            $$
+                            a > \frac{1}{\sqrt{e}}.
+                            $$
+                        </p>
                     </div>
                 </div>
             </div>
