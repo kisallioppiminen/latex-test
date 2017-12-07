@@ -2442,14 +2442,42 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s2t122">
-                   
+                    <p>
+                        Funktion 
+                        $$
+                        f(x) = e^{-x^2}
+                        $$
+                        kuvaajalle piirretään normaali pisteeseen $(a, f(a))$, missä $a \neq 0$. Mitä pistettä normaalin ja $y$-akselin leikkauspiste lähenee, kun $a$ lähenee nollaa?
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t122_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t122_v" class="collapse">
-                        
+                        <p>
+                            Tangentin kulmakerroin on derivaatan arvo:
+                            $$
+                            f'(a) = -2ae^{-a^2}
+                            $$
+                            Tangentin ja normaalin kulmakertoimien tulo on $-1$, joten normaalin kulmakerroin on
+                            $$
+                            \frac{e^{a^2}}{2a}.
+                            $$
+                            Normaalin yhtälöksi saadaan
+                            $$
+                            y = \frac{e^{a^2}}{2a} x - \frac{e^{a^2}}{2} + e^{-a^2}.
+                            $$
+                            Normaalin ja $y$-akselin leikkauspisteessä $x = 0$, joten sen $y$-koordinaatti on 
+                            $$
+                            y = - \frac{e^{a^2}}{2} + e^{-a^2}.
+                            $$
+                            Kun $a \rightarrow 0$, niin
+                            $$
+                            y \rightarrow -\frac{1}{2} + 1 = \frac{1}{2}.
+                            $$
+                            Leikkauspiste lähestyy siis pistettä $\left(0, \frac{1}{2}\right)$.
+                        </p>
                     </div>
                 </div>
             </div>
