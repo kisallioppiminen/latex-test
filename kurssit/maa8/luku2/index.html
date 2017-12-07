@@ -2526,7 +2526,7 @@ topnav: maa8
                                 \begin{align*}
                                 a &> \frac{1}{a}e^{-1} \\[2mm]
                                 a^2 &> \frac{1}{e} \\[2mm]
-                                (a < -\frac{1}{ \sqrt{e} } &\text{ tai }) a > \frac{1}{ \sqrt{e} }
+                                (a < -\frac{1}{ \sqrt{e} } \text{ tai) } &a > \frac{1}{ \sqrt{e} }
                                 \end{align*}
                                 Huomaa, että epäyhtälön ratkaisussa käytettiin oletusta $a > 0$ kahdessa kohdassa.
                             </li>
@@ -2566,7 +2566,28 @@ topnav: maa8
                         </a>
                     </h2>
                     <div id="MAA8s2t124_v" class="collapse">
-                        
+                        <p>
+                            Pisteen $(x, e^x)$ suorasta $x - y = 0$ on <a href="http://kisallioppiminen.fi/kurssit/maa5/luku1/">MAA5-kurssin</a> teoreeman 13 mukaan
+                            \begin{align*}
+                            d(x) &= \frac{\left|x-e^x\right|}{\sqrt{2}} \\
+                            &= \frac{1}{\sqrt{2}} (e^x - x).
+                            \end{align*}
+                            Itseisarvojen poistamiseen käytettiin tietoa, että $e^x > x$ kaikilla reaaliluvuilla $x$.
+                        </p>
+                        <p>
+                            Etäisyysfunktion derivaattafunktio on
+                            $$
+                            d'(x) = \frac{1}{\sqrt{2}} (e^x - 1).
+                            $$
+                            Sillä on tasan yksi nollakohta $x = 0$. Kulkukaaviosta nähdään, että funktio $d$ saa siinä pienimmän arvonsa. Siis käyrän $y = e^x$ suoraa $y = x$ lähinnä oleva piste on $(0,e^0) = (0,1)$. 
+                        </p>
+                        <p>
+                            Käyrälle $y = e^x$ pisteeseen $(0,1)$ asetetun tangentin kulmakerroin on $e^0 = 1$, joten normaalin kulmakerroin on $-1$. Normaalin yhtälö on siten
+                            $$
+                            y = -x + 1.
+                            $$
+                            Normaalin ja suoran $y = x$ leikkauspiste on $\left(\frac{1}{2}, \frac{1}{2}\right)$.
+                        </p>
                     </div>
                 </div>
             </div>
