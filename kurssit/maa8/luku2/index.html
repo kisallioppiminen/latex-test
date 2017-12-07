@@ -2283,14 +2283,49 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s2t119">
-                   
+                    <p>
+                        Määritä funktion 
+                        $$
+                        f(x) = e^{-x}\sin x
+                        $$
+                        suurin ja pienin arvo välillä $\left[0, \frac{\pi}{2}\right]$.
+                        <br>
+                        Vinkki: <a href="http://kisallioppiminen.fi/kurssit/maa7/luku2/">MAA7-kurssin</a> teoreemasta 16 voi olla apua yhtälönratkaisussa.
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t119_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t119_v" class="collapse">
-                        
+                        <p>
+                            Derivaattafunktion
+                            $$
+                            f'(x) = e^{-x}(\cos x - \sin x)
+                            $$
+                            nollakohdat löydetään ratkaisemalla yhtälö
+                            $$
+                            \cos x = \sin x.
+                            $$
+                            <a href="http://kisallioppiminen.fi/kurssit/maa7/luku2/">MAA7-kurssin</a> teoreeman 16 mukaan se voidaan kirjoittaa muodossa
+                            $$
+                            \sin\left(x + \frac{\pi}{2}\right) = \sin x.
+                            $$
+                            Ratkaisuiksi saadaan välivaiheiden jälkeen
+                            $$
+                            x = \frac{\pi}{4} + n \cdot \pi,
+                            $$
+                            missä $n$ on kokonaisluku. Suurin ja pienin arvo löytyvät nyt välin $\left[0, \frac{\pi}{2}\right]$ päätepisteistä tai sille osuvasta derivaatan nollakohdasta:
+                            \begin{align*}
+                            f(0) &= \sin 0 = 0 \\[2mm]
+                            f\left(\frac{\pi}{4}\right) &= e^{-\frac{\pi}{4}} \frac{1}{\sqrt{2}} \approx 0{,}322 \\[2mm]
+                            f\left(\frac{\pi}{2}\right) &= e^{-\frac{\pi}{2}} \approx 0{,}208.
+                            \end{align*}
+                            Funktion pienin arvo välillä $\left[0, \frac{\pi}{2}\right]$ on siis $f(0) = 0$ ja suurin arvo
+                            $$
+                            f\left(\frac{\pi}{4}\right) = \frac{e^{-\frac{\pi}{4}}}{\sqrt{2}}.
+                            $$
+                        </p>
                     </div>
                 </div>
             </div>
