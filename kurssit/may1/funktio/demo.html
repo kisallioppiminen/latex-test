@@ -1,0 +1,1997 @@
+---
+title: MAY1 - Funktio
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: may1
+---
+<script>
+    function myFunction() {
+
+        var rbtn = document.createElement("INPUT");
+        rbtn.type = "radio";
+        rbtn.name = "date";
+        rbtn.style="margin:7px;";
+        var t = document.createTextNode(document.getElementById("date-entry").value);
+        var foobr = document.createElement("BR");
+        document.getElementById("datelist").appendChild(rbtn);
+        document.getElementById("datelist").appendChild(t);
+        document.getElementById("datelist").appendChild(foobr);
+    }
+</script>
+
+<script>
+    function scheduleDoneAlert() {
+        alert("Schedule created! (no ei oikeasti!)");
+    }
+</script>
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: center;
+    }
+
+    <!-- large checkbox -->
+
+    :root {
+        /* larger checkbox */
+    }
+    :root label.checkbox-bootstrap input[type=checkbox] {
+        /* hide original check box */
+        opacity: 0;
+        position: absolute;
+        /* find the nearest span with checkbox-placeholder class and draw custom checkbox */
+        /* draw checkmark before the span placeholder when original hidden input is checked */
+        /* disabled checkbox style */
+        /* disabled and checked checkbox style */
+        /* when the checkbox is focused with tab key show dots arround */
+    }
+    :root label.checkbox-bootstrap input[type=checkbox] + span.checkbox-placeholder {
+        width: 14px;
+        height: 14px;
+        border: 1px solid;
+        border-radius: 3px;
+        /*checkbox border color*/
+        border-color: #737373;
+        display: inline-block;
+        cursor: pointer;
+        margin: 0 7px 0 -20px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    :root label.checkbox-bootstrap input[type=checkbox]:checked + span.checkbox-placeholder {
+        background: #C4DA87;
+    }
+    :root label.checkbox-bootstrap input[type=checkbox]:checked + span.checkbox-placeholder:before {
+        display: inline-block;
+        position: relative;
+        vertical-align: text-top;
+        width: 5px;
+        height: 9px;
+        /*checkmark arrow color*/
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        /*can be done with post css autoprefixer*/
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        content: "";
+    }
+    :root label.checkbox-bootstrap input[type=checkbox]:disabled + span.checkbox-placeholder {
+        background: #ececec;
+        border-color: #c3c2c2;
+    }
+    :root label.checkbox-bootstrap input[type=checkbox]:checked:disabled + span.checkbox-placeholder {
+        background: #d6d6d6;
+        border-color: #bdbdbd;
+    }
+    :root label.checkbox-bootstrap input[type=checkbox]:focus:not(:hover) + span.checkbox-placeholder {
+        outline: 1px dotted black;
+    }
+    :root label.checkbox-bootstrap.checkbox-lg input[type=checkbox] + span.checkbox-placeholder {
+        width: 21px;
+        height: 21px;
+        border: 2px solid;
+        border-radius: 5px;
+        /*checkbox border color*/
+        border-color: #737373;
+    }
+    :root label.checkbox-bootstrap.checkbox-lg input[type=checkbox]:checked + span.checkbox-placeholder:before {
+        width: 9px;
+        height: 15px;
+        /*checkmark arrow color*/
+        border: solid white;
+        border-width: 0 3px 3px 0;
+    }
+</style>
+
+<input type="hidden" id="theoremStart" value="1"/>
+<input type="hidden" id="chapterNumber" value="4"/>
+
+<article>
+    <section>
+        <header>
+            <h1>Aikataulutus</h1>
+            <h2 style="font-size: 2em;">May1 - Funktiot</h2>
+        </header>
+    </section>
+
+
+    <section class="panel">
+
+        <div id="pvmValinta">
+
+            <h2 style="margin:10px; font-size: 1.5em;">Valitse päivämäärä</h2>
+
+            <form id="datelist" action="" style="margin:7px;">
+                <input type="radio" style="margin:7px;" name="date" value="17-04-17"> 17.4.17<br></input>
+                <input type="radio" style="margin:7px;" name="date" value="17-04-24"> 24.4.17<br></input>
+                <input type="radio" style="margin:7px;" name="date" value="17-05-04"> 4.5.17<br></input>
+            </form>
+
+            <input id="date-entry" style="margin-left:13px;" type="text" name="FirstName" value="pp.kk.vv">
+            <button onclick="myFunction()">Lisää uusi</button>
+            <br><br>
+            <h2 style="margin:10px; font-size: 1.5em;">Valittu tehtävät: x, x, ... , x </h2>
+            <button  style="margin:10px;" onclick="scheduleDoneAlert()">Luo aikataulu</button>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#funktionKasite">
+                    Funktio
+                </a>
+            </h1>
+        </header>
+        <div id="funktionKasite" class="collapse">
+
+            <div class="tehtavat">
+
+                <div class="tehtava" id="e9f8040a-1c79-457d-ab71-7e2c9c4470da">
+
+                    <header>
+
+
+
+                            <h1>
+
+                                <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                    <label class="checkbox-bootstrap checkbox-lg">
+                                        <input type="checkbox">
+                                        <span class="checkbox-placeholder"></span>
+                                    </label>
+                                </div>
+
+                                <a data-toggle="collapse" class="collapsed" data-target="#funktio0a">
+                                    Erilaisia sääntöjä
+                                </a>
+                            </h1>
+
+                    </header>
+                    <div id="funktio0a" class="collapse">
+                        <p>
+                            Tutkitaan sääntöä $f$, joka liittää jokaiseen luonnolliseen lukuun sen numeroiden summan. Siis esimerkiksi lukuun $156$ sääntö $f$ liittää luvun $1 + 5 + 6 = 12$. Tämä voidaan merkitä 
+                            $$f(156) = 1 + 5 + 6 = 12.$$
+                        <ol class="a">
+                            <li> Minkä luvun sääntö $f$ liittää lukuun $389$? Toisin sanottuna, mikä on $f(389)$?</li>
+                            <li> Minkä luvun sääntö $f$ liittää lukuun $106\,437$? Toisin sanottuna, mikä on $f(106\,437)$?</li>
+                            <li> Onko olemassa jokin luonnollinen luku, jonka tapauksessa säännön $f$ antamaa tulosta ei voida laskea? Selitä omin sanoin.</li>
+                            <li> Onko olemassa jokin luonnollinen luku, johon sääntö $f$ liittää useita eri lukuja? Selitä omin sanoin.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b1fed77a-04ee-46b0-afdc-43f25f7a470f">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio0b">
+                                Erilaisia sääntöjä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio0b" class="collapse">
+                        <p>
+                            Tutkitaan sääntöä $g$, joka liittää jokaiseen kaksinumeroiseen luonnolliseen lukuun sen numeroiden erotuksen käänteisluvun. Siis esimerkiksi lukuun $36$ sääntö $g$ liittää luvun 
+                            $$\frac{1}{3-6} = \frac{1}{-3} = -\frac{1}{3}.$$ Tämä voidaan merkitä 
+                            $$g\left(36\right) = \frac{1}{3-6} = -\frac{1}{3}.$$
+                        <ol class="a">
+                            <li> Minkä luvun sääntö $g$ liittää lukuun $94$? Toisin sanottuna, mikä on $g(94)$?</li>
+                            <li> Minkä luvun sääntö $g$ liittää lukuun $77$? Toisin sanottuna, mikä on $g(77)$?</li>
+                            <li> Onko olemassa jokin kaksinumeroinen luonnollinen luku, jonka tapauksessa säännön $g$ antamaa tulosta ei voida laskea? Selitä omin sanoin.</li>
+                            <li> Onko olemassa jokin kaksinumeroinen luonnollinen luku, johon sääntö $g$ liittää useita eri lukuja? Selitä omin sanoin.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dbdfd589-399b-4878-a14c-2f868654748b">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio0c">
+                                Erilaisia sääntöjä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio0c" class="collapse">
+                        <p>
+                            Tutkitaan sääntöä $h$, joka liittää jokaiseen murtolukumuodossa kirjoitettuun rationaalilukuun sen osoittajan ja nimittäjän summan. Siis esimerkiksi lukuun $\frac{42}{105}$ sääntö $h$ liittää luvun 
+                            $42 + 105 = 147$. Tämä voidaan merkitä 
+                            $$h\left(\frac{42}{105}\right) = 42 + 105 = 147.$$
+                        <ol class="a">
+                            <li> Minkä luvun sääntö $h$ liittää lukuun $\frac{2}{4}$? Toisin sanottuna, mikä on $h\left(\frac{2}{4}\right)$?</li>
+                            <li> Minkä luvun sääntö $h$ liittää lukuun $\frac{1}{2}$? Toisin sanottuna, mikä on $h\left(\frac{1}{2}\right)$?</li>
+                            <li> Onko olemassa jokin rationaaliluku, jonka tapauksessa säännön $h$ antamaa tulosta ei voida laskea? Selitä omin sanoin.</li>
+                            <li> Onko olemassa jokin rationaaliluku, johon sääntö $h$ liittää useita eri lukuja? Selitä omin sanoin.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="23096dae-9127-4681-bd6e-b1a81160b73d">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio0d">
+                                Funktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio0d" class="collapse">
+                        <p>
+                            Tarkastele vielä tehtävien 1-3 sääntöjä $f$, $g$ ja $h$.
+                        <ol class="a">
+                            <li> Onko sääntö $f$ funktio? Selitä omin sanoin.</li>
+                            <li> Onko sääntö $g$ funktio? Selitä omin sanoin.</li>
+                            <li> Onko sääntö $h$ funktio? Selitä omin sanoin.</li>
+                            <li> Valitse säännöistä $f$, $g$ ja $h$ yksi, joka on funktio. Mikä on sen määrittelyjoukko? Entä minkä lukujoukon voi valita sen maalijoukoksi? Keksi kaksi erilaista vaihtoehtoa maalijoukoksi.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="ca2531b1-7ed2-45fa-8d3a-007dc4e78ee0">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio0e">
+                                Funktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio0e" class="collapse">
+                        <p>
+                            Tarkastele alla olevia kuvia, joissa on kuvattu säännöt $\alpha$, $f$, $g$, $\beta$ ja $h$. Mitkä näistä säännöistä ovat funktioita joukosta $X$ joukkoon $Y$? Perustele omin sanoin.
+                        </p>
+                        <p>
+                            <img src="/kurssit/may1/kuvat/funktio1.png" style="max-width: 100%; width: auto; height: auto;" /> 
+                        </p>
+                        <p>
+                            <img src="/kurssit/may1/kuvat/funktio2.png" style="max-width: 100%; width: auto; height: auto;" /> 
+                        </p>
+                        <p>
+                            <img src="/kurssit/may1/kuvat/funktio3.png" style="max-width: 100%; width: auto; height: auto;" /> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtavat">
+                <div class="tehtava" id="c287e196-8a74-48c5-84d6-1e2d4799cbd1">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio0f1">
+                                Funktion arvon laskeminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio0f1" class="collapse">
+                        <p> Tarkastellaan funktiota $h(x) = -x^2-3x+1$.
+                        <ol class="a">
+                            <li> Laske funktion $h$ arvo kohdassa $x = 2$. Toisin sanottuna laske, mitä on $h(2)$.</li>
+                            <li> Kaksi opiskelijaa laski funktion $h$ arvon kohdassa $x = -4$. Opiskelija A laski seuraavasti:
+                                \begin{align*}
+                                h(-4) &= --4^2-3\cdot -4 + 1 \\
+                                &= +4^2 + 12 + 1 \\
+                                &= 16 + 12 + 1 = 29.
+                                \end{align*}
+                                Opiskelija B puolestaan laski näin:
+                                \begin{align*}
+                                h(-4) &= -(-4)^2 - 3\cdot (-4) + 1 \\
+                                &= -16+12 + 1 = -3.
+                                \end{align*}
+                                Kumman lasku oli oikein? 
+                            </li>
+                            <li> Laske funktion $h$ arvo kohdassa $x = -\frac{1}{2}$.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="a7f9d321-df7b-4058-b4f5-e1b2827016b2">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio0f12">
+                                Koordinaatiston pisteet
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio0f12" class="collapse">
+                        <p> 
+                            Piirrä vihkoosi samanlainen koordinaatisto kuin alla ja merkitse siihen pisteet $(2,-1)$, $(-3,0)$, $(5,2)$, $(-4,1)$, $(1,0)$, $(6,3)$, $(-5,2)$, $(0,1)$, $(3,0)$, $(-6,3)$, $(-2,-1)$, $(4,1)$ ja $(-1,0)$. Millainen kuvio koordinaatistoon syntyy? 
+                        </p>
+                        <p>
+                            <img src="/kurssit/may1/kuvat/koordinaatisto.png" max-width: 90%; width: auto; height: auto;/> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="f75b24bf-0a0d-425a-a3e3-348e1840ec68">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio0f">
+                                Funktion arvon laskeminen ja funktion kuvaaja
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio0f" class="collapse">
+                        <p>
+                            Tutkitaan vielä funktiota $f$, jolla
+                            $$f(x) = 2x + 1.$$
+                        <ol class="a">
+                            <li> Täydennä alla oleva taulukko:
+                                <div align="center">
+                                    <table style="width = 75%"> 
+                                        <tr>
+                                            <th>Muuttujan arvo</th>
+                                            <th>Funktion arvo</th>       
+                                        </tr>
+                                        <tr>
+                                            <td>$x$</td>
+                                            <td>$f(x) = 2x + 1$</td>      
+                                        </tr>
+                                        <tr>
+                                            <td>$1$</td>
+                                            <td align="left">$f(1) = $</td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$7$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$0$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$-6$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$a$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$b$</td>
+                                            <td></td>        
+                                        </tr>
+                                    </table> </div></li>
+                            <li> Mikä seuraavista on funktion $f$ kuvaaja? Käytä päättelyssä apuna taulukkoa, jonka täydensit a-kohdassa. 
+                                <p>
+                                    <img src="/kurssit/may1/kuvat/funktio4.png" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">   
+                                    <img src="/kurssit/may1/kuvat/funktio5.png" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">
+                                <img src="/kurssit/may1/kuvat/funktio6.png" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">     <p style="clear: both;">                    
+                                    <!-- <img src="/kurssit/may1/kuvat/funktio4.png" style="max-width: 100%; width: auto; height: auto;"/> 
+                                    <img src="/kurssit/may1/kuvat/funktio5.png" style="max-width: 100%; width: auto; height: auto;"/> 
+                                    <img src="/kurssit/may1/kuvat/funktio6.png" style="max-width: 100%; width: auto; height: auto;"/> --> </p> </li>
+                            <li> Päättele kuvaajan avulla, millä muuttujan $x$ arvolla funktio $f$ saa arvon $0$. Toisin sanottuna etsi sellaiset luvut $x$, joilla $f(x) = 0$.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="f2af786d-cc79-4b49-9ff9-12bf66cfeff1">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio0g">
+                                Funktion määrittelyehto
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio0g" class="collapse">
+                        <p>
+                            Millä reaaliluvuilla seuraavat funktiot ovat määriteltyjä? Kirjoita jokaiselle funktiolle määrittelyehto.
+                        <ol class="a">
+                            <li> $f(x) = \dfrac{4}{x}$</li>
+                            <li> $g(x) = \dfrac{-12}{x+9}$</li>
+                            <li> $h(x) = \dfrac{6x+5}{2x-8}$</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#Kuvaaja">
+                    Funktion kuvaaja
+                </a>
+            </h1>
+        </header>
+        <div id="Kuvaaja" class="collapse">
+
+            <div class="tehtavat">
+                <div class="tehtava" id="768ba0f8-7cac-4285-96dc-6de0c8cd46ec">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio1a">
+                                Funktion kuvaajan tulkinta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio1a" class="collapse">
+                        <p>
+                            Tarkastele yllä olevaa kuvaajaa, joka esittää lämpötilaa ajan funktiona. 
+                        <ol class="a">
+                            <li> Mikä on ollut vuorokauden korkein lämpötila? Milloin se on saavutettu?</li>
+                            <li> Mikä on ollut vuorokauden matalin lämpötila? Milloin se on saavutettu?</li>
+                            <li> Millä aikavälillä lämpötila on ollut yli 20 astetta?</li>
+                            <li> Millä aikavälillä lämpötila on ollut alle 16 astetta?</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="d174cc84-33c1-4094-b203-a3ec7e763708">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio1">
+                                Funktion arvon lukeminen kuvaajasta
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="funktio1" class="collapse">
+
+                        <p>
+                            Alla on funktion $f$ kuvaaja. Päättele sen avulla vastaukset seuraaviin kysymyksiin:  
+                        <ol class="a">
+                            <li> Minkä arvon funktio saa kohdassa $x = -1$?</li>
+                            <li> Mitä on $f(0)$?</li>
+                            <li> Mitä on $f(2)$? Saako funktio $f$ tämän arvon jossain muussakin kohdassa kuin kohdassa $x = 2$?</li>
+                        </ol>
+                        </p>
+                        <p> 
+                            <img src="/kurssit/may1/kuvat/MAY_1.png" style="max-height: 500px; width: auto; height: auto;" /> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtavat">
+                <div class="tehtava" id="0cf126d0-9bd8-45e8-b459-0d974ef721ca">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio3a">
+                                Funktion nollakohta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio3a" class="collapse">
+                        <p>
+                            Alla on näkyvissä funktioiden $f$, $g$ ja $h$ kuvaajat. Millä näistä funktioista 
+                        <ol class="a">
+                            <li> on tasan yksi nollakohta?</li>
+                            <li> on useita nollakohtia?</li>
+                            <li> ei ole yhtään nollakohtaa?</li>
+                        </ol>
+                        </p>
+                        <p>
+                            <img src="/kurssit/may1/kuvat/funktio9.png" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">   
+                            <img src="/kurssit/may1/kuvat/funktio10.png" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">
+                        <img src="/kurssit/may1/kuvat/funktio11.png" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">     <p style="clear: both;">                    
+                            <!-- <img src="/kurssit/may1/kuvat/funktio4.png" style="max-width: 100%; width: auto; height: auto;"/> 
+                            <img src="/kurssit/may1/kuvat/funktio5.png" style="max-width: 100%; width: auto; height: auto;"/> 
+                            <img src="/kurssit/may1/kuvat/funktio6.png" style="max-width: 100%; width: auto; height: auto;"/> --> </p>   
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="565c6141-6ede-4e2a-9b19-00110fac1cb8">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio3">
+                                Funktion kuvaajan tulkinta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio3" class="collapse">
+                        <p>
+                            Alla on funktion $g$ kuvaaja. Päättele sen avulla vastaukset seuraaviin kysymyksiin: 
+                        <ol class="a">
+                            <li> Millä muuttujan $x$ arvolla funktio saa arvon $-2$?</li>
+                            <li> Onko funktiolla yksi tai useampia nollakohtia? Mitä ne ovat?</li>
+                            <li> Millä muuttujan $x$ arvolla $g(x) = 6$?</li>
+                            <li> Millä muuttujan $x$ arvoilla funktio $g$ saa arvon $g(4)$?</li>
+                        </ol>
+                        </p>
+                        <p>
+                            <img src="/kurssit/may1/kuvat/funktio8.png" max-width: 100%; width: auto; height: auto;/> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtavat">
+                <div class="tehtava" id="6f38bfbb-b0a7-41a9-8c52-c14bb237538e">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio3b">
+                                Lukusuoran välit
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio3b" class="collapse">
+                        <p>
+                            Havainnollista piirroksella lukusuoran välejä tai niiden yhdistelmiä
+                        <ol class="a">
+                            <li> $-2 < x \leq 1$</li>
+                            <li> $x < -3$</li>
+                            <li> $x < 2$ tai $x > 4$. </li>
+                            <li> Selitä omin sanoin, miksi ehdossa "$x \leq 0$ ja $x > 3$" ei ole järkeä.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="e4e614d9-8c0a-4f68-8fe9-d24ffadc6390">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio5">
+                                Funktion kuvaajan tulkinta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio5" class="collapse">
+                        <p>
+                            Tarkastele alla olevaa funktion $f$ kuvaajaa. Millä muuttujan $x$ arvoilla 
+                        <ol class="a">
+                            <li> funktio saa arvon nolla, eli $f(x)=0$</li>
+                            <li> funktion arvot ovat positiivisia eli $f(x)>0$</li>
+                            <li> funktion arvot negatiivisia eli $f(x)<0$?</li>
+                        </ol>
+                        Anna vastaus edellä harjoiteltuja lukusuoran välin merkintöjä käyttäen tai selitä omin sanoin.
+                        </p>
+                        <p>
+                            <img src="/kurssit/may1/kuvat/MAY_3.png" style="max-height: 500px; width: auto; height: auto;" /> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="ed8900d8-2c92-4344-bc3c-c5d29e4ade34">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio6">
+                                Funktion kuvaajan tulkinta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio6" class="collapse">
+                        <p>
+                            Tarkastele alla olevaa funktion $f$ kuvaajaa. Millaisia arvoja funktio saa eli mitä voit sanoa luvusta $f(x)$, jos 
+                        <ol class="a">
+                            <li> $-1\leq x\leq 2$</li>
+                            <li> $x>0$</li>
+                            <li> $x\leq 1$?</li>
+                        </ol>
+                        Anna vastaus edellä harjoiteltuja lukusuoran välin merkintöjä käyttäen tai selitä omin sanoin.
+                        </p>
+                        <p>
+                            <img src="/kurssit/may1/kuvat/MAY_3.png" style="max-height: 500px; width: auto; height: auto;" /> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="3347d27f-3119-4d84-86bd-c1040f6428ff">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio6b">
+                                Funktioiden kuvaajien vertailu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio6b" class="collapse">
+                        <p>
+                            Tarkastele edelleen yllä olevaa kuvaa, jossa näkyvät funktioiden $f$ ja $g$ kuvaajat. 
+                        <ol class="a">
+                            <li> Saavatko funktiot $f$ ja $g$ saman arvon jossain muussakin kohdassa kuin kohdassa $x = a$? Missä?</li>
+                            <li> Kumpi funktioista saa suuremman arvon kohdassa $x = 0$?</li>
+                            <li> Kumpi funktioista saa suuremman arvon kohdassa $x = 1$?</li>
+                            <li> Selitä omin sanoin, miten kuvaajista näkyy se, että jollakin muuttujan $x$ arvolla funktion $g$ arvot ovat pienempiä kuin funktion $f$ arvot eli $g(x) < f(x)$.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtavat">
+
+                <div class="tehtava" id="c76e6b73-07be-42d2-9656-9f5a4669d94e">
+
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio7">
+                                Funktion kuvaajan piirtäminen laskimella
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="funktio7" class="collapse">
+
+                        <p>
+                            Perehdy oman teknisen apuvälineesi käyttöön esimerkiksi  <a href="https://opetus.tv/">opetus.tv</a>:n opetusvideoiden avulla. Ne löytyvät osoitteesta opetus.tv -> työkalut -> valitse oma laskimesi -> funktiot ja kuvaajat. Harjoittele oman laitteesi käyttöä tekemällä seuraavaa:
+                        <ol class="a">
+                            <li> Piirrä funktion $f(x)=2x-1$ kuvaaja.</li>
+                            <li> Määritä kuvaajasta funktion $f$ nollakohta tai nollakohdat.</li>
+                            <li> Määritä laskimen laskinsovelluksen puolella funktion arvo, kun $x=4$.</li>
+                            <li> Piirrä samaan kuvaan funktion $g(x)=-x^2+4x+2$ kuvaaja.</li>
+                            <li> Määritä piirtämäsi kuvan avulla ne kohdat, joissa funktiot $f$ ja $g$ saavat saman arvon. Luettele kaikki tällaiset kohdat sekä niitä vastaavat funktioiden arvot.</li>
+                            <li> Määritä laskinsovelluksen avulla avulla ne kohdat, joissa funktiot $f$ ja $g$ saavat saman arvon, eli ratkaise yhtälö $f(x)=g(x)$. Saatko saman tuloksen kuin edellisessä kohdassa?</li>
+                            <li> Määritä funktioiden $f$ ja $g$ leikkauspisteiden $y$-koordinaatit määrittämällä jommankumman funktion arvo edellisessä kohdassa selvitetyillä muuttujan $x$ arvoilla.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="778f4f14-f16c-42bd-917a-841a239c056a">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio8">
+                                Funktion kuvaajan piirtäminen laskimella
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio8" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> Piirrä funktion  $f(x)=\sqrt{x}$ kuvaaja.</li>
+                            <li> Millaisia arvoja funktio $f$ saa? </li>
+                            <li> Millä muuttujan $x$ arvoilla funktio on määritelty, eli millaisilla luvuilla $x$ funktion kuvaaja on näkyvissä?</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#funktioita">
+                    Erilaisia funktioita
+                </a>
+            </h1>
+        </header>
+        <div id="funktioita" class="collapse">
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0f90ba6-1afb-41e8-aa5d-d184efc020b5">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio9">
+                                Ensimmäisen asteen polynomifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio9" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> Piirrä laskimellasi samaan kuvaan funktioiden $f(x)=0{,}5x + 1$, $g(x) = 2x+1$ ja $h(x) = -x+1$ kuvaajat.</li>
+                            <li> Mitä yhteistä näiden funktioiden kuvaajilla on? Entä mitä eroa niillä on?</li>
+                            <li> Kaikki tämän tehtävän funktiot ovat muotoa $x \mapsto ax +1$ eli ne kertovat muuttujaa $x$ jollakin luvulla $a$ ja lisäävät tulokseen luvun $1$. Miten luku $1$ näkyy funktioiden kuvaajissa?</li>
+                            <li> Pystytkö päättelemään kuvaajaa piirtämättä, millä korkeudella funktio $k(x) = x+4$ leikkaa $y$-akselin?</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="a1b8f7a9-76e7-4825-9151-b2d442e0e00d">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio10">
+                                Ensimmäisen asteen polynomifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio10" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> Piirrä laskimellasi samaan kuvaan funktioiden $f(x)=2x - 1$, $g(x) = 2x$ ja $h(x) = 2x+2$ kuvaajat.</li>
+                            <li> Mitä yhteistä näiden funktioiden kuvaajilla on? Entä mitä eroa niillä on?</li>
+                            <li> Kaikki tämän tehtävän funktiot ovat muotoa $x \mapsto 2x + b$ eli ne kertovat muuttujan $x$ kahdella ja lisäävät tulokseen luvun $b$. Miten kerroin $2$ näkyy funktioiden kuvaajissa?</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="17cb3dfb-b1e6-4d4e-9eab-1947b2da6d14">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio11">
+                                Ensimmäisen asteen polynomifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio11" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> Piirrä laskimellasi samaan kuvaan funktioiden $f(x)=-2x$ ja $g(x) = 2x$ kuvaajat.</li>
+                            <li> Mitä yhteistä näiden funktioiden kuvaajilla on? Entä mitä eroa niillä on?</li>
+                            <li> Miten voit päätellä kuvaajaa piirtämättä, onko funktion $h(x) = -3x+4$ kuvaaja nouseva vai laskeva suora?</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="38f8061f-cef9-4cd4-90c9-2303195aa573">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio12">
+                                Ensimmäisen asteen polynomifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio12" class="collapse">
+                        <p> Selitä omin sanoin, miten voit päätellä ensimmäisen asteen polynomifunktion $f(x) = ax+b$ lausekkeesta, 
+                        <ol class="a">
+                            <li> onko funktion kuvaaja nouseva vai laskeva suora</li>
+                            <li> miten jyrkästi kuvaaja nousee tai laskee</li>
+                            <li> missä kohdassa kuvaaja leikkaa $y$-akselin.</li>
+                        </ol>
+                        Voit tutkia edellisten tehtävien tuloksia tai piirtää vielä lisää ensimmäisen asteen polynomifunktioiden kuvaajia laskimellasi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtavat">
+                <div class="tehtava" id="6fef58a4-c4b3-4bdb-b61a-40caf15536b1">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio13">
+                                Kuvaajan piirtäminen käsin
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio13" class="collapse">
+                        <p> Tehtävänä on piirtää funktion $f(x) = -x+3$ kuvaaja ilman teknisiä apuvälineitä välillä $-3 \leq x \leq 6$. 
+                        <ol class="a">
+                            <li> Määritä jokin kuvaajan piste esimerkiksi laskemalla funktion $f$ arvo jossakin kohdassa välillä $-3 \leq x \leq 6$ tai muuten päättelemällä (voit hyödyntää edellisten tehtävien havaintoja).</li>
+                            <li> Pystytkö piirtämään kuvaajan a-kohdan tiedon perusteella? Jos et, määritä jokin toinen kuvaajan piste samaan tapaan.</li>
+                            <li> Pystytkö piirtämään kuvaajan a- ja b-kohtien perusteella? Määritä tarvittaessa lisää kuvaajan pisteitä kunnes pystyt piirtämään kuvaajan koko välillä $-3 \leq x \leq 6$.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="e9fca102-ab7e-487c-b797-94ac35eebbc6">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio14">
+                                Eksponenttifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio14" class="collapse">
+                        <ol class="a">
+                            <li> Piirrä laskimellasi samaan kuvaan funktioiden $f(x)=2^x$, $g(x) = 3^x$ ja $h(x) = 0{,}5^x$ kuvaajat.</li>
+                            <li> Mitä yhteistä näiden funktioiden kuvaajilla on? Entä mitä eroa niillä on? Tutki erityisesti kohtaa $x = 0$.</li>
+                            <li> Selitä omin sanoin, miten kantaluku $a$ vaikuttaa eksponenttifunktion $F(x) = a^x$ kuvaajan ulkonäköön.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="f0a02465-f7f8-448f-89f0-96f664bef104">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio15">
+                                Logaritmifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio15" class="collapse">
+                        <ol class="a">
+                            <li> Piirrä laskimellasi samaan kuvaan funktioiden $f(x)=\log_2(x)$, $g(x) = \log_3(x)$ ja $h(x) = \log_{10}(x)$ kuvaajat.</li>
+                            <li> Mitä yhteistä näiden funktioiden kuvaajilla on? Entä mitä eroa niillä on? Tutki erityisesti kohtaa $x = 1$.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="5826f777-8ac5-4ae1-bc11-07e22309e92d">
+                    <header>
+                        <h1>
+
+                            <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                                <label class="checkbox-bootstrap checkbox-lg">
+                                    <input type="checkbox">
+                                    <span class="checkbox-placeholder"></span>
+                                </label>
+                            </div>
+
+                            <a data-toggle="collapse" class="collapsed" data-target="#funktio16">
+                                Logaritmifunktio ja eksponenttifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="funktio16" class="collapse">
+                        <ol class="a">
+                            <li> Piirrä laskimellasi samaan kuvaan funktioiden $f(x)=\log_2(x)$, $g(x) = 2^x$ ja $h(x) = x$ kuvaajat.</li>
+                            <li> Vertaa logaritmifunktion ja eksponenttifunktion kuvaajien sijaintia suhteessa kuvassa näkyvään suoraan. Mitä havaitset? Miten peili liittyy tähän tilanteeseen?</li>
+                            <li> Tee vastaava piirros kuin a-kohdassa mutta vaihda kantaluvuksi luku $3$. Havaitsetko saman ilmiön kuin b-kohdassa?</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="303e74fe-5a07-4305-ac63-3f901741121b">
+                <header>
+                    <h1>
+
+                        <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                            <label class="checkbox-bootstrap checkbox-lg">
+                                <input type="checkbox">
+                                <span class="checkbox-placeholder"></span>
+                            </label>
+                        </div>
+
+                        <a data-toggle="collapse" class="collapsed" data-target="#F13">
+                            Funktion määritelmä
+                        </a>
+                    </h1>
+                </header>
+                <div id="F13" class="collapse">
+                    <p>
+                        Palauta mieleesi funktion käsitteen määritelmä ja päättele sen avulla, mitkä alla olevista kuvista voivat esittää jonkin funktion kuvaajaa välillä $-2 \leq x \leq 2$. Perustele jokaisen kuvan kohdalla omin sanoin, onko kysymyksessä funktion kuvaaja vai ei.
+                    </p>
+                    <p>
+                        <img src="/kurssit/may1/kuvat/funktio21a.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
+                        <img src="/kurssit/may1/kuvat/funktio21b.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">
+                        <img src="/kurssit/may1/kuvat/funktio21c.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
+                        <img src="/kurssit/may1/kuvat/funktio21d.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">  
+                    <p style="clear: both;"></p>
+                    <p>
+                        <img src="/kurssit/may1/kuvat/funktio21e.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">   
+                        <img src="/kurssit/may1/kuvat/funktio21f.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">   
+                    <p style="clear: both;"></p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F13_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F13_v" class="collapse">
+                        <p>
+                            Funktion kuvaajaa välillä $-2 \leq x \leq 2$ voivat esittää vaihtoehdot B, D ja E. Vaihtoehdot A, C, ja F eivät esitä välillä $-2 \leq x \leq 2$ määriteltyä funktiota.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="a1d590c5-e467-49a9-8841-aee3b977b9c0">
+                <header>
+                    <h1>
+
+                        <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                            <label class="checkbox-bootstrap checkbox-lg">
+                                <input type="checkbox">
+                                <span class="checkbox-placeholder"></span>
+                            </label>
+                        </div>
+
+                        <a data-toggle="collapse" class="collapsed" data-target="#funktio2">
+                            Funktion kuvaajan tulkinta
+                        </a>
+                    </h1>
+                </header>
+                <div id="funktio2" class="collapse">
+                    <p>
+                        Alla on erään funktion $f$ kuvaaja. Päättele sen avulla vastaukset seuraaviin kysymyksiin:
+                    <ol class="a">
+
+                        <li> Mikä on funktion $f$ arvo kohdassa $x=5$?</li>
+                        <li> Mitä on $f(0)$?</li>
+                        <li> Onko funktiolla $f$ nollakohta tai nollakohtia? Jos on, mitä ne ovat?</li>
+                        <li> Millä muuttujan $x$ arvoilla funktion $f$ arvot ovat positiiviset?</li>
+                        <li> Millä muuttujan $x$ arvoilla funktion $f$ arvot ovat negatiiviset?</li>
+                    </ol>
+                    </p>
+                    <p>
+                        <img src="/kurssit/may1/kuvat/funktio17.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#funktio2_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="funktio2_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $4$ </li>
+                            <li> $f(0) = 3$ </li>
+                            <li> Nollakohdat ovat $x = -2$, $x = 2$ ja $x = 4$. </li>
+                            <li> $-2 < x < 2$ tai $x > 4$</li>
+                            <li> $x < -2$ ja $2 < x < 4$</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="34728d1e-979f-4443-bef3-3e913a787074">
+                <header>
+                    <h1>
+
+                        <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                            <label class="checkbox-bootstrap checkbox-lg">
+                                <input type="checkbox">
+                                <span class="checkbox-placeholder"></span>
+                            </label>
+                        </div>
+
+                        <a data-toggle="collapse" class="collapsed" data-target="#F4">
+                            Funktion arvot ja funktion nollakohdat
+                        </a>
+                    </h1>
+                </header>
+                <div id="F4" class="collapse">
+                    <p>
+                        Tutkitaan funktiota $f$, jolle $f(x) = \dfrac{x^2-3x-4}{x+2}$.
+                    <ol class="a">
+                        <li> Määritä laskemalla funktion arvot $\ f(2) \ $ ja $\ f(6)$.</li>
+                        <li> Päättele funktion $\ f$ lausekkeesta, mikä on sen määrittelyehto eli millä muuttujan arvoilla funktion arvon laskeminen on mahdollista.</li>
+                        <li> Piirrä funktion $\ f$ kuvaaja laskimella ja päättele seuraavien kohtien vastaukset kuvaajan avulla.</li>
+                        <li> Mikä on funktion $\ f$ arvo kohdassa nolla? Saako funktio tämän arvon jossain muussakin kohdassa?</li>
+                        <li> Onko funktiolla $\ f$ nollakohtia? Jos on, mitä ne ovat?</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F4_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F4_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $-\frac{3}{2}$ </li>
+                            <li> $x \neq -2$ </li>
+                            <li>  </li>
+                            <li> $f(0) = -2$, myös kohdassa $x = 1$</li>
+                            <li> Kaksi nollakohtaa: $x = -1$ ja $x = 4$.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="76c80b4a-0711-4ba8-9b54-4c66b414f75f">
+                <header>
+                    <h1>
+
+                        <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                            <label class="checkbox-bootstrap checkbox-lg">
+                                <input type="checkbox">
+                                <span class="checkbox-placeholder"></span>
+                            </label>
+                        </div>
+
+                        <a data-toggle="collapse" class="collapsed" data-target="#F5">
+                            Funktion arvot ja funktion kuvaaja
+                        </a>
+                    </h1>
+                </header>
+                <div id="F5" class="collapse">
+                    <p>
+                        Piirrä funktion $g(x) = -\dfrac{1}{2}x^2+2x+2$ kuvaaja laskimella välillä $-3 \leq x \leq 7$. Päättele kuvaajan avulla, missä kohdassa funktio $g$ saa arvon
+                    <ol class="a">
+                        <li> $2$ </li>
+                        <li> $4$ </li>
+                        <li> $6$. </li>
+                        <li> Mikä on funktion $g$ suurin arvo? Millä muuttujan $x$ arvolla funktio saa tämän arvon?</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F5_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F5_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $x = 0$ ja $x = 4$ </li>
+                            <li> $x = 2$ </li>
+                            <li> Ei millään </li>
+                            <li> Suurin arvo on $4$, kohdassa $x = 2$.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="9b7918e3-414e-424d-9711-140e5865725c">
+                <header>
+                    <h1>
+
+                        <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                            <label class="checkbox-bootstrap checkbox-lg">
+                                <input type="checkbox">
+                                <span class="checkbox-placeholder"></span>
+                            </label>
+                        </div>
+
+                        <a data-toggle="collapse" class="collapsed" data-target="#F16">
+                            Funktion arvot ja funktion kuvaaja
+                        </a>
+                    </h1>
+                </header>
+                <div id="F16" class="collapse">
+                    <p> Tutkitaan funktiota $f$, jolle $f(x) = -x^2-3x+4$.
+                    <ol class="a">
+                        <li> Laske funktion $f$  arvo kohdassa $x = -2$.</li>
+                        <li> Päättele edellisen kohdan tuloksen avulla, onko piste $(-2,5)$ funktion $f$ kuvaajalla, sen yläpuolella vai sen alapuolella.</li>
+                        <li> Piirrä funktion $f$ kuvaaja laskimella ja tarkista sen avulla, päädyitkö edellisessä kohdassa oikeaan johtopäätökseen. </li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F16_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F16_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $f(-2) = 6$ </li>
+                            <li> Kuvaajan alapuolella. </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="34bcbb91-8dd6-4516-9469-14ba234ae5bd">
+                <header>
+                    <h1>
+
+                        <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                            <label class="checkbox-bootstrap checkbox-lg">
+                                <input type="checkbox">
+                                <span class="checkbox-placeholder"></span>
+                            </label>
+                        </div>
+
+                        <a data-toggle="collapse" class="collapsed" data-target="#F6">
+                            Funktion määrittelyjoukko ja funktion kuvaaja
+                        </a>
+                    </h1>
+                </header>
+                <div id="F6" class="collapse">
+                    <p>
+                        Tutkitaan funktiota $h$, jolle $h(x) = 2x + \dfrac{4}{1-x}$.
+                    <ol class="a">
+                        <li> Päättele funktion $h$ lausekkeesta, mikä on sen määrittelyehto eli millä muuttujan arvoilla funktion arvon laskeminen on mahdollista.</li>
+                        <li> Piirrä funktion $h$ kuvaaja laskimella. </li>
+                        <li> Määritä kuvaajan avulla funktion $h$ nollakohdat. </li>
+                        <li> Määritä kuvaajan avulla funktion $h$ arvo kohdassa nolla. Saako funktio $h$ tämän arvon jossain toisessakin kohdassa? Missä?</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F6_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F6_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $x \neq 1$ </li>
+                            <li> </li>
+                            <li> Kaksi nollakohtaa: $x = -1$ ja $x = 2$.</li>
+                            <li> $f(0) = 4$; funktio saa saman arvon myös kohdassa $x = 3$.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="621387a9-a020-4e30-8bcd-9d6f3333b7c2">
+                <header>
+                    <h1>
+
+                        <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                            <label class="checkbox-bootstrap checkbox-lg">
+                                <input type="checkbox">
+                                <span class="checkbox-placeholder"></span>
+                            </label>
+                        </div>
+
+                        <a data-toggle="collapse" class="collapsed" data-target="#F1">
+                            Funktion kuvaajan tulkinta
+                        </a>
+                    </h1>
+                </header>
+                <div id="F1" class="collapse">
+                    <p>
+                        Oheisessa kuviossa on erään funktion $f(x)$ kuvaaja. Määritä kuvaajan avulla ne muuttujan $x$ arvot, joille $-2 \leq x \leq 4$ ja
+                    <ol class="a">
+                        <li> $f(x)=1$</li>
+                        <li> $f(x) \leq 0$.</li>
+                    </ol>
+                    [Lyhyt S2015/3ab]
+                    </p>
+                    <p>
+                        <img src="/kurssit/may1/kuvat/funktioYO1.png" max-width: 100%; width: auto; height: auto;/> 
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F1_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F1_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> Kaksi kohtaa: $x = -1$ ja $x = 3$ </li>
+                            <li> $0 \leq x \leq 2$</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="f1d38d09-1353-4219-b394-463714d3d8ec">
+                <header>
+                    <h1>
+
+                        <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                            <label class="checkbox-bootstrap checkbox-lg">
+                                <input type="checkbox">
+                                <span class="checkbox-placeholder"></span>
+                            </label>
+                        </div>
+
+                        <a data-toggle="collapse" class="collapsed" data-target="#funktio14">
+                            Funktion kuvaajan tulkinta
+                        </a>
+                    </h1>
+                </header>
+                <div id="funktio14" class="collapse">
+                    <p>
+                        Alla olevaan kuvaan on piirretty funktioiden $f(x) = 0{,}5x$ ja $g = -0{,}25x^2 + 2$ kuvaajat. Päättele niiden avulla vastaukset seuraaviin kysymyksiin:
+                    <ol class="a">
+                        <li> Missä kohdissa funktiot $f$ ja $g$ saavat saman arvon?</li>
+                        <li> Mitkä ovat yhtälön $0{,}5x = -0{,}25x^2+2$ ratkaisut?</li>
+                        <li> Millä muuttujan arvoilla funktio $g$ saa suurempia arvoja kuin funktio $f$?</li>
+                        <li> Mitkä luvut toteuttavat epäyhtälön $-0{,}25x^2+2 > 0{,}5x$?</li>
+                    </ol>
+                    </p>
+                    <p>
+                        <img src="/kurssit/may1/kuvat/funktio22.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#funktio14_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="funktio14_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> Kaksi kohtaa: $x = -4$ ja $x = 2$ </li>
+                            <li> $x = -4$ tai $x = 2$</li>
+                            <li> $-4 < x < 2$</li>
+                            <li> $-4 < x < 2$</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="236fcf43-54dd-4d9a-a2f6-ba6289df1345">
+                <header>
+                    <h1>
+
+                        <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                            <label class="checkbox-bootstrap checkbox-lg">
+                                <input type="checkbox">
+                                <span class="checkbox-placeholder"></span>
+                            </label>
+                        </div>
+
+                        <a data-toggle="collapse" class="collapsed" data-target="#funktio15">
+                            Funktion kuvaajan tulkinta
+                        </a>
+                    </h1>
+                </header>
+                <div id="funktio15" class="collapse">
+                    <p>
+                        Tutkitaan yhtälöä $0{,}25x-1{,}5 = 3-2^x$.
+                    <ol class="a">
+                        <li> Muodosta lausekkeet funktioille $f$ ja $g$ niin, että saat kirjoitettua tutkittavan yhtälön muodossa $f(x) = g(x)$.</li>
+                        <li> Piirrä funktioiden $f$ ja $g$ kuvaajat samaan koordinaatistoon laskimella.</li>
+                        <li> Päättele kuvaajan avulla, onko yhtälöllä $0{,}25x-1{,}5 = 3-2^x$ ratkaisua. Jos ratkaisuja on olemassa, mitä ne ovat?</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#funktio15_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="funktio15_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> Esimerkiksi $f(x) = 0{,}25x - 1{,}5$ ja $g(x) = 3-2^x$</li>
+                            <li> </li>
+                            <li> $x = 2$</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="fe570e9d-16be-425f-9149-1a6e684a5809">
+                <header>
+                    <h1>
+
+                        <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">
+                            <label class="checkbox-bootstrap checkbox-lg">
+                                <input type="checkbox">
+                                <span class="checkbox-placeholder"></span>
+                            </label>
+                        </div>
+
+                        <a data-toggle="collapse" class="collapsed" data-target="#F8a">
+                            Funktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="F8a" class="collapse">
+                    <p>
+                        Mittausten perusteella erään bussilinjan matka-ajan riippuvuutta ruuhkasta kuvaa funktio $f(x) =  0{,}0005x^2+0{,}01x+18$, missä $x$ on reitin vilkkaimpaan risteykseen saapuvien ajoneuvojen määrä yhden minuutin aikana. (Funktion arvo ilmaisee matka-ajan minuutteina.)
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä funktion $f$ kuvaaja välillä $0 \leq x \leq 200$ laskimellasi tai esimerkiksi <a href="http://www.wolframalpha.com/">Wolfram|Alphalla</a>. Wolfram|Alphalla piirtäminen onnistuu komennolla <i>plot $\ f(x) = 0{,}0005x^2+0{,}01x+18$, $\ x\ $ from 0 to 200</i>. </li>
+                        <li> Päättele kuvaajasta, kuinka monta autoa risteykseen saa enintään saapua, jotta matka-aika olisi alle 30 minuuttia. Tarkenna kuvaa tarvittaessa pienentämällä tarkasteluväliä.</li>
+                        <li> Määritä laskemalla, miten paljon matka-aika pitenee, jos risteykseen minuutin aikana saapuvien autojen määrä kasvaa viidestäkymmenestä sataan. </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F8a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F8a_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> </li>
+                            <li> Noin 145 autoa.</li>
+                            <li> 4 min 15 s.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="4cabd41f-5195-4c03-993d-d18ff54dd8ae">
+                <header>
+                    <h1>                                  <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">                                     <label class="checkbox-bootstrap checkbox-lg">                                         <input type="checkbox">                                         <span class="checkbox-placeholder"></span>                                     </label>                                 </div>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F8">
+                            Funktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="F8" class="collapse">
+                    <p>
+                        Kun seurattiin paistolämpömittarin lukemia, havaittiin, että paistin sisälämpötila nousi koko ajan tasaisesti siten, että neljässä minuutissa lämpötila kohosi 2&nbsp;${}^\circ$C. Kun paisti laitettiin uuniin, lämpömittarin lukema oli 35&nbsp;${}^\circ$C.  
+                    </p>
+                    <ol class="a">
+                        <li> Muodosta lauseke funktiolle $f(t)$, joka kuvaa paistin sisälämpötilaa ajan $t$ funktiona. </li>
+                        <li> Piirrä funktion $f$ kuvaaja välillä $0 \leq t \leq 80$ laskimellasi tai esimerkiksi <a href="http://www.wolframalpha.com/">Wolfram|Alphalla</a>. </li>
+                        <li> Keittokirjan mukaan paisti on kypsä, kun sen sisälämpötilan on 60 ${}^\circ$C. Päättele piirtämäsi kuvaajan avulla, kuinka kauan paistin kypsennys kestää. (Pienennä väliä $0 \leq t \leq 80$ tarvittaessa saadaksesi tarkemman tuloksen.) </li>
+                        <li> Jos paisti laitettiin uuniin klo 16, mihin aikaan se on valmis?</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F8_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F8_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $f(t) = 35 + 0{,}5t$</li>
+                            <li> </li>
+                            <li> 50 min</li>
+                            <li> 16:50</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="256c453b-8a61-45af-ac22-a78e41fc66a7">
+                <header>
+                    <h1>                                  <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">                                     <label class="checkbox-bootstrap checkbox-lg">                                         <input type="checkbox">                                         <span class="checkbox-placeholder"></span>                                     </label>                                 </div>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F11">
+                            Ensimmäisen asteen polynomifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="F11" class="collapse">
+                    <p>
+                        <img src="/kurssit/may1/kuvat/funktio19.png" max-width: 100%; width: auto; height: auto;/> 
+                    </p>
+                    <p>
+                        Yllä olevassa kuvassa on joidenkin ensimmäisen asteen polynomifunktioiden kuvaajia. Täydennä alla oleva taulukko liittämällä kuhunkin funktioon sen kuvaaja.
+                    </p>
+                    <div align="center">
+                        <table style="width = 75%"> 
+                            <tr>
+                                <th> Funktio </th>
+                                <th> Kuvaaja </th>
+                            </tr>
+                            <tr>
+                                <td> $\ f(x) = 0{,}5x-0{,}5 \ $ </td>
+                                <td>  </td>
+                            </tr>
+                            <tr>
+                                <td> $g(x) = 1{,}5x+0{,}5$ </td>
+                                <td>  </td>
+                            </tr>
+                            <tr>
+                                <td> $h(x) = -2x+2$ </td>
+                                <td>  </td>
+                            </tr>
+                            <tr>
+                                <td> $k(x) = -x+1$ </td>
+                                <td>  </td>
+                            </tr>
+                        </table> </div>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F11_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F11_v" class="collapse">
+                        <div align="center">
+                            <table style="width = 75%"> 
+                                <tr>
+                                    <th> Funktio </th>
+                                    <th> Kuvaaja </th>
+                                </tr>
+                                <tr>
+                                    <td> $\ f(x) = 0{,}5x-0{,}5 \ $ </td>
+                                    <td>  B </td>
+                                </tr>
+                                <tr>
+                                    <td> $g(x) = 1{,}5x+0{,}5$ </td>
+                                    <td> A </td>
+                                </tr>
+                                <tr>
+                                    <td> $h(x) = -2x+2$ </td>
+                                    <td> D </td>
+                                </tr>
+                                <tr>
+                                    <td> $k(x) = -x+1$ </td>
+                                    <td> C </td>
+                                </tr>
+                            </table> </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b9f7617a-39d5-4164-a579-22c1e3a06951">
+                <header>
+                    <h1>                                  <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">                                     <label class="checkbox-bootstrap checkbox-lg">                                         <input type="checkbox">                                         <span class="checkbox-placeholder"></span>                                     </label>                                 </div>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F12">
+                            Ensimmäisen asteen polynomifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="F12" class="collapse">
+                    <p>
+                        <img src="/kurssit/may1/kuvat/funktio20.png" max-width: 100%; width: auto; height: auto;/> 
+                    </p>
+                    <p>
+                        Yllä olevassa kuvassa on joidenkin ensimmäisen asteen polynomifunktioiden kuvaajia. Täydennä alla oleva taulukko liittämällä kuhunkin funktioon sen kuvaaja.
+                    </p>
+                    <div align="center">
+                        <table style="width = 75%"> 
+                            <tr>
+                                <th> Funktio </th>
+                                <th> Kuvaaja </th>
+                            </tr>
+                            <tr>
+                                <td> $\ f(x) = -x+0{,}5 \ $ </td>
+                                <td>  </td>
+                            </tr>
+                            <tr>
+                                <td> $g(x) = -2x+0{,}5$ </td>
+                                <td>  </td>
+                            </tr>
+                            <tr>
+                                <td> $\ h(x) = 0{,}5x+0{,}5 \ $ </td>
+                                <td>  </td>
+                            </tr>
+                            <tr>
+                                <td> $k(x) = 1{,}5x+0{,}5$ </td>
+                                <td>  </td>
+                            </tr>
+                        </table> </div>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F12_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F12_v" class="collapse">
+                        <div align="center">
+                            <table style="width = 75%"> 
+                                <tr>
+                                    <th> Funktio </th>
+                                    <th> Kuvaaja </th>
+                                </tr>
+                                <tr>
+                                    <td> $\ f(x) = 0{,}5x-0{,}5 \ $ </td>
+                                    <td>  C </td>
+                                </tr>
+                                <tr>
+                                    <td> $g(x) = 1{,}5x+0{,}5$ </td>
+                                    <td> D </td>
+                                </tr>
+                                <tr>
+                                    <td> $h(x) = -2x+2$ </td>
+                                    <td> B </td>
+                                </tr>
+                                <tr>
+                                    <td> $k(x) = -x+1$ </td>
+                                    <td> A </td>
+                                </tr>
+                            </table> </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>  
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="f45421e6-4236-4456-b17e-baa97e568222">
+                <header>
+                    <h1>                                  <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">                                     <label class="checkbox-bootstrap checkbox-lg">                                         <input type="checkbox">                                         <span class="checkbox-placeholder"></span>                                     </label>                                 </div>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F2">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="F2" class="collapse">
+                    <p>
+                        Kahden sähköyhtiön A ja B hinnoittelu perustuu kiinteään kuukausittaiseen perusmaksuun, johon lisätään sähkön kulutuksen mukainen lisämaksu. Yhtiöiden tarjoamat hinnat selviävät alla olevasta taulukosta.
+                    </p>
+                    <div align="center">
+                        <table style="width = 75%"> 
+                            <tr>
+                                <th> Yhtiö </th>
+                                <th> Perusmaksu €/kk </th>
+                                <th> Yksikköhinta snt/kWh </th> 
+                            </tr>
+                            <tr>
+                                <td> <b>A</b></td>
+                                <td> 4,02 </td>
+                                <td> 6,62 </td> 
+                            </tr>
+                            <tr>
+                                <td> <b>B</b> </td>
+                                <td> 3,75 </td>
+                                <td> 7,99 </td> 
+                            </tr>
+                        </table> </div>
+                    <p>
+                    <ol class="a">
+                        <li> Muodosta lausekkeet $a(x)$ ja $b(x)$ kummankin yhtiön tarjoaman sähkön kokonaishinnalle, kun sähköä kuluu $x$ kWh ja aikavälinä on yksi kuukausi. </li>
+                        <li> Kuinka suuri täytyisi sähkönkulutuksen olla kuukausittain, jotta kokonaishinnat olisivat samat?</li>
+                        <li> Kuinka suuri on sähkön kokonaishintojen välinen ero vuoden aikana, jos sähköä kuluu 2 000 kWh vuodessa?</li>
+                    </ol>
+                    [Lyhyt S2015/6]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F2_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F2_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $a(x) = 0{,}0662x + 4{,}02$ ja $b(x) = 0{,}0799x + 3{,}75$</li>
+                            <li> </li>
+                            <li> 50 min</li>
+                            <li> 16:50</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="tehtava" id="e3bec84d-573d-4e6b-a989-f6cbdda80f10">
+                    <header>
+                        <h1>                                  <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">                                     <label class="checkbox-bootstrap checkbox-lg">                                         <input type="checkbox">                                         <span class="checkbox-placeholder"></span>                                     </label>                                 </div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#F3">
+                                
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="F3" class="collapse">
+                        <p>
+                            Ravintoliuoksessa kasvatettavan bakteeripopulaation yksilömäärä $N(t)$ kasvaa eksponentiaalisen mallin $N(t) = 1000 \cdot 1{,}25^t$ mukaisesti, kun aika $t$ ilmoitetaan tunteina.
+                        <ol class="a">
+                            <li> Mikä on populaation koko 24 tunnin kuluttua? Anna vastaus tuhannen bakteerin tarkkuudella. </li>
+                            <li> Kuinka monta prosenttia populaatio kasvaa jokaisen tunnin aikana?</li>
+                            <li> Kuinka monta tuntia kestää, että populaation koko ylittää miljoonan? Vihje: hyödynnä laskinta yhtälön ratkaisemisessa.</li>
+                        </ol>
+                        [Lyhyt K2015/8]
+                        </p>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F3_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F3_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                        <li> Noin $212\,000$ yksilöä</li>
+                        <li> 25 %</li>
+                        <li> 31 tuntia</li>
+                        </ol>
+                        </p>
+                    </div>
+                    </div>
+                    </div>
+
+
+                 <div class="tehtava" id="be6fd0c8-5651-44a5-afa1-771cfa3f46b0">
+                    <header>
+                        <h1>                                  <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">                                     <label class="checkbox-bootstrap checkbox-lg">                                         <input type="checkbox">                                         <span class="checkbox-placeholder"></span>                                     </label>                                 </div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#F9">
+                                
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="F9" class="collapse">
+                        <p>
+                            Erästä tuotetta myydään päivittäin 55 kappaletta, kun sen hinta on 35 euroa. Hinnan laskemisen on todettu vaikuttavan päivämyyntiin niin, että yhden euron alennus lisää aina menekkiä viidellä kappaleella. 
+                        <ol class="a">
+                            <li> Mikä on päivittäisen myynnin kokonaisarvo, kun yhden tuotteen hinta on 35 euroa? </li>
+                            <li> Jos hintaa lasketaan $x$ euroa, kuinka monta kappaletta tuotetta myydään? </li>
+                            <li> Muodosta lauseke funktiolle $f(x)$, joka ilmaisee myynnin kokonaisarvon tilanteessa, jossa hintaa on laskettu $x$ euroa. </li>
+                            <li> Millä muuttujan $x$ arvoilla funktio $f$ on määritelty?</li>
+                            <li> Piirrä funktion $f$ kuvaaja välillä $5 \leq x \leq 20$ laskimellasi tai esimerkiksi <a href="http://www.wolframalpha.com/">Wolfram|Alphalla</a>. Wolfram|Alphalla piirtäminen onnistuu esimerkiksi komennolla <i>plot $f(x) = x+1$, $x$ from 5 to 20</i> (muuta funktion lauseke oikeaksi). </li>
+                            <li> Päättele kuvaajan avulla, kuinka paljon hintaa pitää alentaa, jotta päivittäisen myynnin kokonaisarvo on mahdollisimman suuri.</li>
+                            <li> Mikä tuotteen hinnaksi kannattaa valita, jos haluaa mahdollisimman suuren myynnin kokonaisarvon? Mikä tämä kokonaisarvo on?</li>
+                        </ol>
+                        </p>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F9_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F9_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                        <li> 1925 euroa</li>
+                        <li> $55 + 5x$</li>
+                        <li> $f(x) = (55 + 5x)(35-x)$</li>
+                        <li> $0 \leq x \leq 35$</li>
+                        <li> </li>
+                        <li> 12 euroa</li>
+                        <li> 23 euroa, 2645 euroa.</li>
+                        </ol>
+                        </p>
+                    </div>
+                    </div>
+                    </div>
+
+
+                <div class="tehtava" id="2a9e414c-641e-44ff-b654-623cc979e3eb">
+                    <header>
+                        <h1>                                  <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">                                     <label class="checkbox-bootstrap checkbox-lg">                                         <input type="checkbox">                                         <span class="checkbox-placeholder"></span>                                     </label>                                 </div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#F10">
+                                
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="F10" class="collapse">
+                        <p>
+                            Joen rannalla oleva suorakulmion muotoinen alue aidataan kolmelta sivulta 100 m pitkällä köydellä.  
+                        </p>
+                        <p>
+                            <img src="/kurssit/may1/kuvat/joki.png" max-width: 100%; width: auto; height: auto;/> 
+                        </p>
+                        <ol class="a">
+                            <li> Jos rannan suuntaisen sivun pituus on $x$, mikä on kahden muun sivun pituus?</li>
+                            <li> Muodosta lauseke funktiolle $A(x)$, joka ilmaisee aidatun alueen pinta-alan rannan suuntaisen sivun pituuden $x$ funktiona.</li>
+                            <li> Millä muuttujan $x$ arvoilla funktio $A(x)$ on määritelty? </li>
+                            <li> Piirrä funktion $A$ kuvaaja laskimellasi tai esimerkiksi <a href="http://www.wolframalpha.com/">Wolfram|Alphalla</a>. </li>
+                            <li> Päättele kuvaajan avulla, kuinka pitkäksi rannan suuntainen sivu pitää valita, jotta aidatun alueen pinta-ala olisi mahdollisimman suuri.</li>
+                            <li> Mikä on aidatun alueen suurin mahdollinen pinta-ala?</li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F10_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F10_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                        <li> $\frac{100-x}{2}$</li>
+                        <li> $A(x) = \frac{100x-x^2}{2}$</li>
+                        <li> $0 < x < 100$</li>
+                        <li> </li>
+                        <li> 50 m</li>
+                        <li> 1250 m$^2$</li>
+                        </ol>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+
+
+            <div class="tehtava" id="002583bc-1b47-4cf1-aa26-27629a3aeb8e">
+                <header>
+                    <h1>                                  <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">                                     <label class="checkbox-bootstrap checkbox-lg">                                         <input type="checkbox">                                         <span class="checkbox-placeholder"></span>                                     </label>                                 </div>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F7">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="F7" class="collapse">
+                    <p>
+                        Neliön muotoisen levyn sivun pituus on 300 mm. Levystä leikataa kuvion mukaisesti nurkat pois ja levy taitetaan laatikoksi, jossa ei ole kantta. 
+                    </p>
+                    <p>
+                        <img src="/kurssit/may1/kuvat/funktio18.png" max-width: 100%; width: auto; height: auto;/> 
+                    </p>
+                    <ol class="a">
+                        <li> Askartele paperista malli laatikolle.</li>
+                        <li> Esitä syntyneen laatikon tilavuus $V$ pois leikatun nurkkapalan sivun pituuden $h$ funktiona eli määritä $V(h)$. </li>
+                        <li> Millä muuttujan $h$ arvoilla funktio $V(h)$ on määritelty?</li>
+                        <li> Piirrä funktion $V(h)$ kuvaaja laskimella tai esimerkiksi <a href="http://www.wolframalpha.com/">Wolfram|Alphalla</a>.</li>
+                        <li> Päättele kuvaajan avulla, kuinka suuri pituuden $h$ on oltava, jotta saadaan tilavuudeltaan mahdollisimman suuri laatikko. </li>
+                        <li> Laske funktion $V(h)$ avulla, mikä suurin mahdollinen tilavuus on. Anna vastaus kuutiodesimetreinä (dm$^3$) eli litroina (l). Selvitä tarvittaessa netistä, miten tilavuuden yksiköt mm$^3$, cm$^3$ ja dm$^3$ liittyvät toisiinsa.</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F7_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="F7_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                        <li> </li>
+                        <li> $V(h) = h\cdot (300-h)^2$</li>
+                        <li> $0 < h < 150$</li>
+                        <li> </li>
+                        <li> 100 mm</li>
+                        <li> 4 dm$^3$ eli 4 litraa.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="893d0094-7e7e-4921-a8be-98e3a337fd1a">
+                <header>
+                    <h1>                                  <div class="checkbox" style="float:left; margin-top:0px; margin-right:5px;">                                     <label class="checkbox-bootstrap checkbox-lg">                                         <input type="checkbox">                                         <span class="checkbox-placeholder"></span>                                     </label>                                 </div>
+                        <a data-toggle="collapse" class="collapsed" data-target="#F17">
+                            Funktion määrittelyehto
+                        </a>
+                    </h1>
+                </header>
+                <div id="F17" class="collapse">
+                    <p> Keksi esimerkki funktiosta, jonka määrittelyehto on
+                    <ol class="a">
+                        <li> $x \neq 1$</li>
+                        <li> $x \neq -9$</li>
+                        <li> $x \neq 2$ ja $x \neq 5$.</li>
+                    </ol>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+
+</article>
