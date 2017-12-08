@@ -3126,7 +3126,10 @@ topnav: maa8
                 </header>
                 <div id="MAA8s3t115">
                     <p>
-                        
+                       Määritä raja-arvo 
+                       $$
+                       \lim_{x \rightarrow \infty} \left(\ln(4x + 3) - \ln(3x+4)\right).
+                       $$ 
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t115_v">
@@ -3135,7 +3138,12 @@ topnav: maa8
                     </h2>
                     <div id="MAA8s3t115_v" class="collapse">
                         <p>
-                            
+                           Koska tutkitaan lausekkeen raja-arvoa muuttujan arvon kasvaessa rajatta, voidaan olettaa, että $x > 0$. Logaritmin laskusääntöjen nojalla 
+                           \begin{align*}
+                           \ln(4x + 3) - \ln(3x+4) &= \ln\left(\frac{4x + 3}{3x + 4}\right) \\[2mm]
+                           &= \ln\left(\frac{4 + \frac{3}{x} }{3 + \frac{4}{x} }\right) \\[2mm]
+                           &\xrightarrow[x \rightarrow \infty]{} \ln\left(\frac{4 + 0}{3 + 0}\right) = \ln\left(\frac{4}{3}\right).
+                           \end{align*}
                         </p>
                     </div>
                 </div>
