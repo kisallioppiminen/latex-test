@@ -2890,16 +2890,52 @@ topnav: maa8
                 </header>
                 <div id="MAA8s3t107">
                     <p>
-                        
+                        Erään mallin (R. MacArthur &amp; E. O. Wilson, 1967) mukaan saarella pesivien lintulajien lukumäärä $n$ riippuu saaren pinta-alasta $A$ likimain kaavan $n = kA^b$ mukaisesti, missä $k$ ja $b$ ovat saaresta riippumattomia positiivisia vakioita. 
                     </p>
+                    <ol class="a">
+                        <li>
+                            Havaintojen perusteella kahdella Kanariansaarella on saatu seuraavat arvot:
+                            <br>
+                            Alegranza: $n_1 = 20$ ja $A_1 = 10{,}2 \text{ km}^2$,
+                            <br>
+                            Roque del Oeste: $n_2 = 6$ ja $A_2 = 0{,}0158 \text{ km}^2$.
+                            <br>
+                            Määritä näiden tietojen perusteella vakiot $k$ ja $b$ kolmen merkitsevän numeron tarkkuudella.
+                        </li>
+                        <li>
+                            Arvioi mallin avulla La Palman saarella $(A = 708 \text{ km}^2)$ pesivien lintulajien lukumäärää.
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t107_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s3t107_v" class="collapse">
-                        <p>
-                            
+                        <ol class="a">
+                            <li>
+                               Havainnoista saadaan yhtälöt 
+                               \begin{align*}
+                               k \cdot 10{,}2^b &= 20 \\
+                               k \cdot 0{,}0158^b &= 6.
+                               \end{align*} 
+                               Kun yhtälöiden kummastakin puolesta otetaan logaritmi ja sovelletaan logaritmien laskusääntöjä, saadaan
+                               \begin{align*}
+                               \ln(k) + b\ln(10{,}2) &= \ln(20) \\
+                               \ln(k) + b\ln(0{,}0158) &= \ln(6).
+                               \end{align*} 
+                               Kun yhtälöt vähennetään toisistaan, saadaan ratkaistua $b$:
+                               $$
+                               b = \frac{\ln(20) - \ln(6)}{\ln(10{,}2) - \ln(0{,}0158)} \approx 0{,}186.
+                               $$
+                               Ensimmäisestä yhtälöstä saadaan
+                               $$
+                               k = \frac{20}{10{,}2^b} \approx 13{,}0.
+                               $$
+                            </li>
+                            <li>
+                                Palman lintulajien määrä on $n = k \cdot 708^b \approx 44$.
+                            </li>   
                         </p>
                     </div>
                 </div>
