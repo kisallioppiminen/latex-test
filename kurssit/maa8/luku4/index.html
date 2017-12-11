@@ -821,14 +821,51 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s3t402">
-                   
+                    <ol class="a">
+                        <li>
+                            Näytä, että funktiolla 
+                            $$
+                            f(x) = x^2 - 2x
+                            $$
+                            on käänteisfunktio, kun $x \geq 1$.
+                        </li>
+                        <li>
+                            Määritä käänteisfunktion $f^{-1}(x)$ lauseke.
+                        </li>
+                        <li>
+                            Piirrä funktion ja sen käänteisfunktion kuvaajat samaan koordinaatistoon.
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä S2011/9]
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t402_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s3t402_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li>
+                                Derivaattafunktion $f'(x) = 2(x-1)$ arvot ovat positiivisia, kun $x > 1$, ja $f'(1) = 0$, joten funktio $f$ on aidosti kasvava välillä $[1, \infty\pe$. Tällöin sillä on käänteisfunktio.
+                            </li>
+                            <li>
+                                Ratkaistaan $x$ yhtälöstä $f(x) = y$:
+                                \begin{align*}
+                                x^2 - 2x &= y \\
+                                x^2 - 2x - y &= 0
+                                \end{align*}
+                                Toisen asteen ratkaisukaavalla:
+                                \begin{align*}
+                                x &= \frac{2 \pm \sqrt{4+4y}}{2} \\[2mm]
+                                &= 1 \pm \sqrt{1 + y}.
+                                \end{align*}
+                                Miinusmerkki ei kelpaa, koska oletuksen mukaan $x > 1$. Käänteisfunktioksi saadaan näin
+                                $$
+                                f^{-1}(x) = 1 + \sqrt{1 + x}.
+                                $$
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
