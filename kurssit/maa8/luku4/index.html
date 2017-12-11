@@ -905,14 +905,79 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s3t406">
-                   
+                    <p>
+                        Hyperbolinen kosini $\cosh x$ ja hyperbolinen sini $\sinh x$ määritellään kaavoilla
+                        \begin{align*}
+                        \cosh x &= \frac{1}{2} \left(e^x + e^{-x}\right) \\[2mm]
+                        \sinh x &= \frac{1}{2} \left(e^x - e^{-x}\right),
+                        \end{align*}
+                        kun $x \in \R$.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Näytä, että 
+                            $$
+                            (\cosh x)^2 - (\sinh x)^2 = 1
+                            $$
+                            kaikilla $x \in \R$.
+                        </li>
+                        <li>
+                            Näytä, että hyperbolisen sinin derivaattafunktio on hyperbolinen kosini eli
+                            $$
+                            \frac{d}{dx} (\sinh x) = \cosh x.
+                            $$
+                        </li>
+                        <li>
+                            Näytä, että funktiolla $\sinh x$ on käänteisfunktio, ja määritä sen lauseke logaritmin avulla lausuttuna.
+                        </li>
+                        <li>
+                            Mikä on c-kohdan käänteisfunktion määrittelyjoukko?
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä K2012/14]
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t406_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s3t406_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li>
+                                Ohje: käytä määritelmien lausekkeita ja sievennä.
+                            </li>
+                            <li>
+                                \begin{align*}
+                                \frac{d}{dx} (\sinh x) &= \frac{d}{dx} \left(\frac{1}{2} (e^x - e^{-x})\right) \\[2mm]
+                                &= \frac{1}{2} (e^x + e^{-x}) \\[2mm]
+                                &= \cosh x.
+                                \end{align*}
+                            </li>
+                            <li>
+                                Hyperbolinen sini on aidosti kasvava koko määrittelyjoukossaan, koska sen derivaattafunktio on kaikkialla positiivinen:
+                                $$
+                                \frac{d}{dx} (\sinh x) = \frac{1}{2} (e^x + e^{-x}) > 0
+                                $$
+                                kaikilla $x \in \R$. Koska hyperbolinen sini on aidosti kasvava määrittelyjoukossaan, sillä on käänteisfunktio.
+                                <br>
+                                Käänteisfunktion lausekkeeksi saadaan 
+                                $$
+                                f^{-1}(x) = \ln(x + \sqrt{x^2 + 1}).
+                                $$
+                            </li>
+                            <li>
+                                Käänteisfunktion määrittelyjoukko on koko reaalilukujen joukko $\R$. Tämä johtuu siitä, että 
+                                $$
+                                \sqrt{x^2+1} > \left|x\right|
+                                $$
+                                kaikilla $x \in \R$, joten 
+                                $$
+                                x + \sqrt{x^2+1} > 0
+                                $$
+                                kaikilla $x \in \R$.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
