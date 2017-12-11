@@ -921,27 +921,6 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s3t405">
-                   
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t405_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA8s3t405_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="44b5f6a3-075c-445e-bfeb-8d63300b5334">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA8s3t406">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA8s3t406">
                     <p>
                         Hyperbolinen kosini $\cosh x$ ja hyperbolinen sini $\sinh x$ määritellään kaavoilla
                         \begin{align*}
@@ -975,11 +954,11 @@ topnav: maa8
                         [Pitkä K2012/14]
                     </p>
                     <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t406_v">
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t405_v">
                             Vastaus
                         </a>
                     </h2>
-                    <div id="MAA8s3t406_v" class="collapse">
+                    <div id="MAA8s3t405_v" class="collapse">
                         <ol class="a">
                             <li>
                                 Ohje: käytä määritelmien lausekkeita ja sievennä.
@@ -1013,6 +992,85 @@ topnav: maa8
                                 x + \sqrt{x^2+1} > 0
                                 $$
                                 kaikilla $x \in \R$.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="44b5f6a3-075c-445e-bfeb-8d63300b5334">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA8s3t406">
+                            
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA8s3t406">
+                    <ol class="a">
+                        <li>
+                            Osoita, että funktiolla
+                            $$
+                            f(x) = \ln x + x + 1, \quad x > 0,
+                            $$
+                            on käänteisfunktio $g = f^{-1}$.
+                        </li>
+                        <li>
+                            Määritä käänteisfunktion derivaatta $g'(2)$.
+                        </li>
+                        <li>
+                            Missä pisteissä funktion $f$ kuvaaja leikkaa käänteisfunktion kuvaajan?
+                        </li>
+                        <li>
+                            Kuinka suuressa kulmassa kuvaajat leikkaavat toisensa?
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä S2010/14]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t406_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA8s3t406_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Derivaattafunktion
+                                $$
+                                f'(x) = \frac{1}{x} + 1
+                                $$
+                                arvot ovat positiivisia, kun $x > 0$, joten funktio $f$ on aidosti kasvava määrittelyjoukossaan. Sillä on siis olemassa käänteisfunktio.
+                            </li>
+                            <li>
+                                Koska $f(1) = 2$, niin $g(2) = 1$. Edellisen tehtävän nojalla
+                                $$
+                                g'(2) = \frac{1}{f'(g(2))} = \frac{1}{f'(1)} = \frac{1}{2}.
+                                $$
+                            </li>
+                            <li>
+                                Funktion ja sen käänteisfunktion kuvaajat ovat symmetrisiä suoran $y = x$ suhteen, joten ne leikkaavat tällä suoralla. Silloin on 
+                                $$
+                                x = \ln x + x + 1
+                                $$
+                                Leikkauspisteeksi saadaan 
+                                $$
+                                \left(\frac{1}{e}, \frac{1}{e}\right).
+                                $$
+                            </li>
+                            <li>
+                                Funktion kuvaajan tangentin kulmakerroin on 
+                                $$
+                                f'\left(\frac{1}{e}\right) = e + 1.
+                                $$
+                                Koska $f\left(\frac{1}{e}\right) = \frac{1}{e}$, on käänteisfunktion kuvaajan tangentin kulmakerroin tämän käänteisluku:
+                                $$
+                                (f^{-1})'\left(\frac{1}{e}\right) = \frac{1}{f'\left(\frac{1}{e}\right)} = \frac{1}{e+1}.
+                                $$
+                                Suuntakulmien erotus on kolmen merkitsevän numeron tarkkuudella
+                                $$
+                                74{,}94697^\circ - 15{,}05303^\circ \approx 59{,}9^\circ.
+                                $$
                             </li>
                         </ol>
                     </div>
