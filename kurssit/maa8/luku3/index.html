@@ -3215,7 +3215,13 @@ topnav: maa8
                 </header>
                 <div id="MAA8s3t114">
                     <p>
-                        
+                       Piirrä funktion 
+                       $$
+                       f(x) = \left| \ln \left| x-2 \right| \right|
+                       $$ 
+                       kuvaaja. Millä väleillä funktio kasvaa ja millä se vähenee? Esitä funktio kullakin välillä siten, että lausekkeissa ei esiinny itseisarvoja. Millä muuttujan $x$ arvoilla funktio saa pienimmän arvonsa?
+                       <br>
+                       [Pitkä S2003/10]
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t114_v">
@@ -3224,7 +3230,20 @@ topnav: maa8
                     </h2>
                     <div id="MAA8s3t114_v" class="collapse">
                         <p>
-                            
+                            Ilman itseisarvoja:
+                            $$
+                            f(x) = 
+                            \begin{cases}
+                            \ln(2-x) &\text{ jos $x < 1$} \\
+                            -\ln(2-x) &\text{ jos $1 \leq x < 2$} \\
+                            -\ln(x-2) &\text{ jos $2 < x \leq 3$} \\
+                            \ln(x-2) &\text{ jos $x > 3$} \\
+                            \end{cases}
+                            $$
+                            Itseisarvojen vuoksi funktion arvo on aina epänegatiivinen. Pienimmän arvonsa nolla se saa kohdissa $x = 1$ ja $x = 3$.
+                        </p>
+                        <p>
+                            Funktio voidaan derivoida, kun itseisarvoista on päästy eroon. Derivaattafunktion avulla nähdään, että funktio on aidosti kasvava väleillä $[1, 2\pe$ ja $[3, \infty\pe$ ja aidosti vähenevä väleillä $\pa -\infty, 1]$ ja $\pa 2, 3]$.
                         </p>
                     </div>
                 </div>
