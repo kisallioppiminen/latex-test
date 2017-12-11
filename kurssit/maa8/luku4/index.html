@@ -926,14 +926,47 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s3t404">
-                   
+                    <p>
+                        Määritä funktion 
+                        $$
+                        f(x) = \frac{x+2}{x-3}, \quad x > 3,
+                        $$
+                        käänteisfunktio $f^{-1}$. Millä välillä tämä on määritelty? Osoita laskemalla, että 
+                        $$
+                        f^{-1}\left(f(x)\right) = x
+                        $$
+                        kun $x > 3$.
+                        <br>
+                        [Pitkä K2003/9]
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t404_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s3t404_v" class="collapse">
-                        
+                        <p>
+                            Käänteisfunktion lauseke löydetään ratkaisemalla $x$ yhtälöstä
+                            $$
+                            \frac{x + 2}{x-3} = y.
+                            $$
+                            Käänteisfunktioksi saadaan
+                            $$
+                            f^{-1}(y) = \frac{3y+2}{y-1}. 
+                            $$
+                            Käänteisfunktion määrittelyjoukko on funktion $f$ arvojoukko. Tutkitaan, mitä arvoja funktio $f$ saa. Oletuksen mukaan $x > 3$, joten 
+                            \begin{align*}
+                            f(x) &= \frac{x+2}{x-3} \\[2mm]
+                            &= \frac{x-3 + 5}{x-3} \\[2mm]
+                            &= 1 + \frac{5}{x-3} > 1.
+                            \end{align*}
+                            Käänteisfunktion määrittelyjoukko on siis $\pa 1, \infty \pe$. 
+                            \begin{align*}
+                            f^{-1}(f(x &= \frac{3\cdot \frac{x+2}{x-3} + 2}{\frac{x+2}{x-3} - 1} \\[2mm]
+                            &= \frac{3(x+2) + 2(x-3)}{x+2 - (x-3)} \\[2mm]
+                            &= \frac{5x}{5} = x.
+                            \end{align*}
+                        </p>
                     </div>
                 </div>
             </div>
