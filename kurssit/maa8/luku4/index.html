@@ -879,14 +879,40 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s3t403">
-                   
+                    <p>
+                        Osoita, että funktiolla $f \colon [2,5] \to [25,52]$,
+                        $$
+                        f(x) = 2x^3 - 21x^2 + 60x
+                        $$
+                        on käänteisfunktio $g = f^{-1}$. Laske käänteisfunktion arvo $g(45)$ ja sen derivaatan arvo $g'(45)$.
+                        <br>
+                        [Pitkä S2007/12]
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t403_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s3t403_v" class="collapse">
-                        
+                        <p>
+                            Derivaattafunktiolla 
+                            $$
+                            f'(x) = 6x^2 - 42x + 60 
+                            $$
+                            on kaksi nollakohtaa $x_1 = 2$ ja $x_2 = 5$. Derivaatan arvot ovat negatiivisia välillä $\pa 2,5\pe$, joten funktio $f$ on aidosti vähenevä välillä $[2,5]$. Näin ollen sillä on olemassa käänteisfunktio. 
+                        </p>
+                        <p>
+                            Koska $f(2) = 52$ ja $f(5) = 25$ ja funktio $f$ on aidosti vähenevä välillä $[2,5]$, on sen arvojoukko tällä välillä $[25,52]$. Käänteisfunktion määrittelyjoukko on siten $[25,52]$ ja arvojoukko $[2,5]$.
+                        </p>
+                        <p>
+                            Kokeilemalla huomataan, että $f(3) = 45$. Siten $g(45) = 3$.
+                        </p>
+                        <p>
+                            Käänteisfunktion derivaatta on
+                            $$
+                            g'(45) = \frac{1}{f'(3)} = -\frac{1}{12}.
+                            $$
+                        </p>
                     </div>
                 </div>
             </div>
