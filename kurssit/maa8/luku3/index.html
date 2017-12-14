@@ -3082,15 +3082,69 @@ topnav: maa8
                 </header>
                 <div id="MAA8s2t132">
                     <p>
-                        Kolmion kaksi kärkeä ovat pisteissä $A = (1,3)$ ja $B = (6,4)$ sekä kolmas kärki $C$ käyrällä $y = \ln(x)$. Tehtävänä on tutkia, onko piste $C$ mahdollista valita niin, että kolmion $ABC$ pinta-ala on mahdollisimman pieni tai mahdollisimman suuri.
+                        Kolmion kaksi kärkeä ovat pisteissä $A = (1,3)$ ja $B = (6,4)$ sekä kolmas kärki $C$ käyrällä $y = \ln(x)$. Tehtävänä on tutkia, miten piste $C$ on valittava, jotta kolmion $ABC$ pinta-ala on mahdollisimman pieni.
                     </p>
+                    <ol class="a">
+                        <li>
+                            Piirrä tilanteesta kuva esimerkiksi Geogebralla.
+                        </li>
+                        <li>
+                            Laske kolmion $ABC$ kannan $AB$ pituus.
+                        </li>
+                        <li>
+                            Määritä pisteiden $A$ ja $B$ kautta kulkevan suoran $L$ yhtälö. Määritä kolmion $ABC$ korkeus muodostamalla lauseke, joka ilmaisee pisteen $C$ etäisyyden suorasta $L$.
+                            <br>
+                            Vinkki: kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa5/luku1/">MAA5-kurssin</a> teoreema 13.
+                        </li>
+                        <li>
+                            Muodosta funktio, joka ilmaisee kolmion $ABC$ pinta-alan. Mikä on sen pienin arvo?
+                        </li>
+                        <li>
+                            Mikä on etsitty piste $C$?
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t132_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t132_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li>
+                                Piirrä tilanteesta kuva esimerkiksi Geogebralla.
+                            </li>
+                            <li>
+                                $\left|AB\right| = \sqrt{26}$
+                            </li>
+                            <li>
+                                Suoran yhtälö on 
+                                $$
+                                0{,}2x - y + 2{,}8 = 0.
+                                $$
+                                Pisteen $C = (x, \ln(x))$ etäisyys tästä suorasta on 
+                                $$
+                                \frac{\left|0{,}2x - \ln(x) + 2{,}8\right|}{\sqrt{1{,}04}} = \frac{0{,}2x - \ln(x) + 2{,}8}{\sqrt{1{,}04}}.
+                                $$  
+                            </li>
+                            <li>
+                                Funktio on 
+                                \begin{align*}
+                                A(x) &= \frac{1}{2} \cdot \sqrt{26} \cdot \frac{0{,}2x - \ln(x) + 2{,}8}{\sqrt{1{,}04}} \\[2mm]
+                                &= 2{,}5x - 12{,}5\ln(x) + 35
+                                \end{align*}
+                                Sen derivaatalla
+                                $$
+                                A'(x) = \frac{5}{2} - \frac{25}{2x}
+                                $$
+                                on yksi nollakohta $x = 5$. Kulkukaaviosta nähdään, että funktio $A$ saa tässä pienimmän arvonsa, joka on 
+                                $$
+                                A(5) = 47{,}5 - 12{,}5\ln(5) \approx 27{,}4.
+                                $$
+                            </li>
+                            <li>
+                                Etsitty piste on $C = (5, \ln(5))$.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
