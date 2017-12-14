@@ -2881,19 +2881,39 @@ topnav: maa8
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA8s2t124">
-                            
+                            Logaritmifunktion derivaatta
                         </a>
                     </h1>
                 </header>
                 <div id="MAA8s2t124">
-                   
+                    <p>
+                        Pätevätkö seuraavat epäyhtälöt kaikilla $x > 0$?
+                    </p>
+                    <ol class="a">
+                        <li> $\ln(x) < \sqrt{x}$ </li>
+                        <li> $\ln(x) < \sqrt[3]{x}$ </li>
+                    </ol>
+                    <p>
+                        Osoita yleispätevästi, että epäyhtälö pätee kaikilla $x > 0$, tai näytä esimerkillä, että se ei päde jollakin $x > 0$.
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t124_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t124_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li> 
+                                Epäyhtälö pätee kaikilla $x > 0$, sillä funktion $f(x) = \sqrt{x} - \ln(x)$ pienin arvo $f(4) = 2 - \ln(4)$ on positiivinen.
+                            </li>
+                            <li> 
+                                Epäyhtälö ei päde kaikilla $x > 0$. Kokeilemalla huomaa, että esimerkiksi 
+                                $$
+                                \ln(10) > \sqrt[3]{10}.
+                                $$  
+                                Toinen vaihtoehto on tutkia funktion $g(x) = \sqrt[3]{x} - \ln(x)$ pienintä arvoa. Se on $g(27) = 3 - \ln(27) < 0$. Siis tutkittava epäyhtälö ei päde, jos $x = 27$.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
