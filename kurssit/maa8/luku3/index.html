@@ -3211,19 +3211,49 @@ topnav: maa8
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA8s2t130">
-                            
+                            Logaritmifunktion derivaatta
                         </a>
                     </h1>
                 </header>
                 <div id="MAA8s2t130">
-                   
+                    <p>
+                        Tarkastellaan funktioita $f(x) = \ln(x)$ ja 
+                        $$
+                        g(x) = -\frac{1}{2}x^2
+                        $$
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Piirrä funktioiden $f$ ja $g$ kuvaajat esimerkiksi Geogebralla samaan koordinaatistoon. Miten kuvaajat näyttävät leikkaavan toisensa?
+                        </li>
+                        <li>
+                            Tutki derivaatan avulla, onko a-kohdan hypoteesisi oikea. Pystytkö tarkistamaan sen selvittämättä, mikä leikkauspiste on?
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t130_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t130_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li>
+                                Kuvaajat näyttävät leikkaavan toisensa melko kohtisuorasti:
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuvaG14.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                Olkoon leikkauspiste $(a, \ln(a))$. Siihen asetetun funktion $f$ tangentin kulmakerroin on 
+                                $$
+                                f'(a) = \frac{1}{a}
+                                $$
+                                ja funktion $g$ tangentin kulmakerroin on $g'(a) = -a$. Niiden tulo on 
+                                $$
+                                f'(a)g'(a) = -1,
+                                $$
+                                joten tangentit ovat kohtisuorassa toisiaan vastaan. Käyrät siis todella leikkaavat toisensa kohtisuorasti.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
