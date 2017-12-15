@@ -3005,19 +3005,50 @@ topnav: maa8
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA8s2t126">
-                            
+                            Logaritmifunktion derivaatta
                         </a>
                     </h1>
                 </header>
                 <div id="MAA8s2t126">
-                   
+                    <p>
+                        Kuinka monta juurta eli ratkaisua yhtälöllä 
+                        $$
+                        x - \ln(x) = \frac{1}{2x}
+                        $$
+                        on?
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t126_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t126_v" class="collapse">
-                        
+                        <p>
+                            Funktion 
+                            $$
+                            f(x) = x - \ln(x) - \frac{1}{2x} 
+                            $$
+                            derivaattafunktiolla
+                            $$
+                            f'(x) = 1 - \frac{1}{x} + \frac{1}{2x^2}
+                            $$
+                            ei ole yhtään nollakohtaa määrittelyjoukossa $\pa 0, \infty \pe$. Sen arvot ovat aina positiivisia, joten funktio $f$ on aidosti kasvava ja saa jokaisen arvonsa vain kerran. Näin funktiolla on enintään yksi nollakohta. 
+                        </p>
+                        <p>
+                            Toisaalta esimerkiksi
+                            \begin{align*}
+                            f(0{,}25) &\approx -0{,}36 < 0 \\
+                            f(1) &= 0{,}5 > 0
+                            \end{align*}
+                            joten jatkuvalla funktiolla $f$ on Bolzanon lauseen nojalla ainakin yksi nollakohta välillä $\left]\frac{1}{4}, 1\right[$. 
+                        </p>
+                        <p>
+                            Näin päädytään johtopäätökseen, että yhtälöllä 
+                            $$
+                            x - \ln(x) = \frac{1}{2x}
+                            $$
+                            on tasan yksi ratkaisu.
+                        </p>
                     </div>
                 </div>
             </div>
