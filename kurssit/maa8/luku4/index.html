@@ -750,14 +750,30 @@ topnav: maa8
                     </h1>
                 </header>
                 <div id="MAA8s2t403">
-                   
+                    <p>
+                        Kertaa käänteisfunktion määritelmä ja osoita sen avulla, että funktion 
+                        $$
+                        f(x) = \frac{x}{x-1}
+                        $$
+                        käänteisfunktio on funktio $f$ itse.
+                    </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t403_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t403_v" class="collapse">
-                        
+                        <p>
+                            Määritetään yhdistetty funktio $f \circ f$:
+                            \begin{align*}
+                            (f\circ f)(x) &= f(f(x)) \\[2mm]
+                            &= \frac{\frac{x}{x-1}}{\frac{x}{x-1}-1} \\[2mm]
+                            &= \frac{\frac{x}{x-1}}{\frac{x-(x-1)}{x-1}} \\[2mm]
+                            &= \frac{x}{x-1} \cdot \frac{x-1}{x-x+1} \\[2mm]
+                            &= \frac{x}{1} = x
+                            \end{align*}
+                            Siis $(f\circ f)(x) = x$, joten funktio $f$ on itse oma käänteisfunktionsa.
+                        </p>
                     </div>
                 </div>
             </div>
