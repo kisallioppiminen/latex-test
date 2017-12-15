@@ -3167,19 +3167,57 @@ topnav: maa8
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA8s2t132">
-                            
+                            Logaritmifunktion derivaatta
                         </a>
                     </h1>
                 </header>
                 <div id="MAA8s2t132">
-                    
+                    <p>
+                        Tässä tehtävässä tutkitaan funktiota
+                        $$
+                        f(x) = x^x.
+                        $$
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Ilmaise kantaluku $x$ Neperin luvun $e$ potenssina luonnollisen logaritmin avulla.
+                            <br>
+                            Vinkki: kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa8/luku2/">edellisen luvun</a> tehtävä 2.10.
+                        </li>
+                        <li>
+                            Kirjoita funktion $f$ lauseke muodossa $f(x) = e^{g(x)}$ potenssin laskusääntöjen ja a-kohdan avulla. Mikä on funktion $f$ määrittelyjoukko?
+                        </li>
+                        <li>
+                            Missä funktio $f$ on kasvava ja missä vähenevä?
+                        </li>
+                        <li>
+                            Onko funktiolla $f$ suurinta tai pienintä arvoa?
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t132_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t132_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li>
+                                $x = e^{\ln(x)}$
+                            </li>
+                            <li>
+                                Funktio on $f(x) = e^{x\ln(x)}$ ja sen määrittelyjoukko on $\pa 0, \infty \pe$.
+                            </li>
+                            <li>
+                                Funktio $f$ on aidosti vähenevä välillä $\left] 0, e^{-1}\right]$ ja aidosti kasvava välillä $\left[e^{-1}, \infty\right[$.
+                            </li>
+                            <li>
+                                Funktion $f$ pienin arvo on 
+                                $$
+                                f(e^{-1}) = \left(\frac{1}{e}\right)^{\frac{1}{e}} = e^{-\frac{1}{e}}.
+                                $$
+                                Funktiolla $f$ ei ole suurinta arvoa.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
