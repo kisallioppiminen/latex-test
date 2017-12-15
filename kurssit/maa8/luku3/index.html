@@ -3092,19 +3092,64 @@ topnav: maa8
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA8s2t128">
-                            
+                            Logaritmifunktion derivaatta
                         </a>
                     </h1>
                 </header>
                 <div id="MAA8s2t128">
-                   
+                    <p>
+                        Suorakulmion yksi sivu on positiivisella $x$-akselilla, yksi sivu negatiivisella $y$-akselilla ja yksi kärki käyrällä $y = \ln(x)$. 
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Piirrä tilanteesta kuva esimerkiksi Geogebralla.
+                        </li>
+                        <li>
+                            Muodosta funktio $A(x)$, joka ilmaisee suorakulmion pinta-alan.
+                        </li>
+                        <li>
+                            Suorakulmio pyörähtää $y$-akselin ympäri, jolloin syntyy ympyrälieriö. Muodosta funktio $V(x)$, joka ilmaisee ympyrälieriön tilavuuden. 
+                            <br>
+                            Vinkki: kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa3/luku3/">MAA3-kurssin</a> teoreema 23.
+                        </li>
+                        <li>
+                            Mikä on tällaisen ympyrälieriön suurin mahdollinen tilavuus?
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t128_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAA8s2t128_v" class="collapse">
-                        
+                        <ol class="a">
+                            <li>
+                                Kuva:
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuvaG14.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                $A(x) = -x\ln(x)$
+                                <br>
+                                Miinusmerkki tarvitaan, koska logaritmin arvo on negatiivinen ja pinta-alan pitää kuitenkin olla positiivinen.
+                            </li>
+                            <li>
+                                $V(x) = -\pi x^2 \ln(x)$
+                                <br>
+                                Ympyränlieriön pohjan säde on $x$ ja korkeus on $-\ln(x)$.
+                            </li>
+                            <li>
+                                Suurin mahdollinen tilavuus on 
+                                $$
+                                V(e^{-\frac{1}{2}}) = \frac{pi}{2e}.
+                                $$
+                                Se löydetään derivaattafunktion
+                                $$
+                                v'(x) = -\pi(x + 2x\ln(x))
+                                $$
+                                nollakohdasta.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
