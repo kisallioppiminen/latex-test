@@ -1,0 +1,18 @@
+header: 
+path: 
+navigation:
+  -
+    name: MAA10
+    path: /kurssit/maa10/
+  -
+    name: 1. Kombinatoriikkaa
+    path: /kurssit/maa10/luku1/
+  -
+    name: 2. Todennäköisyys
+    path: /kurssit/maa10/luku2/
+  -
+    name: 3. Todennäköisyysjakaumia
+    path: /kurssit/maa10/luku3/
+  -
+    name: 4. Tilastot
+    path: /kurssit/maa10/luku4/
