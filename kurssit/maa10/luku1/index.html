@@ -451,6 +451,43 @@ topnav: maa10
                 </div>
             </div>
 
+            <div class="tehtava" id="MAA10s3t104-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t104">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t104">
+                    <p>
+                        Kokouksen alussa osanottajat kättelivät toisensa kertaalleen. Kädenpuristuksia tuli tällöin kaikkiaan 66. Kuinka monta osanottajaa kokouksessa oli?
+                        <br>
+                        [Lyhyt S2005/6]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t104_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t104_v" class="collapse">
+                        Kädenpuristuksia tulee yhtä monta kuin kätteleviä pareja. Jos osanottajia on $n$ kpl, on erilaisia pareja
+                        $$
+                        \binom{n}{2} = \frac{n!}{(n-2)!2!} = \frac{n(n-1)}{2}.
+                        $$
+                        Saadaan yhtälö 
+                        $$
+                        \frac{n(n-1)}{2} = 66
+                        $$
+                        eli 
+                        $$
+                        n^2 - n - 132 = 0.
+                        $$
+                        Ratkaisuksi saadaan $n = 12$.
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#MAA10luku1-tehtavasarja3">
                     Sulje kappale
