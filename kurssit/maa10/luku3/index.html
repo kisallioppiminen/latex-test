@@ -1,0 +1,290 @@
+---
+title: MAA10 - Todennäköisyys ja tilastot
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: maa8
+---
+
+<input type="hidden" id="chapterNumber" name="theoremStart" value="3"/>
+<input type="hidden" id="theoremStart" value="1"/>
+
+{% include bottomnav.html %}
+
+
+<article>
+    <section>
+        <header>
+            <h1>Todennäköisyysjakaumia</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luvun3-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="MAA10luvun3-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p> 
+                    Tämän luvun tavoitteena on, että ... Osaat
+                </p>
+                <ul>
+                    <li> 
+                        
+                    </li>
+                </ul> 
+            </div>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luvun3-tavoitteet">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
+                    Juurifunktiot
+                </a>
+            </h1>
+        </header>
+        <div id="juuri1" class="collapse">
+            
+            <div class="teoria">
+                <p>
+                    Kurssissa <a href="/kurssit/maa2/">MAA2</a> tutustuttiin neliöjuureen, kuutiojuureen ja korkeampiin juuriin sekä ilmaistiin potenssiyhtälöiden ratkaisuja niiden avulla. Tässä kappaleessa erilaisia juuria tutkitaan funktioiden näkökulmasta. 
+                </p>
+                <p>
+                    Aloitetaan palauttamalla mieleen neliöjuuren ja korkeampien juurten määritelmät.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava first-exercise" id="MAA10t301-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t301">
+                                Juurten määritelmät
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t301" class="collapse">
+                        <p>
+                            Kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa2/luku3/">neliöjuuren</a> sekä <a href="http://kisallioppiminen.fi/kurssit/maa2/luku4/">korkeampien juurten</a> määritelmät kurssilta MAA2. Päättele sen jälkeen seuraavien juurten arvot ja perustele vastauksesi.
+                        </p>
+                        <ol class="a">
+                            <li> $\sqrt{81}$ </li>
+                            <li> 
+                                $\sqrt[3]{125}$ 
+                            </li>
+                            <li> 
+                                $\sqrt[4]{81}$
+                            </li>
+                            <li>
+                                $\sqrt[5]{-32}$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t301_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t301_v" class="collapse">
+                           <ol class="a">
+                                <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$ </li>
+                                <li> 
+                                    $\sqrt[3]{125} = 5$, sillä $5^3 = 125$ 
+                                </li>
+                                <li> 
+                                    $\sqrt[4]{81} = 3$, sillä $3 \geq 0$ ja $3^4 = 81$
+                                </li>
+                                <li>
+                                    $\sqrt[5]{-32} = -2$, sillä $(-2)^5 = -32$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Juuret määriteltiin <a href="http://kisallioppiminen.fi/kurssit/maa2/luku4/">kurssilla MAA2</a> potenssiyhtälöiden ratkaisuina. Koska potenssifunktion $f(x) = x^n$ ominaisuudet riippuvat siitä, onko eksponentti $n$ parillinen vai pariton, ovat myös parilliset ja parittomat juuret keskenään erilaisia. Pariton juuri voidaan ottaa myös negatiivisesta luvusta kuten esimerkiksi edellisen tehtävän d-kohdassa tehtiin. Parillinen juuri on määritelty vain silloin, kun juurrettava on epänegatiivinen.
+                </p>
+                <p>
+                    Seuraavassa tehtävässä tutkitaan neliöjuurifunktion ominaisuuksia neliöjuuren määritelmän pohjalta.
+                </p>
+            </div>
+
+            
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luku3-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAA10luku3-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="MAA10s2t311-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s2t311">
+                            Juurifunktiot ja -yhtälöt
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s2t111">
+                    <p>
+                        Selvitä funktion $f$ määrittelyjoukko ja nollakohdat, jos  
+                    </p>
+                    <ol class="a">
+                        <li> $f(x) = x - 3\sqrt{x-1} + 1$ </li>
+                        <li> $f(x) = \sqrt{x} + x - 1$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s2t311_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s2t311_v" class="collapse">
+                        <ol class="a">
+                            <li>  
+                                Funktio on määritelty, jos ja vain jos $x \geq 1$. 
+                                <br>
+                                Funktiolla on nollakohdat $x_1 = 2$ ja $x_2 = 5$.
+                            </li>
+                            <li> 
+                                Funktio on määritelty, jos ja vain jos $x \geq 0$. 
+                                <br>
+                                Funktiolla on nollakohta 
+                                $$
+                                x = \frac{3 - \sqrt{5}}{2}.
+                                $$
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luku3-tehtavasarja2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                    
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luku3-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAA10luku3-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="MAA10s3t301-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t301">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t301">
+                    <ol class="a">
+                        <li> 
+                            Sievennä lauseke 
+                            $$\sqrt{a\sqrt{a\sqrt{a^2}}},$$ 
+                            kun $a \geq 0$. 
+                        </li>
+                        <li>
+                            Luku on yhtä suuri kuin puolet sen neliöjuuresta. Määritä kaikki tällaiset luvut.
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä S2016/2a &amp; S2014/2b]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t301_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t301_v" class="collapse">
+                        <ol class="a">
+                        <li> 
+                            \begin{align*}
+                            \sqrt{a\sqrt{a\sqrt{a^2}}} &= \sqrt{a\sqrt{a^2}} \\
+                            &= \sqrt{a^2} \\
+                            &= a
+                            \end{align*}
+                        </li>
+                        <li>
+                            Kysytyt luvut ovat $0$ ja $\dfrac{1}{4}$.
+                        </li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luku3-tehtavasarja3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10L3itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="MAA10L2itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href=" ">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+            </p>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10L2itsearviointi">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+</article>
