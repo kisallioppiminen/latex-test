@@ -534,6 +534,130 @@ topnav: maa10
                 </div>
             </div>
 
+            <div class="tehtava" id="MAA10s3t106-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t106">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t106">
+                    <p>
+                        Ranskalaisen Louis Braillen vuonna 1825 kehittämä pistekirjoitus on kohokirjoitusta, jota luetaan sormin. Pistekirjoitusjärjestelmässä kutakin merkkiä kohti on käytettävissä kuusi kiinteää paikkaa, joihin voidaan asettaa yhdestä kuuteen pistettä. (Esimerkkinä kuviossa on kirjain W.) Kuinka monta erilaista merkkiä järjestelmässä voidaan esittää?
+                        <br>
+                        <img src="/kurssit/maa10/kuvat/kuvaYO03.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        [Lyhyt K2007/10]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t106_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t106_v" class="collapse">
+                        <p>
+                            Jokaisessa paikassa voi olla merkki tai tyhjä kohta, joten erilaisia merkkejä voidaan esittää periaatteessa $2^6 = 64$. Vaihtoehto, jossa kaikki paikat ovat tyhjiä, ei kuitenkaan varsinaisesti ole mikään merkki, joten erilaisia merkkejä on $2^6 - 1 = 64 - 1 = 63$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA10s3t107-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t107">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t107">
+                    <ol class="a">
+                        <li>
+                            Kuinka monta erilaista istumajärjestystä voidaan muodostaa luokassa, jossa on 30 oppilasta ja 30 pulpettia?
+                        </li>   
+                        <li>
+                            Kuinka monella tavalla kolme tyhjää pulpettia voidaan valita luokassa, jossa on 27 oppilasta ja 30 pulpettia? Kuinka monta erilaista istumajärjestystä on tässä luokassa?
+                        </li>
+                        <li>
+                            Kuinka monta vuotta tietokoneelta kuluisi, jos se kävisi läpi a-kohdan erilaiset istumajärjestykset käsitellen biljoona ($10^{12}$) istumajärjestystä sekunnissa? Yksi vuosi on keskimäärin 365,25 vuorokautta.
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2006/11]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t107_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t107_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $30!$
+                            </li>   
+                            <li>
+                                Tyhjät pulpetit voidaan valita
+                                $$
+                                \binom{30}{3} = \frac{30!}{3!27!} = \frac{30 \cdot 29 \cdot 28}{3 \cdot 2} = 5 \cdot 29 \cdot 28 = 4060
+                                $$
+                                eri tavalla. Erilaisia istumajärjestyksiä on 
+                                $$
+                                30 \cdot 29 \cdots 5 \cdot 4 = \frac{30!}{3!} = \frac{30!}{6}.
+                                $$
+                            </li>
+                            <li>
+                                Noin $8{,}405 \cdot 10^12$ vuotta eli noin 8,4 biljoonaa vuotta.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA10s3t108-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t108">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t108">
+                    <p>
+                        Ylioppilastutkinnon matematiikan koe muodostuu 10 tehtävästä. Vanhanmuotoisessa matematiikan kokeessa oli 10 tehtävää ja osassa tehtävistä oli kaksi vaihtoehtoa, joista sai laskea vain toisen; uudemmassa kokeessa saa 15 tehtävästä vapaasti valita suoritettavakseen 10 tehtävää. Kuinka monta erilaista 10 tehtävän kokonaisuutta on 
+                    </p>
+                    <ol class="a">
+                        <li>
+                            vanhanmuotoisessa kokeessa, jossa viidessä tehtävässä on kaksi vaihtoehtoa
+                        </li>   
+                        <li>
+                            uudenmuotoisessa kokeessa?
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2000/8]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t108_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t108_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Erilaisia tehtäväkokonaisuuksia on $2^5 = 32$.
+                            </li>   
+                            <li>
+                                Erilaisia tehtäväkokonaisuuksia on
+                                $$
+                                \binom{15}{10} = \frac{15!}{10!5!} = \frac{15 \cdot 14 \cdot 13 \cdot 12 \cdot 11}{5 \cdot 4 \cdot 3 \cdot 2} = 7 \cdot 13 \cdot 3 \cdot 11 = 3003.
+                                $$
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#MAA10luku1-tehtavasarja3">
                     Sulje kappale
