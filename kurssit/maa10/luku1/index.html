@@ -58,7 +58,7 @@ topnav: maa10
             
             <div class="teoria">
                 <p>
-                    
+                   Tässä luvussa opitaan erilaisia tapoja lukumäärien laskemiseen. Ensimmäiseksi tutustutaan tuloperiaatteeseen. Sitä voidaan soveltaa tilanteissa, joissa kokonaisuus muodostuu useasta peräkkäisestä valinnasta. Seuraava tehtävä havainnollistaa asiaa.
                 </p>
             </div>
 
@@ -73,11 +73,18 @@ topnav: maa10
                     </header>
                     <div id="MAA10t101" class="collapse">
                         <p>
-                            
+                            Tilausravintolan ruokalistalla on neljä alkuruokaa, kolme pääruokaa ja kaksi jälkiruokaa. Kuinka monta erilaista ateriakokonaisuutta on mahdollista muodostaa, jos asiakas valitsee
                         </p>
                         <ol class="a">
-                            <li>  </li>
+                            <li> alkuruoan ja pääruoan </li>
+                            <li> pääruoan ja jälkiruoan </li>
+                            <li> kaikki kolme ruokalajia? </li>
                         </ol>
+                        <p>
+                            Mihin kohdista (a)-(c) alla oleva kuva sopii havainnollistukseksi?
+                            <br>
+                            <img src="/kurssit/maa10/kuvat/MAA10kuva001.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA10t101_v">
                                 VASTAUS
@@ -85,8 +92,13 @@ topnav: maa10
                         </h2>
                         <div id="MAA10t101_v" class="collapse">
                            <ol class="a">
-                                <li>  </li>
+                                <li> Vaihtoehtoja on $4 \cdot 3 = 12$. </li>
+                                <li> Vaihtoehtoja on $3 \cdot 2 = 6$. </li>
+                                <li> Vaihtoehtoja on $4 \cdot 3 \cdot 2 = 24$. </li>
                             </ol>
+                            <p>
+                                Kuva sopii havainnollistukseksi b-kohtaan, jossa ensin valitaan pääruoka kolmesta vaihtoehdosta ja sen jälkeen kaikissa tapauksissa jälkiruoka voidaan vielä valita kahdesta vaihtoehdosta.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -598,9 +610,11 @@ topnav: maa10
                             </li>   
                             <li>
                                 Tyhjät pulpetit voidaan valita
-                                $$
-                                \binom{30}{3} = \frac{30!}{3!27!} = \frac{30 \cdot 29 \cdot 28}{3 \cdot 2} = 5 \cdot 29 \cdot 28 = 4060
-                                $$
+                                \begin{align*}
+                                \binom{30}{3} &= \frac{30!}{3!27!}  \\[2mm]
+                                &= \frac{30 \cdot 29 \cdot 28}{3 \cdot 2}  \\[2mm]
+                                &= 5 \cdot 29 \cdot 28 = 4060
+                                \end{align*}
                                 eri tavalla. Erilaisia istumajärjestyksiä on 
                                 $$
                                 30 \cdot 29 \cdots 5 \cdot 4 = \frac{30!}{3!} = \frac{30!}{6}.
@@ -649,9 +663,12 @@ topnav: maa10
                             </li>   
                             <li>
                                 Erilaisia tehtäväkokonaisuuksia on
-                                $$
-                                \binom{15}{10} = \frac{15!}{10!5!} = \frac{15 \cdot 14 \cdot 13 \cdot 12 \cdot 11}{5 \cdot 4 \cdot 3 \cdot 2} = 7 \cdot 13 \cdot 3 \cdot 11 = 3003.
-                                $$
+                                \begin{align*}
+                                \binom{15}{10} &= \frac{15!}{10!5!} \\[2mm]
+                                &= \frac{15 \cdot 14 \cdot 13 \cdot 12 \cdot 11}{5 \cdot 4 \cdot 3 \cdot 2} \\[2mm]
+                                &= 7 \cdot 13 \cdot 3 \cdot 11 \\[1mm]
+                                &= 3003.
+                                \end{align*}
                             </li>
                         </ol>
                     </div>
