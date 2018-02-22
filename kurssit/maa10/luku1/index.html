@@ -155,13 +155,63 @@ topnav: maa10
                 <div class="theorem" id="TULOPERIAATE">
                     <h3>TEOREEMA</h3>
                     <p>
-                        Oletetaan, että kokonaisuuden valitseminen voidaan jakaa peräkkäisiin vaiheisiin, jotka eivät riipu toisistaan. Jos vaiheita on $k$ kappaletta, ja <br>
+                        Oletetaan, että kokonaisuuden muodostaminen voidaan jakaa peräkkäisiin vaiheisiin, jotka eivät riipu toisistaan. Jos vaiheita on $k$ kappaletta, ja <br>
                             $\phantom{AA}$ 1. vaiheessa on $n_1$ vaihtoehtoa <br>
                             $\phantom{AA}$ 2. vaiheessa on $n_2$ vaihtoehtoa <br>
                             $\phantom{AA}$ $\vdots$ <br>
                             $\phantom{AA}$ $k$. vaiheessa on $n_k$ vaihtoehtoa <br>
-                        niin kokonaisuus voidaan valita $n_1 \cdot n_2 \cdot \dots \cdot n_k$ eri tavalla.
+                        niin kokonaisuus voidaan muodostaa $n_1 \cdot n_2 \cdot \dots \cdot n_k$ eri tavalla.
                     </p>
+                </div>
+
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan tuloperiaatteen soveltamista:
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t106-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t106">
+                                Tuloperiaate
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t106" class="collapse">
+                        <p>
+                            Jokaiseen pankkikorttiin liittyy nelinumeroinen tunnusluku.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Kuinka monta erilaista tunnuslukua on olemassa?
+                            </li>
+                            <li> 
+                                Kuinka monessa tunnusluvussa mikään numero ei esiinny useammin kuin kerran?
+                            </li>
+                            <li>
+                                Kuinka monessa tunnusluvussa kaikki numerot ovat samoja?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t106_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t106_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Tunnusluku voidaan muodostaa valitsemalla sen numerot peräkkäin. Ensimmäiselle numerolle on 10 vaihtoehtoa (0-9), samoin seuraaville. Erilaisia tunnuslukuja on siis olemassa $10 \cdot 10 \cdot 10 \cdot 10 = 10\,000$ kappaletta.
+                                </li>
+                                <li> 
+                                    Tunnusluvun ensimmäinen numero voi olla mikä tahansa 0-9, joten vaihtoehtoja on 10 kpl. Toinen numero ei voi olla sama kuin ensimmäinen, joten vaihtoehtoja on 9 kpl. Vastaavasti kolmas numero voidaan valita 8 eri tavalla ja neljäs 7 eri tavalla. Tunnuslukuja, joissa mikään numero ei esiinny useammin kuin kerran, on siis $10 \cdot 9 \cdot 8 \cdot 7 = 5\,040$ kappaletta.
+                                </li>
+                                <li>
+                                    Tällaisia tunnuslukuja ovat 0000, 1111, 2222. $\ldots$, 9999. Niitä on 10 kappaletta.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </div>
 
