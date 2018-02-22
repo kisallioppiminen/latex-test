@@ -255,6 +255,60 @@ topnav: maa10
                 </div>
             </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t108-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t108">
+                                Tuloperiaate
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t108" class="collapse">
+                        <p>
+                            Tietojärjestelmän salasanalle asetetaan seuraavat vaatimukset:
+                        </p>
+                        <ol>
+                            <li> salasanassa on oltava kuusi merkkiä </li>
+                            <li> sallitut merkit ovat numerot 0-9 sekä erikoismerkit !, #, %, =, +, ? </li>
+                            <li> salasanan pitää sisältää ainakin yksi edellä mainituista erikoismerkeistä. </li>
+                        </ol>
+                        <p>
+                            Tehtävänä on selvittää, kuinka monta erilaista salasanaa tällä tavalla on mahdollista muodostaa.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Kuinka monta ehdot 1-2 täyttävää salasanaa on mahdollista muodostaa?
+                            </li>
+                            <li> 
+                                Kuinka monta kuuden merkin mittaista salasanaa on mahdollista muodostaa pelkistä numeroista?
+                            </li>
+                            <li>
+                                Kuinka monta ehdot 1-3 täyttävää salasanaa on mahdollista muodostaa?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t108_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t108_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Salasanan jokainen merkki voidaan valita 16 eri tavalla, joten erilaisia salasanoja on $16^6 = 16\,777\,216$.
+                                </li>
+                                <li> 
+                                    Salasanan jokainen merkki voidaan valita 10 eri tavalla, joten erilaisia salasanoja on $10^6 = 1\,000\,000$.
+                                </li>
+                                <li>
+                                    Ehdot 1-2 täyttäviä salasanoja on $16^6$. Kun niistä vähennetään salasanat, joissa esiintyy pelkkiä numeroita, saadaan ehdot 1-3 täyttävien salasanojen määrä: $16^6 - 10^6 = 16\,777\,216 - 1\,000\,000 = 15\,777\,216$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka1">
