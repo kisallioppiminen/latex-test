@@ -201,13 +201,53 @@ topnav: maa10
                         <div id="MAA10t106_v" class="collapse">
                            <ol class="a">
                                 <li> 
-                                    Tunnusluku voidaan muodostaa valitsemalla sen numerot peräkkäin. Ensimmäiselle numerolle on 10 vaihtoehtoa (0-9), samoin seuraaville. Erilaisia tunnuslukuja on siis olemassa $10 \cdot 10 \cdot 10 \cdot 10 = 10\,000$ kappaletta.
+                                    Tunnusluku voidaan muodostaa valitsemalla sen numerot peräkkäin. Ensimmäiselle numerolle on 10 vaihtoehtoa (0-9), samoin seuraaville. Erilaisia tunnuslukuja on siis olemassa tuloperiaatteen nojalla $10 \cdot 10 \cdot 10 \cdot 10 = 10\,000$ kappaletta.
                                 </li>
                                 <li> 
-                                    Tunnusluvun ensimmäinen numero voi olla mikä tahansa 0-9, joten vaihtoehtoja on 10 kpl. Toinen numero ei voi olla sama kuin ensimmäinen, joten vaihtoehtoja on 9 kpl. Vastaavasti kolmas numero voidaan valita 8 eri tavalla ja neljäs 7 eri tavalla. Tunnuslukuja, joissa mikään numero ei esiinny useammin kuin kerran, on siis $10 \cdot 9 \cdot 8 \cdot 7 = 5\,040$ kappaletta.
+                                    Tunnusluvun ensimmäinen numero voi olla mikä tahansa numeroista 0-9, joten vaihtoehtoja on 10 kpl. Toinen numero ei voi olla sama kuin ensimmäinen, joten vaihtoehtoja on 9 kpl. Vastaavasti kolmas numero voidaan valita 8 eri tavalla ja neljäs 7 eri tavalla. Tunnuslukuja, joissa mikään numero ei esiinny useammin kuin kerran, on siis $10 \cdot 9 \cdot 8 \cdot 7 = 5\,040$ kappaletta.
                                 </li>
                                 <li>
-                                    Tällaisia tunnuslukuja ovat 0000, 1111, 2222. $\ldots$, 9999. Niitä on 10 kappaletta.
+                                    Tällaisia tunnuslukuja ovat 0000, 1111, 2222, $\ldots$, 9999. Niitä on 10 kappaletta.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t107-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t107">
+                                Tuloperiaate
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t107" class="collapse">
+                        <p>
+                            Suomen kielen aakkosissa on 29 kirjainta. 
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Kuinka monta erilaista nimikirjainten yhdistelmää suomen kielen aakkosista voidaan muodostaa? Tarkastellaan kahden kirjaimen (etunimi ja sukunimi) yhdistelmiä.
+                            </li>
+                            <li> 
+                                Kuinka monta osallistujaa tapahtumassa on oltava, jotta voidaan olla täysin varmoja, että ainakin kahdella osallistujalla on samat nimikirjaimet?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t107_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t107_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Etunimen alkukirjain voidaan valita 29 eri tavalla, samoin sukunimen alkukirjain. Erilaisia nimikirjainten yhdistelmiä on tuloperiaatteen nojalla $29 \cdot 29 = 841$ kappaletta.
+                                </li>
+                                <li> 
+                                    Osallistujia on oltava 842. Pahimmassa tapauksessa 841 osallistujalla on kaikilla eri nimikirjaimet. Jos osallistujia tulee yksi lisää, ei hänelle riitä enää eri nimikirjaimia, vaan hänellä on a-kohdan nojalla välttämättä samat nimikirjaimet kuin jollakin toisella osallistujalla.
                                 </li>
                             </ol>
                         </div>
