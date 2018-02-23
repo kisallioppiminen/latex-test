@@ -340,12 +340,14 @@ topnav: maa10
                         $$
                         n! = n \cdot (n-1) \cdots 2 \cdot 1
                         $$
-                        Erikseen sovitaan, että luvun $0$ kertoma on yks: 
+                        Erikseen sovitaan, että luvun $0$ kertoma on yksi: 
                         $$0! = 1.$$
                     </p>
                 </div>
 
-
+                <p>
+                    Seuraavassa tehtävässä osoitetaan, että luvun $n$ kertoma ilmaisee, miten monella tavalla $n$-alkioinen joukko voidaan järjestää jonoon.
+                </p>
             </div>
 
             <div class="tehtavat">
@@ -359,10 +361,15 @@ topnav: maa10
                     </header>
                     <div id="MAA10t102" class="collapse">
                         <p>
-                            
+                            Tarkastellaan joukkoa, jossa on $n$ alkiota. Tehtävänä on laskea, kuinka monella tavalla tämän joukon alkiot voidaan järjestää jonoon.
                         </p>
                         <ol class="a">
-                            <li>  </li>
+                            <li> Kuinka monella tavalla jonon ensimmäinen jäsen voidaan valita? </li>
+                            <li> Kuinka monella tavalla jonon toinen jäsen voidaan valita? </li>
+                            <li> Kuinka monella tavalla jonon kolmas jäsen voidaan valita? </li>
+                            <li> Kuinka monella tavalla jonon toiseksi viimeinen jäsen voidaan valita? </li>
+                            <li> Kuinka monella tavalla jonon viimeinen jäsen voidaan valita? </li>
+                            <li> Kuinka monta erilaista jonoa on mahdollista muodostaa? </li>
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA10t102_v">
@@ -371,11 +378,137 @@ topnav: maa10
                         </h2>
                         <div id="MAA10t102_v" class="collapse">
                            <ol class="a">
-                                <li>  </li>
+                                <li> Ensimmäinen jäsen voidaan valita $n$ eri tavalla. </li>
+                                <li> Toinen jäsen voidaan valita $n-1$ eri tavalla. </li>
+                                <li> Kolmas jäsen voidaan valita $n - 2$ eri tavalla. </li>
+                                <li> Toiseksi viimeinen jäsen voidaan valita $2$ eri tavalla. </li>
+                                <li> Viimeinen jäsen voidaan valita $1$ tavalla, koska vain yksi on enää jäljellä. </li>
+                                <li> Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa $n \cdot (n-1) \cdot (n-2) \cdots 2 \cdot 1 = n!$ kappaletta. </li>
                             </ol>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän tuloksesta saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="JÄRJESTYSTEN LUKUMÄÄRÄ">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jos joukossa on $n$ alkiota, joukon alkiot voidaan järjestää jonoon $n!$ eri tavalla.
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 1.6.
+                        </p>      
+                    </div>
+                </div>
+
+                <p>
+                    Kertoma ilmaisee siis $n$-alkioisen joukon järjestysten eli niin sanottujen <em>permutaatioiden</em> lukumäärän. Esimerkiksi neljän alkion joukon $\{ a, b, c \}$ permutaatioita on kuusi erilaista, sillä $3! = 3\cdot 2 \cdot 1 = 6$. Ne voidaan luetella:
+                    \begin{align*}
+                    &abc, bca, cab 
+                    &acb, bac, cba
+                    \end{align*}
+                </p>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t110-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t110">
+                                Järjestykset ja niiden lukumäärät
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t110" class="collapse">
+                        <ol class="a">
+                            <li> Kuinka monta permutaatiota on joukolla $\{ a, b, c, d\}$? </li>
+                            <li> 
+                                Luettele kaikki joukon $\{ a, b, c, d\}$ permutaatiot. Käytä jotain johdonmukaista menetelmää, jotta mikään ei jää huomaamatta eikä mikään tule useammin kuin kerran. 
+                            </li>
+                            <li>
+                                Oletetaan, että yhden permutaation kirjoittaminen paperille kestää 2 sekuntia. Tutki kokeilemalla, mikä on suurin joukko, jonka kaikki permutaatiot on vielä jotenkin mielekästä kirjoittaa käsin näkyviin.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t110_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t110_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Permutaatioita on $4! = 4\cdot 3 \cdot 2 \cdot 1 = 24$.
+                                </li>
+                                <li> 
+                                    $abcd$, 
+                                </li>
+                                <li> 
+                                    Erilaisia jonoja voidaan muodostaa $6 \cdot 5 \cdot 4 \cdot 3 = 360$.
+                                </li>
+                                <li> 
+                                    Erilaisia jonoja voidaan muodostaa $6 \cdot 6 \cdot 6 \cdot 6 = 6^4 = 1296$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t109-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t109">
+                                Järjestysten ja jonojen lukumäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t109" class="collapse">
+                        <p>
+                            Kuinka monta erilaista neljän merkin mittaista jonoa voidaan muodostaa kirjaimista
+                        </p>
+                        <ol class="a">
+                            <li> A, B, C ja D, jos kirjain saa esiintyä jonossa enintään kerran </li>
+                            <li> A, B, C ja D, jos kirjain saa esiintyä jonossa usemmankin kerran </li>
+                            <li> A, B, C, D, E ja F, jos kirjain saa esiintyä jonossa enintään kerran </li>
+                            <li> A, B, C, D, E ja F, jos kirjain saa esiintyä jonossa usemmankin kerran? </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t109_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t109_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Erilaisia jonoja voidaan muodostaa $4 \cdot 3 \cdot 2 \cdot 1 = 4! = 24$.
+                                </li>
+                                <li> 
+                                    Erilaisia jonoja voidaan muodostaa $4 \cdot 4 \cdot 4 \cdot 4 = 4^4 = 256$.
+                                </li>
+                                <li> 
+                                    Erilaisia jonoja voidaan muodostaa $6 \cdot 5 \cdot 4 \cdot 3 = 360$.
+                                </li>
+                                <li> 
+                                    Erilaisia jonoja voidaan muodostaa $6 \cdot 6 \cdot 6 \cdot 6 = 6^4 = 1296$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
             </div>
 
             
