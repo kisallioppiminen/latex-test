@@ -546,6 +546,13 @@ topnav: maa10
                             <li> Miten vaihtoehtojen määrä muuttuu, kun jonon muodostaminen etenee? </li>
                             <li> Kuinka monella tavalla jonon viimeinen eli $k$:s jäsen voidaan valita? </li>
                             <li> Kuinka monta erilaista jonoa on mahdollista muodostaa? </li>
+                            <li> 
+                                Ilmaise edellisen kohdan vastaus muodossa 
+                                $$
+                                \frac{n!}{x}
+                                $$
+                                valitsemalla kirjaimen $x$ paikalle sopiva lauseke. Perustele, että tämä osamäärä on yhtä suuri kuin edellisen kohdan tulos.
+                            </li>
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA10t111_v">
@@ -559,7 +566,13 @@ topnav: maa10
                                 <li> Kolmas jäsen voidaan valita $n-2$ eri tavalla. </li>
                                 <li> Tapoja valita jonon seuraava jäsen on aina yksi vähemmän. </li>
                                 <li> Viimeinen jäsen eli $k$:s jäsen voidaan valita $n-k+1$ tavalla. </li>
-                                <li> Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa $n \cdot (n-1) \cdot (n-2) \cdots (n-k+1)$ kappaletta. </li>
+                                <li> 
+                                    Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa $n \cdot (n-1) \cdot (n-2) \cdots (n-k+1)$ kappaletta. Huomataan, että
+                                    \begin{align*}
+                                    \frac{n!}{(n-k)!} &= \frac{n \cdots (n-k+1) \cdot (n-k) \cdots 2 \cdot 1}{(n-k) \cdots 2 \cdot 1} \\[2mm] 
+                                    &= n \cdot (n-1) \cdot (n-2) \cdots (n-k+1)
+                                    \end{align*}
+                                </li>
                             </ol>
                         </div>
                     </div>
