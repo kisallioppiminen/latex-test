@@ -367,6 +367,7 @@ topnav: maa10
                             <li> Kuinka monella tavalla jonon ensimmäinen jäsen voidaan valita? </li>
                             <li> Kuinka monella tavalla jonon toinen jäsen voidaan valita? </li>
                             <li> Kuinka monella tavalla jonon kolmas jäsen voidaan valita? </li>
+                            <li> Miten vaihtoehtojen määrä muuttuu, kun jonon muodostaminen etenee? </li>
                             <li> Kuinka monella tavalla jonon toiseksi viimeinen jäsen voidaan valita? </li>
                             <li> Kuinka monella tavalla jonon viimeinen jäsen voidaan valita? </li>
                             <li> Kuinka monta erilaista jonoa on mahdollista muodostaa? </li>
@@ -381,6 +382,7 @@ topnav: maa10
                                 <li> Ensimmäinen jäsen voidaan valita $n$ eri tavalla. </li>
                                 <li> Toinen jäsen voidaan valita $n-1$ eri tavalla. </li>
                                 <li> Kolmas jäsen voidaan valita $n - 2$ eri tavalla. </li>
+                                <li> Tapoja valita jonon seuraava jäsen on aina yksi vähemmän. </li>
                                 <li> Toiseksi viimeinen jäsen voidaan valita $2$ eri tavalla. </li>
                                 <li> Viimeinen jäsen voidaan valita $1$ tavalla, koska vain yksi on enää jäljellä. </li>
                                 <li> Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa $n \cdot (n-1) \cdot (n-2) \cdots 2 \cdot 1 = n!$ kappaletta. </li>
@@ -458,8 +460,8 @@ topnav: maa10
                                     \end{align*}
                                 </li>
                                 <li> 
-                                    Jos joukossa on 6 alkiota, sillä on $6! = 720$ permutaatiota. Niiden kirjoittaminen paperille kestää 1440 sekuntia eli 24 minuuttia. Periaatteessa mahdollista. <br>
-                                    Jos joukossa on 7 alkiota, sillä on $7! = 5040$ permutaatiota. Niiden kirjoittaminen paperille kestää 10 080 sekuntia eli 168 minuuttia eli 2 tuntia 48 minuuttia. Alkaa olla rajatapaus. <br>
+                                    Jos joukossa on 6 alkiota, sillä on $6! = 720$ permutaatiota. Niiden kirjoittaminen paperille kestää 1440 sekuntia eli 24 minuuttia. Tämä on mahdollista tehdä. <br>
+                                    Jos joukossa on 7 alkiota, sillä on $7! = 5040$ permutaatiota. Niiden kirjoittaminen paperille kestää 10 080 sekuntia eli 168 minuuttia eli 2 tuntia 48 minuuttia. Tämä alkaa olla rajatapaus. <br>
                                     Jos joukossa on 8 alkiota, sillä on $8! = 40320$ permutaatiota. Niiden kirjoittaminen paperille kestää 22,4 tuntia eli 22 tuntia 24 minuuttia. Tässä ei ole enää järkeä.
                                 </li>
                             </ol>
@@ -468,7 +470,11 @@ topnav: maa10
                 </div>
             </div>
 
-            
+            <div class="teoria">
+                <p>
+                    Jonoja voidaan muodostaa paitsi järjestämällä jonkin joukon kaikki alkiot jonoon, myös poimimalla jonon alkiot jostain laajemmasta joukosta. Joissain tilanteissa sama alkio voi esiintyä jonossa useammakin kerran. Näitä ilmiöitä tutkitaan seuraavassa tehtävässä.
+                </p>
+            </div>
 
             <div class="tehtavat">
                 <div class="tehtava" id="MAA10t109-ex">
@@ -484,10 +490,10 @@ topnav: maa10
                             Kuinka monta erilaista neljän merkin mittaista jonoa voidaan muodostaa kirjaimista
                         </p>
                         <ol class="a">
-                            <li> A, B, C ja D, jos kirjain saa esiintyä jonossa enintään kerran </li>
-                            <li> A, B, C ja D, jos kirjain saa esiintyä jonossa usemmankin kerran </li>
-                            <li> A, B, C, D, E ja F, jos kirjain saa esiintyä jonossa enintään kerran </li>
-                            <li> A, B, C, D, E ja F, jos kirjain saa esiintyä jonossa usemmankin kerran? </li>
+                            <li> A, B, C ja D, jos jokainen kirjain saa esiintyä jonossa enintään kerran </li>
+                            <li> A, B, C ja D, jos sama kirjain saa esiintyä jonossa useasti </li>
+                            <li> A, B, C, D, E ja F, jos jokainen kirjain saa esiintyä jonossa enintään kerran </li>
+                            <li> A, B, C, D, E ja F, jos sama kirjain saa esiintyä jonossa useasti? </li>
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA10t109_v">
@@ -515,9 +521,50 @@ topnav: maa10
             </div>
 
             <div class="teoria">
-
+                <p>
+                    Seuraavassa tehtävässä tutkitaan, miten monella tavalla $n$-alkioisesta joukosta voidaan poimia $k$ alkion jono, jossa mikään alkio ei esiinny useammin kuin kerran. Tämä ilmaistaan usein sanomalla, että jonon jäsenet poimitaan <em>ilman takaisinpanoa</em> eli ne voivat tulla valituksi jonoon vain yhden kerran.
+                </p>
             </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t110-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t110">
+                                Jonojen lukumäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t110" class="collapse">
+                        <p>
+                            Tarkastellaan joukkoa, jossa on $n$ alkiota. Tehtävänä on laskea, kuinka monella tavalla tästä joukosta voidaan poimia $k$ alkion jono, jossa mikään alkio ei esiinny useammin kuin kerran.
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monella tavalla jonon ensimmäinen jäsen voidaan valita? </li>
+                            <li> Kuinka monella tavalla jonon toinen jäsen voidaan valita? </li>
+                            <li> Kuinka monella tavalla jonon kolmas jäsen voidaan valita? </li>
+                            <li> Miten vaihtoehtojen määrä muuttuu, kun jonon muodostaminen etenee? </li>
+                            <li> Kuinka monella tavalla jonon viimeinen eli $k$:s jäsen voidaan valita? </li>
+                            <li> Kuinka monta erilaista jonoa on mahdollista muodostaa? </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t110_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t110_v" class="collapse">
+                           <ol class="a">
+                                <li> Ensimmäinen jäsen voidaan valita $n$ eri tavalla. </li>
+                                <li> Toinen jäsen voidaan valita $n-1$ eri tavalla. </li>
+                                <li> Kolmas jäsen voidaan valita $n-2$ eri tavalla. </li>
+                                <li> Tapoja valita jonon seuraava jäsen on aina yksi vähemmän. </li>
+                                <li> Viimeinen jäsen eli $k$:s jäsen voidaan valita $n-k+1$ tavalla. </li>
+                                <li> Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa $n \cdot (n-1) \cdot (n-2) \cdots (n-k+1)$ kappaletta. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka2">
