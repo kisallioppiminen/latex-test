@@ -522,8 +522,64 @@ topnav: maa10
 
             <div class="teoria">
                 <p>
-                    Seuraavassa tehtävässä tutkitaan, miten monella tavalla $n$-alkioisesta joukosta voidaan poimia $k$ alkion jono, jossa mikään alkio ei esiinny useammin kuin kerran. Tämä ilmaistaan usein sanomalla, että jonon jäsenet poimitaan <em>ilman takaisinpanoa</em> eli ne voivat tulla valituksi jonoon vain yhden kerran.
+                    Seuraavissa tehtävissä tutkitaan, miten monella tavalla $n$-alkioisesta joukosta voidaan poimia $k$ alkion jono, jossa mikään alkio ei esiinny useammin kuin kerran. Tämä ilmaistaan usein sanomalla, että jonon jäsenet poimitaan <em>ilman takaisinpanoa</em> eli ne voivat tulla valituksi jonoon vain yhden kerran.
                 </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t111-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t111">
+                                Jonojen lukumäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t111" class="collapse">
+                        <p>
+                            Tehtävänä on laskea, kuinka monella tavalla 10 alkion joukosta voidaan poimia kuuden alkion jono, jossa mikään alkio ei esiinny useammin kuin kerran.
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monella tavalla jonon ensimmäinen jäsen voidaan valita? </li>
+                            <li> Kuinka monella tavalla jonon toinen jäsen voidaan valita? </li>
+                            <li> Kuinka monella tavalla jonon kolmas jäsen voidaan valita? </li>
+                            <li> Miten vaihtoehtojen määrä muuttuu, kun jonon muodostaminen etenee? </li>
+                            <li> Kuinka monella tavalla jonon viimeinen eli kuudes jäsen voidaan valita? </li>
+                            <li> Kuinka monta erilaista jonoa on mahdollista muodostaa? </li>
+                            <li> 
+                                Ilmaise erilaisten jonojen lukumäärä muodossa 
+                                $$
+                                \frac{10!}{x}
+                                $$
+                                valitsemalla kirjaimen $x$ paikalle sopiva kertoma. Perustele, että tämä osamäärä on yhtä suuri kuin erilaisten jonojen määrä.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t111_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t111_v" class="collapse">
+                           <ol class="a">
+                                <li> Ensimmäinen jäsen voidaan valita 10 eri tavalla. </li>
+                                <li> Toinen jäsen voidaan valita 9 eri tavalla. </li>
+                                <li> Kolmas jäsen voidaan valita 8 eri tavalla. </li>
+                                <li> Tapoja valita jonon seuraava jäsen on aina yksi vähemmän. </li>
+                                <li> Viimeinen eli kuudes jäsen voidaan valita 5 tavalla. </li>
+                                <li> 
+                                    Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa $10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 = 151\,200$ kappaletta. 
+                                </li>
+                                <li>
+                                    Huomataan, että
+                                    \begin{align*}
+                                    \frac{10!}{4!} &= \frac{10 \cdots 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}{4 \cdot 3 \cdot 2 \cdot 1} \\[2mm] 
+                                    &= 10 \cdots 5
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="tehtavat">
