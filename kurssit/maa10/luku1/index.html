@@ -410,7 +410,7 @@ topnav: maa10
                 <p>
                     Kertoma ilmaisee siis $n$-alkioisen joukon järjestysten eli niin sanottujen <em>permutaatioiden</em> lukumäärän. Esimerkiksi neljän alkion joukon $\{ a, b, c \}$ permutaatioita on kuusi erilaista, sillä $3! = 3\cdot 2 \cdot 1 = 6$. Ne voidaan luetella:
                     \begin{align*}
-                    &abc, bca, cab 
+                    &abc, bca, cab \\
                     &acb, bac, cba
                     \end{align*}
                 </p>
@@ -447,13 +447,20 @@ topnav: maa10
                                     Permutaatioita on $4! = 4\cdot 3 \cdot 2 \cdot 1 = 24$.
                                 </li>
                                 <li> 
-                                    $abcd$, 
+                                    Permutaatiot:
+                                    \begin{align*}
+                                    &abcd, bcda, cdab, dabc \\
+                                    &abdc, bdca, dcab, cabd \\
+                                    &acbd, cbda, bdac, dacb \\
+                                    &acdb, cdba, dbac, acdb \\
+                                    &adbc, dbca, bcad, cadb \\
+                                    &adcb, dcba, cbad, badc \\
+                                    \end{align*}
                                 </li>
                                 <li> 
-                                    Erilaisia jonoja voidaan muodostaa $6 \cdot 5 \cdot 4 \cdot 3 = 360$.
-                                </li>
-                                <li> 
-                                    Erilaisia jonoja voidaan muodostaa $6 \cdot 6 \cdot 6 \cdot 6 = 6^4 = 1296$.
+                                    Jos joukossa on 6 alkiota, sillä on $6! = 720$ permutaatiota. Niiden kirjoittaminen paperille kestää 1440 sekuntia eli 24 minuuttia. Periaatteessa mahdollista. <br>
+                                    Jos joukossa on 7 alkiota, sillä on $7! = 5040$ permutaatiota. Niiden kirjoittaminen paperille kestää 10 080 sekuntia eli 168 minuuttia eli 2 tuntia 48 minuuttia. Alkaa olla rajatapaus. <br>
+                                    Jos joukossa on 8 alkiota, sillä on $8! = 40320$ permutaatiota. Niiden kirjoittaminen paperille kestää 22,4 tuntia eli 22 tuntia 24 minuuttia. Tässä ei ole enää järkeä.
                                 </li>
                             </ol>
                         </div>
