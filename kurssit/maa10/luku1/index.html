@@ -583,15 +583,15 @@ topnav: maa10
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava" id="MAA10t111-ex">
+                <div class="tehtava" id="MAA10t112-ex">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t111">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t112">
                                 Jonojen lukumäärä
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA10t111" class="collapse">
+                    <div id="MAA10t112" class="collapse">
                         <p>
                             Tarkastellaan joukkoa, jossa on $n$ alkiota. Tehtävänä on laskea, kuinka monella tavalla tästä joukosta voidaan poimia $k$ alkion jono, jossa mikään alkio ei esiinny useammin kuin kerran.
                         </p>
@@ -611,11 +611,11 @@ topnav: maa10
                             </li>
                         </ol>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t111_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t112_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA10t111_v" class="collapse">
+                        <div id="MAA10t112_v" class="collapse">
                            <ol class="a">
                                 <li> Ensimmäinen jäsen voidaan valita $n$ eri tavalla. </li>
                                 <li> Toinen jäsen voidaan valita $n-1$ eri tavalla. </li>
@@ -623,7 +623,10 @@ topnav: maa10
                                 <li> Tapoja valita jonon seuraava jäsen on aina yksi vähemmän. </li>
                                 <li> Viimeinen jäsen eli $k$:s jäsen voidaan valita $n-k+1$ tavalla. </li>
                                 <li> 
-                                    Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa $n \cdot (n-1) \cdot (n-2) \cdots (n-k+1)$ kappaletta. Huomataan, että
+                                    Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa $n \cdot (n-1) \cdot (n-2) \cdots (n-k+1)$ kappaletta. 
+                                </li>
+                                <li>
+                                    Huomataan, että
                                     \begin{align*}
                                     \frac{n!}{(n-k)!} &= \frac{n \cdots (n-k+1) \cdot (n-k) \cdots 2 \cdot 1}{(n-k) \cdots 2 \cdot 1} \\[2mm] 
                                     &= n \cdot (n-1) \cdot (n-2) \cdots (n-k+1)
