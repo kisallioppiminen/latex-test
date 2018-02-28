@@ -545,7 +545,9 @@ topnav: maa10
                             Muodostetaan 10 alkion joukosta kuuden alkion jono, jossa mikään alkio ei esiinny useammin kuin kerran.
                         </p>
                         <ol class="a">
-                            <li> Päättele tuloperiaatteen avulla, kuinka monella erilaisella tavalla jono on mahdollista muodostaa. </li>
+                            <li> 
+                                Päättele tuloperiaatteen avulla, kuinka monella erilaisella tavalla jono on mahdollista muodostaa. 
+                            </li>
                             <li> 
                                 Ilmaise a-kohdan tulos muodossa 
                                 $$
@@ -600,21 +602,45 @@ topnav: maa10
                     </header>
                     <div id="MAA10t112" class="collapse">
                         <p>
-                            Tarkastellaan joukkoa, jossa on $n$ alkiota. Tehtävänä on laskea, kuinka monella tavalla tästä joukosta voidaan poimia $k$ alkion jono, jossa mikään alkio ei esiinny useammin kuin kerran.
+                            Muodostetaan $n$ alkion joukosta $k$ alkion jono, jossa mikään alkio ei esiinny useammin kuin kerran.
                         </p>
                         <ol class="a">
-                            <li> Kuinka monella tavalla jonon ensimmäinen jäsen voidaan valita? </li>
-                            <li> Kuinka monella tavalla jonon toinen jäsen voidaan valita? </li>
-                            <li> Kuinka monella tavalla jonon kolmas jäsen voidaan valita? </li>
-                            <li> Miten vaihtoehtojen määrä muuttuu, kun jonon muodostaminen etenee? </li>
-                            <li> Kuinka monella tavalla jonon viimeinen eli $k$:s jäsen voidaan valita? </li>
-                            <li> Kuinka monta erilaista jonoa on mahdollista muodostaa? </li>
+                            <li>
+                                Täydennä seuraava taulukko:
+                                <div align="center">
+                                    <table style="width = 75%">
+                                        <tr>
+                                            <th> Jonon jäsen </th>
+                                            <th> Vaihtoehtojen määrä </th>
+                                        </tr>
+                                        <tr>
+                                            <td> 1. jäsen </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 2. jäsen </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 3. jäsen </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> $\vdots$ </td>
+                                            <td> $\vdots$ </td>
+                                        </tr>
+                                        <tr>
+                                            <td> $k$. jäsen </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
                             <li> 
-                                Ilmaise edellisen kohdan vastaus muodossa 
-                                $$
-                                \frac{n!}{x}
-                                $$
-                                valitsemalla kirjaimen $x$ paikalle sopiva lauseke. Perustele, että tämä osamäärä on yhtä suuri kuin edellisen kohdan tulos.
+                                Päättele tuloperiaatteen avulla, kuinka monella erilaisella tavalla jono on mahdollista muodostaa. 
+                            </li>
+                            <li> 
+                                Ilmaise b-kohdan tulos kahden kertoman osamääränä samaan tapaan kuin edellisessä tehtävässä.
                             </li>
                         </ol>
                         <h2>
@@ -623,20 +649,48 @@ topnav: maa10
                             </a>
                         </h2>
                         <div id="MAA10t112_v" class="collapse">
-                           <ol class="a">
-                                <li> Ensimmäinen jäsen voidaan valita $n$ eri tavalla. </li>
-                                <li> Toinen jäsen voidaan valita $n-1$ eri tavalla. </li>
-                                <li> Kolmas jäsen voidaan valita $n-2$ eri tavalla. </li>
-                                <li> Tapoja valita jonon seuraava jäsen on aina yksi vähemmän. </li>
-                                <li> Viimeinen jäsen eli $k$:s jäsen voidaan valita $n-k+1$ tavalla. </li>
-                                <li> 
-                                    Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa $n \cdot (n-1) \cdot (n-2) \cdots (n-k+1)$ kappaletta. 
-                                </li>
+                            <ol class="a">
                                 <li>
+                                    Täydennä seuraava taulukko:
+                                    <div align="center">
+                                        <table style="width = 75%">
+                                            <tr>
+                                                <th> Jonon jäsen </th>
+                                                <th> Vaihtoehtojen määrä </th>
+                                            </tr>
+                                            <tr>
+                                                <td> 1. jäsen </td>
+                                                <td> $n$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 2. jäsen </td>
+                                                <td> $n-1$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 3. jäsen </td>
+                                                <td> $n-2$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> $\vdots$ </td>
+                                                <td> $\vdots$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> $k$. jäsen </td>
+                                                <td> $n - k + 1$ </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li> 
+                                    Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa 
+                                    $$n \cdot (n-1) \cdot (n-2) \cdots (n - k + 1)$$ 
+                                    kappaletta. 
+                                </li>
+                                <li> 
                                     Huomataan, että
                                     \begin{align*}
-                                    \frac{n!}{(n-k)!} &= \frac{n \cdots (n-k+1) \cdot (n-k) \cdots 2 \cdot 1}{(n-k) \cdots 2 \cdot 1} \\[2mm] 
-                                    &= n \cdot (n-1) \cdot (n-2) \cdots (n-k+1)
+                                    \frac{n!}{(n-k)!} &= \frac{n \cdots (n-k+1) \cdot (n-k) \cdots 2 \cdot 1}{(n-k) \cdots  2 \cdot 1} \\[2mm] 
+                                    &= n \cdot (n-1) \cdot (n-2) \cdots (n - k + 1)
                                     \end{align*}
                                 </li>
                             </ol>
