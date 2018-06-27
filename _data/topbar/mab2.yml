@@ -1,0 +1,15 @@
+header: 
+path: 
+navigation:
+  -
+    name: MAB2
+    path: /kurssit/mab2/
+  -
+    name: 1. Ensimmäisen asteen polynomifunktio
+    path: /kurssit/mab2/luku1/
+  -
+    name: 2. Ensimmäisen asteen yhtälö
+    path: /kurssit/mab2/luku2/
+  -
+    name: 3. Toisen asteen polynomifunktio ja yhtälö
+    path: /kurssit/mab2/luku3/
