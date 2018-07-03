@@ -18,6 +18,7 @@ topnav: mab2
             <h1>Toisen asteen polynomifunktio ja yhtälö</h1>
         </header>
     </section>
+
     <section class="panel">
         <header>
             <h1>
@@ -956,6 +957,185 @@ topnav: mab2
         </div>
     </section>
 
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl4">
+                    Tulon nollasääntö
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku4kpl4" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa tutustutaan niin sanottuun tulon nollasääntöön, jota voidaan käyttää monien polynomiyhtälöiden ratkaisemiseen.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="aba8289c-1680-4106-81bc-fd0288125bae">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste14">
+                                Nolla tulon tekijänä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste14" class="collapse">
+                        <p>
+                            Laske tai päättele seuraavien tulojen arvo:
+                        </p>
+                        <ol class="a">
+                            <li> $2\cdot 5 \cdot 7 \cdot 0$</li>
+                            <li> $8 \cdot 13 \cdot 53 \cdot 0 \cdot 71$ </li>
+                            <li> $661 \cdot 433 \cdot 811 \cdot 0 \cdot 79 \cdot 227$</li>
+                        </ol>
+                        <p>
+                            Selitä omin sanoin, miksi tämän tehtävän voi ratkaista ilman laskuja.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste14_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste14_v" class="collapse">
+                            <p>
+                                Kaikkien tulojen arvo on nolla.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="0a5c47d8-346e-42cb-b095-fbbb2e01d9e3">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste15">
+                                Nolla kertolaskun tuloksena
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste15" class="collapse">
+                        <p> 
+                            Tiedetään, että lukujen $a$ ja $b$ tulo on nolla eli $ab = 0$. Mitkä seuraavista väitteistä ovat tosia? Mitkä ovat epätosia? Perustele omin sanoin. Jotkin väitteistä voit osoittaa todeksi tai epätodeksi keksimällä sopivan esimerkin.
+                        </p>
+                        <ol class="a">
+                            <li> On mahdollista, että kumpikaan luvuista $a$ ja $b$ ei ole nolla eli $a \neq 0$ ja $b \neq 0$.</li>
+                            <li> Voidaan olla varmoja, että kumpikin luvuista $a$ ja $b$ on nolla eli $a = 0$ ja $b = 0$.</li>
+                            <li> Voidaan olla varmoja, että ainakin toinen luvuista $a$ ja $b$ on nolla eli $a = 0$ tai $b = 0$. </li>
+                            <li> Voidaan olla varmoja, että toinen luvuista $a$ ja $b$ on nollasta poikkeava eli $a \neq 0$ tai $b \neq 0$.</li>
+                            <li> On mahdollista, että toinen luvuista $a$ ja $b$ on nollasta poikkeava eli $a \neq 0$ tai $b \neq 0$.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste15_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste15_v" class="collapse">
+                            <ol class="a">
+                                <li> Väite on epätosi.  </li>
+                                <li> Väite on epätosi. Esimerkiksi jos $a = 0$ ja $b = 1$, niin $ab = 0$.  </li>
+                                <li> Väite on tosi. </li>
+                                <li> Väite on epätosi. On mahdollista, että $a = 0$ ja $b = 0$. Tässäkin tapauksessa $ab = 0$. </li>
+                                <li> Väite on tosi. Esimerkiksi jos $a = 0$ ja $b = 1$, niin $ab = 0$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Seuraavan teoreeman eli tulon nollasäännön mukaan reaalilukujen tulo on nolla, jos ja vain jos ainakin yksi tulon tekijöistä on nolla. Lue teoreema ja sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+                </p>
+
+                <div class="theorem">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        $xy = 0$, jos ja vain jos $x = 0$ tai $y = 0$.
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Koska teoreeman tulos on kaksisuuntainen (jos ja vain jos), perustellaan se kahdessa osassa.
+                        <ul>
+                            <li> Oletetaan aluksi, että $xy = 0$. On kaksi mahdollisuutta: joko $x = 0$ tai $x \neq 0$. Tutkitaan molemmat:
+                                <ul>
+                                    <li> Jos $x = 0$, niin väite "$x = 0$ tai $y = 0$" on totta.</li>
+                                    <li> Jos $x \neq 0$, niin yhtälön $xy = 0$ molemmat puolet voidaan jakaa luvulla $x$. Näin päädytään yhtälöön $y = 0$. Siis väite "$x = 0$ tai $y = 0$" on totta.</li>
+                                </ul>
+                                Näin on näytetty, että jos $xy = 0$, niin $x = 0$ tai $y = 0$.
+                            <li> Oletetaan, että $x = 0$ tai $y = 0$. Tutkitaan molemmat mahdollisuudet:
+                                <ul>
+                                    <li> Jos $x = 0$, niin $xy = 0\cdot y = 0$. Siis $xy = 0$.</li>
+                                    <li> Jos $y = 0$, niin $xy = x \cdot 0 = 0$. Siis $xy = 0$.</li>
+                                </ul>
+                                Näin on näytetty, että jos $x = 0$ tai $y = 0$, niin $xy = 0$.
+                            </li>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <p>
+                    Tulon nollasääntöä voidaan käyttää tietynlaisten yhtälöiden ratkaisemiseen. Esimerkiksi yhtälö
+                    $$(x-2)(3x-4) = 0$$
+                    toteutuu, jos ja vain jos ainakin toinen sen vasemman puolen tekijöistä on nolla eli
+                    $$x-2 = 0 \quad \text{ tai } \quad 3x-4 = 0.$$
+                    Näistä yhtälöistä saadaan ratkaistua
+                    $$x = 2 \quad \text{ tai } \quad 3x = 4$$
+                    eli
+                    $$x = 2 \quad \text{ tai } \quad x = \frac{4}{3}.$$
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="c16997e1-eacd-4cdc-9fba-cc628cf52ace">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste16">
+                                Tulon nollasääntö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste16" class="collapse">
+                        <p> Ratkaise seuraavat yhtälöt tulon nollasäännön avulla:
+                        </p>
+                        <ol class="a">
+                            <li> $(x-1)(x+5) = 0$</li>
+                            <li> $(x+7)(4x-32) = 0$ </li>
+                            <li> $(6-2x)(2x-1) = 0$. </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste16_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste16_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = 1 \ $ tai $\ x = -5$ </li>
+                                <li> $x = -7 \ $ tai $\ x = 8$ </li>
+                                <li> $x = 3 \ $ tai $\ x = \dfrac{1}{2}$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl4">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
 
     <section class="panel">
         <header class="otsikko">
@@ -1580,188 +1760,7 @@ topnav: mab2
             </div>
         </div>
     </section>
-
-    <section class="panel">
-        <header class="otsikko">
-            <h1>      
-                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl4">
-                    Tulon nollasääntö
-                </a>
-            </h1>
-        </header>
-        <div id="MAB2luku4kpl4" class="collapse">
-
-            <div class="teoria">
-                <p>
-                    Tässä kappaleessa tutustutaan niin sanottuun tulon nollasääntöön, jota voidaan käyttää monien polynomiyhtälöiden ratkaisemiseen.
-                </p>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="aba8289c-1680-4106-81bc-fd0288125bae">
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#2aste14">
-                                Nolla tulon tekijänä
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="2aste14" class="collapse">
-                        <p>
-                            Laske tai päättele seuraavien tulojen arvo:
-                        </p>
-                        <ol class="a">
-                            <li> $2\cdot 5 \cdot 7 \cdot 0$</li>
-                            <li> $8 \cdot 13 \cdot 53 \cdot 0 \cdot 71$ </li>
-                            <li> $661 \cdot 433 \cdot 811 \cdot 0 \cdot 79 \cdot 227$</li>
-                        </ol>
-                        <p>
-                            Selitä omin sanoin, miksi tämän tehtävän voi ratkaista ilman laskuja.
-                        </p>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#2aste14_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="2aste14_v" class="collapse">
-                            <p>
-                                Kaikkien tulojen arvo on nolla.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="0a5c47d8-346e-42cb-b095-fbbb2e01d9e3">
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#2aste15">
-                                Nolla kertolaskun tuloksena
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="2aste15" class="collapse">
-                        <p> 
-                            Tiedetään, että lukujen $a$ ja $b$ tulo on nolla eli $ab = 0$. Mitkä seuraavista väitteistä ovat tosia? Mitkä ovat epätosia? Perustele omin sanoin. Jotkin väitteistä voit osoittaa todeksi tai epätodeksi keksimällä sopivan esimerkin.
-                        </p>
-                        <ol class="a">
-                            <li> On mahdollista, että kumpikaan luvuista $a$ ja $b$ ei ole nolla eli $a \neq 0$ ja $b \neq 0$.</li>
-                            <li> Voidaan olla varmoja, että kumpikin luvuista $a$ ja $b$ on nolla eli $a = 0$ ja $b = 0$.</li>
-                            <li> Voidaan olla varmoja, että ainakin toinen luvuista $a$ ja $b$ on nolla eli $a = 0$ tai $b = 0$. </li>
-                            <li> Voidaan olla varmoja, että toinen luvuista $a$ ja $b$ on nollasta poikkeava eli $a \neq 0$ tai $b \neq 0$.</li>
-                            <li> On mahdollista, että toinen luvuista $a$ ja $b$ on nollasta poikkeava eli $a \neq 0$ tai $b \neq 0$.</li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#2aste15_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="2aste15_v" class="collapse">
-                            <ol class="a">
-                                <li> Väite on epätosi.  </li>
-                                <li> Väite on epätosi. Esimerkiksi jos $a = 0$ ja $b = 1$, niin $ab = 0$.  </li>
-                                <li> Väite on tosi. </li>
-                                <li> Väite on epätosi. On mahdollista, että $a = 0$ ja $b = 0$. Tässäkin tapauksessa $ab = 0$. </li>
-                                <li> Väite on tosi. Esimerkiksi jos $a = 0$ ja $b = 1$, niin $ab = 0$. </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="teoria">
-                <p>
-                    Seuraavan teoreeman eli tulon nollasäännön mukaan reaalilukujen tulo on nolla, jos ja vain jos ainakin yksi tulon tekijöistä on nolla. Lue teoreema ja sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
-                </p>
-
-                <div class="theorem">
-                    <h3>TEOREEMA</h3>
-                    <p>
-                        $xy = 0$, jos ja vain jos $x = 0$ tai $y = 0$.
-                    </p>
-                    <div class="proof">
-                        <p>
-                            Perustelu: Koska teoreeman tulos on kaksisuuntainen (jos ja vain jos), perustellaan se kahdessa osassa.
-                        <ul>
-                            <li> Oletetaan aluksi, että $xy = 0$. On kaksi mahdollisuutta: joko $x = 0$ tai $x \neq 0$. Tutkitaan molemmat:
-                                <ul>
-                                    <li> Jos $x = 0$, niin väite "$x = 0$ tai $y = 0$" on totta.</li>
-                                    <li> Jos $x \neq 0$, niin yhtälön $xy = 0$ molemmat puolet voidaan jakaa luvulla $x$. Näin päädytään yhtälöön $y = 0$. Siis väite "$x = 0$ tai $y = 0$" on totta.</li>
-                                </ul>
-                                Näin on näytetty, että jos $xy = 0$, niin $x = 0$ tai $y = 0$.
-                            <li> Oletetaan, että $x = 0$ tai $y = 0$. Tutkitaan molemmat mahdollisuudet:
-                                <ul>
-                                    <li> Jos $x = 0$, niin $xy = 0\cdot y = 0$. Siis $xy = 0$.</li>
-                                    <li> Jos $y = 0$, niin $xy = x \cdot 0 = 0$. Siis $xy = 0$.</li>
-                                </ul>
-                                Näin on näytetty, että jos $x = 0$ tai $y = 0$, niin $xy = 0$.
-                            </li>
-                            </li>
-                        </ul>
-                        </p>
-                    </div>
-                </div>
-
-                <p>
-                    Tulon nollasääntöä voidaan käyttää tietynlaisten yhtälöiden ratkaisemiseen. Esimerkiksi yhtälö
-                    $$(x-2)(3x-4) = 0$$
-                    toteutuu, jos ja vain jos ainakin toinen sen vasemman puolen tekijöistä on nolla eli
-                    $$x-2 = 0 \quad \text{ tai } \quad 3x-4 = 0.$$
-                    Näistä yhtälöistä saadaan ratkaistua
-                    $$x = 2 \quad \text{ tai } \quad 3x = 4$$
-                    eli
-                    $$x = 2 \quad \text{ tai } \quad x = \frac{4}{3}.$$
-                </p>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="c16997e1-eacd-4cdc-9fba-cc628cf52ace">
-
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#2aste16">
-                                Tulon nollasääntö
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="2aste16" class="collapse">
-                        <p> Ratkaise seuraavat yhtälöt tulon nollasäännön avulla:
-                        </p>
-                        <ol class="a">
-                            <li> $(x-1)(x+5) = 0$</li>
-                            <li> $(x+7)(4x-32) = 0$ </li>
-                            <li> $(6-2x)(2x-1) = 0$. </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#2aste16_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="2aste16_v" class="collapse">
-                            <ol class="a">
-                                <li> $x = 1 \ $ tai $\ x = -5$ </li>
-                                <li> $x = -7 \ $ tai $\ x = 8$ </li>
-                                <li> $x = 3 \ $ tai $\ x = \dfrac{1}{2}$ </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl4">
-                    Sulje kappale
-                </a>
-            </div>
-        </div>
-    </section>
     
-
     <section class="panel">
         <header class="otsikko">
             <h1>                        
