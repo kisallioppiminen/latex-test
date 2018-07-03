@@ -112,6 +112,69 @@ topnav: mab2
             </div>
 
             <div class="teoria">
+                <p>
+                    Koordinaatiston piste voidaan siis ilmaista lukuparina $(x,y)$. Ensimmäinen luku $x$ kertoo, missä piste sijaitsee $x$-akselin suunnassa origoon verrattuna. Toinen luku $y$ kertoo vastaavasti, missä piste sijaitsee $y$-akselin suunnassa origoon verrattuna. Näitä lukuja kutsutaan pisteen koordinaateiksi.
+                </p>
+
+                <p>
+                    Kun funktion kuvaaja piirretään koordinaatistoon, muuttujan arvot ovat $x$-akselilla ja funktion arvot ovat $y$-akselilla. Kuvaajan pisteen $y$-koordinaatti on aina sama kuin funktion arvo.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="MAB2t101b-ex" id="MAB2t101b-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t101b">
+                                Funktion kuvaajan tulkitseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t101" class="collapse">
+                        <img src="/kurssit/mab2/kuvat/kuva002.png" style="max-width: 100%; width: auto; height: auto;" />
+                        <p>
+                            Yllä on näkyvissä funktion $g$ kuvaaja. Päättele sen avulla vastaukset seuraaviin kysymyksiin:
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Mikä on funktion $g$ arvo kohdassa $x = 1$? Toisin sanottuna, mitä on $g(1)$?
+                            </li>
+                            <li> 
+                                Saako funktio $g$ jossain kohdassa arvon $4$? Toisin sanottuna, onko olemassa sellainen $x$, että $g(x) = 4$?
+                            </li>
+                            <li> 
+                                Saako funktio $g$ jossain kohdassa arvon $0$? Toisin sanottuna, onko olemassa sellainen $x$, että $g(x) = 0$?
+                            </li>
+                            <li> 
+                                Mikä on funktion $g$ arvo kohdassa $x = 0$? Toisin sanottuna, mitä on $g(0)$?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t101b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t101b_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Kuvaajan mukaan $g(1) = 2$, sillä kuvaaja kulkee pisteen $(1,2)$ kautta.
+                                </li>
+                                <li> 
+                                    Kohdassa $x = 3$ funktion arvo on $g(3) = 4$. Kuvaaja kulkee pisteen $(3,4)$ kautta.
+                                </li>
+                                <li> 
+                                    Kohdassa $x = -1$ funktion arvo on $g(-1) = 0$. Kuvaaja kulkee pisteen $(-1,0)$ kautta eli leikkaa $x$-akselin kohdassa $x = -1$.
+                                </li>
+                                <li> 
+                                    Kuvaajan mukaan $g(0) = 1$, sillä kuvaaja kulkee pisteen $(0,1)$ kautta.
+                                </li>
+                           </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
 
                 <p>
                     Tässä kappaleessa tutkitaan ensimmäisen asteen polynomifunktioita, joihin tutustuttiin jo MAY1-kurssilla. Palautetaan aluksi mieleen MAY1-kurssilta tuttu funktion nollakohdan määritelmä:
@@ -125,48 +188,7 @@ topnav: mab2
                 </div>
             </div>
 
-            <div class="tehtavat">
-                <div class="MAB2t101b-ex" id="MAB2t101b-ex">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t101b">
-                                Funktion kuvaajan tulkitseminen
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAB2t101" class="collapse">
-                        <img src="/kurssit/maa2/kuvat/EAk1.png" style="max-width: 100%; width: auto; height: auto;" />
-                        <p>
-                            Yllä on näkyvissä funktioiden $f$ ja $g$ kuvaajat. Päättele niiden avulla vastaukset seuraaviin kysymyksiin:
-                        </p>
-                        <ol class="a">
-                            <li> Mikä on funktion $f$ arvo kohdassa $x = 3$? Toisin sanottuna, mitä on $f(3)$?</li>
-                            <li> Mikä on funktion $g$ arvo kohdassa $x = 3$?</li>
-                            <li> Saako funktio $f$ jossain kohdassa arvon $3$? Toisin sanottuna, onko olemassa sellainen $x$, että $f(x) = 3$?</li>
-                            <li> Saako funktio $g$ jossain kohdassa arvon $3$?</li>
-                            <li> Saavatko funktiot $f$ ja $g$ jossain kohdassa saman arvon? Minkä? Missä kohdassa?</li>
-                            <li> Onko funktiolla $f$ nollakohtia? Entä onko funktiolla $g$ nollakohtia? Jos on, mitä ne ovat?</li>
-                            <li> Onko jompikumpi funktioista $f$ ja $g$ niin sanottu vakiofunktio, joka saa jokaisessa kohdassa saman arvon?</li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t101b_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="MAB2t101b_v" class="collapse">
-                           <ol class="a">
-                                <li> $f(3) = 2$</li>
-                                <li> $g(3) = 5$</li>
-                                <li> Ei.</li>
-                                <li> Kyllä, kohdassa $x = 2$.</li>
-                                <li> Kyllä, kohdassa $x = 1{,}5$ arvon $2$.</li>
-                                <li> Funktiolla $f$ ei ole nollakohtia. Funktiolla $g$ on yksi nollakohta, $x = 0{,}5$.</li>
-                                <li> Funktio $f$ on vakiofunktio.</li>
-                           </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
             <div class="teoria">
                 <p>
