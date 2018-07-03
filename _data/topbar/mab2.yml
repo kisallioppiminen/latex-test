@@ -5,7 +5,7 @@ navigation:
     name: MAB2
     path: /kurssit/mab2/
   -
-    name: 1. Ensimmäisen asteen polynomifunktio ja yhtälö
+    name: 1. Ensimmäisen asteen yhtälö
     path: /kurssit/mab2/luku1/
   -
     name: 2. Yhtälöpari
@@ -14,5 +14,5 @@ navigation:
     name: 3. Verrannollisuus
     path: /kurssit/mab2/luku3/
   -
-    name: 4. Toisen asteen polynomifunktio ja yhtälö
+    name: 4. Toisen asteen yhtälö
     path: /kurssit/mab2/luku4/
