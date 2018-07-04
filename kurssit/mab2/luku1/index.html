@@ -897,7 +897,7 @@ topnav: mab2
                         <p>
                             Tutki sijoittamalla, ovatko seuraavat luvut yhtälön
                             $$x^2 + 6x = 8x+3$$
-                            ratkaisuja. Laske erikseen yhtälön vasemmalla puolella olevan lausekkeen arvo ja oikealla puolella olevan lausekkeen arvo ja vertaa tuloksia sen jälkeen.
+                            ratkaisuja. Laske erikseen yhtälön vasemman puolen arvo ja oikean puolen arvo ja vertaa tuloksia sen jälkeen.
                         </p>
                         <ol class="a">
                             <li> $3$</li>
@@ -1049,15 +1049,83 @@ topnav: mab2
                         </p>
                         <ol class="a">
                             <li> $3x+4 = 2x-1$</li>
-                            <li> $2-(3x-1) = 3-(8x+1)$</li>
-                            <li> $\dfrac{x}{4} = x + 1$</li>
+                            <li> $2-(3x-1) = 3-(8x+1)$.</li>
                         </ol>
+                        <p>
+                            Ohje: b-kohdassa aloita poistamalla sulut yhtälön vasemmalta ja oikealta puolelta.
+                        </p>
                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#1aste9_v">
                             Vastaus
                         </a>
                         </h2>
                         <div id="1aste9_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = -5$ </li>
+                                <li> $x = -\dfrac{1}{5}$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jos yhtälössä esiintyy murtolausekkeita, kannattaa niistä yrittää hankkiutua eroon mahdollisimman nopeasti. Yleispätevä tapa on kertoa yhtälön molemmat puolet kaikkien nimittäjien tulolla. Jos esimerkiksi yhtälö on 
+                    $$
+                    \dfrac{x}{3} - \dfrac{2-x}{4} = \dfrac{x-3}{2} + 2x,
+                    $$
+                    muodostetaan nimittäjien tulo $3 \cdot 4 \cdot 2 = 24$ ja kerrotaan yhtälön molemmat puolet sillä:
+                    $$
+                    \dfrac{\textcolor{red}{24}x}{3} - \dfrac{\textcolor{red}{24}(2-x)}{4} = \dfrac{\textcolor{red}{24}(x-3)}{2} + \textcolor{red}{24} \cdot 2x.
+                    $$
+                    Jokainen yhteenlaskettava siis kerrotaan nimittäjien tulolla, tarvittaessa käytetään sulkuja. Sen jälkeen voidaan laskea jakolaskut, jolloin päästään nimittäjistä eroon:
+                    $$
+                    8x - 6(2-x) = 12(x-3) + 48x.
+                    $$
+                    Tästä eteenpäin yhtälön ratkaisu etenee normaalisti. Ensin sievennetään yhtälön vasen ja oikea puoli:
+                    \begin{align*}
+                    8x - 12 + 6x &= 12x - 36 + 48x \\
+                    14x - 12 &= 60x - 36.
+                    \end{align*}
+                    Lisätään yhtälön molemmille puolille luku 12, jolloin saadaan
+                    $$
+                    14x = 60x - 24.
+                    $$
+                    Vähennetään yhtälön molemmilta puolilta 60x, jolloin saadaan
+                    $$
+                    -46x = -24.
+                    $$
+                    Jaetaan tuntemattoman kertoimella $-46$, jolloin saadaan
+                    $$
+                    x = \dfrac{-24}{-46} = \dfrac{12}{23}.
+                    $$
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="41ce783e-6c3a-4782-be9c-9fef6294dcbd">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#1aste9b">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="1aste9b" class="collapse">
+                        <p> Ratkaise seuraavat yhtälöt:
+                        </p>
+                        <ol class="a">
+                            <li> $\dfrac{x}{4} = x + 1$</li>
+
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#1aste9b_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="1aste9b_v" class="collapse">
                             <ol class="a">
                                 <li> $x = -5$ </li>
                                 <li> $x = -\dfrac{1}{5}$. </li>
