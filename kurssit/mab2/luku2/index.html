@@ -563,20 +563,26 @@ topnav: mab2
                     </header>
                     <div id="MAB2t208" class="collapse">
                         <p>
-                            Tehtävänä on ratkaista graafisesti yhtälöpari
+                            Tehtävänä on ratkaista yhtälöpari
                             $$
                             \left\{\begin{aligned}
-                            x - 3y & = 9 \\
-                            2x + 4y & = 5.
+                            y & = 6x-5 \\
+                            y & = -3x + 25.
                             \end{aligned}\right.
                             $$
                         </p>
                         <ol class="a">
                             <li>
-                                Piirrä sopiva kuva esimerkiksi Geogebralla ja päättele yhtälöparin ratkaisu sen avulla. 
+                                Ylempi yhtälö kertoo, miten $y$ voidaan ilmaista muuttujan $x$ avulla. Sijoita tämä lauseke alempaan yhtälöön muuttujan $y$ paikalle. Millaisen yhtälön saat?
                             </li>
                             <li>
-                                Tarkista sijoittamalla, onko löytämäsi ratkaisu tarkka vai likimääräinen.
+                                Ratkaise a-kohdan yhtälöstä $x$.
+                            </li>
+                            <li>
+                                Ota ylempi yhtälö uudelleen käyttöön ja laske sen avulla muuttujan $y$ arvo. Mikä on yhtälöparin ratkaisu?
+                            </li>
+                            <li>
+                                Tarkista ratkaisusi järkevyys piirtämällä kuva suorista Geogebralla.
                             </li>
                         </ol>
                         <h2>
@@ -587,25 +593,20 @@ topnav: mab2
                         <div id="MAB2t208_v" class="collapse">
                             <ol class="a">
                                 <li>
-                                    Yhtälöparin ratkaisu näyttää pelkän kuvan perusteella olevan likimain $x \approx 5{,}1$ ja $y \approx - 1{,}3$.
-                                    <img src="/kurssit/mab2/kuvat/MAB2kuva013.png" max-width: 100%; width: auto; height: auto;/>
+                                    Yhtälö on $6x - 5 = -3x+25$.
                                 </li>
                                 <li>
-                                    Tarkistus: <br>
-                                    Ensimmäisen yhtälön vasen puoli: 
-                                    \begin{align*}
-                                    5{,}1 - 3 \cdot (-1{,}3) &= 5{,}1 + 3{,}9 \\
-                                    &= 9.
-                                    \end{align*} 
-                                    Ensimmäisen yhtälön oikea puoli: $9$. Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.<br>
-                                    Toisen yhtälön vasen puoli: 
-                                    \begin{align*}
-                                    2 \cdot 5{,}1 + 4\cdot (-1{,}3) &= 10{,}2 - 5{,}2 \\
-                                    &= 5$
-                                    \end{align*}
-                                    Toisen yhtälön oikea puoli: $5$.<br>
-                                    Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.<br>
-                                    Kuvan avulla onnistuttiin löytämään tarkka ratkaisu.
+                                    $x = \dfrac{10}{3}$
+                                </li>
+                                <li>
+                                    $y = 6x - 5 = 6 \cdot \dfrac{10}{3} - 5 = 20 - 5 = 15$. Yhtälöparin ratkaisu on 
+                                    $$
+                                    x = \dfrac{10}{3} \ \text{ ja } \ y = 15.
+                                    $$
+                                </li>
+                                <li>
+                                    Huomaa, että alla olevaan kuvaan on sovitettu näkyviin juuri suorien leikkauspiste eivätkä koordinaattiakselit näy kokonaan:
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva021.png" max-width: 100%; width: auto; height: auto;/>
                                 </li>
                             </ol>
                         </div>
