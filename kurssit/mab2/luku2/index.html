@@ -515,7 +515,93 @@ topnav: mab2
         </header>
         <div id="MAB2luku2kpl2" class="collapse">
 
-            
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa opetellaan ratkaisemaan yhtälöpari sijoitusmenetelmällä. Tämän menetelmän avulla yhtälöparin tarkka ratkaisu löydetään silloinkin, kun se ei pelkän kuvan avulla onnistu. Esimerkiksi alla olevasta kuvasta nähdään, että suorilla $y = -2x + 3$ ja $y = x - 2$ on leikkauspiste, mutta leikkauspisteen koordinaateille saadaan vain likimääräiset arvot $x \approx 1{,}7$ ja $y \approx -0{,}3$. 
+                </p>
+                <img src="/kurssit/mab2/kuvat/MAB2kuva020.png" max-width: 100%; width: auto; height: auto;/>
+                <p>
+                    Suorien leikkauspisteen tarkat koordinaatit saadaan ratkaisemalla yhtälöpari
+                    $$
+                    \left\{\begin{aligned}
+                    y & = -2x+3 \\
+                    y & = x-2.
+                    \end{aligned}\right.
+                    $$
+                    Ylemmässä yhtälössä $y$ on yksinään vasemmalla puolella. Yhtälö siis kertoo, miten $y$ voidaan ilmaista muuttujan $x$ avulla. Sijoitetaan tämä muuttujan $x$ lauseke alempaan yhtälöön muuttujan $y$ paikalle. Näin saadaan uusi yhtälö, jossa on ainoana tuntemattomana $x$:
+                    $$
+                    -2x + 3 = x - 2.
+                    $$
+                    Tämä yhtälö voidaan ratkaista normaaliin tapaan:
+                    \begin{align*}
+                    -2x + 3 &= x-2 \quad \mid -3 \\[1mm]
+                    -2x &= x - 5 \quad \mid  -x \\[1mm]
+                    -3x &= -5 \quad \mid \, : (-3) \\[1mm]
+                    x &= \dfrac{-5}{-3} = \dfrac{5}{3}
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAB2t208-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t208">
+                                Yhtälöpari
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t208" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista graafisesti yhtälöpari
+                            $$
+                            \left\{\begin{aligned}
+                            x - 3y & = 9 \\
+                            2x + 4y & = 5.
+                            \end{aligned}\right.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä sopiva kuva esimerkiksi Geogebralla ja päättele yhtälöparin ratkaisu sen avulla. 
+                            </li>
+                            <li>
+                                Tarkista sijoittamalla, onko löytämäsi ratkaisu tarkka vai likimääräinen.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t208_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t208_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Yhtälöparin ratkaisu näyttää pelkän kuvan perusteella olevan likimain $x \approx 5{,}1$ ja $y \approx - 1{,}3$.
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva013.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li>
+                                    Tarkistus: <br>
+                                    Ensimmäisen yhtälön vasen puoli: 
+                                    \begin{align*}
+                                    5{,}1 - 3 \cdot (-1{,}3) &= 5{,}1 + 3{,}9 \\
+                                    &= 9.
+                                    \end{align*} 
+                                    Ensimmäisen yhtälön oikea puoli: $9$. Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.<br>
+                                    Toisen yhtälön vasen puoli: 
+                                    \begin{align*}
+                                    2 \cdot 5{,}1 + 4\cdot (-1{,}3) &= 10{,}2 - 5{,}2 \\
+                                    &= 5$
+                                    \end{align*}
+                                    Toisen yhtälön oikea puoli: $5$.<br>
+                                    Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.<br>
+                                    Kuvan avulla onnistuttiin löytämään tarkka ratkaisu.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2kpl2">
