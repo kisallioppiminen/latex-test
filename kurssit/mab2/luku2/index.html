@@ -794,30 +794,33 @@ topnav: mab2
                     </header>
                     <div id="MAB2t211" class="collapse">
                         <p>
-                            Kahvila valmistaa omaa kahvilaatuaan, johon käytetään kahvipapuja Etelä-Amerikasta ja Afrikasta. Etelä-Amerikassa tuotettu papulaatu maksaa 26,80 €/kg ja Afrikassa tuotettu papulaatu maksaa 50,80 €/kg. Kahvila haluaa valmistaa yhden kilogramman sekoitusta, jonka hinnaksi tulee 34,00 euroa. Tehtävänä on selvittää, kuinka paljon kumpaakin papulaatua pitää sekoitukseen käyttää.
+                            Kahvila valmistaa omaa kahvilaatuaan, johon käytetään kahvipapuja Etelä-Amerikasta ja Afrikasta. Etelä-Amerikassa tuotettu papulaatu EA maksaa 26,80 €/kg ja Afrikassa tuotettu papulaatu A maksaa 50,80 €/kg. Kahvila haluaa valmistaa yhden kilogramman sekoitusta, jonka hinnaksi tulee 34,00 euroa. Tehtävänä on selvittää, kuinka paljon kumpaakin papulaatua pitää sekoitukseen käyttää.
                         </p>
                         <ol class="a">
                             <li>
-                                Selitä omin sanoin, mitä tehtävässä kysytään. Merkitse näitä tuntemattomia asioita kirjaimilla $x$ ja $y$. 
-                            </li>
-                            <li>
-                                Piirrä vihkoosi alla oleva taulukko ja täydennä puuttuvat tiedot. Käytä tarvittaessa kirjaimia $x$ ja $y$. 
+                                Piirrä vihkoosi alla oleva taulukko.
                                 <div align="center">
                                     <table style="width = 95%">
                                         <tr>
                                             <th> Papulaatu </th>
-                                            <th> Kilohinta (€/kg) </th>
                                             <th> Määrä (kg) </th>
+                                            <th> Kilohinta (€/kg) </th>
                                             <th> Hinta (€) </th>
                                         </tr>
                                         <tr>
-                                            <td> Etelä-Amerikka </td>
+                                            <td> EA </td>
                                             <td>  </td>
                                             <td>  </td>
                                             <td>  </td>
                                         </tr>
                                         <tr>
-                                            <td> Afrikka </td>
+                                            <td> A </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Sekoitus </td>
                                             <td>  </td>
                                             <td>  </td>
                                             <td>  </td>
@@ -826,10 +829,20 @@ topnav: mab2
                                 </div> 
                             </li>
                             <li>
-                                Jatka yhtälöparin ratkaisua normaaliin tapaan sijoittamalla. Mikä on yhtälöparin ratkaisu?
+                                Täydennä taulukkoon eri papulaatujen kilohinnat. Merkitse papulaadun EA määrää kirjaimella $x$ ja papulaadun A määrää kirjaimella $y$. Ilmaise sekoituksen määrä kirjainten $x$ ja $y$ avulla.
                             </li>
                             <li>
-                                Tarkista ratkaisusi järkevyys piirtämällä kuva suorista Geogebralla.
+                                Täydennä taulukkoon papulaatujen EA ja A hinnat. Vinkki: mieti, millä laskutoimituksella saat hinnan, kun tunnet määrän ja kilohinnan. Ilmaise sekoituksen hinta papulaatujen EA ja A hintojen avulla.
+                            </li>
+                            <li>
+                                Muodosta yhtälöpari tarkastelemalla sekoituksen määrää ja hintaa:
+                                <ul>
+                                    <li> Mikä on sekoituksen määrä taulukon mukaan? Miten paljon sekoitusta pitää olla? Millaisen yhtälön saat? </li>
+                                    <li> Mikä on sekoituksen hinta taulukon mukaan? Mikä sekoituksen hinnan pitää olla? Millaisen yhtälön saat? </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Ratkaise muodostamasi yhtälöpari. Kertaa tarvittaessa yhtälöparin ratkaiseminen tehtävästä 2.9. Kuinka paljon eri papulaatuja tarvitaan?
                             </li>
                         </ol>
                         <h2>
@@ -840,36 +853,93 @@ topnav: mab2
                         <div id="MAB2t211_v" class="collapse">
                             <ol class="a">
                                 <li>
-                                    Tehtävässä kysytään Etelä-Amerikassa tuotettujen papujen määrää $x$ ja Afrikassa tuotettujen papujen määrää $y$. 
+                                    
                                 </li>
                                 <li>
-                                    Piirrä vihkoosi alla oleva taulukko ja täydennä puuttuvat tiedot. Käytä tarvittaessa kirjaimia $x$ ja $y$. 
+                                    Taulukko:
                                     <div align="center">
                                         <table style="width = 95%">
                                             <tr>
                                                 <th> Papulaatu </th>
-                                                <th> Kilohinta (€/kg) </th>
                                                 <th> Määrä (kg) </th>
+                                                <th> Kilohinta (€/kg) </th>
                                                 <th> Hinta (€) </th>
                                             </tr>
                                             <tr>
                                                 <td> Etelä-Amerikka </td>
-                                                <td> $26{,}8$ </td>
                                                 <td> $x$ </td>
-                                                <td> $x \cdot 26{,}8$ </td>
+                                                <td> $26{,}80$ </td>
+                                                <td>  </td>
                                             </tr>
                                             <tr>
                                                 <td> Afrikka </td>
-                                                <td> $50{,}8$ </td>
                                                 <td> $y$ </td>
-                                                <td> $y \cdot 50{,}8$ </td>
+                                                <td> $50{,}80$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Sekoitus </td>
+                                                <td> $x + y$ </td>
+                                                <td> $34{,}00$ </td>
+                                                <td>  </td>
                                             </tr>
                                         </table>
                                     </div> 
                                 </li>
                                 <li>
-                                    Kuva: <br>
-                                    <img src="/kurssit/mab2/kuvat/MAB2kuva023.png" max-width: 100%; width: auto; height: auto;/>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 95%">
+                                            <tr>
+                                                <th> Papulaatu </th>
+                                                <th> Määrä (kg) </th>
+                                                <th> Kilohinta (€/kg) </th>
+                                                <th> Hinta (€) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> Etelä-Amerikka </td>
+                                                <td> $x$ </td>
+                                                <td> $26{,}80$ </td>
+                                                <td> $x \cdot 26{,}80$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Afrikka </td>
+                                                <td> $y$ </td>
+                                                <td> $50{,}80$ </td>
+                                                <td> $y \cdot 50{,}80$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Sekoitus </td>
+                                                <td> $x + y$ </td>
+                                                <td> $34{,}00$ </td>
+                                                <td> $x \cdot 26{,}80 + y \cdot 50{,}80$ </td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </li>
+                                <li>
+                                    Sekoituksen määrästä saadaan yhtälö
+                                    $$
+                                    x + y = 1.
+                                    $$
+                                    Sekoituksen hinnasta saadaan yhtälö
+                                    $$
+                                    26{,}8x + 50{,}8y = 34.
+                                    $$
+                                    Yhtälöpari on siis 
+                                    $$
+                                    \left\{\begin{aligned}
+                                    x + y & = 1 \\
+                                    26{,}8x + 50{,}8y & = 34.
+                                    \end{aligned}\right.
+                                    $$
+                                </li>
+                                <li>
+                                    Yhtälöparin ratkaisuksi saadaan
+                                    $$
+                                    x = \dfrac{7}{10} = 0{,}7 \ \text{ ja } \ y = \dfrac{3}{10} = 0{,}3.
+                                    $$
+                                    Papulaatua EA tarvitaan siis 0,7 kg ja papulaatua A tarvitaan 0,3 kg.
                                 </li>
                             </ol>
                         </div>
