@@ -948,6 +948,152 @@ topnav: mab2
             </div>
 
             <div class="tehtavat">
+                <div class="tehtava" id="MAB2t213-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t213">
+                                Yhtälöpari sovellustehtävässä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t213" class="collapse">
+                        <p>
+                            Iiris valmistaa puutarhansa omenista hilloa lahjaksi ystävilleen. Hän säilöö hillon 3 dl ja 5 dl purkkeihin. Hän valmistaa hilloa 14 litraa ja jakaa sen yhteensä 30 purkkiin. Tehtävänä on selvittää, kuinka monta pientä ja kuinka monta isoa purkkia hänen pitää käyttää. Jääkö jokin purkki vajaaksi?
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä vihkoosi alla oleva taulukko. Merkitse pienten purkkien määrää kirjaimella $x$ ja isompien purkkien määrää kirjaimella $y$. Ilmaise purkkien kokonaismäärä kirjainten $x$ ja $y$ avulla.
+                                <div align="center">
+                                    <table style="width = 95%">
+                                        <tr>
+                                            <th> Purkki </th>
+                                            <th> Lukumäärä </th>
+                                            <th> Hillon määrä (l) </th>
+                                        </tr>
+                                        <tr>
+                                            <td> 3 dl </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 5 dl </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Yht. </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div> 
+                            </li>
+                            <li>
+                                Laske taulukkoon purkeissa olevan hillon kokonaismäärät. Vinkki: mieti, millä laskutoimituksella saat hillon määrän, kun tunnet yhden purkin tilavuuden ja purkkien määrän. Ilmaise hillon kokonaismäärä eri kokoisten purkkien hillomäärien avulla.
+                            </li>
+                            <li>
+                                Muodosta yhtälöpari tarkastelemalla purkkien määrää ja hillon määrää:
+                                <ul>
+                                    <li> Mikä on purkkien määrä taulukon mukaan? Miten monta purkkia Iiris haluaa tehdä? Millaisen yhtälön saat? </li>
+                                    <li> Mikä on hillon määrä taulukon mukaan? Miten paljon hilloa Iiris valmisti? Millaisen yhtälön saat? </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Ratkaise muodostamasi yhtälöpari. Kertaa tarvittaessa yhtälöparin ratkaiseminen tehtävästä 2.9. Kuinka paljon eri kokoisia purkkeja tarvitaan?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t213_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t213_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 95%">
+                                            <tr>
+                                                <th> Purkki </th>
+                                                <th> Lukumäärä </th>
+                                                <th> Hillon määrä (l) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> 3 dl </td>
+                                                <td> $x$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 5 dl </td>
+                                                <td> $y$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Yht. </td>
+                                                <td> $x+y$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </li>
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 95%">
+                                            <tr>
+                                                <th> Purkki </th>
+                                                <th> Lukumäärä </th>
+                                                <th> Hillon määrä (l) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> 3 dl </td>
+                                                <td> $x$ </td>
+                                                <td> $x \cdot 0{,}3$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 5 dl </td>
+                                                <td> $y$ </td>
+                                                <td> $y \cdot 0{,}5$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Yht. </td>
+                                                <td> $x+y$ </td>
+                                                <td> $x \cdot 0{,}3 + y \cdot 0{,}5$ </td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </li>
+                                <li>
+                                    Purkkien määrästä saadaan yhtälö
+                                    $$
+                                    x + y = 30.
+                                    $$
+                                    Hillon määrästä saadaan yhtälö 
+                                    $$
+                                    0{,}3x + 0{,}5y = 14.
+                                    $$
+                                    Yhtälöpari on siis 
+                                    $$
+                                    \left\{\begin{aligned}
+                                    x + y & = 30 \\
+                                    0{,}3x + 0{,}5y & = 14.
+                                    \end{aligned}\right.
+                                    $$
+                                </li>
+                                <li>
+                                    Yhtälöparin ratkaisuksi saadaan
+                                    $$
+                                    x = 5 \ \text{ ja } \ y = 25.
+                                    $$
+                                    Pieniä 3 dl purkkeja tarvitaan siis 5 kpl ja isompia 5 dl purkkeja tarvitaan 25 kpl. Mikään purkki ei jää vajaaksi.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
                 <div class="tehtava" id="MAB2t212-ex">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
@@ -1104,153 +1250,6 @@ topnav: mab2
                                     x = 1{,}25 \ \text{ ja } \ y = 8{,}75.
                                     $$
                                     Väkevää liuosta tarvitaan siis 1,25 litraa ja laimeaa liuosta 8,75 litraa.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="tehtavat">
-                <div class="tehtava" id="MAB2t213-ex">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t213">
-                                Yhtälöpari sovellustehtävässä
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAB2t213" class="collapse">
-                        <p>
-                            Iiris valmistaa puutarhansa omenista hilloa lahjaksi ystävilleen. Hän säilöö hillon 3 dl ja 5 dl purkkeihin. Hän valmistaa hilloa 14 litraa ja jakaa sen yhteensä 30 purkkiin. Tehtävänä on selvittää, kuinka monta pientä ja kuinka monta isoa purkkia hänen pitää käyttää. Jääkö jokin purkki vajaaksi?
-                        </p>
-                        <ol class="a">
-                            <li>
-                                Piirrä vihkoosi alla oleva taulukko. Merkitse pienten purkkien määrää kirjaimella $x$ ja isompien purkkien määrää kirjaimella $y$. Ilmaise purkkien kokonaismäärä kirjainten $x$ ja $y$ avulla.
-                                <div align="center">
-                                    <table style="width = 95%">
-                                        <tr>
-                                            <th> Purkki </th>
-                                            <th> Lukumäärä </th>
-                                            <th> Hillon määrä (l) </th>
-                                        </tr>
-                                        <tr>
-                                            <td> 3 dl </td>
-                                            <td>  </td>
-                                            <td>  </td>
-                                        </tr>
-                                        <tr>
-                                            <td> 5 dl </td>
-                                            <td>  </td>
-                                            <td>  </td>
-                                        </tr>
-                                        <tr>
-                                            <td> Yht. </td>
-                                            <td>  </td>
-                                            <td>  </td>
-                                        </tr>
-                                    </table>
-                                </div> 
-                            </li>
-                            <li>
-                                Laske taulukkoon purkeissa olevan hillon kokonaismäärät. Vinkki: mieti, millä laskutoimituksella saat hillon määrän, kun tunnet yhden purkin tilavuuden ja purkkien määrän. Ilmaise hillon kokonaismäärä eri kokoisten purkkien hillomäärien avulla.
-                            </li>
-                            <li>
-                                Muodosta yhtälöpari tarkastelemalla purkkien määrää ja hillon määrää:
-                                <ul>
-                                    <li> Mikä on purkkien määrä taulukon mukaan? Miten monta purkkia Iiris haluaa tehdä? Millaisen yhtälön saat? </li>
-                                    <li> Mikä on hillon määrä taulukon mukaan? Miten paljon hilloa Iiris valmisti? Millaisen yhtälön saat? </li>
-                                </ul>
-                            </li>
-                            <li>
-                                Ratkaise muodostamasi yhtälöpari. Kertaa tarvittaessa yhtälöparin ratkaiseminen tehtävästä 2.9. Kuinka paljon eri kokoisia purkkeja tarvitaan?
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t213_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="MAB2t213_v" class="collapse">
-                            <ol class="a">
-                                <li>
-                                    Taulukko:
-                                    <div align="center">
-                                        <table style="width = 95%">
-                                            <tr>
-                                                <th> Purkki </th>
-                                                <th> Lukumäärä </th>
-                                                <th> Hillon määrä (l) </th>
-                                            </tr>
-                                            <tr>
-                                                <td> 3 dl </td>
-                                                <td> $x$ </td>
-                                                <td>  </td>
-                                            </tr>
-                                            <tr>
-                                                <td> 5 dl </td>
-                                                <td> $y$ </td>
-                                                <td>  </td>
-                                            </tr>
-                                            <tr>
-                                                <td> Yht. </td>
-                                                <td> $x+y$ </td>
-                                                <td>  </td>
-                                            </tr>
-                                        </table>
-                                    </div> 
-                                </li>
-                                <li>
-                                    Taulukko:
-                                    <div align="center">
-                                        <table style="width = 95%">
-                                            <tr>
-                                                <th> Purkki </th>
-                                                <th> Lukumäärä </th>
-                                                <th> Hillon määrä (l) </th>
-                                            </tr>
-                                            <tr>
-                                                <td> 3 dl </td>
-                                                <td> $x$ </td>
-                                                <td> $x \cdot 0{,}3$ </td>
-                                            </tr>
-                                            <tr>
-                                                <td> 5 dl </td>
-                                                <td> $y$ </td>
-                                                <td> $y \cdot 0{,}5$ </td>
-                                            </tr>
-                                            <tr>
-                                                <td> Yht. </td>
-                                                <td> $x+y$ </td>
-                                                <td> $x \cdot 0{,}3 + y \cdot 0{,}5$ </td>
-                                            </tr>
-                                        </table>
-                                    </div> 
-                                </li>
-                                <li>
-                                    Purkkien määrästä saadaan yhtälö
-                                    $$
-                                    x + y = 30.
-                                    $$
-                                    Hillon määrästä saadaan yhtälö 
-                                    $$
-                                    0{,}3x + 0{,}5y = 14.
-                                    $$
-                                    Yhtälöpari on siis 
-                                    $$
-                                    \left\{\begin{aligned}
-                                    x + y & = 30 \\
-                                    0{,}3x + 0{,}5y & = 14.
-                                    \end{aligned}\right.
-                                    $$
-                                </li>
-                                <li>
-                                    Yhtälöparin ratkaisuksi saadaan
-                                    $$
-                                    x = 5 \ \text{ ja } \ y = 25.
-                                    $$
-                                    Pieniä 3 dl purkkeja tarvitaan siis 5 kpl ja isompia 5 dl purkkeja tarvitaan 25 kpl. Mikään purkki ei jää vajaaksi.
                                 </li>
                             </ol>
                         </div>
