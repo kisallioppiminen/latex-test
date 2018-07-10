@@ -1561,7 +1561,7 @@ topnav: mab2
                                 Muodosta a- ja b-kohtien avulla yhtälö, josta saat ratkaistua mikä on puheaika silloin, kun kummankin liittymän kustannukset ovat samat.
                             </li>
                             <li>
-                                Ratkaise c-kohdan yhtälö. Mikä kuukausittaisen puheajan pitäisi olla, jotta liittymän A hankkiminen olisi taloudellisesti kannattavampaa kuin liittymän B hankkiminen?
+                                Ratkaise c-kohdan yhtälö. Mikä kuukausittaisen puheajan pitäisi olla (minuutin tarkkuudella), jotta liittymän A hankkiminen olisi taloudellisesti kannattavampaa kuin liittymän B hankkiminen?
                             </li>
                         </ol>
                         <h2>
@@ -1572,95 +1572,27 @@ topnav: mab2
                         <div id="MAB2t124_v" class="collapse">
                             <ol class="a">
                             <li>
-                                Taulukko:
-                                <div align="center">
-                                    <table style="width = 95%">
-                                        <tr>
-                                            <th> Seurue </th>
-                                            <th> V & E </th>
-                                            <th> M & A & O  </th>
-                                        </tr>
-                                        <tr>
-                                            <th> Nopeus </th>
-                                            <td> 80 km/h </td>
-                                            <td> 100 km/h </td>
-                                        </tr>
-                                        <tr>
-                                            <th> Etäisyys Haminasta, kun M & A & O lähtevät </th>
-                                            <td> $0{,}5 \cdot 80 = 40$ </td>
-                                            <td> $0$ </td>
-                                        </tr>
-                                        <tr>
-                                            <th> Etäisyys Haminasta, kun M & A & O olleet matkalla $x$ tuntia </th>
-                                            <td>  </td>
-                                            <td>  </td>
-                                        </tr>
-                                    </table>
-                                </div> 
+                                Liittymän A kustannukset vuodessa:
+                                \begin{align*}
+                                5 + 12 \cdot 6 + 12\cdot 0{,}055 \cdot x &= 77 + 0{,}66x  
+                                \end{align*}
                             </li>
                             <li>
-                                Taulukko:
-                                <div align="center">
-                                    <table style="width = 95%">
-                                        <tr>
-                                            <th> Seurue </th>
-                                            <th> V & E </th>
-                                            <th> M & A & O  </th>
-                                        </tr>
-                                        <tr>
-                                            <th> Nopeus </th>
-                                            <td> 80 km/h </td>
-                                            <td> 100 km/h </td>
-                                        </tr>
-                                        <tr>
-                                            <th> Etäisyys Haminasta, kun M & A & O lähtevät </th>
-                                            <td> $0{,}5 \cdot 80 = 40$ </td>
-                                            <td> $0$ </td>
-                                        </tr>
-                                        <tr>
-                                            <th> Etäisyys Haminasta, kun M & A & O olleet matkalla $x$ tuntia </th>
-                                            <td> $40 + 80x$ </td>
-                                            <td>  </td>
-                                        </tr>
-                                    </table>
-                                </div> 
-                            </li>
-                            <li>
-                                Taulukko:
-                                <div align="center">
-                                    <table style="width = 95%">
-                                        <tr>
-                                            <th> Seurue </th>
-                                            <th> V & E </th>
-                                            <th> M & A & O  </th>
-                                        </tr>
-                                        <tr>
-                                            <th> Nopeus </th>
-                                            <td> 80 km/h </td>
-                                            <td> 100 km/h </td>
-                                        </tr>
-                                        <tr>
-                                            <th> Etäisyys Haminasta, kun M & A & O lähtevät </th>
-                                            <td> $0{,}5 \cdot 80 = 40$ </td>
-                                            <td> $0$ </td>
-                                        </tr>
-                                        <tr>
-                                            <td> Etäisyys Haminasta, kun M & A & O olleet matkalla $x$ tuntia </td>
-                                            <td> $40 + 80x$ </td>
-                                            <td> $100x$ </td>
-                                        </tr>
-                                    </table>
-                                </div> 
+                                Liittymän B kustannukset vuodessa:
+                                \begin{align*}
+                                3{,}9 + 12 \cdot 4{,}9 + 12\cdot 0{,}07 \cdot x &= 62{,}7 + 0{,}84x  
+                                \end{align*}
                             </li>
                             <li>
                                 Yhtälö on 
                                 $$
-                                100x = 40 + 80x.
+                                62{,}7 + 0{,}84x = 77 + 0{,}66x.
                                 $$
-                                Ratkaisuksi saadaan $x = 2$. Milla, Anni ja Oliver saavat siis muut kiinni kahden tunnin kuluttua.
-                            </li>
-                            <li>
-                                Kun Milla, Anni ja Oliver ovat olleet matkalla 2 tuntia, heidän etäisyytensä Haminasta on $2 \cdot 100 = 200$ km.
+                                Ratkaisuksi saadaan 
+                                $$
+                                x = \dfrac{14{,}3}{0{,}18} \approx 79{,}4.
+                                $$
+                                Kuukausittaisen puheajan pitää olla vähintään 80 minuuttia, jotta liittymän A hankkiminen on taloudellisesti kannattavampaa kuin liittymän B hankkiminen.
                             </li>
                         </ol>
                         </div>
