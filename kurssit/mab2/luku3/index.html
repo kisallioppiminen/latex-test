@@ -602,7 +602,7 @@ topnav: mab2
                     </table>
                 </div>
                 <p>
-                    Taulukossa oleellista on, että kumpikin suure on omassa sarakkeessaan ja niiden arvot eri tilanteissa vastaavasti johdonmukaisesti omilla riveillään. Tällöin taulukosta saadaan suoraan muodostettua sopiva verranto.
+                    Taulukossa oleellista on, että kumpikin suure on omassa sarakkeessaan ja niiden arvot eri tilanteissa vastaavasti johdonmukaisesti omilla riveillään. Tällöin taulukosta saadaan suoraan muodostettua sopiva verranto. Verrannon ratkaiseminen on helpointa, jos taulukon laatii niin, että kysytty asia on taulukon ylimmällä rivillä.
                 </p>
                 <p>
                     Tässä materiaalissa käytetään yllä olevan näköisiä taulukoita, joissa kumpikin suure on omassa sarakkeessaan. On kuitenkin täysin mahdollista käyttää myös taulukkoa, jossa suureet ovat omilla riveillään ja eri tilanteet omissa sarakkeissaan:
@@ -629,6 +629,104 @@ topnav: mab2
                 <p>
                     Verrannon matemaattisten ominaisuuksien vuoksi kummasta tahansa taulukosta muodostettu verranto johtaa samaan lopputulokseen, vaikka näyttää aluksi hiukan erilaiselta. 
                 </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAB2t308-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t308">
+                                Suoraan verrannollisuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t308" class="collapse">
+                        <p>
+                            Laura pyöräilee 5,9 kilometrin matkan kirjastoon 22 minuutissa. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Uimahalli on 8,2 km päässä. Kuinka kauan Lauran pyörämatka uimahallille kestää? Muodosta sopiva verranto taulukon avulla ja ratkaise se. 
+                            </li>
+                            <li>
+                                Viikonloppuna Laura päättää pyöräillä kaverinsa luo. Matkan pituus on reittioppaan mukaan 13,3 km. Kuinka paljon aikaa Lauran kannattaa varata matkaan? Muodosta sopiva verranto taulukon avulla ja ratkaise se.
+                            </li>
+                            <li>
+                                Kumpi a- ja b-kohdan tuloksista mielestäsi paremmin ennustaa pyörämatkan todellista kestoa? Selitä omin sanoin, miten ja miksi matkan todellinen kesto voi poiketa lasketusta.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t308_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t308_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 90%">
+                                            <tr>
+                                                <th>  </th>
+                                                <th> Aika (min) </th>
+                                                <th> Matka (km) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> Uimahalli </td>
+                                                <td> $x$ </td>
+                                                <td> 8,2 </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Kirjasto </td>
+                                                <td> 22 </td>
+                                                <td> 5,9 </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    Saadaan verranto
+                                    $$
+                                    \dfrac{x}{22} = \dfrac{8{,}2}{5{,}9}.
+                                    $$
+                                    Ratkaisu on 
+                                    $$x = 22 \cdot \dfrac{8{,}2}{5{,}9} \approx 31$$
+                                    eli noin 31 minuuttia.
+                                </li>
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 90%">
+                                            <tr>
+                                                <th>  </th>
+                                                <th> Aika (min) </th>
+                                                <th> Matka (km) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> Kaveri </td>
+                                                <td> $x$ </td>
+                                                <td> 13,3 </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Kirjasto </td>
+                                                <td> 22 </td>
+                                                <td> 5,9 </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    Saadaan verranto
+                                    $$
+                                    \dfrac{x}{22} = \dfrac{13{,}3}{5{,}9}.
+                                    $$
+                                    Ratkaisu on 
+                                    $$x = 22 \cdot \dfrac{13{,}3}{5{,}9} \approx 50$$
+                                    eli noin 50 minuuttia.
+                                </li>
+                                <li>
+                                    Voi ajatella, että a-kohdan tulos saattaa olla luotettavampi, koska lyhyemmällä matkalla jaksaa paremmin pitää saman nopeuden kuin kirjastoon ajaessa. Sääolosuhteet ja esimerkiksi liikennevalot voivat vaikuttaa molempien matkojen kestoon. 
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="close-section">
