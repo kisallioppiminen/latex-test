@@ -880,7 +880,7 @@ topnav: mab2
                     </header>
                     <div id="MAB2t310" class="collapse">
                         <p>
-                            Urheilutapahtumaan ilmoittautui 274 juoksijaa. Järjestäjät varasivat juomavettä 3,5 dl jokaista ilmoittautunutta kohti. Kuinka paljon vettä jokaiselle juoksijalle riitti, jos osallistujia oli lopulta 239? 
+                            Urheilutapahtumaan ilmoittautui etukäteen 274 juoksijaa. Järjestäjät varasivat juomavettä 3,5 dl jokaista ilmoittautunutta kohti. Kuinka paljon vettä jokaiselle juoksijalle riitti, jos osallistujia oli lopulta 239? 
                         </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAB2t310_v">
@@ -937,7 +937,7 @@ topnav: mab2
                     </header>
                     <div id="MAB2t312" class="collapse">
                         <p>
-                            Urheilutapahtumaan ilmoittautui 274 juoksijaa. Järjestäjät varasivat juomavettä 3,5 dl jokaista ilmoittautunutta kohti. Kuinka paljon jälki-ilmoittautuneita voidaan ottaa tapahtumaan mukaan vielä tapahtumapäivän aamuna, jos halutaan varmistaa, että juomavettä on vähintään 3,0 dl jokaista osallistujaa kohti? 
+                            Urheilutapahtumaan ilmoittautui etukäteen 274 juoksijaa. Järjestäjät varasivat juomavettä 3,5 dl jokaista ilmoittautunutta kohti. Kuinka paljon jälki-ilmoittautuneita voidaan ottaa tapahtumaan mukaan vielä tapahtumapäivän aamuna, jos halutaan varmistaa, että juomavettä on vähintään 3,0 dl jokaista osallistujaa kohti? 
                         </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAB2t312_v">
@@ -946,13 +946,66 @@ topnav: mab2
                         </h2>
                         <div id="MAB2t312_v" class="collapse">
                             <p>
-                                Jälki-ilmoittautuneita voidaan ottaa 45 henkeä. Silloin osallistujien kokonaismäärä on 319.
+                                Osallistujien kokonaismäärä saa olla 319, joten jälki-ilmoittautuneita voidaan ottaa $319 - 274 = 45$.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    Myös kääntäen verrannollisten suureiden tutkimisessa voi käyttää apuna taulukkoa. Esimerkiksi yllä olevan tehtävän tilanteessa taulukko voisi näyttää tältä:
+                </p>
+                <div align="center">
+                    <table style="width = 90%">
+                        <tr>
+                            <th>  </th>
+                            <th> Osallistujia </th>
+                            <th> Vettä per henkilö (dl) </th>
+                        </tr>
+                        <tr>
+                            <th> Tapahtumassa </th>
+                            <td> $x$ </td>
+                            <td> 3,0 </td>
+                        </tr>
+                        <tr>
+                            <th> Ennakkoon </th>
+                            <td> 100 </td>
+                            <td> 1,49 </td>
+                        </tr>
+                    </table>
+                </div>
+                <p>
+                    Taulukosta saadaan muodostettua kaksi suhdetta: päärynöiden määrän suhde ja päärynöiden hinnan suhde. Jos päärynöiden määrä esimerkiksi kaksinkertaistuu, myös hinta kaksinkertaistuu. Vaikka suureet muuttuvat, niiden suhteet pysyvät samana. Saadaan yhtälö
+                    $$
+                    \dfrac{x}{100} = \dfrac{5{,}00}{1{,}49}.
+                    $$
+                    Tällainen yhtälö, jossa kaksi suhdetta on merkitty yhtä suuriksi, on nimeltään <em>verranto</em>. Kysytty päärynöiden määrä saadaan selville, kun verrannon molemmat puolet kerrotaan sadalla:
+                    \begin{align*}
+                    \dfrac{x}{100} &= \dfrac{5{,}00}{1{,}49} \quad \mid \ \cdot 100\\[1mm]
+                    x &= \dfrac{100 \cdot 5{,}00}{1{,}49} \approx 335{,}57
+                    \end{align*}
+                    Viidellä eurolla saadaan siis noin 336 grammaa kuivattuja päärynöitä. Tarkasti ottaen tässä pyöristyksen voi tehdä alaspäin: jos käytettävissä on enintään 5,00 euroa, riittää se 335 grammaan päärynöitä, mutta 336 grammaa maksaa jo hiukan liikaa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAB2t304-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t304">
+                                Ratkaisutapojen vertailua
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t304" class="collapse">
+                        <p>
+                            Vertaa yllä esitettyä ratkaisutapaa ja omaa päättelyäsi tehtävässä 3.2. Mitä yhteistä niissä on? Entä mitä eroja niissä on? Selitä omin sanoin.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
             <div class="teoria">
 
