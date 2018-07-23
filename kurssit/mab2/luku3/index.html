@@ -970,23 +970,26 @@ topnav: mab2
                             <td> 3,0 </td>
                         </tr>
                         <tr>
-                            <th> Ennakkoon </th>
-                            <td> 274 </td>
-                            <td> 3,5 </td>
+                            <th style="color:blue"> Ennakkoon </th>
+                            <td style="color:blue"> 274 </td>
+                            <td style="color:blue"> 3,5 </td>
                         </tr>
                     </table>
                 </div>
                 <p>
-                    Taulukosta saadaan muodostettua kaksi suhdetta: päärynöiden määrän suhde ja päärynöiden hinnan suhde. Jos päärynöiden määrä esimerkiksi kaksinkertaistuu, myös hinta kaksinkertaistuu. Vaikka suureet muuttuvat, niiden suhteet pysyvät samana. Saadaan yhtälö
+                    Taulukon rivit ilmaisevat juomaveden kokonaismäärän, joka ei muutu. Saadaan siis yhtälö
                     $$
-                    \dfrac{x}{100} = \dfrac{5{,}00}{1{,}49}.
+                    x \cdot 3{,}0 = \textcolor{blue}{274 \cdot 3{,}5}.
                     $$
-                    Tällainen yhtälö, jossa kaksi suhdetta on merkitty yhtä suuriksi, on nimeltään <em>verranto</em>. Kysytty päärynöiden määrä saadaan selville, kun verrannon molemmat puolet kerrotaan sadalla:
-                    \begin{align*}
-                    \dfrac{x}{100} &= \dfrac{5{,}00}{1{,}49} \quad \mid \ \cdot 100\\[1mm]
-                    x &= \dfrac{100 \cdot 5{,}00}{1{,}49} \approx 335{,}57
-                    \end{align*}
-                    Viidellä eurolla saadaan siis noin 336 grammaa kuivattuja päärynöitä. Tarkasti ottaen tässä pyöristyksen voi tehdä alaspäin: jos käytettävissä on enintään 5,00 euroa, riittää se 335 grammaan päärynöitä, mutta 336 grammaa maksaa jo hiukan liikaa.
+                    Tästä yhtälöstä voidaan ratkaista tapahtuman osallistujien määrä:
+                    $$
+                    x = \dfrac{\textcolor{blue}{274 \cdot 3{,}5} }{3{,}0}.
+                    $$
+                    Jos tämän yhtälön molemmat puolet jaetaan luvulla 274, saadaan verranto:
+                    $$
+                    \dfrac{x}{\textcolor{blue}{274} } = \dfrac{\textcolor{blue}{3{,}5} }{3{,}0}.
+                    $$
+                    Verrannossa esiintyvät osallistujamäärien suhde ja vastaava juomavesimäärien suhde käänteisenä.
                 </p>
             </div>
 
