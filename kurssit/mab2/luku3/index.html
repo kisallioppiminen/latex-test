@@ -865,7 +865,7 @@ topnav: mab2
 
             <div class="teoria">
                 <p>
-                    Tässä kappaleessa tutustutaan toiseen yleiseen verrannollisuuden lajiin eli kääntäen verrannollisuuteen. Sekin esiintyy useissa arkisissa tilanteissa, joista yksi esimerkki on seuraavassa tehtävässä. Voit ratkaista sen päättelemällä jollakin sinulle luontevalla tavalla.
+                    Tässä kappaleessa tutustutaan toiseen yleiseen verrannollisuuden lajiin: kääntäen verrannollisuuteen. Sekin esiintyy useissa arkisissa tilanteissa, joista yksi esimerkki on seuraavassa tehtävässä. Voit ratkaista tehtävän päättelemällä jollakin sinulle luontevalla tavalla.
                 </p>
             </div>
 
@@ -928,7 +928,11 @@ topnav: mab2
 
             <div class="teoria">
                 <p>
-                    Tehtävässä 3.10 tarkasteltujen suureiden tulo (juomaveden kokonaismäärä) pysyy vakiona tilanteesta toiseen. Jos osallistujamäärä kaksinkertaistuisi 
+                    Tehtävässä 3.10 tarkasteltujen suureiden tulo (juomaveden kokonaismäärä) pysyy vakiona tilanteesta toiseen. Tätä voidaan kuvata yhtälöllä $$yx = k,$$ missä $k$ on vakio. Jos $x \neq 0$, voidaan yhtälö kirjoittaa muotoon
+                    $$
+                    y = \dfrac{k}{x}.
+                    $$
+                    Tätä muotoa käytetään, kun sovitaan, mitä kääntäen verrannollisuus tarkoittaa.
                 </p>
 
                 <div class="definition">
@@ -952,6 +956,64 @@ topnav: mab2
                     $$
                     yx = k.
                     $$
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAB2t313-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t313">
+                                Kääntäen verrannollisuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t313" class="collapse">
+                        <p>
+                            Kaisa arvioi, että mökille rakennettavan uuden aidan maalaamiseen kuluu kahdelta henkilöltä 28 tuntia. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Kuinka kauan urakka kestää, jos maalareita on vain yksi?
+                            </li>
+                            <li>
+                                Kuinka nopeasti aita saadaan maalattua, jos talkoisiin osallistuu yhteensä neljä yhtä tehokasta ihmistä? 
+                            </li>
+                            <li>
+                                Kuinka monta henkilötyötuntia aidan maalaamiseen kuluu? Vaihteleeko se tilanteesta toiseen?
+                            </li>
+                            <li>
+                                Jos maalarien määrä kaksinkertaistuu, mitä tapahtuu maalaamiseen kuluvalle ajalle?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t313_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t313_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Urakka kestää 56 tuntia.
+                                </li>
+                                <li>
+                                    Aita saadaan maalattua 14 tunnissa.
+                                </li>
+                                <li> 
+                                    Aidan maalaamiseen kuluu 56 henkilötyötuntia. Se pysyy vakiona, mutta maalaamiseen kuluva todellinen aika vaihtelee sen mukaan, kuinka monta maalaria on maalaamassa aitaa samaan aikaan.
+                                </li>
+                                <li>
+                                    Maalaamiseen kuluva aika pienenee puoleen.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisessä tehtävässä havaitaan, että kääntäen verrannolliset suureet muuttuvat käänteisessä suhteessa: jos maalarien määrä esimerkiksi kymmenkertaistuu, pienenee maalaamiseen kuluva aika yhteen kymmenesosaan. 
                 </p>
             </div>
 
@@ -1044,59 +1106,7 @@ topnav: mab2
                 </div>
             </div>
 
-            <div class="tehtavat">
-                <div class="tehtava" id="MAB2t313-ex">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t313">
-                                Kääntäen verrannollisuus
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAB2t313" class="collapse">
-                        <p>
-                            Kaisa arvioi, että mökille rakennettavan uuden aidan maalaamiseen kuluu kahdelta henkilöltä 28 tuntia. Tehtävänä on selvittää, kuinka kauan urakka kestää, jos maalaustalkoisiin saadaan yhdeksän yhtä tehokasta ihmistä.
-                        </p>
-                        <ol class="a">
-                            <li>
-                                Täydennä saatavilla olevat tiedot alla olevaan taulukkoon. Merkitse tuntematonta kirjaimella $x$. 
-                                <div align="center">
-                                    <table style="width = 90%">
-                                        <tr>
-                                            <th>  </th>
-                                            <th> Maalareita </th>
-                                            <th> Aikaa (h) </th>
-                                        </tr>
-                                        <tr>
-                                            <th> Talkoissa </th>
-                                            <td>  </td>
-                                            <td>  </td>
-                                        </tr>
-                                        <tr>
-                                            <th> Kaisan arviossa </th>
-                                            <td>  </td>
-                                            <td>  </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </li>
-                            <li>
-                                Muodosta 
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t313_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="MAB2t313_v" class="collapse">
-                            <p>
-                                Osallistujien kokonaismäärä saa olla 319, joten jälki-ilmoittautuneita voidaan ottaa $319 - 274 = 45$.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
             
             
