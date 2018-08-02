@@ -705,7 +705,7 @@ topnav: may1
                         a^0 &= 1\\
                         a^{-n} &= \dfrac{1}{a^n}
                         \end{align*}
-                        Ppotenssi $a^{-n}$ on siis potenssin $a^n$ käänteisluku.
+                        Potenssi $a^{-n}$ on siis potenssin $a^n$ käänteisluku.
                     </p>
                 </div>
             </div>
@@ -809,7 +809,7 @@ topnav: may1
                             <li> $4^{-1}$</li>
                             <li> $(-15)^{-1}$</li>
                             <li> $\left(\dfrac{1}{3}\right)^{-1}$</li>
-                            <li> $\left(\dfrac{4}{9}\right)^{-1}$</li>
+                            <li> $\left(-\dfrac{4}{9}\right)^{-1}$</li>
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi14b_v">
@@ -821,10 +821,30 @@ topnav: may1
                                 <li> $4^{-1} = \dfrac{1}{4}$</li>
                                 <li> $(-15)^{-1} = -\dfrac{1}{15}$</li>
                                 <li> $\left(\dfrac{1}{3}\right)^{-1} = 3$</li>
-                                <li> $\left(\dfrac{4}{9}\right)^{-1} = \dfrac{9}{4}$</li>
+                                <li> $\left(-\dfrac{4}{9}\right)^{-1} = -\dfrac{9}{4}$</li>
                             </ol>
                         </div> 
                     </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kun potenssi määriteltiin negatiivisten eksponenttien ja eksponentin nolla tapauksessa, tehtiin määritelmästä tarkoituksella sellainen, että aikaisemmin havaitut potenssien laskusäännöt toimivat edelleen. Nämä laskusäännöt on koottu seuraavaan teoreemaan. Teoreemat (toiselta nimeltään lauseet) ovat matemaattisia tosiasioita, jotka voidaan perustella todeksi määritelmien pohjalta. Tällä kertaa perustelu kuitenkin sivuutetaan, koska se ei ole tämän kurssin kannalta oleellinen.
+                </p>
+
+                <div class="theorem" id="POTENSSIEN LASKUSÄÄNTÖJÄ">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Seuraavat potenssien laskusäännöt pätevät kaikilla kokonaisluvuilla $m$ ja $n$ sekä kaikilla nollasta poikkeavilla reaaliluvuilla $a$ ja $b$:
+                    <ol>
+                        <li>tulon potenssi on potenssien tulo: $$(ab)^n = a^nb^n$$</li>
+                        <li>osamäärän potenssi on potenssien osamäärä: $$\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$$</li>
+                        <li>potenssin potenssissa eksponentit kerrotaan keskenään: $$(a^m)^n = a^{mn}$$</li>
+                        <li>samankantaisten potenssien tulossa eksponentit lasketaan yhteen: $$a^m\cdot a^n = a^{m+n}$$</li>
+                        <li>samankantaisten potenssien osamäärässä osoittajan eksponentista vähennetään nimittäjän eksponentti: $$\dfrac{a^m}{a^n} = a^{m-n}.$$</li>
+                    </ol>
+                    </p>
                 </div>
             </div>
 
@@ -833,14 +853,13 @@ topnav: may1
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi15">
-                                Potenssin potenssi
+                                Potenssien laskusääntöjä
                             </a>
                         </h1>
                     </header>
                     <div id="potenssi15" class="collapse">
-
                         <p>
-                            Avaa sulut potenssin määritelmää käyttäen ja poista negatiiviset eksponentit siirtymällä käänteislukuihin. Lausu lopputulos taas potenssina.
+                            Sievennä potenssien laskusääntöjen avulla:
                         </p> 
                         <ol class="a">
                             <li> $\left(2^{-3}\right)^2$</li>
@@ -941,33 +960,13 @@ topnav: may1
                     </div>
                 </div>
             </div>
-            <div class="teoria">
-            <p>
-                Kun potenssi määriteltiin negatiivisten eksponenttien ja eksponentin nolla tapauksessa, tehtiin määritelmästä tarkoituksella sellainen, että aikaisemmin havaitut potenssien laskusäännöt toimivat edelleen. Nämä laskusäännöt on koottu seuraavaan teoreemaan. Teoreemat (toiselta nimeltään lauseet) ovat matemaattisia tosiasioita, jotka voidaan perustella todeksi määritelmien pohjalta. Tällä kertaa perustelu kuitenkin sivuutetaan, koska se ei ole tämän kurssin kannalta oleellinen.
-            </p>
 
-            <div class="theorem" id="POTENSSIN LASKUSÄÄNTÖJÄ">
-                <h3>TEOREEMA</h3>
+            <div class="teoria">
                 <p>
-                    Seuraavat potenssien laskusäännöt pätevät kaikilla kokonaisluvuilla $m$ ja $n$ sekä kaikilla nollasta poikkeavilla reaaliluvuilla $a$ ja $b$:
-                <ol>
-                    <li>tulon potenssi on potenssien tulo: $$(ab)^n = a^nb^n$$</li>
-                    <li>osamäärän potenssi on potenssien osamäärä: $$\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$$</li>
-                    <li>potenssin potenssissa eksponentit kerrotaan keskenään: $$(a^m)^n = a^{mn}$$</li>
-                    <li>samankantaisten potenssien tulossa eksponentit lasketaan yhteen: $$a^m\cdot a^n = a^{m+n}$$</li>
-                    <li>samankantaisten potenssien osamäärässä osoittajan eksponentista vähennetään nimittäjän eksponentti: $$\dfrac{a^m}{a^n} = a^{m-n}.$$</li>
-                </ol>
+                    Seuraavassa tehtävässä jatketaan negatiivisten eksponenttien ominaisuuksien tutkimista.
                 </p>
             </div>
 
-            <!--     <p>
-                    Palautetaan mieleen, että kahden murtoluvun osamäärä saadaan laskettua, kun kerrotaan jakajan käänteisluvulla:
-                    $$\dfrac{\left(\dfrac{3}{35}\right)}{\left(\dfrac{9}{7}\right)} = \frac{3}{35} \cdot \frac{7}{9} = \frac{3 \cdot 7}{35 \cdot 9} = \frac{1 \cdot 1}{5 \cdot 3} = \frac{1}{15}.$$
-                </p> -->
-            <p>
-                Seuraavassa tehtävässä jatketaan negatiivisten eksponenttien ominaisuuksien tutkimista.
-            </p>
-            </div>
             <div class="tehtavat">
                 <div class="tehtava" id="b0d01788-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
