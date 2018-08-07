@@ -1,7 +1,7 @@
-# Rekisteriseloste
-Henkilötietolain (22.4.1999/523) 10 § edellyttämä rekisteriseloste.
+# Tietosuojaseloste
+Tietosuoja-asetus 2016/679 (GDPR).
 
-Viimeisin muutos: 11.04.2017
+Viimeisin muutos: 7.8.2018
 
 ## 1. Rekisterin nimi
 Kisallioppiminen.fi kurssihallinta-palvelun, siihen liittyen ohjelmien sekä sivustojen käyttäjärekisteri
@@ -15,7 +15,7 @@ PL 68
 
 00014 Helsingin yliopisto
 
-kisalli-oppiminen@helsinki.fi
+thomas . vikberg @ helsinki.fi
 
 ## 4. Henkilötietojen käsittelyn tarkoitus
 Rekisterin tarkoitus on palveluun rekisteröityneiden käyttäjien tunnistaminen ja käyttäjien palvelussa tapahtuvien opintojen seuraaminen. Lisäksi kerättyä dataa käytetään palvelun kehittämiseen ja tutkimustyöhön.
@@ -42,3 +42,11 @@ Rekisterin tiedot tai osaa niistä ei siirretä EU:n tai ETA:n ulkopuolelle.
 Rekisteri on tallennettu suojatuille palvelimille useaan erilliseen tietokantaan joista vain yksi sisältää käyttäjän henkilötietoja (sähköpostiosoitteen sekä nimen). Muut tietokannat viittaavat vain käyttäjän käyttäjätunnukseen.
 
 Kaikkiin tietokantoihin pääsevät käsiksi vain palvelun ylläpitäjät.
+
+## 10. Rekisteröidyn oikeudet
+Rekisteröidyllä on oikeus saada rekisterinpitäjältä vahvistus siitä, että häntä koskevia henkilötietoja käsitellään tai että niitä ei käsitellä, ja jos näitä henkilötietoja käsitellään, oikeus saada pääsy henkilötietoihin. Pyyntö tulee osoittaa kirjallisesti rekisterin yhteyshenkilölle. 
+
+Jokaisella rekisteröidyllä on oikeus tehdä valitus väitetystä henkilötietojen käsittelyrikkomuksesta kantelemalla asiasta tietosuojavaltuutetulle.
+
+## 11. Tetojen käyttö automaattisessa päätöksenteossa ja profiloinnissa
+Rekisterin sisältämiä tietoja ei käytetä profilointiin eikä tietoihin kohdisteta automaattista päätöksentekoa
