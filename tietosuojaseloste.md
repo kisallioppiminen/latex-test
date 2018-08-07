@@ -48,5 +48,5 @@ Rekisteröidyllä on oikeus saada rekisterinpitäjältä vahvistus siitä, että
 
 Jokaisella rekisteröidyllä on oikeus tehdä valitus väitetystä henkilötietojen käsittelyrikkomuksesta kantelemalla asiasta tietosuojavaltuutetulle.
 
-## 11. Tetojen käyttö automaattisessa päätöksenteossa ja profiloinnissa
+## 11. Tietojen käyttö automaattisessa päätöksenteossa ja profiloinnissa
 Rekisterin sisältämiä tietoja ei käytetä profilointiin eikä tietoihin kohdisteta automaattista päätöksentekoa
