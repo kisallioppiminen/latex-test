@@ -1044,6 +1044,82 @@ topnav: mab2
 
             <div class="teoria">
                 <p>
+                    Toisen asteen yhtälöiden ratkaisemiseen on onnistuttu kehittämään laskumenetelmä, jolla löydetään minkä tahansa toisen asteen yhtälön kaikkien ratkaisujen tarkat arvot. Selitys sille, miksi menetelmä toimii, löytyy <a href="http://kisallioppiminen.fi/kurssit/maa2/luku3/">MAA2-kurssin</a> kappaleesta Toisen asteen yhtälö. Menetelmä itsessään on seuraava:
+                </p>
+
+                <div class="theorem" id="TOISEN ASTEEN YHTÄLÖN RATKAISUKAAVA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Toisen asteen yhtälön $ax^2 + bx + c = 0$ ratkaisut saadaan kaavalla
+                        $$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}.$$
+                        Jos neliöjuurimerkin alle tuleva luku on negatiivinen eli $b^2-4ac < 0$, ei yhtälöllä ole ratkaisuja.
+                    </p>
+                </div>
+
+                <p>
+                    Teoreeman 5 mukaan toisen asteen yhtälöllä $ax^2 + bx + c = 0$ voi olla kaksi ratkaisua, yksi ratkaisu tai ei yhtään ratkaisua. Jos neliöjuurimerkin alle tuleva luku on positiivinen eli $b^2-4ac > 0$, saadaan ratkaisuja kaksi:
+                    $$x_1 = \frac{-b+\sqrt{b^2-4ac}}{2a}$$
+                    ja
+                    $$x_2 = \frac{-b-\sqrt{b^2-4ac}}{2a}.$$
+                </p>
+                <p>
+                    Esimerkiksi yhtälön $x(2x-3)-3x(1-x) = -1$ ratkaisut saadaan selville, kun yhtälö ensin sievennetään perusmuotoon $ax^2 + bx + c = 0$:
+                    \begin{align*}
+                    x(2x-3)-3x(1-x) &= -1 \\
+                    2x^2-3x-3x+3x^2 &= -1 \\
+                    5x^2-6x + 1 &= 0\\
+                    \end{align*}
+                    Tästä nähdään, että $a = 5$, $b = -6$ ja $c = 1$. Tarkasteltu yhtälö siis toteutuu, jos ja vain jos
+                    \begin{align*}
+                    x &= \frac{-(-6) \pm \sqrt{(-6)^2-4\cdot 5 \cdot 1}}{2\cdot 5} \\
+                    &= \frac{6 \pm \sqrt{16}}{10} \\
+                    &= \frac{6 \pm 4}{10}
+                    \end{align*}
+                    eli $x = 1$ tai $x = \dfrac{1}{5}$.
+                    <!-- $$x = 1 \quad \text{ tai } \quad x = \frac{1}{5}.$$ -->
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="46612d3a-57cd-4cf7-a12a-08c93c492997">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste21">
+                                Ratkaisu ratkaisukaavan avulla
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste21" class="collapse">
+                        <p> 
+                            Ratkaise seuraavat toisen asteen polynomiyhtälöt teoreemassa 5 esitetyn ratkaisukaavan avulla. Muuta yhtälö ensin perusmuotoon $ax^2+bx+c = 0$ ja tunnista, mitkä luvut vastaavat kirjaimia $a$, $b$ ja $c$. Huomioi myös etumerkit.
+                        </p>
+                        <ol class="a">
+                            <li> $3x^2 - 7x + 4 = 0$ </li>
+                            <li> $x^2 + 2x - 9 = 3x - 7$</li>
+                            <li> $x^2 = 3x$</li>
+                            <li> $(-3x-1)(x-2) = 4$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste21_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste21_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = \dfrac{4}{3} \ $ tai $\ x = 1$</li>
+                                <li> $x = -1 \ $ tai $\ x = 2$ </li>
+                                <li> $x = 0 \ $ tai $\ x = 3$ </li>
+                                <li> $x = \dfrac{2}{3} \ $ tai $\ x = 1$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="teoria">
+                <p>
                     Kaikki sellaiset toisen asteen yhtälöt, joissa esiintyy vain tuntemattoman toinen potenssi, saadaan ratkaistua samaan tapaan kuin edellä. Ensin yhtälö täytyy vain muuttaa muotoon $x^2 = a$. Tarkastellaan esimerkiksi yhtälöä $$4x^2 - 3 = 0.$$
                     Kun sen molemmille puolille lisätään luku $3$, päädytään yhtälöön
                     $$4x^2 = 3.$$
@@ -1186,154 +1262,6 @@ topnav: mab2
                                 <li> $x^3-4x^2+8$  </li>
                                 <li> $16x^2 - 9$ </li>
                             </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="teoria">
-                <p>
-                    Myös seuraavan teoreeman menetelmä toisen asteen polynomiyhtälön ratkaisemiseen perustustuu neliöksi täydentämiseen. Lue teoreeman perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
-                </p>
-
-                <div class="theorem">
-                    <h3>TEOREEMA</h3>
-                    <p>
-                        Toisen asteen yhtälön $ax^2 + bx + c = 0$ ratkaisut saadaan kaavalla
-                        $$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}.$$
-                        Jos neliöjuurimerkin alle tuleva luku on negatiivinen eli $b^2-4ac < 0$, ei yhtälöllä ole ratkaisuja.
-                    </p>
-                </div>
-
-                <p>
-                    Teoreeman 5 mukaan toisen asteen yhtälöllä $ax^2 + bx + c = 0$ voi olla kaksi ratkaisua, yksi ratkaisu tai ei yhtään ratkaisua. Jos neliöjuurimerkin alle tuleva luku on positiivinen eli $b^2-4ac > 0$, saadaan ratkaisuja kaksi:
-                    $$x_1 = \frac{-b+\sqrt{b^2-4ac}}{2a}$$
-                    ja
-                    $$x_2 = \frac{-b-\sqrt{b^2-4ac}}{2a}.$$
-                </p>
-                <p>
-                    Esimerkiksi yhtälön $x(2x-3)-3x(1-x) = -1$ ratkaisut saadaan selville, kun yhtälö ensin sievennetään perusmuotoon $ax^2 + bx + c = 0$:
-                    \begin{align*}
-                    x(2x-3)-3x(1-x) &= -1 \\
-                    2x^2-3x-3x+3x^2 &= -1 \\
-                    5x^2-6x + 1 &= 0\\
-                    \end{align*}
-                    Tästä nähdään, että $a = 5$, $b = -6$ ja $c = 1$. Tarkasteltu yhtälö siis toteutuu, jos ja vain jos
-                    \begin{align*}
-                    x &= \frac{-(-6) \pm \sqrt{(-6)^2-4\cdot 5 \cdot 1}}{2\cdot 5} \\
-                    &= \frac{6 \pm \sqrt{16}}{10} \\
-                    &= \frac{6 \pm 4}{10}
-                    \end{align*}
-                    eli $x = 1$ tai $x = \dfrac{1}{5}$.
-                    <!-- $$x = 1 \quad \text{ tai } \quad x = \frac{1}{5}.$$ -->
-                </p>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="46612d3a-57cd-4cf7-a12a-08c93c492997">
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#2aste21">
-                                Ratkaisu ratkaisukaavan avulla
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="2aste21" class="collapse">
-                        <p> 
-                            Ratkaise seuraavat toisen asteen polynomiyhtälöt teoreemassa 5 esitetyn ratkaisukaavan avulla. Muuta yhtälö ensin perusmuotoon $ax^2+bx+c = 0$ ja tunnista, mitkä luvut vastaavat kirjaimia $a$, $b$ ja $c$. Huomioi myös etumerkit.
-                        </p>
-                        <ol class="a">
-                            <li> $3x^2 - 7x + 4 = 0$ </li>
-                            <li> $x^2 + 2x - 9 = 3x - 7$</li>
-                            <li> $x^2 = 3x$</li>
-                            <li> $(-3x-1)(x-2) = 4$</li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#2aste21_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="2aste21_v" class="collapse">
-                            <ol class="a">
-                                <li> $x = \dfrac{4}{3} \ $ tai $\ x = 1$</li>
-                                <li> $x = -1 \ $ tai $\ x = 2$ </li>
-                                <li> $x = 0 \ $ tai $\ x = 3$ </li>
-                                <li> $x = \dfrac{2}{3} \ $ tai $\ x = 1$ </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="teoria">
-                <p>
-                    Seuraavissa tehtävissä harjoitellaan tunnistamaan erilaisille toisen asteen yhtälöille sopivat ratkaisutavat.
-                </p>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="bb6c6951-ffdb-4c55-bb6c-84ec9af424a9">
-
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#2aste22">
-                                Erilaisia ratkaisutapoja
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="2aste22" class="collapse">
-                        <p> 
-                            Edellisissä tehtävissä on harjoiteltu seuraavia ratkaisutapoja
-                        </p>
-                        <ol>
-                            <li> ratkaisu potenssiyhtälönä ($x^2 = d$) </li>
-                            <li> ratkaisu tulon nollasäännön avulla</li>
-                            <li> ratkaisu summan tai neliön erotuksen kaavan avulla</li>
-                            <li> ratkaisu ratkaisukaavan avulla</li>
-                        </ol>
-                        <p>
-                            Kopioi alla oleva taulukko vihkoosi ja täydennä siihen, mikä ratkaisutapa sopii parhaiten kyseiselle yhtälölle. Ratkaise yhtälöt sen jälkeen. Voit tarkistaa tulokset laskimella.
-                        </p>
-                        <div align="center">
-                            <table style="width = 75%">
-                                <tr>
-                                    <th> Yhtälö </th>
-                                    <th> Ratkaisutapa </th>
-                                    <th> Yhtälön ratkaisut </th>
-                                </tr>
-                                <tr>
-                                    <td> $(x-5)(1-3x) = 0$ </td>
-                                    <td>  </td>
-                                    <td>  </td>
-                                </tr>
-                                <tr>
-                                    <td> $2x^2+x = 3$ </td>
-                                    <td>  </td>
-                                    <td>  </td>
-                                </tr>
-                                <tr>
-                                    <td> $4x^2-4x+1 = 0$ </td>
-                                    <td>  </td>
-                                    <td>  </td>
-                                </tr>
-                                <tr>
-                                    <td> $(3x-1)(x+2) = 6$ </td>
-                                    <td>  </td>
-                                    <td>  </td>
-                                </tr>
-                                <tr>
-                                    <td> $3x^2-12 = 0$ </td>
-                                    <td>  </td>
-                                    <td>  </td>
-                                </tr>
-                                <tr>
-                                    <td> $5x^2-2x = 0$ </td>
-                                    <td>  </td>
-                                    <td>  </td>
-                                </tr>
-                            </table>
                         </div>
                     </div>
                 </div>
