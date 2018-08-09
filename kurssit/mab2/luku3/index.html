@@ -1141,6 +1141,64 @@ topnav: mab2
                 <div class="tehtava" id="217d5554-9a6a-11e8-9eb6-529269fb1459">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t314a">
+                                Verrannollisuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t314a" class="collapse">
+                        <p>
+                            Ovatko seuraavat suureet suoraan vai kääntäen verrannollisia? Selitä omin sanoin. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Datayhteyden nopeus ja tiedoston lataamiseen kuluva aika.
+                            </li>
+                            <li>
+                                Polttoaineen litrahinta ja automaatista 20 euron setelillä saatavan polttoaineen määrä.
+                            </li>
+                            <li>
+                                Jauhojen ja kananmunien määrät kakkureseptissä.
+                            </li>
+                            <li>
+                                Kiireapulaisen työtuntien määrä ja bruttopalkka.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t314a_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t314a_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kääntäen verrannollisia, sillä jos datayhteyden nopeus kaksinkertaistuu, pienenee tiedoston lataamiseen kuluva aika puoleen.
+                                </li>
+                                <li>
+                                    Kääntäen verrannollisia, sillä jos litrahinta kaksinkertaistuu, pienenee automaatista 20 euron setelillä saatava polttoaineen määrä puoleen.
+                                </li>
+                                <li>
+                                    Suoraan verrannollisia, sillä jos jauhojen määrä kaksinkertaistuu, pitää kaksinkertaistaa myös kananmunien määrä.
+                                </li>
+                                <li>
+                                    Suoraan verrannollisia, sillä jos työtuntien määrä kaksinkertaistuu, kaksinkertaistuu myös bruttopalkka.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kääntäen verrannollisten suureidenkin tapauksessa verrantoyhtälön voi siis muodostaa suoraan taulukosta
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="217d5554-9a6a-11e8-9eb6-529269fb1459">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAB2t314">
                                 Kääntäen verrannollisuus
                             </a>
@@ -1177,7 +1235,7 @@ topnav: mab2
                                 </div>
                             </li>
                             <li>
-                                Muodosta taulukon avulla sopiva yhtälö ja ratkaise se. Mikä on A350-koneelta matkaan kuluva aika minuutteina? Entä tunteina ja minuutteina?
+                                Muodosta taulukon avulla verrantoyhtälö ja ratkaise se. Mikä on A350-koneelta matkaan kuluva aika minuutteina? Entä tunteina ja minuutteina?
                             </li>
                         </ol>
                         <h2>
@@ -1213,23 +1271,18 @@ topnav: mab2
                                     </div>
                                 </li>
                                 <li>
+                                    Suureiden suhteet ovat toistensa käänteislukuja. Taulukon sarakkeista saadaan verrantoyhtälö
+                                    $$
+                                    \dfrac{x}{148} = \dfrac{840}{900}.
+                                    $$
+                                    Ratkaisuna saadaan $x \approx 138$. 
                                     A350-koneelta matkaan kuluu noin 138 minuuttia eli 2 tuntia ja 18 minuuttia. 
                                     <br>
-                                    Huom. yhtälön voi taulukon avulla muodostaa kahdella tavalla:
-                                    <ul>
-                                        <li>
-                                            Nopeuden ja ajan tulo ilmaisee matkan pituuden, joka on vakio. Taulukon riveiltä saadaan yhtälö
-                                            $$
-                                            900x = 840 \cdot 148.
-                                            $$
-                                        </li>
-                                        <li>
-                                            Suureiden suhteet ovat toistensa käänteislukuja. Taulukon sarakkeista saadaan yhtälö
-                                            $$
-                                            \dfrac{x}{148} = \dfrac{840}{900}.
-                                            $$
-                                        </li>
-                                    </ul>
+                                    Huom. yhtälön voi muodostaa myös toisella tavalla:
+                                    Nopeuden ja ajan tulo ilmaisee matkan pituuden, joka on vakio. Taulukon riveiltä saadaan yhtälö
+                                    $$
+                                    900x = 840 \cdot 148.
+                                    $$
                                 </li>
                             </ol>
                         </div>
