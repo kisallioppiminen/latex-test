@@ -1144,11 +1144,64 @@ topnav: mab2
 
             <div class="teoria">
                 <p>
-                    Teoreeman 5 mukaan toisen asteen yhtälöllä $ax^2 + bx + c = 0$ voi olla kaksi ratkaisua, yksi ratkaisu tai ei yhtään ratkaisua. Jos neliöjuurimerkin alle tuleva luku on positiivinen eli $b^2-4ac > 0$, saadaan ratkaisuja kaksi:
-                    $$x_1 = \frac{-b+\sqrt{b^2-4ac}}{2a}$$
-                    ja
-                    $$x_2 = \frac{-b-\sqrt{b^2-4ac}}{2a}.$$
+                    Toisen asteen yhtälöllä 
+                    $$ax^2 + bx + c = 0$$ 
+                    ratkaisuja on kaksi tai yksi tai ei yhtään riippuen siitä, onko ratkaisukaavassa juurrettava positiivinen, nolla vai negatiivinen. 
                 </p>
+                <img src="/kurssit/mab2/kuvat/MAB2kuva042.png" max-width: 100%; width: auto; height: auto;/>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Aloitetaan kuitenkin palauttamalla mieleen, miten polynomeja kerrotaan keskenään.
+                </p>
+                <p>
+                    Kahden polynomin tulo lasketaan vaiheittain niin, että ensimmäisen tulon tekijän jokaisella termillä kerrotaan jälkimmäinen tulon tekijä samaan tapaan kuin monimin ja polynomin tuloa laskettaessa. Esimerkiksi tulon
+                    $$(2x-3)(-4x^2+x-5)$$
+                    tapauksessa kerrotaan jälkimmäisen polynomin kaikki termit ensin monomilla $2x$ ja sen jälkeen monomilla $-3$:
+                    \begin{align*}
+                    &\quad (\textcolor{blue}{2x}\textcolor{red}{-3})(-4x^2+x-5) \\
+                    &= \textcolor{blue}{-8x^3+2x^2-10x}\textcolor{red}{+12x^2-3x+15}
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="cbf29beb-f668-46af-bcf0-7f81211c4da1">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#1aste16">
+                                Polynomien tulo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="1aste16" class="collapse">
+                        <p> Laske seuraavat tulot:
+                        </p>
+                        <ol class="a">
+                            <li> $(x^2-3)(x+2)$</li>
+                            <li> $(x+2)(x^2-2x+4)$ </li>
+                            <li> $(4x+3)(4x-3)$ </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#1aste16_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="1aste16_v" class="collapse">
+                            <ol class="a">
+                                <li> $x^3+2x^2-3x-6$ </li>
+                                <li> $x^3-4x^2+8$  </li>
+                                <li> $16x^2 - 9$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
                 <p>
                     Esimerkiksi yhtälön $x(2x-3)-3x(1-x) = -1$ ratkaisut saadaan selville, kun yhtälö ensin sievennetään perusmuotoon $ax^2 + bx + c = 0$:
                     \begin{align*}
@@ -1304,55 +1357,7 @@ topnav: mab2
                 </div>
             </div>
 
-                        <div class="teoria">
-                <p>
-                    Aloitetaan kuitenkin palauttamalla mieleen, miten polynomeja kerrotaan keskenään.
-                </p>
-                <p>
-                    Kahden polynomin tulo lasketaan vaiheittain niin, että ensimmäisen tulon tekijän jokaisella termillä kerrotaan jälkimmäinen tulon tekijä samaan tapaan kuin monimin ja polynomin tuloa laskettaessa. Esimerkiksi tulon
-                    $$(2x-3)(-4x^2+x-5)$$
-                    tapauksessa kerrotaan jälkimmäisen polynomin kaikki termit ensin monomilla $2x$ ja sen jälkeen monomilla $-3$:
-                    \begin{align*}
-                    &\quad (\textcolor{blue}{2x}\textcolor{red}{-3})(-4x^2+x-5) \\
-                    &= \textcolor{blue}{-8x^3+2x^2-10x}\textcolor{red}{+12x^2-3x+15}
-                    \end{align*}
-                </p>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="cbf29beb-f668-46af-bcf0-7f81211c4da1">
-
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#1aste16">
-                                Polynomien tulo
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="1aste16" class="collapse">
-                        <p> Laske seuraavat tulot:
-                        </p>
-                        <ol class="a">
-                            <li> $(x^2-3)(x+2)$</li>
-                            <li> $(x+2)(x^2-2x+4)$ </li>
-                            <li> $(4x+3)(4x-3)$ </li>
-                        </ol>
-                        <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#1aste16_v">
-                            Vastaus
-                        </a>
-                        </h2>
-                        <div id="1aste16_v" class="collapse">
-                            <ol class="a">
-                                <li> $x^3+2x^2-3x-6$ </li>
-                                <li> $x^3-4x^2+8$  </li>
-                                <li> $16x^2 - 9$ </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             
 
             <div class="close-section">
