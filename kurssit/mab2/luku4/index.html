@@ -1173,7 +1173,7 @@ topnav: mab2
                             <li> 
                                 tutkimalla, onko ratkaisukaavassa juurrettava positiivinen, nolla vai negatiivinen 
                             </li>
-                            <li> käyttämällä ratkaisukaavaa </li>
+                            <li> käyttämällä ratkaisukaavaa ja määrittämällä ratkaisut sen avulla </li>
                             <li> graafisesti piirtämällä sopivan polynomifunktion kuvaaja. </li>
                         </ol>
                         <h2>
@@ -1210,15 +1210,26 @@ topnav: mab2
 
             <div class="teoria">
                 <p>
-                    Jotta toisen asteen yhtälö saadaan muokattua perusmuotoon, täytyy joissain tapauksissa laskea polynomien tulo. Palautetaan seuraavaksi mieleen, miten polynomeja kerrotaan keskenään.
+                    Jotta toisen asteen yhtälö saadaan muokattua perusmuotoon, täytyy joissakin tapauksissa laskea polynomien tulo. Palautetaan seuraavaksi mieleen, miten polynomeja kerrotaan keskenään.
+                </p>
+                <p>
+                    Kun polynomi kerrotaan luvulla, kerrotaan jokainen termi erikseen:
+                    $$
+                    \textcolor{blue}{2}(3x-4) = \textcolor{blue}{2} \cdot 3x - \textcolor{blue}{2}\cdot 4 = 6x - 8.
+                    $$
+                    Samalla tavalla toimiaan myös silloin, kun polynomi kerrotaan monomilla:
+                    $$
+                    \textcolor{blue}{2x}(3x-4) = \textcolor{blue}{2x} \cdot 3x - \textcolor{blue}{2x}\cdot 4 = 6x^2 - 8x.
+                    $$
                 </p>
                 <p>
                     Kahden polynomin tulo lasketaan vaiheittain niin, että ensimmäisen tulon tekijän jokaisella termillä kerrotaan jälkimmäinen tulon tekijä samaan tapaan kuin monimin ja polynomin tuloa laskettaessa. Esimerkiksi tulon
-                    $$(2x-3)(-4x^2+x-5)$$
-                    tapauksessa kerrotaan jälkimmäisen polynomin kaikki termit ensin monomilla $2x$ ja sen jälkeen monomilla $-3$:
+                    $$(2x-5)(3x-4)$$
+                    tapauksessa kerrotaan jälkimmäisen polynomin kaikki termit ensin monomilla $2x$ ja sen jälkeen monomilla $-5$:
                     \begin{align*}
-                    &\quad (\textcolor{blue}{2x}\textcolor{red}{-3})(-4x^2+x-5) \\
-                    &= \textcolor{blue}{-8x^3+2x^2-10x}\textcolor{red}{+12x^2-3x+15}
+                    &\quad (\textcolor{blue}{2x}\textcolor{red}{-5})(3x-4) \\
+                    &= \textcolor{blue}{6x^2 - 8x}\textcolor{red}{-15x + 20} \\
+                    &= 6x^2 - 23x + 20
                     \end{align*}
                 </p>
             </div>
