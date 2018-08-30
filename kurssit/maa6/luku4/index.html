@@ -354,10 +354,10 @@ topnav: maa6
             <div class="teoria">
                 <p>
                     Edellisen tehtävän idea voidaan yleistää myös korkeamman asteen potenssifunktioille. Jos $n \geq 2$ on positiivinen kokonaisluku, niin 
-                    \begin{multline*}
-                    (x-a)(x^{n-1} + x^{n-2}a + \cdots + xa^{n-2} + a^{n-1}) \\
-                    = x^n - a^n
-                    \end{multline*}
+                    \begin{align*}
+                    (x-a)(x^{n-1} + x^{n-2}a + \cdots + xa^{n-2} &+ a^{n-1}) \\[1mm]
+                    &= x^n - a^n
+                    \end{align*}
                     Tämän yhtälön avulla erotusosamäärä saadaan supistettua niin, että raja-arvo voidaan määrittää.
                 </p>
 
@@ -528,10 +528,10 @@ topnav: maa6
                             &= \frac{f(x) - f(a)}{x-a} + \frac{g(x) - g(a)}{x-a}
                             \end{align*}
                             Summan erotusosamäärä on siis funktioiden $f$ ja $g$ erotusosamäärien summa. Koska funktiot $f$ ja $g$ ovat derivoituvia, näillä erotusosamäärillä on raja-arvot:
-                            \begin{multline*}
-                            \frac{f(x) - f(a)}{x-a} + \frac{g(x) - g(a)}{x-a} \\
-                            \xrightarrow[x \rightarrow a]{} f'(a) + g'(a) 
-                            \end{multline*}
+                            \begin{align*}
+                            \frac{f(x) - f(a)}{x-a} &+ \frac{g(x) - g(a)}{x-a} \\[1mm]
+                            &\xrightarrow[x \rightarrow a]{} f'(a) + g'(a) 
+                            \end{align*}
                             Näin on osoitettu, että 
                             $$(f+g)'(a) = f'(a) + g'(a).$$
                         </p>      
