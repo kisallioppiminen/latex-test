@@ -1,0 +1,15 @@
+header: 
+path: 
+navigation:
+  -
+    name: MAB3
+    path: /kurssit/mab3/
+  -
+    name: 1. Kolmio
+    path: /kurssit/mab3/luku1/
+  -
+    name: 2. Tasogeometriaa
+    path: /kurssit/mab3/luku2/
+  -
+    name: 3. Avaruusgeometriaa
+    path: /kurssit/mab3/luku3/

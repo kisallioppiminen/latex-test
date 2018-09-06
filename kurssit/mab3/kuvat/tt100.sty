@@ -1,0 +1,375 @@
+\usepackage[finnish]{babel}    % suomalaiset babel-makrot
+\usepackage[latin1]{inputenc}  % Unixin merkist�
+\usepackage[T1]{fontenc}       % kirjaimet, joissa aksentteja
+\usepackage{lmodern}           % paremmat fontit
+\usepackage{amsmath}           % AMS-paketteja
+\usepackage{amsthm}
+\usepackage{amsfonts}         % eiv�t toimi yhdess� mathdesignin kanssa
+\usepackage{amssymb}          %
+\usepackage{verbatim}          % comment-ymp�rist�j� varten
+\usepackage{calc}              % tarvitaan mittojen v�lisiin laskutoimituksiin
+\usepackage{graphicx}          % kuvia varten
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[all]{xy}           % kaavioita varten
+%\usepackage{mparhack}          % korjaa marginaalihuomiot oikeaan (ei v��r��n) reunaan
+%\usepackage{perpage}           % alaviitteet sivuittain
+%\usepackage{chngcntr}          % voi lis�t� tai poistaa numeroinnin riippuvuuden toisesta
+\usepackage{booktabs}          % paremmat taulukot
+\usepackage{pbox}
+\usepackage{eurosym}		%euro
+\usepackage{textcomp} %punta
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc,patterns,angles,quotes}
+\renewcommand*{\familydefault}{\sfdefault}
+
+%\addtolength{\hoffset}{-0.5cm}
+\addtolength{\textwidth}{1.0cm}
+\addtolength{\marginparsep}{0.2cm}
+\setlength{\parskip}{0cm}
+
+
+%\usepackage{geometry}
+%\usepackage[hmarginratio=1:1]{geometry}
+%\geometry{bindingoffset=0.5cm}
+%\setlength{\oddsidemargin}{22pt}
+\setlength{\evensidemargin}{68pt}
+%\setlength{\oddsidemargin}{32pt}
+\setlength{\voffset}{-7mm}
+\setlength{\headsep}{1cm}
+\setlength{\footskip}{2.3cm}
+\setlength{\hoffset}{-5mm}
+\setlength{\textheight}{595pt}
+\setlength{\topmargin}{22pt}
+\setlength{\headheight}{14pt}
+%\setlength{\textwidth}{388pt}
+
+% vain sectionin numero esiintyy luvun otsikossa (ei chapterin numeroa mukana)
+% (t�hti ilmoittaa, ett� komento ei sis�ll� kappaleenvaihtoa)
+\renewcommand*\thesection{\arabic{section}}
+
+% vain yht�l�n numero esiintyy yht�l�rivill� (ei chapterin numeroa mukana)
+\renewcommand*\theequation{\arabic{equation}}
+
+% sectionien numerointi jatkuu, vaikka tulisi uusi chapterin numero
+%\counterwithout{section}{chapter}
+
+% kuvien ja taulukoiden numerointi alkaa alusta uudessa sectionissa
+\makeatletter
+\@addtoreset{figure}{section}
+\makeatother
+\makeatletter
+\@addtoreset{table}{section}
+\makeatother
+%\counterwithin{figure}{section}
+% sectionin numero esiintyy kuvien numeroinnissa
+\renewcommand*\thefigure{\thesection.\arabic{figure}}
+\renewcommand*\thetable{\thesection.\arabic{table}}
+
+% alaviitteet sivuittain
+%\MakePerPage{footnote}
+% alaviitteet symboleiksi
+%\renewcommand*\thefootnote{\fnsymbol{footnote}}
+
+\hyphenation{osa-jouk-ko sisa-tulo-ava-ruu-den vek-tori-ava-ruu-den rivi-ekvi-va-lent-ti kor-ke-ampi-ulot-tei-siin vas-ta-vek-to-rit}
+
+
+\usepackage{xcolor}
+\definecolor{darkgray}{gray}{0.3}
+\definecolor{darkgreen}{rgb}{0,0.5,0.4}
+%\swapnumbers
+
+\theoremstyle{plain}
+\newtheorem{lause}{Lause}[section]
+\newtheorem{lemma}[lause]{Lemma}
+\newtheorem{prop}[lause]{Propositio}
+\newtheorem{kor}[lause]{Korollaari}
+\newtheorem{teoreema}[lause]{Teoreema}
+%\newtheorem{lemmaIlmanNumeroa}{Lemma}
+%\newtheorem{lauseIlmanNumeroa}{Lause}
+
+\theoremstyle{definition}
+\newtheorem{maar}[lause]{M\"a\"aritelm\"a}
+\newtheorem{teht}[lause]{Teht\"av\"a}
+\newtheorem{esim}[lause]{Esimerkki}
+
+\theoremstyle{remark}
+\newtheorem*{lisa}{Lisätieto}
+\newtheorem*{huom}{Huomautus}
+\newtheorem*{hist}{Historiaa}
+\newtheorem*{ratk}{Ratkaisu}
+
+% sijoitus integraaliin
+\def\viiva #1 #2 {\mathop{\Big/}\limits_{\!\!\!{#1}}^{\>\,{#2}}}
+
+\DeclareMathOperator{\kernel}{Ker}
+\DeclareMathOperator{\image}{Im}
+\DeclareMathOperator{\syt}{syt}
+\DeclareMathOperator{\pyj}{pyj}
+\DeclareMathOperator{\sgn}{sgn}
+\providecommand{\clock}{\ensuremath{\oplus}}
+\DeclareMathOperator{\proj}{\mathrm{proj}}
+\DeclareMathOperator{\vir}{\mathrm{span}}
+\DeclareMathOperator{\dist}{\mathrm{d}}
+\DeclareMathOperator{\koht}{\mathrm{perp}}
+\DeclareMathOperator{\kuvausL}{L}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\vP}{\mathcal{P}}
+\newcommand{\kB}{\mathcal{B}}
+\newcommand{\kC}{\mathcal{C}}
+\newcommand{\kS}{\mathcal{S}}
+\newcommand{\kR}{\mathcal{R}}
+\newcommand{\kT}{\mathcal{T}}
+\newcommand{\kE}{\mathcal{E}}
+\newcommand{\teuro}{\text{ \euro}}
+\newcommand{\tteuro}{\,\euro \ }
+\newcommand{\vF}{\mathcal{F}}
+
+\newcommand{\vx}{\bar{x}}
+\newcommand{\vy}{\bar{y}}
+\newcommand{\vz}{\bar{z}}
+\newcommand{\vv}{\bar{v}}
+\newcommand{\vw}{\bar{w}}
+\newcommand{\vu}{\bar{u}}
+\newcommand{\vp}{\bar{p}}
+\newcommand{\vq}{\bar{q}}
+\newcommand{\vn}{\bar{n}}
+\newcommand{\va}{\bar{a}}
+\newcommand{\vb}{\bar{b}}
+\newcommand{\vc}{\bar{c}}
+\newcommand{\vd}{\bar{d}}
+\newcommand{\ve}{\bar{e}}
+\newcommand{\vi}{\bar{\imath}}
+\newcommand{\vj}{\bar{\jmath}}
+\newcommand{\vk}{\bar{k}}
+\newcommand{\suoral}{\mathcal{l}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\pv}{\overline}
+\newcommand{\tp}[1]{#1^{\top}}
+\newcommand{\nv}{\bar{0}}
+
+%t�ydennetyt matriisit
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Fontteja:
+
+%KP sans serif:
+%\usepackage[sfmath]{kpfonts} 
+%(Sfmath option only to make math in sans serif. Probablye only for use when base font is sans serif.)
+%\renewcommand*\familydefault{\sfdefault} %K�ytet��n KP sans serifin kanssa 
+%(Only if the base font of the document is to be sans serif)
+
+%Kurier (condensed on hiukan "kapeampi" versio):
+%\usepackage[condensed,math]{kurier} 
+%\usepackage[math]{kurier} 
+%\usepackage{cmbright}
+
+%Iwona:
+%\usepackage[math]{iwona} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\gen}[1]{\langle #1 \rangle}
+%\renewcommand{\bar}[1]{\overline{ #1 }}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+
+% alaviitteet symboleiksi
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\newcommand{\marginaali}[1]{\marginpar[\raggedleft\textbf{#1}]{\raggedright\textbf{#1}}}
+%\newcommand{\marginaali}[1]{\marginpar[\begin{center}\sffamily{#1}\end{center}]{\raggedright\textbf{#1}}}
+%\newcommand{\marginaali}[1]{\marginpar[\raggedleft\sffamily\fontsize{9}{11}\selectfont{#1}]{\raggedright\sffamily\fontsize{9}{11}\selectfont{#1}}}
+% \newcommand{\marginaali}[1]{\marginpar[\raggedleft\mbox{}{\tiny #1}]{\raggedright\mbox{}{\tiny #1}}}
+
+%\newcommand{\maaritelma}[1]{
+%  \noindent
+%  \fbox{\parbox{0.97\textwidth}{
+%      \begin{maar} #1 \end{maar}
+%  }}
+%  \vspace{0.3cm}
+%}
+
+\newcommand{\maaritelma}[2][\@empty]{
+  \vspace{0.3cm}
+  \noindent
+  \marginaali{#1}
+  \fbox{
+    \parbox{0.95\textwidth}{
+     \vspace{-0.2cm}
+     \begin{maar} #2 \end{maar}
+%			#2
+      \vspace{-0.2cm}
+    }
+%    \begin{minipage}{0.95\textwidth}
+%      \vspace{0.1cm}
+%      \begin{maar} #2 \end{maar}
+%      \vspace{-0.2cm}
+%    \end{minipage}
+  }
+  \vspace{0.3cm}
+}
+
+\usepackage{float}
+\usepackage{multicol}
+\setlength{\multicolsep}{1ex}
+
+\floatstyle{plain}
+\newfloat{lisaosuus}{hbt}{lop}
+\floatname{lisaosuus}{Lisähuomio}
+
+\newcommand{\lisatieto}[1]{%
+%\vspace{0.3cm}
+\noindent
+\begin{center}
+\fbox{%
+\begin{minipage}{\textwidth-0.6cm}
+%\setlength{\parindent}{0.5cm}
+\vspace{0.1cm}
+\small
+\begin{lisa}{#1}\vspace{0.1cm}\end{lisa}
+\end{minipage}%
+}
+\end{center}
+%\vspace{0.3cm}
+}
+
+\newenvironment{itemize*}{
+  \begin{list}{$\bullet$}{
+    \setlength{\itemsep}{0cm}
+    \setlength{\topsep}{0cm}
+    \setlength{\labelwidth}{3em}
+    \setlength{\leftmargin}{\labelwidth+\labelsep}
+  }
+}
+{\end{list}}
+
+\let\olddescription\description
+\renewcommand{\description}{
+  \olddescription
+  \setlength{\itemsep}{0pt}
+  \setlength{\topsep}{0pt}
+  \setlength{\itemindent}{0mm}
+  %\setlength{\parskip}{0pt}
+  %\setlength{\parsep}{0pt}
+  %\setlength{\labelwidth}{1cm}
+  %\setlength{\leftmargin}{2cm}
+}
+
+\newenvironment{viivoita*}{
+  \begin{list}{--}{
+    \setlength{\itemsep}{0cm}
+    \setlength{\topsep}{0cm}
+    \setlength{\labelwidth}{3em}
+    \setlength{\leftmargin}{\labelwidth+\labelsep}
+  }
+}
+{\end{list}}
+
+\newenvironment{enumerate*}{
+  \begin{enumerate}
+  \setlength{\itemsep}{0cm}
+  \setlength{\topsep}{0cm}
+  \renewcommand{\theenumi}{\arabic{enumi}.}
+  \renewcommand{\labelenumi}{\theenumi}
+}
+{\end{enumerate}}
+
+\newenvironment{aakkosta*}{
+  \phantom{T}\hspace{2mm}
+  \begin{enumerate}
+  \setlength{\itemsep}{0cm}
+  \setlength{\topsep}{0cm}
+  \setlength{\partopsep}{0mm}
+  \setlength{\parsep}{2mm}
+  \renewcommand{\theenumi}{(\alph{enumi})}
+  \renewcommand{\labelenumi}{\theenumi}
+}
+{\end{enumerate}}
+
+\newcounter{tehtava}[section]
+\renewcommand{\thetehtava}{\arabic{section}.\arabic{tehtava}}
+
+\newenvironment{tehtavat}{
+  \small
+  \begin{list}{\thetehtava.}{
+    \usecounter{tehtava}
+    %\setlength{\itemsep}{0cm}
+%\setlength{\parsep}{0cm}
+    \setlength{\labelwidth}{3em}
+    \setlength{\leftmargin}{\labelwidth+\labelsep}
+  % sis�ist� itemize� tai aakkostamista varten
+%  \renewcommand{\theenumii}{\alph{enumii})}
+%  \renewcommand{\labelenumii}{\theenumii}
+  }
+%  \renewcommand{\labelenumi}{\arabic{enumi}.}
+}
+{\end{list}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Alter some LaTeX defaults for better treatment of figures:
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %   General parameters, for ALL pages:
+    \renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+    %   Parameters for TEXT pages (not float pages):
+    \setcounter{topnumber}{2}
+    \setcounter{bottomnumber}{2}
+    \setcounter{totalnumber}{4}     % 2 may work better (oli 4)
+    \setcounter{dbltopnumber}{2}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+	% N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+	% remember to use [htp] or [htpb] for placement
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{multicol}
+% Figures within a column...
+\makeatletter
+\newenvironment{tablehere}
+{\def\@captype{table}}
+{}
+\newenvironment{figurehere}
+{\def\@captype{figure}}
+{}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\pa}{\mathopen]}		%avoin v�li
+\newcommand{\pe}{\mathclose[}		%suljettu v�li
+\newcommand{\isby}[1]{\stackrel{\textrm{\scriptsize #1}}{=} }
+\newcommand{\funktio}[1]{\stackrel{\scriptstyle #1}{\to} }
+\newcommand{\allev}[2]{\underline{\phantom{#2}}\llap{#1}}
+\newcommand{\equivalent}{\ \Leftrightarrow\ }
+\newcommand{\implikaatio}{\ \Rightarrow \ }
+
+\setlength{\parindent}{0cm}
+\renewcommand{\qedsymbol}{$\Box$}
+%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[LE,RO]{\thepage}
+\lfoot{}
+\cfoot{\includegraphics[scale=0.35]{evlogo.eps}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
