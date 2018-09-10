@@ -700,7 +700,7 @@ topnav: mab3
                 <div class="theorem" id="KOLMIOIDEN YHDENMUOTOISUUSLAUSE KK">
                     <h3>TEOREEMA</h3>
                     <p>
-                        Jos kolmiossa on kaksi kulmaa, jotka ovat yhtä suuria kuin niitä vastaavat kulmat toisessa kolmiossa, niin kolmiot ovat yhdenmuotoiset.
+                        Jos kolmiossa on kaksi kulmaa, jotka ovat yhtä suuria kuin niiden vastinkulmat toisessa kolmiossa, niin kolmiot ovat yhdenmuotoiset.
                     </p>
                     <div class="proof">
                         <p>
@@ -722,19 +722,17 @@ topnav: mab3
                 </p>
                 <img src="/kurssit/mab3/kuvat/MAB3kuva010.png" style="max-width: 100%; width: auto; height: auto"/>
                 <p>
-                    Tiedetään, että janat $AB$ ja $CD$ ovat yhdensuuntaisia eli $AB \parallel CD$. Tästä voidaan päätellä KK-lauseen (teoreema 3) avulla, että kolmiot $OAB$ ja $OCD$ ovat yhdenmuotoisia:
+                    Janat $AB$ ja $CD$ ovat yhdensuuntaisia eli $AB \parallel CD$. Päätellään KK-lauseen (teoreema 3) avulla, että kolmiot $OAB$ ja $OCD$ ovat yhdenmuotoisia:
+                </p>
                 <ul>
                     <li> Kolmioilla $OAB$ ja $OCD$ on yhteinen kulma $\textcolor{DarkGreen}{O}$. </li>
                     <li> Kulmat $\sphericalangle OAB$ ja $\sphericalangle OCD$ ovat samankohtaisia, koska niiden $\textcolor{red}{\textbf{vasen}}$ kylki on samalla suoralla. Lisäksi niiden $\textcolor{blue}{\textbf{oikeat}}$ kyljet $AB$ ja $CD$ ovat yhdensuuntaisia, joten kulmat $\sphericalangle OAB$ ja $\sphericalangle OCD$ ovat yhtä suuria.</li>
-                    <li> Koska kolmiossa $OAB$ on kaksi kulmaa, jotka ovat yhtä suuria kuin niitä vastaavat kulmat kolmiossa $OCD$, niin kolmiot ovat yhdenmuotoiset KK-lauseen nojalla.</li>
+                    <li> Koska kolmiossa $OAB$ on kaksi kulmaa, jotka ovat yhtä suuria kuin niiden vastinkulmat kolmiossa $OCD$, niin kolmiot ovat yhdenmuotoiset KK-lauseen nojalla.</li>
                 </ul>
-                </p>
                 <p>
-                    <img src="/kurssit/maa3/kuvat/suoraK31.png" style="max-width: 100%; width: auto; height: auto"/>
+                    Kolmioiden yhdenmuotoisuuden avulla voidaan päätellä kuvion osien pituuksia, jos osa niistä tunnetaan. Alla kuvatussa tilanteessa kolmion $OAB$ sivun $OB$ pituus voidaan selvittää verrantoyhtälön avulla:
                 </p>
-                <p>
-                    Kolmioiden yhdenmuotoisuuden avulla voidaan nyt päätellä pienemmän kolmion $OAB$ sivujen pituuksia. Esimerkiksi pienemmän kolmion pisimmän sivun $OB$ pituus voidaan selvittää <em>verrantoyhtälön</em> avulla seuraavasti:
-                </p>
+                <img src="/kurssit/mab3/kuvat/MAB3kuva011.png" style="max-width: 100%; width: auto; height: auto"/>
                 <p>
                     Merkitään sivun $OB$ pituutta kirjaimella $x$. Muodostetaan sen suhde vastinsivun $OD$ pituuteen $x + 4$:
                     $$\frac{x}{x+4}.$$
@@ -742,7 +740,7 @@ topnav: mab3
                     $$\frac{5}{5+3}.$$
                     Koska kolmiot ovat yhdenmuotoisia, sivun pituuden suhde vastinsivun pituuteen on sama riippumatta siitä, mitä sivua tarkastellaan. Saadaan siis yhtälö
                     $$\frac{x}{x+4} = \frac{5}{8}.$$
-                    Ratkaistaan tämä yhtälö normaaliin tapaan:
+                    Ratkaistaan tämä yhtälö kertomalla ensin yhtälön molemmat puolet nimittäjillä:
                     \begin{align*}
                     \frac{x}{x+4} &= \frac{5}{8} &\quad &\mid \cdot \, (x+4) \\[1mm]
                     x &= \frac{5}{8}(x+4) &\quad &\mid \cdot \, 8 \\[1mm]
