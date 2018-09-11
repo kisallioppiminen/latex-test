@@ -704,7 +704,7 @@ topnav: mab3
 
             <div class="teoria">
                 <p>
-                    On mahdollista osoittaa, että jos kolmion kaksi kulmaa ovat yhtä suuria kuin toisen kolmion kaksi kulmaa, niin yhdenmuotoisuuden määritelmän molemmat ehdot täyttyvät ja kolmiot ovat yhdenmuotoiset. Perustelu on sen verran työläs, että siihen ei tällä kurssilla syvennytä.
+                    On mahdollista osoittaa, että jos kolmion kaksi kulmaa ovat yhtä suuret kuin niiden vastinkulmat toisessa kolmiossa, niin yhdenmuotoisuuden määritelmän molemmat ehdot täyttyvät ja kolmiot ovat yhdenmuotoiset. Perustelu on sen verran työläs, että siihen ei tällä kurssilla syvennytä.
                 </p>
 
                 <div class="theorem" id="KOLMIOIDEN YHDENMUOTOISUUSLAUSE KK">
@@ -719,40 +719,37 @@ topnav: mab3
                 </p>
                 <img src="/kurssit/mab3/kuvat/MAB3kuva010.png" style="max-width: 100%; width: auto; height: auto"/>
                 <p>
-                    Janat $AB$ ja $CD$ ovat yhdensuuntaisia eli $AB \parallel CD$. Päätellään KK-lauseen (teoreema 3) avulla, että kolmiot $OAB$ ja $OCD$ ovat yhdenmuotoisia:
+                    Yllä olevassa kuvassa janat $AB$ ja $CD$ ovat yhdensuuntaisia eli $AB \parallel CD$. Päätellään KK-lauseen (teoreema 3) avulla, että kolmiot $OAB$ ja $OCD$ ovat yhdenmuotoisia:
                 </p>
                 <ul>
-                    <li> Kolmioilla $OAB$ ja $OCD$ on yhteinen kulma $\textcolor{DarkGreen}{O}$. </li>
+                    <li> Kolmioilla $OAB$ ja $OCD$ on yhteinen kulma $O$. </li>
                     <li> Kulmat $\sphericalangle OAB$ ja $\sphericalangle OCD$ ovat samankohtaisia, koska niiden $\textcolor{red}{\textbf{vasen}}$ kylki on samalla suoralla. Lisäksi niiden $\textcolor{blue}{\textbf{oikeat}}$ kyljet $AB$ ja $CD$ ovat yhdensuuntaisia, joten kulmat $\sphericalangle OAB$ ja $\sphericalangle OCD$ ovat yhtä suuria.</li>
                     <li> Koska kolmiossa $OAB$ on kaksi kulmaa, jotka ovat yhtä suuria kuin niiden vastinkulmat kolmiossa $OCD$, niin kolmiot ovat yhdenmuotoiset KK-lauseen nojalla.</li>
                 </ul>
                 <p>
-                    Kolmioiden yhdenmuotoisuuden avulla voidaan päätellä kuvion osien pituuksia, jos osa niistä tunnetaan. Alla kuvatussa tilanteessa kolmion $OAB$ sivun $OB$ pituus voidaan selvittää verrantoyhtälön avulla:
+                    Kolmioiden yhdenmuotoisuuden avulla voidaan päätellä kuvion osien pituuksia, jos osa niistä tunnetaan. Alla kuvatussa tilanteessa janan $OB$ pituus voidaan selvittää verrantoyhtälön avulla.
                 </p>
                 <img src="/kurssit/mab3/kuvat/MAB3kuva011.png" style="max-width: 100%; width: auto; height: auto"/>
+                <p>
+                    Tarkastellaan kolmion $OAB$ sivuja ja niiden vastinsivuja kolmiossa $OCD$:
+                </p>
                 <div align="center">
                     <table style="width = 90%">
                         <tr>
-                            <th>  </th>
-                            <th> Nimi </th>
+                            <th> Sivu </th>
                             <th> Pituus </th>
-                            <th> </th>
-                            <th> Nimi </th>
+                            <th> Vastinsivu </th>
                             <th> Pituus </th>
                         </tr>
                         <tr>
-                            <th> Sivu </th>
                             <td> $OB$ </td>
                             <td> $x$ </td>
-                            <td> </td>
-                            <td> $OA$ </td>
-                            <td> 5 </td>
+                            <td> $OD$ </td>
+                            <td> $x + 4$ </td>
                         </tr>
                         <tr>
-                            <th> Vastinsivu </th>
-                            <td> $OD$ </td>
-                            <td> $x+4$ </td>
-                            <td> </td>
+                            <td> $OA$ </td>
+                            <td> $5$ </td>
                             <td> $OC$ </td>
                             <td> $5+3 = 8$ </td>
                         </tr>
