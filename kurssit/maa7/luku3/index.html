@@ -1110,7 +1110,7 @@ topnav: maa7
 
             <div class="teoria">
                 <p>
-                    Sinin ja kosinin arvoja voidaan tarkastella yksikköympyrän avulla yksityiskohtaisemminkin. Seuraava tehtävä havainnollistaa asiaa.
+                    Sinin ja kosinin arvoja voidaan tarkastella yksikköympyrän avulla yksityiskohtaisemminkin. Seuraavat tehtävät havainnollistavat asiaa.
                 </p>
             </div>
 
@@ -1119,7 +1119,7 @@ topnav: maa7
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA7t316">
-                                Funktion kulku
+                                Funktion arvojoukko
                             </a>
                         </h1>
                     </header>
@@ -1129,9 +1129,89 @@ topnav: maa7
                             $$
                             g(x) = \sin \left(\dfrac{x}{6}\right) - 1,
                             $$
-                            missä $\pi < x < 7\pi$. Tehtävänä on selvittää funktion arvojoukko ja funktion kulku.
+                            missä $\pi < x < 7\pi$. Tehtävänä on selvittää funktion arvojoukko.
                         </p>
                         <ol class="a">
+                            <li>
+                                Merkitään 
+                                $$
+                                z = \dfrac{x}{6}.
+                                $$
+                                Tehtävässä sanotaan, että $\pi < x < 7\pi$. Päättele, millä välillä $z$ on.
+                            </li>
+                            <li>
+                                Selvitä yksikköympyrän avulla, mitä arvoja funktio $h(z) = \sin z$ saa a-kohdassa päättelemälläsi välillä.
+                            </li>
+                            <li>
+                                Mitä arvoja funktio $$g(x) = \sin \left(\dfrac{x}{6}\right) - 1$$ saa, kun $\pi < x < 7\pi$? <br>
+                                Vinkki: hyödynnä b-kohdan tulosta.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t316_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t316_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Jos $\pi < x < 7\pi$, niin 
+                                    $$\dfrac{\pi}{6} < \dfrac{x}{6} < \dfrac{7\pi}{6}$$
+                                    eli
+                                    $$\dfrac{\pi}{6} < z < \dfrac{7\pi}{6}.$$
+                                </li>
+                                <li>
+                                    Funktio $h(z) = \sin z$ saa välillä $\left] \frac{\pi}{6}, \frac{7\pi}{6}\right[$ arvot välillä $$\left] -\frac{1}{2}, 1\right[.$$ 
+                                    Tämä voidaan päätellä alla olevasta yksikköympyrästä ja siitä, että 
+                                    $$
+                                    \sin\left(\frac{7\pi}{6}\right) = -\dfrac{1}{2}.
+                                    $$
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva133.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li>
+                                    Kun $\pi < x < 7\pi$, niin 
+                                    $$\dfrac{\pi}{6} < z < \dfrac{7\pi}{6}$$
+                                    ja funktio 
+                                    \begin{aling*}
+                                    g(x) &= \sin \left(\dfrac{x}{6}\right) - 1 \\[1mm]
+                                    &= \sin z - 1
+                                    \end{align*}
+                                    saa arvot 
+                                    $$\left] -\frac{3}{2}, 0\right[.$$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t317-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t317">
+                                Funktion kulku
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t317" class="collapse">
+                        <p>
+                            Tutkitaan edelleen funktiota 
+                            $$
+                            g(x) = \sin \left(\dfrac{x}{6}\right) - 1,
+                            $$
+                            missä $\pi < x < 7\pi$. Tehtävänä on selvittää, missä funktio on kasvava ja missä vähenevä.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Edellisessä tehtävässä pääteltiin, että kun $\pi < x < 7\pi$, niin 
+                                $$\dfrac{\pi}{6} < \frac{x}{6} < \dfrac{7\pi}{6}.$$
+                                Päättele yksikköympyrän avulla, missä sinifunktio on kasvava ja missä vähenevä, kun kulma on välillä 
+                                $$
+                                \left]\frac{\pi}{6}, \frac{7\pi}{6}\right[.
+                                $$
+                            </li>
                             <li>
                                 Tehtävässä sanotaan, että $\pi < x < 7\pi$. Päättele, millä välillä tällöin on $\dfrac{x}{6}$.
                             </li>
@@ -1147,11 +1227,11 @@ topnav: maa7
                             </li>
                         </ol>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t316_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t317_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA7t316_v" class="collapse">
+                        <div id="MAA7t317_v" class="collapse">
                             <ol class="a">
                                 <li>
                                     Jos $\pi < x < 7\pi$, niin 
@@ -1194,7 +1274,6 @@ topnav: maa7
                     </div>
                 </div>
             </div>
-            
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#yhdistetty3">
