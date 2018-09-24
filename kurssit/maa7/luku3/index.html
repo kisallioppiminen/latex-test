@@ -1016,7 +1016,7 @@ topnav: maa7
                 </p>
 
                 <p>
-                    Jos funktion lausekkeessa esiintyy vain siniä tai kosinia, voidaan funktion suurin ja pienin arvo selvittää sinin tai kosinin ominaisuuksien perusteella. Tätä harjoitellaan seuraavassa tehtävässä.
+                    Jos funktion lausekkeessa esiintyy sini tai kosini vain yhdessä termissä, voidaan funktion suurin ja pienin arvo selvittää sinin tai kosinin ominaisuuksien perusteella. Tätä harjoitellaan seuraavassa tehtävässä.
                 </p>
             </div>
 
@@ -1077,6 +1077,110 @@ topnav: maa7
                                 </li>
                                 <li>
                                     Funktion $f(x) = \cos(3x) + 7$ pienin arvo on $-1 + 7 = 6$.
+                                </li>
+                                <li>
+                                    Funktion $f(x) = \cos(3x) + 7$ jakson pituus on 
+                                    $$
+                                    \dfrac{2\pi}{3}.
+                                    $$  
+                                </li>
+                                <li>
+                                    Kosinifunktio saa suurimman arvonsa kun kulma on 0. Myös funktio $f(x) = \cos(3x) + 7$ saa siten suurimman arvonsa kohdassa $x = 0$:
+                                    $$
+                                    f(0) = \cos (3 \cdot 0) + 7 = \cos 0 + 7 = 1 + 7 = 8.
+                                    $$
+                                    Kosinifunktio saa pienimmän arvonsa puolen jakson päässä tästä eli kohdassa 
+                                    $$
+                                    \dfrac{2\pi}{3} : 2 = \dfrac{\pi}{3}.
+                                    $$
+                                    Varmistetaan vielä:
+                                    $$
+                                    f\left(\dfrac{\pi}{3}\right) = \cos\left(3 \cdot \dfrac{\pi}{3}\right) + 7 = \cos \pi + 7 = -1 + 7 = 6. 
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Funktion kulkua voidaan tällaisissa tilanteissa tutkia myös yksikköympyrän avulla. Seuraava tehtävä havainnollistaa asiaa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t316-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t316">
+                                Funktion kulku
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t316" class="collapse">
+                        <p>
+                            Tutkitaan funktiota 
+                            $$
+                            g(x) = \sin \left(\dfrac{x}{6}\right) - 1
+                            $$
+                            välillä $\pi < x < 7\pi$. Tehtävänä on selvittää funktion arvojoukko ja funktion kulku.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Jos muuttuja $x$ on välillä $\pi < x < 7\pi$, niin millä välillä tällöin on $\frac{x}{6}$?
+                            </li>
+                            <li>
+                                Selvitä yksikköympyrän avulla, mitä arvoja sinifunktio saa a-kohdassa päättelemälläsi välillä.
+                            </li>
+                            <li>
+                                Mitä arvoja funktio $g(x) = \sin \left(\dfrac{x}{6}\right) - 1$ saa, kun $\pi < x < 7\pi$?
+                            </li>
+                            <li>
+                                Milloin funktio $g$ on kasvava ja milloin vähenevä?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t316_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t316_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Jos $\pi < x < 7\pi$, niin 
+                                    $$\dfrac{\pi}{6} < \frac{x}{6} < \dfrac{7\pi}{6}.$$
+                                </li>
+                                <li>
+                                    Sinifunktio saa välillä $\left] \frac{\pi}{6}, \frac{7\pi}{6}\right[$ arvot välillä $\left] -\frac{1}{2}, 1\right[$. Tämä voidaan päätellä alla olevasta yksikköympyrästä ja siitä, että 
+                                    $$
+                                    \sin\left\frac{7\pi}{6}\right) = -\dfrac{1}{2}.
+                                    $$
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva133.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li>
+                                    Kun $\pi < x < 7\pi$, niin 
+                                    $$\dfrac{\pi}{6} < \frac{x}{6} < \dfrac{7\pi}{6}$$
+                                    ja funktio $g(x) = \sin \left(\dfrac{x}{6}\right) - 1$ saa arvot $\left] -\frac{1}{2}-1, 1-1\right[$ eli arvot $\left] -\frac{3}{2}, 0\right[$.
+                                </li>
+                                <li>
+                                    Funktio $g$ on kasvava, kun
+                                    $$
+                                    \frac{\pi}{6} < \frac{x}{6} \leq \frac{\pi}{2}
+                                    $$
+                                    eli
+                                    $$
+                                    \pi < x \leq 3\pi.
+                                    $$
+                                    Funktio $g$ on vähenevä, kun 
+                                    $$
+                                    \frac{\pi}{2} \leq \dfrac{x}{6} \leq \frac{7\pi}{6}
+                                    $$
+                                    eli
+                                    $$
+                                    3\pi \leq x \leq 7\pi.
+                                    $$
                                 </li>
                                 <li>
                                     Funktion $f(x) = \cos(3x) + 7$ jakson pituus on 
