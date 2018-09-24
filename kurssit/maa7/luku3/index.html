@@ -1012,11 +1012,97 @@ topnav: maa7
         <div id="yhdistetty3" class="collapse">
             <div class="teoria">
                 <p>
-                    
+                    Tässä luvussa perehdytään vielä erilaisiin tapoihin tutkia trigonometristen funktioiden kulkua. Päättelyissä voidaan tilanteesta riippuen hyödyntää sinin ja kosinin ominaisuuksia, yksikköympyrää, sinin ja kosinin jaksoja sekä derivaattaa.  
+                </p>
+
+                <p>
+                    Jos funktion lausekkeessa esiintyy vain siniä tai kosinia, voidaan funktion suurin ja pienin arvo selvittää sinin tai kosinin ominaisuuksien perusteella. Tätä harjoitellaan seuraavassa tehtävässä.
                 </p>
             </div>
 
-            
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t315-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t315">
+                                Suurin ja pienin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t315" class="collapse">
+                        <p>
+                            Tutkitaan funktiota 
+                            $$
+                            f(x) = \cos (3x) + 7.
+                            $$
+                            Tehtävänä on selvittää tämän funktion suurin ja pienin arvo sekä jakson pituus.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Mikä on kosinifunktion $x \mapsto \cos x$ suurin arvo? Mieti asiaa yksikköympyrän avulla tai kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa7/luku1/">luvun 1</a> teoreema 4. 
+                            </li>
+                            <li>
+                                Mikä on funktion $x \mapsto \cos(3x)$ suurin arvo? Millainen vaikutus kertoimella 3 on, vai onko sillä vaikutusta?
+                            </li>
+                            <li>
+                                Mikä on funktion $f(x) = \cos(3x) + 7$ suurin arvo? Millainen vaikutus vakiolla 7 on, vai onko sillä vaikutusta?
+                            </li>
+                            <li>
+                                Päättele vastaavalla tavalla, mikä on funktion $f(x) = \cos(3x) + 7$ pienin arvo.
+                            </li>
+                            <li>
+                                Mikä on funktion $f$ jakson pituus? 
+                                <br>
+                                Vinkki: teoreema 22.
+                            </li>
+                            <li>
+                                Anna esimerkki kohdista, joissa funktio $f$ saa suurimman ja pienimmän arvonsa.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t315_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t315_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kosinifunktion $x \mapsto \cos x$ suurin arvo on $1$.
+                                </li>
+                                <li>
+                                    Funktion $x \mapsto \cos(3x)$ suurin arvo on $1$. Kerroin 3 vaikuttaa tässä vain jakson pituuteen, ei suurimpaan eikä pienimpään arvoon.
+                                </li>
+                                <li>
+                                    Funktion $f(x) = \cos(3x) + 7$ suurin arvo on $1 + 7 = 8$.
+                                </li>
+                                <li>
+                                    Funktion $f(x) = \cos(3x) + 7$ pienin arvo on $-1 + 7 = 6$.
+                                </li>
+                                <li>
+                                    Funktion $f(x) = \cos(3x) + 7$ jakson pituus on 
+                                    $$
+                                    \dfrac{2\pi}{3}.
+                                    $$  
+                                </li>
+                                <li>
+                                    Kosinifunktio saa suurimman arvonsa kun kulma on 0. Myös funktio $f(x) = \cos(3x) + 7$ saa siten suurimman arvonsa kohdassa $x = 0$:
+                                    $$
+                                    f(0) = \cos (3 \cdot 0) + 7 = \cos 0 + 7 = 1 + 7 = 8.
+                                    $$
+                                    Kosinifunktio saa pienimmän arvonsa puolen jakson päässä tästä eli kohdassa 
+                                    $$
+                                    \dfrac{2\pi}{3} : 2 = \dfrac{\pi}{3}.
+                                    $$
+                                    Varmistetaan vielä:
+                                    $$
+                                    f\left(\dfrac{\pi}{3}\right) = \cos\left(3 \cdot \dfrac{\pi}{3}\right) + 7 = \cos \pi + 7 = -1 + 7 = 6. 
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
 
             <div class="close-section">
