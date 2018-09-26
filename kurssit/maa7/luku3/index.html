@@ -1311,6 +1311,108 @@ topnav: maa7
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    Jos funktio lausekkeessa esiintyy useampi erilainen sini tai kosini, funktion kulun tutkimiseen tarvitaan yleensä derivaattaa. Tarkastellaan esimerkiksi funktiota
+                    $$
+                    f(x) = \sin x + \cos^2 x.
+                    $$
+                    Aloitetaan määrittämällä tämän funktion jakso. Tarkastellaan aluksi jokaista yhteenlaskettavaa erikseen. Tiedetään, että sinifunktion 
+                    $$
+                    x \mapsto \sin x
+                    $$
+                    jakso on $2\pi$. Yksikköympyrästä voidaan havaita, että kosinilla pätee yhtälö
+                    $$
+                    \cos (x + \pi) = -\cos x.
+                    $$  
+                    Toiseen potenssiin korotus hävittää miinusmerkin, joten toiset potenssit ovat samat:
+                    $$
+                    \cos^2 (x + \pi) = \cos^2 x.
+                    $$
+                    Tästä voidaan päätellä, että funktion 
+                    $$
+                    x \mapsto \cos^2 x
+                    $$
+                    jakso on $\pi$. Funktioiden kuvaajat tukevat tätä päättelyä:
+                    <br>
+                    <img src="/kurssit/maa7/kuvat/MAA7kuva135.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Sinifunktion jakso on siis pitempi ja sisältää tasan kaksi funktion $x \mapsto \cos^2 x$ jaksoa. Siten summafunktio $f$ ehtii sinin jakson aikana saada kaikki mahdolliset arvonsa. Tästä voidaan päätellä, että funktion $f$ jakso on $2\pi$. Kuva tukee johtopäätöstä:
+                    <br>
+                    <img src="/kurssit/maa7/kuvat/MAA7kuva136.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Funktion $f$ arvot toistuvat siis samanlaisina aina funktion jakson eli kahden piin välein. Tämän vuoksi riittää tarkastella suljettua väliä, jonka pituus on funktion jakson pituus $2\pi$. Funktio saa suurimman ja pienimmän arvonsa tällaisen välin päätepisteissä tai derivaatan nollakohdissa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t318-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t318">
+                                Suurin ja pienin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t318" class="collapse">
+                        <p>
+                            Jatketaan funktion
+                            $$
+                            f(x) = \sin x + \cos^2 x
+                            $$
+                            tarkastelua. Tehtävänä on määrittää sen suurin ja pienin arvo.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Valitse jokin suljettu väli, jonka pituus on funktion $f$ jakso $2\pi$.
+                            </li>
+                            <li>
+                                Määritä derivaattafunktio $f'(x)$.
+                            </li>
+                            <li>
+                                Selvitä, mitä nollakohtia derivaattafunktiolla on a-kohdassa valitsemallasi välillä.
+                            </li>
+                            <li>
+                                Laske funktion arvo valitsemasi välin päätepisteissä ja välille osuvissa derivaatan nollakohdissa. Mikä on funktion suurin arvo? Entä pienin?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t318_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t318_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Väli voi olla esimerkiksi $[0, 2\pi]$.
+                                </li>
+                                <li>
+                                    $f'(x) = \cos x - 2\cos x \sin x$
+                                </li>
+                                <li>
+                                    Välillä $[0, 2\pi]$ derivaattafunktiolla on nollakohdat $\dfrac{\pi}{6}$, $\dfrac{\pi}{2}$, $\dfrac{5\pi}{6}$ ja $\dfrac{3\pi}{2}$. 
+                                </li>
+                                <li>
+                                    Lasketaan arvot:
+                                    \begin{align*}
+                                    f\left(0\right) &= \sin 0 + \cos^2 0 = 1 \\[1mm]
+                                    f\left(\frac{\pi}{6}\right) &= \sin \frac{\pi}{6} + \cos^2 \frac{\pi}{6} = \frac{5}{4} \\[1mm]
+                                    f\left(\frac{\pi}{2}\right) &= \sin \frac{\pi}{2} + \cos^2 \frac{\pi}{2} = 1 \\[1mm]
+                                    f\left(\frac{5\pi}{6}\right) &= \sin \frac{5\pi}{6} + \cos^2 \frac{5\pi}{6} = \frac{5}{4} \\[1mm]
+                                    f\left(\frac{3\pi}{2}\right) &= \sin \frac{3\pi}{2} + \cos^2 \frac{3\pi}{2} = -1 \\[1mm]
+                                    f\left(2\pi\right) &= \sin 2\pi + \cos^2 2\pi = 1 
+                                    \end{align*}
+                                    Funktion $f$ pienin arvo on $-1$ ja suurin arvo on 
+                                    $$
+                                    \frac{5}{4}.
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#yhdistetty3">
                     Sulje kappale
