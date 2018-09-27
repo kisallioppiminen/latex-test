@@ -1416,6 +1416,88 @@ topnav: maa7
                 </div>
             </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA7t319-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t319">
+                                Suurin ja pienin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t318" class="collapse">
+                        <p>
+                            Tarkastellaan funktiota
+                            $$
+                            f(x) = \cos 2x - 4 \cos x.
+                            $$
+                            Tehtävänä on määrittää sen suurin ja pienin arvo.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Mikä on tavallisen kosinifunktion jakso? Entä mikä on funktion $x \mapsto \cos 2x$ jakso? Päättele näiden tietojen avulla, mikä on funktion $f$ jakso. 
+                            </li>
+                            <li>
+                                Valitse jokin suljettu väli, jonka pituus on sama kuin funktion $f$ jakso.
+                            </li>
+                            <li>
+                                Määritä derivaattafunktio $f'(x)$. Selvitä, mitä nollakohtia derivaattafunktiolla on b-kohdassa valitsemallasi välillä.
+                                <br>
+                                Vinkki: nollakohtien ratkaisemisessa auttaa teoreema 17.
+                            </li>
+                            <li>
+                                Laske funktion arvo valitsemasi välin päätepisteissä ja välille osuvissa derivaatan nollakohdissa. Mikä on funktion suurin arvo? Entä pienin?
+                            </li>
+                            <li>
+                                Tarkista päättelysi piirtämällä funktion $f$ kuvaaja esimerkiksi Geogebralla.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t318_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t318_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kosinifunktion jakso on $2\pi$. Funktion $x \mapsto \cos 2x$ jakso on 
+                                    $$
+                                    \dfrac{2\pi}{2} = \pi.
+                                    $$
+                                    Tämä sisältyy tasan kaksi kertaa kosinifunktion jaksoon, joten funktion $f$ jakso on sama kuin kosinifunktiolla eli $2\pi$.
+                                </li>
+                                <li>
+                                    Väli voi olla esimerkiksi $[0, 2\pi]$.
+                                </li>
+                                <li>
+                                    Derivaattafunktio on 
+                                    $$f'(x) = -2\sin 2x + 4\sin x.$$
+                                    Kaksinkertaisen kulman sinin kaavan avulla (teoreema 17) se saadaan muotoon
+                                    $$
+                                    f'(x) = -4\sin x \cos x + 4\sin x.
+                                    $$
+                                    Välillä $[0, 2\pi]$ derivaattafunktiolla on nollakohdat $0$, $\pi$ ja $2\pi$.
+                                    Ne löydetään ratkaisemalla yhtälö
+                                    $$
+                                    -4\sin x (\cos x - 1) = 0.
+                                    $$
+                                </li>
+                                <li>
+                                    Lasketaan arvot derivaatan nollakohdissa ja tarkasteluvälin päätepisteissä:
+                                    \begin{align*}
+                                    f\left(0\right) &=  -3 \\[1mm]
+                                    f\left(\pi) &= 6 \\[1mm]
+                                    f\left(2\pi\right) &=  -3 
+                                    \end{align*}
+                                    Funktion $f$ pienin arvo on $-3$ ja suurin arvo on 
+                                    $6$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#yhdistetty3">
                     Sulje kappale
