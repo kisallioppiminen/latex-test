@@ -1,0 +1,15 @@
+header: 
+path: 
+navigation:
+  -
+    name: MAA9
+    path: /kurssit/maa9/
+  -
+    name: 1. Integraali
+    path: /kurssit/maa9/luku1/
+  -
+    name: 2. Integraalifunktio
+    path: /kurssit/maa9/luku2/
+  -
+    name: 3. Määrätty integraali
+    path: /kurssit/maa9/luku3/
