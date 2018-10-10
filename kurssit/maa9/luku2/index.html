@@ -191,6 +191,56 @@ topnav: maa9
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    Edellisessä tehtävässä havaittiin, että funktion integraalifunktiot erosivat toisistaan vakiotermin osalta. Seuraava lause osoittaa, että tämä pätee yleisesti kaikilla sellaisilla funktioilla, joiden määrittelyjoukko on jokin lukusuoran väli (tai koko lukusuora). 
+                </p>
+
+                <div class="theorem" id="INTEGRAALIFUNKTIOT">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että funktion $f$ määrittelyjoukko on väli. Oletetaan, että $F$ on funktion $f$ integraalifunktio. Tällöin
+                        <ul>
+                            <li>
+                                kaikki funktiot $G(x) = F(x) + C$, missä $C$ on vakio, ovat funktion $f$ integraalifunktioita
+                            </li>
+                            <li>
+                                funktiolla $f$ ei ole muita integraalifunktioita kuin edellä mainitut.
+                            </li>
+                        </ul>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu:
+                            <ul>
+                                <li>
+                                    Oletetaan, että $C$ on vakio. Derivoidaan funktio $G(x) = F(x) + C$:
+                                    $$
+                                    G'(x) = F'(x) + 0 = f(x).
+                                    $$
+                                    Tässä käytettiin tietoa, että vakion $C$ derivaatta on nolla ja $F'(x) = f(x)$, mikä seuraa siitä, että $F$ on funktion $f$ integraalifunktio.
+                                </li>
+                                <li>
+                                    Oletetaan, että myös $H$ on funktion $f$ integraalifunktio. Tällöin $H'(x) = f(x)$. Tutkitaan integraalifunktioiden erotuksen $H(x)-F(x)$ derivaattaa:
+                                    $$
+                                    \mathop{\mathrm{D}} (H(x) - F(x)) = H'(x) - F'(x) = f(x) - f(x) = 0.
+                                    $$
+                                    Koska funktion $H(x) - F(x)$ derivaatta on nolla koko määrittelyvälillä, Integraalilaskennan peruslauseen mukaan funktio on vakiofunktio. Siis on olemassa vakio $C$, jolla
+                                    $$
+                                    H(x) - F(x) = C
+                                    $$
+                                    eli 
+                                    $$
+                                    H(x) = F(x) + C.
+                                    $$
+                                    Tästä voidaan päätellä, että mikä tahansa funktion $f$ integraalifunktio on muotoa $F(x) + \text{ vakio}$.
+                                </li>
+                            </ul>
+                        </p>      
+                    </div>
+                </div>
+            </div>
+
 
         </div>
     </section>
