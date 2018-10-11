@@ -121,7 +121,10 @@ topnav: maa9
                                     $$
                                     H'(x) = 3x^2 + 6x
                                     $$
-                                    näyttää erilaiselta kuin funktio $f$. Lisäksi esimerkiksi $H'(1) = 9$ ja $f(1) = 5$, joten voidaan olla täysin varmoja, että derivaattafunktio $H'$ ja funktio $f$ ovat eri funktiot.
+                                    näyttää erilaiselta kuin funktio $f$. Lisäksi esimerkiksi $H'(1) = 9$ ja $f(1) = 5$, joten voidaan olla täysin varmoja, että 
+                                    $$
+                                    H' \neq f.
+                                    $$
                                 </li>
                             </ol>
                         </div>
@@ -186,7 +189,7 @@ topnav: maa9
                             </ol>
                             <img src="/kurssit/maa9/kuvat/MAA9kuva024.png" max-width: 100%; width: auto; height: auto;/>
                             <p>
-                                Integraalifunktiot eroavat toisistaan vain vakiolla, joten ne sijaitsevat koordinaatistossa eri korkeudell mutta ovat muuten saman muotoisia.
+                                Integraalifunktiot eroavat toisistaan vain vakiolla, joten ne sijaitsevat koordinaatistossa eri korkeudella mutta ovat muuten saman muotoisia.
                             </p>
                         </div>
                     </div>
@@ -298,13 +301,13 @@ topnav: maa9
                         <div id="MAA9t203_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    $\displaystyle \int 8x \,\mathrm{d}x  = 4x^2 + C$, sillä $\mathop{\mathrm{D}} (4x^2 + C) = 4 \cdot 2x  + 0 = 8x$.
+                                    $\displaystyle \int 8x \,\mathrm{d}x  = 4x^2 + C$, sillä $$\mathop{\mathrm{D}} (4x^2 + C) = 4 \cdot 2x  + 0 = 8x.$$
                                 </li>
                                 <li> 
-                                    $\displaystyle \int \cos x \,\mathrm{d}x  = \sin x + C$, sillä $\mathop{\mathrm{D}} (\sin x + C) = \cos x + 0 = \cos x$.
+                                    $\displaystyle \int \cos x \,\mathrm{d}x  = \sin x + C$, sillä $$\mathop{\mathrm{D}} (\sin x + C) = \cos x + 0 = \cos x.$$
                                 </li>
                                 <li>
-                                    $\displaystyle \int 6x^2 \,\mathrm{d}x  = 2x^3 + C$, sillä $\mathop{\mathrm{D}} (2x^3 + C) = 2 \cdot 3x^2  + 0 = 6x^2$.
+                                    $\displaystyle \int 6x^2 \,\mathrm{d}x  = 2x^3 + C$, sillä $$\mathop{\mathrm{D}} (2x^3 + C) = 2 \cdot 3x^2  + 0 = 6x^2.$$
                                 </li>
                             </ol>
                         </div>
@@ -314,7 +317,18 @@ topnav: maa9
 
             <div class="teoria">
                 <p>
-                    Integraalifunktion määritelmän mukaan derivoimalla voidaan aina tarkistaa, onko löydetty oikea integraalifunktio. Integraalifunktioiden ominaisuudet ja ja erilaiset integrointisäännöt ovat nekin oikeastaan derivointisääntöjä luettuna takaperin. Derivointisääntöjen hyvä hallitseminen helpottaakin funktioiden integroimista  huomattavasti. 
+                    Merkintä 
+                    $$
+                    \int f(x) \,\mathrm{d}x
+                    $$
+                    tarkoittaa funktion $f$ kaikkia integraalifunktioita. Se voidaan lukea "integraali f(x) dx". Merkinnällä $\mathrm{d}x$ ilmaistaan, mikä on muuttujakirjain, jonka suhteen integroidaan. Tieto on tarpeen erityisesti, jos integroitavan funktion lausekkeessa on useita kirjaimia. Esimerkiksi
+                    $$
+                    \int 2ax \,\mathrm{d}x = ax^2 + C
+                    $$
+                    mutta
+                    $$
+                    \int 2ax \,\mathrm{d}a = a^2x + C.
+                    $$
                 </p>
             </div>
 
@@ -331,6 +345,7 @@ topnav: maa9
         </header>
         <div id="MAA9luku2kpl2" class="collapse">
             <div class="teoria">
+                
                 <p>
                     <a href="http://kisallioppiminen.fi/kurssit/maa6/luku4/">Kurssissa MAA6</a> näytettiin, että funktioiden summan derivaatta on derivaattojen summa, ja että vakiolla kerrotun funktion derivaatta on derivaatta kerrottuna samalla vakiolla. Seuraavissa tehtävissä tutkitaan, pätevätkö vastaavat tulokset myös integraaleille.
                 </p>
