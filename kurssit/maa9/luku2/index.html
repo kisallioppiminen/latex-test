@@ -552,6 +552,30 @@ topnav: maa9
                         Kun potenssifunktiota derivoidaan, vanha eksponentti putoaa kertoimeksi muuttujan eteen. Kun potenssifunktiota integroidaan, pitää muuttujan eteen lisätä sopiva kerroin, joka kumoaa derivoinnissa ilmestyvän kertoimen.
                     </li>
                 </ol>
+                <p>
+                    Potenssifunktioiden derivointisäännön avulla saadaan perusteltua seuraava yleinen potenssifunktioiden integrointisääntö. Sen avulla voidaan integroida myös kaikki juurifunktiot, sillä ne voidaan ilmaista ensin murtopotensseina ja integroida sen jälkeen.
+                </p>
+
+                <div class="theorem" id="POTENSSIFUNKTIOIDEN INTEGROIMINEN">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että $r$ on rationaalilluku ja $r \neq -1$. Tällöin
+                        <!-- <br>  
+                        <img src="/kurssit/maa9/kuvat/MAA9kaava004.png" max-width: 100%; width: auto; height: auto;/> -->
+                        $$
+                        \int x^r\, \mathrm{d}x = \dfrac{1}{r+1}x^{r+1} + C.
+                        $$
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: <a href="sallioppiminen.fi/kurssit/maa8/luku1/">MAA8-kurssin</a> teoreeman 4 mukaan 
+                            $$
+                            \mathop{\mathrm{}D } \left( \dfrac{1}{r+1}x^{r+1} + C \right) = \dfrac{1}{r+1} \cdot (r+1 )x^r + 0 = x^r
+                            $$
+                        </p>      
+                    </div>
+                </div>
+
             </div>
 
 
