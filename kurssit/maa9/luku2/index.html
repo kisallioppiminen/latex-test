@@ -352,7 +352,142 @@ topnav: maa9
                 <p>
                     Tässä kappaleessa opitaan integroimaan potenssi- ja polynomifunktioita. Samalla kerrataan vastaavia derivointisääntöjä.
                 </p>
+            </div>
 
+            <div class="tehtavat">
+                <div class="tehtava" id="9a168960-7ec6-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t204">
+                                Vakiofunktion integraali
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA9t204" class="collapse">
+                        <p>
+                            Tässä tehtävässä kehitetään sääntö, jonka avulla löydetään vakiofunktioiden integraalifunktiot.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Aloitetaan kertaamalla derivointisääntöjä. Kopioi seuraava taulukko vihkoosi ja täydennä puuttuvat derivaatat:
+                                <div align="center">
+                                    <table style= "width = 95%">
+                                        <tr>
+                                            <th> Funktio </th>
+                                            <th> Derivaattafunktio </th>
+                                        </tr>
+                                        <tr>
+                                            <td> $F(x) = 1 \,$ </td>
+                                            <td> $F'(x) = \hspace{2cm}$ </td>
+                                        </tr>
+                                        <tr>
+                                            <td> $F(x) = x$ </td>
+                                            <td> $F'(x) = \hspace{2cm}$ </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                Integraalifunktiota etsittäessä haetaan funktiota, josta saadaan derivoimalla alkuperäinen funktio. Kopioi seuraava taulukko vihkoosi ja täydennä puuttuvat integraalit. 
+                                <br>
+                                Vinkki: hyödynnä a-kohdan taulukkoa keksimällä funktioille sopivat kertoimet.
+                                <div align="center">
+                                    <table style= "width = 95%">
+                                        <tr>
+                                            <th> Integraalifunktiot </th>
+                                            <th> Funktio </th>
+                                        </tr>
+                                        <tr>
+                                            <td> $\int f(x) \, \mathrm{d}x = \hspace{2cm}$ </td>
+                                            <td> $f(x) = 0$ </td>
+                                        </tr>
+                                        <tr>
+                                            <td> $\int f(x) \, \mathrm{d}x = \hspace{2cm}$ </td>
+                                            <td> $f(x) = 1$ </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                Muodosta integroimissääntö nollafunktiolle $f(x) = 0$.
+                            </li>
+                            <li>
+                                Muodosta integroimissääntö vakiofunktiolle $f(x) = 1$.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t204_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA9t204_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style= "width = 95%">
+                                            <tr>
+                                                <th> Funktio </th>
+                                                <th> Derivaattafunktio </th>
+                                            </tr>
+                                            <tr>
+                                                <td> $F(x) = 1\,$ </td>
+                                                <td style = "text-align:left"> $F'(x) = 0$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> $F(x) = x\phantom{^2}$ </td>
+                                                <td style = "text-align:left"> $F'(x) = 1$ </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style= "width:95%">
+                                            <tr>
+                                                <th> Integraalifunktiot </th>
+                                                <th> Funktio </th>
+                                            </tr>
+                                            <tr>
+                                                <td style = "text-align:left"> $\int f(x) \, \mathrm{d}x = C$ </td>
+                                                <td> $f(x) = 0$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td style = "text-align:left"> $\int f(x) \, \mathrm{d}x = x + C$ </td>
+                                                <td> $f(x) = 1$ </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    Nollafunktion integraalifunktiot ovat kaikki mahdolliset vakiofunktiot:
+                                    $$
+                                    \int 0 \,\mathrm{d}x = C
+                                    $$
+                                    missä $C$ on reaaliluku. Huomaa, että taulukon perusteella voisi ajatella, että integraalifunktiot ovat muotoa 
+                                    $$
+                                    \int 0 \,\mathrm{d}x = 1 + C.
+                                    $$
+                                    Nämäkin ovat vakiofunktioita ja kun tässä C käy läpi kaikki reaalilukuarvot, saadaan kaikki mahdolliset vakiofunktiot. Tämän vuoksi voidaan käyttää yksinkertaistettua merkintää
+                                    $$
+                                    \int 0 \,\mathrm{d}x = C.
+                                    $$
+                                </li>
+                                <li>
+                                    Vakiofunktion $f(x) = 1$ integraalifunktiot ovat
+                                    $$
+                                    \int 1 \,\mathrm{d}x = x + C.
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="teoria">
 
                 <div class="theorem" id="VAKIOFUNKTION INTEGROIMINEN">
                     <h3>TEOREEMA</h3>
@@ -364,17 +499,14 @@ topnav: maa9
                         missä $C$ on reaaliluku.
                     </p>
                     <p>
-                        Jos $a \neq 0$, vakiofunktion $f(x) = a$ integraalifunktiot ovat
+                        Vakiofunktion $f(x) = 1$ integraalifunktiot ovat
                         $$
-                        \int a \,\mathrm{d}x = ax + C.
+                        \int 1 \,\mathrm{d}x = x + C.
                         $$
                     </p>
                     <div class="proof">
                         <p>
-                            Perustelu: <a href="http://kisallioppiminen.fi/kurssit/maa6/luku4/">MAA6-kurssin</a> derivointisääntöjen mukaan vakiofunktion derivaatta on nollafunktio eli $\mathop{\mathrm{D} } C &= 0$. Lisäksi 
-                            \begin{align*}
-                            \mathop{\mathrm{D} } (ax + C) &= a.
-                            \end{align*}
+                            Perustelu tehtävässä 2.4.
                         </p>      
                     </div>
                 </div>
@@ -385,12 +517,12 @@ topnav: maa9
                 <div class="tehtava" id="9a168960-7ec6-11e7-bb31-be2e44b06b34">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t204">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t204a">
                                 Potenssifunktion integraali
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA9t204" class="collapse">
+                    <div id="MAA9t204a" class="collapse">
                         <p>
                             Tässä tehtävässä kehitetään sääntö, jonka avulla löydetään potenssifunktioiden integraalifunktiot.
                         </p>
@@ -480,11 +612,11 @@ topnav: maa9
                             </li>
                         </ol>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t204_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t204a_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA9t204_v" class="collapse">
+                        <div id="MAA9t204a_v" class="collapse">
                             <ol class="a">
                                 <li>
                                     Taulukko:
