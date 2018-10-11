@@ -350,7 +350,7 @@ topnav: maa9
             <div class="teoria">
                 
                 <p>
-                    <a href="http://kisallioppiminen.fi/kurssit/maa6/luku4/">Kurssissa MAA6</a> näytettiin, että funktioiden summan derivaatta on funktioiden derivaattojen summa, ja että vakiolla kerrotun funktion derivaatta on funktion derivaatta kerrottuna samalla vakiolla. Seuraavissa tehtävissä tutkitaan, pätevätkö vastaavat tulokset myös integraaleille.
+                    <a href="http://kisallioppiminen.fi/kurssit/maa6/luku4/">Kurssissa MAA6</a> näytettiin, että funktioiden summan derivaatta on funktioiden derivaattojen summa, ja että vakiolla kerrotun funktion derivaatta on funktion derivaatta kerrottuna samalla vakiolla. Seuraavissa tehtävissä johdetaan vastaavat tulokset myös integraaleille.
                 </p>
             </div>
 
@@ -365,20 +365,43 @@ topnav: maa9
                     </header>
                     <div id="MAA9t204" class="collapse">
                         <p>
-                            Oletetaan, että funktiolla $f$ on integraalifunktio $F$ ja funktiolla $g$ on integraalifunktio $G$. Mikä on summafunktion $f + g$ integraalifunktio? Perustele vastauksesi derivoimalla ja nojautumalla integraalifunktion määritelmään.
+                            Oletetaan, että funktiolla $f$ on integraalifunktio $F$ ja funktiolla $g$ on integraalifunktio $G$. Tehtävänä on löytää summafunktion $f + g$ integraalifunktio ja perustella vastaus oikeaksi.
                         </p>
+                        <ol class="a">
+                            <li>
+                                Mitä oletuksen nojalla voit päätellä funktion $F$ derivaatasta? Entä funktion $G$ derivaatasta?
+                            </li>
+                            <li>
+                                Keksi ehdotus summafunktion $f + g$ integraalifunktioksi. Miten voit osoittaa, että ehdotuksesi todella on oikea integraalifunktio? Selitä omin sanoin.
+                            </li>
+                            <li>
+                                Perustele, että b-kohdassa keksimäsi funktio on summafunktion $f + g$ integraalifunktio. Samalla saat itsekin varmistuksen siitä, että keksit sopivan funktion.
+                            </li>
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA9t204_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="MAA9t204_v" class="collapse">
-                            <p>
-                                Summafunktion $f + g$ integraalifunktio on $F + G$, sillä
-                                $$
-                                \mathop{\mathrm{D} }(F(x) + G(x)) = F'(x) + G'(x) = f(x) + g(x).
-                                $$
-                            </p>
+                            <ol class="a">
+                                <li>
+                                    Oletuksen nojalla $F'(x) = f(x)$ ja $G'(x) = g(x)$.
+                                </li>
+                                <li>
+                                    Summafunktion $f + g$ integraalifunktio lienee integraalifunktioiden summa $F + G$. Perusteluna pitäisi näyttää, että integraalifunktioiden summan derivaatta on $f + g$. Toisin sanottuna pitäisi näyttää, että 
+                                    $$
+                                    \mathop{\mathrm{D} } (F(x) + G(x)) = f(x) + g(x).
+                                    $$
+                                </li>
+                                <li>
+                                    Käytetään summan derivointisääntöä ja a-kohdassa mainittuja oletuksia, jolloin saadaan
+                                    $$
+                                    \mathop{\mathrm{D} }(F(x) + G(x)) = F'(x) + G'(x) = f(x) + g(x).
+                                    $$
+                                    Siis summafunktion $f + g$ integraalifunktio on integraalifunktioiden summa $F + G$.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
