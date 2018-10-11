@@ -418,20 +418,43 @@ topnav: maa9
                     </header>
                     <div id="MAA9t205" class="collapse">
                         <p>
-                            Oletetaan, että funktiolla $f$ on integraalifunktio $F$. Mikä on vakiolla kerrotun funktion $kf$ integraalifunktio? Perustele vastauksesi derivoimalla ja nojautumalla integraalifunktion määritelmään.
+                            Oletetaan, että funktiolla $f$ on integraalifunktio $F$. Tehtävänä on löytää vakiolla kerrotun funktion $kf$ integraalifunktio ja perustella vastaus oikeaksi.
                         </p>
+                        <ol class="a">
+                            <li>
+                                Mitä oletuksen nojalla voit päätellä funktion $F$ derivaatasta? 
+                            </li>
+                            <li>
+                                Keksi ehdotus vakiolla kerrotun funktion $kf$ integraalifunktioksi. Miten voit osoittaa, että ehdotuksesi todella on oikea integraalifunktio? Selitä omin sanoin.
+                            </li>
+                            <li>
+                                Perustele, että b-kohdassa keksimäsi funktio on vakiolla kerrotusn funktion $kf$ integraalifunktio. Samalla saat itsekin varmistuksen siitä, että keksit sopivan funktion.
+                            </li>
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA9t205_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="MAA9t205_v" class="collapse">
-                            <p>
-                                Vakiolla kerrotun funktion $kf$ integraalifunktio on $kF$, sillä
-                                $$
-                                \mathop{\mathrm{D} }kF(x) = kF'(x) = kf(x).
-                                $$
-                            </p>
+                            <ol class="a">
+                                <li>
+                                    Oletuksen nojalla $F'(x) = f(x)$.
+                                </li>
+                                <li>
+                                    Vakiolla kerrotun funktion $kf$ integraalifunktio lienee integraalifunktio kerrottuna samalla vakiolla eli $kF$. Perusteluna pitäisi näyttää, että sen derivaatta on $kf$. Toisin sanottuna pitäisi näyttää, että 
+                                    $$
+                                    \mathop{\mathrm{D} } kF(x) = kf(x).
+                                    $$
+                                </li>
+                                <li>
+                                    Käytetään vakiolla kerrotun funktion derivointisääntöä ja a-kohdassa mainittuja oletuksia, jolloin saadaan
+                                    $$
+                                    \mathop{\mathrm{D} }kF(x) = kF'(x) = kf(x).
+                                    $$
+                                    Siis vakiolla kerrotun funktion $kf$ integraalifunktio on integraalifunktio kerrottuna samalla vakiolla eli $kF$.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
