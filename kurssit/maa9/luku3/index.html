@@ -181,14 +181,77 @@ topnav: maa9
                         </a>
                     </h2>
                     <div id="MAA9s3t301_v" class="collapse">
-                        <p>
-
-                        </p>
+                        <ol class="a">
+                            <li>
+                                $\ln 2$
+                            </li>
+                            <li>
+                                $e^2 - 1$
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
 
-            
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s3t302">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s3t302">
+                    <p>
+                        Weibullin $(\lambda,k)$-jakauman avulla voidaan kuvata mm. maantiepölyn hiukkasten kokoa. Tutkitaan tapausta $\lambda = 1$, jolloin jakauman tiheysfunktio määritellään kaavalla
+                        $$
+                        w(t,k) = kt^{k-1}e^{-t^k}
+                        $$
+                        kun $t \geq 0$ ja $k > 0$. Weibullin kertymäfunktio määritellään kaavalla 
+                        $$
+                        W(x,k) = \int_0^x w(t,k) \mathrm{d}t.
+                        $$
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Määritä ${\displaystyle \lim_{t \rightarrow 0+} w(t,k)}$ vakion $k$ eri arvoilla.
+                        </li>
+                        <li>
+                            Määritä kertymäfunktion $W(x,k)$ lauseke, kun $x \geq 0$.
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä S2018/9]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t302_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s3t302_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Jos $k = 1$, 
+                                \begin{align*}
+                                \lim_{t \rightarrow 0+} w(t,k)} = \lim_{t \rightarrow 0+} e^{-t} = 1
+                                \end{align*}
+                                Jos $0 < k < 1$,
+                                \begin{align*}
+                                \lim_{t \rightarrow 0+} w(t,k)} = \lim_{t \rightarrow 0+} kt^{k-1}e^{-t^k} = \infty
+                                \end{align*}
+                                Jos $k > 1$,
+                                \begin{align*}
+                                \lim_{t \rightarrow 0+} w(t,k)} = \lim_{t \rightarrow 0+} kt^{k-1}e^{-t^k} = 0
+                                \end{align*}
+                            </li>
+                            <li>
+                                $W(x,k) = 1 - e^{-x^k}$, kun $x \geq 0$.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
