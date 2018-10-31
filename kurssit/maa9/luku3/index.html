@@ -352,6 +352,69 @@ topnav: maa9
                 </div>
             </div>
 
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s3t305">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s3t305">
+                    <p>
+                        Tarkastellaan funktiota 
+                        $$f(x) = \int_0^x \left| \sin t \right| \,\mathrm{d}t,$$
+                        kun $0 \leq x \leq 2\pi$.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Perustele geometrisesti kaava $f(2\pi) = 2f(\pi)$.
+                        </li>
+                        <li>
+                            Laske $f(x)$, kun $0 \leq x \leq 2\pi$.
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä K2016/12]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t305_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s3t305_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Sinifunktion kuvaajan symmetrisyyden vuoksi 
+                                $$
+                                \int_\pi^\2pi \sin t \,\mathrm{d}t = -\int_0^\pi \sin t \,\mathrm{d}t.
+                                $$
+                                Tästä seuraa, että 
+                                $$
+                                \int_\pi^\2pi \left|\sin t \right|\,\mathrm{d}t = \int_0^\pi \left|\sin t \right| \,\mathrm{d}t.
+                                $$
+                                Tällöin 
+                                \begin{align*}
+                                f(2\pi) &= \int_0^{2\pi} \left| \sin t \right| \,\mathrm{d}t \\
+                                &= \int_0^{\pi} \left| \sin t \right| \,\mathrm{d}t + \int_{\pi}^{2\pi} \left| \sin t \right| \,\mathrm{d}t \\
+                                &= 2 \cdot \int_0^{\pi} \left| \sin t \right| \,\mathrm{d}t \\
+                                &= 2f(\pi)
+                                \end{align*}
+                            </li>
+                            <li>
+                                Tarkastellaan erikseen tapaukset $0 \leq x \leq \pi$ ja $\pi \leq x \leq 2\pi$. Saadaan
+                                $$
+                                f(x) = \begin{cases}
+                                1 - \cos x, &\ 0 \leq x \leq \pi;\\
+                                3 + \cos x, &\ \pi \leq x \leq 2\pi.
+                                $$
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
