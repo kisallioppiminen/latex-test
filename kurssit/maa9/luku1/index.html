@@ -72,7 +72,7 @@ topnav: maa9
                     <br>
                     <img src="/kurssit/maa9/kuvat/MAA9kuva003.png" max-width: 100%; width: auto; height: auto;/>
                     <br>
-                    Värillisiä pikkuruutuja on yhteensä reilut 23 kappaletta. Yhden pienen ruudun pinta-ala on neljäsosa isosta ruudusta eli 0,25. Integraalille saadaan näin likiarvo
+                    Värillisiä pikkuruutuja on yhteensä noin 23 kappaletta. Yhden pienen ruudun pinta-ala on neljäsosa isosta ruudusta eli 0,25. Integraalille saadaan näin likiarvo
                     $$
                     \int_1^3 f(x) \textrm{d}x \approx 23 \cdot 0{,}25 \approx 5{,}8.
                     $$
@@ -141,13 +141,16 @@ topnav: maa9
                     </header>
                     <div id="MAA9t102" class="collapse">
                         <p>
-                              Päättele alla olevan kuvan avulla likiarvot seuraaville integraaleille yhden merkitsevän numeron tarkkuudella. 
+                              Päättele alla olevan kuvan avulla seuraavien integraalien arvo:
                         </p>
                         <ol class="a">
+                            <li> $\displaystyle \int_{0}^6 g(x) \textrm{d}x$  </li>
                             <li> $\displaystyle \int_{1}^5 g(x) \textrm{d}x$  </li>
-                            <li> $\displaystyle \int_{5}^6 g(x) \textrm{d}x$  </li>
                         </ol>
                         <img src="/kurssit/maa9/kuvat/MAA9kuva005.png" max-width: 100%; width: auto; height: auto;/>
+                        <p>
+                            Vinkki: jaa alue sopiviksi kolmioiksi ja laske niiden pinta-alat.
+                        </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t102_v">
                                 VASTAUS
@@ -156,14 +159,24 @@ topnav: maa9
                         <div id="t102_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    $\displaystyle \int_{1}^5 f(x) \textrm{d}x \approx 5$.
+                                    $\displaystyle \int_{0}^6 f(x) \textrm{d}x = 2{,}25$.
                                     <br>
                                     <img src="/kurssit/maa9/kuvat/MAA9kuva009.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Huomaa, että yhtä suuret pinta-alat $A_3$ ja $A_4$ kumoavat toisensa, koska toinen on $x$-akselin yläpuolella ja toinen alapuolella. Integraalin arvo on siten
+                                    $$
+                                    A_2 - A_1 = \dfrac{2 \cdot 3}{2} - \dfrac{1 \cdot 1{,}5}{2} = 3 - 0{,}75 = 2{,}25.
+                                    $$
                                 </li>
                                 <li> 
                                     $\displaystyle \int_{5}^6 g(x) \textrm{d}x \approx -1$ 
                                     <br>
                                     <img src="/kurssit/maa9/kuvat/MAA9kuva008.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Integraalin arvo on 
+                                    $$
+                                    A_2 + A_3 - A_5 = \dfrac{2 \cdot 3}{2} + \dfrac{1{,}5\cdot 3}{2} - \dfrac{0{,}5 \cdot 1}{2} = 3 + 2{,}25 - 0{,}25 = 5
+                                    $$
                                 </li>
                             </ol>
                         </div>
