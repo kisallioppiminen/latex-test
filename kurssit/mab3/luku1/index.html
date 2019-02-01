@@ -1233,6 +1233,277 @@ topnav: mab3
     <section class="panel">
         <header class="otsikko">
             <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kulmat">
+                    Erilaisia kulmia
+                </a>
+            </h1>
+        </header>
+        <div id="kulmat" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa tutustutaan erityyppisiin kulmiin, joiden tunteminen helpottaa geometristen päättelyiden tekemistä. Ensimmäisenä opitaan vieruskulman ja ristikulman käsitteet.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="7170400a-5a34-44a9-ba8e-6ac9b7b986b9">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio03">
+                                Vieruskulmat
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio03" class="collapse">
+                        <p>
+                            Kulmat, joiden toinen kylki on yhteinen ja toiset kyljet muodostavat suoran, ovat <em>vieruskulmia</em>.
+                        </p>
+                        <img src="/kurssit/maa3/kuvat/suoraK13.png" style="max-width: 100%; width: auto; height: auto"/>
+                        <ol class="a">
+                            <li> Päättele kulman $\alpha$ suuruus alla olevassa kuvassa.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK11.png" style="max-width: 100%; width: auto; height: auto;"/> 
+                            </li>
+                            <li> Päättele kulman $\beta$ suuruus alla olevassa kuvassa.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK12.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                            <li> Mitä voit päätellä vieruskulmien summasta yleisesti?
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK13.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio03_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio03_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $\alpha = 35^\circ$
+                                </li>
+                                <li> 
+                                    $\beta = 120^\circ$ 
+                                </li>
+                                <li>  
+                                    Vieruskulmat muodostavat yhdessä oikokulman, joten vieruskulmien summa on $180^\circ$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="d863a9a2-dde5-41ee-a1fd-17c45c366af9">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio04">
+                                Ristikulmat
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio04" class="collapse">
+                        <p>
+                            Kun kaksi suoraa leikkaa toisensa, muodostuvat vastakkaiset kulmat ovat <em>ristikulmia</em>.
+                        </p>
+                        <img src="/kurssit/maa3/kuvat/suoraK16.png" style="max-width: 100%; width: auto; height: auto"/>
+                        <p>
+                            Tässä tehtävässä päätellään ristikulman suuruus vieruskulmaa apuna käyttäen.
+                        </p>
+                        <ol class="a">
+                            <li> Päättele kulman $\gamma$ suuruus alla olevassa kuvassa.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK14.png" style="max-width: 100%; width: auto; height: auto;"/> 
+                            </li>
+                            <li> Päättele kulman $\beta$ suuruus alla olevassa kuvassa.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK15.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                            <li> Mitä voit päätellä ristikulmista yleisesti?
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK16.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio04_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio04_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $\gamma = 130^\circ$ (vieruskulma)
+                                </li>
+                                <li> 
+                                    $\beta = 50^\circ$ (kulman gamma vieruskulma)
+                                </li>
+                                <li>  
+                                    Ristikulmat ovat yhtä suuria keskenään.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kulmalla on aina oikea ja vasen kylki. Nämä voidaan tunnistaa seuraavasti: Ajatellaan, että seisotaan kulman kärkipisteessä ja katsotaan kulman aukeamaa kohti. Tällöin kulman $\textcolor{blue}{\textbf{oikea}}$ kylki on oikealla puolella ja $\textcolor{red}{\textbf{vasen}}$ kylki on vasemmalla puolella:
+                </p>
+                <img src="/kurssit/mab3/kuvat/MAB3kuva004.png" style="max-width: 100%; width: auto; height: auto;"/>
+                <p>
+                    Jos suora leikkaa kahta muuta suoraa, syntyy niin sanottuja <em>samankohtaisia kulmia</em>. Samankohtaisuus tarkoittaa sitä, että kulmien <em>samanniminen</em> kylki (siis molemmilla oikea kylki tai molemmilla vasen kylki), on samalla suoralla.
+                </p>
+                <img src="/kurssit/maa3/kuvat/suoraK19.png" style="max-width: 100%; width: auto; height: auto"/>
+                <p>
+                    Jos kaksi muuta suoraa ovat keskenään yhdensuuntaisia, kuten yllä olevassa kuvassa, syntyvät samankohtaiset kulmat ovat yhtä suuria. Esimerkiksi yllä olevassa kuvassa kulmat $\alpha$ ja $\alpha'$ ovat samankohtaisia, sillä niiden $\textcolor{red}{\textbf{vasen}}$ kylki on samalla suoralla. Koska niiden $\textcolor{blue}{\textbf{oikeat}}$ kyljet ovat yhdensuuntaiset, ovat kulmat $\alpha$ ja $\alpha'$ yhtä suuret.
+                </p>
+                <!-- <p>
+                    Kulmien $\alpha$ ja $\alpha'$ ristikulmat $\beta$ ja $\beta'$ ovat nekin samankohtaisia kulmien $\alpha$ ja $\alpha'$ kanssa, sillä niidenkin $\textcolor{red}{\textbf{vasemmat}}$ kyljet ovat samalla suoralla ja $\textcolor{blue}{\textbf{oikeat}}$ kyljet ovat yhdensuuntaiset.
+                </p>
+                <p>
+                    <img src="/kurssit/maa3/kuvat/suoraK20.png" style="max-width: 100%; width: auto; height: auto"/>
+                </p>  -->
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="96a5e852-9c4b-4944-b59a-48009a5910e0">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio05">
+                                Samankohtaiset kulmat
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio05" class="collapse">
+                        <p>
+                            Alla mustalla piirretyt kaksi suoraa ovat keskenään yhdensuuntaiset.
+                        </p>
+                        <img src="/kurssit/maa3/kuvat/suoraK21.png" style="max-width: 100%; width: auto; height: auto"/>
+                        <ol class="a">
+                            <li> Piirrä yllä oleva kuva vihkoosi ja merkitse siihen kulman $\alpha$ ristikulma. </li>
+                            <li> Etsi kuvasta mahdollisimman monta kulmaa, jotka ovat samankohtaisia kulman $\alpha$ kanssa.
+                                <br> Vinkki: etsi kulmia, joiden oikea kylki on sinisellä suoralla.</li>
+                            <li> Ovatko kulmat $\alpha$ ja $\beta$ samankohtaisia? Entä kulmat $\alpha$ ja $\gamma$?</li>
+                            <li> Tiedetään, että $\alpha = 133^\circ$. Päättele kulmien $\beta$ ja $\gamma$ suuruus. </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio05_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio05_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kulman $\alpha$ kanssa samankohtaisia ovat kulmat $\gamma$, $\delta$ ja $\theta$. Kulma $\delta$ on kulman $\alpha$ ristikulma.
+                                    <br>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva005.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Kulmat $\alpha$ ja $\beta$ eivät ole samankohtaisia mutta kulmat $\alpha$ ja $\gamma$ ovat.
+                                </li>
+                                <li>  
+                                    $\beta = 47^\circ$ ja $\gamma = 133^\circ$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Ristikulmien ja samankohtaisten kulmien avulla voidaan näyttää, että kolmion kulmien summa on aina $180^\circ$. Tämä tehdään seuraavassa teoreemassa. Lue teoreema ja sen perustelu huolellisesti. Mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+                </p>
+
+                <div class="theorem" id="KOLMION KULMIEN SUMMA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kolmion kulmien summa on $180^\circ$.
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Merkitään kolmion kulmia $\alpha$, $\beta$ ja $\gamma$.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/vinoK03.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            <br>
+                            Jatketaan kolmion kahta sivua kuten alla olevassa kuvassa. Muodostuva kulma $\beta'$ on yhtä suuri kuin kulma $\beta$. Ne ovat toistensa ristikulmia.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/vinoK04.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            <br>
+                            Piirretään kulman $\beta$ kärjen kautta jana, joka on yhdensuuntainen kolmion kannan kanssa samaan tapaan kuin alla olevassa kuvassa. Kulmien $\alpha'$ ja $\alpha$ vasempana kylkenä on sama suora, joten ne ovat samankohtaiset kulmat. Lisäksi niiden oikeat kyljet ovat keskenään yhdensuuntaiset, joten kulmat ovat yhtä suuret.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/vinoK06.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            <br>
+                            Vastaavasti kulmien $\gamma'$ ja $\gamma$ oikeana kylkenä on sama suora, joten ne ovat samankohtaiset kulmat. Lisäksi niiden vasemmat kyljet ovat keskenään yhdensuuntaiset, joten kulmat ovat yhtä suuret.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/vinoK05.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            <br>
+                            Kulmat $\alpha'$, $\beta'$ ja $\gamma'$ muodostavat yhdessä oikokulman $180^\circ$:
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/vinoK07.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            <br>
+                            Koska $\alpha = \alpha'$, $\beta = \beta'$ ja $\gamma = \gamma'$, voidaan päätellä, että myös
+                            $$\alpha + \beta + \gamma = 180^\circ.$$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="96a5e852-9c4b-4944-b59a-48009a5910e0">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio06">
+                                Kolmion kulmien summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio06" class="collapse">
+                        <p>
+                            Päättele kulman $\alpha$ suuruus:
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                <img src="/kurssit/mab3/kuvat/MAB3kuva006.png" style="max-width: 100%; width: auto; height: auto;"/> 
+                            </li>
+                            <li> 
+                                <img src="/kurssit/mab3/kuvat/MAB3kuva007.png" style="max-width: 100%; width: auto; height: auto;"/>  
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio06_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio06_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $\alpha = 78^\circ$
+                                </li>
+                                <li> 
+                                    $\alpha = 36^\circ$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
                 <a data-toggle="collapse" class="collapsed" data-target="#K_yhdenmuotoisuus">
                     Kolmioiden yhdenmuotoisuus
                 </a>
@@ -1525,269 +1796,7 @@ topnav: mab3
         </div>
     </section>
 
-    <section class="panel">
-        <header class="otsikko">
-            <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#kulmat">
-                    Kolmion pinta-ala ja kulmat
-                </a>
-            </h1>
-        </header>
-        <div id="kulmat" class="collapse">
-
-            <div class="tehtavat">
-                <div class="tehtava" id="7170400a-5a34-44a9-ba8e-6ac9b7b986b9">
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio03">
-                                Vieruskulmat
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="kolmio03" class="collapse">
-                        <p>
-                            Kulmat, joiden toinen kylki on yhteinen ja toiset kyljet muodostavat suoran, ovat <em>vieruskulmia</em>.
-                        </p>
-                        <img src="/kurssit/maa3/kuvat/suoraK13.png" style="max-width: 100%; width: auto; height: auto"/>
-                        <ol class="a">
-                            <li> Päättele kulman $\alpha$ suuruus alla olevassa kuvassa.
-                                <br>
-                                <img src="/kurssit/maa3/kuvat/suoraK11.png" style="max-width: 100%; width: auto; height: auto;"/> 
-                            </li>
-                            <li> Päättele kulman $\beta$ suuruus alla olevassa kuvassa.
-                                <br>
-                                <img src="/kurssit/maa3/kuvat/suoraK12.png" style="max-width: 100%; width: auto; height: auto"/>
-                            </li>
-                            <li> Mitä voit päätellä vieruskulmien summasta yleisesti?
-                                <br>
-                                <img src="/kurssit/maa3/kuvat/suoraK13.png" style="max-width: 100%; width: auto; height: auto"/>
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio03_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="kolmio03_v" class="collapse">
-                            <ol class="a">
-                                <li>
-                                    $\alpha = 35^\circ$
-                                </li>
-                                <li> 
-                                    $\beta = 120^\circ$ 
-                                </li>
-                                <li>  
-                                    Vieruskulmat muodostavat yhdessä oikokulman, joten vieruskulmien summa on $180^\circ$.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="d863a9a2-dde5-41ee-a1fd-17c45c366af9">
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio04">
-                                Ristikulmat
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="kolmio04" class="collapse">
-                        <p>
-                            Kun kaksi suoraa leikkaa toisensa, muodostuvat vastakkaiset kulmat ovat <em>ristikulmia</em>.
-                        </p>
-                        <img src="/kurssit/maa3/kuvat/suoraK16.png" style="max-width: 100%; width: auto; height: auto"/>
-                        <p>
-                            Tässä tehtävässä päätellään ristikulman suuruus vieruskulmaa apuna käyttäen.
-                        </p>
-                        <ol class="a">
-                            <li> Päättele kulman $\gamma$ suuruus alla olevassa kuvassa.
-                                <br>
-                                <img src="/kurssit/maa3/kuvat/suoraK14.png" style="max-width: 100%; width: auto; height: auto;"/> 
-                            </li>
-                            <li> Päättele kulman $\beta$ suuruus alla olevassa kuvassa.
-                                <br>
-                                <img src="/kurssit/maa3/kuvat/suoraK15.png" style="max-width: 100%; width: auto; height: auto"/>
-                            </li>
-                            <li> Mitä voit päätellä ristikulmista yleisesti?
-                                <br>
-                                <img src="/kurssit/maa3/kuvat/suoraK16.png" style="max-width: 100%; width: auto; height: auto"/>
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio04_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="kolmio04_v" class="collapse">
-                            <ol class="a">
-                                <li>
-                                    $\gamma = 130^\circ$ (vieruskulma)
-                                </li>
-                                <li> 
-                                    $\beta = 50^\circ$ (kulman gamma vieruskulma)
-                                </li>
-                                <li>  
-                                    Ristikulmat ovat yhtä suuria keskenään.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="teoria">
-                <p>
-                    Kulmalla on aina oikea ja vasen kylki. Nämä voidaan tunnistaa seuraavasti: Ajatellaan, että seisotaan kulman kärkipisteessä ja katsotaan kulman aukeamaa kohti. Tällöin kulman $\textcolor{blue}{\textbf{oikea}}$ kylki on oikealla puolella ja $\textcolor{red}{\textbf{vasen}}$ kylki on vasemmalla puolella:
-                </p>
-                <img src="/kurssit/mab3/kuvat/MAB3kuva004.png" style="max-width: 100%; width: auto; height: auto;"/>
-                <p>
-                    Jos suora leikkaa kahta muuta suoraa, syntyy niin sanottuja <em>samankohtaisia kulmia</em>. Samankohtaisuus tarkoittaa sitä, että kulmien <em>samanniminen</em> kylki (siis molemmilla oikea kylki tai molemmilla vasen kylki), on samalla suoralla.
-                </p>
-                <img src="/kurssit/maa3/kuvat/suoraK19.png" style="max-width: 100%; width: auto; height: auto"/>
-                <p>
-                    Jos kaksi muuta suoraa ovat keskenään yhdensuuntaisia, kuten yllä olevassa kuvassa, syntyvät samankohtaiset kulmat ovat yhtä suuria. Esimerkiksi yllä olevassa kuvassa kulmat $\alpha$ ja $\alpha'$ ovat samankohtaisia, sillä niiden $\textcolor{red}{\textbf{vasen}}$ kylki on samalla suoralla. Koska niiden $\textcolor{blue}{\textbf{oikeat}}$ kyljet ovat yhdensuuntaiset, ovat kulmat $\alpha$ ja $\alpha'$ yhtä suuret.
-                </p>
-                <!-- <p>
-                    Kulmien $\alpha$ ja $\alpha'$ ristikulmat $\beta$ ja $\beta'$ ovat nekin samankohtaisia kulmien $\alpha$ ja $\alpha'$ kanssa, sillä niidenkin $\textcolor{red}{\textbf{vasemmat}}$ kyljet ovat samalla suoralla ja $\textcolor{blue}{\textbf{oikeat}}$ kyljet ovat yhdensuuntaiset.
-                </p>
-                <p>
-                    <img src="/kurssit/maa3/kuvat/suoraK20.png" style="max-width: 100%; width: auto; height: auto"/>
-                </p>  -->
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="96a5e852-9c4b-4944-b59a-48009a5910e0">
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio05">
-                                Samankohtaiset kulmat
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="kolmio05" class="collapse">
-                        <p>
-                            Alla mustalla piirretyt kaksi suoraa ovat keskenään yhdensuuntaiset.
-                        </p>
-                        <img src="/kurssit/maa3/kuvat/suoraK21.png" style="max-width: 100%; width: auto; height: auto"/>
-                        <ol class="a">
-                            <li> Piirrä yllä oleva kuva vihkoosi ja merkitse siihen kulman $\alpha$ ristikulma. </li>
-                            <li> Etsi kuvasta mahdollisimman monta kulmaa, jotka ovat samankohtaisia kulman $\alpha$ kanssa.
-                                <br> Vinkki: etsi kulmia, joiden oikea kylki on sinisellä suoralla.</li>
-                            <li> Ovatko kulmat $\alpha$ ja $\beta$ samankohtaisia? Entä kulmat $\alpha$ ja $\gamma$?</li>
-                            <li> Tiedetään, että $\alpha = 133^\circ$. Päättele kulmien $\beta$ ja $\gamma$ suuruus. </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio05_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="kolmio05_v" class="collapse">
-                            <ol class="a">
-                                <li>
-                                    Kulman $\alpha$ kanssa samankohtaisia ovat kulmat $\gamma$, $\delta$ ja $\theta$. Kulma $\delta$ on kulman $\alpha$ ristikulma.
-                                    <br>
-                                    <img src="/kurssit/mab3/kuvat/MAB3kuva005.png" style="max-width: 100%; width: auto; height: auto;"/>
-                                </li>
-                                <li> 
-                                    Kulmat $\alpha$ ja $\beta$ eivät ole samankohtaisia mutta kulmat $\alpha$ ja $\gamma$ ovat.
-                                </li>
-                                <li>  
-                                    $\beta = 47^\circ$ ja $\gamma = 133^\circ$.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="teoria">
-                <p>
-                    Ristikulmien ja samankohtaisten kulmien avulla voidaan näyttää, että kolmion kulmien summa on aina $180^\circ$. Tämä tehdään seuraavassa teoreemassa. Lue teoreema ja sen perustelu huolellisesti. Mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
-                </p>
-
-                <div class="theorem" id="KOLMION KULMIEN SUMMA">
-                    <h3>TEOREEMA</h3>
-                    <p>
-                        Kolmion kulmien summa on $180^\circ$.
-                    </p>
-                    <div class="proof">
-                        <p>
-                            Perustelu: Merkitään kolmion kulmia $\alpha$, $\beta$ ja $\gamma$.
-                            <br>
-                            <img src="/kurssit/maa3/kuvat/vinoK03.png" style="max-width: 100%; width: auto; height: auto;"/>
-                            <br>
-                            Jatketaan kolmion kahta sivua kuten alla olevassa kuvassa. Muodostuva kulma $\beta'$ on yhtä suuri kuin kulma $\beta$. Ne ovat toistensa ristikulmia.
-                            <br>
-                            <img src="/kurssit/maa3/kuvat/vinoK04.png" style="max-width: 100%; width: auto; height: auto;"/>
-                            <br>
-                            Piirretään kulman $\beta$ kärjen kautta jana, joka on yhdensuuntainen kolmion kannan kanssa samaan tapaan kuin alla olevassa kuvassa. Kulmien $\alpha'$ ja $\alpha$ vasempana kylkenä on sama suora, joten ne ovat samankohtaiset kulmat. Lisäksi niiden oikeat kyljet ovat keskenään yhdensuuntaiset, joten kulmat ovat yhtä suuret.
-                            <br>
-                            <img src="/kurssit/maa3/kuvat/vinoK06.png" style="max-width: 100%; width: auto; height: auto;"/>
-                            <br>
-                            Vastaavasti kulmien $\gamma'$ ja $\gamma$ oikeana kylkenä on sama suora, joten ne ovat samankohtaiset kulmat. Lisäksi niiden vasemmat kyljet ovat keskenään yhdensuuntaiset, joten kulmat ovat yhtä suuret.
-                            <br>
-                            <img src="/kurssit/maa3/kuvat/vinoK05.png" style="max-width: 100%; width: auto; height: auto;"/>
-                            <br>
-                            Kulmat $\alpha'$, $\beta'$ ja $\gamma'$ muodostavat yhdessä oikokulman $180^\circ$:
-                            <br>
-                            <img src="/kurssit/maa3/kuvat/vinoK07.png" style="max-width: 100%; width: auto; height: auto;"/>
-                            <br>
-                            Koska $\alpha = \alpha'$, $\beta = \beta'$ ja $\gamma = \gamma'$, voidaan päätellä, että myös
-                            $$\alpha + \beta + \gamma = 180^\circ.$$
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="96a5e852-9c4b-4944-b59a-48009a5910e0">
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio06">
-                                Kolmion kulmien summa
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="kolmio06" class="collapse">
-                        <p>
-                            Päättele kulman $\alpha$ suuruus:
-                        </p>
-                        <ol class="a">
-                            <li> 
-                                <img src="/kurssit/mab3/kuvat/MAB3kuva006.png" style="max-width: 100%; width: auto; height: auto;"/> 
-                            </li>
-                            <li> 
-                                <img src="/kurssit/mab3/kuvat/MAB3kuva007.png" style="max-width: 100%; width: auto; height: auto;"/>  
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio06_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="kolmio06_v" class="collapse">
-                            <ol class="a">
-                                <li>
-                                    $\alpha = 78^\circ$
-                                </li>
-                                <li> 
-                                    $\alpha = 36^\circ$
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
+    
 
 
 
