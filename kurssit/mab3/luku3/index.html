@@ -141,6 +141,33 @@ topnav: mab3
                 </div>
             </div>
 
+         <div class="tehtava" id="eec41641-37c2-4ac4-8c56-2fb1cdff7e29">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#avaruusS201">
+                            MONITAHOKKAITA
+                        </a>
+                    </h1>
+                </header>
+                <div id="avaruusS201">
+                    <p>
+                        Suorakulmaisen särmiön muotoisen laatikon pituuden, leveyden ja korkeuden suhde on $3:2:1$. Laatikon vetoisuus on 15,0 litraa. Määritä laatikon mitat millimetrin tarkkuudella.
+                    <br>
+                        Vihje: Merkitse yhden osan pituutta kirjaimella $x$. 
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#avaruusS201_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="avaruusS201_v" class="collapse">
+                        <p>
+                            Pituus 407 mm, leveys 271 mm, korkeus 136 mm.
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="teoria">
                 <p>
                     Suorakulmaisen särmiön vastakkaisia kärkiä yhdistävä jana on särmiön <em>avaruuslävistäjä</em>. Alla on näkyvissä yksi suorakulmaisen särmiön avaruuslävistäjistä.
@@ -501,7 +528,7 @@ topnav: mab3
                         </h2>
                         <div id="avaruus07_v" class="collapse">
                             <p>
-                                16 cm. Jos h on pienemmän pullon korkeus, niin saadaan verranto $\frac{3}{5}=\left( \frac{h}{19} \)^3$, josta $h=\sqrt[3]{\frac{20577}{5}}\approx 16$. 
+                                16 cm. Jos h on pienemmän pullon korkeus, niin saadaan verranto $\frac{3}{5}=\left( \frac{h}{19} \right)^3$, josta $h=\sqrt[3]{\frac{20577}{5}}\approx 16$. 
                             </p>
                         </div>
                     </div>
@@ -554,6 +581,49 @@ topnav: mab3
                     </p>
                 </div>
             </div>
+            
+            <div class="tehtavat">
+                <div class="tehtava" id="ac933cd9-7cec-4228-acad-bb1a6aafb4c5">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus08a">
+                                PALLON TILAVUUS JA PINTA-ALA
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="avaruus08a" class="collapse">
+                        <p>
+                           Koripallon pinta-ala on noin 17,9 dm$^2$. Tehtävänä on ratkaista koripallon tilavuus. Anna vastaus litroissa. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                              Katso oallon tilavuuden kaavaa. Mitä tietoja pallosta tarvitset, jotta voit laskea tilavuuden?
+                            </li>
+                            <li>
+                                Käytä pallon pinta-alaa ja ratkaise siitä muodostuva yhtälö.
+                            </li>
+                            <li>
+                                Laske pallon tilavuus. Ilmoita vastaus litroina.
+                            </li>
+                        
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus08_va">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="avaruus08_va" class="collapse">
+                            <ol class="a">
+                                <li> Tarvitaan säde. </li>
+                                <li> $r=\sqrt{\frac{17{,}9}{4\pi}=1{,}19334\ldots$ </li>
+                                <li> Koripallon tilavuus on 7,12 litraa. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="tehtavat">
                 <div class="tehtava" id="ac933cd9-7cec-4228-acad-bb1a6aafb4c5">
@@ -753,97 +823,8 @@ topnav: mab3
                 </div>
             </div>
 
-            <div class="teoria">
-                <p>
-                    Tasogeometriassa tutustuttiin ympyrän segmenttiin ja kaareen, jotka syntyvät esimerkiksi silloin, kun suora leikkaa ympyrän.
-                    <br>
-                    <img src="/kurssit/maa3/kuvat/tasoK36.png" max-width: 100%; width: auto; height: auto;/>
-                    <br>
-                    Vastaavasti jos taso leikkaa pallon, syntyvää kappaletta sanotaan pallosegmentiksi ja pallon pinnan osaa kalotiksi.
-                </p>
-
-                <div class="definition">
-                    <h3>MÄÄRITELMÄ: PALLOSEGMENTTI JA KALOTTI</h3>
-                    <p>
-                        Taso leikkaa pallosta kappaleen, jota kutsutaan <em>pallosegmentiksi</em>, ja erottaa pallon pinnasta <em>kalotin</em>.
-                        <br>
-                        <img src="/kurssit/maa3/kuvat/avaruusK37.png" max-width: 100%; width: auto; height: auto;/>
-                    </p>
-                </div>
-
-                <p>
-                    Integraalilaskennan avulla pallosegmentin tilavuudelle ja kalotin pinta-alalle saadaan johdettua kaavat, jotka on koottu seuraavaan teoreemaan. Huomaa, että ne pätevät riippumatta siitä, onko pallosegmentin korkeus pienempi vai suurempi kuin pallon säde.
-                </p>
-
-                <div class="theorem" id="PALLOSEGMENTIN TILAVUUS JA KALOTIN PINTA-ALA">
-                    <h3>TEOREEMA</h3>
-                    <p>
-                        Pallosegmentin tilavuus $V_S$ ja kalotin pinta-ala $A_K$ riippuvat pallosegmentin korkeudesta $h$ ja pallon säteestä $r$ seuraavasti:
-                        \begin{align*}
-                        V_S &= \pi h^2 \left(r-\dfrac{h}{3}\right) \\[1mm]
-                        A_K &= 2\pi rh
-                        \end{align*}
-                        <img src="/kurssit/maa3/kuvat/avaruusK39.png" max-width: 100%; width: auto; height: auto;/>
-                    </p>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="e045ef65-69b9-4cb4-bb14-5d8047482b77">
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus12">
-                                PALLOSEGMENTTI JA KALOTTI
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="avaruus12" class="collapse">
-                        <p>
-                            Kuplahalli, jonka pituus on 65 metriä ja korkeus 18 metriä, on muodoltaan pallosegmentti. Tehtävänä on laskea hallin lattian pinta-ala, hallin tilavuus ja hallin katon pinta-ala.
-                            <br>
-                            <img src="/kurssit/maa3/kuvat/avaruusK40.png" max-width: 100%; width: auto; height: auto;/>
-                        </p>
-                        <ol class="a">
-                            <li>
-                                Selvitä hallin lattian säde ja laske hallin lattian pinta-ala. Anna vastaus kahden merkitsevän numeron tarkkuudella.
-                            </li>
-                            <li>
-                                Alla olevassa kuvassa on poikkileikkaus pallosta, jonka pallosegmentti kuplahalli on. Piirrä vastaava mallikuva omaan vihkoosi ja täydennä siihen kaikki tunnetut mitat. Merkitse pallon sädettä jollakin kirjaimella.
-                                <br>
-                                <img src="/kurssit/maa3/kuvat/avaruusK41.png" max-width: 100%; width: auto; height: auto;/>
-                                <br>
-                                Huom. älä luota piirroksen mittasuhteisiin, sillä ne saattavat olla väärät.
-                            </li>
-                            <li>
-                                Tunnista yllä olevasta kuvasta kolme janaa, jotka ovat tarkasteltavan pallon säteitä. Ratkaise säteen pituus kuvassa näkyvästä suorakulmaisesta kolmiosta.
-                                <br>
-                                Vinkki: teoreema 4.
-                            </li>
-                            <li>
-                                Laske hallin tilavuus. Anna vastaus kahden merkitsevän numeron tarkkuudella.
-                            </li>
-                            <li>
-                                Laske hallin katon pinta-ala. Anna vastaus kahden merkitsevän numeron tarkkuudella.
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus12_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="avaruus12_v" class="collapse">
-                            <ol class="a">
-                                <li> Lattian pinta-ala on noin $3\,300 \text{ m}^2$. </li>
-                                <li> </li>
-                                <li> Pallon säde on $\frac{5521}{144} \text{ m} \approx 38{,}3 \text{ m}$.</li>
-                                <li> Hallin tilavuus on noin $33\,000 \text{ m}^3$.</li>
-                                <li> Hallin katon pinta-ala on noin $4\,300 \text{ m}^2$.</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
+                  
 
         </div>
     </section>
@@ -926,7 +907,7 @@ topnav: mab3
 
             <div class="teoria">
                 <p>
-                    Integraalilaskennan avulla voidaan todistaa niin sanottu Cavalierin periaate: Jos kahden yhtä korkean kappaleen tasoleikkausten pinta-alat ovat keskenään yhtä suuret riippumatta siitä, miltä korkeudelta ne leikataan, on kappaleilla sama tilavuus.
+                    Voidaan osoittaa, että jos kahden yhtä korkean kappaleen tasoleikkausten pinta-alat ovat keskenään yhtä suuret riippumatta siitä, miltä korkeudelta ne leikataan, on kappaleilla sama tilavuus. Tätä sanotaan Cavalierin periaatteeksi.
                     <br>
                     <img src="/kurssit/maa3/kuvat/avaruusK43.png" max-width: 100%; width: auto; height: auto;/>
                     <br>
@@ -1001,29 +982,19 @@ topnav: mab3
                     </header>
                     <div id="avaruus15a" class="collapse">
                         <p>
-                            Metallipallosta, jonka läpimitta on 26,0 cm, sorvataan mahdollisimman suuri sellainen suora ympyrälieriö, jonka korkeus 1,5 kertaa niin suuri kuin pohjan halkaisija. Tehtävänä on selvittää, mikä on tällaisen lieriön tilavuus.
-                            <br>
-                            <img src="/kurssit/maa3/kuvat/avaruusK66.png" max-width: 100%; width: auto; height: auto;/>
-                            <br>
-                            Suurimman mahdollisen ympyrälieriön pohjaympyröiden kehät ovat pallon pinnalla, ja pohjaympyröiden keskipisteitä yhdistävä ympyrälieriön <em>akseli</em> kulkee pallon keskipisteen kautta kuten yllä olevassa kuvassa.
+                           Tutkitaan suoraa ympyrälieriötä, jonka korkeus on 5 ja pohjan halkaisija 8.
                         <ol class = "a">
                             <li>
-                                Piirrä kuva poikkileikkauksesta, joka kulkee ympyrälieriön pohjaympyröiden keskipisteiden ja pallon keskipisteen kautta. Merkitse pohjaympyrän sädettä kirjaimella $r$.
+                                Piirrä Geogebralla mallikuva tilanteesta. Aloita piirtämällä oikeankokoinen pohjaympyrä piirtoalueelle ja tämän jälkeen valitse Näytä -> 3D piirtoalue. Tämän jälkeen valitse pyramidi-työkalun alta komento Laajenna särmiöksi/lieriöksi ja syötä korkeus.
                             </li>
                             <li>
-                                Ilmaise lieriön pohjan halkaisija säteen $r$ avulla. Ilmaise lieriön korkeus säteen $r$ avulla. Merkitse nämä mitat piirrokseesi.
+                                Laske pohjan pinta-alan tarkka arvo ilman laskinohjelmistoa. Laske myös tilavuuden tarkka arvo.
                             </li>
                             <li>
-                                Piirrä poikkileikkauskuvan lieriölle lävistäjä. Mikä on sen pituus?
-                                <br>
-                                Vinkki: lue tehtävänanto huolellisesti.
+                              Tarkista, onko tilavuutesi likiarvo sama kuin Geogebran antama vastaus.
+                               
                             </li>
-                            <li>
-                                Ratkaise lieriön säde suorakulmaisen kolmion geometrian avulla.
-                            </li>
-                            <li>
-                                Laske lieriön tilavuus. Anna vastaus kuutiosenttimetreinä ja litroina kolmen merkitsevän numeron tarkkuudella.
-                            </li>
+                           
                         </ol>
                         </p>
                         <h2>
@@ -1034,10 +1005,9 @@ topnav: mab3
                         <div id="avaruus15a_v" class="collapse">
                             <ol class="a">
                                 <li> </li>
-                                <li> Lieriön korkeus on $3r$.</li>
-                                <li> </li>
-                                <li> Lieriön säde on $\sqrt{52} \text{ cm} = 2\sqrt{13} \text{ cm}$. </li>
-                                <li> Lieriön tilavuus on noin $3\,530 \text{ cm}^3 = 3{,}53 \text{ l}$.</li>
+                                <li> Pohjan pinta-ala on $16\pi$. Tilavuus on $80\pi$.</li>
+                                <li> Tilavuuden likiarvo on 251 ja tämä on sama kuin Geogebran antama vastaus. </li>
+                                
                             </ol>
                         </div>
                     </div>
@@ -1215,10 +1185,104 @@ topnav: mab3
                 </div>
 
                 <p>
-                    Seuraavassa tehtävässä harjoitellaan kartion tilavuuden laskemista. Sopivan poikkileikkauskuvan piirtäminen helpottaa tarvittavien mittojen selvittämistä.
+                    Seuraavaisa tehtävissä harjoitellaan kartion tilavuuden laskemista. Sopivan poikkileikkauskuvan piirtäminen helpottaa tarvittavien mittojen selvittämistä.
                 </p>
             </div>
 
+             <div class="tehtavat">
+                <div class="tehtava" id="bc69a1e6-03a2-4d29-94e6-5832b6bcf3ec">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus16a">
+                                KARTION TILAVUUS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="avaruus16a" class="collapse">
+                        <p>
+                           Tehtävänä on selvittää kuvassa olevan suoran ympyräkartion tilavuus.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/avaruusK16a.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class="a">
+                            <li>
+                               Tarkista yllä olevasta teoreemasta, mitä asioita kartiosta täytyy tietää, jotta sen tilavuuden voi laskea. Onko kaikki tiedot annettu tehtävässä jo valmiiksi? Jos ei, niin mieti luvun 1 avulla, miten saat tarvittavat tiedot selville. 
+                                
+                                <br>
+                                Vihje: Tee poikkileikkaus kartion kärjen kautta kohtisuoraa pohjaa vastaan.
+                            </li>
+                            <li>
+                                Laske nyt kartion tilavuus. Anna vastaus desilitroina.
+                            </li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus16_va">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="avaruus16_va" class="collapse">
+                            <ol class="a">
+                                <li> Poikkileikkauskuvioon muodostuu suorakulmainen kolmio, jossa on kateetteina kartion korkeus $h$ ja pohjaympyrän säde $2{,}9$ sekä hypotenuusana sivujana $14{,}5$. Pythagoraan lauseesta saadaan $h=\sqrt{14{,}5^2-2{,}9^2}=14{,}207\ldots$  </li>
+                                <li> 1,3 dl. Kartion tilavuus on $\frac{\pi\cdot 2{,}9^2\cdot 14{,}207\ldots}{3}\approx 130$ (cm$^3$).</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+         <div class="tehtavat">
+                <div class="tehtava" id="bc69a1e6-03a2-4d29-94e6-5832b6bcf3ec">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus16b">
+                                KARTION TILAVUUS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="avaruus16b" class="collapse">
+                        <p>
+                           Alla on piirretty kuva katkaistusta ympyräkartiosta.
+                            
+                            <img src="/kurssit/maa3/kuvat/avaruusK16b.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class="a">
+                            <li>
+                               Piirrä kuva vihkoosi ja täydennä se kokonaiseksi kartioksi.
+                              
+                            </li>
+                            <li>
+                                Tee kartiosta poikkileikkaus kartion kärjen ja pohjan keskipisteen kautta. Kuvaan muodostuu kaksi yhdenmuotoista kolmiota. Miten voit perustella ne yhdenmuotoisiksi? Katso tarvittaessa luvusta 1 vihjettä.
+                            </li>
+                            <li>
+                                Nimeä lisäämäsi pikkukartion korkeus kirjaimella $x$. Muodosta yhdenmuotoisuuden avulla verranto ja ratkaise siitä $x.$
+                            </li>
+                            <li>
+                                Laske koko kartion tilavuus ja pienen yläkartion tilavuus. Laske näiden avulla alkuperäisen katkaistun kartion tilavuus. 
+                            </li>
+                             <li>
+                                 Keksitkö toisen tavan ratkaista katkaistun kartion tilavuuden?
+                            </li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#avaruus16_vb">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="avaruus16_vb" class="collapse">
+                            <ol class="a">
+                                <li>  </li>
+                                <li> kk-lauseella: yhteinen kulma ja molemmissa suora kulma.</li>
+                                <li> $\frac{x}{x+3}=\frac{1}{2}$, josta $x=3$. </li>
+                                <li>  Koko kartion tilavuus on $8\pi$ ja pikkukartion tilavuus on $\pi$. Näin ollen katkaistun kartion tilavuus on näiden erotus, eli $7\pi$.</li>
+                                <li>  Katkaistulle kartiolle löytyy MAOLista oma kaava, jonka joku saattoi löytää. Lisäksi olisi voinut hyödyntää yhdenmuotoisten kappaleiden tilavuuksien suhdetta, eli $\frac{V_{pikku}}{V_{iso}}=\left( \frac{1}{2} \right)^3$, josta olisi saanut tiedon, että $V_{pikku}=\frac{1}{8}V_{iso}.$</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
             <div class="tehtavat">
                 <div class="tehtava" id="bc69a1e6-03a2-4d29-94e6-5832b6bcf3ec">
                     <header>
@@ -1435,31 +1499,7 @@ topnav: mab3
         <div id="luku3-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="eec41641-37c2-4ac4-8c56-2fb1cdff7e29">
-                <header>
-                    <h1>
-                        <div class="checkbox-group"></div>
-                        <a data-target="#avaruusS201">
-                            MONITAHOKKAITA
-                        </a>
-                    </h1>
-                </header>
-                <div id="avaruusS201">
-                    <p>
-                        Suorakulmaisen särmiön muotoisen laatikon pituuden, leveyden ja korkeuden suhde on $3:2:1$. Laatikon vetoisuus on 15,0 litraa. Määritä laatikon mitat millimetrin tarkkuudella.
-                    </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#avaruusS201_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="avaruusS201_v" class="collapse">
-                        <p>
-                            Pituus 407 mm, leveys 271 mm, korkeus 136 mm.
-                        </p>
-                    </div>
-                </div>
-            </div>
+           
 
             <div class="tehtava" id="7aac0c04-6310-43a8-88da-0fe91acd1605">
                 <header>
