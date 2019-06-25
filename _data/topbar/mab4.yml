@@ -1,0 +1,15 @@
+header: 
+path: 
+navigation:
+  -
+    name: MAB4
+    path: /kurssit/mab4/
+  -
+    name: 1. Lineaarinen malli
+    path: /kurssit/mab4/luku1/
+  -
+    name: 2. Eksponentiaalinen malli
+    path: /kurssit/mab4/luku2/
+  -
+    name: 3. Matemaattinen mallintaminen
+    path: /kurssit/mab4/luku3/
