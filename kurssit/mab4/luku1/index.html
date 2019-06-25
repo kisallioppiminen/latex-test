@@ -1,0 +1,327 @@
+---
+title: MAB3 - Matemaattisia malleja
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: mab3
+---
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th {
+        padding: 5px;
+    }
+</style>
+
+{% include bottomnav.html %}
+
+<input type="hidden" id="chapterNumber" value="1"/>
+
+<article>
+    <section>
+        <header>
+            <h1>Lineaarinen malli</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun1-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="luvun1-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p>
+                    Tämän luvun tavoitteena on, että ... Osaat
+                </p>
+                <ul>
+                    <li> </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl11">
+                    Ensimmäisen asteen polynomifunktio
+                </a>
+            </h1>
+        </header>
+        <div id="kpl11" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SUORAKULMION PINTA-ALA</h3>
+                    <p>
+                        Suorakulmion <em>pinta-ala</em> on samasta kärjestä alkavien sivujen pituuksien tulo; alla olevan kuvion merkinnöillä siis $ab$.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/suoraK04.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+
+                <div class="tehtava first-exercise" id="044c3a11-29a5-4f93-a11a-68843ced59ab">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01">
+                                Suorakulmion pinta-ala
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio01" class="collapse">
+                        <p>
+                            Kansainvälisissä aikuisten jalkapallo-otteluissa kentän leveyden on oltava vähintään 64 m ja enintään 75 m. Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
+                        <ol class="a">
+                            <li> 
+                                Piirrä mallikuva suurimmasta ja pienimmästä jalkapallokentästä. Merkitse kuvioihin tunnetut mitat. 
+                            </li>
+                            <li> Laske suurimman ja pienimmän jalkapallokentän pinta-alojen erotus. </li>
+                            <li> Kuinka monta prosenttia suurin mahdollinen kenttä on isompi kuin pienin mahdollinen kenttä? </li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio01_v" class="collapse">
+                            <ol class="a">
+                                <li> Mallikuvat:
+                                    <br>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva015.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Pinta-alojen erotus on $1\,850 \text{ m}^2$. Suurimman kentän pinta-ala on $8\,250 \text{ m}^2$ ja pienimmän $6\,400 \text{ m}^2$.
+                                </li>
+                                <li> Noin 29 %. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Suorakulmion pinta-alan avulla saadaan pääteltyä, miten kolmion pinta-ala lasketaan. Seuraavissa tehtävissä tutkitaan kahta erilaista tapausta.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="56b70eed-20da-4ce2-9ee2-3f58241167bb">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01b">
+                                Kolmion pinta-ala
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio01b" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/suoraK17.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>
+                        <ol class="a">
+                            <li> Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi. </li>
+                            <li> Muodosta suorakulmion pinta-alan lauseke. </li>
+                            <li> Päättele kolmion pinta-ala.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio01b_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kuva: <br>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva001.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Suorakulmion pinta-ala on $ah$.
+                                </li>
+                                <li> 
+                                    Kolmion pinta-ala on puolet suorakulmion pinta-alasta eli 
+                                    $$
+                                    \dfrac{ah}{2}
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl12">
+                    Suora
+                </a>
+            </h1>
+        </header>
+        <div id="kpl12" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    
+                </p>
+                
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl13">
+                    Aritmeettinen lukujono
+                </a>
+            </h1>
+        </header>
+        <div id="kpl13" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa tutustutaan erityyppisiin kulmiin, joiden tunteminen helpottaa geometristen päättelyiden tekemistä. Ensimmäisenä opitaan vieruskulman ja ristikulman käsitteet.
+                </p>
+            </div>
+
+            
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku1-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="04dbc02e-e426-4024-9549-463568d4fbaf">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS203">
+                            Kolmion pinta-ala
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS203">
+                    <p>
+                        Halutaan piirtää kolmio, jonka korkeus on kolminkertainen kantaan verrattuna ja jonka pinta-ala on 24 cm$^2$.
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva. Merkitse kolmion kannan pituutta jollakin kirjaimella. Miten saat ilmaistua kolmion korkeuden samaa kirjainta käyttäen? </li>
+                        <li> Muodosta sopiva yhtälö ja määritä kolmion kannan pituus. Laske sitä vastaava kolmion korkeus. </li>
+                        <li> Piirrä kaksi erilaista kolmiota, jotka täyttävät tehtävän vaatimukset. </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS203_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS203_v" class="collapse">
+                        <ol class="a">
+                            <li> Olkoon kanta esimerkiksi $a$, jolloin korkeus on $3a$.</li>
+                            <li> Korkeus 12 cm. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku1-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="64ab37d5-f1ed-48ec-a982-64896d6f21c9">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#skkS301">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="skkS301">
+                    <p>
+                    <ol class="a">
+                        <li> Suorakulmaisen kolmion hypotenuusan pituus on 5 ja toisen kateetin pituus 2. Laske toisen kateetin pituus. </li>
+                        <li> Laske neliön piiri, kun sen lävistäjän pituus on 6.</li>
+                    </ol>
+                    [Pitkä S2011/1b &amp; S2015/1b]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#skkS301_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="skkS301_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $\sqrt{21}$ </li>
+                            <li> $12\sqrt{2}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#L1itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="L1itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
+            </p>
+        </div>
+    </section>
+
+</article>
