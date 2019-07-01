@@ -61,7 +61,7 @@ topnav: mab4
 
             <div class="teoria">
                 <p>
-                    Kurssissa <a href="http://kisallioppiminen.fi/kurssit/may1/funktio/">MAY1</a> tutustuttiin funktioihin, joiden avulla voidaan mallintaa ja tutkia erilaisten mitattavissa olevien asioiden välisiä riippuvuuksia. Funktioita voidaan luokitella niiden ominaisuuksien perusteella, ja erityisen tärkeän funktioiden luokan muodostavat niin sanotut ensimmäisen asteen polynomifunktiot.
+                    Kurssissa <a href="http://kisallioppiminen.fi/kurssit/may1/funktio/">MAY1</a> tutustuttiin funktioihin, joiden avulla voidaan mallintaa ja tutkia erilaisten mitattavissa olevien asioiden välisiä riippuvuuksia. Funktioita voidaan luokitella niiden ominaisuuksien perusteella, ja erityisen tärkeän funktioiden luokan muodostavat niin sanotut ensimmäisen asteen polynomifunktiot. Niitä tutkittiin tarkemmin jo kurssissa <a href="http://kisallioppiminen.fi/kurssit/mab2/luku1/">MAB2</a>
                 </p>
 
                 <div class="definition">
@@ -187,10 +187,115 @@ topnav: mab4
 
             <div class="teoria">
                 <p>
-                    
+                    Ensimmäisen asteen polynomifunktion kuvaaja on aina suora. Jos funktio on muotoa 
+                    $$f(x) = ax + b,$$ missä $a \neq 0$, niin sen kuvaaja on suora, jonka yhtälö on $$y = ax + b.$$ Vakio $b$ ilmaisee, millä korkeudella suora leikkaa $y$-akselin. Kerroin $a$ puolestaan on kyseisen suoran kulmakerroin.
                 </p>
-                
-        </div>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KULMAKERROIN</h3>
+                    <p>
+                        Oletetaan, että $a \neq 0$ ja $b$ on mikä tahansa reaaliluku. Suoran yhtälössä $y = ax + b$ esiintyvä kerroin $a$ on suoran <em>kulmakerroin</em>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="d00eb03e-a5b7-45f5-83d4-530becd7de20">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB4t105">
+                                Kulmakerroin
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB4t105" class="collapse">
+                        <p>
+                            Laske funktion arvo kohdissa $x = 0$ ja $x = 1$ ja päättele, kuinka monta ruutua kuvaaja nousee tai laskee, kun siirrytään koordinaatistossa yhden ruudun verran oikealle. Selitä omin sanoin, miten suoran kulmakerroin kuvaa sitä, miten jyrkästi suora nousee tai laskee.
+                        <ol class="a">
+                            <li> $f(x) = 7x - 3$</li>
+                            <li> $g(x) = -5x + 8$ </li>
+                        </ol>
+                        </p>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB4t105_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB4t105_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kuvaaja nousee 7 ruutua, kun siirrytään yhden ruudun verran oikealle. Kuvaaja on suora $y = 7x - 3$, jonka kulmakerroin on 7.
+                                </li>
+                                <li> 
+                                    Kuvaaja laskee 5 ruutua, kun siirrytään yhden ruudun verran oikealle. Kuvaaja on suora $y = -5x + 8$, jonka kulmakerroin on $-5$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kuten edellisessä tehtävässä havaittiin, suora $y = ax + b$ on 
+                </p>
+                    <ul>
+                        <li>
+                            nouseva, jos $a > 0$ eli kulmakerroin on positiivinen
+                        </li>
+                        <li>
+                            laskeva, jos $a < 0$ eli kulmakerroin on negatiivinen.
+                        </li>
+                    </ul>
+                <p>
+                    Lisäksi kulmakerroin vaikuttaa suoran jyrkkyyteen: mitä lähempänä nollaa kulmakerroin on, sitä loivemmin suora nousee tai laskee.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="4d5030b1-87c5-4dc3-93da-4bee8f5e8178">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB4t106">
+                                Kuvaajan piirtäminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB4t106" class="collapse">
+                        <p>
+                            Koska ensimmäisen asteen polynomifunktion kuvaaja on aina suora, voi kuvaajan piirtää monella tavalla.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Piirrä funktion $f(x) = 2x-3$ kuvaaja seuraavasti: Määritä jotkin kaksi pistettä, joiden kautta kuvaaja kulkee. Piirrä näiden kautta kulkeva suora.
+                            </li>
+                            <li> 
+                                Piirrä funktion $g(x) = -x+4$ kuvaaja seuraavasti: Päättele funktion lausekkeesta, millä korkeudella kuvaaja leikkaa $y$-akselin ja mikä on kuvaajan kulmakerroin. Piirrä suora näiden tietojen avulla.
+                            </li>
+                            <li> 
+                                Tarkista piirrokset piirtämällä kumpikin kuvaaja laskimella tai tietokoneella.
+                            </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB4t106_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB4t106_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kuvaaja kulkee esimerkiksi pisteiden $(0,-3)$ ja $(1,-1)$ kautta.
+                                </li>
+                                <li> 
+                                    Kuvaaja leikkaa $y$-akselin korkeudella 4 eli pisteessä $(0,4)$. Kuvaajan kulmakerroin on $-1$. Kuvaaja siis laskee aina yhden ruudun, kun siirrytään yhden ruudun verran oikealle.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <section class="panel">
