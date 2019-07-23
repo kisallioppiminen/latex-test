@@ -458,7 +458,96 @@ topnav: mab4
                         Erotus $d$ on nimeltään jonon <em>differenssi</em>.
                     </p>
                 </div>
+
+                <p>
+                    Se, että lukujono on aritmeettinen, voidaan siis osoittaa tutkimalla peräkkäisten jäsenten $a_{n+1}$ ja $a_n$ erotusta. Tarkastellaan esimerkiksi jonoa $(a_n)$, jolla $a_n = 5-2n$. Sen peräkkäisten jäsenten erotus on 
+                    $$
+                    \begin{align*}
+                    \textcolor{red}{a_{n+1}}-\textcolor{blue}{a_n} &= \textcolor{red}{5-2(n+1)}-\textcolor{blue}{(5-2n)} \\
+                    &= \textcolor{red}{5-2n-2}\textcolor{blue}{-5+2n} \\
+                    &= -2.
+                    \end{align*}$$
+                    Huomataan, että peräkkäisten jäsenten erotus on aina $-2$, joten jono $(a_n)$ on aritmeettinen.
+                </p>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc695c8-7df5-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB4t107">
+                                Aritmeettinen lukujono
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB4t107" class="collapse">
+                        <p>
+                            Tutki, voiko lukujono olla aritmeettinen. Jos kysymyksessä on aritmeettisen lukujonon alku, mitkä ovat jonon kolme seuraavaa jäsentä?
+                        </p>
+                        <ol class="a">
+                            <li> $11$, $14$, $17$
+                            <li> $50$, $15$, $-10$
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB4t107_v">
+                            VASTAUS
+                        </a>
+                        </h2>
+                        <div id="MAB4t107_v" class="collapse">
+                           <ol class="a">
+                                <li> Jonon peräkkäisten jäsenten erotus on vakio 3, joten jono voi olla aritmeettinen. Siinä tapauksessa seuraavat jäsenet ovat 20, 23 ja 26.</li>
+                                <li> $a_2-a_1 = -35$ ja $a_3-a_2 = -25$, joten lukujono ei ole aritmeettinen.</li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc69690-7df5-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB4t108">
+                                Aritmeettinen lukujono
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB4t108" class="collapse">
+                        <p>
+                            Tarkastele aritmeettista lukujonoa $1$, $5$, $9$, $\ldots$. 
+                        </p>
+                        <ol class="a">
+                            <li> Kopioi alla oleva taulukko vihkoosi.
+                                $$
+                                \begin{array}{c|c|c|c|c|c|c|c}
+                                n \T & 1 & 2 & 3 & 4 & 5 & 6 & 7  \\\hline
+                                a_n \T & 1 & 5 & 9 & \quad& \quad & \quad & \quad\\
+                                \end{array}
+                                $$</li>
+                            <li> Mikä on tarkastellun aritmeettisen jonon $(a_n)$ differenssi $d$?
+                            <li> Täydennä taulukkoon luvut $a_4$ ja $a_5$.
+                            <li> Keksi sääntö, jolla jonon jäsen $a_n$ saadaan laskettua jonon ensimmäisestä jäsenestä $a_1$ järjestysnumeron $n$ ja differenssin $d$ avulla. Muodosta tämän säännön avulla lauseke jäsenelle $a_n$.
+                            <li> Testaa keksimääsi sääntöä taulukon avulla. Antaako se oikean tuloksen taulukon kaikissa sarakkeissa?
+                        </ol>   
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB4t108_v">
+                            VASTAUS
+                        </a>
+                        </h2>
+                        <div id="MAB4t108_v" class="collapse">
+                           <ol class="a">
+                                <li></li>
+                                <li> $d = 4$ </li>
+                                <li> $a_4 = 13$ ja $a_5 = 17$</li>
+                                <li> $a_n = 1 + (n-1)\cdot 4$</li>
+                            </ol>  
+                        </div>  
+                    </div>
+                </div>
+            </div>
             
+            <div class="teoria">
                 <div class="theorem" id="ARITMEETTISEN JONON JÄSENET">
                     <h3>TEOREEMA</h3>
                     <p>
