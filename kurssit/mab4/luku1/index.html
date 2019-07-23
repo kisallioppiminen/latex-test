@@ -318,20 +318,66 @@ topnav: mab4
                     <br>
                     <img src="/kurssit/mab4/kuvat/MAB4kuva005.png" max-width: 100%; width: auto; height: auto;/>
                 </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8a8e531e-d51d-4d18-a8b5-cbfbfab88f71">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB4t111">
+                                Suora
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB4t111" class="collapse">
+                        <p>
+                            Tehtävänä on selvittää, ovatko pisteet $A = (2116, 894)$ ja $B = (15668, 4273)$ suoralla, jonka yhtälö on $y = 0{,}25x + 365$.
+                        </p>
+                        <ol class="a">
+                            <li> Selvitä suoran yhtälön avulla, mikä on suoran pisteen $y$-koordinaatti, jos $x$-koordinaatti on $x = 2116$. Onko piste $A$ suoralla? </li>
+                            <li> Selvitä suoran yhtälön avulla, mikä on suoran pisteen $y$-koordinaatti, jos $x$-koordinaatti on $x = 15668$. Onko piste $B$ suoralla? </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB4t111_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB4t111_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $y = 0{,}25 \cdot 2116 + 365 = 894$, joten piste $A = (2116, 894)$ on suoralla.
+                                </li>
+                                <li> 
+                                    $y = 0{,}25 \cdot 15668 + 365 = 4282$, joten piste $B = (15668, 4273)$ ei ole suoralla.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
                 <p>
                     Suoran yhtälössä 
                     $$
-                    y = ax + b
+                    y = kx + b
                     $$
-                    vakio $b$ ilmaisee, millä korkeudella suora leikkaa $y$-akselin. Kerroin $a$ puolestaan on kyseisen suoran kulmakerroin.
+                    vakio $b$ ilmaisee, millä korkeudella suora leikkaa $y$-akselin. Kerroin $k$ puolestaan on kyseisen suoran kulmakerroin. 
                 </p>
 
                 <div class="definition">
                     <h3>MÄÄRITELMÄ: KULMAKERROIN</h3>
                     <p>
-                        Oletetaan, että $a \neq 0$ ja $b$ on mikä tahansa reaaliluku. Suoran yhtälössä $y = ax + b$ esiintyvä kerroin $a$ on suoran <em>kulmakerroin</em>.
+                        Oletetaan, että $k \neq 0$ ja $b$ on mikä tahansa reaaliluku. Suoran yhtälössä $y = kx + b$ esiintyvä kerroin $k$ on suoran <em>kulmakerroin</em>.
                     </p>
                 </div>
+
+                <p>
+                    Esimerkiksi alla on näkyvissä osa suorasta $y = 2x-1$. Tämän suoran kulmakerroin on $k = 2$, mikä näkyy kuvassa siinä, että yhden ruudun matkalla suora nousee aina kaksi ruutua ylöspäin. Vakio $b = -1$, joka on sama kuin korkeus, jolla suora leikkaa $y$-akselin.
+                    <br>
+                    <img src="/kurssit/mab4/kuvat/MAB4kuva006.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
             </div>
 
             <div class="tehtavat">
@@ -373,14 +419,14 @@ topnav: mab4
 
             <div class="teoria">
                 <p>
-                    Kuten edellisessä tehtävässä havaittiin, suora $y = ax + b$ on 
+                    Kuten edellisessä tehtävässä havaittiin, suora $y = kx + b$ on 
                 </p>
                     <ul>
                         <li>
-                            nouseva, jos $a > 0$ eli kulmakerroin on positiivinen
+                            nouseva, jos $k > 0$ eli kulmakerroin on positiivinen
                         </li>
                         <li>
-                            laskeva, jos $a < 0$ eli kulmakerroin on negatiivinen.
+                            laskeva, jos $k < 0$ eli kulmakerroin on negatiivinen.
                         </li>
                     </ul>
                 <p>
