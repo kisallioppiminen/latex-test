@@ -2570,6 +2570,75 @@ topnav: mab4
                 </div>
             </div>
 
+            <div class="tehtava" id="04dbc02e-e426-4024-9549-463568d4fbaf">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAB4s110">
+                            Suorien ominaisuuksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB4s110">
+                    <p>
+                       Tässä tehtävässä tutkitaan, miten voidaan löytää tiettyä pistettä lähinnä oleva annetun suoran piste.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Alla on näkyvissä piste $P$ ja suora $y = -3x+8$. Suoralta on valittu pisteet $A$, $B$ ja $C$. Mikä niistä on silmämääräisesti lähimpänä pistettä $P$? Mitä voit sanoa suorasta, joka kulkee tämän lähimmän pisteen ja pisteen $P$ kautta, verrattuna suoraan $y = -3x+8$?
+                            <br>
+                            <img src="/kurssit/mab4/kuvat/MAB4kuva037.png" max-width: 80%; width: auto; height: auto;/>
+                        </li>
+                        <li> 
+                            Muodosta a-kohdan havaintojen perusteella ohje, miten voit löytää pistettä $P$ lähinnä olevan suoran pisteen alla olevan kuvan tilanteessa. Kuvassa näkyvän suoran kulmakerroin on $k = 4$. 
+                            <br>
+                            <img src="/kurssit/mab4/kuvat/MAB4kuva037.png" max-width: 80%; width: auto; height: auto;/>
+                            <br>
+                            Huom. pelkän ohjeen laatiminen riittää, lähintä pistettä ei tarvitse selvittää.
+                        </li>
+                        <li>
+                            Selvitä b-kohdan ohjeen avulla, mikä suoran $y = 3x+1$ piste on lähinnä pistettä $(2,-3)$. Tarkista tuloksesti järkevyys laskinohjelman tai Geogebran avulla.
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB4s110_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB4s110_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Suoran $y = -3x+8$ pisteistä pistettä $P$ lähimpänä on piste $B$. Se on lähimpänä, koska pisteiden $P$ ja $B$ kautta kulkeva suora on kohtisuorassa suoraa $y = -3x+8$ vastaan.
+                            </li>
+                            <li> 
+                                Ohje:
+                                <ol>
+                                    <li>
+                                        Määritä annetun suoran kulmakerroin (tässä tapauksessa $k_1 = 4$).
+                                    </li>
+                                    <li>
+                                        Päättele, mikä on tätä suoraa vastaan kohtisuorassa olevan suoran kulmakerroin (kulmakertoimien tulon pitää olla $-1$, joten tässä tapauksessa $k_2 = -\frac{1}{4}$).
+                                    </li>
+                                    <li>
+                                        Muodosta yhtälö suoralle, jonka kulmakerroin on sama kuin kohdassa 2. ja joka kulkee pisteen $P$ kautta.
+                                    </li>
+                                    <li>
+                                        Selvitä suorien leikkauspiste.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Lähin piste on $(-1,-2)$. Se löydetään, kun selvitetään suorien $y = 3x+1$ ja 
+                                $$
+                                y = -\dfrac{1}{3}x - \dfrac{7}{3}
+                                $$
+                                leikkauspiste.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja2">
                     Sulje kappale
