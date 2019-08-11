@@ -145,9 +145,9 @@ main > header h1 {
 	}
 }
 
-.call_to_action mab a,
-.call_to_action mab a:visited,
-.call_to_action input mab {
+.call_to_action .mab a,
+.call_to_action .mab a:visited,
+.call_to_action .mab input {
 	
 	&:hover {
 		background-color: #C1479F;
