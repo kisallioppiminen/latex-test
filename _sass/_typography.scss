@@ -145,6 +145,15 @@ main > header h1 {
 	}
 }
 
+.call_to_action mab a,
+.call_to_action mab a:visited,
+.call_to_action input mab {
+	
+	&:hover {
+		background-color: #C1479F;
+	}
+}
+
 /*
  * No ::first-line for <input> in FireFox. 
  * This caused text to have different sizes between Chrome and FF. 
