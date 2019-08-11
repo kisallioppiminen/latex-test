@@ -137,11 +137,20 @@ main > header h1 {
 	text-shadow: #696969 1px 1px 1px;
 
 	&:hover {
-		background-color: #47A1C1;
+		background-color: #A1C147;
 	}
 
 	&:first-line {
 		font-size: 1.5em;
+	}
+}
+
+.call_to_action .maa a,
+.call_to_action .maa a:visited,
+.call_to_action .maa input {
+	
+	&:hover {
+		background-color: #47A1C1;
 	}
 }
 
