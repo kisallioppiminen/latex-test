@@ -648,82 +648,24 @@ topnav: mab4
                 </div>
             </div>
 
-            <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#kpl21">
-                    Sulje kappale
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="panel">
-        <header class="otsikko">
-            <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#kpl22">
-                    Eksponenttiyhtälöt ja logaritmit
-                </a>
-            </h1>
-        </header>
-        <div id="kpl22" class="collapse">
-
-            <div class="teoria">
-                <p>
-                    Kun tutkitaan, missä kohdassa eksponenttifunktio saa tietyn arvon, päädytään eksponenttiyhtälöön. Esimerkiksi jos halutaan tietää, missä kohdassa funktio $f(x) = 1{,}5^x$ saa arvon $4$, päädytään tutkimaan yhtälöä
-                    $$f(x) = 4$$
-                    eli yhtälöä
-                    $$1{,}5^x = 4.$$
-                    Tämä yhtälö voidaan ratkaista graafisesti piirtämällä funktion $f(x) = 1{,}5^x$ kuvaaja koordinaatistoon ja katsomalla, mikä kuvaajan piste on korkeudella 4:
-                <br>
-                    <img src="/kurssit/mab2/kuvat/MAB2kuva006.png" max-width: 100%; width: auto; height: auto;/>
-                <br>
-                    Piirroksesta nähdään, että kuvaajan piste on korkeudella 4 likimain kohdassa $x \approx 3{,}4$. Tarkemmin asia voidaan ilmaista logaritmin avulla. Logaritmin käsite määriteltiin kurssilla <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1</a>:
-                </p>
-
-                <div class="definition">
-                    <h3>MÄÄRITELMÄ: LOGARITMI</h3>
-                    <p>
-                        Oletetaan, että kantaluku $k$ on positiivinen ja $k \neq 1$. Positiivisen luvun $a$ <em>$k$-kantainen logaritmi</em> tarkoittaa lukua $x$, jolla on ominaisuus $k^x = a$. Luvusta $x$ käytetään merkintää $\log_k(a)$.
-                    </p>
-                </div>
-
-                <p>
-                    Eksponenttiyhtälön ratkaisu eli tuntematon eksponentti voidaan siis ilmaista logaritmin avulla. Esimerkiksi yhtälön
-                    $$1{,}5^x = 4$$
-                    ratkaisu on 
-                    $$\log_{1{,}5}(4).$$
-                    Tietokoneella tai nykyaikaisella laskimella saadaan näin tarkempi likiarvo:
-                    $$\log_{1{,}5}(4) \approx 3{,}4190226.$$
-                </p>
-            </div>
-
             <div class="tehtavat">
                 <div class="tehtava" id="3b93059c-e6e2-4256-93cb-081b0cf28cd1">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAB4t201">
-                                Eksponenttiyhtälön ratkaisu
+                                Otsikko
                             </a>
                         </h1>
                     </header>
                     <div id="MAB4t201" class="collapse">
-                        <p> Päättele tai selvitä kokeilemalla, mikä eksponentin pitää olla, jotta yhtälö toteutuu. Ilmaise vastaus myös logaritmin avulla muodossa $x = \log_k(a) = b$.
-                        </p>
-                        <ol class="a">
-                            <li> $3^x = 9$</li>
-                            <li> $2^x = 16$</li>
-                            <li> $5^x = 125$.</li>
-                        </ol>
+                        
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAB4t201_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="MAB4t201_v" class="collapse">
-                           <ol class="a">
-                                <li> $x = \log_3(9) = 2$ </li>
-                                <li> $x = \log_2(16) = 4$ </li>
-                                <li> $x = \log_5(125) = 3$ </li>
-                            </ol>
+                           
                         </div> 
                     </div>
                 </div>
@@ -808,27 +750,84 @@ topnav: mab4
                 </div>
             </div>
 
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl21">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl22">
+                    Eksponenttiyhtälöt ja logaritmit
+                </a>
+            </h1>
+        </header>
+        <div id="kpl22" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Kun tutkitaan, missä kohdassa eksponenttifunktio saa tietyn arvon, päädytään eksponenttiyhtälöön. Esimerkiksi jos halutaan tietää, missä kohdassa funktio $f(x) = 1{,}5^x$ saa arvon $4$, päädytään tutkimaan yhtälöä
+                    $$f(x) = 4$$
+                    eli yhtälöä
+                    $$1{,}5^x = 4.$$
+                    Tämä yhtälö voidaan ratkaista graafisesti piirtämällä funktion $f(x) = 1{,}5^x$ kuvaaja koordinaatistoon ja katsomalla, mikä kuvaajan piste on korkeudella 4:
+                <br>
+                    <img src="/kurssit/mab2/kuvat/MAB2kuva006.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                    Piirroksesta nähdään, että kuvaajan piste on korkeudella 4 likimain kohdassa $x \approx 3{,}4$. Tarkemmin asia voidaan ilmaista logaritmin avulla. Logaritmin käsite määriteltiin kurssilla <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1</a>:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: LOGARITMI</h3>
+                    <p>
+                        Oletetaan, että kantaluku $k$ on positiivinen ja $k \neq 1$. Positiivisen luvun $a$ <em>$k$-kantainen logaritmi</em> tarkoittaa lukua $x$, jolla on ominaisuus $k^x = a$. Luvusta $x$ käytetään merkintää $\log_k(a)$.
+                    </p>
+                </div>
+
+                <p>
+                    Eksponenttiyhtälön ratkaisu eli tuntematon eksponentti voidaan siis ilmaista logaritmin avulla. Esimerkiksi yhtälön
+                    $$1{,}5^x = 4$$
+                    ratkaisu on 
+                    $$\log_{1{,}5}(4).$$
+                    Tietokoneella tai nykyaikaisella laskimella saadaan näin tarkempi likiarvo:
+                    $$\log_{1{,}5}(4) \approx 3{,}4190226.$$
+                </p>
+            </div>
+
             <div class="tehtavat">
                 <div class="tehtava" id="94aba037-068c-4880-9b5a-8f41777e7744">
                     <header>
                         <h1>
                             <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#94aba037-068c-4880-9b5a-8f41777e7744_target">
-                                Otsikko
+                                Eksponenttiyhtälön ratkaisu
                             </a>
                         </h1>
                     </header>
                     <div id="94aba037-068c-4880-9b5a-8f41777e7744_target" class="collapse">
-                        <p>
-                            
+                        <p> 
+                            Päättele tai selvitä kokeilemalla, mikä eksponentin pitää olla, jotta yhtälö toteutuu. Ilmaise vastaus myös logaritmin avulla muodossa $x = \log_k(a) = b$.
                         </p>
+                        <ol class="a">
+                            <li> $3^x = 9$</li>
+                            <li> $2^x = 16$</li>
+                            <li> $5^x = 125$.</li>
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#94aba037-068c-4880-9b5a-8f41777e7744_target_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="94aba037-068c-4880-9b5a-8f41777e7744_target_v" class="collapse">
-                           
+                            <ol class="a">
+                                <li> $x = \log_3(9) = 2$ </li>
+                                <li> $x = \log_2(16) = 4$ </li>
+                                <li> $x = \log_5(125) = 3$ </li>
+                            </ol>
                         </div> 
                     </div>
                 </div>
