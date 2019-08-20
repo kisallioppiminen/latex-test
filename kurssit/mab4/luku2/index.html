@@ -1149,10 +1149,17 @@ topnav: mab4
                     Monissa vanhoissa laskimissa likiarvo on mahdollista saada vain 10-kantaisesta ja $e$-kantaisesta logaritmista. Tässä luku $e \approx 2{,}718$ on niin sanottu Neperin luku, josta voit lukea lisää <a href="http://kisallioppiminen.fi/kurssit/maa8/luku2/">MAA8-kurssin</a> kappaleesta Kantalukuna Neperin luku.
                 </p>
                 <p>
-                    Likiarvo on mahdollista selvittää vanhemmalla laskimella tai esimerkiksi puhelimen laskimella tekemällä logaritmille kantaluvun vaihto. Jos halutaan selvittää $\log_k(a)$ mutta kantaluku $k$ on jollakin tavalla hankala, voidaan sen sijaan valita mikä tahansa muu positiivinen kantaluku $b \neq 1$ ja laskea kahden $b$-kantaisen logaritmin osamäärä: 
-                    $$
-                    log_k(a) = \dfrac{\log_b(a)}{\log_b(k)}
-                    $$
+                    Minkä tahansa logaritmin likiarvo on kuitenkin mahdollista selvittää vanhanmallisella funktiolaskimella tekemällä logaritmille kantaluvun vaihto. Jos halutaan likiarvo logaritmille $\log_k(a)$ mutta sitä ei saada suoraan, voidaan valita mikä tahansa muu positiivinen kantaluku $b \neq 1$ ja laskea kahden $b$-kantaisen logaritmin osamäärä: 
+
+                    <div class="theorem" id="KANTALUVUN VAIHTO">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että $k \neq 1$ ja $b \neq 1$ ovat positiivisia reaalilukuja. Näitä kantalukuja vastaavilla logaritmeilla on yhteys
+                        $$
+                        \log_k (a) = \dfrac{\log_b (a)}{\log_b (k)}.
+                        $$
+                    </p>
+                    </div>
                 </p>
             </div>
 
@@ -1162,13 +1169,24 @@ topnav: mab4
                         <h1>
                             <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#7ca9c66a-5bab-4ac9-a949-e4f30f485bac_target">
-                                Otsikko
+                                Logaritmin kantaluvun vaihto
                             </a>
                         </h1>
                     </header>
                     <div id="7ca9c66a-5bab-4ac9-a949-e4f30f485bac_target">
                         <p>
-                            
+                            Ilmaise logaritmi 10-kantaisten logaritmien avulla ja laske sen likiarvo. Pyöristä lopputulos kolmen merkitsevän numeron tarkkuuteen.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                $\log_2(100)$
+                            </li>
+                            <li>
+                                $\log_{1{,}015}(1{,}5)$
+                            </li>
+                        </ol>
+                        <p>
+                            Miten voit tarkistaa, että vastaus on järkevä?
                         </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#7ca9c66a-5bab-4ac9-a949-e4f30f485bac_target_v">
@@ -1176,7 +1194,17 @@ topnav: mab4
                             </a>
                         </h2>
                         <div id="7ca9c66a-5bab-4ac9-a949-e4f30f485bac_target_v" class="collapse">
-                            
+                            <ol class="a">
+                                <li>
+                                    $\log_2(100) = \dfrac{\log_{10} (100)}{\log_{10}(2)} \approx 6{,}64$.
+                                </li>
+                                <li>
+                                    $\log_{1{,}015}(1{,}5) = \dfrac{\log_{10} (1{,}5)}{\log_{10}(1{,}015)} \approx 27{,}2$.
+                                </li>
+                            </ol>
+                            <p>
+                                Tuloksen voi tarkistaa potenssiin korotuksen avulla: $2^{6{,}64} \approx 100$ ja $1{,}015^{27{,}2} \approx 1{,}5$.
+                            </p>
                         </div>
                     </div>
                 </div>
