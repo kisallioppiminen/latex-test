@@ -1063,6 +1063,9 @@ topnav: mab4
                     Tietokoneella tai nykyaikaisella laskimella saadaan logaritmille tarkempi likiarvo kuin kuvasta:
                     $$x = \log_{1{,}5}(4) \approx 3{,}4190226.$$
                 </p>
+                <p>
+                    Joillekin logaritmeille voidaan päätellä tarkka arvo muistelemalla kertotaulua ja lukujen potensseja. Esimerkiksi $\log_7(49) = 2$, sillä $7^2 = 49$. Toisaalta $\log_{10}(1000) = 3$, sillä $10^3 = 1000$. 
+                </p>
             </div>
 
             <div class="tehtavat">
@@ -1100,6 +1103,12 @@ topnav: mab4
                 </div>
             </div>
 
+            <div>
+                <p>
+                    Usein eksponenttiyhtälön ratkaisun tarkka arvo voidaan ilmaista vain logaritmin avulla. Monilla nykyaikaisilla teknisillä apuvälineillä kuten Geogebralla logaritmille saa laskettua likiarvon olipa kantalukuna $k \neq 1$ mikä tahansa positiivinen luku.
+                </p>
+            </div>
+
             <div class="tehtavat">
                 <div class="tehtava" id="e7fe0f40-16a9-4a38-89b1-93a7c7ffe15e">
                     <header>
@@ -1133,6 +1142,18 @@ topnav: mab4
                         </div> 
                     </div>
                 </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Monissa vanhoissa laskimissa likiarvo on mahdollista saada vain 10-kantaisesta ja $e$-kantaisesta logaritmista. Tässä luku $e \approx 2{,}718$ on niin sanottu Neperin luku, josta voit lukea lisää <a href="http://kisallioppiminen.fi/kurssit/maa8/luku2/">MAA8-kurssin</a> kappaleesta Kantalukuna Neperin luku.
+                </p>
+                <p>
+                    Likiarvo on mahdollista selvittää vanhemmalla laskimella tai esimerkiksi puhelimen laskimella tekemällä logaritmille kantaluvun vaihto. Jos halutaan selvittää $\log_k(a)$ mutta kantaluku $k$ on jollakin tavalla hankala, voidaan sen sijaan valita mikä tahansa muu positiivinen kantaluku $b \neq 1$ ja laskea kahden $b$-kantaisen logaritmin osamäärä: 
+                    $$
+                    log_k(a) = \dfrac{\log_b(a)}{\log_b(k)}
+                    $$
+                </p>
             </div>
 
             <div class="tehtavat">
