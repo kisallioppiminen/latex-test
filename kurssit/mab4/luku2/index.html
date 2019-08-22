@@ -1722,7 +1722,7 @@ topnav: mab4
                     $$
                     x^n = a.
                     $$
-                    Seuraavassa tehtävässä harjoitellaan yhtälön ratkaisemista tällaisessa tilanteessa, jossa yhtälö täytyy ensin muokata perusmuotoon ja ratkaista juurten avulla sen jälkeen.
+                    Seuraavassa tehtävässä harjoitellaan yhtälön ratkaisemista tilanteessa, jossa yhtälö täytyy ensin muokata perusmuotoon ja ratkaista juurten avulla sen jälkeen.
                 </p>
             </div>
 
@@ -1781,19 +1781,65 @@ topnav: mab4
                         <h1>
                             <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#671fd01d-49f4-4b3f-8d0c-87988f37e74c_target">
-                                Otsikko
+                                Potenssiyhtälön ratkaisu
                             </a>
                         </h1>
                     </header>
                     <div id="671fd01d-49f4-4b3f-8d0c-87988f37e74c_target" class="collapse">
-                        
+                        <p>
+                            Kauppias haluaa vähentää muovikassien kulutusta kaupassaan niin, että liikkeestä ostettujen tai saatujen muovikassien määrä vähenee kuudessa vuodessa (2019-2025) kymmeneen prosenttiin vuoden 2019 alun määrästä. Tavoitteena on siis, että vuoden 2025 lopussa muovikassien kulutus on vain 10 % vuoden 2019 alun määrästä.
+                        </p>
+                        <p>
+                            Tehtävänä on selvittää, mikä pitäisi vuotuisen vähennystavoitteen olla, jotta tavoitteeseen päästään. Oletetaan, että muovikassien kulutusta onnistutaan pienentämään joka vuosi yhtä monta prosenttia.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Hahmota tilannetta aluksi laskemalla kulutuksen määrä jossakin esimerkkitilanteessa. Esimerkiksi jos vuoden 2019 alussa muovikasseja kuluu 1000 kpl/kk ja kulutus vähentyy 20 % joka vuosi, kuinka paljon muovikasseja kuluu kuuden vuoden kuluttua? Mikä on laskussa käyttämäsi muutoskerroin?
+                            </li>
+                            <li>
+                                Merkitse muovikassien määrää vuoden 2019 alussa esimerkiksi kirjaimella $m$. Mikä on tavoitteen mukainen muovikassien määrä vuoden 2025 lopussa?
+                            </li>
+                            <li>
+                                Merkitse tuntematonta vuosittaista muutoskerrointa esimerkiksi kirjaimella $x$ tai kirjaimella $k$. Muodosta edellisten kohtien avulla yhtälö, joka ilmaisee, että kuudessa vuodessa alkuperäinen määrä vähenee 10 prosenttiin alkuperäisestä määrästä.
+                            </li>
+                            <li>
+                                Ratkaise $c$-kohdan yhtälö. Kuinka monta ratkaisua sillä on? Mitkä niistä ovat tehtävän tilanteen kannalta merkityksellisiä?
+                            </li>
+                            <li>
+                                Mikä vuotuisen vähennystavoitteen pitäisi olla?
+                            </li>   
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#671fd01d-49f4-4b3f-8d0c-87988f37e74c_target_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="671fd01d-49f4-4b3f-8d0c-87988f37e74c_target_v" class="collapse">
-                            
+                            <ol class="a">
+                                <li>
+                                    $0{,}8^6 \cdot 1000 = 262{,}144$ eli muovikassien määrä on kuuden vuoden kuluttua noin 262 kpl. Muutoskerroin on $0{,}80$.
+                                </li>
+                                <li>
+                                    Jos muovikassien määrä vuoden 2019 alussa on $m$, niin sen pitäisi olla vuoden 2025 lopussa $0{,}10m$ eli 10 prosenttia alkuperäisestä määrästä.
+                                </li>
+                                <li>
+                                    Yhtälö on 
+                                    $$
+                                    x^6 \cdot m = 0{,}1m
+                                    $$
+                                    tai toisilla merkinnöillä
+                                    $$
+                                    k^6 \cdot m = 0{,}1m.
+                                    $$
+                                </li>
+                                <li>
+                                    Yhtälö toteutuu, jos ja vain jos 
+                                    $x = \sqrt[6]{0{,}1} \approx 0{,}68$ tai $x = -\sqrt[6]{0{,}1} \approx -0{,}68$. Yhtälöllä on siis kaksi ratkaisua. Koska $x$ on vuosittaista vähennystä kuvaava muutoskerroin, vain positiivisella ratkaisulla on merkitystä tehtävän kannalta. Muutoskerroin $x \approx 0{,}68$ vastaa 32 % vähennystä. (Huom. $1 - 0{,}68 = 0{,}32$.)
+                                </li>
+                                <li>
+                                    Vuosittaisen vähennystavoitteen pitäisi olla noin 32 %.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
