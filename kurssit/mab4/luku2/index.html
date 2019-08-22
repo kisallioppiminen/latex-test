@@ -1577,38 +1577,71 @@ topnav: mab4
                         </li>
                     </ul>
                 </div>
-                <!-- <p>
-                    <img src="/kurssit/maa2/kuvat/KAk10.png" style="float: left; width: 45%; margin-left: 4%; margin-right: 1%; margin-bottom: 0.5em;">
-                    <img src="/kurssit/maa2/kuvat/KAk11.png" style="float: left; width: 45%; margin-left: 1%; margin-right: 4%; margin-bottom: 0.5em;">
-                <p style="clear: both;">
-                </p> -->
+
+                <p>
+                    Parillisten juurten tapauksessa määritelmässä on syytä kiinnittää huomiota kahteen asiaan:
+                </p>
+                <ul>
+                    <li>
+                        Jos $n$ on parillinen, $n$:s juuri $\sqrt[n]{a}$ on määritelty vain siinä tapauksessa, että juurrettava $a$ on epänegatiivinen eli $a \geq 0$. Tämä johtuu siitä, että jos juurrettava on negatiivinen eli $a < 0$, ei yhtälöllä $x^n  = a$ ole yhtään ratkaisua eikä $n$:s juuri sen vuoksi ole määritelty.
+                    </li>
+                    <li>
+                        Jos $n$ on parillinen, $n$:s juuri $\sqrt[n]{a}$ tarkoittaa yhtälön $x^n = a$ positiivista ratkaisua. Siis aina $\sqrt[n]{a} \geq 0$. 
+                    </li>
+                </ul>
+                <p>
+                    Parittomilla juurilla tilanne on yksinkertaisempi: ne ovat aina määriteltyjä ja niiden arvo voi olla positiviinen tai negatiivinen.
+                </p>
             </div>
             
-            
-
-            
-
             <div class="tehtavat">
                 <div class="tehtava" id="584c5349-a0fc-483d-b529-97c68684eb3f">
                     <header>
                         <h1>
                             <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#584c5349-a0fc-483d-b529-97c68684eb3f_target">
-                                Otsikko
+                                Juuret
                             </a>
                         </h1>
                     </header>
                     <div id="584c5349-a0fc-483d-b529-97c68684eb3f_target" class="collapse">
                         <p>
-                            
+                            Mitkä seuraavista väitteistä ovat tosia? Mitkä ovat epätosia? Perustele vastauksesi juurten määritelmän avulla. Saat käyttää apuna potenssiin korotusta mutta et laskimen tai muun teknisen apuvälineen juurinappulaa.
                         </p>
+                        <ol class="a">
+                            <li>
+                                $\sqrt[4]{625} = 5$
+                            </li>
+                            <li>
+                                $\sqrt[3]{-216} = -6$
+                            </li>
+                            <li>
+                                $\sqrt[8]{256} = -2$
+                            </li>
+                            <li>
+                                $\sqrt{-225} = 15$
+                            </li>
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#584c5349-a0fc-483d-b529-97c68684eb3f_target_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="584c5349-a0fc-483d-b529-97c68684eb3f_target_v" class="collapse">
-                            
+                            <ol class="a">
+                                <li>
+                                    Väite $\sqrt[4]{625} = 5$ on tosi, sillä luku $5$ on positiivinen ja toteuttaa yhtälön $x^4 = 625$. Tämä nähdään laskemalla potenssi $5^4$.
+                                </li>
+                                <li>
+                                    Väite $\sqrt[3]{-216} = -6$ on tosi, sillä luku $-6$ toteuttaa yhtälön $x^3 = -216$. Tämä nähdään laskemalla potenssi $(-6)^3$.
+                                </li>
+                                <li>
+                                    Väite $\sqrt[8]{256} = -2$ on epätosi, koska parillinen juuri ei koskaan ole negatiivinen. Tässä kuitenkin $-2$ on negatiivinen, joten se ei voi olla minkään luvun 8. juuri.
+                                </li>
+                                <li>
+                                    Väite $\sqrt{-225} = 15$ on epätosi, sillä $\sqrt{-225}$ ei ole määritelty. Tämä johtuu siitä, että yhtälöllä $x^2 = -225$ ei ole yhtään ratkaisua, koska funktio $f(x) = x^2$ saa vain epänegatiivisia arvoja.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
