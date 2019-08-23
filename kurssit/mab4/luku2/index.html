@@ -2450,21 +2450,48 @@ topnav: mab4
                         <h1>
                             <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#a18f5f26-e40d-443f-8060-e74faf2bb0a8_target">
-                                Otsikko
+                                Eksponentiaalinen malli
                             </a>
                         </h1>
                     </header>
                     <div id="a18f5f26-e40d-443f-8060-e74faf2bb0a8_target" class="collapse">
                         <p>
-                            
+                            Euroopan unionissa pyritään vähentämään uusien autojen päästöjä 37,5 % vuodesta 2021 vuoteen 2030. Kuvataan tilannetta mallilla, jossa päästöjä onnistutaan vähentämään joka vuosi yhtä monta prosenttia senhetkisestä määrästä.
                         </p>
+                        <ol class="a">
+                            <li>
+                                Kirjoita TI-Nspire-ohjelman muistiinpanot-sovellukseen tehtävän olennaiset tiedot: Kuinka monta prosenttia vuoden 2030 päästöjen tavoitemäärä on vuoden 2021 päästöjen määrästä? Kuinka monen vuoden aikana päästövähennys tapahtuu?
+                            </li>
+                            <li>
+                                Muodosta muistiinpanot-sovelluksessa yhtälö, josta voit ratkaista vuosittaista vähennystä kuvaavan muutoskertoimen $k$.
+                            </li>
+                            <li>
+                                Muodosta päästöjen määrää kuvaava eksponentiaalinen malli.
+                            </li>
+                            <li>
+                                Jos vuodesta 2021 vuoteen 2025 päästöjä onnistutaan vähentämään 15 %, onko kokonaistavoitteeseen mahdollista päästä samalla vähennystahdilla? Perustele vastauksesi.
+                            </li>
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#a18f5f26-e40d-443f-8060-e74faf2bb0a8_target_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="a18f5f26-e40d-443f-8060-e74faf2bb0a8_target_v" class="collapse">
-                            
+                            <ol class="a">
+                                <li>
+                                    Vuoden 2030 päästöjen määrä on 62,5 % vuoden 2021 päästöjen määrästä. Päästövähennys tapahtuu 9 vuoden aikana.
+                                </li>
+                                <li>
+                                    $k^9 = 0{,}625$, joten $k = \sqrt[9]{0{,}625} \approx 0{,}949$.
+                                </li>
+                                <li>
+                                    Päästöjen määrää kuvaa funktio $f(x) = 0{,}949^x \cdot a$, missä $a$ on päästöjen määrä vuonna 2021.
+                                </li>
+                                <li>
+                                    Mallin mukaan vuonna 2025 päästöjen pitäisi olla $f(4) = 0{,}949^4 \cdot a \approx 0{,}81a$ eli vähennyksen pitäisi olla noin 19 %. Jos todellinen päästövähennys on vain 15 %, tavoitteeseen ei päästä samalla tahdilla vaan tahtia pitäisi kiristää. 
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
