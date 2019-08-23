@@ -2141,7 +2141,7 @@ topnav: mab4
 
             <div class="teoria">
                 <p>
-                    
+                    Tässä kappaleessa harjoitellaan edellä opiskeltujen erilaisten eksponentiaalisten mallien soveltamista. Ensimmäisissä tehtävissä harjoitellaan muodostamaan eksponentiaalinen malli samassa tilanteessa kahdella erilaisella tavalla. Jatkossa voit käyttää tapaa, joka on sinulle luontevampi.
                 </p>                
             </div>
     
@@ -2151,21 +2151,129 @@ topnav: mab4
                         <h1>
                             <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#6eb1e261-d553-4f97-907d-c5d8b2f215a3_target">
-                                Otsikko
+                                Eksponentiaalinen malli
                             </a>
                         </h1>
                     </header>
                     <div id="6eb1e261-d553-4f97-907d-c5d8b2f215a3_target" class="collapse">
                         <p>
-                            
+                            Radioaktiivista ainetta jodi-131 syntyy uraanin fissiossa ja onnettomuustilanteissa sitä voi levitä ydinvoimaloista ympäristöön. Tätä niin sanottua radiojodia käytetään myös kilpirauhassyövän hoitoon. 
                         </p>
+                        <p>
+                            Tässä tehtävässä muodostetaan radiojodin hajoamista kuvaava eksponentiaalinen malli ja lasketaan, kuinka monta prosenttia radiojodista on jäljellä 30 päivän kuluttua. 
+                        </p>
+                        <p>
+                            Radiojodin puoliintumisaika on melko tarkasti 8 vuorokautta, eli jäljellä olevan radiojodin määrä puoliintuu aina 8 vuorokauden kuluessa.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Täydennä alla oleva taulukko. Päättele sen avulla, mikä on tässä tilanteessa sopiva muutoskerroin $k$. 
+                                <div align="center">
+                                    <table style="width = 75%">
+                                        <tr>
+                                            <th> Vuorokausia </th>
+                                            <td> &nbps; 0 &nbps; </td>
+                                            <td> &nbps; 8 &nbps; </td>
+                                            <td> &nbps; 16 &nbps; </td>
+                                            <td> &nbps; 24 &nbps; </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Aineen määrä </th>
+                                            <td> $a$ </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                Muodostetaan eksponenttifunktio $f(x) = k^x$, jonka kantalukuna on a-kohdassa löydetty muutoskerroin $k$. Kuinka pitkä aika vastaa muuttujan arvoa $x = 1$? Entä arvoa $x = 2{,}5$?
+                            </li>
+                            <li>
+                                Kohdassa (b) huomataan, että eksponenttifunktio $f(x) = k^x$ ei suoraan kelpaa jodi-131:n hajoamisen malliksi, jos halutaan, että muuttuja ilmaisee vuorokausien määrää. Täydennä alla oleva taulukko päättelemällä säännönmukaisuus vuorokausien määrän ja eksponentin välillä. Viimeisestä sarakkeesta saat lausekkeen sopivalle eksponentille.
+                                <div align="center">
+                                    <table style="width = 75%">
+                                        <tr>
+                                            <th> Vuorokausia </th>
+                                            <td> &nbps; 8 &nbps; </td>
+                                            <td> &nbps; 16 &nbps; </td>
+                                            <td> &nbps; 24 &nbps; </td>
+                                            <td> &nbps; $x$ &nbps;</td>
+                                        </tr>
+                                        <tr>
+                                            <th> Eksponentti </th>
+                                            <td> $1$ </td>
+                                            <td> $2$ </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                             </li>
+                             <li>
+                                Kirjoita lauseke radiojodin hajoamista kuvaavalle eksponenttifunktiolle $f(x)$. Laske, kuinka monta prosenttia radiojodista on jäljellä 30 vuorokauden kuluttua.
+                             </li>
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#6eb1e261-d553-4f97-907d-c5d8b2f215a3_target_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="6eb1e261-d553-4f97-907d-c5d8b2f215a3_target_v" class="collapse">
-                            
+                            <ol class="a">
+                                <li>
+                                    Sopiva muutoskerroin $k = \frac{1}{2} = 0{,}5$. 
+                                    <div align="center">
+                                        <table style="width = 75%">
+                                            <tr>
+                                                <th> Vuorokausia </th>
+                                                <td> &nbps; 0 &nbps; </td>
+                                                <td> &nbps; 8 &nbps; </td>
+                                                <td> &nbps; 16 &nbps; </td>
+                                                <td> &nbps; 24 &nbps; </td>
+                                            </tr>
+                                            <tr>
+                                                <th> Aineen määrä </th>
+                                                <td> $a$ </td>
+                                                <td> $\frac{1}{2}a$ </td>
+                                                <td> $\frac{1}{4}a$ </td>
+                                                <td> $\frac{1}{8}a$ </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    Eksponenttifunktio on $f(x) = 0{,}5^x$. Koska $f(1) = 0{,}5, vastaa muuttujan arvo $x=1$ yhtä puoliintumisaikaa eli 8 vuorokautta. Vastaavasti muuttujan arvo $x = 2{,}5$ vastaa 2,5-kertaista puoliintumisaikaa eli $16 + 4 = 10$ vuorokautta. 
+                                </li>
+                                <li>
+                                    <div align="center">
+                                        <table style="width = 75%">
+                                            <tr>
+                                                <th> Vuorokausia </th>
+                                                <td> &nbps; 8 &nbps; </td>
+                                                <td> &nbps; 16 &nbps; </td>
+                                                <td> &nbps; 24 &nbps; </td>
+                                                <td> &nbps; $x$ &nbps;</td>
+                                            </tr>
+                                            <tr>
+                                                <th> Eksponentti </th>
+                                                <td> $1$ </td>
+                                                <td> $2$ </td>
+                                                <td> $3$ </td>
+                                                <td> $\frac{x}{8}$ </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                 </li>
+                                 <li>
+                                    Eksponenttifunktion lauseke on $f(x) = 0{,}5^{\frac{x}{8}}$.
+                                    <br>
+                                    Radiojodista on 30 vuorokauden kuluttua jäljellä 
+                                    $$f(30) = 0{,}5^{\frac{30}{8}} = 0{,}5^{3{,}75} \approx 0{,}074$$
+                                    eli noin 7,4 %. 
+                                 </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
