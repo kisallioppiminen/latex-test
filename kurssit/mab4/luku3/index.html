@@ -222,15 +222,40 @@ topnav: mab4
                     </header>
                     <div id="57f3c161-4780-4d2f-8898-0a51492e23d5_target" class="collapse">
                         <p>
-                            
+                            Erääseen hätäkeskukseen tulee keskimäärin 30 puhelua tunnissa. Todennäköisyyttä, että kahden peräkkäisen puhelun välissä kuluu yli $x$ minuuttia, voidaan mallintaa funktiolla
+                            $$
+                            f(x) = e^{-0{,}5x}
+                            $$
+                            missä kantaluku $e = 2{,}7182818\ldots$ on niin sanottu <a href="https://fi.wikipedia.org/wiki/Neperin_luku">Neperin luku</a>.  
                         </p>
+                        <ol class="a">
+                            <li>
+                                Millä todennäköisyydellä kahden peräkkäisen puhelun välissä kuluu yli minuutti? Anna vastaus myös prosentteina.
+                            </li>
+                            <li>
+                                Millä todennäköisyydellä kahden peräkkäisen puhelun välissä kuluu yli 5 minuuttia? Anna vastaus myös prosentteina.
+                            </li>
+                            <li>
+                                Miten tämä malli liittyy edellisen luvun asioihin? Selitä omin sanoin.
+                            </li>
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#57f3c161-4780-4d2f-8898-0a51492e23d5_target_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="57f3c161-4780-4d2f-8898-0a51492e23d5_target_v" class="collapse">
-                            
+                            <ol class="a">
+                                <li>
+                                    Todennäköisyys, että peräkkäisten puhelujen välissä kuluu yli minuutti, on $f(1) = e^{-0{,}5 \cdot 1} = e^{-0{,}5} \approx 0{,}607$ eli noin 60,7 %.
+                                </li>
+                                <li>
+                                    Todennäköisyys, että peräkkäisten puhelujen välissä kuluu yli 5 minuuttia, on $f(5) = e^{-0{,}5 \cdot 5} = e^{-2{,}5} \approx 0{,}082$ eli noin 8,2 %.
+                                </li>
+                                <li>
+                                    Kysymyksessä on eksponentiaalisen vähenemisen malli. Todennäköisyys, että kahden peräkkäisen puhelun välissä kuluu yli $x$ minuuttia pienenee eksponentiaalisesti, kun $x$ kasvaa.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
