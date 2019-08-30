@@ -134,7 +134,7 @@ topnav: mab4
                     Edellisessä tehtävässä jääpeitteen laajuuden muuttumista mallinnettiin tutkimalla kahden eri ajanjakson keskiarvoja, jolloin pitkän aikavälin kehitys saatiin näkyviin vuosittaisesta vaihtelusta huolimatta.
                 </p>
                 <p>
-                    Seuraavassa tehtävässä mallinnetaan mallinnukseen käytetään toisen asteen polynomifunktiota. Niihin tutustuttiin kurssilla <a href="/kurssit/mab2/luku4/">MAB2</a>.
+                    Seuraavassa tehtävässä mallinnetaan sillan rakenteita koordinaatiston ja toisen asteen polynomifunktioiden avulla. Toisen asteen polynomifunktioihin tutustuttiin kurssilla <a href="/kurssit/mab2/luku4/">MAB2</a>.
                 </p>
             </div>
 
@@ -216,6 +216,12 @@ topnav: mab4
                 </div>
             </div>
 
+            <div class="teoria">
+                <p>
+                    Edellisissä tehtävissä mallin tulkintaa tehtiin jonkinlaisen graafisen esityksen pohjalta. Seuraavassa tehtävässä mallina on yksittäinen funktio.
+                </p>
+            </div>
+
             <div class="tehtavat">  
                 <div class="tehtava" id="57f3c161-4780-4d2f-8898-0a51492e23d5">
                     <header>
@@ -228,7 +234,7 @@ topnav: mab4
                     </header>
                     <div id="57f3c161-4780-4d2f-8898-0a51492e23d5_target" class="collapse">
                         <p>
-                            Erääseen hätäkeskukseen tulee keskimäärin 30 puhelua tunnissa. Todennäköisyyttä, että kahden peräkkäisen puhelun välissä kuluu yli $x$ minuuttia, voidaan mallintaa funktiolla
+                            Erääseen hätäkeskukseen tulee keskimäärin 30 puhelua tunnissa. Todennäköisyyttä, että kahden peräkkäisen puhelun välissä kuluu yli $x$ minuuttia, voidaan tällaisessa tilanteessa mallintaa funktiolla
                             $$
                             f(x) = e^{-0{,}5x}
                             $$
@@ -243,6 +249,12 @@ topnav: mab4
                             </li>
                             <li>
                                 Miten tämä malli liittyy edellisen luvun asioihin? Selitä omin sanoin.
+                            </li>
+                            <li>
+                                Millaisilla muuttujan $x$ arvoilla mallia voidaan soveltaa?
+                            </li>
+                            <li>
+                                Piirrä funktion $f$ kuvaaja esimerkiksi geogebralla. Määritä sen avulla sellainen muuttujan arvo $a$, että 50 % todennäköisyydellä kahden puhelun välissä kuluu yli $a$ minuuttia. 
                             </li>
                         </ol>
                         <h2>
@@ -260,6 +272,16 @@ topnav: mab4
                                 </li>
                                 <li>
                                     Kysymyksessä on eksponentiaalisen vähenemisen malli. Todennäköisyys, että kahden peräkkäisen puhelun välissä kuluu yli $x$ minuuttia pienenee eksponentiaalisesti, kun $x$ kasvaa.
+                                </li>
+                                <li>
+                                    Koska $x$ kuvaa puheluiden välistä aikaa minuutteina, sen täytyy olla positiivinen (tai nolla). Mallia voidaan siis soveltaa, kun $x \geq 0$. 
+                                </li>
+                                <li>
+                                    Kuva:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva077.png" max-width: 100%; width: auto; height: auto;/> 
+                                    <br>
+                                    Jos $a = 1{,}39$ minuuttia eli $1$ min ja $0{,}39 \cdot 60 \approx 23$ sekuntia, niin 50 % todennäköisyydellä kahden puhelun välissä kuluu yli $a$ minuuttia. 
                                 </li>
                             </ol>
                         </div>
