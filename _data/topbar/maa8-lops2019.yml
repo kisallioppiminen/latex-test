@@ -1,0 +1,18 @@
+header: 
+path: 
+navigation:
+  -
+    name: MAA8 - LOPS2019
+    path: /kurssit/maa8-loops2019/
+  -
+    name: 1. xxxx
+    path: /kurssit/maa8-loops2019/luku1/
+  -
+    name: 2. xxxx
+    path: /kurssit/maa8-loops2019/luku2/
+  -
+    name: 3. xxxx
+    path: /kurssit/maa8-loops2019/luku3/
+  -
+    name: 4. xxxx
+    path: /kurssit/maa8-loops2019/luku4/
