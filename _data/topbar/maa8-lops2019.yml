@@ -5,14 +5,14 @@ navigation:
     name: MAA8
     path: /kurssit/maa8-lops2019/
   -
-    name: 1. xxxx
+    name: 1. Todennäköisyys
     path: /kurssit/maa8-lops2019/luku1/
   -
-    name: 2. xxxx
+    name: 2. Tilastot
     path: /kurssit/maa8-lops2019/luku2/
   -
-    name: 3. xxxx
+    name: 3. Diskreetti todennäköisyysjakauma
     path: /kurssit/maa8-lops2019/luku3/
   -
-    name: 4. xxxx
+    name: 4. Diskreetti kahden muuttujan jakauma
     path: /kurssit/maa8-lops2019/luku4/
