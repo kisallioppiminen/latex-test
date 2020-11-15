@@ -5,13 +5,13 @@ navigation:
     name: MAA8
     path: /kurssit/maa8-lops2019/
   -
-    name: 1. Todennäköisyys
+    name: 1. Tilastolliset tunnusluvut
     path: /kurssit/maa8-lops2019/luku1/
   -
-    name: 2. Tilastot
+    name: 2. Todennäköisyys
     path: /kurssit/maa8-lops2019/luku2/
   -
-    name: 3. Diskreetti todennäköisyysjakauma
+    name: 3. Todennäköisyysjakauma ja odotusarvo
     path: /kurssit/maa8-lops2019/luku3/
   -
     name: 4. Diskreetti kahden muuttujan jakauma
