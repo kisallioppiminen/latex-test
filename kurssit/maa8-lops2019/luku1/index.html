@@ -89,7 +89,7 @@ topnav: maa8-lops2019
             </div>
 			
 			<div class="definition">
-                    <h3>MÄÄRITELMÄ: TILASTOLLINEN MUUTTUJA</h3>
+                    <h3>LISÄTIETO: TILASTOLLINEN MUUTTUJA</h3>
                     <p>
                        <em>Tilastolliseksi muuttujaksi</em> kutsutaan funktiota, joka kuvaa jokaisen havaintoyksikön sitä vastaavalle havaintoarvolle.
                     </p>
@@ -103,47 +103,14 @@ topnav: maa8-lops2019
 				<p>
                     Jos joukossa on vähän havaintoyksiköitä, niin havaintoarvot voi esittää luettelemalle ne peräkkäin. Jos havaintoyksiköitä on paljon, niin havaintoarvojen luettelu on epäkäytännöllistä ja epähavainnollista.  Tällöin havaintoyksiköt pitää <em>luokitella</em>. Luokittelemme havaintoyksiköt laskemalla, kuinka moni havaintoyksikkö vastaa kutakin havaintoarvoa.
 				</p>
-			</div>
-			
-			<div class="definition">
-                    <h3>MÄÄRITELMÄ: MAHDOLLINEN HAVAINTOARVO</h3>
-                    <p>
-                       <em>Mahdollinen havaintoarvo</em> on arvo tai suure, johon jokin havaintoyksikkö voisi liittyä.
-                    </p>
-					<p>
-						Kaikki havaintoarvot ovat mahdollisia havaintoarvoja. Havaintoarvojen lisäksi muita 
-						mahdollisia havaintoarvoja voi ottaa mukaan, jos tilanne sitä vaatii. 
-					</p>
-            </div>		
-
-			<div class="definition">
-                    <h3>MÄÄRITELMÄ: FREKVENSSI,SUHTEELLINEN FREKVENSSI JA JAKAUMA</h3>
-                    <p>
-						Mahdollisen havaintoarvon <em>frekvenssi</em> on  sitä vastaavien havaintoyksiköiden lukumäärä.
-                    </p>
-					<p>
-						Jos mahdollinen havaintoarvo ei ole havaintoarvo, niin siihen ei liity yhtään havaintoyksikköä, joten sen frenvenssi on nolla.
-					<p>
-						Frekvenssiä merkitään usein kirjaimella $f$. 
-					</p>
-					
-                    <p>
-						Mahdollisen havaintoarvon <em>suhteellinen frekvenssi</em> on sen havaintoyksiköiden osuus kaikista havaintoyksiköistä.
-                    </p>
-					<p>
-						Suhteellista frekvenssiä merkitään yleensä $f$ %.
-					<p>
-						Mahdollisten havaintoarvojen ja suhteellisten frekvenssien muodostamaa kokonaisuutta kutsutaan <em>jakaumaksi</em>. Jakaumiin tutustutaan tarkemmin luvussa <a>jakaumat</a>. 
-					</p>
-            </div>	
-
-			<div class="definition">
-                    <h3>ESIMERKKI 2: SUOMEN LAPSIPERHEET</h3>
-                    <p>
-                        Esimerkissä laskemme, kuinka monessa perheessä, eli havaintoyksikössä, on yksi lapsi (havaintoarvo 1), kuinka monessa on kaksi lasta (havaintoarvo 2), jne. Lapsiperheitä koskevat tiedot on poimittu <a href="https://www.stat.fi/">Tilastokeskuksen sivulta</a>.  
-                    </p>
-					
-					<table style="margin-left: auto; margin-right: auto;">
+				<p>
+                    Luvun lapsiperheesimerkissä laskemme, kuinka monessa perheessä, eli havaintoyksikössä, on yksi lapsi (havaintoarvo 1), kuinka monessa on kaksi lasta (havaintoarvo 2), jne. Lapsiperheitä koskevat tiedot on poimittu <a href="https://www.stat.fi/">Tilastokeskuksen sivulta</a>.  
+                </p>
+				<p>
+					Alla olevassa taulukossa ensimmäinen sarake "Lasten lkm" vastaa aineiston eri havaintoarvoja ja sarake $f$ vastaa niiden perheiden, eli havaintoyksiköiden, lukumäärää, joissa on ensimmäisen sarakkeen osoittama määrä lapsia.
+				</p>	
+				
+				<table style="margin-left: auto; margin-right: auto;">
 											
 						<tr>
 							<th>Lasten lkm</th>
@@ -235,20 +202,52 @@ topnav: maa8-lops2019
 							<th>566242</th>
 							<th>100 %</th>
 						</tr>
-					</table>
+				</table>
 		
-			<p>
-				Luku 15 ei ole havaintoarvo, koska missään perheessä ei ole 15 lasta. 15 lasta vaikuttaa mahdolliselta havainnolta, koska suurempiakin perheitä on olemassa. Sanomme, että luku 15 on <em>mahdollinen havaintoarvo</em>, ja otamme sen tämän takia mukaan.
-			</p>
-			<p>
-				Esimerkissä myös esimerkiksi 17 on mahdollinen havaintoarvo; huomaa, että nolla ei ole mahdollinen havaintoarvo, koska tutkimme perheitä, joissa on lapsia. Rajaamme kuitenkin lapsiperheisiin liittyvät mahdolliset havaintoarvot ottamalla mukaan vain kaikki mahdollisuudet pienimmän havaintoarvon ja suurimman havaintoarvon väliltä.
-            </p>
-			<p>
-				Taulukon viimeinen sarake, eli <em>suhteellinen frekvenssi</em> on perhekoon suhteellinen osuus kaikista aineiston perheistä. Esimerkiksi koska tilastossa on lapsiperheitä yhteensä 566242 kappaletta, yksilapsisten perheiden osuus kaikista aineiston perheistä on 
-				$$\frac{241709}{566242}\approx 42,7\ \%.$$ 
-				Huomaa, että pyöristysten takia suhteellisten frekvenssien summa taulukossa ei välttämättä ole täsmälleen 100 %.
-			</p>
-           </div>	
+				<p>
+					Luku 15 ei ole havaintoarvo, koska missään perheessä ei ole 15 lasta. 15 lasta vaikuttaa mahdolliselta havainnolta, koska suurempiakin perheitä on olemassa. Sanomme, että luku 15 on <em>mahdollinen havaintoarvo</em>, ja otamme sen tämän takia mukaan.
+				</p>
+				<p>
+					Esimerkissä myös 17 on mahdollinen havaintoarvo; huomaa, että nolla ei ole mahdollinen havaintoarvo, koska tutkimme perheitä, joissa on lapsia. Rajaamme kuitenkin lapsiperheisiin liittyvät mahdolliset havaintoarvot ottamalla mukaan vain kaikki mahdollisuudet pienimmän havaintoarvon ja suurimman havaintoarvon väliltä.
+				</p>
+				<p>
+					Taulukon viimeinen sarake, eli <em>suhteellinen frekvenssi</em> on perhekoon suhteellinen osuus kaikista aineiston perheistä. Esimerkiksi koska tilastossa on lapsiperheitä yhteensä 566242 kappaletta, yksilapsisten perheiden osuus kaikista aineiston perheistä on 
+					$$\frac{241709}{566242}\approx 42,7\ \%.$$ 
+					Huomaa, että pyöristysten takia suhteellisten frekvenssien summa taulukossa ei välttämättä ole täsmälleen 100 %.
+				</p>
+			</div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: MAHDOLLINEN HAVAINTOARVO</h3>
+                    <p>
+                       <em>Mahdollinen havaintoarvo</em> on arvo tai suure, johon jokin havaintoyksikkö voisi liittyä.
+                    </p>
+			</div>	
+			<div class="teoria">			
+					<p>
+						Kaikki havaintoarvot ovat mahdollisia havaintoarvoja. Havaintoarvojen lisäksi muita 
+						mahdollisia havaintoarvoja voi ottaa mukaan, jos tilanne sitä vaatii. Luku, joka kertoo kuinka moni havaintoyksikkö liittyy havaintoarvoon, on <em>frekvenssi</em>. 
+						Jos mahdollinen havaintoarvo ei ole havaintoarvo, niin siihen ei liity yhtään havaintoyksikköä, joten sen frenvenssi on nolla.
+					</p>
+            </div>		
+
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: FREKVENSSI,SUHTEELLINEN FREKVENSSI JA JAKAUMA</h3>
+                    <p>
+						Mahdollisen havaintoarvon <em>frekvenssi</em> on  sitä vastaavien havaintoyksiköiden lukumäärä.
+                    </p>
+						Frekvenssiä merkitään usein kirjaimella $f$. 
+					</p>
+					
+                    <p>
+						Mahdollisen havaintoarvon <em>suhteellinen frekvenssi</em> on sen havaintoyksiköiden osuus kaikista havaintoyksiköistä.
+                    </p>
+					<p>
+						Suhteellista frekvenssiä merkitään yleensä $f$ %.
+					<p>
+						Mahdollisten havaintoarvojen ja suhteellisten frekvenssien muodostamaa kokonaisuutta kutsutaan <em>jakaumaksi</em>. Jakaumiin tutustutaan tarkemmin luvussa <a>jakaumat</a>. 
+					</p>
+            </div>	
 
 			<div class="definition">
                     <h3>ESIMERKKI 1: KOTIPIHAN LINNUT (jatkoa)</h3>
@@ -286,7 +285,7 @@ topnav: maa8-lops2019
             </div>	
 
 			<div class="definition">
-                    <h3>ESIMERKKI 3: SUOMEN KUNNAT</h3>
+                    <h3>ESIMERKKI 2: SUOMEN KUNNAT</h3>
                     <p>
                         Suomessa on yhteensä 311 kuntaa. Asukasluvultaan suurin on Helsinki (635181 asukasta). Manner-Suomen pienin kunta on Luhanka (756 asukasta) ja Ahvenanmaan pienin kunta on Sottunga (96 asukasta).  
 					</p>
@@ -301,7 +300,7 @@ topnav: maa8-lops2019
                     </p>
 			</div>
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku1-tehtavasarja3">
+                <a data-toggle="collapse" class="collapsed" data-target="#frekvenssi">
                     Sulje kappale
                 </a>
             </div>
@@ -343,7 +342,7 @@ topnav: maa8-lops2019
             </div>	
 			
 			<div class="definition">
-                    <h3>ESIMERKKI: YLIOPPILASTUTKINNON ARVOSANAT</h3>
+                    <h3>ESIMERKKI 3: YLIOPPILASTUTKINNON ARVOSANAT</h3>
                     <p>
                        Ylioppilastutkinnossa arvosanat rinnastetaan lukuihin seuraavasti: I vastaa lukua 0, A vastaa lukua 2, B vastaa lukua 3, ...,  E vastaa lukua 6 ja L vastaa lukua 7.  Ajatellaan seuraavaa tilannetta:
 					</p>
@@ -366,15 +365,17 @@ topnav: maa8-lops2019
                     <p>
 						<em>Mediaani</em> on suuruusjärjestykseen järjestettyjen havaintoarvojen keskimmäinen havaintoarvo, jos havaintoarvoja on pariton määrä tai jos parillisessa tapauksessa kaksi keskimmäistä arvoa ovat samat. Jos parillisessa tapauksessa kaksi keskimmäistä havaintoarvoa ovat erisuuret, niin silloin mediaan on nämä molemmat arvot.
 					</p>
+			</div>
+			<div class="definition">
+                    <h3>LISÄTIETO:</h3>
 					<p>
 						Välimatka-asteikolla parillisessa tapauksessa  mediaani voi  vaihtoehtoisesti olla keskimmäisten lukujen keskiarvon.
 					</p>
             </div>
 			
-			<div class="definition">
-                    <h3>ESIMERKKI 2: SUOMEN LAPSIPERHEET (jatkoa)</h3>
+			<div class="teoria">
                     <p>
-                        Kirjoittamalla kaikki havaintoarvot aiemmasta esimerkistä lapsiperheistä, eli kaikkien perheiden lasten lukumäärät peräkkäin  suuruusjärjestykseen saamme:
+                        Kirjoittamalla lapsiperhe-esimerkissä kaikki havaintoarvot eli kaikkien perheiden lasten lukumäärät peräkkäin suuruusjärjestykseen saamme:
 						$${\tiny
 					
 						\underbrace{1, \ldots, 1}_{241\,709\text{kpl}}, \underbrace{2, \ldots, 2}_{220\,116\text{kpl}},
@@ -440,9 +441,386 @@ topnav: maa8-lops2019
 					</table>
 				</div>
 			</div>
+			
+			<div class="teoria">
+				<p>
+					Havaintoarvot noudattavat <em>välimatka-asteikkoa</em>, jos arvojen erotus on mielekkäästi tulkittavissa. Tälläisiä  ovat esimerkiksi kouluarvosana, vuosiluku, jne. 
+				</p>
+            </div>	
+			
+			<div class="definition">
+                    <h3>LISÄTIETO: SUHDEASTEIKKO</h3>
+					<p>
+						Havaintoarvot noudattavat <em>suhdeasteikkoa</em>, jos arvojen erotus on mielekkäästi tulkittavissa ja muuttujan arvoilla on jokin absoluuttinen nollakohta. Suhdeasteikko on aina välimatka-asteikko. Esimerkiksi pituus ja rahan määrä ovat suhdeasteikkoja. 
+					</p>
+            </div>
+			
+			<div class="definition">
+                    <h3>ESIMERKKI 4: SUHDEASTEIKKO</h3>
+					<p>
+						Mineraalien luokittelussa ja tunnistamisessa käytetään kovuutta kuvaava Mohsin asteikkoa. Se on esimerkki järjestysasteikosta, joka ei ole välimatka-asteikko. Tämä käy ilmi seuraavasta lainauksesta:
+					</p>
+					<p>
+						"Mineraalit on jaettu kymmeneen kovuusluokkaan ns. Mohsin kovuusasteikon mukaan. Asteikossa ylemmän luokan mineraalilla kyetään naarmuttamaan alemman luokan mineraalia. [...] Asteikko ei ole läheskään tasavälinen, minkä paljastaa mineraalien todellisia kovuuksia kuvaava ns. Rosiwallin asteikko."<br />
+						<em>Kalle Taipale: Kivet ja mineraalit Suomen luonnossa, Otava, 2010, s. 78.</em>
+					</p>
+            </div>
+			
+			<div class="teoria">
+				<p>
+					Välimatka-asteikolla voi laskea moodin ja mediaanin lisäksi keskiarvon. 
+				</p>
+            </div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: KESKIARVO</h3>
+					<p>
+						(Aritmeettinen) <em>keskiarvo</em> on havaintoarvojen summa jaettuna havaintoyksiköiden lukumäärällä.
+					</p>
+            </div>
+			
+			<div class="definition">
+                    <h3>LISÄTIETO</h3>
+					<p>
+						Määrittelemämme keskiarvo on "aritmeettinen keskiarvo", mutta jätämme sanan "aritmeettinen" pois, koska emme käytä muita keskiarvoja. Muita yleisesti käytettyjä keskiarvoja ovat "geometrinen keskiarvo" ja "harmoninen keskiarvo".
+					</p>
+            </div>
+			
+			<div class="teoria">
+				<p>
+					Tutkitaan sitten lasten lukumäärän (aritmeettista) keskiarvoa lapsiperheissä. Lasketaan lasten lukumäärä kertomalla ensin lasten lukumäärät niiden frekvensseillä ja laskemalla sitten saadut luvut yhteen: 
+					$$
+						\begin{split}
+						&241\,709 \cdot 1 + 220\,116 \cdot 2 + 75\,326 \cdot 3 + 18\,409 \cdot 4 + 5\,493 \cdot 5 + 2\,289 \cdot 6
+						+  1\,235 \cdot 7 + 752 \cdot 8\\
+						&\quad + 476 \cdot 9
+						+ 262 \cdot 10 + 117 \cdot 11 + 41 \cdot 12 + 12 \cdot 13 + 3 \cdot 14 +0 \cdot 15 + 3 \cdot 16
+						=1\,046\,336
+						\end{split}
+					$$
+					ja jaetaan se perheiden lukumäärällä
+					$$
+						\frac{1\,046\,336}{566\,242}\approx 1{,}85.
+					$$
+					Näin ollen lapsiperheiden lasten lukumäärän keskiarvo on noin 1,85. 
+				</p>
+            </div>
+			
+			<div class="tehtavat">
+                <div class="tehtava" id="38c3acd0-d55e-4923-bab0-2360a70eab5c">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t102">
+                                Tietokoneohjelman käyttö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t102" class="collapse">
+                        <p>
+                            Syötä aiemman lapsiperheiden kokoa kuvaavan taulukon luvut tietokoneohjelmaan, ja laske ohjelman avulla moodi, keskiarvo ja mediaani. Tarkista, että saat samat vastaukset kuin tässä materiaalissa.
+						</p>
+						
+				</div>
+			</div>
+			<div class="teoria">
+				<p>
+					Huomaa, että lapsiperhe-esimerkissä moodi, keskiarvo ja mediaani ovat kaikki eri lukuja. Ne voivat olla kaikki samoja, kaksi on samoja ja yksi on eri tai kaikki eri lukuja.
+				</p>
+            </div>
+			<div class="tehtavat">
+                <div class="tehtava" id="38c3acd0-d55e-4923-bab0-2360a70eab5c">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t103">
+                                Moodi, mediaani ja keskiarvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t103" class="collapse">
+                        <p>
+                            Anna esimerkki kokonaislukujen 4, ..., 10 havaintoarvoista, jossa
+						</p>
+						<ol class="a">
+							<li>moodi, mediaani ja keskiarvo ovat samoja</li>
+							<li>moodi ja mediaani ovat samoja mutta keskiarvo eroaa näistä,</li>
+							<li>moodi, mediaani ja keskiarvo ovat kaikki eri suuria.</li>
+						</ol>	
+					</div>		
+				</div>
+				<div class="tehtava" id="38c3acd0-d55e-4923-bab0-2360a70eab5c">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t104">
+                                Moodi, mediaani ja keskiarvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t104" class="collapse">
+                        <p>
+                            Ovatko seuraavat väitteet totta?
+						</p>
+						<ol class="a">
+							<li>Mediaani on aina suurempi kuin moodi.</li>
+							<li>Moodi on aina pienempi kuin keskiarvo.</li>
+							<li>Keskiarvo ja mediaani eivät voi olla yhtä suuria.</li>
+						</ol>
+					</div>	
+				</div>
+			</div>
+			
+			<div class="teoria">
+				<p>
+					Huomaa, että järjestysasteikossa havaintoarvot voidaan samaistaa mihin tahansa kasvavaan kokoelmaan lukuja. Samaistuksen jälkeen keskiarvon tekninen laskeminen on mahdollista, mutta saatu tulos ei välttämättä kerro mitään alkuperäisestä tilanteesta, kuten seuraavassa esimerkissä. 
+				</p>
+            </div>
+			
+			<div class="definition">
+                    <h3>ESIMERKKI 5: KEMIJÄRVI</h3>
+					<p>
+						Aleksanteri on lähdössä Kemijärveltä maastopyörävaellukselle. Hän luokittelee kiinnostavat kohteet kolmeen luokkaan: luokassa 1 etäisyys Kemijärveltä on alle 50 km, luokassa 2 etäisyys Kemijärveltä on  50--150 km, luokassa 3 etäisyys Kemijärveltä on  yli 150 km. 
+					</p>
+					<p>
+						Nyt havintoyksikköinä ovat paikat ja havaintoarvoina numerot 1, 2 ja 3. 
+						Havaintoarvot muodostavat järjestysasteikon, mutta eivät välimatka-asteikkoa.
+					</p>
+					<p>	
+						Esimerkiksi Savukosken kuntakeskus kuuluu luokkaan 2 ja Kemihaara luokkaan 3. Nyt Kemihaaran ja Savukosken kuntakeskuksen luokkien erotuksella  $3-2 =1$ ei ole järkevää tulkintaa.  Siitä ei esimerkiksi voi päätellä mitään Kemihaaran ja Savukosken kuntakeskuksen välisestä etäisyydestä. Myöskään luokkien keskiarvolla $\frac{2+3}{2}= \frac52$ ei ole järkevää tulkintaa. 
+					</p>
+            </div>
+			
+			<div class="tehtavat">
+                <div class="tehtava" id="38c3acd0-d55e-4923-bab0-2360a70eab5c">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t105">
+                                Moodi, mediaani ja keskiarvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t105" class="collapse">
+                        <p>
+                            Lomakkeissa kysytään usein koulutusta. Mitkä keskiluvut voidaan määrittää, jos vastausvaihtoehdot ovat 
+						</p>
+						<ol class="a">
+							<li>peruskoulu, ammattikoulu, lukio, alempi korkeakoulututkinto, ylempi korkeakoulututkinto, jatkotutkinto,</li>
+							<li>peruskoulu, 2. asteen koulutus,  korkeakoulututkinto, jatkotutkinto?</li>
+						</ol>	
+					</div>		
+				</div>
+				<div class="tehtava" id="38c3acd0-d55e-4923-bab0-2360a70eab5c">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t106">
+                                Moodi, mediaani ja keskiarvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t106" class="collapse">
+                        <p>
+                            Keksi esimerkkejä havaintoarvioista, joille voit soveltaa 
+						</p>
+						<ol class="a">
+							<li>moodia, mutta et mediaania,</li>
+							<li>moodia ja mediaania, mutta et keskiarvoa,</li>
+							<li>moodia, mediaania ja keskiarvoa?</li>
+						</ol>
+					</div>	
+				</div>
+			</div>
+			
 		</div>
         <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku1-tehtavasarja3">
+                <a data-toggle="collapse" class="collapsed" data-target="#keskiluvut">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+	
+	<section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#keskihajonta">
+                    Keskihajonta
+                </a>
+            </h1>
+        </header>
+        <div id="keskihajonta" class="collapse">
+            
+            <div class="teoria">
+                <p>
+                    Eri havaintoarvojen joukoilla voi olla sama keskiarvo, esimerkiksi silloin, kun joukot ovat 5, 7, 9 ja 7, 7, 7. Keskiarvo ei siis kerro, miten  havaintoarvot ovat jakautuneet. Tutustumme tässä luvussa keskihajontaan, joka  kuvaa havaintoarvojen jakautumista keskiarvon ympärille. Tässä luvussa ajattelemme, että meillä on käytössä välimatka-asteikko, jolloin voimme laskea havaintoarvojen erotuksia.
+                </p>
+            </div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: VAIHTELUVÄLI</h3>
+                    <p>
+                        Pienin ja suurin havaintoarvo määräävät <em>vaihteluvälin</em>. Vaihteluvälin pituus on suurimman ja pienimmän havaintoarvon erotus.  
+                    </p>
+            </div>
+			
+			<div class="teoria">
+                <p>
+                    Alla olevassa taulukossa on Tuulian ja Lukan koearvosanoja. Molemmilla on sama keskiarvo 8, sama vaihteluväli  $[6, 10]$ ja sama vaihteluvälin pituus $10-6=4$, mutta siitä huolimatta näyttää siltä, että Tuulian arvosanoissa on enemmän vaihtelua. 
+                </p>
+				<table style="margin-left: auto; margin-right: auto;">
+						
+						<tr>
+							<th>Arvosana</th>
+							<td>4</td>
+							<td>5</td>
+							<td>6</td>
+							<td>7</td>
+							<td>8</td>
+							<td>9</td>
+							<td>10</td>						
+						</tr>
+						<tr>
+							<th>Tuulia (lkm %)</th>
+							<td>0</td>
+							<td>0</td>
+							<td>3</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>3</td>						
+						</tr>
+						<tr>
+							<th>Luka (lkm %)</th>
+							<td>0</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+							<td>3</td>
+							<td>1</td>
+							<td>1</td>	
+						</tr>
+					</table>
+            </div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: KESKIHAJONTAVAIHTELUVÄLI</h3>
+                    <p>
+						<em>Keskihajonta</em> on
+						$$
+						\sqrt{\frac1n \sum_{j=1}^n (x_i - \bar x)^2} ~,
+						$$
+						missä $x_1, \ldots, x_n$ ovat havaintoarvot ja $\bar x$ on niiden keskiarvo. Keskihajontaa merkitään usein kirjaimella $\sigma$. 
+                    </p>
+            </div>
+			
+			<div class="teoria">
+                <p>
+                    Jatketaan Tuulian ja Lukan koearvosanojoen analysointia. 
+                </p>
+            </div>
+			
+			<div class="definition">
+                    <h3>ESIMERKKI 6: TUULIAN JA LUKAN KOEARVOSANOJEN KESKIHAJONTA</h3>
+                    <p>
+                        Lasketaan Tuulian ja Lukan koearvosanojen keskihajonta, yllä olevan taulukon tiedoilla. Molempien koearvosanojen keskiarvo on 8.  Tuulian koearvosanojen keskihajonta on
+						$$
+						\begin{split}
+						&\sqrt{(6-8)^2+ (6-8)^2 +(6-8)^2 + (8-8)^2 + (10-8)^2+ (10-8)^2+ (10-8)^2}\\
+						&= \sqrt{4+4+4+0+4+4+4}= \sqrt{24} \approx 4{,}9
+						\end{split}
+						$$
+						ja Lukan koearvosanojen keskihajonta on
+						$$
+						\begin{split}
+						&\sqrt{(6-8)^2+ (7-8)^2 +(8-8)^2 + (8-8)^2 + (8-8)^2+ (9-8)^2+ (10-8)^2}\\
+						&= \sqrt{4+1+0+0+0+1+4} = \sqrt{10} \approx 3{,}2. 
+						\end{split}
+						$$
+						Kuten aiemmin jo huomasimme, niin Tuulian koearvosanoissa on enemmän vaihtelua kuin Lukan.  
+                    </p>
+            </div>
+			
+			<div class="tehtavat">
+                <div class="tehtava" id="38c3acd0-d55e-4923-bab0-2360a70eab5c">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t107">
+                                Keskihajonta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t107" class="collapse">
+                        <p>
+                            Lataa aineisto ???? ja laske siitä tietokoneohjelmalla moodi, mediaani, keskiarvo ja keskiahajonta.
+						</p>
+					</div>		
+				</div>
+				<div class="tehtava" id="38c3acd0-d55e-4923-bab0-2360a70eab5c">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t108">
+                                Keskihajonta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t108" class="collapse">
+                        <p>
+                            Jos kahden joukon havaintoarvoilla on sama keskiarvo ja sama keskihajonta, niin ovatko joukot välttämättä samoja? 
+						</p>
+					</div>	
+				</div>
+			</div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#keskihajonta">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+	
+		<section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#diagrammit">
+                    Diagrammit
+                </a>
+            </h1>
+        </header>
+        <div id="diagrammit" class="collapse">
+            
+            <div class="teoria">
+                <p>
+                    Diagrammeilla voidaan havainnollistaa ja konkretisoida havaintoaineistoja.
+					Pylväsdiagrammi sopii esimerkiksi absoluuttisten määrien esittämiseen, kun taas ympyrädiagrammi havainnollistaa hyvin suhteita. Diagrammin tyyppiä valitessa tulee kiinnittää erityistä huomiota siihen, että diagrammi havainnollistaa haluttua asiaa. 
+                </p>
+				<p>
+					Alla olevissa diagrammeissa on esitetty lapsiperheiden kokonaismäärä ja suhteellinen osuus:
+				</p>
+				<img src="../kuvat/pylvasdiagrammi-lapsiperheet.png" style="max-width: 100%; width: auto; height: auto;"/>
+				<img src="../kuvat/ympyradiagrammi-lapsiperheet.png" style="max-width: 100%; width: auto; height: auto;"/>
+            </div>
+						
+			<div class="tehtavat">
+                <div class="tehtava" id="38c3acd0-d55e-4923-bab0-2360a70eab5c">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t109">
+                                Diagrammit
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t109" class="collapse">
+                        <p>
+                            Tutustu ohjelmistosi eri diagrammeihin. Analysoi eri diagrammityyppien hyviä ja huonoja puolia.
+						</p>
+							<ol class="a">
+								<li>Mitkä niistä sopivat aiemman Esimerkin 1 pihalinnuista havainnollistamiseen?</li>
+								<li>Mitkä niistä sopivat lapsiperheiden frekvenssien ja suhteellisten frekvenssien havainnollistamiseen?</li>
+							</ol>
+					</div>		
+				</div>
+			</div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#diagrammit">
                     Sulje kappale
                 </a>
             </div>
