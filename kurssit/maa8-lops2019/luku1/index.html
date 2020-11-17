@@ -64,10 +64,16 @@ topnav: maa8-lops2019
             
             <div class="teoria">
                 <p>
-                   Tilastotieteessä... Haluamme tutkia jotakin ominaisuutta jossakin valitussa joukossa. Käytämme tässä luvussa esimerkkinä Suomessa asuvia lapsiperheitä, joissa on alle 18-vuotiaita lapsia. Lapsiperheitä koskevat tiedot on poimittu <a href="https://www.stat.fi/">Tilastokeskuksen sivulta</a>. Tämä lähestyminen seuraa kevään 2020 lyhyen matematiikan ylioppilaskokeen tehtävää 6.  
-				Tutkittavan joukon alkioita kutsutaan <em>havaintoyksiköiksi</em>. Kuhunkin havaintoyksikköön  liitetään lukuarvo tai suure, joka kuvaa  tutkittavaa ominaisuutta.  Havaintoyksikköön liitettyä lukuarvoa tai suuretta kutsutaan <em>havaintoarvoksi</em>.
-			Esimerkissämme tutkittava joukko  on Suomessa asuvat lapsiperheet, joissa on alle 18-vuotiaita lapsia. Jokainen perhe on havaintoyksikkö ja perheen alle 18-vuotiaiden lasten lukumäärä on havaintoarvo. 
-		
+					<a href="https://www.kielitoimistonsanakirja.fi/tilastotiede">Kielitoimiston sanakirjan</a> mukaan tilastotiede on todennäköisyyslaskentaan perustuva tiede, joka tutkii tilastollisten tietojen keräämistä, käsittelyä ja tältä pohjalta tehtävää päättelyä, statistiikka. Tässä modulissa keskitymme harjoittelemaan joidenkin joitakin tilastollisten ominaisuuksien tutkimista valitussa joukossa. Syvällisempien tilastollisien johtopäätöksien tekeminen edellyttää tyypillisesti sellaista ymmärrystä tietojen keräämisestä, mittaustekniikoista ja tietoainieston virheistä, jota ei käsitellä tässä modulissa.
+				</p>
+				<p>
+					Käytämme tässä luvussa esimerkkinä Suomessa asuvia lapsiperheitä, joissa on alle 18-vuotiaita lapsia. Lapsiperheitä koskevat tiedot on poimittu <a href="https://www.stat.fi/">Tilastokeskuksen sivulta</a>. Tämä lähestyminen seuraa kevään 2020 lyhyen matematiikan ylioppilaskokeen tehtävää 6.
+				</p>
+				<p>   
+					Tutkittavan joukon alkioita kutsutaan <em>havaintoyksiköiksi</em>. Kuhunkin havaintoyksikköön  liitetään lukuarvo tai suure, joka kuvaa  tutkittavaa ominaisuutta.  Havaintoyksikköön liitettyä lukuarvoa tai suuretta kutsutaan <em>havaintoarvoksi</em>.
+				</p>
+				<p>
+					Esimerkissämme tutkittava joukko  on Suomessa asuvat lapsiperheet, joissa on alle 18-vuotiaita lapsia. Jokainen perhe on havaintoyksikkö ja perheen alle 18-vuotiaiden lasten lukumäärä on havaintoarvo. 
                 </p>
             </div>
 			
@@ -89,9 +95,24 @@ topnav: maa8-lops2019
                     </header>
                     <div id="MAA8t100" class="collapse">
                         <p>
-                            Aleksanteri tutkii pihalla olevat linnunpöntöt. Niissä pesii sinitiainen, kirjosieppo, sinitiainen, kirjosieppo, punarinta ja sinitiainen. Linnunpöntöt ovat havaintoyksiköitä, niitä on kuusi kappaletta. Jokaiseen havaintoyksikköön liittyy suure, joka on linnun laji. Linnun laji on siis havaintoarvo.
+                            Aleksanteri tutkii kotipihallaan pesivien lintujen linnunpönttöjen asukkaat. Niissä pesii sinitiainen, kirjosieppo, sinitiainen, kirjosieppo, punarinta ja sinitiainen.
 						</p>
-						
+						<ol class="a">
+                            <li>Mikä Aleksanterin tutkimuksessa on havaintoyksikkö?</li>
+                            <li>Mikä Aleksanterin tutkimuksessa on havaintoarvo?</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t100_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t100_v" class="collapse">
+                           <ol class="a">
+                                <li>Linnunpöntöt ovat havaintoyksiköitä, niitä on kuusi kappaletta.</li>
+                                <li>Jokaiseen havaintoyksikköön liittyy suure, joka on linnun laji. Linnun laji on siis havaintoarvo.</li>
+                            </ol>
+                        </div>
+					</div>	
 				</div>
 			</div>
 			
@@ -111,24 +132,9 @@ topnav: maa8-lops2019
                     Jos joukossa on vähän havaintoyksiköitä, niin havaintoarvot voi esittää luettelemalle ne peräkkäin. Jos havaintoyksiköitä on paljon, niin havaintoarvojen luettelu on epäkäytännöllistä ja epähavainnollista.  Tällöin havaintoyksiköt pitää <em>luokitella</em>. Luokittelemme havaintoyksiköt laskemalla, kuinka moni havaintoyksikkö vastaa kutakin havaintoarvoa.
 				</p>
 				<p>
-                    Luvun lapsiperheesimerkissä laskemme, kuinka monessa perheessä, eli havaintoyksikössä, on yksi lapsi (havaintoarvo 1), kuinka monessa on kaksi lasta (havaintoarvo 2), jne. 
+                    Luvun lapsiperheesimerkissä laskemme, kuinka monessa perheessä, eli havaintoyksikössä, on yksi lapsi (havaintoarvo 1), kuinka monessa on kaksi lasta (havaintoarvo 2), jne. Tiedot näkyvät alla olevassa taulukossa:
                 </p>
-				<p>
-					Alla olevassa taulukossa ensimmäinen sarake "Lasten lkm" vastaa aineiston eri havaintoarvoja. Luku 15 ei ole havaintoarvo, koska missään perheessä ei ole 15 lasta. 15 lasta vaikuttaa mahdolliselta havainnolta, koska suurempiakin perheitä on olemassa. Sanomme, että luku 15 on <em>mahdollinen havaintoarvo</em>, ja otamme sen tämän takia mukaan.
-				</p>
-				<p>
-					Esimerkissä myös 17 on mahdollinen havaintoarvo; huomaa, että nolla ei ole mahdollinen havaintoarvo, koska tutkimme perheitä, joissa on lapsia. Rajaamme kuitenkin lapsiperheisiin liittyvät mahdolliset havaintoarvot ottamalla mukaan vain kaikki mahdollisuudet pienimmän havaintoarvon ja suurimman havaintoarvon väliltä.
-				</p>
-				<p>
-					Sarake $f$ vastaa niiden perheiden, eli havaintoyksiköiden, lukumäärää, joissa on ensimmäisen sarakkeen osoittama määrä lapsia. Taulukosta voi esimerkiksi lukea, että kymmenlapsisia perheitä on Suomessa 262 kappaletta. 
-				</p>	
-				
-				<p>
-					Taulukon viimeinen sarake $f$ % on perhekoon suhteellinen osuus kaikista aineiston perheistä. Esimerkiksi koska tilastossa on lapsiperheitä yhteensä 566242 kappaletta, niin esimerkiksi yksilapsisten perheiden osuus kaikista aineiston perheistä on 
-					$$\frac{241709}{566242}\approx 42,7\ \%.$$ 
-					Huomaa, että pyöristysten takia suhteellisten frekvenssien summa taulukossa ei välttämättä ole täsmälleen 100 %.
-				</p>
-				
+								
 				<table style="margin-left: auto; margin-right: auto;">
 											
 						<tr>
@@ -222,7 +228,20 @@ topnav: maa8-lops2019
 							<th>100 %</th>
 						</tr>
 				</table>
-		
+				<p>
+					Yllä olevassa taulukossa ensimmäinen sarake "Lasten lkm" vastaa aineiston eri havaintoarvoja. Luku 15 ei ole havaintoarvo, koska missään perheessä ei ole 15 lasta. 15 lasta vaikuttaa mahdolliselta havainnolta, koska suurempiakin perheitä on olemassa. Sanomme, että luku 15 on <em>mahdollinen havaintoarvo</em>, ja otamme sen tämän takia mukaan.
+				</p>
+				<p>
+					Esimerkissä myös 17 on mahdollinen havaintoarvo; huomaa, että nolla ei ole mahdollinen havaintoarvo, koska tutkimme perheitä, joissa on lapsia. Rajaamme kuitenkin lapsiperheisiin liittyvät mahdolliset havaintoarvot ottamalla mukaan vain kaikki mahdollisuudet pienimmän havaintoarvon ja suurimman havaintoarvon väliltä.
+				</p>
+				<p>
+					Sarake $f$ vastaa niiden perheiden, eli havaintoyksiköiden, lukumäärää, joissa on ensimmäisen sarakkeen osoittama määrä lapsia. Taulukosta voi esimerkiksi lukea, että kymmenlapsisia perheitä on Suomessa 262 kappaletta. 
+				</p>	
+				<p>
+					Taulukon viimeinen sarake $f$ % on perhekoon suhteellinen osuus kaikista aineiston perheistä. Esimerkiksi koska tilastossa on lapsiperheitä yhteensä 566242 kappaletta, niin esimerkiksi yksilapsisten perheiden osuus kaikista aineiston perheistä on 
+					$$\frac{241709}{566242}\approx 42,7\ \%.$$ 
+					Huomaa, että pyöristysten takia suhteellisten frekvenssien summa taulukossa ei välttämättä ole täsmälleen 100 %.
+				</p>
 				
 			</div>
 						
@@ -234,25 +253,22 @@ topnav: maa8-lops2019
 			</div>	
 			<div class="teoria">			
 					<p>
-						Kaikki havaintoarvot ovat mahdollisia havaintoarvoja. Havaintoarvojen lisäksi muita 
-						mahdollisia havaintoarvoja voi ottaa mukaan, jos tilanne sitä vaatii. Luku, joka kertoo kuinka moni havaintoyksikkö liittyy havaintoarvoon, on <em>frekvenssi</em>. 
+						Kaikki havaintoarvot ovat mahdollisia havaintoarvoja. Havaintoarvojen lisäksi muita mahdollisia havaintoarvoja voi ottaa mukaan, jos tilanne sitä vaatii. Luku, joka kertoo kuinka moni havaintoyksikkö liittyy havaintoarvoon, on <em>frekvenssi</em>. 
 						Jos mahdollinen havaintoarvo ei ole havaintoarvo, niin siihen ei liity yhtään havaintoyksikköä, joten sen frenvenssi on nolla.
 					</p>
             </div>		
 
 			<div class="definition">
-                    <h3>MÄÄRITELMÄ: FREKVENSSI,SUHTEELLINEN FREKVENSSI JA JAKAUMA</h3>
+                    <h3>MÄÄRITELMÄ: FREKVENSSI JA SUHTEELLINEN FREKVENSSI</h3>
                     <p>
-						Mahdollisen havaintoarvon <em>frekvenssi</em> on  sitä vastaavien havaintoyksiköiden lukumäärä.
-                    </p>
-						Frekvenssiä merkitään usein kirjaimella $f$. 
+						Mahdollisen havaintoarvon <em>frekvenssi</em> on  sitä vastaavien havaintoyksiköiden lukumäärä.	Frekvenssiä merkitään yleensä $f$. 
 					</p>
 					
                     <p>
-						Mahdollisen havaintoarvon <em>suhteellinen frekvenssi</em> on sen havaintoyksiköiden osuus kaikista havaintoyksiköistä.
-                    </p>
-					<p>
-						Suhteellista frekvenssiä merkitään yleensä $f$ %.
+						Mahdollisen havaintoarvon <em>suhteellinen frekvenssi</em> on sen havaintoyksiköiden osuus kaikista havaintoyksiköistä.	Suhteellista frekvenssiä merkitään yleensä $f$ %.
+					</p>
+			</div>
+			<div class="teoria">			
 					<p>
 						Mahdollisten havaintoarvojen ja suhteellisten frekvenssien muodostamaa kokonaisuutta kutsutaan <em>jakaumaksi</em>. Jakaumiin tutustutaan tarkemmin luvussa <a>jakaumat</a>. 
 					</p>
@@ -269,9 +285,16 @@ topnav: maa8-lops2019
                     </header>
                     <div id="MAA8t99" class="collapse">
                         <p>
-                        Jatketaan Esimerkkiä 1 ja kootaan  lintulajien frekvenssit ja suhteelliset frekvenssit taulukoon:
-                    </p>
-					<table style="margin-left: auto; margin-right: auto;">
+                        Jatketaan aiempaa tehtävää. Kerää lintulajien frekvenssit ja suhteelliset frekvenssit taulukoon.
+						</p>
+						<h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t99_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t99_v" class="collapse">
+
+						<table style="margin-left: auto; margin-right: auto;">
 						
 						<tr>
 							<th>Havaintoarvo</th>
@@ -298,9 +321,9 @@ topnav: maa8-lops2019
 							<th>6</th>
 							<th>100 %</th>
 						</tr>
-					</table>
-						
-				</div>
+						</table>
+						</div>
+					</div>	
 			</div>	
 			<div class="tehtava" id="38c3acd0-d55e-4923-bab0-2360a70eab5c">
                     <header>
@@ -315,19 +338,31 @@ topnav: maa8-lops2019
                         Suomessa on yhteensä 311 kuntaa. Asukasluvultaan suurin on Helsinki (635181 asukasta). Manner-Suomen pienin kunta on Luhanka (756 asukasta) ja Ahvenanmaan pienin kunta on Sottunga (96 asukasta).  
 					</p>
 					<p>
-						Kunnat ovat esimerkin tutkittava joukko, jokainen kunta on havaintoyksikkö ja asukasmäärä havaintoarvo. Melkein kaikissa kunnissa on eri määrä asukkaita, joten havaintoarvojen frekvenssit, noin 300 kappaletta, eivät ole paras tapa kuvata tilannetta.
+						Kunnat ovat tehtävän tutkittava joukko, jokainen kunta on havaintoyksikkö ja asukasmäärä havaintoarvo. Melkein kaikissa kunnissa on eri määrä asukkaita, joten havaintoarvojen frekvenssit, noin 300 kappaletta, eivät ole paras tapa kuvata tilannetta.
 					<p>
-						<a href="https://www.kuntaliitto.fi/vaestotietoja-kunnittain">Kuntaliiton verkkosivujen</a> (luettu 21.10.2020) kuvassa kunnat, eli havaintoyksiköt, on luokiteltu asukasmäärän, eli havaintoarvon, mukaan neljään eri luokkaan: &lt;5000 asukasta, 5000–10000 asukasta, 10001–20000 asukasta, 20001–50000 asukasta ja &gt;50000 asukasta. Näille luokille on laskettu frekvenssit edellä kuvatulla tavalla. 
-					</p>
+						<a href="https://www.kuntaliitto.fi/vaestotietoja-kunnittain">Kuntaliiton verkkosivujen</a> (luettu 21.10.2020) kuvassa kunnat, eli havaintoyksiköt, on luokiteltu asukasmäärän, eli havaintoarvon, mukaan viiteen eri luokkaan.
+					</p>	
 					<img src="../kuvat/kunta.png" style="max-width: 100%; width: auto; height: auto;"/>
-					<p>
-						Tutkimista voisi jatkaa laskemalla seuraavaksi luokille suhteelliset frekvenssit. Näin saisimme jakauman luokille.						
-                    </p>
+					<ol class="a">
+                            <li>Mitkä luokat ovat?</li>
+                            <li>Mitä tarkoittavat luvut 21, 34, 43, 80 ja 133?</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t98_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t98_v" class="collapse">
+                           <ol class="a">
+                                <li>&lt;5000 asukasta, 5000–10000 asukasta, 10001–20000 asukasta, 20001–50000 asukasta ja &gt;50000 asukasta.</li>
+                                <li>Luokkien frekvenssi.</li>
+                            </ol>
+                        </div>
+					</div>	
 						
 				</div>
 			</div>	
-		</div>
-			
+
 			<div class="teoria">			
 					<p>
 						Summafrekvenssi ja suhteellinen summafrekvenssi???
