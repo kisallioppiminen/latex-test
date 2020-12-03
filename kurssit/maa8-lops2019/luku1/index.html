@@ -148,37 +148,30 @@ topnav: maa8-lops2019
 						<tr>
 							<td>1</td>
 							<td>241709</td>
-							<td>42,7 %</td>
 						</tr>
 						<tr>
 							<td>2</td>
 							<td>220116</td>
-							<td>38,9 %</td>
 						</tr>
 						<tr>
 							<td>3</td>
 							<td>75326</td>
-							<td>13,3 %</td>
 						</tr>
 						<tr>
 							<td>4</td>
 							<td>18409</td>
-							<td>3,3 %</td>
 						</tr>
 						<tr>
 							<td>5</td>
 							<td>5493</td>
-							<td>1,0 %</td>
 						</tr>
 						<tr>
 							<td>6</td>
 							<td>2289</td>
-							<td>0,4 %</td>
 						</tr>
 						<tr>
 							<td>7</td>
 							<td>1235</td>
-							<td>0,2 %</td>
 						</tr>
 						<tr>
 							<td>8</td>
@@ -259,8 +252,8 @@ topnav: maa8-lops2019
                         </h2>
                         <div id="MAA8t100ab_v" class="collapse">
                            <ol class="a">
-                                <li>Kaikki havaintoarvot ovat mahdollisia havaintoarvoja, joten aiemmat  havaintoarvot kelpavat vastaukseksi. Myös esimerkiksi talitiainen on mielekäs mahdollinen havaintoarvo.</li>
-                                <li>Strutsi.</li>
+                                <li>Kaikki havaintoarvot ovat mahdollisia havaintoarvoja, joten Aleksanterin pihan lintulajit (havaintoarvot) kelpaavat vastaukseksi. Myös esimerkiksi talitiainen on mielekäs mahdollinen havaintoarvo.</li>
+                                <li>Strutsi, koska se ei pesi pöntössä.</li>
                             </ol>
                         </div>
 					</div>	
@@ -268,24 +261,13 @@ topnav: maa8-lops2019
 			</div>
 			<div class="teoria">			
 					<p>
-						Kaikki havaintoarvot ovat mahdollisia havaintoarvoja. Havaintoarvojen lisäksi muita mahdollisia havaintoarvoja voi ottaa mukaan, jos tilanne sitä vaatii. Luku, joka kertoo kuinka moni havaintoyksikkö liittyy havaintoarvoon, on <em>frekvenssi</em>. 
-						Jos mahdollinen havaintoarvo ei ole havaintoarvo, niin siihen ei liity yhtään havaintoyksikköä, joten sen frekvenssi on nolla.
+						Luku, joka kertoo kuinka moni havaintoyksikkö liittyy havaintoarvoon, on <em>frekvenssi</em>. 
+					</p>
+					<p>
+						Yllä olevasta taulukosta nähdään esimerkiksi, että havaintoarvon 10 frekvenssi on 262. Jos mahdollinen havaintoarvo ei ole havaintoarvo, niin siihen ei liity yhtään havaintoyksikköä, joten sen frekvenssi on nolla.
 					</p>
             </div>			
-				<p>
-					Sarake $f$ vastaa niiden perheiden, eli havaintoyksiköiden, lukumäärää, joissa on ensimmäisen sarakkeen osoittama määrä lapsia. Taulukosta voi esimerkiksi lukea, että kymmenlapsisia perheitä on Suomessa 262 kappaletta. 
-				</p>	
-				<p>
-					Taulukon viimeinen sarake $f$ % on perhekoon suhteellinen osuus kaikista aineiston perheistä. Esimerkiksi koska tilastossa on lapsiperheitä yhteensä 566242 kappaletta, niin esimerkiksi yksilapsisten perheiden osuus kaikista aineiston perheistä on 
-					$$\frac{241709}{566242}\approx 42,7\ \%.$$ 
-					Huomaa, että pyöristysten takia osuuksien summa ei välttämättä ole täsmälleen 100 %.
-				</p>
 				
-			</div>
-						
-	
-		
-
 			<div class="definition">
                     <h3>MÄÄRITELMÄ: FREKVENSSI JA SUHTEELLINEN FREKVENSSI</h3>
                     <p>
@@ -296,13 +278,146 @@ topnav: maa8-lops2019
 						Mahdollisen havaintoarvon <em>suhteellinen frekvenssi</em> on sen havaintoyksiköiden osuus kaikista havaintoyksiköistä.	Suhteellista frekvenssiä merkitään yleensä $f$ %.
 					</p>
 			</div>
-			<div class="teoria">			
+			<div class="teoria">				
 					<p>
 						Mahdollisten havaintoarvojen ja suhteellisten frekvenssien muodostamaa kokonaisuutta kutsutaan <em>jakaumaksi</em>. Jakaumiin tutustutaan tarkemmin luvussa <a>jakaumat</a>. 
 					</p>
+					<p>
+						Yllä olevassa lapsiperheita kuvaavassa taulukossa sarake $f$, eli frekvenssi, vastaa niiden perheiden, eli havaintoyksiköiden, lukumäärää, joissa on ensimmäisen sarakkeen osoittama määrä lapsia. Taulukosta voi esimerkiksi lukea, että kymmenlapsisia perheitä on Suomessa 262 kappaletta. 
+					</p>
             </div>	
-
+	
+				
 			<div class="tehtavat">
+			<div class="tehtava" id="38c3acd0-d55e-4923-bab0-2360a70eab5c">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t9921">
+                                Suomen lapsiperheiden suhteellinen frekvenssi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t9921" class="collapse">
+					<p>
+					Yllä olevassa taulukossa on esitetty Suomen perheiden lapsimäärien frekvenssit. Taulukkoa hyödyntäen
+					</p>
+					<ol class="a">
+					<li>Laske yksilapsisten perheiden osuus kaikista perheistä, eli suhteellinen frekvenssi.
+					</li>
+					<li>Kopioi taulukko taulukkolaskentaohjelmaan. Luo ohjelmassa kaava, joka laskee jokaiselle taulukon riville suhteellinen frekvenssin ja kopioi kaava jokaiselle taulukon riville, jolloin taulukkoon muodostuu suhteellisen frekvenssin sarake.
+					</li>
+					</ol>
+					
+						<h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t9921_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t9921_v" class="collapse">
+
+						<ol class="a">
+					<li>Koska tilastossa on lapsiperheitä yhteensä 566242 kappaletta, niin yksilapsisten perheiden osuus kaikista aineiston perheistä on 
+					$$\frac{241709}{566242}\approx 42,7\ \%.$$
+					</li>
+					<li>Taulukkolaskentaohjelman avulla saadaan seuraava taulukko:
+					<table style="margin-left: auto; margin-right: auto;">
+											
+						<tr>
+							<th>Lasten lkm</th>
+							<th>$f$</th>
+							<th>$f$ %</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>241709</td>
+							<td>42,7 %</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>220116</td>
+							<td>38,9 %</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>75326</td>
+							<td>13,3 %</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>18409</td>
+							<td>3,3 %</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>5493</td>
+							<td>1,0 %</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>2289</td>
+							<td>0,4 %</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>1235</td>
+							<td>0,2 %</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>751</td>
+							<td>0,1 %</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>476</td>
+							<td>0,08 %</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>262</td>
+							<td>0,05 %</td>
+						</tr>
+						<tr>
+							<td>11</td>
+							<td>117</td>
+							<td>0,03 %</td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td>41</td>
+							<td>0,007 %</td>
+						</tr>
+						<tr>
+							<td>13</td>
+							<td>12</td>
+							<td>0,002 %</td>
+						</tr>
+						<tr>
+							<td>14</td>
+							<td>3</td>
+							<td>0,0005 %</td>
+						</tr>
+						<tr>
+							<td>15</td>
+							<td>0</td>
+							<td>0 %</td>
+						</tr>
+						<tr>
+							<td>16</td>
+							<td>3</td>
+							<td>0,0005 %</td>
+						</tr>
+						<tr>
+							<th>Yhteensä</th>
+							<th>566242</th>
+							<th>100 %</th>
+						</tr>
+				</table>
+					</li>
+					</ol>
+					</div>
+					</div>	
+				</div>	
                 <div class="tehtava" id="38c3acd0-d55e-4923-bab0-2360a70eab5c">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
@@ -313,7 +428,7 @@ topnav: maa8-lops2019
                     </header>
                     <div id="MAA8t99" class="collapse">
                         <p>
-                        Jatketaan aiempaa tehtävää. Kerää lintulajien frekvenssit ja suhteelliset frekvenssit taulukoon.
+                        Jatketaan aiempaa tehtävää, jossa todettiin, että Aleksin kotipihalla pesii sinitiainen, kirjosieppo, sinitiainen, kirjosieppo, punarinta ja sinitiainen. Kerää lintulajien frekvenssit ja suhteelliset frekvenssit taulukoon.
 						</p>
 						<h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA8t99_v">
