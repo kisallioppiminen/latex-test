@@ -14,7 +14,7 @@ topnav: maa8-lops2019
 <article>
     <section>
         <header>
-            <h1>Tilastot</h1>
+            <h1>Todennäköisyys</h1>
         </header>
     </section>
     <section class="panel">
@@ -56,7 +56,7 @@ topnav: maa8-lops2019
             <h1>      
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
                     
-		Diskreetti muuttuja ja jakauma
+		Joukko-opin merkintöjä
                 </a>
             </h1>
         </header>
@@ -64,7 +64,12 @@ topnav: maa8-lops2019
             
             <div class="teoria">
                 <p>
-                    Leipätekstiä
+                    Määrittelemme käsitteet joukko ja jono sekä tutustumme niihin liittyviin merkintöihin. 
+					<em>Joukko</em> tarkoittaa kokoelmaa alkioita. Lisäksi oletamme, että jokaisen alkion osalta on yksikäsitteisesti pääteltävissä, kuuluuko se joukkoon vai ei. Joukkoja merkitään yleensä isoilla kirjaimilla. Jos joukko $A$ sisältää täsmälleen alkiot $1$, $2$ ja $3$, niin kirjoitamme $A=\{1, 2, 3\}$. Joukon merkinnässä alkiot voivat olla missä järjestyksessä tahansa. Merkitsemme sumboolilla $\in$ että alkio kuuluu joukkoon, esim.\ $2 \in A$. Joukot ovat samoja, jos niissä on samat alkiot, merkitsemme tämän yhtäsuuruudella. Joukon merkinnässä sama alkio voi esiintyä useamman kerran, näin esimerkiksi $\{1, 2, 3\}= \{1, 3, 2, 3, 1\}$. Jos joukon määrittelee jokin ehto $P$, niin joukko voidaan kirjoittaa  muodossa $\{x \colon x \text{ toteutaa ehdon } P\}$. Esimerkiksi parilliset luonnolliset luvut voidaan kirjoittaa muodossa $\{ n \in \N \colon \frac{n}2 \in \N\}$, eli otamme joukkoon kaikki ne luonnolliset luvut, joilla on se ominaisuus, että luku jaettuna kahdella on luonnollinen luku. Jos joukon alkiot määrää jokin lauseke, niin joukko voidaan ilmoittaa tämän lausekkeen avulla, esimerkiksi $\{2n\colon n=1, 2, 3\} =\{2, 4, 6\}$. Sanomme, että joukko $A$ on joukon $B$ \emph{osajoukko}, jos jokainen joukon $A$ alkio kuuluu joukkoon $B$. Merkitsemme tällöin $A \subset B$. Esimerkiksi $\{2, 4\} \subset \{ n \in \N \colon \frac{n}2 \in \N\}$. Huomaa, että jokainen joukko on itsensä osajoukko. <em>Tyhjää joukkoa</em>, jossa ei ole lainkaan alkioita, merkitään $\emptyset$.
+				</p>
+				<p>
+					<em>Jonolla</em> tarkoitetaan äärellistä tai ääretöntä määrää alkioita, joille on annettu järjestys. Jonossa sama alkio voi esiintyä useamman kerran eri paikassa. Jonoa merkitään kaarisuluilla, jonka sisään alkiot merkitään järjestyksessä, esim. $(1, 3, 2, 1)$ on 4-alkioinen jono. Joukko ja jono ovat eri käsitteitä. Ajatellaan lukuja 1, 2 ja 3. Niistä voidaan kaikki luvut mukaan ottamalla muodostaa vain yksi joukko 
+					$\{1, 2, 3\}$, mutta kuusi erilaista kolmen mittaista jonoa: $(1, 2, 3)$, $(1, 3, 2))$, $(3, 1, 2)$, $(3, 2, 1)$,  $(2, 1, 3)$ ja $(2, 3, 1)$. Jonossa jokaisella alkiolla on paikka toisin kuin joukossa. 
                 </p>
             </div>
 
@@ -73,24 +78,14 @@ topnav: maa8-lops2019
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
-                                Tehtävä
+                                Joukko-opin merkintöjä
                             </a>
                         </h1>
                     </header>
                     <div id="MAA8t101" class="collapse">
-                        <p>
-                            Tekstiä
-							</p>
                         <ol class="a">
-                            <li> $\sqrt{81}$ </li>
-                            <li> 
-                                $\sqrt[3]{125}$ 
-                            </li>
-                            <li> 
-                                $\sqrt[4]{81}$
-                            </li>
-                            <li>
-                                $\sqrt[5]{-32}$
+                            <li>Ovatko joukot $\{\frac{2n}{n^2}: n= 1, \ldots, 4\}$ ja $\{\frac2{n-5}: n= 6, \ldots, 9\}$ samoja?</li>
+                            <li>Kuinka monta kaksialkioista jonoa voidaan joukon $\{a, b, c\}$ alkioista muodostaa?
                             </li>
                         </ol>
                         <h2>
@@ -100,45 +95,12 @@ topnav: maa8-lops2019
                         </h2>
                         <div id="MAA8t101_v" class="collapse">
                            <ol class="a">
-                                <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$ </li>
-                                <li> 
-                                    $\sqrt[3]{125} = 5$, sillä $5^3 = 125$ 
-                                </li>
-                                <li> 
-                                    $\sqrt[4]{81} = 3$, sillä $3 \geq 0$ ja $3^4 = 81$
-                                </li>
-                                <li>
-                                    $\sqrt[5]{-32} = -2$, sillä $(-2)^5 = -32$
-                                </li>
+                                <li>  </li>
+                                <li>  </li>
                             </ol>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="teoria">
-                <p>
-                    Leipätekstiä.
-                </p>
-
-                <div class="theorem" id="teoreema1">
-                    <h3>TEOREEMA</h3>
-                    <p>
-                        Neliöjuurifunktion
-                        $$
-                        f(x) = \sqrt{x}
-                        $$  
-                        määrittelyjoukko on $[0, \infty\pe$. Neliöjuurifunktion arvo on aina epänegatiivinen. 
-                        <br>
-                        <img src="/kurssit/maa8/kuvat/MAA8kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
-                    </p>
-                    <div class="proof">
-                        <p>
-                            Todistus.
-                        </p>      
-                    </div>
-                </div>
-
             </div>
 
             <div class="close-section">
@@ -153,7 +115,7 @@ topnav: maa8-lops2019
         <header class="otsikko">
             <h1>      
                 <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
-                    Frekvenssi ja suhteellinen frekvenssi
+                    Klassinen todennäköisyys
                 </a>
             </h1>
         </header>
@@ -161,53 +123,96 @@ topnav: maa8-lops2019
             
             <div class="teoria">
                 <p>
-                    Leipätekstiä
+                    Klassinen todennäköisyys perustuu <em>symmetrisiin alkeistapauksiin</em>. 
+					Tarkoitamme tällä, että lähtötilanteesta voi sattuman takia päätyä useampaan tulokseen, joista mihin tahansa päätyminen on yhtä todennäköistä. Kaikkien mahdollisten tulosten joukkoa kutsutaan <em>perusjoukoksi</em>. Heitetään noppaa yhden kerran. Ennen heittoa emme tiedä nopanheiton tulosta. Tiedämme kuitenkin, että tuloksena on jokin luku perusjoukosta $\{1, 2, 3, 4, 5, 6\}$. Tässä jokainen silmäluku on alkeistapaus 
+					ja ne ovat yhtä todennäköisiä. 
                 </p>
+				<p>
+					<em>Tapahtumat</em> ovat perusjoukon osajoukkoja. Seuraavassa tehtävässä on nopanheiton perusjoukko $\{ 1, 2, 3, 4, 5, 6\}$ ja sen osajoukko $\{5, 6\}$, joka vastaa tapahtumaa "tuloksena on viisi tai kuusi".
+            </div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: KLASSINEN TODENNÄKÖISYYS</h3>
+                    <p>
+                        Tapahtuman $A$ \emph{klassinen todennäköisyys} on
+						$$
+						P(A)=\frac{n(A)}{n(E)},
+						$$
+						missä $n(A)$ on tapahtuman $A$ alkioiden eli "suotuisten alkeistapausten" lukumäärä 
+						ja $n(E)$ on perusjoukon $E$ alkioiden eli kaikkien
+						alkeistapausten lukumäärä.
+                    </p>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava first-exercise" id="uuid">
+                <div class="tehtava" id="uuid">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
-                                Tehtävä
+                                Yhden nopan heitto
                             </a>
                         </h1>
                     </header>
                     <div id="MAA8t101" class="collapse">
                         <p>
-                            Tekstiä
-							</p>
-                        <ol class="a">
-                            <li> $\sqrt{81}$ </li>
-                            <li> 
-                                $\sqrt[3]{125}$ 
-                            </li>
-                            <li> 
-                                $\sqrt[4]{81}$
-                            </li>
-                            <li>
-                                $\sqrt[5]{-32}$
-                            </li>
-                        </ol>
+                            Tarkastellaan yhden nopan heittoa, jolloin perusjoukkona on nopanheiton mahdolliset tulokset $E=\{1,2,3,4,5,6\}$.
+							Laske todennäköisyys sille, että tuloksena on viitonen tai kuutonen.
+						</p>
+                        
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="MAA8t101_v" class="collapse">
-                           <ol class="a">
-                                <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$ </li>
-                                <li> 
-                                    $\sqrt[3]{125} = 5$, sillä $5^3 = 125$ 
-                                </li>
-                                <li> 
-                                    $\sqrt[4]{81} = 3$, sillä $3 \geq 0$ ja $3^4 = 81$
-                                </li>
-                                <li>
-                                    $\sqrt[5]{-32} = -2$, sillä $(-2)^5 = -32$
-                                </li>
-                            </ol>
+							<p>
+								Lasketaan todennäköisyys sille, että tuloksena on viitonen tai kuutonen.
+								Tätä varten merkitään $A=\{5,6\}$, jonka todennäköisyys on
+								$$
+								P(A)=\frac{n(A)}{n(E)}=\frac{2}{6}=\frac{1}{3}.
+								$$
+							</p>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="teoria">
+					<p>
+						Tapahtumien todennäköisyydet on tapana ilmoittaa murtolukuina (tarkkoina arvoina), desimaalilukuina esim. kahden merkitsevän numeron tarkkuudella tai prosentteina. Edellisen esimerkin vastauksen voi siis esittää $\frac{1}{3}$, $0{,}33$ tai $33\ \%$.
+					</p>
+            </div>
+			<div class="tehtavat">
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
+                                Kahden nopan heitto
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t101" class="collapse">
+                        <p>
+                            Heitetään kahta noppaa ja tutkitaan noppien silmälukujen summaa.
+						</p>
+						<ol class="a">
+                            <li> Määritä perusjoukko.</li>
+                            <li> 
+                                Laske todennäköisyys tapahtumalle "silmälukujen summa on vähintään 10". 
+                            </li>
+                        </ol>
+                        
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t101_v" class="collapse">
+							<ol class="a">
+                            <li> </li>
+                            <li> 
+                                
+                            </li>
+                        </ol>
                         </div>
                     </div>
                 </div>
@@ -215,24 +220,77 @@ topnav: maa8-lops2019
 
             <div class="teoria">
                 <p>
-                    Leipätekstiä.
-                </p>
+                    Tulkitsemme nyt joukko-opin merkintöjä todennäköisyyden kannalta. 
+					Tapahtuma $A = \emptyset$ (tyhjä joukko), jos tapahtuma $A$ on mahdoton eli se ei sisällä alkioita.
 
-                <div class="theorem" id="teoreema1">
+					Tapahtumien $A$ ja $B$ \emph{yhdiste} on 
+					$$
+					A \cup B = \{ A\text{ tapahtuu tai } B \text{ tapahtuu}\}.
+					$$
+					Tässä "tai" sisältää mahdollisuuden, että molemmat  $A$ ja $B$ tapahtuvat.
+					Tapahtumien $A$ ja $B$ <em>leikkaus</em> on 
+					$$
+					A \cap B = \{ A\text{ tapahtuu ja } B \text{ tapahtuu}\},
+					$$
+					joka tarkoittaa, että molemmat tapahtumat $A$ ja $B$ tapahtuvat.
+					Tapahtumien $A$ ja $B$ <em>erotus</em> on 
+					$$
+					A \setminus B = \{ A\text{ tapahtuu ja } B \text{ ei tapahdu}\}.
+					$$
+					Joukon $A$ <em>komplementtia</em> perusjoukon $E$ suhteen merkitään $\overline{A}=E\setminus A$.
+					Tällöin $P(\overline{A})$ merkitsee todennäköisyyttä, että "$A$ ei tapahdu".
+                </p>
+			</div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: ERILLISET TAPAHTUMAT</h3>
+                    <p>
+                        Tapahtumat $A$ ja $B$ ovat <em>erilliset</em>, jos $A\cap B=\emptyset$
+                    </p>
+            </div>
+			
+			<div class="teoria">
+                <p>
+                    Huomaa, että erillisyys riippuu vain joukoista $A$ ja $B$, ei lainkaan niiden todennäköisyyksistä. 
+				</p>
+				<p>
+					Seuraavat klassisen todennäköisyyden \emph{laskusäännöt} ja muut <em>perusominaisuudet</em> voidaan johtaa määritelmän perusteella tarkastelemalla joukkojen alkioiden lukumäärien osamääriä.
+                </p>
+			</div>
+			
+            <div class="theorem" id="teoreema1">
                     <h3>TEOREEMA</h3>
                     <p>
-                        Neliöjuurifunktion
-                        $$
-                        f(x) = \sqrt{x}
-                        $$  
-                        määrittelyjoukko on $[0, \infty\pe$. Neliöjuurifunktion arvo on aina epänegatiivinen. 
-                        <br>
-                        <img src="/kurssit/maa8/kuvat/MAA8kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        Olkoot $A$ ja $B$ tapahtumia.
                     </p>
+					<ol class="a">
+						<li>Jos $A$ ja $B$ ovat erilliset, niin $P(A\cup B)=P(A)+P(B)$.</li>
+						<li>$P(\overline{A})=1-P(A)$.</li>
+						<li>$0\leqslant P(A)\leqslant 1$.</li>
+						<li>Jos $A\subset B$, niin $P(A)\leqslant P(B)$.</li>
+						<li>$P(A\setminus B)=P(A)-P(A\cap B)$.</li>
+						<li>$P(A\cup B)=P(A)+P(B)-P(A\cap B)$ ("yhteenlaskukaava").</li>
+					</ol>
+					
                     <div class="proof">
-                        <p>
-                            Todistus.
-                        </p>      
+                        <p>Todistamme tässä malliksi kohdat (a) ja (c).</p> 
+                            <ol class="a">
+								<li>
+									Olkoot $A$ ja $B$ erillisiä, eli $A \cap B = \emptyset$. Tällöin joukon $A \cup B$ alkioiden lukumäärä  $n(A\cup B)$ on $n(A) + n(B)$. Saamme
+									$$
+									P(A \cup B) = \frac{n(A\cup B)}{n(E)} = \frac{n(A) + n(B)}{n(E)} = \frac{n(A) }{n(E)} + \frac{n(B)}{n(E)}= P(A) + P(B). 
+									$$
+								</li>
+								<li>-</li>
+								<li>
+									Koska joukon $A$ alkioiden lukumäärä on ei-negatiivinen luku eli 		$n(A)\ge 0$, ja perusjoukon $E$ alkioiden lukumäärä on positiivinen, eli $n(A)>0$, niin $P(A) = \frac{n(A)}{n(E)} \ge 0$. 
+									Toisaalta koska perusjoukon $E$ osajoukkoa $A$ sisältää korkeintaan yhtä monta alkiota kuin perusjoukko itse, eli $n(A) \le n(E)$, niin saamme $P(A) = \frac{n(A)}{n(E)} \le \frac{n(E)}{n(E)} =1$.
+								</li>
+								<li>-</li>
+								<li>-</li>
+								<li>-</li>
+							</ol>
+     
                     </div>
                 </div>
 
