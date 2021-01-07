@@ -14,7 +14,7 @@ topnav: maa8-lops2019
 <article>
     <section>
         <header>
-            <h1>Diskreetti todennäköisyysjakauma</h1>
+            <h1>Todennäköisyysjakauma ja odotusarvo</h1>
         </header>
     </section>
     <section class="panel">
@@ -54,17 +54,81 @@ topnav: maa8-lops2019
     <section class="panel">
         <header class="otsikko">
             <h1>      
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
-                    Diskreetti satunnaismuuttuja ja todennäköisyysjakauma
+                <a data-toggle="collapse" class="collapsed" data-target="#diskreetti-todennakoisyysjakauma">
+                    Diskreetti todennäköisyysjakauma
                 </a>
             </h1>
         </header>
-        <div id="juuri1" class="collapse">
+        <div id="diskreetti-todennakoisyysjakauma" class="collapse">
             
             <div class="teoria">
                 <p>
-                    Leipätekstiä
+                    Määritellään ensin käsite satunnaismuuttuja. Satunnaismuuttuja liittää tapahtumiin reaalilukuarvon.
                 </p>
+            </div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: ERILLISET TAPAHTUMAT</h3>
+                    <p>
+                        <em>Satunnaismuuttuja</em> on funktio, joka kuvaa jokaisen alkeistapauksen reaaliluvulle tai jokaisen havaintoyksikön sitä vastaavaksi havaintoarvoksi.
+                    </p>
+            </div>
+			
+			<div class="teoria">
+                <p>
+                    Satunnaismuuttuja voi esimerkiksi kuvata nopan jokaiseen silmäluvun sitä vastaavalle reaalilukuarvolle
+					$$
+					\epsdice{1} \mapsto 1,\ \epsdice{2} \mapsto 2,\ \epsdice{3} \mapsto 3,\ \epsdice{4} \mapsto 4,\ 
+					\epsdice{5} \mapsto 5,\ \epsdice{6} \mapsto 6,
+					$$ 
+					tai se voi kuvata jokaisen lapsiperheen kyseessä olevan perheen lasten lukumääräksi.
+				</p>
+				<p>
+					Huomaa, että satunnaismuuttuja voi ilmetä teoreettisessa tarkastelussa tai tilastossa. Jälkimmäisessä tapauksessa oletamme, että havaintoarvoilla on välimatka-asteikko. Jos tilastossa on mukana mahdollisia havaintoarvoja, jotka eivät ole havaintoarvoja, niin niihin ei kuvaudu mikään havaintoyksikkö. Satunnaismuuttuja on  siinä mielessä harhaanjohtava termi, että satunnaismuuttujassa ei ole mitään satunnaista. 
+					Koska satunnaismuuttuja on funktio, niin sen arvo on yksikäsitteisesti määrätty jokaisessa määrittelyjoukon pisteessä. Satunnaismuuttujan avulla saamme todennäköisyysjakauman. Se kuvaa, kuinka yleisiä satunnaismuuttujan eri arvot ovat.
+                </p>
+            </div>
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: TODENNÄKÖISYYSJAKAUMA</h3>
+                    <p>
+                        <em>Todennäköisyysjakauma</em> on funktio, joka yhdistää satunnaismuuttujan arvot niitä vastaaviin todennäköisyyksiin.
+                    </p>
+            </div>
+			
+			<div class="teoria">
+                <p>
+                    Todennäköisyydet saadaan joko teoreettisesta tarkastelusta tai vaihtoehtoisesti ne ovat  havaintoarvojen suhteelliset frekvenssit. Tarvittaessa todennäköisyysjakaumaa voi täydentää arvoilla, joita vastaavat todennäköisyydet ovat nollia. Näin saamme mahdolliset havaintoarvot mukaan todennäköisyysjakaumaan. Jos todennäköisyysjakauma tulee tilastosta, niin se on sama asia kuin  Luvussa <a href="../luku1/#frekvenssi">frekvenssi</a> määritelty jakauma. 
+				</p>
+				<p>
+					Huomaa, että todennäköisyyksien summa on 1 eli $100 \%$. 
+                </p>
+				<p>
+					Kisätieto: Jos halutaan korostaa, että kyseessä on diskreetin todennäköisyysjakauman yhden tapahtuman todennäköisyys, niin voidaan käyttää termiä <em>pistetodennäköisyys</em>.
+                </p>
+				<p>
+					Yksinkertaisin jakauma on tasainen jakauma, jossa jokaisen arvon suhteellinen frekvenssi on sama. Esimerkiksi kuusisivuisen nopan jokaisen silmäluvun todennäköisyys on $1/6 \approx 16{,}7 \%$.
+				</p>
+				<figure>				
+					<img src="../kuvat/nopan_jakauma.png" style="max-width: 100%; width: auto; height: auto;"/>
+					<figcaption>Nopanheiton todennäköisyysjakauma.</figcaption>
+				</figure>
+				<p>
+					Usein jakauma ei kuitenkaan ole tasainen. Tarkastellaan lapsiperheiden lukumäärää, kts.\ Taulukossa~\ref{tab:lapsi2}. Lapsiperheiden todennäköisyysjakauma on esitetty alla olevassa kuvassa:
+				</p>
+				<figure>				
+					<img src="../kuvat/lapsiperheet_jakauma.png" style="max-width: 100%; width: auto; height: auto;"/>
+					<figcaption>Lapsiperheiden lasten lukumäärän todennäköisyysjakauma.</figcaption>
+				</figure>
+				<p>
+					Todennäköisyysjakaumia kuvataan usein niiden ulkomuodon perusteella. Esimerkiksi Kuvan~\ref{fig:lapsi_jakauma} jakaumaa voisi luonnehtia vasemmalle vinoksi. Muita tyypillisiä kuvauksia ovat huippujen lukumäärä, symmetrisyys ja häntien paksuus, 
+					katso Kuva~\ref{fig:esimerkki_jakaumia}.
+				</p>
+				<figure>				
+					<img src="../kuvat/kaksihuippuinen_jakauma.png" style="max-width: 100%; width: auto; height: auto;"/>
+					<figcaption>Vasemmalla kaksihuippunen todennäköisyysjakauma ja oikealla todennäköisyysjakauma, joka muistuttaa normaalijakaumaa.</figcaption>
+				</figure>
+				<p>
+					Todennäköisyysjakaumasta voidaan määritellä yksittäisten todennäköisyyksien lisäksi todennäköisyyksia, jotka koostuvat eri  havaintoarvoista. Esimerkiksi Kuvan~\ref{fig:lapsi_jakauma} tapauksessa voitaisiin kysyä, millä todennäköisyydellä satunnaisesti valitulla lapsiperheellä on enintään 3 lasta? Tai 3--5 lasta?
             </div>
 
             <div class="tehtavat">
@@ -78,19 +142,13 @@ topnav: maa8-lops2019
                     </header>
                     <div id="MAA8t101" class="collapse">
                         <p>
-                            Tekstiä
+                            Taulukossa~\ref{tab:lapsi2} ja  Kuvassa \ref{fig:lapsi_jakauma} on esitetty lapsiperheiden lasten lukumäärän jakauma taulukkona ja kuvaajana.
 							</p>
                         <ol class="a">
-                            <li> $\sqrt{81}$ </li>
-                            <li> 
-                                $\sqrt[3]{125}$ 
-                            </li>
-                            <li> 
-                                $\sqrt[4]{81}$
-                            </li>
-                            <li>
-                                $\sqrt[5]{-32}$
-                            </li>
+                            <li>Millä todennäköisyydellä lapsiperheessä on enintään kolme lasta?</li>
+                            <li>Millä todennäköisyydellä lapsiperheessä on 3--5 lasta?</li>
+                            <li>Millä todennäköisyydellä satunnaisesti valitussa lapsiperheessä on vähintään 3 lasta?</li>
+                 
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
@@ -99,55 +157,405 @@ topnav: maa8-lops2019
                         </h2>
                         <div id="MAA8t101_v" class="collapse">
                            <ol class="a">
-                                <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$ </li>
-                                <li> 
-                                    $\sqrt[3]{125} = 5$, sillä $5^3 = 125$ 
-                                </li>
-                                <li> 
-                                    $\sqrt[4]{81} = 3$, sillä $3 \geq 0$ ja $3^4 = 81$
-                                </li>
                                 <li>
-                                    $\sqrt[5]{-32} = -2$, sillä $(-2)^5 = -32$
+									Lapsiperheissä enintään 3 lasta tarkoittaa, että lapsia on 1, 2 tai 3. Kuvaajassa tämä tarkoittaa kolmea vasemmanpuoleista pylvästä. Todennäköisyys saadaan laskemalla yhteen
+									$$
+									42{,}7\ \% + 38{,}9\ \% + 13{,}3 \% \approx 94{,}9\ \%.
+									$$
+								</li>
+                                <li> 
+                                    3--5 lasta tarkoittaa 3, 4 tai 5 lasta ja sen todennäköisyys on
+									$$
+									13{,}3\ \% + 3{,}3\ \% + 1{,}0\ \% \approx 18\ \%.
+									$$ 
                                 </li>
+                                <li> 
+                                    Nyt olemme kiinnostuneita perheistä, joiden lasten lukumäärä on 3, 4, 5,\dots, 15, 16. Tämä voidaan siis laskea vastaavien suhteellisten frekvessien $f \%$ avulla
+$$
+  13{,}3\ \% + 3{,}3\ \% + \cdots + 0{,}0005\ \%\approx 18{,}4\ \%.
+$$
+Toisaalta voimme hyödyntää tietoa, että kaikkien tapahtumien todennäköisyyksien summa on 100\ \%. Nyt laskemme ensin todennäköisyyden, että lapsia on 1 tai 2
+$$
+  42{,}7\ \% + 38{,}9\ \% \approx 81{,}6\ \%.
+$$
+Tämän avulla saamme laskettua todennäköisyyden vähintään kolmelle lapselle vähentämällä tämän 100 prosentista eli
+$$
+  100\ \%-81{,}6\ \% = 100\ \% - 81{,}6\ \% = 18{,}4\ \%.
+$$
+                                </li>
+                                
                             </ol>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="teoria">
-                <p>
-                    Leipätekstiä.
-                </p>
-
-                <div class="theorem" id="teoreema1">
-                    <h3>TEOREEMA</h3>
-                    <p>
-                        Neliöjuurifunktion
-                        $$
-                        f(x) = \sqrt{x}
-                        $$  
-                        määrittelyjoukko on $[0, \infty\pe$. Neliöjuurifunktion arvo on aina epänegatiivinen. 
-                        <br>
-                        <img src="/kurssit/maa8/kuvat/MAA8kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
-                    </p>
-                    <div class="proof">
-                        <p>
-                            Todistus.
-                        </p>      
-                    </div>
-                </div>
-
-            </div>
-
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
+                <a data-toggle="collapse" class="collapsed" data-target="#diskreetti-todennakoisyysjakauma">
                     Sulje kappale
                 </a>
             </div>
         </div>
     </section>
 
+	    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#binomijaukauma">
+                    Binomijakauma
+                </a>
+            </h1>
+        </header>
+        <div id="binomijaukauma" class="collapse">
+            
+            <div class="teoria">
+				<p>
+					Toistokoe on tilanne, jossa sama koe suoritetaan useampaan kertaan ja tapahtumat ovat toisistaan riippumattomia, vertaa Määritelmä~\ref{maar:riippumattomuus}. Lisäksi toistokokeessa on vain kaksi tulosvaihtoehtoa: onnistuminen ja epäonnistuminen. Toistokokeeseen liittyvää todennäköisyyttä kutsutaan <em>binomitodennäköisyydeksi</em>.
+				</p>
+				<p>
+					Tarkastellaan tilannetta, jossa kokeen onnistumisen todennäköisyys $p$ on $0{,}3$. Jos sama koe toistetaan 5 kertaa, niin mahdollisia kokeiden tuloksien vaihtoehtoja on $2^5=32$.  Erilaisia toistokokeen lopputuloksia on kuusi: 0 onnistumista, 1 onnistuminen, \ldots, 5 onnistumista. Katso alla oleva taulukko:
+				</p>
+				<figure>				
+					<img src="../kuvat/noppa_toistokoe.png" style="max-width: 100%; width: auto; height: auto;"/>
+					<figcaption>Toistokeen kaikki mahdolliset lopputulokset. Numero 1 tarkoittaa kokeen onnistumista ja numero 0 epäonnistumista.</figcaption>
+				</figure>
+				<p>
+					Huomataan aluksi, että jokaisessa lopputuloksessa olevien sarakkeiden lukumäärä Taulukossa~\ref{tab:toistokoe1} saadaan binomikertoimella. Merkitään, että numero 1 tarkoittaa kokeen onnistumista ja numero 0 epäonnistumista. Olkoon $A=\{1, 2, \ldots, 5\}$. Valitaan joukosta $A$ $k$ kappaletta alkioita, $k\in[0,5]$. Ajatellaan, että valitut $k$ alkiota kertovat, mihin jonon paikkoihin luku $1$ asetetaan. Loppuihin $5-k$ paikkaan asetetaan luku 0. Tällöin jokainen joukon $A$ $k$-alkioinen osajoukko vastaa yhtä jonoa, jossa on täsmälleen $k$ kappaletta lukuja $1$, ja toisinpäin. Näin ollen jonoja on yhtä paljon kuin $k$-alkioisia osajoukkoja eli $\displaystyle \binom{5}{k}$.
+				</p>
+				<table style="margin-left: auto; margin-right: auto;">
+											
+						<tr>
+							<th>Onnistumisia kpl</th>
+							<th>Sarakkeiden lukumäärä</th>
+							</tr>
+						<tr>
+							<td>0</td>
+							<td>$\displaystyle \binom{5}{0}=1$</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>$\displaystyle \binom{5}{1}=5$</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>$\displaystyle \binom{5}{2}=10$</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>$\displaystyle \binom{5}{3}=10$</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>$\displaystyle\binom{5}{4}=5$</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>$\displaystyle\binom{5}{5}=1$</td>
+						</tr>
+				</table>
+				<p>
+					Seuraavaksi huomataan, että jos yhden kokeen onnistumisen todennäköisyys on $0{,}3$, niin epäonnistumisen todennäköisyys on $1-0{,}3 = 0{,}7$.
+				</p>
+				<p>
+					Seuraavaksi selvitämme kunkin mahdollisen lopputuloksen todennäköisyydet. Aloitetaan lopputuloksesta, jossa kaikki kokeet epäonnistuivat. Tämä saadaan ainoastaan, kun jokainen koe epäonnistuu eli todennäköisyys on siis
+					$$
+					0{,}7 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 =  0{,}7^5 = 0{,}16807 \approx 16{,}8\ \% .
+					$$
+					Tarkastellaan seuraavaksi lopputulosta, jossa 1 koe onnistuu ja 4 epäonnistuu. Nyt onnistunut koe voi olla mikä tahansa 5 kokeesta, joten lopputulos voidaan saada 5 eri tavalla. Jos ensimmäinen koe onnistuu ja muut 4 eivät, niin todennäköisyys on
+$$
+   0.3 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 = 0{,}07203 \approx 7{,}2\ \% .
+$$
+Jos toinen koe onnistuu, niin
+$$
+   0.7 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 = 0{,}07203 \approx 7{,}2\ \% .
+$$
+Vastaavasti 3, 4 ja 5 kokeen onnistumisille saadaan todennäköisyys $0{,}07203 \approx 7{,}2 \%$. Koska kaikkien viiden tapahtuman todennäköisyys on sama, niin lopputuloksen todennäköisyydeksi saadaan
+$$
+   5 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 = 5 \cdot 0{,}3 \cdot 0{,}7^4  =0{,}36015 \approx 36{,}0\ \% .
+$$
+Kolmantena lopputuloksena on 2 onnistunutta koetta ja 3 epäonnistunutta. Erilaisten kombinaatioiden lukumäärä saadaan binomikertoimen avulla $\displaystyle\binom{5}{2} = \frac{5!}{2! 3!} = 10$, joten erilaisia vaihtoehtoja on 10 kappaletta. Jokaisen näiden todennäköisyys on
+$$
+   0{,}3 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 = 0{,}3^2 \cdot 0{,}7^3=0{,}03087 \approx 3{,}1\ \% .
+$$
+Lopputulukosen todennäköisyys on
+$$
+   10 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 = 10 \cdot 0{,}3^2 \cdot 0{,}7^3 = 0{,}3087 \approx 30{,}9\ \% .
+$$
+Seuraava lopputulos on 3 onnistunutta koetta ja 2 epäonnistunutta. Binomikertoimen avulla saamme, että eri kombinaatioita on $\displaystyle\binom{5}{3} = 10$. Jokaisen näiden todennäköisyys on
+$$
+   0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 = 0{,}3^3 \cdot 0{,}7^2= 0{,}01323 \approx 1{,}3\ \% 
+$$
+joten lopputuloksen todennäköisyys on
+$$
+   10 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 = 10 \cdot 0{,}3^3 \cdot 0{,}7^2 =0{,}1323 \approx 13{,}2\ \% .
+$$
+Lopputuloksen 4 onnistunutta ja 1 epäonnistunut erilaisia vaihtoehtoja on 5, joista jokaisen todennäköisyys on
+$$
+   0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}7 = 0{,}3^4 \cdot 0{,}7=0{,}00567 \approx 0{,}6\ \% .
+$$
+Lopputuloksen todennäköisyys on
+$$
+   5 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}7 = 5 \cdot 0{,}3^4 \cdot 0{,}7=0{,}02835 \approx 2{,}8\ \% .
+$$
+Lopputulos 5 onnistunutta voidaan saada vain yhdellä tavalla ja sen todennäköisyys on
+$$
+   0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 =0{,}3^5 \approx 0{,}00243\ \% .
+$$
+Voimme seuraavaksi muotoilla yleisen lausekkeen toistokokeen onnistumistodennäköisyydelle.
+					</p>
+				</div>	
+			
+				<div class="theorem" id="teoreema1">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jos toistokokeen yhden kokeen onnistumistodennäköisyys on $p \in [0,1]$ ja toistokoe suoritetaan $n \ge 1$ kertaa, niin todennäköisyys, että koe onnistuu $k \in \{ 0,1,\dots, n \}$ kertaa, on
+						$$
+						\displaystyle\binom{n}{k}\, p^k (1-p)^{n-k}.
+						$$
+					</p>
+				</div>
+				<div class="teoria">
+					<p>
+						Varmista ennen kuin käytät Lausetta~\ref{binomi_tn}, että toistettavat kokeet ovat riippumattomia ja selvitä muuttujien $n$ (toistojen lukumäärä), $k$ (onnistumisten lukumäärä) ja $p$ (yhden kokeen onnistumistodennäköisyys) arvot.
+					</p>
+				</div>
+				<div class="tehtavat">
+                <div class="tehtava id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#toistokoe_noppa">
+                                Toistokoe nopalla
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="toistokoe_noppa" class="collapse">
+                        <p>
+                            Tavallista noppaa heitetään 7 kertaa. Millä todennäköisyydellä saadaan täsmälleen kaksi kertaa silmäluku 5 tai 6?
+						</p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#toistokoe_noppa_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="toistokoe_noppa_v" class="collapse">
+                           <p>
+							Kyseessä on toistokoe, sillä aikaisempi nopan heitto ei vaikuta seuraavan tulokseen. Toistojen lukumäärä $n$ on 7 ja haluamme selvittää, milloin näistä $k=2$ onnistuu. 
+							
+							Aiemman tehtävän xxxx perusteella onnistumistodennäköisyys $p$ on $\frac13$. Teoreeman xxxxx avulla saamme
+							$$
+							\displaystyle\binom{7}{2} \left( \frac13 \right)^2 \left( 1-\frac13 \right)^{7-2} = 21 \cdot \left( \frac13 \right)^2 \cdot \left( \frac23 \right)^5 \approx 24{,}0\ \%.
+							$$
+							</p>
+                        </div>
+                    </div>
+					</div>
+					<div class="tehtava id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#toistokoe_noppa2">
+                                Toistokoe nopalla
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="toistokoe_noppa2" class="collapse">
+                        <p>
+                            Tavallista noppa heitetään seitsemän kertaa. Laske, millä todennäköisyydellä saadaan 0, 1, 3, 4, 5, 6 ja 7 kertaa silmäluku 5 tai 6. Muodosta tuloksista yhdessä aiemman tehtävän avulla todennäköisyysjakauma.
+						</p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#toistokoe_noppa2_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="toistokoe_noppa2_v" class="collapse">
+                           <p>
+							xxxxx
+							</p>
+                        </div>
+                    </div>
+					</div>
+				</div>
+				<div class="teoria">
+					<p>
+						Yleisin toistokokeen todennäköisyyksiin liittyvä laskuvirhe on binomikertoimen unohtaminen.
+					</p>
+				</div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#binomijaukauma">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+		    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#odotusarvo">
+                    Odotusarvo
+                </a>
+            </h1>
+        </header>
+        <div id="odotusarvo" class="collapse">
+            
+            <div class="teoria">
+				<p>
+					Odotusarvo kuvaa satunnaisilmiön odotettavissa olevaa arvoa. Tarkastellaan tavallista noppaa, jonka jokaisen silmäluvun todennäköisyys on $1/6$. Nopan odotusarvo tarkoittaa sellaista arvoa, joka keskimäärin on nopanheiton tulos. Odotusarvo lasketaan todennäköisyyksien ja mahdollisten arvojen avulla seuraavasti:
+					$$
+						1 \cdot \frac16 + 2 \cdot \frac16 + 3 \cdot \frac16 + 4 \cdot \frac16 + 5 \cdot \frac16 + 6 \cdot \frac16 = 3{,}5.
+					$$
+					Huomaa, että odotusarvo 3,5 se ei ole mahdollinen nopanheiton tulos.
+				</p>
+            </div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: ODOTUSARVO</h3>
+                    <p>
+                        Satunnaismuuttujan <em>odotusarvo</em> on 
+						$$
+						\sum_{j=1}^{n} x_j \cdot p_j,
+						$$
+						missä $x_j$ on satunnaismuuttujan arvo ja $p_j$ sitä vastaava todennäköisyys.
+                    </p>
+            </div>
+			
+			<div class="tehtavat">
+                <div class="tehtava id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#toistokokoeen-odotusarvo">
+                                Toistokokoeen odotusarvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="toistokokoeen-odotusarvo" class="collapse">
+                        <p>
+                            Edellisessä luvussä käsiteltiin toistokoetta. Toistokoe suoritetaan 5 kertaa ja yhden kokeen onnistumistodennäköisyys on 0,3. Edellisestä luvusta saamme koottua seuraavan taulukon:
+						</p>
+						<table style="margin-left: auto; margin-right: auto;">
+											
+						<tr>
+							<th>Onnistumisia ($x_j$)</th>
+							<th>Todennäköisyys ($p_j$)</th>
+							</tr>
+						<tr>
+							<td>0</td>
+							<td>16,8 %</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>36,0 %</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>30,9 %</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>13,2 %</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>2,8 %</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>0,002 %</td>
+						</tr>
+						</table>
+						
+						<p>
+                            Mikä on toistokokeen odostusarvo?
+						</p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#toistokokoeen-odotusarvo_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="toistokokoeen-odotusarvo_v" class="collapse">
+                           <p>
+							Odotusarvon määritelmän nojalla odotusarvo on
+							$$
+		\begin{align*}
+    \sum_{j=1}^{6} x_j \cdot p_j & =  x_1 \cdot p_1  +  x_2 \cdot p_2  + \cdots  +  x_{6} \cdot p_{6}\\
+    & =  0 \cdot 0{,}168  +  1 \cdot 0{,}360  +  2 \cdot 0{,}309  +  3 \cdot 0{,}132  +  4 \cdot 0{,}028 + 5 \cdot 0{,}00002\\
+    & \approx  1{,}49.
+    % 0*0.168+1*.360+2*.309+3*.132+4*.028+5*.00002
+  \end{align*}
+							$$
+							</p>
+                        </div>
+                    </div>
+					</div>
+					<div class="tehtava id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#lasten_lkm_odotusarvo">
+                                Lasten lukumäärän odotusarvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="lasten_lkm_odotusarvo" class="collapse">
+                        <p>
+                            Alla olevasta kuvasta saadaan lapsiperheiden lasten lukumäärät $x_j$ ja niitä vastaavat todennäköisyydet $p_j$. Mikä on satunnaisesti valitun lapsiperheen lasten lukumäärän odotusarvo?
+						</p>
+						<figure>				
+							<img src="../kuvat/lapsiperheet_jakauma.png" style="max-width: 100%; width: auto; height: auto;"/>
+							<figcaption>Lapsiperheiden lasten lukumäärän todennäköisyysjakauma.</figcaption>
+						</figure>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#lasten_lkm_odotusarvo_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="lasten_lkm_odotusarvo_v" class="collapse">
+                           <p>
+							Odotusarvon määritelmän nojalla
+							$$
+  \begin{align*}
+    \sum_{j=1}^{16} x_j \cdot p_j & =  x_1 \cdot p_1  +  x_2 \cdot p_2  + \cdots  +  x_{16} \cdot p_{16}\\
+    & =  1 \cdot 0{,}427  +  2 \cdot 0{,}389 + \cdots + 16 \cdot 0{,}000005 \approx 1{,}85.
+  \end{align*}
+							$$
+							</p>
+                        </div>
+                    </div>
+					</div>
+					
+					<div class="tehtava id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#keskiarvo-odotusarvo">
+                                Keskiarvo ja odotusarvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="keskiarvo-odotusarvo" class="collapse">
+                        <p>
+                            Kun todenäköisyysjakauma saadaan havainnoista, niin  mitä eroa on keskiarvolla ja odotusarvolla?
+						</p>
+						
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#keskiarvo-odotusarvo_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="keskiarvo-odotusarvo_v" class="collapse">
+                           <p>
+							xxxx
+							</p>
+                        </div>
+                    </div>
+					</div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#odotusarvo">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+	
     <section class="panel">
         <header class="otsikko">
             <h1>                        
