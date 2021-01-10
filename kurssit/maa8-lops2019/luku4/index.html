@@ -54,62 +54,122 @@ topnav: maa8-lops2019
     <section class="panel">
         <header class="otsikko">
             <h1>      
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
+                <a data-toggle="collapse" class="collapsed" data-target="#korrelaatiokerroin">
                    Korrelaatiokerroin
                 </a>
             </h1>
         </header>
-        <div id="juuri1" class="collapse">
+        <div id="korrelaatiokerroin" class="collapse">
             
             <div class="teoria">
                 <p>
-                    Leipätekstiä
+                    Tähän asti olemme tarkastelleet esimerkkejä, joissa havaintoyksikköön liitty yksi havaintoarvo. Usein kuitenkin havaintoyksikköön liitty useita havaintoarvoja. Esimerkiksi lapsiperhe-esimerkissä jokaiselta lapsiperheeltä voisi lasten lukumäärän lisäksi olla tiedot vaikkapa asuinpaikkakunnasta ja perheen tulotasosta. Kaikki edellä esitetyt tarkastelut toimivat yksittäisille havaintoarvoille. Seuraavaksi tarkastelemme, miten kahta eri havaintoarvoa voi vertailla keskenään.
+				</p>
+				<p>
+					Kun halutaan vertailla kahta eri havaintoarvoa, niin usein on hyödyllistä piirtää tilanteesta kuva. Kutakin havaintoyksikköä kohden saamme yhden parin havaintoarvoja. Tässä parissa ensimmäinen havaintoarvo tulkitaan $x$-akselin arvoksi ja toinen $y$-akselin arvoksi. Kuvassa~\ref{fig:erilaisia_korrelaatioita} on havainnollistettu kolmea erilaista tapausta. Kuvasta huomataan, että vasemmanpuoleisten pisteiden kautta voidaan lähes piirtää suora. Vastaavasti keskimmäisessä kuvassa pisteiden kautta voidaan lähes piirtää eksponentiaalinen käyrä ja oikealla paraabeli. Jos kahden havaintoarvon muodostamat pisteet noudattavat jotain käyrää, niin puhutaan havaintoarvojen korrelaatiosta. Tällä kurssilla tarkastelemme ainoastaan lineaarista korrelaatiota (eli Pearsonin korrelaatiota).
                 </p>
+				<figure>				
+					<img src="../kuvat/riippuvuuksia.png" style="max-width: 100%; width: auto; height: auto;"/>
+					<figcaption>Erityyppisiä riippuvuuksia. Vasemmanpuoleinen riippuvuus on lineaarinen, keskimmäinen riippuuvuus on eksponentiaalinen ja oikeanpuoleinen riippuvuus polynominen.</figcaption>
+				</figure>
+				<p> 
+					Alla olevassa taulukossa on esitetty syntyneiden lasten lukumäärä ja kuluttajahintaindeksi (KHI) Suomessa vuosina 2010--2019. Tiedot ovat Tilastokeskuksen sivuilta <a href="http://www.tilastokeskus.fi/til/synt/2019/synt\_2019\_2020-04-24\_tie\_001\_fi.html">1</a>ja <a href="http://www.tilastokeskus.fi/til/khi/2020/09/khi\_2020\_09\_2020-10-14\_tau\_005\_fi.html">2</a> (luettu 4.1.2020). Vuosi on havaintoyksikkö ja siihen liittyy kaksi havaintoarvoa.  Kuluttajahintaindeksi on valittu $x$-akselille ja skaalattu jakamalla luku 10:llä, syntyneiden lasten lukumäärä on  $y$-akselilla ja se on skaalattu jakamalla lukumäärä 10000:lla. Huomaa, että havaintoarvot olisi voitu valita akseleille myös toisin päin. Saamme pisteet (10,0; 6,0980), (10,34; 5,9961), ..., (11,12; 4,7577), (11,23; 4,5613), jotka on piirretty kuvaan:
+				</p>
+				<table style="margin-left: auto; margin-right: auto;">
+											
+						<tr>
+							<th>Vuosi</th>
+							<th>Syntyneet</th>
+							<th>KHI</th>
+							</tr>
+						<tr>
+							<td>2010</td>
+							<td>60980</td>
+							<td>100,0</td>
+						</tr>
+						<tr>
+							<td>2011</td>
+							<td>59961</td>
+							<td>103,4</td>
+						</tr>
+						<tr>
+							<td>2012</td>
+							<td>59493</td>
+							<td>106,3</td>
+						</tr>
+						<tr>
+							<td>2013</td>
+							<td>58134</td>
+							<td>107,9</td>
+						</tr>
+						<tr>
+							<td>2014</td>
+							<td>57232</td>
+							<td>109,0</td>
+						</tr>
+						<tr>
+							<td>2015</td>
+							<td>55472</td>
+							<td>108,8</td>
+						</tr>
+						<tr>
+							<td>2016</td>
+							<td>52814</td>
+							<td>109,2</td>
+						</tr>
+						<tr>
+							<td>2017</td>
+							<td>50321</td>
+							<td>110,0</td>
+						</tr>
+						<tr>
+							<td>2018</td>
+							<td>47577</td>
+							<td>111,2</td>
+						</tr>
+						<tr>
+							<td>2019</td>
+							<td>45613</td>
+							<td>& 112,3</td>
+						</tr>
+				</table>
+				<figure>				
+					<img src="../kuvat/khi-ja-lasten-lkm.png" style="max-width: 100%; width: auto; height: auto;"/>
+					<figcaption>Syntyneiden lasten lukumäärä ja kuluttajahintaindeksi (KHI) Suomessa.</figcaption>
+				</figure>
+				<p>
+					Seuraavaksi yritämme sovittaa havaintopareihin suoran, joka parhaalla mahdollisella tavalla kuvaa muuttujien $x$ ja $y$ välistä yhteyttä. Olkoon suoran yhtälö  $y= bx +a$. Pyrimme määrittämään vakiot $a$ ja $b$ siten, että  havaintopisteiden $y$-suunnassa laskettujen pystysuorien poikkeamien summa on mahdollisimman pieni. Pisteessä $(x_i, y_i)$ $y$-suuntaan laskettu pystysuora poikkeama suorasta $y= bx +a$ on $|y_i- bx_i -a|$ ja tämän neliö on $(y_i - bx_i -a)^2$. Laskemme nämä kaikki pystysuorien poikkemien neliöt yhteen ja saamme
+					$$
+					\sum_{i=1}^n (y_i - bx_i -a)^2.
+					$$
+					Haluamme löytää sellaiset kertoimet $a$ ja $b$, että tämä summa on mahdollisimman pieni.
+				</p>
             </div>
 
             <div class="tehtavat">
                 <div class="tehtava first-exercise" id="uuid">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
-                                Tehtävä
+                            <a data-toggle="collapse" class="collapsed" data-target="#geo1">
+                                Tutkimustehtävä GeoGebralla
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA8t101" class="collapse">
+                    <div id="geo1" class="collapse">
                         <p>
-                            Tekstiä
-							</p>
-                        <ol class="a">
-                            <li> $\sqrt{81}$ </li>
-                            <li> 
-                                $\sqrt[3]{125}$ 
-                            </li>
-                            <li> 
-                                $\sqrt[4]{81}$
-                            </li>
-                            <li>
-                                $\sqrt[5]{-32}$
-                            </li>
-                        </ol>
+                            Piirrä pisteet $(1{,}0; 0{,}4), (2{,}0; 1{,}5), (3{,}0; 1{,}2), (4{,0}; 1{,}8), (5{,}0; 2{,}3)$ ja $(6{,}0; 3{,}2)$ GeoGebralla. Tee liu'ut $a \in [-3, 3]$ ja $b\in [-3, 3]$. Piirrä suora $y= bx + a$. Laske ensin kunkin  pisteen $y$-suuntainen  etäisyys suorasta ja sitten etäisyyksien summa. 
+							Tutki liukujen $a$ ja $b$ avulla, milloin summa on pienin. Vertaa tulostasi yllä olevaan kuvaan.
+						</p>
+                        
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#geo1_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t101_v" class="collapse">
-                           <ol class="a">
-                                <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$ </li>
-                                <li> 
-                                    $\sqrt[3]{125} = 5$, sillä $5^3 = 125$ 
-                                </li>
-                                <li> 
-                                    $\sqrt[4]{81} = 3$, sillä $3 \geq 0$ ja $3^4 = 81$
-                                </li>
-                                <li>
-                                    $\sqrt[5]{-32} = -2$, sillä $(-2)^5 = -32$
-                                </li>
-                            </ol>
+                        <div id="geo1_v" class="collapse">
+                           <p>
+							xxxxxxx
+						   <p>
                         </div>
                     </div>
                 </div>
@@ -117,31 +177,237 @@ topnav: maa8-lops2019
 
             <div class="teoria">
                 <p>
-                    Leipätekstiä.
+                    Voidaan todistaa, että $y$-suuntaisten etäisyyksien summa saa pienimmän arvonsa, kun valitaan
+					$$
+\begin{equation}
+b=\frac{n\sum\limits_{i=1}^n x_iy_i
+-\sum\limits_{i=1}^n x_i
+\sum\limits_{i=1}^n y_i}{n\sum\limits_{i=1}^n x_i^2
+-\bigg(\sum\limits_{i=1}^n x_i\bigg)^2}\quad
+\text{ja}\quad a=\frac{\sum\limits_{i=1}^n y_i-b\sum\limits_{i=1}^n x_i}{n}.
+\end{equation}
+$$
+					Ohitamme tämän todistuksen. Kyseistä metodia kutsutaan pienimmän neliösumman menetelmäksi. 
                 </p>
+				<figure>				
+					<img src="../kuvat/avaintoparit-regressiosuora-ja-pystysuorat-etaisyydet.png" style="max-width: 100%; width: auto; height: auto;"/>
+					<figcaption>Havaintoparit, regressiosuora ja pystysuorat etäisyydet.
+					</figcaption>
+				</figure>
+			</div>
 
-                <div class="theorem" id="teoreema1">
-                    <h3>TEOREEMA</h3>
+            <div class="definition">
+                    <h3>MÄÄRITELMÄ: REGRESSIOSUORA</h3>
                     <p>
-                        Neliöjuurifunktion
-                        $$
-                        f(x) = \sqrt{x}
-                        $$  
-                        määrittelyjoukko on $[0, \infty\pe$. Neliöjuurifunktion arvo on aina epänegatiivinen. 
-                        <br>
-                        <img src="/kurssit/maa8/kuvat/MAA8kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        Jos lukuparit $(x_i,y_i)$, $i=1,\ldots,n$, ovat tilastollisten muuttujien $x$ ja $y$ havaintoarvoja, niin suoraa $y=bx+a$, missä $b$ ja $a$ ovat 
+						$$
+\begin{equation}
+b=\frac{n\sum\limits_{i=1}^n x_iy_i
+-\sum\limits_{i=1}^n x_i
+\sum\limits_{i=1}^n y_i}{n\sum\limits_{i=1}^n x_i^2
+-\bigg(\sum\limits_{i=1}^n x_i\bigg)^2}\quad
+\text{ja}\quad a=\frac{\sum\limits_{i=1}^n y_i-b\sum\limits_{i=1}^n x_i}{n}.
+\end{equation}
+					$$
+					kutsutaan <em>regressiosuoraksi</em>.
                     </p>
-                    <div class="proof">
+            </div>
+			<div class="teoria">
+                <p>
+					Regressiosuoran kerroin $b$ voi olla nolla, positiivinen tai negatiivinen. Jos $b$ on positiivinen, niin silloin suora on kasvava. Tällöin  muuttujan $x$ kasvaessa myös muuttuja $y$ kasvaa, ja toisinpäin. Sanomme tällöin, että muuttujilla on <em>positiivinen korrelaatio</em>. Jos $b$ on negatiivinen, niin silloin suora on vähenevä. Tällöin muuttujan $x$ kasvaessa muuttuja $y$ vähenee ja muuttujan $y$ kasvaessa muuuttuja $x$ vähenee. Sanomme tällöin, että muuttujilla on <em>negatiivinen korrelaatio</em>. 
+				</p>
+				<p>
+					Korrelaation voimakkuutta mitataan korrelaatiokertoimella.
+				</p>
+            </div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: KORRELAATIOKERROIN</h3>
+                    <p>
+                        Tilastollisten muuttujien $x$ ja $y$ <em>korrelaatiokerroin</em> on
+						$$
+						r = \frac{\sum_{i=1}^n (x_i - \bar x)(y_i- \bar y)}{\sqrt{\sum_{i=1}^n(x_i- \bar x)^2 \sum_{i=1}^m (y_i - \bar y)^2}},
+						$$
+						missä $\bar x$ ja $\bar y$ ovat muuttujien $x_1, \ldots, x_n$ ja $y_1, \ldots, y_n$ keskiarvot.
+                    </p>
+            </div>
+			<div class="teoria">
+                <p>
+					Korrelaatiokerroin on määritelty, jos jokin havaintoarvoista $x_i$ eroaa keskiarvosta $\bar x$ ja jokin havaintoarvoista $y_i$ eroaa keskiarvosta $\bar y$.	Huomaa, että 
+					$\bar x = \frac1n \sum_{i=1}^n x_i$ ja $\bar y = \frac1n \sum_{i=1}^n y_i$.
+					Käytännössä regressiosuora ja korrelaatiokerroin lasketaan aina ohjelmistolla. Korrelaatiokertoimelle saadaan seuraavat rajat:
+					$$
+					-1\leqslant r \leqslant 1.
+					$$
+					Tulos ei ole todistettavissa lukiotiedoin.
+				</p>
+				<p>
+					Lisätieto: Korrelaatiokerroin voidaan esittää myös muodossa
+$$
+r=\frac{n\sum\limits_{i=1}^n x_iy_i
+-\sum\limits_{i=1}^n x_i
+\sum\limits_{i=1}^n y_i}{\sqrt{\left(n\sum\limits_{i=1}^n x_i^2
+-\bigg(\sum\limits_{i=1}^n x_i\bigg)^2\right)
+\left(n\sum\limits_{i=1}^n y_i^2
+-\bigg(\sum\limits_{i=1}^n y_i\bigg)^2\right)}}.
+$$
+					Korrelaatiokertoimen neliötä $r^2$ sanotaan <em>selitysasteeksi</em>.
+					</p>
+			</div>
+			
+			<div class="tehtavat">
+                <div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#geo12">
+                                Tutkimustehtävä GeoGebralla
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="geo12" class="collapse">
                         <p>
-                            Todistus.
-                        </p>      
+                            Laske (ohjelmistolla) kuluttajahintaindeksin ja  lasten lukumäärän (kts. aiemmasta taulukosta) välinen regressiosuora ja  korrelaatiokerroin, kun kuluttajahintaindeksi on $x$-akselilla. Vaihda lasten lukumäärä $x$-akselille ja laske regressiosuora ja  korrelaatiokerroin. Mitä havaitset?
+						</p>
+                        
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#geo12_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="geo12_v" class="collapse">
+                           <p>
+							xxxxxxx
+						   <p>
+                        </div>
                     </div>
                 </div>
-
+            </div>
+			
+			<div class="teoria">
+                <p>
+					Korrelaatiokertoimen $r$ merkki on sama kuin regressiosuoran $y= bx +a$ kulmakertoimen $b$ merkki. Näin ollen  korrelaatiokertoimen merkki kertoo, onko kyseessä positiivinen vai negatiivinen korrelaatio.
+				</p>
+				<p>
+					Korrelaatiokerroin $r$ kuvaa muuttujien $x$ ja $y$ lineaarisen riippuvuuden voimakkuutta.  On syytä huomata, että tämä riippuvuus on tilastollista riippuvuutta. Mitään syy-yhteyttä muuttujien välillä ei välttämättä ole. Mitä lähempänä korrelaatiokertoimen itseisarvo $|r|$ on lukua $1$, sitä voimakkaampaa muuttujien $x$ ja $y$ riippuvuus on. 
+				</p>
+				<figure>				
+					<img src="../kuvat/havaintoja.png" style="max-width: 100%; width: auto; height: auto;"/>
+					<figcaption>Havaintoja, joiden korrelaation voimakkuus vaihtelee. Vasemmalla $r=0$, keskellä $r=-0,53$ ja oikealla $r=-0,94$.
+					</figcaption>
+				</figure>
+				<p>
+					Lisätieto: Jos $|r|=1$, niin kaikki havaintoarvopisteet ovat samalla suoralla.
+				</p>
+			</div>
+			
+			<div class="tehtavat">
+                <div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#geo123">
+                                Tutkimustehtävä GeoGebralla
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="geo123" class="collapse">
+                        <p>
+                            Alla olevaan taulukkoon on koottu vapaa-ajan kalastajien lukumäärät (1000 henkilöä) ja vapaa-ajan kalastajien kuhasaaliiden koot (1000 kg) kahden vuoden välein vuosilta 2004--2018. Luvut ovat <a href="https://stat.luke.fi/vapaa-ajankalastus">Tilastokeskuksen sivuilta</a> (luettu 13.10.2020). Muodostetaan aineistosta havaintoparit $(1858, 2265), \ldots, (1461, 3348)$ ja syötetään havaintoparit ohjelmistoon. Saamme regressiosuoraksi  $y= -2{,}92x + 7830{,}81$, missä $x$ on vapaa-ajan kalastajien lukumäärä (1000 kpl)  ja $y$ on kuhasaalis (1000 kg). Korrelaatiokertoimeksi $r$ saamme $-0{,}87$, eli kalastajien lukumäärällä ja kuhasaaliilla on negatiivinen korrelaatio. 
+						</p>
+						
+						<table style="margin-left: auto; margin-right: auto;">
+											
+						<tr>
+							<th>Vuosi</th>
+							<th>Kalastajat  (1000 hlöä)</th>
+							<th>Kuhasaalis (1000 kg)</th>
+							</tr>
+						<tr>
+							<td>2004</td>
+							<td>1858</td>
+							<td>2265</td>
+						</tr>
+						<tr>
+							<td>2006</td>
+							<td>1844</td>
+							<td>2790</td>
+						</tr>
+						<tr>
+							<td>2008</td>
+							<td>1780</td>
+							<td>2368</td>
+						</tr>
+						<tr>
+							<td>2010</td>
+							<td>1676</td>
+							<td>2865</td>
+						</tr>
+						<tr>
+							<td>2012</td>
+							<td>3246</td>
+							<td>109,0</td>
+						</tr>
+						<tr>
+							<td>2014</td>
+							<td>3348</td>
+							<td>108,8</td>
+						</tr>
+						<tr>
+							<td>2016</td>
+							<td>3892</td>
+							<td>109,2</td>
+						</tr>
+						<tr>
+							<td>2018</td>
+							<td>1461</td>
+							<td>3378</td>
+						</tr>
+				</table>
+						<ol class="a">
+							<li>Tee GeoGebralla itse vastaava analyysi.</li>
+							<li>Onko suureilla syy-yhteyttä?</li>
+						</ol>                        
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#geo123_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="geo123_v" class="collapse">
+                           <ol class="a">
+							<li>				
+								<img src="../kuvat/havaintoja.png" style="max-width: 100%; width: auto; height: auto;"/>
+							</li>
+							<li>Tilastollisesta yhteydestä huolimatta suureilla tuskin on syy-yhteyttä, koska vapaa-ajan kalastajien määrän vähenemisen luulisi vähentävän myös kuhasaaliita.</li>
+							</ol>
+                        </div>
+                    </div>
+                </div>
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#geo1234">
+                                Tutkimustehtävä GeoGebralla
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="geo1234" class="collapse">
+                        <p>
+                            Keksi kahden muuttujan esimerkkejä, joissa on positiivista tai negatiivista korrelaatiota, mutta ei syy-yhteyttä. 
+						</p>
+						         
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#geo1234_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="geo1234_v" class="collapse">
+                           
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
+                <a data-toggle="collapse" class="collapsed" data-target="#korrelaatiokerroin">
                     Sulje kappale
                 </a>
             </div>
