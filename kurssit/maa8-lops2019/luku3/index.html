@@ -77,10 +77,9 @@ topnav: maa8-lops2019
 			<div class="teoria">
                 <p>
                     Satunnaismuuttuja voi esimerkiksi kuvata nopan jokaiseen silmäluvun sitä vastaavalle reaalilukuarvolle
-					$$
-					\epsdice{1} \mapsto 1,\ \epsdice{2} \mapsto 2,\ \epsdice{3} \mapsto 3,\ \epsdice{4} \mapsto 4,\ 
-					\epsdice{5} \mapsto 5,\ \epsdice{6} \mapsto 6,
-					$$ 
+				</p>
+				<img src="../kuvat/noppia.png" style="max-width: 100%; width: auto; height: auto;"/>
+				<p> 
 					tai se voi kuvata jokaisen lapsiperheen kyseessä olevan perheen lasten lukumääräksi.
 				</p>
 				<p>
@@ -113,22 +112,21 @@ topnav: maa8-lops2019
 					<figcaption>Nopanheiton todennäköisyysjakauma.</figcaption>
 				</figure>
 				<p>
-					Usein jakauma ei kuitenkaan ole tasainen. Tarkastellaan lapsiperheiden lukumäärää, kts.\ Taulukossa~\ref{tab:lapsi2}. Lapsiperheiden todennäköisyysjakauma on esitetty alla olevassa kuvassa:
+					Usein jakauma ei kuitenkaan ole tasainen. Tarkastellaan lapsiperheiden lukumäärää, joka on esitetty alla olevassa kuvassa:
 				</p>
 				<figure>				
 					<img src="../kuvat/lapsiperheet_jakauma.png" style="max-width: 100%; width: auto; height: auto;"/>
 					<figcaption>Lapsiperheiden lasten lukumäärän todennäköisyysjakauma.</figcaption>
 				</figure>
 				<p>
-					Todennäköisyysjakaumia kuvataan usein niiden ulkomuodon perusteella. Esimerkiksi Kuvan~\ref{fig:lapsi_jakauma} jakaumaa voisi luonnehtia vasemmalle vinoksi. Muita tyypillisiä kuvauksia ovat huippujen lukumäärä, symmetrisyys ja häntien paksuus, 
-					katso Kuva~\ref{fig:esimerkki_jakaumia}.
+					Todennäköisyysjakaumia kuvataan usein niiden ulkomuodon perusteella. Esimerkiksi yllä olevan kuvan jakaumaa voisi luonnehtia vasemmalle vinoksi. Muita tyypillisiä kuvauksia ovat huippujen lukumäärä, symmetrisyys ja häntien paksuus, kuten alla.
 				</p>
 				<figure>				
 					<img src="../kuvat/kaksihuippuinen_jakauma.png" style="max-width: 100%; width: auto; height: auto;"/>
 					<figcaption>Vasemmalla kaksihuippunen todennäköisyysjakauma ja oikealla todennäköisyysjakauma, joka muistuttaa normaalijakaumaa.</figcaption>
 				</figure>
 				<p>
-					Todennäköisyysjakaumasta voidaan määritellä yksittäisten todennäköisyyksien lisäksi todennäköisyyksia, jotka koostuvat eri  havaintoarvoista. Esimerkiksi Kuvan~\ref{fig:lapsi_jakauma} tapauksessa voitaisiin kysyä, millä todennäköisyydellä satunnaisesti valitulla lapsiperheellä on enintään 3 lasta? Tai 3--5 lasta?
+					Todennäköisyysjakaumasta voidaan määritellä yksittäisten todennäköisyyksien lisäksi todennäköisyyksia, jotka koostuvat eri havaintoarvoista. Esimerkiksi lapsiperheiden tapauksessa voitaisiin kysyä, millä todennäköisyydellä satunnaisesti valitulla lapsiperheellä on enintään 3 lasta? Tai 3--5 lasta?
             </div>
 
             <div class="tehtavat">
@@ -136,14 +134,107 @@ topnav: maa8-lops2019
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
-                                Tehtävä
+                                Lapsiperheet
                             </a>
                         </h1>
                     </header>
                     <div id="MAA8t101" class="collapse">
                         <p>
-                            Taulukossa~\ref{tab:lapsi2} ja  Kuvassa \ref{fig:lapsi_jakauma} on esitetty lapsiperheiden lasten lukumäärän jakauma taulukkona ja kuvaajana.
-							</p>
+                            Alla olevassa taulukossa on esitetty lapsiperheiden lasten lukumäärän jakauma.
+						</p>
+						<table style="margin-left: auto; margin-right: auto;">
+											
+						<tr>
+							<th>Lasten lkm</th>
+							<th>$f$</th>
+							<th>$f$ %</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>241709</td>
+							<td>42,7 %</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>220116</td>
+							<td>38,9 %</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>75326</td>
+							<td>13,3 %</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>18409</td>
+							<td>3,3 %</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>5493</td>
+							<td>1,0 %</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>2289</td>
+							<td>0,4 %</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>1235</td>
+							<td>0,2 %</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>751</td>
+							<td>0,1 %</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>476</td>
+							<td>0,08 %</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>262</td>
+							<td>0,05 %</td>
+						</tr>
+						<tr>
+							<td>11</td>
+							<td>117</td>
+							<td>0,03 %</td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td>41</td>
+							<td>0,007 %</td>
+						</tr>
+						<tr>
+							<td>13</td>
+							<td>12</td>
+							<td>0,002 %</td>
+						</tr>
+						<tr>
+							<td>14</td>
+							<td>3</td>
+							<td>0,0005 %</td>
+						</tr>
+						<tr>
+							<td>15</td>
+							<td>0</td>
+							<td>0 %</td>
+						</tr>
+						<tr>
+							<td>16</td>
+							<td>3</td>
+							<td>0,0005 %</td>
+						</tr>
+						<tr>
+							<th>Yhteensä</th>
+							<th>566242</th>
+							<th>100 %</th>
+						</tr>
+				</table>
                         <ol class="a">
                             <li>Millä todennäköisyydellä lapsiperheessä on enintään kolme lasta?</li>
                             <li>Millä todennäköisyydellä lapsiperheessä on 3--5 lasta?</li>
@@ -170,11 +261,11 @@ topnav: maa8-lops2019
 									$$ 
                                 </li>
                                 <li> 
-                                    Nyt olemme kiinnostuneita perheistä, joiden lasten lukumäärä on 3, 4, 5,\dots, 15, 16. Tämä voidaan siis laskea vastaavien suhteellisten frekvessien $f \%$ avulla
+                                    Nyt olemme kiinnostuneita perheistä, joiden lasten lukumäärä on 3, 4, 5,... , 15, 16. Tämä voidaan siis laskea vastaavien suhteellisten frekvessien $f \%$ avulla
 $$
   13{,}3\ \% + 3{,}3\ \% + \cdots + 0{,}0005\ \%\approx 18{,}4\ \%.
 $$
-Toisaalta voimme hyödyntää tietoa, että kaikkien tapahtumien todennäköisyyksien summa on 100\ \%. Nyt laskemme ensin todennäköisyyden, että lapsia on 1 tai 2
+Toisaalta voimme hyödyntää tietoa, että kaikkien tapahtumien todennäköisyyksien summa on 100 %. Nyt laskemme ensin todennäköisyyden, että lapsia on 1 tai 2
 $$
   42{,}7\ \% + 38{,}9\ \% \approx 81{,}6\ \%.
 $$
@@ -213,14 +304,14 @@ $$
 					Toistokoe on tilanne, jossa sama koe suoritetaan useampaan kertaan ja tapahtumat ovat toisistaan riippumattomia, vertaa Määritelmä~\ref{maar:riippumattomuus}. Lisäksi toistokokeessa on vain kaksi tulosvaihtoehtoa: onnistuminen ja epäonnistuminen. Toistokokeeseen liittyvää todennäköisyyttä kutsutaan <em>binomitodennäköisyydeksi</em>.
 				</p>
 				<p>
-					Tarkastellaan tilannetta, jossa kokeen onnistumisen todennäköisyys $p$ on $0{,}3$. Jos sama koe toistetaan 5 kertaa, niin mahdollisia kokeiden tuloksien vaihtoehtoja on $2^5=32$.  Erilaisia toistokokeen lopputuloksia on kuusi: 0 onnistumista, 1 onnistuminen, \ldots, 5 onnistumista. Katso alla oleva taulukko:
+					Tarkastellaan tilannetta, jossa kokeen onnistumisen todennäköisyys $p$ on $0{,}3$. Jos sama koe toistetaan 5 kertaa, niin mahdollisia kokeiden tuloksien vaihtoehtoja on $2^5=32$.  Erilaisia toistokokeen lopputuloksia on kuusi: 0 onnistumista, 1 onnistuminen,... , 5 onnistumista. Katso alla oleva taulukko:
 				</p>
 				<figure>				
 					<img src="../kuvat/noppa_toistokoe.png" style="max-width: 100%; width: auto; height: auto;"/>
 					<figcaption>Toistokeen kaikki mahdolliset lopputulokset. Numero 1 tarkoittaa kokeen onnistumista ja numero 0 epäonnistumista.</figcaption>
 				</figure>
 				<p>
-					Huomataan aluksi, että jokaisessa lopputuloksessa olevien sarakkeiden lukumäärä Taulukossa~\ref{tab:toistokoe1} saadaan binomikertoimella. Merkitään, että numero 1 tarkoittaa kokeen onnistumista ja numero 0 epäonnistumista. Olkoon $A=\{1, 2, \ldots, 5\}$. Valitaan joukosta $A$ $k$ kappaletta alkioita, $k\in[0,5]$. Ajatellaan, että valitut $k$ alkiota kertovat, mihin jonon paikkoihin luku $1$ asetetaan. Loppuihin $5-k$ paikkaan asetetaan luku 0. Tällöin jokainen joukon $A$ $k$-alkioinen osajoukko vastaa yhtä jonoa, jossa on täsmälleen $k$ kappaletta lukuja $1$, ja toisinpäin. Näin ollen jonoja on yhtä paljon kuin $k$-alkioisia osajoukkoja eli $\displaystyle \binom{5}{k}$.
+					Huomataan aluksi, että jokaisessa lopputuloksessa olevien sarakkeiden lukumäärä taulukossa saadaan binomikertoimella. Merkitään, että numero 1 tarkoittaa kokeen onnistumista ja numero 0 epäonnistumista. Olkoon $A=\{1, 2, \ldots, 5\}$. Valitaan joukosta $A$ $k$ kappaletta alkioita, $k\in[0,5]$. Ajatellaan, että valitut $k$ alkiota kertovat, mihin jonon paikkoihin luku $1$ asetetaan. Loppuihin $5-k$ paikkaan asetetaan luku 0. Tällöin jokainen joukon $A$ $k$-alkioinen osajoukko vastaa yhtä jonoa, jossa on täsmälleen $k$ kappaletta lukuja $1$, ja toisinpäin. Näin ollen jonoja on yhtä paljon kuin $k$-alkioisia osajoukkoja eli $\displaystyle \binom{5}{k}$.
 				</p>
 				<table style="margin-left: auto; margin-right: auto;">
 											
@@ -316,7 +407,7 @@ Voimme seuraavaksi muotoilla yleisen lausekkeen toistokokeen onnistumistodennäk
 				</div>
 				<div class="teoria">
 					<p>
-						Varmista ennen kuin käytät Lausetta~\ref{binomi_tn}, että toistettavat kokeet ovat riippumattomia ja selvitä muuttujien $n$ (toistojen lukumäärä), $k$ (onnistumisten lukumäärä) ja $p$ (yhden kokeen onnistumistodennäköisyys) arvot.
+						Varmista ennen kuin käytät yllä olevaa teoreemaa, että toistettavat kokeet ovat riippumattomia ja selvitä muuttujien $n$ (toistojen lukumäärä), $k$ (onnistumisten lukumäärä) ja $p$ (yhden kokeen onnistumistodennäköisyys) arvot.
 					</p>
 				</div>
 				<div class="tehtavat">
@@ -341,7 +432,7 @@ Voimme seuraavaksi muotoilla yleisen lausekkeen toistokokeen onnistumistodennäk
                            <p>
 							Kyseessä on toistokoe, sillä aikaisempi nopan heitto ei vaikuta seuraavan tulokseen. Toistojen lukumäärä $n$ on 7 ja haluamme selvittää, milloin näistä $k=2$ onnistuu. 
 							
-							Aiemman tehtävän xxxx perusteella onnistumistodennäköisyys $p$ on $\frac13$. Teoreeman xxxxx avulla saamme
+							Aiemman tehtävän xxxx perusteella onnistumistodennäköisyys $p$ on $\frac13$. Teoreeman 5 avulla saamme
 							$$
 							\displaystyle\binom{7}{2} \left( \frac13 \right)^2 \left( 1-\frac13 \right)^{7-2} = 21 \cdot \left( \frac13 \right)^2 \cdot \left( \frac23 \right)^5 \approx 24{,}0\ \%.
 							$$
@@ -379,8 +470,8 @@ Voimme seuraavaksi muotoilla yleisen lausekkeen toistokokeen onnistumistodennäk
 						Yleisin toistokokeen todennäköisyyksiin liittyvä laskuvirhe on binomikertoimen unohtaminen.
 					</p>
 				</div>
-            </div>
-			</div>
+            
+			
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#binomijaukauma">
                     Sulje kappale
@@ -476,12 +567,12 @@ Voimme seuraavaksi muotoilla yleisen lausekkeen toistokokeen onnistumistodennäk
                            <p>
 							Odotusarvon määritelmän nojalla odotusarvo on
 							$$
-		\begin{align*}
+
     \sum_{j=1}^{6} x_j \cdot p_j & =  x_1 \cdot p_1  +  x_2 \cdot p_2  + \cdots  +  x_{6} \cdot p_{6}\\
     & =  0 \cdot 0{,}168  +  1 \cdot 0{,}360  +  2 \cdot 0{,}309  +  3 \cdot 0{,}132  +  4 \cdot 0{,}028 + 5 \cdot 0{,}00002\\
     & \approx  1{,}49.
     % 0*0.168+1*.360+2*.309+3*.132+4*.028+5*.00002
-  \end{align*}
+
 							$$
 							</p>
                         </div>

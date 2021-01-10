@@ -255,11 +255,11 @@ topnav: maa8-lops2019
                     Huomaa, että erillisyys riippuu vain joukoista $A$ ja $B$, ei lainkaan niiden todennäköisyyksistä. 
 				</p>
 				<p>
-					Seuraavat klassisen todennäköisyyden \emph{laskusäännöt} ja muut <em>perusominaisuudet</em> voidaan johtaa määritelmän perusteella tarkastelemalla joukkojen alkioiden lukumäärien osamääriä.
+					Seuraavat klassisen todennäköisyyden <em>laskusäännöt</em> ja muut <em>perusominaisuudet</em> voidaan johtaa määritelmän perusteella tarkastelemalla joukkojen alkioiden lukumäärien osamääriä.
                 </p>
 			</div>
 			
-            <div class="theorem" id="teoreema1">
+            <div class="theorem" id="Laskusääntöjä ja perusominaisuuksia">
                     <h3>TEOREEMA</h3>
                     <p>
                         Olkoot $A$ ja $B$ tapahtumia.
@@ -324,9 +324,9 @@ topnav: maa8-lops2019
                              Heitetään noppaa. Merkitään $A =\{5, 6\}$ ja $B=\{2,4,6\}$ eli $B$ vastaa tapahtumaa "tulos on parillinen". Laske  
 						</p>
 						<ol class="a">
-                            <li>P(B)</li>
-                            <li>P(A\cap B)</li>
-							<li>P(A\cup B)</li>
+                            <li>$P(B)$</li>
+                            <li>$P(A\cap B)$</li>
+							<li>$P(A\cup B)$</li>
                         </ol>
                         
                         <h2>
@@ -336,7 +336,7 @@ topnav: maa8-lops2019
                         </h2>
                         <div id="noppa3_v" class="collapse">
 							<ol class="a">
-                            <li>P(B)=\frac{n(B)}{n(E)}=\frac{3}{6}=\frac{1}{2}.</li>
+                            <li>$P(B)=\frac{n(B)}{n(E)}=\frac{3}{6}=\frac{1}{2}$.</li>
                             <li>$A\cap B=\{6\}$ ja näin ollen $P(A\cap B)=\frac{n(A\cap B)}{n(E)}=\frac{1}{6}$.                        
                             </li>
 							<li>Yhteenlaskukaavan (e) perusteella
@@ -752,7 +752,7 @@ $$
                 </p>
 			</div>
 
-                <div class="theorem" id="teoreema4">
+                <div class="theorem" id="Joukon permutaatiot ja k-kombinaatiot">
                     <h3>TEOREEMA</h3>
                     <p>
                         Olkoon $A$ joukko, jossa on $n$ alkiota.
@@ -770,7 +770,7 @@ $$
 							Vastaavasti kuin permutaatioiden lukumäärä voidaan päätellä, että $n$ alkiosta voidaan valita $k$ alkiota jonoon $n\cdot(n-1)\cdots(n-k+1)$ tavalla. Tässä samojen alkioiden eri järjestykset ovat eri jonoja, joten $k$-kombinaatioiden lukumäärä saadaan tästä jakamalla luvulla $k!$, joka on eri tapojen lukumäärä järjestää $k$ alkiota jonoon. Saadaan siis, että $n$-alkioisen joukon $k$-kombinaatioiden lukumäärä on
 $$
 \frac{n\cdot(n-1)\cdots(n-k+1)}{k!}=\frac{n\cdot(n-1)\cdots(n-k+1)\cdot(n-k)!}{k!(n-k)!}=\frac{n!}{k!(n-k)!}
-=\binom{n}{k}.\qedhere
+=\binom{n}{k}.
 $$
 						</li>
 					</ol>      
@@ -779,7 +779,7 @@ $$
 
             <div class="teoria">	
 			    <p>
-                    Lukua $n!$ kutsutaan luvun $n$ kertomaksi ja se luetaan ''$n$:n kertoma''. Lukua $\displaystyle\binom{n}{k}$ kutsutaan \emph{binomikertoimeksi} ja se luetaan ''$n$ yli $k$'' tai ''$n$ alle $k$''.  Binomikerrointa voidaan myös merkitä $\text{nCr}(n, k)$. Useimmat laskimet ja laskinohjelmistot käyttävät tällaista merkintää. Esimerkiksi 
+                    Lukua $n!$ kutsutaan luvun $n$ kertomaksi ja se luetaan "$n$:n kertoma". Lukua $\displaystyle\binom{n}{k}$ kutsutaan <em>binomikertoimeksi</em> ja se luetaan "$n$ yli $k$" tai "$n$ alle $k$".  Binomikerrointa voidaan myös merkitä $\text{nCr}(n, k)$. Useimmat laskimet ja laskinohjelmistot käyttävät tällaista merkintää. Esimerkiksi 
 $$
 \binom{9}{4}=\text{nCr}(9, 4) =126.
 $$
@@ -1001,7 +1001,7 @@ $$
                             Nikolai ostaa onnenpyöräpelin, jossa kaikki sektorit ovat yhtä suuria, kuten alla olevassa kuvassa. Pyöräytettäessä onnenpyörä pysähtyy satunnaiseen kohtaan. Millä todennäköisyydellä onnenpyörä pysähtyy mustaan tai valkoiseen sektoriin?
 						</p>
 						<figure>				
-					<img src="../kuvat/onnenpyora.png" style="max-width: 100%; width: auto; height: auto;"/>
+					<img src="../kuvat/onnenpyora.jpg" style="max-width: 100%; width: auto; height: auto;"/>
 					<figcaption>Ikean <a href="https://www.ikea.com/fi/fi/p/lustigt-onnenpyoeraepeli-30387038/">onnenpyöräpeli</a> (luettu 23.10.2020).</figcaption>
 				</figure>
                         <h2>
