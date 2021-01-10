@@ -6,8 +6,8 @@ main-class: has-atop
 topnav: maa8-lops2019
 ---
 
-<input type="hidden" id="chapterNumber" name="theoremStart" value="2"/>
-<input type="hidden" id="theoremStart" value="2"/>
+<input type="hidden" id="chapterNumber" value="2"/>
+<input type="hidden" id="theoremStart" value="1"/>
 
 {% include bottomnav.html %}
 
@@ -20,12 +20,12 @@ topnav: maa8-lops2019
     <section class="panel">
         <header>
             <h1>
-                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luvun1-tavoitteet">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luvun2-tavoitteet">
                     Luvun tavoitteet
                 </a>
             </h1>
         </header>
-        <div id="MAA8luvun1-tavoitteet" class="collapse">
+        <div id="MAA8luvun2-tavoitteet" class="collapse">
 
             <div class="objective">
                 <p> 
@@ -44,7 +44,7 @@ topnav: maa8-lops2019
                 </ul> 
             </div>
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luvun1-tavoitteet">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luvun2-tavoitteet">
                     Sulje kappale
                 </a>
             </div>
@@ -54,13 +54,13 @@ topnav: maa8-lops2019
     <section class="panel">
         <header class="otsikko">
             <h1>      
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
+                <a data-toggle="collapse" class="collapsed" data-target="#joukko-opin-merkintoja">
                     
 		Joukko-opin merkintöjä
                 </a>
             </h1>
         </header>
-        <div id="juuri1" class="collapse">
+        <div id="joukko-opin-merkintoja" class="collapse">
             
             <div class="teoria">
                 <p>
@@ -104,7 +104,7 @@ topnav: maa8-lops2019
             </div>
 
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
+                <a data-toggle="collapse" class="collapsed" data-target="#joukko-opin-merkintoja">
                     Sulje kappale
                 </a>
             </div>
@@ -114,12 +114,12 @@ topnav: maa8-lops2019
 	   <section class="panel">
         <header class="otsikko">
             <h1>      
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
+                <a data-toggle="collapse" class="collapsed" data-target="#klassinen-todennakoisyys">
                     Klassinen todennäköisyys
                 </a>
             </h1>
         </header>
-        <div id="juuri1" class="collapse">
+        <div id="klassinen-todennakoisyys" class="collapse">
             
             <div class="teoria">
                 <p>
@@ -148,23 +148,23 @@ topnav: maa8-lops2019
                 <div class="tehtava" id="uuid">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
+                            <a data-toggle="collapse" class="collapsed" data-target="#noppa1">
                                 Yhden nopan heitto
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA8t101" class="collapse">
+                    <div id="noppa1" class="collapse">
                         <p>
                             Tarkastellaan yhden nopan heittoa, jolloin perusjoukkona on nopanheiton mahdolliset tulokset $E=\{1,2,3,4,5,6\}$.
 							Laske todennäköisyys sille, että tuloksena on viitonen tai kuutonen.
 						</p>
                         
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#noppa1_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t101_v" class="collapse">
+                        <div id="noppa1_v" class="collapse">
 							<p>
 								Lasketaan todennäköisyys sille, että tuloksena on viitonen tai kuutonen.
 								Tätä varten merkitään $A=\{5,6\}$, jonka todennäköisyys on
@@ -175,8 +175,9 @@ topnav: maa8-lops2019
                         </div>
                     </div>
                 </div>
+			</div>	
 				
-				<div class="teoria">
+			<div class="teoria">
 					<p>
 						Tapahtumien todennäköisyydet on tapana ilmoittaa murtolukuina (tarkkoina arvoina), desimaalilukuina esim. kahden merkitsevän numeron tarkkuudella tai prosentteina. Edellisen esimerkin vastauksen voi siis esittää $\frac{1}{3}$, $0{,}33$ tai $33\ \%$.
 					</p>
@@ -185,12 +186,12 @@ topnav: maa8-lops2019
 				<div class="tehtava" id="uuid">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
+                            <a data-toggle="collapse" class="collapsed" data-target="#noppa2">
                                 Kahden nopan heitto
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA8t101" class="collapse">
+                    <div id="noppa2" class="collapse">
                         <p>
                             Heitetään kahta noppaa ja tutkitaan noppien silmälukujen summaa.
 						</p>
@@ -202,11 +203,11 @@ topnav: maa8-lops2019
                         </ol>
                         
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#noppa2_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t101_v" class="collapse">
+                        <div id="noppa2_v" class="collapse">
 							<ol class="a">
                             <li> </li>
                             <li> 
@@ -292,12 +293,363 @@ topnav: maa8-lops2019
 							</ol>
      
                     </div>
-                </div>
-
             </div>
 
+            <div class="tehtavat">
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#todista">
+                                Todista laskusäännöt
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="todista" class="collapse">
+                        <p>
+                            Todista edellisen teoreeman kohdat (b) ja (d)--(e).
+						</p>
+						
+                    </div>
+                </div>
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#noppa3">
+                                Yhden nopan heitto
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="noppa3" class="collapse">
+                        <p>
+                             Heitetään noppaa. Merkitään $A =\{5, 6\}$ ja $B=\{2,4,6\}$ eli $B$ vastaa tapahtumaa "tulos on parillinen". Laske  
+						</p>
+						<ol class="a">
+                            <li>P(B)</li>
+                            <li>P(A\cap B)</li>
+							<li>P(A\cup B)</li>
+                        </ol>
+                        
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#noppa3_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="noppa3_v" class="collapse">
+							<ol class="a">
+                            <li>P(B)=\frac{n(B)}{n(E)}=\frac{3}{6}=\frac{1}{2}.</li>
+                            <li>$A\cap B=\{6\}$ ja näin ollen $P(A\cap B)=\frac{n(A\cap B)}{n(E)}=\frac{1}{6}$.                        
+                            </li>
+							<li>Yhteenlaskukaavan (e) perusteella
+$$
+P(A\cup B)=P(A)+P(B)-P(A\cap B)=\frac{1}{3}+\frac{1}{2}-\frac{1}{6}=\frac{4}{6}.
+$$
+Tämä on helppo laskea suoraan määritelmästäkin, kun huomaa, että $A\cup B=\{2,4,5,6\}$</li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="teoria">
+                <p>
+                    Nostetaan korttipakasta kaksi korttia peräjälkeen ilman takaisinpanoa. Huomaamme että jälkimmäisellä kerralla pakassa on vain 51 korttia, joten  ensin nostettu kortti vaikuttaa tilanteeseen. 
+                </p>
+			</div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: TODENNÄKÖISYYS EHDOLLA</h3>
+                    <p>
+                        Olkoon $B$ tapahtuma, jolle $P(B)>0$. Tapahtuman $A$ <em>todennäköisyys ehdolla</em> $B$ on
+						$$
+						P(A\mid B)=\frac{P(A\cap B)}{P(B)}.
+						$$
+                    </p>
+            </div>
+			
+			<div class="teoria">
+                <p>
+                    Tapahtuman $A$ todennäköisyys ehdolla $B$ merkitsee sitä, että ehdosta $B$ tehdään satunnaiskokeen uusi perusjoukko ja lasketaan tapahtuman $A$ todennäköisyys tällöin. Ehdollisen todennäköisyyden idea on kuvailla tapahtuman $A$ sattumista olettaen, että tiedämme ehdon $B$ tapahtuneen. 
+                </p>
+			</div>
+			
+			<div class="tehtavat">
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#takaisinpanoa">
+                                Korttien nosto ilman takaisinpanoa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="takaisinpanoa" class="collapse">
+                        <p>
+                            Nostetaan korttipakasta kaksi korttia peräjälkeen ilman takaisinpanoa. Millä todennäköisyydellä jälkimmäinen on kuningas kun tiedämme ensimmäisen olleen kuningas?
+						</p>
+						<h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#takaisinpanoa_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="takaisinpanoa_v" class="collapse">
+							<p>
+								Perusjoukko koostuu järjestetyista pareista, joista ensimmäinen jäsen  vastaa ensimmäistä nostoa ja toinen jäsen toista nostoa. Pareja on  $52 \cdot 51 = 2652$ kappaletta. Merkitään että $A$  on niiden parien joukko, joissa ensimmäinen jäsen on "kuningas" ja $B$ on niiden parien joukko, joissa toinen jäsen on "kuningas".  Näin ollen $A$ vastaa tapahtumaa ''ensimmäinen kortti on kuningas" ja $B$ vastaa tapahtumaa "toinen kortti on kuningas". Saamme
+$$
+P(A) = \frac{4 \cdot 51}{52 \cdot 51} =\frac1{13} \quad\text{ja} \quad  P(A \cap B) = \frac{4 \cdot 3}{52 \cdot 51}= \frac{1}{13 \cdot 17},
+$$
+								ja näiden avulla
+$$
+P(B\mid A) = \frac{P(A \cap B)}{P(A)}= \frac{\frac{1}{13 \cdot 17}}{\frac1{13}}=\frac1{17}.
+$$
+								Samaan tulokseen olisimme päässeet myös seuraavalla päättelyllä: Koska ensimmäinen nostettu kortti oli kuningas, niin pakkaan jää 51 korttia, joista 3 on kuninkaita. Todennäköisyys on siis
+$$
+P(B\mid A)= \frac{3}{51}= \frac1{17}.
+$$ 
+							</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="teoria">
+                <p>
+                    Ehdollisen todennäköisyyden määritelmästä seuraa suoraan <em>kertolaskukaava</em>: 
+                </p>
+			</div>
+			
+			<div class="theorem" id="teoreema2">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kun $A$ ja $B$ ovat tapahtumia ja $P(B)>0$, niin $P(A\cap B)=P(B)P(A\mid B)$.
+                    </p>
+            </div>
+			
+			<div class="tehtavat">
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#takaisinpanoa2">
+                                Pallojen nosto ilman takaisinpanoa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="takaisinpanoa2" class="collapse">
+                        <p>
+                            Pussissa on 40 palloa, jotka on numeroitu $1, \ldots, 40$. Nostetaan pussista kaksi palloa niin, että ensin nostettua palloa ei palautetta takaisin pussiin.  Mikä on tapahtuman "tuloksena on 13 ja 40" todennäköisyys?
+						</p>
+						<h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#takaisinpanoa2_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="takaisinpanoa2_v" class="collapse">
+							<p>
+								Ei ole väliä missä järjestyksessä pallot nostetaan. Tutkitaan ensin tapausta, jossa pallo 13 nousee ensin. Perusjoukko koostuu $40\cdot39=1560$ järjestetystä parista, joista ensimmäinen vastaa ensimmäistä nostoa ja toinen vastaa toista nostoa.
+							</p>
+							<p>
+								Olkoot $A$ niiden paria joukko joiden ensimmäinen jäsen on  13 ja  $B$ niiden parien joukko joiden toinen jäsen on  40.  Saamme
+$$
+P(A \cap B) = P(A) P(B\mid A) = \frac{1\cdot 39}{40 \cdot 39} \cdot \frac1{39} = \frac1{1560}.
+$$
+								Tähän samaan tulokseen olisimme päätyneet huomaamalla että tapahtumaa $A\cap B$ on joukko jossa on yksi alkio $(13, 40)$, ja tällöin todennäköisyys on yksi jaettuna perusjoukon alkioiden lukumäärällä.   
+							</p>
+							<p>
+								Lopputuloksen kannalta ei  ole merkitystä, kumpi luvuista saadaan ensin, joten huomioidaan molemmat mahdollisuudet "13 ja 40" sekä "40 ja 13". Jälkimmäinen tapaus on samanlainen ensin mainitun kanssa. Saamme kysytyksi todennäköisyydeksi $\frac1{1560} + \frac1{1560} = \frac1{780}$.
+							</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="teoria">
+                <p>
+                    Tutkitaan seuraavaksi tapahtumia, jotka eivät vaikuta toisiinsa. 
+                </p>
+			</div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: RIIPPUMATTOMUUS</h3>
+                    <p>
+                        Tapahtumat $A$ ja $B$ ovat riippumattomat, jos $P(A\cap B)=P(A)P(B)$.
+                    </p>
+            </div>
+			
+			<div class="tehtavat">
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#noppia222">
+                                Nopan heitto kaksi kertaa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="noppia222" class="collapse">
+                        <p>
+                            Heitetään noppaa kaksi kertaa. Olkoon $A$ tapahtuma "saadaan ensimmäisellä heitolla 6" ja $B$ tapahtuma "saadaan toisella heitolla 6". Ovatko tapahtumat riippumattomia?
+						</p>
+						<h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#noppia222_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="noppia222_v" class="collapse">
+							<p>
+								Nyt $A$ on sellaisten järjestettyjen parien joukko, joissa ensimmäinen alkio on 6. Näitä on $1 \cdot 6 =6$ kappaletta. Joukko $B$ on sellaisten järjestettyjen parien joukko, joissa toinen alkio on 6. Näitä on $6 \cdot 1 =6$ kappaletta. Joukko $A\cap B$ koostuu yhdestä alkiosta $(6, 6)$. Perusjoukossa on $6 \cdot 6= 36$ alkiota. Tällöin
+$$
+P(A)P(B) = \frac{6}{36} \cdot \frac{6}{36} = \frac1{36} \quad\text{ja}\quad P(A\cap B) = \frac1{36}. 
+$$ 
+								Tästä saamme että tapahtumat $A$ ja $B$ ovat riippumattomia.
+							</p>
+                        </div>
+                    </div>
+                </div>
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kortteja222">
+                                Korttipakasta nosto
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kortteja222" class="collapse">
+                        <p>
+                            Nostetaan korttipakasta kortteja. Olkoot $A$ tapahtuma "ensimmäinen kortti on ässä" ja $B$ tapahtuma "toinen kortti on kuningatar". Vaikuttaako tapahtumien $A$ ja $B$ riippumattomuuteen se, että palautetaanko nostettu kortti pakkaan vai ei?
+						</p>
+						<h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kortteja222_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kortteja222_v" class="collapse">
+							<p>
+								xxxxxxxxx
+							</p>
+                        </div>
+                    </div>
+                </div>
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#noppia555">
+                                Nopan heitto viisi kertaa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="noppia555" class="collapse">
+                        <p>
+                            Heitetään noppaa viisi kertaa peräkkäin. Kumpi tuloksista $1, 1, 1, 1, 1$ vai $4, 3, 1, 5, 1$ on todennäköisempi?
+						</p>
+						<h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#noppia555_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="noppia555_v" class="collapse">
+							<p>
+								xxxxxxxxx
+							</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="teoria">
+                <p>
+                    Ehdollinen todennäköisyys ja tapahtumien riippumattomuus liittyvät toisiinsa läheisesti. Jos tapahtumat $A$ ja $B$ ovat riippumattomia, niin tapahtuman $A$ ehdollistaminen tapahtumalla $B$ ei vaikuta $A$:n todennäköisyyteen. 
+                </p>
+			</div>
+			
+			<div class="theorem" id="teoreema3">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Olkoot $A$ ja $B$ tapahtumia ja $P(B)>0$. Tällöin $A$ ja $B$ ovat riippumattomia täsmälleen silloin, kun $P(A\mid B)=P(A)$.
+                    </p>
+					<div class="proof">
+                        <p>
+                            Jos oletetaan, että $A$ ja $B$ ovat riippumattomia, niin
+$$
+P(A\mid B)=\frac{P(A\cap B)}{P(B)}=\frac{P(A)P(B)}{P(A)}=P(A).
+$$
+							Jos oletetaan, että $P(A\mid B)=P(A)$, niin ehdollisen todennäköisyyden määritelmän perusteella
+$$
+P(A\cap B)=P(B)P(A\mid B)=P(A)P(B)
+$$ 
+							ja näin ollen $A$ ja $B$ ovat riippumattomia.
+                        </p>      
+                    </div>
+            </div>
+			
+			<div class="teoria">
+                <p>
+                    Tapahtumien $A$ ja $B$ riippumattomuus merkitsee sitä, että tapahtuma $A$ ei vaikuta tapahtuman $B$ todennäköisyyteen ja tapahtuma $B$ ei vaikuta tapahtuman $A$ todennäköisyyteen. Tapahtumien $A$ ja $B$ riippumattomuuudelle on olennaista niiden todennäköisyydet, sen sijaan tapahtumien erillisyys riippuu vain joukoista $A$ ja $B$, ei lainkaan niiden todennäköisyyksistä. Jos tapahtumat $A$ ja $B$ ovat erilliset, niin $P(A\cap B)=P(\emptyset)=0$, jos taas tapahtumat $A$ ja $B$ ovat riippumattomat, niin $P(A\cap B)=P(A)P(B)$.  Näin ollen tapahtumien $A$ ja $B$ erillisyys ja riippumattomuus voivat toteutua yhtä aikaa vain, jos $P(A)=0$ tai $P(B)=0$. Erityisen tarkka on oltava kaavojen $P(A\cup B)=P(A)+P(B)$ ja $P(A\cap B)=P(A)P(B)$ käytössä. Ensimmäinen on voimassa, kun $A$ ja $B$ ovat erilliset, ja jälkimmäinen on voimassa, kun $A$ ja $B$ ovat riippumattomat.
+                </p>
+			</div>
+			
+			<div class="tehtavat">
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#riippumattomuus1">
+                                Riippumattomuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="riippumattomuus1" class="collapse">
+                        <p>
+                            Pussissa on 40 palloa, jotka on numeroitu $1, \ldots, 40$. Nostetaan pussista kaksi palloa niin, että ensin nostettu pallo palautetaan takaisin pussiin ja vasta sitten nostetaan toinen pallo.  Mikä on tapahtuman "tuloksena on 13 ja 40" todennäköisyys?
+						</p>
+						<h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#riippumattomuus1_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="riippumattomuus1_v" class="collapse">
+							<p>
+								Ei ole väliä missä järjestyksessä pallot nostetaan. Tutkitaan ensin tapausta, jossa pallo 13 nousee ensin. Koska nostettu pallo palautetaan pussiin, niin tapahtumat $A=$ "ensimmäisen noston tulos on 13" ja  $B=$ "toisen noston tulos on 40" ovat riippumattomia.  Saamme
+$$
+P(A \cap B) = P(A) P(B) = \frac1{40} \cdot \frac1{40} = \frac1{1600}.
+$$
+								Lopputuloksen kannalta ei  ole merkitystä, kumpi luvuista saadaan ensin, joten huomioidaan molemmat mahdollisuudet "13 ja 40" sekä "40 ja 13". Jälkimmäinen tapaus on samanlainen ensin mainitun kanssa. Saamme kysytyksi todennäköisyydeksi $\frac1{1600} + \frac1{1600} = \frac1{800}$.
+							</p>
+                        </div>
+                    </div>
+                </div>
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#riippumattomuus2">
+                                Yhden nopan heitto
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="riippumattomuus2" class="collapse">
+                        <p>
+                            Heitetään noppaa kerran. Merkitään $A =\{5, 6\}$ ja $B=\{2,4,6\}$. Ovatko tapahtumat erillisiä tai riippumattomia?
+						</p>
+						<h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#riippumattomuus2_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="riippumattomuus2_v" class="collapse">
+							<p>
+								Koska $A\cap B=\{6\}\neq\emptyset$, niin tapahtumat $A$ ja $B$ eivät ole erillisiä. Sen sijaan ne ovat riippumattomat, sillä
+$$
+P(A\cap B)=\frac{1}{6}=\frac{1}{3}\cdot\frac{1}{2}=P(A)P(B).
+$$
+							</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="teoria">
+                <p>
+                    Lisätietoa: Jos tapahtumat $A$ ja $B$ eivät ole riippumattomia, niin niillä on jotakin <em>stokastista</em> vuorovaikutusta  toisiinsa. On kuitenkin varottava vetämästä liian suuria johtopäätöksiä tästä vuorovaikutuksesta, jolla ei yleensä ole <em>kausaalista</em> luonnetta (syy--seuraussuhdetta).
+                </p>
+			</div>
+
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
+                <a data-toggle="collapse" class="collapsed" data-target="#klassinen-todennakoisyys">
                     Sulje kappale
                 </a>
             </div>
@@ -307,94 +659,222 @@ topnav: maa8-lops2019
 	   <section class="panel">
         <header class="otsikko">
             <h1>      
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
-                   Tilastollinen todennäköisyys
+                <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka">
+                   Kombinatoriikka
                 </a>
             </h1>
         </header>
-        <div id="juuri1" class="collapse">
+        <div id="kombinatoriikka" class="collapse">
             
             <div class="teoria">
                 <p>
-                    Leipätekstiä
+                    Erilaiset tavat tehdä valintoja joukkojen alkioista liittyvät keskeisesti todennäköisyyslaskennan klassiseen malliin. Voimme esimerkiksi selvittää, että kuinka monella eri tavalla Maija, Matti ja Ella voivat koulun ruokalassa asettua jonoon  tai että kuinka monella eri tavalla loton seitsemän numeroa voidaan arpoa. Tällaisten kysymysten ratkomisessa on kyse <em>kombinatoriikasta</em>, joka on eräs matematiikan osa-alue.
+                </p>
+            </div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: RIIPPUMATTOMUUS</h3>
+                    <p>
+                        Äärellisen joukon <em>permutaatio</em> on jono, jossa joukon jokainen alkio esiintyy täsmälleen kerran.
+                    </p>
+            </div>
+			
+			<div class="teoria">
+                <p>
+                    Huomaa, että jonossa alkioilla on järjestys, mutta joukossa alkioilla ei ole järjestystä.
                 </p>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava first-exercise" id="uuid">
+                <div class="tehtava" id="uuid">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
-                                Tehtävä
+                            <a data-toggle="collapse" class="collapsed" data-target="#permutaatiot">
+                                Permutaatiot
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA8t101" class="collapse">
+                    <div id="permutaatiot" class="collapse">
                         <p>
-                            Tekstiä
-							</p>
-                        <ol class="a">
-                            <li> $\sqrt{81}$ </li>
-                            <li> 
-                                $\sqrt[3]{125}$ 
-                            </li>
-                            <li> 
-                                $\sqrt[4]{81}$
-                            </li>
-                            <li>
-                                $\sqrt[5]{-32}$
-                            </li>
-                        </ol>
+                            Kuinka monta permutaatiota on joukolla $A=\{a, b, c\}$?
+						</p>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#permutaatiot_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t101_v" class="collapse">
-                           <ol class="a">
-                                <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$ </li>
-                                <li> 
-                                    $\sqrt[3]{125} = 5$, sillä $5^3 = 125$ 
-                                </li>
-                                <li> 
-                                    $\sqrt[4]{81} = 3$, sillä $3 \geq 0$ ja $3^4 = 81$
-                                </li>
-                                <li>
-                                    $\sqrt[5]{-32} = -2$, sillä $(-2)^5 = -32$
-                                </li>
-                            </ol>
+                        <div id="permutaatiot_v" class="collapse">
+                           <p>
+								Joukon $A=\{a, b, c\}$ permutaatioita ovat jonot $(a, b, c)$, $(a, c, b)$, $(b, a, c)$, $(b, c, a)$, $(c, a, b)$ ja $(c, b, a)$. Havaitaan, että kolmialkioisella joukolla $A$ on 6 erilaista permutaatiota.
+						   </p>
+                        </div>
+                    </div>
+                </div>
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#permutaatiot2">
+                                Permutaatiot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="permutaatiot2" class="collapse">
+                        <p>
+                            Edellisessä tehtävässä havaittiin, että kolmialkioisella joukolla on 6 erilaista permutaatiota. Jos joukossa on $n$ alkiota, niin kuinka monta erilaista permutaatiota sillä on? Voit ensin tarkastella esimerkiksi nelialkioisen joukon permutaatioita ja yrittää keksiä yleisen säännön, jolla permutaatioiden lukumäärän voi laskea. 
+						</p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#permutaatiot2_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="permutaatiot2_v" class="collapse">
+                           <p>
+								xxxxxxxxx
+						   </p>
                         </div>
                     </div>
                 </div>
             </div>
+			
+			<div class="definition">
+                    <h3>MÄÄRITELMÄ: $k$-KOMBINAATIO</h3>
+                    <p>
+                        Olkoon $A$ joukko, jossa on $n$ alkiota ja $1\leqslant k\leqslant n$. Joukon $A$ $k$<em>-kombinaatio</em> on joukon $A$ osajoukko, joka muodostuu joukon $A$ $k$:sta alkiosta.
+                    </p>
+            </div>
 
-            <div class="teoria">
-                <p>
-                    Leipätekstiä.
+            <div class="teoria">	
+			    <p>
+                    Esimerkiksi joukon $A=\{a, b, c\}$ 2-kombinaatiot ovat joukot $\{a, b\}$, $\{a, c\}$ ja $\{b, c\}$. Havaitaan, että kolmialkioisella joukolla on 3 erilaista 2-kombinaatiota.
                 </p>
+                <p>
+                    Huomaa, että permutaatiot ovat jonoja ja kombinaatiot ovat joukkoja.
+                </p>
+			</div>
 
-                <div class="theorem" id="teoreema1">
+                <div class="theorem" id="teoreema4">
                     <h3>TEOREEMA</h3>
                     <p>
-                        Neliöjuurifunktion
-                        $$
-                        f(x) = \sqrt{x}
-                        $$  
-                        määrittelyjoukko on $[0, \infty\pe$. Neliöjuurifunktion arvo on aina epänegatiivinen. 
-                        <br>
-                        <img src="/kurssit/maa8/kuvat/MAA8kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        Olkoon $A$ joukko, jossa on $n$ alkiota.
                     </p>
+					<ol class="a">
+						<li>Joukon $A$ permutaatioiden lukumäärä on $n!=1\cdot 2\cdot 3\cdots n$.</li>
+						<li>Joukon $A$ $k$-kombinaatioiden lukumäärä on $\displaystyle\binom{n}{k}=\frac{n!}{k!(n-k)!}$.</li>
+					</ol>
                     <div class="proof">
-                        <p>
-                            Todistus.
-                        </p>      
+                        <ol class="a">
+						<li>
+							Aloitetaan $n$ alkion asettaminen jonoon, johon ensimmäiseksi jäseneksi on $n$ vaihtoehtoa. Tämän jälkeen toiseksi jäseneksi jonossa on $n-1$ vaihtoehtoa, ja näin jatkamalla seuraavaksi jonon jäseneksi on aina yksi vaihtoehto vähemmän kuin edelliseksi jäseneksi oli. Jonon viimeiseksi jäseneksi on jäljellä enää yksi vaihtoehto. Näin ollen kertomalla vaihtoehtojen lukumäärät keskenään nähdään, että $n$-alkioisella joukolla on $n\cdot(n-1)\cdots 1=n!$ permutaatiota.
+						</li>
+						<li>
+							Vastaavasti kuin permutaatioiden lukumäärä voidaan päätellä, että $n$ alkiosta voidaan valita $k$ alkiota jonoon $n\cdot(n-1)\cdots(n-k+1)$ tavalla. Tässä samojen alkioiden eri järjestykset ovat eri jonoja, joten $k$-kombinaatioiden lukumäärä saadaan tästä jakamalla luvulla $k!$, joka on eri tapojen lukumäärä järjestää $k$ alkiota jonoon. Saadaan siis, että $n$-alkioisen joukon $k$-kombinaatioiden lukumäärä on
+$$
+\frac{n\cdot(n-1)\cdots(n-k+1)}{k!}=\frac{n\cdot(n-1)\cdots(n-k+1)\cdot(n-k)!}{k!(n-k)!}=\frac{n!}{k!(n-k)!}
+=\binom{n}{k}.\qedhere
+$$
+						</li>
+					</ol>      
                     </div>
                 </div>
 
+            <div class="teoria">	
+			    <p>
+                    Lukua $n!$ kutsutaan luvun $n$ kertomaksi ja se luetaan ''$n$:n kertoma''. Lukua $\displaystyle\binom{n}{k}$ kutsutaan \emph{binomikertoimeksi} ja se luetaan ''$n$ yli $k$'' tai ''$n$ alle $k$''.  Binomikerrointa voidaan myös merkitä $\text{nCr}(n, k)$. Useimmat laskimet ja laskinohjelmistot käyttävät tällaista merkintää. Esimerkiksi 
+$$
+\binom{9}{4}=\text{nCr}(9, 4) =126.
+$$
+                </p>
+			</div>
+			
+			<div class="tehtavat">
+                <div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#permutaatiot3">
+                                Lotto
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="permutaatiot3" class="collapse">
+                        <p>
+                            Lotossa on 40 numeroa, joista arvotaan 7 numeroa. Monta erillaista lottoriviä on olemassa?
+						</p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#permutaatiot3_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="permutaatiot3_v" class="collapse">
+                           <p>
+								Erilaisia 7 numeron lottorivejä on
+$$
+\binom{40}{7}=\frac{40!}{7!33!}=\frac{93\,963\,542\,400}{5\,040}=18\,643\,560.
+$$
+						   </p>
+                        </div>
+                    </div>
+                </div>
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#permutaatiot4">
+                                Lotto
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="permutaatiot4" class="collapse">
+                        <p>
+                            Raili miettii lottoriviään seuraavaan arvontaan. Kuudessa edellisessä arvonnassa lottorivissä on ollut luku 9. Kannattaako Railin valita luku 9 omaan riviinsä?  
+						</p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#permutaatiot4_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="permutaatiot4_v" class="collapse">
+                           <p>
+								xxxxxxxxx
+						   </p>
+                        </div>
+                    </div>
+                </div>
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#permutaatiot5">
+                                Yhdistys
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="permutaatiot5" class="collapse">
+                        <p>
+                            Yhdistyksen kokouksessa on 60 osallistujaa. Kuinka monella tavalla heistä voidaan valita puheenjohtaja, varapuheenjohtaja ja sihteeri? Kuinka monella tavalla valitsematta jääneistä voidaan valita 2 toiminnantarkastajaa?  
+						</p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#permutaatiot5_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="permutaatiot5_v" class="collapse">
+                           <p>
+								xxxxxxxxx
+						   </p>
+                        </div>
+                    </div>
+                </div>
             </div>
+			
+			<div class="teoria">	
+			    <p>
+                    Joukon, jossa on $n$ alkiota, $k$-permutaatioiden lukumäärää voidaan merkitä $\text{nPr}(n, k)$. Useimmat laskimet ja laskinohjelmistot käyttävät tällaista merkintää, esimerkiksi 
+$$
+\text{nPr}(9, 4) =  9\cdot 8 \cdot 7 \cdot 6=3024.
+$$
+                </p>
+			</div>
 
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
+                <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka">
                     Sulje kappale
                 </a>
             </div>
@@ -404,438 +884,164 @@ topnav: maa8-lops2019
 	   <section class="panel">
         <header class="otsikko">
             <h1>      
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
-                  Moodi, mediaani ja keskiarvo 
+                <a data-toggle="collapse" class="collapsed" data-target="#laajennus">
+                  Klassisen todennäköisyyden laajennus 
                 </a>
             </h1>
         </header>
-        <div id="juuri1" class="collapse">
+        <div id="laajennus" class="collapse">
             
             <div class="teoria">
                 <p>
-                    Leipätekstiä
+                    Klassisessa todennäköisyydessä kaikki alkeistapahtumat ovat yhtä todennäköisiä. Tutustumme esimerkkitehtävin tapahtumiin, joissa alkeistatapahtumien todennäköisyydet ovat eri suuria, mutta tilanteiden analysoinnissa voi silti käyttää klassisesta todennäköisyydestä tuttuja menetelmiä.
                 </p>
             </div>
 
             <div class="tehtavat">
-                <div class="tehtava first-exercise" id="uuid">
+                <div class="tehtava" id="uuid">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
-                                Tehtävä
+                            <a data-toggle="collapse" class="collapsed" data-target="#erikoinen-noppa">
+                                Erikoinen noppa
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA8t101" class="collapse">
+                    <div id="erikoinen-noppa" class="collapse">
                         <p>
-                            Tekstiä
-							</p>
-                        <ol class="a">
-                            <li> $\sqrt{81}$ </li>
-                            <li> 
-                                $\sqrt[3]{125}$ 
-                            </li>
-                            <li> 
-                                $\sqrt[4]{81}$
-                            </li>
-                            <li>
-                                $\sqrt[5]{-32}$
-                            </li>
-                        </ol>
+                            Jussilla on noppa, jonka silmäluvut ovat 1, 1, 1, 2, 3, 4. Jussi heittää noppaa kaksi kertaa. Millä todennäköisyydellä tuloksena on luvut 1 ja 2? 
+						</p>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#erikoinen-noppa_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t101_v" class="collapse">
-                           <ol class="a">
-                                <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$ </li>
-                                <li> 
-                                    $\sqrt[3]{125} = 5$, sillä $5^3 = 125$ 
-                                </li>
-                                <li> 
-                                    $\sqrt[4]{81} = 3$, sillä $3 \geq 0$ ja $3^4 = 81$
-                                </li>
-                                <li>
-                                    $\sqrt[5]{-32} = -2$, sillä $(-2)^5 = -32$
-                                </li>
-                            </ol>
-                        </div>
+                        <div id="erikoinen-noppa_v" class="collapse">
+                           <p>
+								Lasketaan ensin todennäköisyys tapahtumalle "ensimmäisen heiton tulos on 1 ja toisen tulos on 2": 
+								$$\frac36 \cdot \frac16 = \frac3{36}$$
+								Vastaavasti tapahtuman "ensimmäisen heiton tulos on 2 ja toisen tulos on 1" todennäköisyys on 
+								$$\frac16 \cdot \frac36 = \frac3{36}$$.
+								Kysytty todennäköisyys on täten $\frac3{36} + \frac3{36} = \frac16$.
+							</p>
+						</div>
                     </div>
                 </div>
-            </div>
-
-            <div class="teoria">
-                <p>
-                    Leipätekstiä.
-                </p>
-
-                <div class="theorem" id="teoreema1">
-                    <h3>TEOREEMA</h3>
-                    <p>
-                        Neliöjuurifunktion
-                        $$
-                        f(x) = \sqrt{x}
-                        $$  
-                        määrittelyjoukko on $[0, \infty\pe$. Neliöjuurifunktion arvo on aina epänegatiivinen. 
-                        <br>
-                        <img src="/kurssit/maa8/kuvat/MAA8kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
-                    </p>
-                    <div class="proof">
-                        <p>
-                            Todistus.
-                        </p>      
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
-                    Sulje kappale
-                </a>
-            </div>
-        </div>
-    </section>
-	
-   
-
-	   <section class="panel">
-        <header class="otsikko">
-            <h1>      
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
-                   Keskihajonta
-                </a>
-            </h1>
-        </header>
-        <div id="juuri1" class="collapse">
-            
-            <div class="teoria">
-                <p>
-                    Leipätekstiä
-                </p>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava first-exercise" id="uuid">
+				<div class="tehtava" id="uuid">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
-                                Tehtävä
+                            <a data-toggle="collapse" class="collapsed" data-target="#erikoinen-noppa2">
+                                Erikoinen noppa
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA8t101" class="collapse">
+                    <div id="erikoinen-noppa2" class="collapse">
                         <p>
-                            Tekstiä
-							</p>
-                        <ol class="a">
-                            <li> $\sqrt{81}$ </li>
-                            <li> 
-                                $\sqrt[3]{125}$ 
-                            </li>
-                            <li> 
-                                $\sqrt[4]{81}$
-                            </li>
-                            <li>
-                                $\sqrt[5]{-32}$
-                            </li>
-                        </ol>
+                            Kuusisivuisen nopan kunkin sivun silmäluvuksi voidaan valita mikä tahansa luvuista $1,\ldots,6$. Miten silmäluvut pitää valita, jotta kahdella heitolla tapahtuman "tuloksena ovat 1 ja 2" todennäköisyys on $\frac49$?
+						</p>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#erikoinen-noppa2_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t101_v" class="collapse">
-                           <ol class="a">
-                                <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$ </li>
-                                <li> 
-                                    $\sqrt[3]{125} = 5$, sillä $5^3 = 125$ 
-                                </li>
-                                <li> 
-                                    $\sqrt[4]{81} = 3$, sillä $3 \geq 0$ ja $3^4 = 81$
-                                </li>
-                                <li>
-                                    $\sqrt[5]{-32} = -2$, sillä $(-2)^5 = -32$
-                                </li>
-                            </ol>
-                        </div>
+                        <div id="erikoinen-noppa2_v" class="collapse">
+                           <p>
+								1, 1, 1, 1, 2, 2 tai toisin päin.
+							</p>
+						</div>
                     </div>
                 </div>
+				
             </div>
 
             <div class="teoria">
                 <p>
-                    Leipätekstiä.
-                </p>
-
-                <div class="theorem" id="teoreema1">
-                    <h3>TEOREEMA</h3>
-                    <p>
-                        Neliöjuurifunktion
-                        $$
-                        f(x) = \sqrt{x}
-                        $$  
-                        määrittelyjoukko on $[0, \infty\pe$. Neliöjuurifunktion arvo on aina epänegatiivinen. 
-                        <br>
-                        <img src="/kurssit/maa8/kuvat/MAA8kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
-                    </p>
-                    <div class="proof">
-                        <p>
-                            Todistus.
-                        </p>      
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
-                    Sulje kappale
-                </a>
-            </div>
-        </div>
-    </section>
-	
-	   <section class="panel">
-        <header class="otsikko">
-            <h1>      
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
-                 Diagrammit
-                </a>
-            </h1>
-        </header>
-        <div id="juuri1" class="collapse">
-            
-            <div class="teoria">
-                <p>
-                    Leipätekstiä
+                    Joissain tilanteissa tapausten todennäköisyydet saadaan pinta-aloista. Tarkastellaan tavallista tikkataulua ja tilannetta, jossa tikka osuus satunnaisesti tauluun.  Tällöin kunkin numeron todennäköisyys on sitä vastaava pinta-ala jaettuna koko tikkataulun pinta-alalla.
                 </p>
             </div>
-
-            <div class="tehtavat">
-                <div class="tehtava first-exercise" id="uuid">
+			
+			<div class="tehtavat">
+                <div class="tehtava" id="uuid">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
-                                Tehtävä
+                            <a data-toggle="collapse" class="collapsed" data-target="#tikkataulu">
+                                Tikkataulu
                             </a>
                         </h1>
                     </header>
-                    <div id="MAA8t101" class="collapse">
+                    <div id="tikkataulu" class="collapse">
                         <p>
-                            Tekstiä
-							</p>
-                        <ol class="a">
-                            <li> $\sqrt{81}$ </li>
-                            <li> 
-                                $\sqrt[3]{125}$ 
-                            </li>
-                            <li> 
-                                $\sqrt[4]{81}$
-                            </li>
-                            <li>
-                                $\sqrt[5]{-32}$
-                            </li>
-                        </ol>
+                            Kuvassa on tavallinen tikkataulu, jonka halkaisija on 30 cm. Millä todennäköisyydellä 3 tikalla saadaan kaksi ykköstä ja yksi kahdeksikko?
+						</p>
+					<figure>				
+					<img src="../kuvat/tikkataulu.png" style="max-width: 100%; width: auto; height: auto;"/>
+					<figcaption>Tikkataulu, jonka halkaisija on 30 cm.</figcaption>
+				</figure>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#tikkataulu_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="MAA8t101_v" class="collapse">
-                           <ol class="a">
-                                <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$ </li>
-                                <li> 
-                                    $\sqrt[3]{125} = 5$, sillä $5^3 = 125$ 
-                                </li>
-                                <li> 
-                                    $\sqrt[4]{81} = 3$, sillä $3 \geq 0$ ja $3^4 = 81$
-                                </li>
-                                <li>
-                                    $\sqrt[5]{-32} = -2$, sillä $(-2)^5 = -32$
-                                </li>
-                            </ol>
-                        </div>
+                        <div id="tikkataulu_v" class="collapse">
+                           <p>
+								zzzz
+							</p>
+						</div>
                     </div>
                 </div>
-            </div>
-
-            <div class="teoria">
-                <p>
-                    Leipätekstiä.
-                </p>
-
-                <div class="theorem" id="teoreema1">
-                    <h3>TEOREEMA</h3>
-                    <p>
-                        Neliöjuurifunktion
-                        $$
-                        f(x) = \sqrt{x}
-                        $$  
-                        määrittelyjoukko on $[0, \infty\pe$. Neliöjuurifunktion arvo on aina epänegatiivinen. 
-                        <br>
-                        <img src="/kurssit/maa8/kuvat/MAA8kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
-                    </p>
-                    <div class="proof">
+				<div class="tehtava" id="uuid">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#onnenpyora">
+                                Onnenpyörä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="onnenpyora" class="collapse">
                         <p>
-                            Todistus.
-                        </p>      
+                            Nikolai ostaa onnenpyöräpelin, jossa kaikki sektorit ovat yhtä suuria, kuten alla olevassa kuvassa. Pyöräytettäessä onnenpyörä pysähtyy satunnaiseen kohtaan. Millä todennäköisyydellä onnenpyörä pysähtyy mustaan tai valkoiseen sektoriin?
+						</p>
+						<figure>				
+					<img src="../kuvat/onnenpyora.png" style="max-width: 100%; width: auto; height: auto;"/>
+					<figcaption>Ikean <a href="https://www.ikea.com/fi/fi/p/lustigt-onnenpyoeraepeli-30387038/">onnenpyöräpeli</a> (luettu 23.10.2020).</figcaption>
+				</figure>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#onnenpyora_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="onnenpyora_v" class="collapse">
+                           <p>
+								zzzzzzz.
+							</p>
+						</div>
                     </div>
                 </div>
-
+				
             </div>
 
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#juuri4">
-                    Sulje kappale
-                </a>
-            </div>
-        </div>
-    </section>
-	
-	
-	 <section class="panel">
-        <header class="otsikko">
-            <h1>                        
-                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku1-tehtavasarja2">
-                    TEHTÄVÄSARJA II
-                </a>
-            </h1>
-        </header>
-
-        <div id="MAA8luku1-tehtavasarja2" class="collapse">
-            <!-- Tästä alkaa piilotus -->
-
-            <div class="tehtava" id="a7066042-d4b8-4eca-847b-a65650ec2b25">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA8s2t111">
-                            Tehtävä
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA8s2t111">
-                    <p>
-                        Selvitä funktion $f$ määrittelyjoukko ja nollakohdat, jos  
-                    </p>
-                    <ol class="a">
-                        <li> $f(x) = x - 3\sqrt{x-1} + 1$ </li>
-                        <li> $f(x) = \sqrt{x} + x - 1$ </li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t111_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA8s2t111_v" class="collapse">
-                        <ol class="a">
-                            <li>  
-                                Funktio on määritelty, jos ja vain jos $x \geq 1$. 
-                                <br>
-                                Funktiolla on nollakohdat $x_1 = 2$ ja $x_2 = 5$.
-                            </li>
-                            <li> 
-                                Funktio on määritelty, jos ja vain jos $x \geq 0$. 
-                                <br>
-                                Funktiolla on nollakohta 
-                                $$
-                                x = \frac{3 - \sqrt{5}}{2}.
-                                $$
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
-           
-
-            <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku1-tehtavasarja2">
+                <a data-toggle="collapse" class="collapsed" data-target="#laajennus">
                     Sulje kappale
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="panel">
-        <header class="otsikko">
-            <h1>                    
-                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku1-tehtavasarja3">
-                    TEHTÄVÄSARJA III
-                </a>
-            </h1>
-        </header>
-
-        <div id="MAA8luku1-tehtavasarja3" class="collapse">
-            <!-- Tästä alkaa piilotus -->
-
-            <div class="tehtava" id="348b27a9-6b6f-4c79-b46f-10ae4162fe6c">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA8s3t101">
-
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA8s3t101">
-                    <ol class="a">
-                        <li> 
-                            Sievennä lauseke 
-                            $$\sqrt{a\sqrt{a\sqrt{a^2}}},$$ 
-                            kun $a \geq 0$. 
-                        </li>
-                        <li>
-                            Luku on yhtä suuri kuin puolet sen neliöjuuresta. Määritä kaikki tällaiset luvut.
-                        </li>
-                    </ol>
-                    <p>
-                        [Pitkä S2016/2a &amp; S2014/2b]
-                    </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t101_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA8s3t101_v" class="collapse">
-                        <ol class="a">
-                        <li> 
-                            \begin{align*}
-                            \sqrt{a\sqrt{a\sqrt{a^2}}} &= \sqrt{a\sqrt{a^2}} \\
-                            &= \sqrt{a^2} \\
-                            &= a
-                            \end{align*}
-                        </li>
-                        <li>
-                            Kysytyt luvut ovat $0$ ja $\dfrac{1}{4}$.
-                        </li>
-                    </ol>
-                    </div>
-                </div>
-            </div>
-
-            <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku1-tehtavasarja3">
-                    Sulje kappale
-                </a>
-            </div>
-        </div>
-    </section>
 
     <section class="panel">
         <header>
             <h1>                        
-                <a data-toggle="collapse" class="collapsed" data-target="#MAA8L1itsearviointi">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8L2itsearviointi">
                     Itsearviointitehtävät
                 </a>
             </h1>
         </header>
-        <div id="MAA8L1itsearviointi" class="collapse">
+        <div id="MAA8L2itsearviointi" class="collapse">
             <p>
                 Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/2051">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
             </p>
             <div class="close-section">
-                <a data-toggle="collapse" class="collapsed" data-target="#MAA8L1itsearviointi">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8L2itsearviointi">
                     Sulje kappale
                 </a>
             </div>
