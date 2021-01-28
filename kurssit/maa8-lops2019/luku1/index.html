@@ -129,7 +129,7 @@ topnav: maa8-lops2019
                     </p>
 				</div>
                 <p>
-                    Tässä moduulissa tutustutaan vain tilanteisiin, joissa havaintoarvoja on äärellinen määrä tai joissa havaintoarvot voidaan numeroida luonnollisilla luvuilla esimerkiksi. Tällaisia tilanteita kutsutaan <em>diskreeteiksi</em>. Jos tutkittava ominaisuus voi saada mitä tahansa reaalilukuarvoja jollakin välillä, kuten koulun oppilaiden pituudet, ei kyse ole diskreetistä tilanteesta. Näitä tilanteita tutkitaan moduulissa MAA12.
+                    Tässä moduulissa tutustutaan vain tilanteisiin, joissa havaintoarvoja on äärellinen määrä tai joissa havaintoarvot voidaan numeroida luonnollisilla luvuilla. Tällaisia tilanteita kutsutaan <em>diskreeteiksi</em>. Jos tutkittava ominaisuus voi saada mitä tahansa reaalilukuarvoja jollakin välillä, kuten koulun oppilaiden pituudet, ei kyse ole diskreetistä tilanteesta. Näitä tilanteita tutkitaan moduulissa MAA12.
                 </p>
 				
 				<p>
@@ -215,10 +215,12 @@ topnav: maa8-lops2019
 						</tr>
 				</table>
 				<p>
-					Yllä olevassa taulukossa ensimmäinen sarake "Lasten lkm" vastaa aineiston eri havaintoarvoja. Luku 15 ei ole havaintoarvo, koska missään perheessä ei ole 15 lasta. Se vaikuttaa mahdolliselta havainnolta, koska suurempiakin perheitä on olemassa. Sanotaan, että luku 15 on <em>mahdollinen havaintoarvo</em>, ja se otetaan tämän takia mukaan.
+					Yllä olevassa taulukossa ensimmäinen sarake "Lasten lkm" vastaa aineiston eri havaintoarvoja. Toinen sarake $f$ taas kertoo perheiden lukumäärän.
+					Luku 15 ei ole havaintoarvo, koska missään perheessä ei ole 15 lasta. Se vaikuttaa mahdolliselta havainnolta, koska suurempiakin perheitä on olemassa. Sanotaan, että luku 15 on <em>mahdollinen havaintoarvo</em>, ja se otetaan tämän takia mukaan.
 				</p>
 				<p>
-					Lasten lukumääränä myös 17 on mahdollinen havaintoarvo; huomaa, että nolla ei ole mahdollinen havaintoarvo, koska tutkitaan perheitä, joissa on lapsia. Luokittelussa lapsiperheisiin liittyvät mahdolliset havaintoarvot rajataan ottamalla mukaan vain kaikki mahdollisuudet pienimmän havaintoarvon ja suurimman havaintoarvon väliltä.
+					Lasten lukumääränä  17 myös on mahdollinen havaintoarvo; huomaa, että nolla ei ole mahdollinen havaintoarvo, koska tutkitaan perheitä,
+					joissa on lapsia. Luokittelussa lapsiperheisiin liittyvät mahdolliset havaintoarvot rajataan ottamalla mukaan vain kaikki mahdollisuudet pienimmän havaintoarvon ja suurimman havaintoarvon väliltä.
 				</p>
 			</div>
 			<div class="definition">
@@ -271,11 +273,13 @@ topnav: maa8-lops2019
 			<div class="definition">
                     <h3>MÄÄRITELMÄ: FREKVENSSI JA SUHTEELLINEN FREKVENSSI</h3>
                     <p>
-						Mahdollisen havaintoarvon <em>frekvenssi</em> on  sitä vastaavien havaintoyksiköiden lukumäärä.	Frekvenssiä merkitään yleensä $f$. 
+						Mahdollisen havaintoarvon <em>frekvenssi</em> on  sitä vastaavien havaintoyksiköiden lukumäärä.	
+			    Frekvenssiä merkitään yleensä kirjaimella $f$. 
 					</p>
 					
                     <p>
-						Mahdollisen havaintoarvon <em>suhteellinen frekvenssi</em> on sen havaintoyksiköiden osuus kaikista havaintoyksiköistä.	Suhteellista frekvenssiä merkitään yleensä $f$ %.
+						Mahdollisen havaintoarvon <em>suhteellinen frekvenssi</em> on sen havaintoyksiköiden osuus kaikista 
+			    havaintoyksiköistä.	Suhteellista frekvenssiä merkitään yleensä symbolilla $f$ %.
 					</p>
 			</div>
 		<div class="teoria">				
@@ -1209,18 +1213,22 @@ topnav: maa8-lops2019
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAA8s2t111">
-                            Juurifunktiot ja -yhtälöt
+                           Havaintoyksikkö ja -arvo
                         </a>
                     </h1>
                 </header>
                 <div id="MAA8s2t111">
                     <p>
-                        Selvitä funktion $f$ määrittelyjoukko ja nollakohdat, jos  
+                           <ol class="a">
+                            <li>  
+                                Anna esimerkki tilanteesta, jossa jokainen ryhmän oppilas on havaintoyksikkö.
+                            </li>
+                            <li>
+				    Anna esimerkki tilanteesta, jossa havaintoarvoja ovat luonnolliset luvut välillä $10--60$.  
+                            </li>
+                        </ol>
                     </p>
-                    <ol class="a">
-                        <li> $f(x) = x - 3\sqrt{x-1} + 1$ </li>
-                        <li> $f(x) = \sqrt{x} + x - 1$ </li>
-                    </ol>
+                    
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t111_v">
                             Vastaus
@@ -1229,17 +1237,10 @@ topnav: maa8-lops2019
                     <div id="MAA8s2t111_v" class="collapse">
                         <ol class="a">
                             <li>  
-                                Funktio on määritelty, jos ja vain jos $x \geq 1$. 
-                                <br>
-                                Funktiolla on nollakohdat $x_1 = 2$ ja $x_2 = 5$.
+                              Jokaisen ryhmän jäseneen liittyvä havaintoarvo voi olla vaikka silmien väri, syntymäkuukausi, tai vaikka korvien lukumäärä.
                             </li>
                             <li> 
-                                Funktio on määritelty, jos ja vain jos $x \geq 0$. 
-                                <br>
-                                Funktiolla on nollakohta 
-                                $$
-                                x = \frac{3 - \sqrt{5}}{2}.
-                                $$
+                                Havaintoyksiköitä voisivat olla ryhmän oppilaat ja havaintoarvoja kengän numero.
                             </li>
                         </ol>
                     </div>
