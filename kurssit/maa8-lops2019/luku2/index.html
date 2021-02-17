@@ -668,8 +668,30 @@ $$
             
             <div class="teoria">
                 <p>
-                    Erilaiset tavat tehdä valintoja joukkojen alkioista liittyvät keskeisesti todennäköisyyslaskennan klassiseen malliin. Voimme esimerkiksi selvittää, että kuinka monella eri tavalla Maija, Matti ja Ella voivat koulun ruokalassa asettua jonoon  tai että kuinka monella eri tavalla loton seitsemän numeroa voidaan arpoa. Tällaisten kysymysten ratkomisessa on kyse <em>kombinatoriikasta</em>, joka on eräs matematiikan osa-alue.
+                    Erilaiset tavat tehdä valintoja joukkojen alkioista liittyvät keskeisesti todennäköisyyslaskennan klassiseen malliin. 
+<em>Kombinatoriikka<\em> on matematiikan osa-alue, joka tutkii eri vaihtoehtojen määrittämistä.
+Aloitetaan yksinkertaisella esimerkillä. 
                 </p>
+	<p>
+	Nukella on  kaksi hattua, kolme paitaa, yhdet housut ja kahdet kengät. Kuinka monella eri tavalla nuken voi pukea? Havaitaan ensin että että hatun 
+valitseminen ei vaikuta paidan valitsemiseen, tai yleisemmin eri vaatekappaleiden valinnat ovat toisistaan riippumattomia. 
+		Lisäksi jokaisen vaatekappaleen kohdalla sen voi jättää pukematta. Näin ollen eri vaihtoehtoja on 
+		$(2+1)\cdot (3+1)\cdot (1+1) \cdot (2+1) = 72$. Tämä luku sisältää myös vaihtoehdon että nukelle ei pueta mitään päälle.	
+	</p>
+	
+	<p>
+	Voimme yleisesti soveltaa yllä olevaa ajatusta seuraavasti. Ajatellaan että meillä on tilanne jossa suoritetaan valinta $k$:ssa eri askeleessa. 
+		Oletetaan että eri askeleiden valinnat ovat toisistaan riippumattomia. Merkitään että askeleessa $i$ meillä on mahdollista 
+		tehdä valinta $n_i$ eri vaihtoehdosta. Tällöin vaihtoehtoja on yhteensä
+		$$
+		n_1 \cdot n_2 \cdot \ldots n_{k-1} \cdot n_k
+		$$ 
+		kappaletta. Tätä päättelyä kutsutaan <em>tuloperiaateeksi</em>.
+	</p>
+		
+		<p>
+ Määritellään seuraavaksi kombinatoriikan peruskäsitteet.
+	</p>
             </div>
 			
 			<div class="definition">
