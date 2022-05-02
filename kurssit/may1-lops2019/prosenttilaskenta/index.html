@@ -1,0 +1,2490 @@
+---
+title: MAY1 - Luvut ja lukujonot 
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: may1
+---
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+    }
+</style>
+
+<input type="hidden" id="theoremStart" value="10"/>
+<input type="hidden" id="chapterNumber" value="5"/>
+
+{% include bottomnav.html %}
+
+<article>
+    <section>
+        <header>
+            <h1>Prosenttilaskenta</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="luvun-tavoitteet" class="collapse">
+
+            <div class="objective">
+
+                <p>
+                    Tämän luvun tavoitteena on, että osaat ratkaista prosenttilaskentaan liittyviä ongelmia.
+                    Osaat 
+                <ul>
+                    <li> laskea, kuinka monta prosenttia luku $a$ on luvusta $b$</li>
+                    <li> laskea, kuinka paljon on $p$ prosenttia luvusta $b$</li>
+                    <li> laskea, mistä luvusta luku $a$ on $p$ prosenttia</li>
+                    <li> laskea, kuinka monta prosenttia luku $a$ on suurempi tai pienempi kuin luku $b$</li>
+                    <li> laskea muutosprosentin</li>
+                    <li> laskea, mikä on uusi arvo, jos muutosprosentti ja alkuperäinen arvo tunnetaan</li>
+                    <li> käyttää kirjainlausekkeita prosenttilaskentaan liittyvissä tehtävissä</li>
+                    <li> käyttää prosenttiyksikköä prosentteina ilmoitettujen lukujen vertaamiseen.</li>
+                </ul>
+                </p>
+            </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#prosenttiosuus">
+                    Prosenttiosuus
+                </a>
+            </h1>
+        </header>
+        <div id="prosenttiosuus" class="collapse">
+            <div class="teoria">
+                <p>
+                    Suhteellisten osuuksien ilmaisemiseen käytetään usein prosentteja (kuvankaappauksia <a href="http://yle.fi/uutiset/">Yle Uutisten sivuilta</a>):
+                </p>  
+                <p>
+                    <img src="/kurssit/may1/kuvat/p7.png" style="float: left; width: 80%; margin-right: 2%; margin-left: 10%; margin-bottom: 1em;">   
+                    <img src="/kurssit/may1/kuvat/p6.png" style="float: left; width: 80%; margin-right: 2%; margin-left: 10%; margin-bottom: 1em;">
+                    <img src="/kurssit/may1/kuvat/p5.png" style="float: left; width: 80%; margin-right: 2%; margin-left: 10%; margin-bottom: 1em;">     
+                <p style="clear: both;">                    
+                </p>
+
+                <p>
+                    Aloitetaan määrittelemällä, mitä prosentilla tarkoitetaan:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: PROSENTTI</h3>
+                    <p>
+                        <em>Prosentti</em> on yksi sadasosa:
+                        $$1 \ \% = \frac{1}{100} = 0{,}01.$$
+                    </p>
+                </div>
+
+                <p>
+                    Esimerkiksi $0{,}04 = 4 \ \%$, koska kumpikin merkintä tarkoittaa neljää sadasosaa eri tavoilla kirjoitettuna. Samaan tapaan $0{,}597 = 59{,}7 \ \%$.
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="first-exercise tehtava" id="b0d056a8-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti1">
+                                Prosentti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti1" class="collapse">
+                        <p>
+                            Ilmoita seuraavat luvut prosenttimerkkiä ($\%$) käyttäen:
+                        <ol class="a">
+                            <li> $\displaystyle\frac{35}{100}$</li>
+                            <li> $\displaystyle\frac{1}{5}$</li>
+                            <li> $0{,}56$</li>
+                            <li> $1{,}28$.</li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti1_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti1_v" class="collapse">
+                            <ol class="a">
+                                <li> 35 % </li>
+                                <li> 20 % </li>
+                                <li> 56 % </li>
+                                <li> 128 % </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d05770-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti2">
+                                Prosentti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti2" class="collapse">
+                        <p>
+                            Ilmoita seuraavat prosentit desimaalilukumuodossa ilman prosenttimerkkiä:
+                        <ol class="a">
+                            <li> $50\ \%$</li>
+                            <li> $8{,}3\ \%$</li>
+                            <li> $24\ \%$</li>
+                            <li> $160\ \%$</li>
+                            <li> $230\ \%$.</li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti2_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti2_v" class="collapse">
+                            <ol class="a">
+                                <li> $0{,}5$ </li>
+                                <li> $0{,}083$ </li>
+                                <li> $0{,}24$ </li>
+                                <li> $1{,}6$ </li>
+                                <li> $2{,}3$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Kun halutaan tietää, kuinka monta prosenttia luku $a$ on luvusta $b$, muodostetaan suhde
+                    $$\frac{a}{b}$$
+                    ja ilmaistaan se sadasosina eli prosentteina. Esimerkiksi suhteesta
+                    $$\frac{7}{13} = 0{,}5384615\ldots$$
+                    nähdään, että luku $7$ on noin $53{,}8\ \%$ luvusta 13.
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d05b26-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti2b">
+                                Prosenttiosuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti2b" class="collapse">
+                        <p> Kuinka monta prosenttia
+                        </p>
+                        <ol class="a">
+                            <li> luku 35 on luvusta 118?</li>
+                            <li> luku 2 on luvusta 360?</li>
+                            <li> luku 20 on luvusta 18?</li>
+                            <li> luku 45 on luvusta 13?</li>
+                        </ol>
+                        <p>
+                        Ilmoita vastaukset kolmen merkitsevän numeron tarkkuudella. Milloin vastaus on yli $100 \ \%$? Selitä omin sanoin.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti2b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti2b_v" class="collapse">
+                            <ol class="a">
+                                <li> Noin $29{,}7 \ \%$. </li>
+                                <li> Noin $0{,}556 \ \%$. </li>
+                                <li> Noin $111 \ \%$. </li>
+                                <li> Noin $346 \ \%$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d05c02-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti2c">
+                                Prosenttiosuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti2c" class="collapse">
+                        <p> Antin bruttopalkka oli 936,25 euroa. Tästä pidätettiin veroa ja muita maksuja yhteensä 232,67 euroa. Tehtävänä on laskea, kuinka monta prosenttia Antin bruttopalkasta meni veroihin ja muihin maksuihin.
+                        </p>
+                        <ol class="a">
+                            <li> Arvioi tuloksen suuruusluokkaa päässäsi. Onko se yli vai alle 50 %? Entä yli vai alle 10 %? Entä yli vai alle 20 %?</li>
+                            <li> Laske, kuinka monta prosenttia bruttopalkasta meni veroihin ja muihin maksuihin.</li>
+                            <li> Havainnollista tilannetta piirroksella, josta näkyvät bruttopalkka sekä verot ja muut maksut.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti2c_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti2c_v" class="collapse">
+                            <ol class="a">
+                                <li> Arvointi:
+                                    <ul>
+                                        <li> Koska 50 % palkasta on puolet eli noin 465 €, verojen osuus on alle 50 %.  </li>
+                                        <li> Koska 10 % palkasta on noin 94 € ja 20 % palkasta on tuplasti eli noin 188 €, on verojen osuus yli 20 %.  </li>
+                                    </ul>
+                                </li>
+                                <li> Noin 24,9 %. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d05cca-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti2d">
+                                Prosenttiosuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti2d" class="collapse">
+                        <p> Yksiön vuokra oli 480 euroa. Vuoden lopussa sitä korotettiin 20 euroa. Tehtävänä on selvittää, kuinka monta prosenttia alkuperäisestä vuokrasta vuokrankorotus oli.
+                        </p>
+                        <ol class="a">
+                            <li> Arvioi tuloksen suuruusluokkaa päässäsi. Onko se yli vai alle 10 %? Entä yli vai alle 5 %? Entä yli vai alle 1 %? </li>
+                            <li> Kuinka monta prosenttia alkuperäisestä vuokrasta vuokrankorotus oli?</li>
+                            <li> Havainnollista tilannetta piirroksella, josta näkyvät alkuperäinen vuokra ja vuokrankorotus.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti2d_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti2d_v" class="collapse">
+                            <ol class="a">
+                                <li> Arviointi:
+                                    <ul>
+                                        <li> Koska 10 % vuokrasta on 48 €, vuokrankorotus oli alle 10 %. </li>
+                                        <li> Koska 1 % vuokrasta on 4,8 €, vuokrankorotus oli yli 1 %. </li>
+                                        <li> Koska 5 % vuokrasta on noin $5\cdot 4{,}8 \approx 25$ €, oli korotus alle 5 %.  </li>
+                                    </ul>
+                                </li>
+                                <li> Noin 4,2 %. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d05d92-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti2e">
+                                Prosenttiosuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti2e" class="collapse">
+                        <p> Säilykepurkin sisältö painaa 730 g ja siitä kurkkua on 380 g. Tehtävänä on laskea, kuinka monta prosenttia sisällöstä on kurkkua.
+                        </p>
+                        <ol class="a">
+                            <li> Arvioi tuloksen suuruusluokkaa päässäsi. Onko se yli vai alle 10 %? Entä yli vai alle 50 %? Entä yli vai alle 60 %?</li>
+                            <li> Kuinka monta prosenttia sisällöstä on kurkkua?</li>
+                            <li> Havainnollista tilannetta piirroksella, josta näkyvät purkin sisällön ja kurkun määrät.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti2e_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti2e_v" class="collapse">
+                            <ol class="a">
+                                <li> Arviointi:
+                                <ul>
+                                    <li> Koska 10 % purkin sisällöstä on 73 g, niin kurkkua on yli 10 %.  </li>
+                                    <li> Koska 50 % purkin sisällöstä on $5 \cdot 73 = 365$ g, niin kurkkua on yli 50 %. </li>
+                                    <li> Koska 60 % purkin sisällöstä on $365 + 73 = 438$ g, niin kurkkua on alle 60 %. </li>
+                                </ul> 
+                                </li>
+                                <li> Noin 52 %. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Joissakin tilanteissa tiedetään prosenttiosuus ja halutaan laskea sitä vastaava määrä. Toisin sanottuna halutaan laskea, kuinka paljon on $p$ prosenttia luvusta $b$. Tällöin prosenttiosuus ilmaistaan desimaalimuodossa ilman prosenttimerkkiä. Sitä vastaava osuus saadaan kertolaskulla. Esimerkiksi jos halutaan tietää, kuinka paljon on $32 \ \%$ luvusta 478, lasketaan
+                    $$0{,}32 \cdot 478 = 152{,}96.$$
+                    Siis $32 \ \%$ luvusta $478$ on $152{,}96$.
+                </p>
+            </div>
+
+            <div class="tehtava" id="b0d05edc-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti3">
+                            Prosenttiosuutta vastaava määrä
+                        </a>
+                    </h1>
+                </header>
+                <div id="prosentti3" class="collapse">
+                    <p>
+                        Tehtävänä on laskea, kuinka paljon on 30 prosenttia luvusta 8.
+                    </p>
+                    <ol class="a">
+                        <li> Arvioi vastauksen suuruusluokkaa. Onko se pienempi vai suurempi kuin 8? Entä onko se pienempi vai suurempi kuin 4? Entä pienempi vai suurempi kuin 2?</li>
+                        <li> Ilmaise prosentit desimaalilukumuodossa ilman prosenttimerkkiä ja kerro saadulla desimaaliluvulla luku $8$.</li>
+                        <li> Tarkista tuloksesi laskemalla, kuinka monta prosenttia se on luvusta 8.
+                        </li>
+                    </ol>
+                    <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti3_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti3_v" class="collapse">
+                            <ol class="a">
+                                <li> Pienempi kuin 4, sillä 4 on puolet eli 50 % luvusta 8. Suurempi kuin 2, koska 2 on neljäsosa eli 25 % luvusta 8. </li>
+                                <li> $0{,}30 \cdot 8 = 2{,}4$ </li>
+                                <li>
+                                    $\dfrac{2{,}4}{8} = 0{,}3 = 30 \ \%.$
+                                </li>
+                            </ol>
+                        </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d0604e-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti4">
+                                Prosenttiosuutta vastaava määrä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti4" class="collapse">
+                        <p>
+                            Arvioi tuloksen suuruusluokkaa esimerkiksi pyöristämällä lukuja sopivasti. Kirjaa arviosi muistiin. Laske sen jälkeen tulos ja anna vastaus yhden desimaalin tarkkuudella. Missä kohdassa arviosi osui lähimmäs oikeaa tulosta?
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka paljon on $25\ \%$ luvusta $12$?</li>
+                            <li> Kuinka paljon on $13\ \%$ luvusta $67$?</li>
+                            <li> Kuinka paljon on $75\ \%$ luvusta $\pi$?</li>
+                            <li> Kuinka paljon on $150\ \%$ luvusta $20$?</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti4_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti4_v" class="collapse">
+                            <ol class="a">
+                                <li> 3 </li>
+                                <li> Noin 8,7 </li>
+                                <li> Noin 2,4 </li>
+                                <li> 30 </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Prosenttiosuutta vastaavan määrän laskemista voi ajatella myös seuraavasti: Jos halutaan tietää, kuinka paljon on $32 \ \%$ luvusta 478, voidaan muodostaa yhtälö
+                    $$\frac{a}{478} = 0{,}32.$$
+                    Tässä siis kokonaismäärä $b = 478$ ja prosenttiosuus $r = 0{,}32$. Prosenttiosuutta vastaava määrä $a$ saadaan tästä kertolaskulla kuten jo edellä todettiin:
+                    $$a = 0{,}32 \cdot 478 = 152{,}96.$$
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d06986-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti4b">
+                                Prosenttiosuutta vastaava määrä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti4b" class="collapse">
+                        <p> Antin bruttopalkka oli 936,25 euroa. Tästä pidätettiin veroa $18 \ \%$. 
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka paljon Antti maksoi veroa palkastaan?</li>
+                            <li> Havainnollista tilannetta piirroksella, josta näkyvät bruttopalkka ja veron osuus.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti4b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti4b_v" class="collapse">
+                            <ol class="a">
+                                <li> 168,53 € </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d06ae4-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti4c">
+                                Prosenttiosuutta vastaava määrä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti4c" class="collapse">
+                        <p> Yksiön vuokra oli 480 euroa. Vesimaksun osuus oli siitä $3{,}75 \ \%$.  
+                        </p>
+                        <ol class="a">
+                            <li> Mikä oli vesimaksun suuruus?</li>
+                            <li> Havainnollista tilannetta piirroksella, josta näkyvät vuokra ja vesimaksu.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti4c_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti4c_v" class="collapse">
+                            <ol class="a">
+                                <li> 18 € </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d06bb6-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti4d">
+                                Prosenttiosuutta vastaava määrä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti4d" class="collapse">
+                        <p> Säilykepurkin sisältö painaa 730 g ja siitä hiilihydraattia on $22\ \%$. 
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka paljon hiilihydraattia yhdessä säilykepurkissa on?</li>
+                            <li> Havainnollista tilannetta piirroksella, josta näkyvät purkin sisältö ja hiilihydraatin määrä.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti4d_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti4d_v" class="collapse">
+                            <ol class="a">
+                                <li> 160,6 g. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Joskus tiedetään prosenttiosuus ja sitä vastaava määrä, mutta ei kokonaismäärää, johon verrataan. Tällöin kysymys on, mistä luvusta luku $a$ on $p$ prosenttia. Esimerkiksi halutaan selvittää, mistä luvusta luku 264 on $32$ prosenttia. Tätä tilannetta vastaa yhtälö
+                    $$\frac{264}{b} = 0{,}32.$$
+                    Tässä siis prosenttiosuutta vastaava määrä $a = 264$ ja prosenttiosuus $r = 0{,}32$.
+                    Jos yhtälön molemmat puolet kerrotaan luvulla $b$, se voidaan kirjoittaa muodossa
+                    $$0{,}32b = 264.$$
+                    Kokonaismäärä $b$ saadaan tästä jakolaskulla:
+                    $$b = \frac{264}{0{,}32}= 825.$$
+                    Siis luku 264 on $32 \ \%$ luvusta 825.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d06c92-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti5">
+                                Kokonaismäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti5" class="collapse">
+                        <p>
+                            Tehtävänä on laskea, mistä luvusta 15 prosenttia on 10.
+                        </p>
+                        <ol class="a">
+                            <li> Arvioi vastauksen suuruusluokkaa. Onko se pienempi vai suurempi kuin 10? Entä onko se pienempi vai suurempi kuin 20? Entä pienempi vai suurempi kuin 100?</li>
+                            <li> Merkitse kokonaismäärää jollakin kirjaimella ja muodosta yhtälö, joka yhdistää toisiinsa kokonaismäärän, prosenttiosuuden ja sitä vastaavan määrän.</li>
+                            <li> Laske kysytty kokonaismäärä. Anna tulos yhden desimaalin tarkkuudella.</li>
+                            <li> Tarkista tuloksesi laskemalla, kuinka monta prosenttia 10 on saamastasi tuloksesta.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti5_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti5_v" class="collapse">
+                            <ol class="a">
+                                <li> Arviointi:
+                                    <ul>
+                                        <li> Suurempi kuin 10, sillä $\dfrac{10}{10} = 1 = 100 \ \%.$ </li>
+                                        <li> Suurempi kuin 20, sillä $\dfrac{10}{20} = 0{,}5 = 50 \ \%.$ </li>
+                                        <li> Pienempi kuin 100, sillä $\dfrac{10}{100} = 0{,}1 = 10 \ \%.$</li>
+                                    </ul>
+                                </li>
+                                <li> Kokonaismäärä $x$. Yhtälö $0{,}15x = 10$. </li>
+                                <li> Kokonaismäärä on $66{,}7$.</li>
+                                <li> $\dfrac{10}{66{,}7} \approx 15 \ \%.$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d06d64-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti6">
+                                Kokonaismäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti6" class="collapse">
+                        <p>
+                            Arvioi tuloksen suuruusluokkaa esimerkiksi pyöristämällä lukuja sopivasti. Kirjaa arviosi muistiin. Laske sen jälkeen tulos ja anna vastaus yhden desimaalin tarkkuudella. Missä kohdassa arviosi osui lähimmäs oikeaa tulosta?
+                        </p>
+                        <ol class="a">
+                            <li> Mistä luvusta $25\ \%$ on $100$?</li>
+                            <li> Mistä luvusta $10\ \%$ on $7$?</li>
+                            <li> Mistä luvusta $51\ \%$ on $64$?</li>
+                            <li> Mistä luvusta $150\ \%$ on $35$?</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti6_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti6_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    400
+                                </li>
+                                <li> 70 </li>
+                                <li> Noin 125,5. </li>
+                                <li> Noin 23,3. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d06e2c-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti7">
+                                Kokonaismäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti7" class="collapse">
+                        <p> Annan veroprosentti oli $21$ ja hän maksoi veroa $465{,}36$ euroa. 
+                        </p>
+                        <ol class="a">
+                            <li> Mikä oli Annan bruttopalkka?</li>
+                            <li> Havainnollista tilannetta piirroksella.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti7_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti7_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    2216 euroa.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d071b0-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti8">
+                                Kokonaismäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti8" class="collapse">
+                        <p> Emil sai ilmoituksen, että hänen vuokraansa korotetaan seuraavan kuun alussa $1{,}5 \ \%$ ja laski, että korotus on $9{,}75$ euroa. 
+                        </p>
+                        <ol class="a">
+                            <li> Mikä oli Emilin vuokra ennen korotusta? </li>
+                            <li> Havainnollista tilannetta piirroksella.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti8_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti8_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    650 euroa.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d072a0-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti9">
+                                Kokonaismäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti9" class="collapse">
+                        <p> Eräälle kurssille ilmoittautuneista keskimäärin noin 47 % suorittaa kurssin loppuun asti. Tänä vuonna kurssin suoritti 99 henkeä. 
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monta ilmoittautunutta oli alunperin?</li>
+                            <li> Havainnollista tilannetta piirroksella.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti9_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti9_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Noin 211 ilmoittautunutta. 
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#vertailu">
+                    Prosentit ja vertailu
+                </a>
+            </h1>
+        </header>
+        <div id="vertailu" class="collapse">
+            <div class="teoria">
+                <p>
+                    Prosentteja voidaan käyttää määrien vertailuun. Esimerkiksi, jos halutaan tietää, kuinka monta prosenttia luku 365 on suurempi kuin luku 310, voidaan laskea näiden lukujen suhde:
+                    $$\frac{365}{310} = 1{,}177419\ldots $$
+                    Tästä nähdään, että luku  365 on noin $117{,}7 \ \%$ luvusta 310, joten luku 365 on noin $17{,}7 \ \%$ suurempi kuin luku 310.
+                </p>
+
+                <p>
+                    Toinen tapa saman tuloksen saamiseen on laskea ensin vertailtavien lukujen erotus: 
+                    $$365- 310 = 55.$$
+                    Sen jälkeen lasketaan, kuinka monta prosenttia erotus on siitä luvusta, johon verrataan:
+                    $$\frac{55}{310} = 0{,}177419\ldots$$
+                    Tästä voidaan päätellä, että luku 365 on noin $17{,}7 \ \%$ suurempi kuin luku 310.
+                </p>
+
+                <p>
+                    Huomaa, että vertailussa jakajana on aina se luku, johon verrataan. Esimerkiksi edellä kysymys oli, kuinka monta prosenttia luku 365 on suurempi <b>kuin luku 310</b>, minkä vuoksi jakajana käytettiin lukua 310.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d07368-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti10">
+                                Vertailuprosentti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti10" class="collapse">
+                        <p> Emmi sai kesätöistään palkkaa 1 150 euroa ja Iida sai 1 225 euroa. 
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monta prosenttia enemmän palkkaa Iida sai Emmiin verrattuna? Valitse edellä havainnollistetuista ratkaisutavoista se, joka tuntuu sinusta selkeämmältä ja ratkaise tehtävä sitä käyttäen.</li>
+                            <li> Havainnollista tilannetta piirroksella.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti10_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti10_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Iida sain noin 6,5 % enemmän palkkaa kuin Emmi.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d07430-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti11">
+                                Vertailuprosentti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti11" class="collapse">
+                        <p> Henrik juoksi kesäloman aikana 325 km ja Leo juoksi 303 km. 
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monta prosenttia pidemmän matkan Henrik juoksi kuin Leo?</li>
+                            <li> Havainnollista tilannetta piirroksella.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti11_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti11_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Henrik juoksi noin 7,3 % pidemmän matkan kuin Leo.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Jos halutaan tietää, kuinka monta prosenttia jokin luku on pienempi kuin jokin toinen luku, voidaan laskea samaan tapaan kuin edellä. Esimerkiksi, jos halutaan tietää, kuinka monta prosenttia luku 310 on pienempi kuin luku 365, voidaan laskea näiden lukujen suhde:
+                    $$\frac{310}{365} = 0{,}849315\ldots $$
+                    Tästä nähdään, että luku  310 on noin $84{,}9 \ \%$ luvusta 365, joten luku 310 on noin $100 - 84{,}9 \ \% = 15{,}1 \ \%$ pienempi kuin luku 365. Huomaa, että jälleen jakana on se luku, johon verrataan.
+                </p>
+
+                <p>
+                    Toinen tapa saman tuloksen saamiseen on laskea ensin vertailtavien lukujen erotus: 
+                    $$365- 310 = 55.$$
+                    Sen jälkeen lasketaan, kuinka monta prosenttia erotus on siitä luvusta, johon verrataan:
+                    $$\frac{55}{365} = 0{,}15068\ldots$$
+                    Tästä voidaan päätellä, että luku 310 on noin $15{,}1 \ \%$ pienempi kuin luku 365.
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d074ee-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti12">
+                                Vertailuprosentti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti12" class="collapse">
+                        <p> Emmi sai kesätöistään palkkaa 1 150 euroa ja Iida sai 1 225 euroa.
+                        </p> 
+                        <ol class="a">
+                            <li> Kuinka monta prosenttia vähemmän palkkaa Emmi sai Iidaan verrattuna? Valitse edellä havainnollistetuista ratkaisutavoista se, joka tuntuu sinusta selkeämmältä ja ratkaise tehtävä sitä käyttäen.</li>
+                            <li> Havainnollista tilannetta piirroksella. Vertaa tehtävään 17. Mitä eroa näillä kahdella tehtävällä on? Miten se näkyyy ratkaisussa? Selitä omin sanoin.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti12_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti12_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Emmi sai noin 6,1 % vähemmän palkkaa kuin Iida.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d075b6-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti13">
+                                Vertailuprosentti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti13" class="collapse">
+                        <p> Henrik juoksi kesäloman aikana 325 km ja Leo juoksi 303 km. 
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monta prosenttia lyhyemmän matkan Leo juoksi kuin Henrik?</li>
+                            <li> Havainnollista tilannetta piirroksella. Vertaa tehtävään 18. Mitä eroa näillä kahdella tehtävällä on? Miten se näkyyy ratkaisussa? Selitä omin sanoin.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti13_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti13_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Leo juoksi noin 6,8 % lyhyemmän matkan kuin Henrik.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Joskus halutaan vertailla prosentteina ilmoitettuja lukuja keskenään. Tällöin vertailu voidaan tehdä joko tutkimalla lukujen suhdetta tai erotusta. Jos lukuja verrataan laskemalla niiden erotus, ilmoitetaan tulos <em>prosenttiyksikköinä</em>. Esimerkiksi, jos säästötilin korko on $2{,}5 \ \%$ ja käyttötilin korko $1 \ \%$, on korkojen erotus $2{,}5 - 1 = 1{,}5$ prosenttiyksikköä. Voidaan sanoa, että säästötilin korko on $1{,}5$ prosenttiyksikköä korkeampi kuin käyttötilin korko, tai että käyttötilin korko on $1{,}5$ prosenttiyksikköä matalampi kuin säästötilin korko.
+                </p>
+
+                <p> 
+                    Vertaaminen voidaan tehdä myös suhteen avulla:
+                    $$\frac{1}{2{,}5} = 0{,}4,$$
+                    joten käyttötilin korko on $40 \ \%$ säästötilin korosta. Käyttötilin korko on siis $100 \ \% - 40 \ \% = 60 \ \%$ pienempi kuin käyttötilin korko. Toisesta näkökulmasta
+                    $$\frac{2{,}5}{1} = 2{,}5,$$
+                    joten säästötilin korko on $250\ \%$ käyttötilin korosta. Säästötilin korko on siten $250 \ \% - 100 \ \% = 150 \ \%$ suurempi kuin käyttötilin korko.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d07688-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti14">
+                                Prosenttien vertailu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti14" class="collapse">
+                        <p> Kuluttajahinnat nousivat vuonna 2000 keskimäärin $3{,}4 \ \%$ ja vuonna 2010 keskimäärin $1{,}2 \ \%$. 
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monta prosenttiyksikköä vähemmän hinnat nousivat vuonna 2010 kuin vuonna 2000?</li>
+                            <li> Kuinka monta prosenttia vähemmän hinnat nousivat vuonna 2010 kuin vuonna 2000?</li>
+                            <li> Kuinka monta prosenttia enemmän hinnat nousivat vuonna 2000 kuin vuonna 2010?</li>
+                            <li> Miksi b- ja c-kohtien vastaukset eroavat toisistaan? Selitä omin sanoin.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti14_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti14_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Hinnat nousivat vuonna 2010 keskimäärin 2,2 prosenttiyksikköä vähemmän kuin vuonna 2000.
+                                </li>
+                                <li>
+                                    Hinnat nousivat vuonna 2010 keskimäärin 64,7 % vähemmän kuin vuonna 2000.
+                                </li>
+                                <li>
+                                    Hinnat nousivat vuonna 2000 keskimäärin 183,3 % enemmän kuin vuonna 2010.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#muutos">
+                    Prosentit ja muutos
+                </a>
+            </h1>
+        </header>
+        <div id="muutos" class="collapse">
+            <div class="teoria">
+                <p>
+                    Prosentteja käytetään myös muutoksen suuruuden ilmaisemiseen. Laskutapa on samanlainen kuin vertailtaessa. Erityistä huomiota pitää kiinnittää siihen, että jakajana käytetään alkuperäistä, muutosta edeltävää arvoa. Esimerkiksi jos kunnan väkiluku nousi 5 617 asukkaasta 6 221 asukkaaseen, saadaan väkiluvun muutos pääteltyä suhteesta
+                    $$\frac{6221}{5617} = 1{,}1075307\ldots$$
+                    Tästä nähdään, että uusi väkiluku oli noin $110{,}8 \ \%$ vanhasta väkiluvusta eli väkiluku kasvoi noin $10{,}8 \ \%$. Jakajana käytettiin siis alkuperäistä väkilukua 5 617.
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d07a3e-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti15">
+                                Muutosprosentti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti15" class="collapse">
+                        <p> Lauri oli kahtena kesänä samassa paikassa työharjoittelijana. Ensimmäisenä kesänä hän sai palkkaa 1 320 euroa ja toisena kesänä 1 410 euroa. 
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monta prosenttia Laurin palkka nousi?</li>
+                            <li> Havainnollista tilannetta piirroksella.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti15_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti15_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Laurin palkka nousi noin 6,8 %.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d07b2e-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti16">
+                                Muutosprosentti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti16" class="collapse">
+                        <p> Kaisa juoksi kesäkuussa 105 km ja heinäkuussa 77 km. 
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monta prosenttia Kaisan juoksumatka lyheni kesäkuusta heinäkuuhun?</li>
+                            <li> Havainnollista tilannetta piirroksella.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti16_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti16_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Juoksumatka lyheni noin 26,7 %.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Joissakin tilanteissa tiedetään alkuperäinen arvo ja muutoksen suhteellinen suuruus prosentteina. Tällöin uusi, muuttunut arvo saadaan laskettua kertolaskun avulla. Ensin täytyy kuitenkin päätellä, mikä on muutosprosenttia vastaava kerroin. Esimerkiksi, jos palkka on aluksi 1 450 euroa ja sitä korotetaan $2{,}5 \ \%$, on uusi palkka $102{,}5 \ \%$ vanhaan palkkaan verrattuna. Uusi palkka saadaan siten kertomalla luvulla $1{,}025$:
+                    $$1{,}025 \cdot 1 450 \, \unicode{0x20AC} = 1 486{,}25 \, \unicode{0x20AC}.$$
+                    Jos taas pyörän hinta on aluksi 390 euroa ja sitä alennetaan $15 \ \%$, on uusi hinta $100 - 15 = 85$ prosenttia vanhasta hinnasta. Uusi hinta saadaan siten kertomalla luvulla $0{,}85$:
+                    $$0{,}85 \cdot 390 \, \unicode{0x20AC} = 331{,}50 \, \unicode{0x20AC}.$$
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d07bf6-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti17">
+                                Muutosprosenttia vastaava kerroin
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti17" class="collapse">
+                        <p> Millä desimaaliluvulla alkuperäinen hinta pitää kertoa, jos sitä 
+                        </p>
+                        <ol class="a">
+                            <li> korotetaan $10 \ \%$?</li>
+                            <li> korotetaan $13{,}7 \ \%?$</li>
+                            <li> korotetaan $75 \ \%?$</li>
+                            <li> korotetaan $124{,}5 \ \%?$</li>
+                        </ol>      
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti17_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti17_v" class="collapse">
+                            <ol class="a">
+                                <li> 1,1 </li>
+                                <li> 1,137 </li>
+                                <li> 1,75 </li>
+                                <li> 2,245 </li>
+                            </ol> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d08556-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti18">
+                                Muuttunut arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti18" class="collapse">
+                        <p> 
+                            Asunto-osakeyhtiö nosti asuntojen yhtiövastikkeita $16{,}5 \ \%$. Kuinka suuri oli $76{,}5$ neliömetrin kokoisen asunnon uusi yhtiövastike, jos vastikkeen suuruus oli ennen korotusta $2{,}10$ euroa neliömetriltä?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti18_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti18_v" class="collapse">
+                            <p>
+                                Korotettu yhtiövastike oli 187,16 euroa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d086d2-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti19">
+                                Muutosprosenttia vastaava kerroin
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti19" class="collapse">
+                        <p> Millä desimaaliluvulla alkuperäinen hinta pitää kertoa, jos sitä 
+                        </p>
+                        <ol class="a">
+                            <li> alennetaan $10 \ \%$?</li>
+                            <li> alennetaan $13{,}7 \ \%?$</li>
+                            <li> alennetaan $75 \ \%?$</li>
+                            <li> alennetaan $1{,}25 \ \%?$</li>
+                        </ol>      
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti19_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti19_v" class="collapse">
+                            <ol class="a">
+                                <li> 0,9 </li>
+                                <li> 0,863 </li>
+                                <li> 0,25 </li>
+                                <li> 0,9875 </li>
+                            </ol> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d08808-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti20">
+                                Muuttunut arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti20" class="collapse">
+                        <p> 
+                            Työntekijän palkka oli 2745 euroa. Kun hän siirtyi osa-aikaiseksi, aleni hänen palkkansa $18 \ \%$. Mikä oli työntekijän uusi palkka?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti20_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti20_v" class="collapse">
+                            <p>
+                                Uusi palkka oli 2250,90 euroa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d08bfa-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti20b">
+                                Muuttunut arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti20b" class="collapse">
+                        <p> Kuinka monta prosenttia hinta $x$ on noussut tai laskenut, jos uusi hinta on 
+                        </p>
+                        <ol class="a">
+                            <li> $0{,}65x$</li>
+                            <li> $1{,}07x$</li>
+                            <li> $0{,}05x$</li>
+                            <li> $1{,}34x$</li>
+                        </ol>  
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti20b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti20b_v" class="collapse">
+                            <ol class="a">
+                                <li> Laskenut 35 %. </li>
+                                <li> Noussut 7 %. </li>
+                                <li> Laskenut 95 %. </li>
+                                <li> Noussut 34 %. </li>
+                            </ol> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d08cf4-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti21">
+                                Peräkkäiset muutokset
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti21" class="collapse">
+                        <p> 
+                            Alennusmyyntien alkaessa 150 euron hintaisen takin hintaa alennettiin $15 \ \%$. Kolmen viikon kuluttua kaikista jo alennetuista hinnoista sai vielä $30 \ \%$ lisäalennuksen.
+                        </p>
+                        <ol class="a">
+                            <li> Mikä oli takin hinta tällöin?</li>
+                            <li> Kuinka monta prosenttia hinta oli pudonnut alkuperäisestä?</li>
+                            <li> Pystyisitkö selvittämään vastauksen b-kohtaan, jos et tietäisi takin alkuperäistä hintaa? Selitä omin sanoin.</li>
+                        </ol>  
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti21_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti21_v" class="collapse">
+                            <ol class="a">
+                                <li> Takin hinta oli 89,25 euroa. </li>
+                                <li> Hinta oli pudonnut 40,5 %. </li>
+                            </ol> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d08dc6-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti22">
+                                Peräkkäiset muutokset
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti22" class="collapse">
+                        <p> 
+                            Maailmanmarkkinahintojen heilahtelun vuoksi polttoaineen hinta nousi ensin $4 \ \%$ ja laski kuukauden kuluttua äkillisesti $10 \ \%$. 
+                        </p>
+                        <ol class="a">
+                            <li> Merkitse polttoaineen alkuperäistä hintaa kirjaimella $a$. Millä desimaaliluvuilla alkuperäistä hintaa $a$ pitäisi kertoa, että saisi laskettua muuttuneen hinnan? Ilmaise muuttunut hinta kirjaimen $a$ avulla.</li>
+                            <li> Päättele edellisen kohdan avulla, kuinka monta prosenttia hinta oli muuttunut alkuperäiseen hintaan verrattuna. Oliko se noussut vai laskenut?</li>
+                            <li> Tarkista laskusi kokeilemalla, saatko saman lopputuloksen, jos alkuperäinen hinta oli esimerkiksi $a = 1$ euroa / litra. </li>
+                        </ol>  
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti22_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti22_v" class="collapse">
+                            <ol class="a">
+                                <li> Muuttunut hinta on $0{,}9 \cdot 1{,}04a = 0{,}936a$. </li>
+                                <li> Hinta oli laskenut 6,4 %. </li>
+                            </ol> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#Ratkaisustrategioita">
+                    PROSENTTILASKENNAN STRATEGIOITA
+                </a>
+            </h1>
+        </header>
+        <div id="Ratkaisustrategioita" class="collapse">
+            <div class="teoria">
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan ratkaisemaan prosenttilaskentaan liittyviä ongelmia, joiden yleinen ratkaisu vaatii kirjainlausekkeiden käyttämistä. Ratkaisu kuitenkin helpottuu usein, jos ongelman ratkaisee ensin yhdessä erityistapauksessa joillakin itse valitsemillaan luvuilla. Varsinainen ratkaisu on tällöin helpompi muodostaa. Lisäksi tuloksen järkevyyttä voi arvioida vertaamalla eri tavoilla saamiaan tuloksia.
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d08e84-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti23">
+                                Ratkaisun hahmottelu lukuarvoilla
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti23" class="collapse">
+                        <p> 
+                            Kun tuotteen hintaa nostettiin 7 %, laski sen menekki 5 %. Tehtävänä on selvittää, kuinka muuttui tuotteen myynnistä saatu rahamäärä.
+                        </p>
+                        <ol class="a">
+                            <li> Piirrä vihkoosi seuraava taulukko:
+                                <div align="center">
+                                    <table style="width = 75%"> 
+                                        <tr>
+                                            <th></th>
+                                            <th>Hinta (€/kpl)</th>
+                                            <th>Menekki (kpl)</th>     
+                                            <th>Rahamäärä (€)</th>  
+                                        </tr>
+                                        <tr>
+                                            <td>Ennen korotusta</td>
+                                            <td></td>
+                                            <td></td>      
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Korotuksen jälkeen</td>
+                                            <td></td>
+                                            <td></td>      
+                                            <td></td>        
+                                        </tr>
+                                    </table> </div></li>
+                            <li> Keksi tuotteelle jokin hinta (euroa/kpl) ja jokin menekki eli myyntimäärä (kappaletta). Laske uusi hinta ja menekki hinnankorotuksen jälkeen. Täydennä nämä tiedot taulukkoon.</li>
+                            <li> Laske tuotteen myynnistä saatu rahamäärä ennen hinnankorotusta ja hinnankorotuksen jälkeen. Mitä laskutoimitusta käytit?</li>
+                            <li> Laske, kuinka monta prosenttia tuotteen myynnistä saatu rahamäärä muuttui. Kasvoiko vai pienenikö se?</li>
+                        </ol>   
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti23_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti23_v" class="collapse">
+                            <ol class="a">
+                                <li>  </li>
+                                <li> 
+                                    <div align="center">
+                                    <table style="width = 75%"> 
+                                        <tr>
+                                            <th></th>
+                                            <th>Hinta (€/kpl)</th>
+                                            <th>Menekki (kpl)</th>     
+                                            <th>Rahamäärä (€)</th>  
+                                        </tr>
+                                        <tr>
+                                            <td>Ennen korotusta</td>
+                                            <td> 50 </td>
+                                            <td> 100 </td>      
+                                            <td> 5000 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Korotuksen jälkeen</td>
+                                            <td> 53,5 </td>
+                                            <td> 95 </td>      
+                                            <td> 5082,5 </td>        
+                                        </tr>
+                                    </table> </div>
+                                </li>
+                                <li> Myynnin arvo kasvoi 1,65 %. </li>
+                            </ol> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d08f4c-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti24">
+                                Ratkaisu prosenttilausekkeita käyttäen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti24" class="collapse">
+                        <p> 
+                            Kun tuotteen hintaa nostettiin 7 %, laski sen menekki 5 %. Tehtävänä on selvittää, kuinka muuttui tuotteen myynnistä saatu rahamäärä.
+                        </p>
+                        <ol class="a">
+                            <li> Piirrä vihkoosi seuraava taulukko:
+                                <div align="center">
+                                    <table style="width = 75%"> 
+                                        <tr>
+                                            <th></th>
+                                            <th>Hinta (€/kpl)</th>
+                                            <th>Menekki (kpl)</th>     
+                                            <th>Rahamäärä (€)</th>  
+                                        </tr>
+                                        <tr>
+                                            <td>Ennen korotusta</td>
+                                            <td></td>
+                                            <td></td>      
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Korotuksen jälkeen</td>
+                                            <td></td>
+                                            <td></td>      
+                                            <td></td>        
+                                        </tr>
+                                    </table> </div></li>
+                            <li> Merkitse tuotteen alkuperäistä hintaa kirjaimella $a$ (euroa) ja menekkiä kirjaimella $b$ (kappaletta). Laske uusi hinta ja menekki hinnankorotuksen jälkeen.</li>
+                            <li> Laske tuotteen myynnistä saatu rahamäärä ennen hinnankorotusta ja hinnankorotuksen jälkeen. Tarvittaessa katso mallia lausekkeiden muodostamiseen edellisen tehtävän ratkaisusta.</li>
+                            <li> Laske, miten tuotteen myynnistä saatu rahamäärä muuttui.</li>
+                        </ol>   
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti24_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti24_v" class="collapse">
+                            <ol class="a">
+                                <li>  </li>
+                                <li> 
+                                    <div align="center">
+                                    <table style="width = 75%"> 
+                                        <tr>
+                                            <th></th>
+                                            <th>Hinta (€/kpl)</th>
+                                            <th>Menekki (kpl)</th>     
+                                            <th>Rahamäärä (€)</th>  
+                                        </tr>
+                                        <tr>
+                                            <td> Ennen korotusta</td>
+                                            <td> $a$ </td>
+                                            <td> $b$ </td>      
+                                            <td> $ab$ </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Korotuksen jälkeen</td>
+                                            <td> $1{,}07a$ </td>
+                                            <td> $0{,}95b$ </td>      
+                                            <td> $1{,}0165ab$ </td>        
+                                        </tr>
+                                    </table> </div>
+                                </li>
+                                <li> 
+                                    Hinnankorotuksen jälkeisen myynnin arvon suhde aiempaan myynnin arvoon on
+                                    $$
+                                    \frac{1{,}0165ab}{ab} = 1{,}0165,
+                                    $$
+                                    joten myynnin arvo nousi 1,65 %. 
+                                </li>
+                            </ol> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d09014-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti25">
+                                Ratkaisun hahmottelu lukuarvoilla
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti25" class="collapse">
+                        <p> 
+                            Tuotteen hintaa alennettiin 25 %. Tehtävänä on selvittää, kuinka monta prosenttia alennettua hintaa pitäisi korottaa, jotta päästäisiin takaisin alkuperäiseen hintaan.
+                        </p>
+                        <ol class="a">
+                            <li> Piirrä vihkoosi seuraava taulukko:
+                                <div align="center">
+                                    <table style="width = 75%"> 
+                                        <tr>
+                                            <th>Alkuperäinen hinta (€)</th>
+                                            <th>Alennettu hinta (€)</th>     
+                                            <th>Tarvittava korotus (€)</th>  
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td></td>      
+                                            <td></td>
+                                        </tr>
+                                    </table> 
+                                </div>
+                            </li>
+                            <li> Keksi tuotteelle jokin alkuperäinen hinta (euroa). Laske, mikä oli tuotteen hinta hinnanalennuksen jälkeen.</li>
+                            <li> Laske, kuinka paljon alennettua hintaa pitäisi korottaa, jotta päästäisiin takaisin alkuperäiseen hintaan. Täydennä tämä tieto taulukkoon. Mitä laskutoimitusta käytit?</li>
+                            <li> Selvitä, kuinka monta prosenttia korotus on alennettuun hintaan verrattuna.</li>
+                        </ol>   
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti25_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti25_v" class="collapse">
+                            <ol class="a">
+                                <li>  </li>
+                                <li> 
+                                    <div align="center">
+                                        <table style="width = 75%"> 
+                                            <tr>
+                                                <th>Alkuperäinen hinta (€)</th>
+                                                <th>Alennettu hinta (€)</th>     
+                                                <th>Tarvittava korotus (€)</th>  
+                                            </tr>
+                                            <tr>
+                                                <td> 200 </td>
+                                                <td> 150 </td>      
+                                                <td> 50 </td>
+                                            </tr>
+                                        </table> 
+                                    </div>
+                                </li>
+                                <li> 
+                                    Hintaa pitää korottaa noin 33,3 %. 
+                                </li>
+                            </ol> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d09352-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti26">
+                                Ratkaisu prosenttilausekkeita käyttäen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="prosentti26" class="collapse">
+                        <p> 
+                            Tuotteen hintaa alennettiin 25 %. Tehtävänä on selvittää, kuinka monta prosenttia alennettua hintaa pitäisi korottaa, jotta päästäisiin takaisin alkuperäiseen hintaan.
+                        </p>
+                        <ol class="a">
+                            <li> Piirrä vihkoosi seuraava taulukko:
+                                <div align="center">
+                                    <table style="width = 75%"> 
+                                        <tr>
+                                            <th>Alkuperäinen hinta (€)</th>
+                                            <th>Alennettu hinta (€)</th>     
+                                            <th>Tarvittava korotus (€)</th>  
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td></td>      
+                                            <td></td>
+                                        </tr>
+                                    </table> </div></li>
+                            <li> Merkitse tuotteen alkuperäistä hintaa kirjamella $a$ (euroa). Laske, mikä oli tuotteen hinta hinnanalennuksen jälkeen.</li>
+                            <li> Laske, kuinka paljon alennettua hintaa pitäisi korottaa, jotta päästäisiin takaisin alkuperäiseen hintaan. Täydennä tämä tieto taulukkoon. Tarvittaessa katso mallia lausekkeen muodostamiseen edellisen tehtävän ratkaisusta.</li>
+                            <li> Selvitä, kuinka monta prosenttia korotus on alennettuun hintaan verrattuna.</li>
+                            <li> Keksitkö tavan, jolla tehtävän voi ratkaista pelkästään alkuperäisen hinnan ja alennetun hinnan avulla (ilman korotuksen lausekkeen muodostamista)?</li>
+                        </ol>   
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#prosentti26_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="prosentti26_v" class="collapse">
+                            <ol class="a">
+                                <li>  </li>
+                                <li> 
+                                    <div align="center">
+                                        <table style="width:75%"> 
+                                            <tr>
+                                                <th>Alkuperäinen hinta (€)</th>
+                                                <th>Alennettu hinta (€)</th>     
+                                                <th>Tarvittava korotus (€)</th>  
+                                            </tr>
+                                            <tr>
+                                                <td> $a$ </td>
+                                                <td> $0{,}75a$ </td>      
+                                                <td> $0{,}25a$ </td>
+                                            </tr>
+                                        </table> 
+                                    </div>
+                                </li>
+                                <li> 
+                                    Korotuksen suhde alennettuun hintaan:
+                                    $$
+                                    \frac{0{,}25a}{0{,}75a} = \frac{0{,}25}{0{,}75} \approx 0{,}333,
+                                    $$
+                                    joten hintaa pitää korottaa noin 33,3 %.
+                                </li>
+                                <li>
+                                    Alkuperäisen hinnan suhde alennettuun hintaan on 
+                                    $$
+                                    \frac{a}{0{,}75a} = \frac{1}{0{,}75} \approx 1{,}333,
+                                    $$
+                                    joten alkuperäinen hinta on noin 33,3 % suurempi kuin alennettu hinta. Alennettua hintaa pitää siis korottaa noin 33,3 %. 
+                                </li>
+                            </ol> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="b0d09438-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_1">
+                            Prosenttiosuus
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_1">
+                    <p> 
+                        Henkilön kuukausipalkka on 3800 euroa ja hän maksaa veroja 900 euroa. Mikä on henkilön veroprosentti eli kuinka monta prosenttia hän maksaa veroja?
+
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_1_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_1_v" class="collapse">
+                        <p>
+                            Noin 23,7 %.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d09500-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_1_a">
+                            Prosenttiosuus
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_1_a">
+                    <p>
+                        Henkilö haluaa lisätä ravintokuituja ruokavalioonsa. Hänellä on valittavanaan kaksi leipävaihtoa. Leivän A 20 gramman palassa on 3 grammaa ravintokuitua ja leivän B kuitupitoisuus on 13 %. Kumpi leivistä henkilön kannattaa ostaa?     
+
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_1_a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="prosentti_1_a_v" class="collapse">
+
+                        <p>Leipä A, koska sen kuitupitoisuus on 15 %.</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d095c8-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_2">
+                            Prosenttiosuutta vastaava määrä
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_2">
+                    <p> 
+                        Jääkiekkomaalivahdin torjuntaprosentti on 85,70. Kuinka monta maalia hän keskimäärin torjuu 30 laukauksesta?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_2_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_2_v" class="collapse">
+                        <p>
+                            Noin 26.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d09686-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_2_a">
+                            Prosenttiosuutta vastaava määrä
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_2_a">
+                    <p> 
+                        <a href="http://www.stat.fi/tup/suoluk/suoluk_vaesto.html">Tilastokeskuksen</a> mukaan vuoden 2015 lopussa suomea äidinkielenään puhuvia oli 88,7 % ja ruotsia 5,3 %. Kuinka moni puhui äidinkielenään jotain muuta kieltä, kun suomalaisia oli tuolloin 5 487 000? 
+
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_2_a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="prosentti_2_a_v" class="collapse">
+
+                        <p>329 220</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483d7a2-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_3">
+                            Kokonaismäärä
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_3">
+                    <p> 
+                        Farkut olivat 30 prosentin alennuksessa ja euroina alennus oli 25 euroa. Kuinka paljon farkut maksoivat alun perin?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_3_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_3_v" class="collapse">
+                        <p>
+                            83,30 euroa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483dcac-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_3_a">
+                            Kokonaismäärä
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_3_a">
+                    <p> 
+                        Kevään 2016 ylioppilaskokeisiin ilmoittautuneista 25,7 % ilmoittautui pitkän matematiikan kokeeseen. Pitkän matematiikan kokeeseen ilmoittautuneita oli 10 536. Kuinka monta henkilöä ilmoittautui kevään 2016 ylioppilaskokeisiin? Anna vastaus 100 henkilön tarkkuudella.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_3_a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="prosentti_3_a_v" class="collapse">
+
+                        <p>41 000</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483ddba-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_4">
+                            Vertailuprosentti
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_4">
+                    <p> 
+                        Suomen väkiluku maaliskuussa 2016 oli 5 488 265 ja Ruotsin 9 875 378.
+                    <ol class="a">
+                        <li> Kuinka monta prosenttia vähemmän asukkaita on Suomessa kuin Ruotsissa?</li>
+                        <li> Kuinka monta prosenttia enemmän asukkaita on Ruotsissa Suomeen verrattuna?</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_4_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_4_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> Noin 44,4 % vähemmän.</li>
+                            <li> Noin 79,9 % enemmän.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483deaa-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_4_a">
+                            Vertailuprosentti
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_4_a">
+                    <p> Kevään 2016 ylioppilaskokeiden lyhyen matematiikan kokeeseen ilmoittautui 11 663 ja pitkän matematiikan kokeeseen 10 536 kokelasta. Kuinka monta prosenttia enemmän lyhyen matematiikan kokeseen ilmoittautuneita oli pitkän matematiikan kokeeseen ilmoittautuneihin verrattuna? </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_4_a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="prosentti_4_a_v" class="collapse">
+
+                        <p>10,7 %</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="tehtava" id="b483e0c6-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_5">
+                            Prosenttien vertailu
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_5">
+                    <p> 
+                        Asuntolainan korkoprosentti laski 3,4 prosentista 2,6 prosenttiin.
+                    <ol class="a">
+                        <li> Kuinka monta prosenttiyksikköä asuntolainan korko laski?</li>
+                        <li> Kuinka monta prosenttia asuntolainan korko laski?</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_5_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_5_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> 0,8 prosenttiyksikköä.</li>
+                            <li> Noin 23,5 %.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483e33c-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_5_a">
+                            Prosenttien vertailu
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_5_a">
+                    <p> Vuoden 2015 vaaleissa perussuomalaisten kannatus oli 17,7 % ja heinäkuussa 2016 Taloustutkimuksen teettämän gallupin mukaan 8,6 %. 
+                    <ol class="a">
+                        <li> Kuinka monta prosenttiyksikköä perussuomalaisten kannatus laski tarkasteluaikavälillä?</li>
+                        <li> Kuinka monta prosenttia perussuomalaisten kannatus laski tarkasteluaikavälillä?</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_5_a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="prosentti_5_a_v" class="collapse">
+
+                        <p>
+                        <ol class="a">
+                            <li> 9,1 prosenttiyksikköä</li>
+                            <li> 51,4 %</li>
+                        </ol>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483e418-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_6a">
+                            Muutosprosentti
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_6a">
+                    <p> 
+                        Asunto maksoi 120 000 euroa vuonna 2005. Vuonna 2016 asunto myytiin 180 000 eurolla. Kuinka monta prosenttia asunnon arvo oli noussut?
+
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_6a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_6a_v" class="collapse">
+                        <p>
+                            50 %.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483e63e-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_6_a">
+                            Muutosprosentti
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Prosentti_6_a">
+                    <p> 
+                        Vuonna 2007 matematiikan ylioppilaskokeeseen ilmoittautui 13 348 kokelasta, kun vuonna 2015 ilmoittautumisia oli vain 11 956. Kuinka monta prosenttia pitkän matematiikan ylioppilaskokeeseen ilmoittautuneiden määrä on vähentynyt?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#Prosentti_6_a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="Prosentti_6_a_v" class="collapse">
+
+                        <p>10,4 %</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483e724-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_6">
+                            Muuttunut arvo
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_6">
+                    <p> 
+                        Television hinta oli 459 euroa. Aluksi sen hintaa laskettiin 20 %, mutta koska sen kysyntä kasvoi alennuksen myötä voimakkaasti, myyjä päätti korottaa hintaa 20 %.
+                    <ol class="a">
+                        <li> Kuinka paljon televisio maksoi halvimmillaan?</li>
+                        <li> Mikä oli television hinta kaikkien hinnanmuutosten jälkeen?</li>
+                        <li> Päteekö yleisesti, että jos hintaa ensin lasketaan $p$ % ja sen jälkeen nostetaan $p$ %, niin päädytään alkuperäiseen hintaan? Perustele omin sanoin.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_6_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_6_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> 367,20 euroa.</li>
+                            <li> 440,64 euroa.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="tehtava" id="b483e878-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_7">
+                            Peräkkäiset muutokset
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_7">
+                    <p> 
+                        Paita maksoi ennen alennusmyyntejä 60 €. Hintaa alennettiin ensin 40 prosenttia ja alen loppurysäyksessä vielä 20 prosenttia. Kuinka paljon paita lopuksi maksoi?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_7_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="prosentti_7_v" class="collapse">
+
+                        <p>  28,80€ (tai 29 €)</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483eac6-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Prosentti_7_b">
+                            Peräkkäiset muutokset
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Prosentti_7_b">
+                    <p> 
+                        Osakkeen arvo laski 46 prosenttia ja nousi sitten ensiksi 15 prosenttia ja tämän jälkeen vielä 34 prosenttia.
+                    <ol class="a">
+                        <li>Oliko osakkeen arvo näiden muutosten jälkeen suurempi vai pienempi kuin ennen muutoksia?</li>
+                        <li> Kuinka monta prosenttia jälkimmäisen nousun olisi pitänyt olla, jotta olisi palattu alkuperäiseen arvoon? [Lyhyt S2001/5]</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#Prosentti_7_b_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="Prosentti_7_b_v" class="collapse">
+
+                        <p>
+                        <ol class="a">
+                            <li>Pienempi.</li>
+                            <li> 61 %</li>
+
+                        </ol> 
+
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483ec4c-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Prosentti_7_a">
+                            Prosenttilaskennan strategioita
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Prosentti_7_a">
+                    <p> Viisi kilogrammaa 2-prosenttista suolaliuosta sisältää ainoastaan vettä ja suolaa. Tätä suolaliuosta haihdutetaan niin, että sen massasta poistuu 20 %.
+                    <ol class="a">
+                        <li> Kuinka paljon suolaa on alkuperäisessä suolaliuoksessa?</li>
+                        <li> Mikä on haihdutetun liuoksen massa?</li>
+                        <li> Kuinka paljon suolaa on haihdutetussa suolaliuoksessa?</li>
+                        <li> Mikä on haihdutetun suolaliuoksen suolapitoisuus? </li>
+                        <li> Mieti, miten alkuperäinen suolaliuoksen määrä vaikutti uuteen suolapitoisuuteen. Selitä omin sanoin.</li>
+                    </ol>
+
+
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#Prosentti_7_a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="Prosentti_7_a_v" class="collapse">
+
+                        <p>
+
+                        <ol class="a">
+                            <li>0,1 kg tai 100 g</li>
+                            <li> 4 kg</li>
+                            <li> 0,1 kg tai 100 g</li>
+                            <li> 2,5 %</li>
+                            <li> Ei mitenkään.</li>
+                        </ol>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483edf0-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Prosentti_8_a">
+                            Prosenttilaskennan strategioita
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Prosentti_8_a">
+                    <p> Kuinka paljon 2-prosenttista desinfektioliuosta tarvitaan, jotta siitä laimennettuna saadaan 500 ml 0,35-prosenttista desinfektioliuosta? [Lyhyt S2006/3] </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#Prosentti_8_a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="Prosentti_8_a_v" class="collapse">
+
+                        <p>87,5 ml</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483f084-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Prosentti_8">
+                            Prosenttilaskennan strategioita
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Prosentti_8">
+                    <p>  
+                        Perheen vuokramenot olivat 25 % tuloista. Vuokramenot nousivat 15 %. Kuinka monta prosenttia vähemmän rahaa riitti muuhun käyttöön korotuksen jälkeen? [Pitkä K2004/3] 
+                    </p>
+                    <p>
+                        Vihje: Hahmottele ensin tehtävän tietoja taulukkoon lukuarvoilla kuten tehtävässä 31.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#Prosentti_8_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="Prosentti_8_v" class="collapse">
+
+                        <p>5 %</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>  
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="b483f17e-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Prosentti_9_a">
+
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Prosentti_9_a">
+                    <p> Boolimaljassa on 4,0 litraa sekoitusta, jonka tilavuudesta 70 % on kuohuviiniä ja 30 % mansikkamehua. Kuinka paljon siihen täytyy lisätä kuohuviiniä, jotta mehun osuus on 20 %? [Lyhyt K2014/5] </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#Prosentti_9_a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="Prosentti_9_a_v" class="collapse">
+
+                        <p>2,0 litraa</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483f340-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_3c">
+
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_3c">
+                    <p>
+                        Erään mehun täysmehupitoisuus on 35 %. Litraan mehua lisätään 0,5 litraa vettä. Mikä on laimennetun mehun täysmehupitoisuus?
+
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_3c_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_3c_v" class="collapse">
+                        <p>
+                            Noin 23 %.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483f412-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_2c">
+
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="prosentti_2c">
+                    <p> 
+                        Hotellihuoneiden hintaa nostettiin 15 %, jolloin kävijämäärä laski 10 %. Miten hotellihuoneista saatavat tulot muuttuivat?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_2c_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_2c_v" class="collapse">
+                        <p>
+                            Tulot kasvoivat 3,5 %.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="tehtava" id="b483f62e-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Prosentti_9">
+
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Prosentti_9">
+                    <p> 
+                        Vuonna 2007 alennettiin parturimaksujen arvonlisäveroa 22 prosentista 8 prosenttiin. Jos alennus olisi siirtynyt täysimääräisenä parturimaksuihin, kuinka monta prosenttia ne olisivat alentuneet? Arvonlisävero ilmoitetaan prosentteina verottomasta hinnasta ja se on osa tuotteen tai palvelun hintaa. [Pitkä K2008/4]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#Prosentti_9_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="Prosentti_9_v" class="collapse">
+
+                        <p>11,5 %</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="b483f700-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#prosentti_1c">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="prosentti_1c">
+                    <p>
+                        2-prosenttista suolaliuosta haihdutetaan, jotta siitä saadaan 5-prosenttista suolaliuosta.
+                    <ol class="a">
+                        <li> Kuinka monta prosenttia suolaliuoksen massasta pitää haihduttaa pois?</li>
+                        <li> Kuinka monta prosenttia suolaliuoksen vedestä pitää haihduttaa pois?</li>
+                        <li> Miksi edellisten kohtien vastaukset eivät ole samat? Selitä omin sanoin.</li>
+                    </ol>
+
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_1c_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_1c_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> 60 %</li>
+                            <li> Noin 61,2 %</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483f8fe-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Prosentti_10">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="Prosentti_10">
+                    <p>
+                        Tuoreissa omenissa on vettä 80 % ja sokeria 4 %. Kuinka monta prosenttia sokeria on samoissa omenissa, kun ne on kuivattu siten, että kosteusprosentti on 20? [Pitkä K2000/4]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#Prosentti_10_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="Prosentti_10_v" class="collapse">
+                        <p>16 %</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483fb60-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Prosentti_11">
+
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Prosentti_11">
+                    <p> 
+                        Kesämokin rakentaminen tuli 25 % arvioitua kalliimmaksi. Rakennustarvikkeet olivat 19 % ja muut kustannukset 28 % arvioitua kalliimpia. Mikä oli rakennustarvikkeiden arvioitu osuus ja mikä lopullinen osuus kokonaisukustannuksista? [Pitkä K2006/4]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#Prosentti_11_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="Prosentti_11_v" class="collapse">
+
+                        <p>Arvioitu osuus 33 % ja lopullinen osuus 32 %.</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b483fe9e-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Prosentti_12">
+
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Prosentti_12">
+                    <p> 
+                        Vuonna 2001 erään liikeyrityksen ulkomaille suuntautuvan myynnin arvo kasvoi 10 % vuoteen 2000 verrattuna. Samaan aikaan myynnin arvo kotimaassa väheni 5 %. Tällöin koko myynnin arvo kasvoi 6 %. Laske, kuinka monta prosenttia myynnistä meni vuonna 2000 ulkomaille. [Pitkä K2002/3]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#Prosentti_12_v">
+                            Vastaus
+                        </a>
+                    </h2>
+
+                    <div id="Prosentti_12_v" class="collapse">
+
+                        <p>73 %</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tehtava" id="b4840178-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Prosentti_12b">
+
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Prosentti_12b">
+                    <p>
+                        <img src="/kurssit/may1/kuvat/verotaulukko1.png" max-width: 100%; width: auto; height: auto;/> 
+                    </p>
+                    <p> 
+                    <ol class="a">
+                        <li> Annika sai 58 000 € perintönä. Kuinka monta euroa Annika maksaa perinnöstä veroa? Mikä on hänen perintöveroprosenttinsa? </li>
+                        <li> Piirrä kuvaaja, josta käy ilmi perintöveron suuruus prosentteina perinnön arvon funktiona, kun perinnön suuruus on välillä 0 € ja 60 000 €.</li>
+                    </ol>
+                    [Lyhyt K2016/10]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_12b_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_12b_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> Noin 6,3 %.</li>
+                            <li> </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b4840286-7dff-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Prosentti_12c">
+
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Prosentti_12c">
+                    <p> Abiturientti saa lahjoituksen, jonka suuruus on verojen jälkeen 12&nbsp;000 €. Hän sijoittaa sen vuodeksi kahteen rahastoon, joiden vuotuiset korot ovat verojen jälkeen 3,5&nbsp;% ja 5,5&nbsp;%.
+                    <ol class="a">
+                        <li> Lahjoituksesta $x$ euroa sijoitetaan 3,5&nbsp;% tuoton tarjoavaan rahastoon ja loput toiseen rahastoon. Esitä koko sijoituksen arvo $y$ muuttujan $x$ avulla lausuttuna, kun $0 \leq x \leq 12\,000$.</li>
+                        <li> Piirrä a‐kohdan funktion kuvaaja välillä $0 \leq x \leq 12\,000$.</li>
+                    </ol>
+                    [Lyhyt S2013/14]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#prosentti_12c_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="prosentti_12c_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $y = -0{,}02x + 12660$</li>
+                            <li> </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>  
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#L4itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="L4itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1590">itsearviointitesti opetus.tv:n polku-palvelussa</a>. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+
+            </p>
+        </div>
+    </section>
+</article>

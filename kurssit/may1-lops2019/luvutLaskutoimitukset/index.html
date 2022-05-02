@@ -1,0 +1,2413 @@
+---
+title: MAY1 - Luvut ja laskutoimitukset
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: may1
+---
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: center;
+    }
+</style>
+
+<input type="hidden" id="theoremStart" value="1"/>
+<input type="hidden" id="chapterNumber" value="1"/>
+
+{% include bottomnav.html %}
+
+<article>
+    <section>
+        <header>
+            <h1>Luvut ja laskutoimitukset</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="luvun-tavoitteet" class="collapse">
+
+            <div class="objective">
+
+                <p>
+                    Tämän luvun tavoitteena on, että hallitset reaalilukujen peruslaskutoimitukset ja laskujärjestyksen. Osaat 
+                </p>
+                <ul>
+                    <li> antaa esimerkkejä eri lukualueisiin kuuluvista luvuista</li>
+                    <li> päätellä lopputuloksen etumerkin yhteen- ja vähennyslaskussa sekä kerto- ja jakolaskussa</li>
+                    <li> laskea murtolukujen summia, erotuksia, tuloja ja osamääriä</li>
+                    <li> muodostaa annetun luvun vastaluvun ja käänteisluvun</li>
+                    <li> muuttaa sekaluvun tai desimaalimuodossa esitetyn rationaaliluvun murtolukumuotoon</li>
+                    <li> hyödyntää reaalilukujen laskulakeja päässälaskujen helpottamisessa.</li>
+                </ul>
+                <p>
+                    Lisäksi tiedät, että määritelmä on matematiikassa sopimus siitä, mitä jollakin käsitteellä tarkoitetaan.
+                </p>
+            </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#LuonnollisetLuvut">
+                    Luonnolliset luvut ja kokonaisluvut
+                </a>
+            </h1>
+        </header>
+        <div id="LuonnollisetLuvut" class="collapse">
+
+            <div class="teoria">
+                <p>Aloitamme tämän kappaleen tekemällä sopimuksen siitä, mitä tarkoitetaan, kun puhutaan luonnollisista luvuista. Tällaista sopimusta siitä, mitä jokin nimitys tarkoittaa, sanotaan matematiikassa <em>määritelmäksi</em>. Luonnollisten lukujen määritelmä siis kertoo, mitä luonnollisilla luvuilla tarkoitetaan.</p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: LUONNOLLISET LUVUT</h3>
+                    <p>
+                        Lukumäärien ilmaisemiseen käytettäviä lukuja $0$, $1$, $2$, $3$, $4$, $\ldots$ kutsutaan <em>luonnollisiksi luvuiksi</em>. Luonnollisten lukujen joukkoa merkitään kirjaimella $\N$. Siis
+                        $$\N = \{0,1,2,3,4, \ldots\}.$$
+                    </p>
+                </div>
+
+                <p>
+                    Luonnollisten lukujen määritelmästä on kaksi erilaista versiota. Tällä kurssilla käytetään edellä esitettyä määritelmää, jonka mukaan myös luku $0$ on luonnollinen luku. <a href="https://matta.hut.fi/matta2/isom/html/reaalilv2.html">Joissakin kirjoissa</a> käytössä on määritelmä, jossa luonnollisilla luvuilla tarkoitetaan lukuja $1$, $2$, $3$, $4$, $\ldots$. Siitä, kumpi määritelmä on parempi, <a href="http://mathworld.wolfram.com/NaturalNumber.html">ei ole päästy yksimielisyyteen</a>.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="first-exercise tehtava" id="dc9ca04a-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#luonnollinen1">
+                                Luonnollisten lukujen yhteen- ja kertolasku
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="luonnollinen1" class="collapse">
+                        <p> 
+                        <ol class="a">
+                            <li> Tee piirros, joka havainnollistaa laskutoimitusta $2 + 4$.</li>
+                            <li> Tee piirros, joka havainnollistaa laskutoimitusta $2 \cdot 3$.</li>
+                            <li> Tee piirros, joka havainnollistaa laskutoimitusta $3 \cdot 2$.</li>
+                            <li> Mitä eroa b- ja c-kohtien laskuilla on? Entä mitä yhteistä niillä on?</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Luonnollisia lukuja voidaan laskea yhteen ja kertoa keskenään, ja tulos on aina luonnollinen luku. Vähennyslaskun ja jakolaskun tulokset sen sijaan eivät välttämättä ole luonnollisia lukuja. Jotta kaikki vähennyslaskut voidaan laskea, täytyy siirtyä luonnollisten lukujen joukosta kokonaislukujen joukkoon.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cbf44-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#luonnollinen2">
+                                Luonnollisista luvuista kokonaislukuihin
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="luonnollinen2" class="collapse">
+                        <ol class="a">
+                            <li> Keksi esimerkki luonnollisista luvuista $m$ ja $n$, joilla erotus $m-n$ on luonnollinen luku.</li>
+                            <li> Keksi esimerkki luonnollisista luvuista $m$ ja $n$, joilla erotus $m-n$ ei ole luonnollinen luku.</li>
+                            <li> Mikä ehto luonnollisten lukujen $m$ ja $n$ pitää toteuttaa, jotta erotus $m-n$ on luonnollinen luku? Selitä omin sanoin.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#luonnollinen2_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="luonnollinen2_v" class="collapse">
+                           <ol class="a">
+                                <li> Esimerkiksi $m = 5$ ja $n = 1$, jolloin $m - n = 5-1 = 4$. </li>
+                                <li> Esimerkiksi $m = 2$ ja $n = 9$, jolloin $m - n = 2 - 9 = -7$. </li>
+                                <li> 
+                                    Luvun $m$ pitää olla suurempi tai yhtä suuri kuin $n$ eli $m \geq n$. Silloin $m - n \geq 0$. 
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>Sovitaan seuraavaksi, mitä tarkoitetaan, kun puhutaan kokonaisluvuista:</p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KOKONAISLUVUT</h3>
+                    <p>
+                        <em>Kokonaislukuja</em> ovat luvut $0$, $1$, $-1$, $2$, $-2$, $3$, $-3$, $4$, $-4$, $\ldots$ Kokonaislukujen joukkoa merkitään kirjaimella $\Z$. Siis
+                        $$\Z = \{0,1,-1, 2, -2, 3, -3,  \ldots\}.$$
+                    </p>
+                </div>
+
+                <p>
+                    Kokonaislukujen yhteen- ja vähennyslaskua voi havainnollistaa lukusuoralla. Positiivisen luvun lisääminen tarkoittaa, että lukusuoralla liikutaan oikealle:
+                </p>
+                <img src="/kurssit/may1/kuvat/kokonaisK1.png" max-width: 100%; width: auto; height: auto;/> 
+                <p>
+                    Positiivisen luvun vähentäminen tarkoittaa, että lukusuoralla liikutaan vasemmalle:
+                </p>  
+                <p>
+                    <img src="/kurssit/may1/kuvat/kokonaisK2.png" max-width: 100%; width: auto; height: auto;/> 
+                </p>  
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cc444-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kokonais1">
+                                Yhteen- ja vähennyslasku
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="kokonais1" class="collapse">
+                        <p> Havainnollista lukusuoralla samaan tapaan kuin edellä
+                        <ol class="a">
+                            <li> summaa $-2+5$</li>
+                            <li> erotusta $-2-5$.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Entä mitä tarkoittaa negatiivisen luvun lisääminen? Laskuista $3+4$ ja $3+(-4)$ täytyy arkijärjenkin mukaan tulla eri tulos. Kun lisätään positiivinen luku, liikutaan lukusuoralla oikealle:
+                </p> 
+                <img src="/kurssit/may1/kuvat/kokonaisK1.png" max-width: 100%; width: auto; height: auto;/> 
+                <p>
+                    Kun lisätään negatiivinen luku, on siis loogista liikkua lukusuoralla vasemmalle:
+                </p> 
+                <img src="/kurssit/may1/kuvat/kokonaisK3.png" max-width: 100%; width: auto; height: auto;/>  
+                <p>
+                    Kun vähennetään negatiivinen luku, liikutaan taas päinvastaiseen suuntaan eli oikealle:
+                </p>  
+                <img src="/kurssit/may1/kuvat/kokonaisK4.png" max-width: 100%; width: auto; height: auto;/>  
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cc610-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kokonais2">
+                                Yhteen- ja vähennyslasku
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="kokonais2" class="collapse">
+                        <p> Havainnollista lukusuoralla samaan tapaan kuin edellä
+                        <ol class="a">
+                            <li> summaa $-2+(-5)$</li>
+                            <li> erotusta $-2-(-5)$.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Kaikilla kokonaisluvuilla on olemassa niin sanottu vastaluku. Seuraavassa määritelmässä sovitaan, mitä vastaluku tarkoittaa.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: VASTALUKU</h3>
+                    <p>
+                        Luvun $a$ <em>vastaluku</em> $-a$
+                        tarkoittaa lukua, joka lisättynä lukuun $a$ antaa tuloksen $0$:
+                        $$a + (-a) = 0$$ 
+                    </p>
+                </div>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cc9bc-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kokonais3">
+                                Vastaluku
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kokonais3" class="collapse">
+                        <ol class="a">
+                            <li> Mikä on luvun $3$ vastaluku?</li>
+                            <li> Mikä on luvun $-6$ vastaluku? Kirjoita vastaus kahdella erilaisella tavalla.</li>
+                            <li> Merkitse kaikki a- ja b-kohtien luvut lukusuoralle. Vertaa luvun ja sen vastaluvun etäisyyttä nollaan. Mitä voit sanoa siitä? Selitä omin sanoin.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kokonais3_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kokonais3_v" class="collapse">
+                           <ol class="a">
+                                <li> Luvun $3$ vastaluku on $-3$. </li>
+                                <li> Luvun $-6$ vastaluku on $-(-6)$ eli $6$. </li>
+                                <li> 
+                                    Luku ja sen vastaluku ovat aina yhtä kaukana nollasta. Etäisyys on aina positiivinen ja yhtä suuri kuin luvun ns. itseisarvo. Esimerkiksi luvun $-6$ etäisyys nollasta on $6$. 
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p> 
+                    Erotus voidaan muuttaa summaksi, sillä vähennyslasku on sama kuin vastaluvun lisääminen: $$3-4 = 3+(-4).$$ 
+                    Summa voidaan muuttaa erotukseksi, sillä yhteenlasku on sama kuin vastaluvun vähentäminen: $$3+4 = 3-(-4).$$
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9ccb56-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kokonais4">
+                                Vastaluku
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="kokonais4" class="collapse">
+                        <ol class="a">
+                            <li> Kirjoita erotukset $15-(-8)$ ja $-23-4$ summina. Tarkista laskemalla tulokset.</li>
+                            <li> Kirjoita summat $75+(-32)$ ja $843+59$ erotuksina. Tarkista laskemalla tulokset.</li>
+                            <li> Muodosta sääntö, jolla voit kirjoittaa erotuksen $a-b$ summana.</li>
+                            <li> Muodosta sääntö, jolla voit kirjoittaa summan $a+b$ erotuksena.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kokonais4_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kokonais4_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Erotukset summina:
+                                    \begin{align*}
+                                    15-(-8) &= 15 + 8 \\[1mm]
+                                    -23-4 &= -23 + (-4)
+                                    \end{align*}
+                                </li>
+                                <li> 
+                                    Summat erotuksina:
+                                    \begin{align*}
+                                    75+(-32) &= 75 - 32 \\[1mm]
+                                    843+59 &= 843 - (-59)
+                                    \end{align*}
+                                </li>
+                                <li> $a-b = a + (-b)$</li>
+                                <li> $a + b = a - (-b)$</li>
+                           </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Myös kokonaislukujen kertolaskua voi havainnollistaa lukusuoralla. Esimerkiksi tuloa $2\cdot 3$ on havainnollistettu alla:
+                </p>
+                <img src="/kurssit/may1/kuvat/kokonaisK5.png" max-width: 100%; width: auto; height: auto;/> 
+                <p>
+                    Tulo $-2 \cdot 3$ voidaan ajatella sen vastalukuna. Koska $2 \cdot 3 = 6$,
+                    niin  
+                    $$-2 \cdot 3 = -6.$$ 
+                    Tuloa $2\cdot (-3)$ voidaan havainnollistaa vastaavasti:
+                </p>
+                <img src="/kurssit/may1/kuvat/kokonaisK6.png" max-width: 100%; width: auto; height: auto;/> 
+                <p>
+                    Tulo $-2 \cdot (-3)$ saadaan sen vastalukuna. Koska $2 \cdot (-3) = -6$,
+                    niin 
+                    $$-2\cdot (-3) = -(-6) = 6.$$
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cccc8-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kokonais5">
+                                Tulon etumerkki
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="kokonais5" class="collapse">
+                        <ol class="a">
+                            <li> Keksi kaksi erilaista tilannetta, joissa kertolaskun $ab$ tulos on positiivinen.</li>
+                            <li> Keksi kaksi erilaista tilannetta, joissa kertolaskun $ab$ tulos on negatiivinen.</li>
+                            <li> Selitä omin sanoin, milloin kertolaskun $ab$ tulos on positiivinen ja milloin negatiivinen.</li>
+                            <li> Millaisissa tilanteissa kertolaskun $ab$ tulos on nolla?</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kokonais5_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kokonais5_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Tilanne 1: $a = 4$ ja $b = 5$, jolloin $ab = 20$. <br>
+                                    Tilanne 2: $a = -3$ ja $b = -6$, jolloin $ab = 18$.
+                                </li>
+                                <li> 
+                                    Tilanne 1: $a = -4$ ja $b = 5$, jolloin $ab = -20$. <br>
+                                    Tilanne 2: $a = 3$ ja $b = -6$, jolloin $ab = -18$.
+                                </li>
+                                <li> 
+                                    Tulo $ab$ on positiivinen siinä tapauksessa, että tulon tekijät $a$ ja $b$ ovat kumpikin positiivisia tai kumpikin negatiivisia, siis samanmerkkisiä. Tulo $ab$ on negatiivinen siinä tapauksessa, että tulon tekijöistä toinen on positiivinen ja toinen negatiivinen eli tulon tekijät ovat erimerkkisiä.
+                                </li>
+                                <li>
+                                    Tulo on nolla täsmälleen niissä tapauksissa, joissa jompi kumpi tai molemmat tulon tekijöistä ovat nollia.
+                                </li>
+                           </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cce12-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kokonais6">
+                                Kertolasku
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="kokonais6" class="collapse">
+                        <p> Laske seuraavat tulot päässä tai kynän ja paperin avulla:
+                        </p>
+                        <ol class="a">
+                            <li> $7 \cdot 4$</li>
+                            <li> $-8 \cdot (-7)$</li>
+                            <li> $-5 \cdot 4$</li>
+                            <li> $9 \cdot (-3)$</li>
+                        </ol>
+                        <p>
+                            Voit tarkistaa tulokset laskimella.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#Rationaaliluvut">
+                    Rationaaliluvut
+                </a>
+            </h1>
+        </header>
+        <div id="Rationaaliluvut" class="collapse">
+            <div class="teoria">
+                <p>
+                    Kokonaislukujen summat, erotukset ja tulot ovat aina kokonaislukuja. Kahden kokonaisluvun osamäärä sen sijaan ei välttämättä ole kokonaisluku. Jotta kaikki jakolaskut voidaan laskea, täytyy siirtyä kokonaislukujen joukosta rationaalilukujen joukkoon.
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cd3c6-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali0a">
+                                Kokonaisluvuista rationaalilukuihin
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="rationaali0a" class="collapse">
+                        <p> 
+                            Keksi esimerkki kokonaisluvuista $m$ ja $n$, joilla osamäärä $\dfrac{m}{n}$ 
+                        </p>
+                        <ol class="a">
+                            <li> on kokonaisluku</li>
+                            <li> ei ole kokonaisluku.</li>
+                            <li> 
+                                Mikä ehto lukujen $m$ ja $n$ pitää toteuttaa, jotta tarkasteltu osamäärä on kokonaisluku? Selitä omin sanoin.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali0a_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="rationaali0a_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Esimerkiksi $m = 12$ ja $n = 3$, jolloin 
+                                    $$
+                                    \dfrac{m}{n} = \dfrac{12}{3} = 4.
+                                    $$
+                                </li>
+                                <li> 
+                                    Esimerkiksi $m = 10$ ja $n = 4$, jolloin 
+                                    $$
+                                    \dfrac{10}{4} = \dfrac{5}{2} = 2{,}5.
+                                    $$
+                                </li>
+                                <li> 
+                                    Luvun $m$ pitää olla luvun $n$ monikerta. Se tarkoittaa, että luku $m$ voidaan kirjoittaa tulona $m = kn$, missä $k$ on jokin kokonaisluku. Silloin jakolasku menee tasan:
+                                    $$
+                                    \dfrac{m}{n} = \dfrac{kn}{n} = k.
+                                    $$
+                                </li>
+                           </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: RATIONAALILUVUT</h3>
+                    <p>
+                        <em>Rationaalilukuja</em> ovat luvut, jotka voidaan kirjoittaa murtolukumuodossa
+                        $$\frac{m}{n},$$
+                        missä <em>osoittaja</em> $m$ ja <em>nimittäjä</em> $n$ ovat kokonaislukuja ja nimittäjä $n \neq 0$. Rationaalilukujen joukkoa merkitään kirjaimella $\Q$.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cd5a6-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali1a">
+                                Rationaaliluvut
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="rationaali1a" class="collapse">
+                        <p>
+                            Ovatko seuraavat luvut rationaalilukuja? Esitä ne murtolukumuodossa, jos mahdollista.
+                        </p>
+                        <ol class="a">
+                            <li> $3$ </li>
+                            <li> $0{,}5$</li>
+                            <li> $-0{,}1$</li>
+                            <li> $0{,}75$.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali1a_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="rationaali1a_v" class="collapse">
+                           <ol class="a">
+                                <li> Kyllä: $\ 3 = \dfrac{3}{1}$. </li>
+                                <li> Kyllä: $\ 0{,}5 = \dfrac{1}{2}$. </li>
+                                <li> Kyllä: $\ -0{,}1 = -\dfrac{1}{10}$</li>
+                                <li> Kyllä: $\ 0{,}75 = \dfrac{3}{4}$.</li>
+                            </ol>
+                            <p>
+                                Huom. luvut voidaan esittää murtolukumuodossa myös muilla tavoilla, jotka saadaan näistä muodoista laventamalla.
+                            </p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jos murtolukumuodossa esitettyjä rationaalilukuja lasketaan yhteen, pitää luvut ensin laventaa samannimisiksi. Tarkastellaan esimerkiksi summaa 
+                    $$\dfrac{3}{8} + \frac{5}{6}$$
+                    Sitä voidaan havainnollistaa piirroksella:
+                    <br>
+                    <img src="/kurssit/may1/kuvat/rationaaliK1.png" max-width: 100%; width: auto; height: auto;/> 
+                    <br>
+                    Jotta väritetyn alueen kokonaismäärä voidaan laskea, jaetaan kumpikin suorakulmio samanlaisiin osiin seuraavasti:
+                </p>
+                <ul>
+                    <li>
+                        Jaetaan ensimmäinen suorakulmio pystysuunnassa kuuteen osaan samalla tavalla kuin toinen suorakulmio.
+                    </li>
+                    <li>
+                        Jaetaan toinen suorakulmio vaakasuunnassa kahdeksaan osaan samalla tavalla kuin ensimmäinen suorakulmio.
+                    </li>
+                </ul>
+                <p>
+                    Näin saadaan molempiin samankokoiset ruudut:
+                    <br>
+                    <img src="/kurssit/may1/kuvat/rationaaliK2.png" max-width: 100%; width: auto; height: auto;/> 
+                    <br>
+                    Tämä vastaa yhteenlaskettavien laventamista samannimisiksi:
+                    \begin{align*}
+                    \dfrac{3}{\textcolor{blue}{8} } + \frac{5}{\textcolor{red}{6} } &= \dfrac{\textcolor{red}{6} \cdot 3}{\textcolor{red}{6} \cdot \textcolor{blue}{8} } + \frac{\textcolor{blue}{8} \cdot 5}{\textcolor{blue}{8} \cdot \textcolor{red}{6} } \\[2mm]
+                    &= \dfrac{18}{48} + \frac{40}{48}
+                    \end{align*}
+                    Kumpikin suorakulmio tulee jaetuksi $48$ osaan, mutta väritetyn osan pinta-ala pysyy samana. Nähdään, että sinisellä on väritetty yhteensä 58 pientä ruutua eli $\frac{58}{48}$ suorakulmion pinta-alasta.
+                </p>
+                <p>
+                    Järjestetään palat uudelleen siirtämällä mahdollisimman monta väritettyä palaa ensimmäiseen suorakulmioon. Havaitaan, että joka toinen vaakasuuntainen jakoviiva voidaan jättää pois:
+                    <img src="/kurssit/may1/kuvat/rationaaliK3.png" max-width: 100%; width: auto; height: auto;/> 
+                         <br>
+                    <img src="/kurssit/may1/kuvat/rationaaliK4.png" max-width: 100%; width: auto; height: auto;/> 
+                         Tulos voidaan siis ilmoittaa supistetussa muodossa 
+                         \begin{align*}
+                         \dfrac{3}{8} + \frac{5}{6} &= \dfrac{58}{48} \\[2mm]
+                         &=\dfrac{2\cdot 29}{2 \cdot 24}  \\[2mm]
+                         &=\dfrac{29}{24}  
+                         \end{align*}
+                         Luku $29$ ei ole jaollinen millään ykköstä suuremmalla luvulla paitsi itsellään, joten supistamista ei voi jatkaa tämän pidemmälle.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cd722-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali1">
+                                Yhteenlasku
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="rationaali1" class="collapse">
+                        <p>
+                            Laske kynän ja paperin avulla. Kirjoita välivaiheet näkyviin:
+                        </p>
+                        <ol class="a">
+                            <li> $\dfrac{2}{5} + \dfrac{1}{6}$ </li>
+                            <li> $\dfrac{9}{4} + \dfrac{8}{9}$ </li>
+                        </ol>
+                        <p>
+                            Voit tarkistaa tulokset laskimella tai tietokoneella.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kun murtolukua supistetaan, pitää löytää sellainen luku, joka jakaa sekä osoittajan että nimittäjän. Aikaisemmassa esimerkissä päädyttiin aluksi tulokseen
+                    $$
+                    \dfrac{58}{48}
+                    $$
+                    Sekä osoittaja että nimittäjä ovat parillisia, joten ne voidaan jakaa kahdella ja jako menee tasan:
+                    $$
+                    \dfrac{58}{2} = 29 \quad \text{ ja } \quad \dfrac{48}{2} = 24.
+                    $$
+                    Murtoluku voidaan siis supistaa kahdella:
+                    $$
+                    \dfrac{58}{48} = \dfrac{29}{24}
+                    $$
+                    Tämän jälkeen pitää muistaa tutkia, voiko supistamista jatkaa. Osoittajan ja nimittäjän yhteisiä tekijöitä voi löytää seuraavien tietojen avulla:
+                </p>
+                <ul>
+                    <li>
+                        Jos luku päättyy numeroon 0, se on jaollinen kymmenellä.
+                    </li>
+                    <li>
+                        Jos luku päättyy numeroon 5 tai 0, niin se on jaollinen viidellä.
+                    </li>
+                    <li>
+                        Jos luku on parillinen eli päättyy numeroon 2, 4, 6, 8 tai 0, niin se on jaollinen kahdella.
+                    </li>
+                    
+                    <li>
+                        Jos luvun numeroiden summa on jaollinen kolmella, niin myös luku on jaollinen kolmella. Esimerkiksi luvun $234$ numeroiden summa on $2 + 3 + 4 = 9$. Koska $9$ on jaollinen kolmella, myös luku $234$ on jaollinen kolmella. On mahdollista perustella, että kysymys ei ole sattumasta. 
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cd86c-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali1b">
+                                Supistaminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="rationaali1b" class="collapse">
+                        <p>
+                            Supista seuraavat luvut mahdollisimman pitkälle ja kirjoita välivaiheet näkyviin:
+                        </p>
+                        <ol class="a">
+                            <li> $\dfrac{2}{4}$</li>
+                            <li> $\dfrac{8}{12}$</li>
+                            <li> $\dfrac{15}{35}$</li>
+                            <li> $\dfrac{20}{100}$.</li>
+                        </ol>
+                        <p>
+                            Voit tarkistaa tulokset laskimella tai tietokoneella.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cd9b6-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali1c">
+                                Supistaminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="rationaali1c" class="collapse">
+                        <p>
+                            Kolme opiskelijaa treenasi murtoluvuilla laskemista. Opiskelija A laski oman tehtävänsä seuraavasti:
+                            $$\frac{6+9}{3} = 2 + 9 = 11.$$
+                            Opiskelija B puolestaan laski oman tehtävänsä näin
+                            $$\frac{6\cdot 9}{3} = 2\cdot 9 = 18.$$
+                            Opiskelija C laski saman tehtävän, mutta sai tulokseksi
+                            $$\frac{6\cdot 9}{3} = 2\cdot 3 = 6.$$
+                        </p>
+                        <ol class="a">
+                            <li> Mitä eroa opiskelijoiden A ja B tehtävillä oli? Selitä omin sanoin.</li>
+                            <li> Kuka opiskelijoista päätyi oikeaan lopputulokseen omassa laskussaan? Missä muut tekivät virheen?</li>
+                            <li> Kirjoita ohje, jonka avulla tällaisilta virheiltä vältytään jatkossa.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali1c_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="rationaali1c_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Opiskelijan A tehtävässä summa jaetaan kolmella. Opiskelijan B tehtävässä tulo jaetaan kolmella. 
+                                </li>
+                                <li> 
+                                    Opiskelija B laski oikein, sillä
+                                    $$
+                                    \frac{6\cdot 9}{3} = \dfrac{6}{3} \cdot 9 = 2 \cdot 9 = 18.
+                                    $$
+                                    Opiskelija A teki virheen. Hänen olisi pitänyt laskea ensin yhteenlasku
+                                    $$
+                                    \frac{6+9}{3} = \dfrac{15}{3} = 5
+                                    $$
+                                    tai supistaa molemmat yhteenlaskettavat
+                                    $$
+                                    \frac{6+9}{3} = \dfrac{6}{3} + \dfrac{9}{3} = 2 + 3 = 5.
+                                    $$
+                                    Myös opiskelija C teki virheen, koska hän supisti luvulla $3 \cdot 3 = 9$.
+                                </li>
+                                <li> 
+                                    Jos supistat summaa, laske ensin yhteenlasku. Jos yhteenlaskua ei voi jostain syystä laskea, muista supistaa jokainen yhteenlaskettava. Jos supistat tuloa, supista vain yhtä tulon tekijää.
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Murtolukujen vähennyslasku noudattaa samoja periaatteita kuin yhteenlasku: vähennettävä ja vähentäjä lavennetaan aina samannimisiksi ennen erotuksen laskemista. Yleispätevä tapa on valita laventajaksi aina toisen murtoluvun nimittäjä. Esimerkiksi erotuksessa
+                    $$
+                    \dfrac{1}{6} - \dfrac{2}{15}
+                    $$
+                    voidaan ensimmäinen murtoluku laventaa luvulla 15 ja toinen luvulla 6:
+                    \begin{align*}
+                    \dfrac{1}{\textcolor{blue}{6} } - \dfrac{2}{\textcolor{red}{15} } &= \dfrac{\textcolor{red}{15} \cdot 1}{\textcolor{red}{15} \cdot \textcolor{blue}{6}} - \dfrac{\textcolor{blue}{6} \cdot 2}{\textcolor{blue}{6} \cdot \textcolor{red}{15} } \\[2mm]
+                    &= \dfrac{15}{90} - \dfrac{12}{90} = \dfrac{3}{90} = \dfrac{1}{30}
+                    \end{align*}
+                    Joskus on mahdollista käyttää lavennuksessa pienempiä lukuja. Esimerkiksi tässä tapauksessa kumpikin nimittäjä on luvun 30 tekijä:
+                    $$
+                    5 \cdot 6 = 30 \quad \text{ ja } \quad 2 \cdot 15 = 30.
+                    $$
+                    Lavennus voidaan tehdä niin, että molempien murtolukujen nimittäjäksi tulee luku 30:
+                    \begin{align*}
+                    \dfrac{1}{6} - \dfrac{2}{15} &= \dfrac{\textcolor{red}{5} \cdot 1}{\textcolor{red}{5} \cdot 6} - \dfrac{\textcolor{blue}{2} \cdot 2}{\textcolor{blue}{2} \cdot 15 } \\[2mm]
+                    &= \dfrac{5}{30} - \dfrac{4}{30} = \dfrac{1}{30}
+                    \end{align*}
+                    Tärkeintä on kuitenkin hallita laventamisen yleispätevä tapa, koska se toimii kaikissa tilanteissa.
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cdb1e-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali2b">
+                                Yhteen- ja vähennyslasku
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="rationaali2b" class="collapse">
+                        <p>
+                            Laske ja kirjoita välivaiheet näkyviin: 
+                        </p>
+                        <ol class="a">
+                            <li> $\dfrac{5}{6} + \dfrac{3}{4}$</li>
+                            <li> $\dfrac{5}{6} - \dfrac{3}{4}$</li>
+                            <li> $\dfrac{6}{7} - \dfrac{3}{5}$ </li>
+                            <li> $\dfrac{2}{3} + \dfrac{7}{9}$</li>
+                            <li> $\dfrac{3}{5} - \dfrac{3}{4}$</li>
+                            <li> $\dfrac{4}{9} - \dfrac{5}{12}$.</li>
+                        </ol>
+                        <p>
+                            Voit tarkistaa tulokset laskimella tai tietokoneella.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cdc9a-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali3">
+                                Yhteen- ja vähennyslasku
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="rationaali3" class="collapse">
+                        <p>
+                            Muodosta sääntö, jonka mukaan saadaan laskettua  
+                        </p>
+                        <ol class="a">
+                            <li> summa $\ \dfrac{a}{b} + \dfrac{c}{d}$</li>
+                            <li> erotus $\ \dfrac{a}{b} - \dfrac{c}{d}$.</li>
+                        </ol>
+                        <p>
+                        Voit selittää omin sanoin ja käyttää apuna edellisiä tehtäviä.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali3_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="rationaali3_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    $\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad + bc}{bd}$ 
+                                </li>
+                                <li> 
+                                    $\dfrac{a}{b} - \dfrac{c}{d} = \dfrac{ad - bc}{bd}$
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Kun murtolukua kerrotaan kokonaisluvulla, voidaan tilanne palauttaa yhteenlaskuun. Esimerkiksi 
+                    \begin{align*}
+                    3 \cdot \frac{2}{7} &= \frac{2}{7} + \frac{2}{7} + \frac{2}{7} \\[2mm]
+                    &= \frac{2+2+2}{7} \\[2mm]
+                    &= \frac{3\cdot 2}{7} \\[2mm]
+                    &= \frac{6}{7}.
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9ce212-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali3b">
+                                Kokonaisluvulla kertominen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="rationaali3b" class="collapse">
+                        <ol class="a">
+                            <li> Laske $\ 5\cdot \dfrac{2}{13}$</li>
+                            <li> 
+                                Muodosta sääntö, jonka mukaan saadaan laskettua tulo 
+                                $$a \cdot \dfrac{b}{c}$$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali3b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="rationaali3b_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    $\dfrac{10}{13}$ 
+                                </li>
+                                <li> 
+                                    $a \cdot \dfrac{b}{c} = \dfrac{ab}{c}$
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="teoria">
+                    <p>
+                        Tarkastellaan seuraavaksi tuloa 
+                        $$\dfrac{3}{8} \cdot \frac{5}{6}$$
+                        Tämä kertolasku voidaan tulkita niin, että otetaan kolme kahdeksasosaa luvusta $\frac{5}{6}$:
+                    </p>
+                    <ul>
+                        <li>
+                            Vasemmalla on suorakulmio, josta viisi kuudesosaa on väritetty vihreäksi.
+                        </li>
+                        <li>
+                            Oikealla suorakulmio on jaettu kahdeksaan osaan vaakasuunnassa ja vihreästä alueesta on otettu kolme kahdeksasosaa.
+                        </li>
+                    </ul>
+                    <img src="/kurssit/may1/kuvat/rationaaliK5.png" max-width: 100%; width: auto; height: auto;/> 
+                    <p>
+                        Nyt vihreän alueen suuruus on 15 ruutua kaikista 48 ruudusta. Siis 
+                        $$\dfrac{3}{8} \cdot \frac{5}{6} = \frac{15}{48}$$
+                        Väritetyt palat voidaan järjestää uudelleen, jolloin huomataan, että pystysuuntaisia jakoviivoja voidaan vähentää:
+                        <br>
+                        <img src="/kurssit/may1/kuvat/rationaaliK6.png" max-width: 100%; width: auto; height: auto;/> 
+                        <br>
+                        Tulos voidaan siis ilmoittaa supistetussa muodossa 
+                        \begin{align*}
+                        \dfrac{3}{8} \cdot \frac{5}{6} &= \frac{15}{48} \\[2mm]
+                        &=\frac{3\cdot 5}{3\cdot 16} \\[2mm]
+                        &=\frac{5}{16}
+                        \end{align*}
+                    </p>
+                </div>
+                <div class="tehtavat">
+                    <div class="tehtava" id="dc9ce438-7df8-11e7-bb31-be2e44b06b34">
+                        <header>
+                            <h1>                            <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#rationaali4">
+                                    Kertolasku
+                                </a>
+                            </h1>
+                        </header>
+
+                        <div id="rationaali4" class="collapse">
+                            <p>
+                                Edellä pääteltiin, että 
+                                $$\dfrac{3}{8} \cdot \frac{5}{6} = \frac{15}{48}.$$ 
+                            </p>
+                            <ol class="a">
+                                <li> 
+                                    Selitä omin sanoin, mitä murtolukujen osoittajille ja nimittäjille pitää tehdä, että päätyy tällaiseen tulokseen.
+                                </li>
+                                <li> 
+                                    Muodosta sääntö, jonka mukaan saadaan laskettua tulo 
+                                    $$\dfrac{a}{b} \cdot \dfrac{c}{d}.$$
+                                </li>
+                            </ol>
+                            <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali4_v">
+                                VASTAUS
+                            </a>
+                            </h2>
+                            <div id="rationaali4_v" class="collapse">
+                               <ol class="a">
+                                    <li> Osoittajat pitää kertoa keskenään ja nimittäjät pitää kertoa keskenään. </li>
+                                    <li> $\dfrac{a}{b} \cdot \dfrac{c}{d} = \dfrac{ac}{bd}$ </li>
+                                </ol>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teoria">
+                    <p>
+                        Murtolukujen kertolaskussa supistuksia voi tehdä jo ennen kertolaskun laskemista, jolloin luvut pysyvät pienempinä ja päässälaskut ovat helpompia. Esimerkissä tutkittiin tuloa
+                        $$
+                        \dfrac{3}{8} \cdot \frac{5}{6}
+                        $$
+                        Kumpaakaan murtolukua ei voi supistaa pidemmälle, mutta toisen murtoluvun osoittaja ja toisen nimittäjä ovat kumpikin kolmella jaollisia:
+                        $$
+                        \dfrac{3}{8} \cdot \frac{5}{6} = \dfrac{1 \cdot \textcolor{red}{3} }{8} \cdot \frac{5}{2 \cdot \textcolor{red}{3} }
+                        $$
+                        Koska osoittajat ja nimittäjät kuitenkin kerrotaan keskenään, voidaan supistaminen tehdä jo ennen kertolaskua:
+                        $$
+                        \dfrac{3}{8} \cdot \frac{5}{6} = \dfrac{1 \cdot \textcolor{red}{3} }{8} \cdot \frac{5}{2 \cdot \textcolor{red}{3} } = \dfrac{1}{8} \cdot \dfrac{5}{2} = \dfrac{5}{16}
+                        $$
+                    </p>
+                </div>
+
+                <div class="tehtavat">
+                    <div class="tehtava" id="dc9ce5a0-7df8-11e7-bb31-be2e44b06b34">
+                        <header>
+                            <h1>                            <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#rationaali5">
+                                    Kertolasku
+                                </a>
+                            </h1>
+                        </header>
+
+                        <div id="rationaali5" class="collapse">
+                            <p>
+                                Laske ja kirjoita välivaiheet näkyviin. Kannattaa miettiä jo hyvissä ajoin, onko supistaminen mahdollista.
+                            </p> 
+                            <ol class="a">
+                                <li> $\dfrac{5}{6} \cdot \dfrac{3}{4}$</li>
+                                <li> $\dfrac{3}{4} \cdot \dfrac{2}{7}$</li>
+                                <li> $\dfrac{3}{2} \cdot \dfrac{7}{9}$</li>
+                                <li> $\dfrac{4}{5} \cdot \dfrac{1}{8}$.</li>
+                            </ol>
+                            <p>
+                                Voit tarkistaa vastauksesi laskimella.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teoria">
+                    <p>
+                        Kaikilla rationaaliluvuilla nollaa lukuunottamatta on olemassa niin sanottu käänteisluku. Seuraavassa määritelmässä sovitaan, mitä käänteisluku tarkoittaa.
+                    </p>
+
+                    <div class="definition">
+                        <h3>MÄÄRITELMÄ: KÄÄNTEISLUKU</h3>
+                        <p>
+                            Oletetaan, että $a \neq 0$. Luvun $a$ <em>käänteisluku</em> 
+                            $$\frac{1}{a}$$
+                            tarkoittaa lukua, joka luvulla $a$ kerrottuna antaa tuloksen yksi:
+                            $$a \cdot \frac{1}{a} = 1$$ 
+                        </p>
+                    </div>
+                </div>
+                <div class="tehtavat">
+                    <div class="tehtava" id="dc9ce6f4-7df8-11e7-bb31-be2e44b06b34">
+                        <header>
+                            <h1>                            <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#rationaali8">
+                                    Käänteisluku
+                                </a>
+                            </h1>
+                        </header>
+
+                        <div id="rationaali8" class="collapse">
+                            <ol class="a">
+                                <li> Mikä on luvun $4$ käänteisluku? Anna vastaus murtolukumuodossa ja desimaalilukumuodossa.</li>
+                                <li> Mikä on luvun $\frac{2}{3}$ käänteisluku? Anna vastaus murtolukumuodossa ja desimaalilukumuodossa.</li>
+                            </ol>
+                            <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali8_v">
+                                VASTAUS
+                            </a>
+                            </h2>
+                            <div id="rationaali8_v" class="collapse">
+                               <ol class="a">
+                                    <li> $\dfrac{1}{4} = 0{,}25$ </li>
+                                    <li> $\dfrac{3}{2} = 1{,}5$ </li>
+                                </ol>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teoria">
+                    <p>
+                        Edellisen tehtävän b-kohta antaa yhden selityksen nimitykselle käänteisluku. Murtoluvun käänteisluku saadaan siinä kääntämällä osoittaja ja nimittäjä toisikseen. Kysymyksessä ei ole sattuma, kuten seuraava teoreema osoittaa. 
+                    </p>
+                    <p>
+                        Teoreemat (toiselta nimeltään lauseet) ovat matemaattisia tosiasioita, jotka voidaan perustella todeksi määritelmien pohjalta. Lue teoreeman perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+                    </p>
+
+                    <div class="theorem" id="KÄÄNTEISLUKU">
+                        <h3>TEOREEMA</h3>
+                        <p>
+                            Oletetaan, että $m \neq 0$ ja $n \neq 0$. Tällöin luvut
+                            $$
+                            \dfrac{m}{n} \quad \text{ ja } \quad \dfrac{n}{m}
+                            $$ 
+                            ovat toistensa käänteislukuja.
+                        </p>
+                        <div class="proof">
+                        <p>
+                            Perustelu: Kumpikin osamäärä on määritelty ja nollasta poikkeava, koska $m \neq 0$ ja $n \neq 0$. Lisäksi
+                            $$
+                            \dfrac{m}{n} \cdot \dfrac{n}{m} = \dfrac{mn}{mn} = 1,
+                            $$
+                            joten luvut ovat toistensa käänteislukuja.
+                        </p>
+                    </div>
+                    </div>
+
+                    <p>
+                        Tutkitaan vielä rationaalilukujen jakolaskua. Aloitetaan tutkimalla, miten voidaan havainnollistaa jakolaskua $5:2$. 
+                    </p>
+                    <p>
+                        Alla on kuvattu luku $5$ viitenä värillisenä neliönä. 
+                        <img src="/kurssit/may1/kuvat/rationaaliK10.png" max-width: 100%; width: auto; height: auto;/> 
+                        Laskutoimitusta $5 : 2$ voidaan havainnollistaa kahdella tavalla:
+                    </p>
+                    <ul>
+                        <li>
+                            Viisi neliötä jaetaan kahdelle henkilölle niin, että kumpikin saa kaksi kokonaista ja yhden puolikkaan:
+                            <img src="/kurssit/may1/kuvat/rationaaliK12.png" max-width: 100%; width: auto; height: auto;/>
+                        </li>
+                        <li>
+                            Viidestä neliöstä muodostetaan kahden neliön kokoista suorakulmiota:
+                            <img src="/kurssit/may1/kuvat/rationaaliK11.png" max-width: 100%; width: auto; height: auto;/>
+                        </li>
+                    </ul>
+                    <p>
+                        Molemmilla tavoilla päästään samaan lopputulokseen:
+                        $$\frac{5}{2} = 2{,}5.$$
+                        Jos jakajana on murtoluku, jakolaskua on helpompi havainnollistaa näistä tavoista jälkimmäisellä. Esimerkiksi jakolaskua
+                        $$\dfrac{3}{8} : \frac{5}{6}$$
+                        voi havainnollistaa seuraavasti:
+                    </p>
+                    <ul>
+                        <li>
+                            Vasemmalla on suorakulmio, josta kolme kahdeksasosaa on väritetty keltaiseksi. 
+                        </li>
+                        <li>
+                            Oikealla suorakulmio on jaettu pystysuunnassa vielä kuuteen osaan ja viisi kuudesosaa on rajattu paksuilla viivoilla. 
+                        </li>
+                    </ul>
+                    <img src="/kurssit/may1/kuvat/rationaaliK7.png" max-width: 100%; width: auto; height: auto;/> 
+                    <p>
+                        Tehtävänä on siirtää kaikki värilliset ruudut tämän alueen sisään ja katsoa, kuinka iso osuus täyttyy. Katsotaan siis, kuinka monta viittä kuudesosaa voidaan muodostaa kolmesta kahdeksasosasta:
+                        <br>
+                        <img src="/kurssit/may1/kuvat/rationaaliK9.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Havaitaan, että värillisiä ruutuja on 18 kpl ja ruutuja kaikkiaan 40 kpl. Kun ruudut järjestetään sopivasti, voidaan joka toinen vaakaviiva jättää pois ja tulos voidaan ilmoittaa supistetussa muodossa
+                        \begin{align*}
+                        \dfrac{3}{8} : \frac{5}{6} &= \frac{18}{40} \\[2mm]
+                        &=\frac{2\cdot 9}{2\cdot 20} \\[2mm]
+                        &= \frac{9}{20}.
+                        \end{align*}
+                    </p>
+                </div>
+
+                <div class="tehtavat">
+                    <div class="tehtava" id="dc9ce870-7df8-11e7-bb31-be2e44b06b34">
+                        <header>
+                            <h1>                            <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#rationaali6">
+                                    Jakolasku
+                                </a>
+                            </h1>
+                        </header>
+
+                        <div id="rationaali6" class="collapse">
+                            <p>
+                                Edellä pääteltiin, että 
+                                $$\dfrac{3}{8} : \frac{5}{6} = \frac{18}{40}.$$ 
+                            <ol class="a">
+                                <li> 
+                                    Päättele esimerkiksi kokeilemalla, millä luvulla luku 
+                                    $$\dfrac{3}{8}$$ 
+                                    pitäisi <b>kertoa</b>, että tuloksena olisi 
+                                    $$\dfrac{18}{40}$$
+                                </li>
+                                <li> 
+                                    Muodosta sääntö, jonka mukaan jakolasku 
+                                    $$\dfrac{a}{b} : \dfrac{c}{d}$$ 
+                                    muutetaan kertolaskuksi.
+                                </li>
+                            </ol>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tehtavat">
+                    <div class="tehtava" id="dc9cee60-7df8-11e7-bb31-be2e44b06b34">
+                        <header>
+                            <h1>                            <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#rationaali7">
+                                    Jakolasku
+                                </a>
+                            </h1>
+                        </header>
+
+                        <div id="rationaali7" class="collapse">
+                            <p>
+                                Laske ja kirjoita välivaiheet näkyviin. Käytä edellisessä tehtävässä kehittämääsi sääntöä, jolla jakolasku muutetaan kertolaskuksi. Mieti ennen kertolaskun laskemista, onko supistaminen mahdollista.
+                            </p>
+                            <ol class="a">
+                                <li> $\dfrac{3}{5} : \dfrac{9}{10}$</li>
+                                <li> $\dfrac{1}{2} : \dfrac{1}{3}$</li>
+                                <li> $\dfrac{2}{5} : \dfrac{1}{4}$</li>
+                                <li> $\dfrac{1}{4} : \dfrac{5}{8}$.</li>
+                            </ol>
+                            <p>
+                                Voit tarkistaa vastauksesi laskimella tai tietokoneella.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teoria">
+                    <p>
+                        Kootaan vielä tässä kappaleessa opitut murtolukujen laskusäännöt yhteen:
+                    </p>
+
+                    <div class="theorem" id="MURTOLUKUJEN LASKUSÄÄNNÖT">
+                        <h3>YHTEENVETO</h3>
+                        <ul>
+                            <li> 
+                                Yhteenlaskussa ja vähennyslaskussa murtoluvut lavennetaan samannimisiksi. Sen jälkeen osoittajilla tehdään yhteen- tai vähennyslasku:
+                                \begin{align*}
+                                \dfrac{a}{b} + \dfrac{c}{d} &= \dfrac{ad}{bd} + \dfrac{bc}{bd} = \dfrac{ad + bc}{bd} \\[3mm]
+                                \dfrac{a}{b} - \dfrac{c}{d} &= \dfrac{ad}{bd} - \dfrac{bc}{bd} = \dfrac{ad - bc}{bd}
+                                \end{align*}
+                            </li>
+                            <li>  
+                                Kun murtolukua kerrotaan kokonaisluvulla, kerrotaan vain osoittaja:
+                                $$
+                                a \cdot \dfrac{b}{c} = \dfrac{ab}{c}
+                                $$
+                            </li>
+                            <li>  
+                                Murtolukujen kertolaskussa osoittajat kerrotaan keskenään ja nimittäjät keskenään:
+                                $$
+                                \dfrac{a}{b} \cdot \dfrac{c}{d} = \dfrac{ac}{bd}
+                                $$
+                            </li>
+                            <li>
+                                Murtolukujen jakolasku muutetaan kertolaskuksi. Kerrotaan jakajan eli jälkimmäisen luvun käänteisluvulla:
+                                $$
+                                \dfrac{a}{b} : \dfrac{c}{d} = \dfrac{a}{b} \cdot \dfrac{d}{c} = \dfrac{ad}{bc}
+                                $$
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tehtavat">
+                    <div class="tehtava" id="dc9cf02c-7df8-11e7-bb31-be2e44b06b34">
+                        <header>
+                            <h1>                            <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#rationaali7c">
+                                    Murtoluvuilla laskeminen
+                                </a>
+                            </h1>
+                        </header>
+
+                        <div id="rationaali7c" class="collapse">
+                            <p>
+                                Harjoittele murtoluvuilla laskemista tämän <a href="https://www.geogebra.org/m/kbRCOjlQ">pelin</a> avulla. Saat käyttää kynää ja paperia apuna. Pelin tavoitteena on saada kymmenen oikeaa vastausta peräkkäin. 
+                            </p>
+                            <p>
+                                Pelissä käytetään jakoviivana merkkiä /. Esimerkiksi yksi kolmasosa merkitään 1/3. Anna vastaukset mahdollisimman supistetussa muodossa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teoria">
+                    <p>Joskus murtolukujen yhteydessä esiintyy niin sanottuja <em>sekalukuja</em>. Esimerkiksi luku $\frac{7}{3}$ saatetaan ilmoittaa muodossa
+                        $$2\frac{1}{3}.$$
+                        Tästä merkinnästä näkyy suoraan luvun <em>kokonaisosa</em>, joka on $2$. Sekaluku on oikeastaan lyhennysmerkintä summalle:
+                        $$2\frac{1}{3} = 2 + \frac{1}{3} = \frac{6}{3} + \frac{1}{3} = \frac{7}{3}.$$
+                        Sekalukumuodossa annetut luvut kannattaakin aina muuttaa tavalliseen murtolukumuotoon ennen laskutoimituksia. Huomaa, että negatiivisen sekaluvun etumerkki vaikuttaa myös murtolukuosaan:
+                        \begin{align*}
+                        -7\frac{9}{10} &= -\left(7 + \frac{9}{10}\right) \\[2mm]
+                        &= -7 - \frac{9}{10} \\[2mm]
+                        &= -\frac{70}{10} - \frac{9}{10} \\[2mm]
+                        &= -\frac{79}{10}.
+                        \end{align*}
+                    </p>
+                </div>
+                <div class="tehtavat">
+                    <div class="tehtava" id="dc9cf1b2-7df8-11e7-bb31-be2e44b06b34">
+                        <header>
+                            <h1>                            <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#rationaali8b">
+                                    Sekaluvut
+                                </a>
+                            </h1>
+                        </header>
+
+                        <div id="rationaali8b" class="collapse">
+                            <ol class="a">
+                                <li> Muuta luvut $4\dfrac{1}{2}\, $ ja $\, -6\dfrac{11}{46}$ murtolukumuotoon.</li>
+                                <li> Muuta luvut $\dfrac{12}{5}\, $ ja $\, -\dfrac{16}{6}$ sekalukumuotoon.</li>
+                            </ol>
+                            <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali8b_v">
+                                VASTAUS
+                            </a>
+                            </h2>
+                            <div id="rationaali8b_v" class="collapse">
+                               <ol class="a">
+                                    <li> $4\dfrac{1}{2} = \dfrac{9}{2}\ $ ja $\ -6\dfrac{11}{46} = -\dfrac{287}{46}$ </li>
+                                    <li> $\dfrac{12}{5} = 2\dfrac{2}{5}\ $ ja $\ -\dfrac{16}{6} = -2\dfrac{2}{3}$ </li>
+                                </ol>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="teoria">
+                    <p>
+                        Rationaaliluvut voidaan murtolukumuodon lisäksi esittää desimaalimuodossa. Esimerkiksi 
+                        \begin{align*}
+                        \frac{3365}{673} &= 5 \\[2mm]
+                        \frac{45}{8} &= 5{,}625 \\[2mm]
+                        \frac{3}{22} &= 0{,}1363636363636\ldots \\
+                        \end{align*}
+                        Rationaaliluvun desimaalimuoto voi siis olla päättyvä, tai päättymätön ja jaksollinen. Joillakin rationaaliluvuilla jakso on niin pitkä, että laskimen antama likiarvo näyttää jaksottomalta: esimerkiksi 
+                        $$\frac{18}{295} = 0{,}061016949153\ldots$$
+                        Voidaan kuitenkin osoittaa, että kaikki rationaalilukujen päättymättömät desimaalikehitelmät ovat jaksollisia. 
+                    </p>
+                </div>
+
+                <div class="tehtavat">
+                    <div class="tehtava" id="dc9cf338-7df8-11e7-bb31-be2e44b06b34">
+                        <header>
+                            <h1>                            <div class="checkbox-group"></div>
+                                <a data-toggle="collapse" class="collapsed" data-target="#rationaali9">
+                                    Desimaalimuodosta murtolukumuotoon
+                                </a>
+                            </h1>
+                        </header>
+
+                        <div id="rationaali9" class="collapse">
+                            <p> Muuta murtolukumuotoon ja supista mahdollisimman pitkälle:
+                            </p>
+                            <ol class="a">
+                                <li> $0{,}1$</li>
+                                <li> $0{,}64$</li>
+                                <li> $0{,}285$</li>
+                                <li> $2{,}376$.</li>
+                            </ol>
+                            <p>
+                                Vinkki: Mieti, mitä murto-osia desimaaliluku ilmaisee. Esimerkiksi $0{,}7$ on seitsemän kymmenesosaa. Siis 
+                                $$
+                                0{,}7 = \dfrac{7}{10}
+                                $$
+                            </p>
+                            <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#rationaali9_v">
+                                VASTAUS
+                            </a>
+                            </h2>
+                            <div id="rationaali9_v" class="collapse">
+                               <ol class="a">
+                                    <li> $0{,}1 = \dfrac{1}{10}$</li>
+                                    <li> $0{,}64 = \dfrac{64}{100} = \dfrac{16}{25}$</li>
+                                    <li> $0{,}285 = \dfrac{285}{1000} = \dfrac{57}{200}$</li>
+                                    <li> $2{,}376 = \dfrac{2376}{1000} = \dfrac{297}{125}$.</li>
+                                </ol>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teoria">
+                    <p>
+                        Päättyvässä desimaalimuodossa oleva luku voidaan aina muuttaa murtolukumuotoon samalla periaatteella kuin edellisessä tehtävässä. Jakajaksi otetaan jokin luvuista 10, 100, 1000, 10000, ... riippuen siitä, mikä on pienin desimaaliluvussa näkyvä murto-osa. Esimerkiksi luvussa $3{,}142$ viimeinen numero 2 ilmaisee tuhannesosia, joten jakajaksi valitaan luku 1000. Siis
+                        $$
+                        3{,}142 = \dfrac{3142}{1000} = \dfrac{1571}{500}.
+                        $$
+                        Päättymättömien jaksollisten desimaalilukujen muuttamista murtolukumuotoon harjoitellaan tehtäväsarjan II tehtävissä 1.44 ja 1.45.
+                    </p>
+                </div>
+
+            </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#Reaaliluvut">
+                    Reaaliluvut
+                </a>
+            </h1>
+        </header>
+        <div id="Reaaliluvut" class="collapse">
+            <div class="teoria">
+                <p>
+                    Edes rationaaliluvut eivät riitä kaikkien asioiden mittaamiseen. Esimerkiksi alla on neliö, jonka sivun pituus on $1$. Tämän neliön halkaisijan pituus $x$ on luku, jota ei voi esittää murtolukumuodossa.
+                </p>
+                <p>
+                    <img src="/kurssit/may1/kuvat/reaaliK1.png" max-width: 100%; width: auto; height: auto;/> 
+                </p>
+                <p> Pythagoraan lauseen mukaan halkaisijan pituus saadaan yhtälöstä 
+                    $$1^2 + 1^2 = x^2$$
+                    eli
+                    $$x^2 = 2.$$
+                    On kuitenkin mahdollista näyttää, että minkään rationaaliluvun toinen potenssi ei ole $2$. Tästä voidaan päätellä, että halkaisijan pituus $x$ ei ole rationaaliluku.
+                </p>
+                <p> 
+                    Sitä positiivista lukua, jonka toinen potenssi on $2$, kutsutaan luvun 2 <em>neliöjuureksi</em> ja merkitään $\sqrt{2}$. Halkaisijan pituus on siis $x = \sqrt{2}$. Sille voidaan laskea likiarvo: $x = \sqrt{2} \approx 1{,}41421$. 
+                </p>
+                <p>
+                    Luku $\sqrt{2}$ on yksi esimerkki <em>irrationaaliluvusta</em> eli lukusuoran luvusta, jota ei voi esittää murtolukumuodossa. Muita irrationaalilukuja ovat esimerkiksi $\sqrt{3}$ ja $\pi$. 
+                </p>
+                <p>
+                    Rationaaliluvut ja irrationaaliluvut yhdessä muodostavat <em>reaalilukujen joukon</em>. Reaalilukujen joukkoa havainnollistetaan usein lukusuoralla, jossa jokaista reaalilukua vastaa täsmälleen yksi piste. 
+                </p>
+                <p>
+                    <img src="/kurssit/may1/kuvat/reaaliK2.png" max-width: 100%; width: auto; height: auto;/> 
+                </p>
+                <p> 
+                    Jokainen reaaliluku voidaan esittää desimaalimuodossa ainakin yhdellä tavalla. Kuten aikaisemmin todettiin, rationaalilukujen desimaalikehitelmät ovat päättyviä, tai päättymättömiä ja jaksollisia. Irrationaalilukujen desimaalikehitelmät puolestaan ovat päättymättömiä ja jaksottomia. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cf4aa-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#reaali2a">
+                                Reaalilukujen desimaalikehitelmät
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="reaali2a" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Mitkä ovat luvun $\pi$ desimaalikehitelmän kymmenen ensimmäistä numeroa?
+                            </li>
+                            <li> 
+                                Tutki esimerkiksi googlaamalla, kuinka monta numeroa luvun $\pi$ desimaalikehitelmästä on saatu laskettua.
+                            </li>
+                            <li>
+                                Minkä geometrisen suhteen luku $\pi$ ilmaisee?
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Jotta laskutoimituksia yhdistettäessä ei tarvittaisi valtavaa määrää sulkuja laskujärjestyksen osoittamiseksi, on sovittu peruslaskutoimitusten laskujärjestys, jota kaikki reaaliluvut noudattavat. Miten sen mukaan lasketaan esimerkiksi seuraavan lausekkeen arvo?
+                    $$7-6^2:4 \cdot 2 + (3-8)^2 \cdot 9 +1$$
+                    Laskujärjestys on seuraava:
+                <ol>
+                    <li> Ensimmäisenä lasketaan sulkulausekkeet. Jos lausekkeessa on useita sulkeita, laskeminen aloitetaan sisimmistä sulkeista ja edetään ulospäin. Esimerkkimme näyttää tämän vaiheen jälkeen seuraavalta:
+                        $$7-6^2:4 \cdot 2 + (-5)^2 \cdot 9 +1.$$</li>
+                    <li> Seuraavaksi lasketaan potenssit. Esimerkkimme näyttää tämän vaiheen jälkeen seuraavalta:
+                        $$7-36:4 \cdot 2 + 25 \cdot 9 +1.$$</li>
+                    <li> Tämän jälkeen lasketaan kerto- ja jakolaskut vasemmalta oikealle. Esimerkkimme näyttää tämän vaiheen jälkeen seuraavalta:
+                        $$7-18 + 225 +1.$$</li>
+                    <li> Viimeisenä lasketaan yhteen- ja vähennyslaskut vasemmalta oikealle. Vastaukseksi saamme siis
+                        $$215.$$</li>
+                </ol>
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cf608-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#reaali2">
+                                Laskujärjestys
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="reaali2" class="collapse">
+                        <p> Laske seuraavien lausekkeiden arvo:
+                        </p>
+                        <ol class="a">
+                            <li> $8 \cdot 7 -48 :8 +4$</li>
+                            <li> $8 \cdot 7 -48 : (8+4)$</li>
+                            <li> $8 \cdot (7 -48 : 8 +4)$</li>
+                            <li> $8 \cdot 7 - (48 :8 +4)$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#reaali2_v">
+                                VASTAUS
+                            </a>
+                            </h2>
+                            <div id="reaali2_v" class="collapse">
+                               <ol class="a">
+                                    <li> $8 \cdot 7 -48 :8 +4 = 54$</li>
+                                    <li> $8 \cdot 7 -48 : (8+4) = 52$</li>
+                                    <li> $8 \cdot (7 -48 : 8 +4) = 40$</li>
+                                    <li> $8 \cdot 7 - (48 :8 +4) = 46$</li>
+                                </ol>
+                            </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="c33b1e25-72ce-49be-8736-cb2aabef19fe">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#reaali2c">
+                                Laskujärjestys
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="reaali2c" class="collapse">
+                        <p> Laske seuraavien lausekkeiden arvo:
+                        </p>
+                        <ol class="a">
+                            <li> $2 + 3 \cdot \dfrac{5}{6}$</li>
+                            <li> $\dfrac{2}{3} - \dfrac{1}{4} \cdot \dfrac{4}{5}$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#reaali2c_v">
+                                VASTAUS
+                            </a>
+                            </h2>
+                            <div id="reaali2c_v" class="collapse">
+                               <ol class="a">
+                                    <li> $\dfrac{9}{2} = 4{,}5$</li>
+                                    <li> $\dfrac{7}{15}$</li>
+                                </ol>
+                            </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cf770-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#reaali2b">
+                                Laskujärjestys
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="reaali2b" class="collapse">
+                        <p> 
+                            Harjoittele oikeaa laskujärjestystä tämän <a href="https://www.geogebra.org/m/TjkaWFeK">pelin</a> avulla. Saat käyttää kynää ja paperia apuna. Pelin tavoitteena on saada kymmenen oikeaa vastausta peräkkäin. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Reaalilukujen yhteenlaskun tutut ominaisuudet on nimetty seuraavasti:
+                <ul>
+                    <li><em>Vaihdannaisuus</em> tarkoittaa, että yhteenlaskettavien järjestyksen voi vaihtaa:
+                        $$a + b = b + a.$$
+                    </li>
+                    <li><em>Liitännäisyys</em> tarkoittaa, että peräkkäiset yhteenlaskut voi suorittaa yhtä hyvin järjestyksessä vasemmalta oikealle tai oikealta vasemmalle:
+                        $$(a + b)+c = a + (b + c).$$
+                        Koska tulos on sama riippumatta siitä, miten sulut on asetettu, ne voidaan myös jättää kokonaan pois.
+                    </li>
+                    <li><em>Osittelulain</em> mukaan sulut voidaan kertoa auki tai voidaan erottaa yhteinen tekijä: 
+                        $$a(b+c) = ab + ac.$$
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cfd56-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#reaali3">
+                                Laskulait
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="reaali3" class="collapse">
+                        <p> 
+                            Edellä tarkasteltiin reaalilukujen yhteenlaskua. Toinen tärkeä laskutoimitus on kertolasku. Selitä omin sanoin, mitä tarkoittaa reaalilukujen kertolaskun 
+                        </p>
+                        <ol class="a">
+                            <li> vaihdannaisuus</li>
+                            <li> liitännäisyys.</li>
+                        </ol>
+                        <p>
+                        Keksi lisäksi esimerkit, jotka havainnollistavat näitä ominaisuuksia.
+                        </p>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#reaali3_v">
+                            VASTAUS
+                        </a>
+                        </h2>
+                        <div id="reaali3_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Kertolaskun vaihdannaisuus tarkoittaa, että tulon tekijöiden järjestyksen voi vaihtaa: 
+                                    $$ab = ba.$$
+                                    Esimerkiksi $3 \cdot 4 = 12$ ja $4 \cdot 3 = 12$. Sama tulos riippumatta tulon tekijöiden järjestyksestä.
+                                </li>
+                                <li> 
+                                    Kertolaskun liitännäisyys tarkoittaa, että peräkkäiset kertolaskut voi suorittaa yhtä hyvin järjestyksessä vasemmalta oikealle tai oikealta vasemmalle:
+                                    $$(ab)c = a(bc).$$
+                                    Esimerkiksi $(2 \cdot 3) \cdot 5 = 6 \cdot 5 = 30$ ja $2 \cdot (3 \cdot 5) = 2 \cdot 15 = 30$. Sama tulos riippumatta siitä, kumpi tulo lasketaan ensin.
+                                    Koska tulos on sama riippumatta siitä, miten sulut on asetettu, ne voidaan myös jättää kokonaan pois. 
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dc9cff2c-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#reaali4">
+                                Laskulait
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="reaali4" class="collapse">
+                        <p> 
+                            Tehtävänä on muokata seuraavat laskut vaihdannaisuuden, liitännäisyyden ja osittelulain avulla sellaiseen muotoon, että ne on mahdollisimman helppo laskea päässä.
+                        </p>
+                        <ol class="a">
+                            <li> Laske liitännäisyyttä ja vaihdannaisuutta hyödyntäen $917 + (856 + 83)$.</li>
+                            <li> Laske liitännäisyyttä ja vaihdannaisuutta hyödyntäen $(4\cdot 76) \cdot 250$.</li>
+                            <li> Laske osittelulakia hyödyntäen $769 \cdot 7 + 769 \cdot 3$.</li>
+                            <li> Laske osittelulakia hyödyntäen $25 \cdot 42$.</li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#reaali4_v">
+                            VASTAUS
+                        </a>
+                        </h2>
+                        <div id="reaali4_v" class="collapse">
+                            <p>
+                                Välivaiheet:
+                            </p>
+                            <ol class="a">
+                                <li> $1000 + 856$</li>
+                                <li> $1000 \cdot 76$</li>
+                                <li> $769 \cdot 10$</li>
+                                <li> $25 \cdot 40 + 25\cdot 2 = 1000 + 50$</li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="dc9d0094-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL5">
+                            Summa ja erotus
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL5">
+                    <p> 
+                        Ilmaise luku $-5$ mahdollisimman monella tavalla summana tai erotuksena lukujen $4$ ja $9$ sekä niiden vastalukujen avulla. Keksitkö neljä erilaista tapaa?
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtava" id="dc9d01fc-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL7">
+                            Laskujärjestys
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL7">
+                    <p> Laske päässä
+                    </p>
+                    <ol class="a">
+                        <li> $20 - 3\cdot 4 + 5$</li>
+                        <li> $20 - (3\cdot 4 + 5)$</li>
+                        <li> $(20 - 3)\cdot 4 + 5$</li>
+                    </ol>
+                    <p>
+                        Onko a-kohdan lausekkeeseen mahdollista lisätä sulkuja vielä jollakin tavalla niin, että tulos ei ole mikään edellisistä? Saat käyttää niin paljon sulkuja kuin haluat.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL7_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL7_v" class="collapse">
+                        <ol class="a">
+                            <li> 13 </li>
+                            <li> 3 </li>
+                            <li> 73 </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="dc9d033c-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#LL1">
+                            Vastaluku ja käänteisluku
+                        </a>
+                    </h1>
+                </header>
+                <div id="LL1">
+                    <p>  
+                        Laske lukujen $3$ ja $-12$
+                    <ol class="a">
+                        <li> summan vastaluku</li>
+                        <li> vastalukujen erotus</li>
+                        <li> käänteislukujen tulo</li>
+                        <li> osamäärän käänteisluku.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL1_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL1_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $9$</li>
+                            <li> $-15$</li>
+                            <li> $-\dfrac{1}{36}$</li>
+                            <li> $-4$.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="dc9d04a4-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL4"> Vastaluku
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL4">
+                    <p> Keksi esimerkki luvusta $a$, jolla pätee
+                    <ol class="a">
+                        <li> $-a < a$</li>
+                        <li> $-a > a$</li>
+                        <li> $-a = a$.</li>
+                    </ol>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d09ae-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL6">
+                            Jakolasku ja kertolasku
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL6">
+                    <p> 
+                        Jakolasku ja kertolasku liittyvät toisiinsa seuraavasti:
+                        $$\frac{a}{b} = c,$$
+                        jos ja vain jos $a = bc$. Tarkista kertolaskun avulla, ovatko seuraavat jakolaskut oikein:
+                    </p>
+                    <ol class="a">
+                        <li> $\dfrac{56}{7} = 8$</li>
+                        <li> $\dfrac{682}{16} = 42$</li>
+                        <li> $\dfrac{3}{0} = 1$</li>
+                    </ol>
+                    <p>
+                        Onko c-kohdan jakolasku mahdollista korjata oikeaksi vaihtamalla luvun $1$ paikalle jokin toinen luku? Selitä omin sanoin.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL6_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL6_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> oikein </li>
+                            <li> väärin </li>
+                            <li> väärin </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d0b98-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL14">
+                            Rationaaliluvut
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL14">
+                    <p> Järjestä seuraavat luvut pienimmästä suurimpaan:
+                        $$\frac{2}{3},\, \frac{1}{2},\, \frac{3}{5},\, \frac{7}{10}, \,\frac{4}{15}.$$
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL14_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL14_v" class="collapse">
+                        <p>
+                            $$\frac{4}{15},\, \frac{1}{2},\, \frac{3}{5},\, \frac{2}{3},\, \frac{7}{10}.$$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d0d1e-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL2">
+                            Lukualueet
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL2">
+                    <ol class="a">
+                        <li> Keksi jokin kokonaisluku, joka ei ole luonnollinen luku.</li>
+                        <li> Keksi jokin rationaaliluku, joka on myös luonnollinen luku.</li>
+                        <li> Keksi jokin rationaaliluku, joka ei ole kokonaisluku.</li>
+                        <li> Onko mahdollista keksiä sellainen kokonaisluku, joka ei ole rationaaliluku?</li>
+                    </ol>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d0e90-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL12">
+                            Kertolasku ja supistaminen
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL12">
+                    <p> Laske seuraavat tulot. Supista ennen kertolaskujen laskemista, niin selviät helpommalla.
+                    <ol class="a">
+                        <li> $\dfrac{1}{3} \cdot  \dfrac{6}{7}$</li>
+                        <li> $\dfrac{2}{15} \cdot  \dfrac{3}{16}$</li>
+                        <li> $\dfrac{10}{9} \cdot  \dfrac{6}{25}$.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL12_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL12_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $\frac{2}{7}$ </li>
+                            <li> $\frac{1}{40}$ </li>
+                            <li> $\frac{4}{15}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d0ff8-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL8">
+                            Murtolukujen kertolasku
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL8">
+                    <p> Laske, kuinka paljon on
+                    </p>
+                    <ol class="a">
+                        <li> kaksi viidesosaa luvusta $\dfrac{3}{4}$</li>
+                        <li> kolmasosa luvusta $\dfrac{5}{7}$</li>
+                        <li> neljä viidestoistaosaa luvusta $\dfrac{5}{12}$.</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL8_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL8_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $\frac{3}{10}$ </li>
+                            <li> $\frac{5}{21}$ </li>
+                            <li> $\frac{1}{9}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="dc9d15a2-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL9">
+                            Tulot ja osamäärät
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL9">
+                    <p> Merkitse "viidesosa luvusta $a$"
+                    <ol class="a">
+                        <li> osamääränä</li>
+                        <li> tulona.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL9_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL9_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $\dfrac{a}{5}$ </li>
+                            <li> $\dfrac{1}{5}a$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="dc9d1804-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL10">
+                            Murtolukujen jakolasku
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL10">
+                    <p> Laske 
+                    </p>
+                    <ol class="a">
+                        <li> $\dfrac{2}{5} : \dfrac{3}{7}$</li>
+                        <li> $\dfrac{3}{10} : \dfrac{3}{4}$</li>
+                        <li> $\dfrac{5}{8} : \dfrac{1}{6}$.</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL10_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL10_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $\frac{14}{15}$ </li>
+                            <li> $\frac{2}{5}$ </li>
+                            <li> $\frac{15}{4}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="dc9d1962-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL11">
+                            Murtolukujen jakolasku
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL11">
+                    <p> Muuta kokonaisluku murtolukumuotoon ja laske 
+                    <ol class="a">
+                        <li> $\dfrac{2}{3} : 10$</li>
+                        <li> $4 : \dfrac{3}{8}$</li>
+                        <li> $\dfrac{2}{7} : (-6)$.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL11_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL11_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $\frac{1}{15}$ </li>
+                            <li> $\frac{32}{3}$ </li>
+                            <li> $-\frac{1}{21}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="tehtava" id="dc9d1aca-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL13">
+                            Rationaaliluvun desimaalimuoto
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL13">
+                    <p> Kirjoita seuraavat luvut desimaalimuodossa. Jos desimaalikehitelmä on päättymätön, kirjoita lisäksi näkyviin, mikä sen jakso on.
+                    <ol class="a">
+                        <li> $\dfrac{9}{10}$</li>
+                        <li> $\dfrac{5}{11}$</li>
+                        <li> $\dfrac{7}{12}$</li>
+                        <li> $\dfrac{2}{7}$.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL13_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL13_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $0{,}9$ </li>
+                            <li> $0{,}454545454545\ldots$, jakso $45$ </li>
+                            <li> $0{,}583333333333\ldots$, jakso $3$ </li>
+                            <li> $0{,}285714285714\ldots$, jakso $285714$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d1c1e-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#rationaali10">
+                            Desimaalimuodosta murtolukumuotoon
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="rationaali10">
+                    <p> Tehtävänä on muuttaa luku $q = 0{,}618181818\ldots$ murtolukumuotoon.
+                    <ol class="a">
+                        <li> Kerro luku $q$ luvulla $100$.</li>
+                        <li> Laske erotus $100q-q$. Onko sen desimaalimuoto päättyvä vai päättymätön?</li>
+                        <li> Mitä on $99q$? Ratkaise saamastasi yhtälöstä luvun $q$ murtolukumuoto. Tarvittaessa lavenna niin, että sekä osoittaja että nimittäjä ovat kokonaislukuja. Supista lopuksi, jos mahdollista.</li>
+                    </ol>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d2114-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#rationaali11">
+                            Desimaalimuodosta murtolukumuotoon
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="rationaali11">
+                    <p> Sovella edellisen tehtävän menetelmää ja muuta luku $q = 0{,}9999999\ldots$ murtolukumuotoon.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtava" id="c2b33a32-140a-4505-bbd8-61125e05a438">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAYs2t101"> Laskujärjestys
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAYs2t101">
+                    <p> 
+                        Laske seuraavien lausekkeiden arvo:
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            $\dfrac{5}{3} - \dfrac{3}{2} \cdot \dfrac{4}{5} : \dfrac{4}{3}$
+                        </li>
+                        <li> 
+                            $\left(\dfrac{5}{3} - \dfrac{3}{2}\right) \cdot \dfrac{4}{5} : \dfrac{4}{3}$
+                        </li>
+                        <li> 
+                            $\left(\dfrac{5}{3} - \dfrac{3}{2} \cdot \dfrac{4}{5}\right) : \dfrac{4}{3}$
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAYs2t101_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAYs2t101_v" class="collapse">
+                        <ol class="a">
+                            <li> $\dfrac{23}{30}$ </li>
+                            <li> $\dfrac{1}{10}$ </li>
+                            <li> $\dfrac{7}{20}$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d22f4-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL3"> Laskulait
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL3">
+                    <p> Keksi esimerkki, joka osoittaa, että reaalilukujen vähennyslasku ei ole
+                    <ol class="a">
+                        <li> vaihdannainen</li>
+                        <li> liitännäinen.</li>
+                    </ol>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d248e-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#reaali1">
+                            Reaalilukujen desimaalikehitelmät
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="reaali1">
+                    <p> 
+                        Keksi jokin reaaliluku, jolla on kaksi erilaista desimaalikehitelmää. Millaiset ne ovat? 
+                        <br>
+                        Vinkki: tehtävä 1.45.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>  
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="dc9d2628-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL17">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL17">
+                    <p> Jussi laskee päässä kertolaskun seuraavasti: 
+                        \begin{align*}
+                        27 \cdot 31 &= 20 \cdot 30 + 7 \cdot 30 + 20 \cdot 1+7 \cdot 1 \\
+                        &= 600 + 210 + 20 + 7 \\
+                        &= 837.
+                        \end{align*} 
+                        Onko Jussin päättely oikein? Perustele.
+                        <br>
+                        [Lyhyt K2016/2c]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL17_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL17_v" class="collapse">
+                        <p>
+                            Jussi on käyttänyt sääntöä $(10a + b)(10c + d) = 10c\cdot 10a + 10cb + 10ad + bd$, joka on pätevä.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="dc9d2740-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL17b">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL17b">
+                    <p> 
+                        Alpo, Sanna ja Pauli palaavat samalla taksilla ylioppilasjuhlista. Alpon jäädessä pois mittari näyttää 21,90 €, Sannan jäädessä 28,20 € ja matkan loppusumma on 33,50 €. Matkan hinta päätetään jakaa seuraavalla tavalla: Alpo maksaa kolmasosan matkan alkuosuuden hinnasta. Sanna maksaa kolmasosan alkuosuudesta ja puolet keskiosuuden hinnasta. Laskun loppuosa jää Paulille. Kuinka paljon kukin joutuu maksamaan? 
+                        <br>
+                        [Lyhyt K2013/4]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL17b_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL17b_v" class="collapse">
+                        <p>
+                            Alpo maksaa 7,30 €; Sanna maksaa 10,45 € ja Pauli maksaa 15,75 €.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="dc9d281c-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL21">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL21">
+                    <p> Muuta sekaluvut murtolukumuotoon ja laske sen jälkeen:
+                    <ol class="a">
+                        <li> $2\dfrac{1}{2}- 1\dfrac{2}{3}\cdot \dfrac{4}{5} : \dfrac{3}{4}$</li>
+                        <li> $\left(1\dfrac{1}{2}- 3\dfrac{1}{4}\right)\cdot \dfrac{4}{5} : \dfrac{14}{15}$</li>
+                        <li> $\left(4\dfrac{3}{5}- 2\dfrac{2}{7}\cdot \dfrac{5}{4}\right) : \dfrac{2}{7}$.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL21_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL21_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $\frac{13}{18}$ </li>
+                            <li> $-\frac{3}{2}$ </li>
+                            <li> $\frac{61}{10}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d2ba0-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL19">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL19">
+                    <p> Laske 
+                    <ol class="a">
+                        <li> luvun $-1$ vastaluvun ja luvun $5$ käänteisluvun keskiarvo.
+                            [Lyhyt S2015/1a]</li>
+                        <li> lukujen $\dfrac{3}{4}$ ja $\dfrac{6}{5}$ käänteislukujen keskiarvo. [Lyhyt K2013/1b]</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL19_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL19_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $\frac{3}{5}$ </li>
+                            <li> $\frac{13}{12}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d2c68-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL15">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL15">
+                    <p> 
+                        Osoita, että luvut
+                        $$\frac{\sqrt{6}}{3} \text{ ja } \frac{\sqrt{6}}{2}$$ ovat toistensa käänteislukuja. 
+                        <br>
+                        [Pitkä K2016/2b]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL15_v">
+                            Idea
+                        </a>
+                    </h2>
+                    <div id="LL15_v" class="collapse">
+                        <p>
+                            Laske tutkittavien lukujen tulo. Saatko tulokseksi luvun 1?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d2d30-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL18">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL18">
+                    <p> 
+                        Tarkastellaan muotoa $\dfrac{m}{n}$ olevia lukuja, kun $m \in \left\{-1,0,1,2\right\}$ ja $n \in \left\{2,3,4\right\}$. Määritä näistä luvuista suurin ja pienin. 
+                        <br>
+                        [Pitkä S2015/1c]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL18_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL18_v" class="collapse">
+                        <p>
+                            Suurin on $1$, pienin on $-\frac{1}{2}$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d2dee-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL16">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL16">
+                    <p> Mikä seuraavista on luvun $-a+b$ vastaluku? 
+                    <ol class="a">
+                        <li> $b-a$</li>
+                        <li> $a-b$</li>
+                        <li> $-a-b$</li>
+                    </ol>
+                    [Pitkä K2016/1d; Lyhyt K2016/3d]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL16_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL16_v" class="collapse">
+                        <p>
+                            $a-b$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d3136-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL22">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL22">
+                    <p> Kolme kaverusta lähtee kisamatkalle Tallinnaan ja varaa seitsemäksi yöksi majoituksen, jonka kokonaishinta on 435 euroa. Kuinka paljon kunkin heistä pitää maksaa, jos henkilö A majoittuu kaksi yötä, henkilö B kuusi yötä ja henkilö C kaikki seitsemän yötä?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL22_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL22_v" class="collapse">
+                        <p>
+                            A maksaa 58 €, B maksaa 174 € ja C maksaa 203 €.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="dc9d3c4e-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL20">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL20">
+                    <p> Laske lausekkeen $a(b-2) + (a-b)^2 -b(1-a)$ arvo, kun $a = 2$ ja $b = -2$. 
+                        [Lyhyt S2013/1c]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#LL20_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="LL20_v" class="collapse">
+                        <p>
+                            6
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="dc9d3e92-7df8-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-LL23">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-LL23">
+                    <p> Tehtävänä on täydentää alla olevat yhtälöt niin, että ne pitävät paikkansa. Saat käyttää peruslaskutoimituksia eli merkkejä $+$, $-$, $\cdot$ ja $:$ sekä sulkuja. 
+                    <ol class="a">
+                        <li> $2 \quad 2 \quad 2 = 6$</li>
+                        <li> $3 \quad 3 \quad 3 = 6$</li>
+                        <li> $5 \quad 5 \quad 5 = 6$</li>
+                        <li> $6 \quad 6 \quad 6 = 6$</li>
+                        <li> $7 \quad 7 \quad 7 = 6$.</li>
+                    </ol>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>  
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#L4itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="L4itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1581">itsearviointitesti opetus.tv:n polku-palvelussa</a>. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+
+            </p>
+        </div>
+    </section>
+
+</article>

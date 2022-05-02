@@ -1,0 +1,2938 @@
+---
+title: MAY1 - Luvut ja lukujonot 
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: may1
+---
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: center;
+    }
+</style>
+
+<input type="hidden" id="theoremStart" value="3"/>
+<input type="hidden" id="chapterNumber" value="2"/>
+
+{% include bottomnav.html %}
+
+<article>
+
+    <section>
+        <header>
+            <h1>Potenssi ja logaritmi</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="luvun-tavoitteet" class="collapse">
+
+            <div class="objective">
+
+                <p>
+                    Tämän luvun tavoitteena on, että hallitset potenssien laskusäännöt ja tiedät, mitä logaritmilla tarkoitetaan. Osaat
+                </p>
+                <ul>
+                    <li> sieventää potenssilausekkeita potenssin määritelmän tai potenssien laskusääntöjen avulla</li>
+                    <li> ilmaista käänteisluvun käyttäen eksponenttia $-1$</li>
+                    <li> kirjoittaa luvun kymmenpotenssimuodossa tiettyjen merkitsevien numeroiden tarkkuudella</li>
+                    <li> kirjoittaa eksponenttiyhtälön ratkaisun logaritmin avulla</li>
+                    <li> käyttää potenssin laskusääntöjä eksponenttiyhtälön ratkaisemiseen.</li>
+                </ul>
+                <p>
+                    Lisäksi tiedät, että matematiikassa teoreema tarkoittaa tosiasiaa, joka voidaan perustella todeksi määritelmistä lähtien.
+                </p>
+            </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#potenssi1luku">
+                    Potenssin määritelmä ja potensseilla laskeminen
+                </a>
+            </h1>
+        </header>
+        <div id="potenssi1luku" class="collapse">
+            <div class="teoria">
+            <p>
+                Summa, jossa kaikki yhteenlaskettavat ovat samoja, voidaan kirjoittaa tulona. Esimerkkejä:
+                \begin{align*}
+                7 + 7 + 7 + 7 &= 4 \cdot 7 \\[2mm]
+                -2 + (-2) + (-2) &= 3\cdot (-2).
+                \end{align*}
+                Vastaavasti tulo, jossa kaikki tulon tekijät ovat samoja, voidaan kirjoittaa potenssina. Esimerkkejä:
+                \begin{align*}
+                7 \cdot 7 \cdot 7 \cdot 7 &= 7^4 \\[2mm]
+                -2 \cdot (-2) \cdot (-2) &= (-2)^3.
+                \end{align*}
+            </p>
+
+            <div class="definition">
+                <h3>MÄÄRITELMÄ: POTENSSI</h3>
+                <p>
+                    Oletetaan, että $n$ on positiivinen kokonaisluku. Luvun $a$ <em>$n$:s potenssi</em> $a^n$ tarkoittaa tuloa
+                    $a \cdot a \cdots a$, jossa luku $a$ esiintyy $n$ kertaa. Siis
+                    $$a^n = \underbrace{a \cdot a \cdots a}_\text{$n$ kappaletta}$$
+                    Potenssilausekkeessa $a^n$ luku $a$ on <em>kantaluku</em> ja luku $n$ on <em>eksponentti</em>.
+                </p>
+            </div>
+            </div>
+            <div class="tehtavat">
+
+                <div class="first-exercise tehtava" id="b0cff442-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi1">
+                                Potenssin määritelmä
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="potenssi1" class="collapse">
+
+                        <p>
+                            Kirjoita potenssimerkinnän avulla ja laske:
+                        </p>
+                        <ol class="a">
+                            <li> $3\cdot 3\cdot 3\cdot 3 \cdot 3$</li>
+                            <li> $5\cdot 5$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi1_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi1_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    $3^5 = 243$
+                                </li>
+                                <li> 
+                                    $5^2 = 25$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0cff7d0-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi2">
+                                Potenssin määritelmä
+                            </a>
+                        </h1>
+                    </header>
+
+                    <div id="potenssi2" class="collapse">
+
+                        <p>
+                            Kirjoita seuraavat potenssit tuloina (kertolaskumerkintää käyttäen) ja laske niiden arvo.
+                        </p>
+                        <ol class="a">
+                            <li> $8^2$</li>
+                            <li> $(-5)^3$.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi2_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi2_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    $8 \cdot 8 = 64$
+                                </li>
+                                <li> 
+                                    $(-5) \cdot (-5) \cdot (-5) = -125$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Jos kantaluku on negatiivinen, tarvitaan potenssimerkinnässä sulut. Esimerkiksi luvun $-1$ kolmas potenssi on 
+                    \begin{align*}
+                    (-1)^3 &= (-1) \cdot (-1) \cdot (-1) \\
+                    &= 1 \cdot (-1) = -1
+                    \end{align*}
+                    ja neljäs potenssi on 
+                    \begin{align*}
+                    (-1)^4 &= (-1) \cdot (-1) \cdot (-1) \cdot (-1) \\
+                    &= 1 \cdot 1 = 1.
+                    \end{align*}
+                    Havaitaan, että tulos on negatiivinen täsmälleen siinä tapauksessa, että tulon tekijöitä on pariton määrä eli eksponentti on pariton.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0cff9b0-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi2b">
+                                Potenssin määritelmä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi2b" class="collapse">
+                        <p>
+                            Merkitse lauseke näkyviin potenssimerkinnän avulla ja laske sen arvo:
+                        </p>
+                        <ol class="a">
+                            <li> luvun $-2$ viides potenssi</li>
+                            <li> luvun $-10$ kuudes potenssi.</li>
+                        </ol>       
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi2b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi2b_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    $(-2)^5 = -32$
+                                </li>
+                                <li> 
+                                    $(-10)^6 = 1\,000\,000$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0cffb22-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi2c">
+                                Potenssin määritelmä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi2c" class="collapse">
+                        <p> 
+                            Luvun ja sen vastaluvun summa on aina nolla. 
+                            Esimerkiksi luvun $3$ vastaluku on $-3$, sillä
+                            $$
+                            3 + (-3) = 0.
+                            $$
+                            Luvun $-9$ vastaluku on $-(-9) = 9$, sillä
+                            $$
+                            -9 + 9 = 0.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Laske potenssin $7^4$ arvo.
+                            </li>
+                            <li> 
+                                Mitä eroa on merkinnöillä $(-7)^4$ ja $-7^4$? Kumpi niistä on luvun $7^4$ vastaluku?
+                            </li>
+                            <li> 
+                                Päättele lausekkeiden $(-7)^4$ ja $-7^4$ arvot edellisten vastausten avulla. 
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi2c_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi2c_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    $7^4 = 2401$
+                                </li>
+                                <li>
+                                    <p> 
+                                        Merkinnät eroavat toisistaan sulkujen osalta. Merkintä $(-7)^4$ tarkoittaa tuloa, jossa luku $-7$ esiintyy neljä kertaa. Koska tulon tekijöitä on parillinen määrä, tulos on positiivinen. 
+                                    </p>
+                                    <p>
+                                        Merkintä $-7^4$ tarkoittaa luvun $7^4$ vastalukua.
+                                    </p>
+                                </li>
+                                <li> 
+                                    $(-7)^4 = 2401$ ja $-7^4 = -2401$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+            <p>
+                Jos miinusmerkki on potenssimerkinnän edessä ilman sulkuja, vaikuttaa se koko potenssilausekkeeseen:
+                $$-a^n = -(a^n).$$
+                Esimerkiksi merkintä $-3^6$ tarkoittaa potenssin $3^6 = 729$ vastalukua:
+                \begin{align*}
+                -3^6 &= -(3^6) \\
+                &= -(3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3) = -729.
+                \end{align*}
+            </p>    
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0cffc94-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3">
+                                Potenssin määritelmä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi3" class="collapse">
+                        <p>
+                            Kirjoita potenssimerkinnän avulla: 
+                        </p>
+                        <ol class="a">
+                            <li> $(2x)\cdot (2x)\cdot (2x)$</li>
+                            <li> $3\cdot 3\cdot 3\cdot 3\cdot 3\cdot a\cdot a\cdot a\cdot a\cdot a.$</li>
+                        </ol>
+                        <p>
+                            Keksitkö kaksi erilaista tapaa, jolla voit kirjoittaa tulot potenssimerkintää käyttäen?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi3_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    $(2x)^3$ tai $2^3x^3$
+                                </li>
+                                <li> 
+                                    $3^5a^5$ tai $(3a)^5$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+            <p>
+                Potenssilausekkeita voidaan sieventää purkamalla ne tulomuotoon potenssin määritelmän mukaisesti, laskemalla kaikki mahdolliset laskut ja kokoamalla tulos jälleen potenssimuotoon. Esimerkiksi
+                \begin{align*}
+                (5a^7)^2 &= 5a^7 \cdot 5a^7 \\
+                &= 25 \cdot \underbrace{a \cdot a \cdot a \cdot a \cdots a}_\text{14 kappaletta} = 25a^{14}
+                \end{align*}
+            </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d002e8-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3b">
+                                Tulon potenssi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi3b" class="collapse">
+                        <p>
+                            Poista sulut seuraavista potenssilausekkeista:
+                        </p>
+                        <ol class="a">
+                            <li> $(6x)^3$</li>
+                            <li> $(2y)^6$</li>
+                            <li> $(ab)^4$</li>
+                        </ol>
+                        <p>
+                            Ohje: voit kirjoittaa lausekkeen tulomuodossa ja järjestellä tulon tekijät uudelleen.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi3b_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    $6^3x^3 = 216x^3$
+                                </li>
+                                <li> 
+                                    $2^6y^6 = 64y^6$
+                                </li>
+                                <li>
+                                    $a^4b^4$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="35bd8790-120f-4afe-bc65-4e2e63a8f7e1">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3ca">
+                                Tulon potenssi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi3ca" class="collapse">
+                        <p> 
+                            Muodosta edellisen tehtävän avulla sääntö, jonka mukaan saadaan laskettua tulon  potenssi 
+                            $$
+                            (ab)^n
+                            $$
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3ca_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi3ca_v" class="collapse">
+                            <p>
+                                Tulon potenssi on sama kuin potenssien tulo:
+                                $$
+                                (ab)^n = a^nb^n
+                                $$
+                            </p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d0043c-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3d">
+                                Osamäärän potenssi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi3d" class="collapse">
+                        <p>
+                            Poista sulut seuraavista potenssilausekkeista:
+                        </p>
+                        <ol class="a">
+                            <li> $\left(\dfrac{2x}{3}\right)^3$</li>
+                            <li> $\left(-\dfrac{4}{y}\right)^2$</li>
+                            <li> $\left(\dfrac{a}{b}\right)^4$</li>
+                        </ol>
+                        <p>
+                            Ohje: kirjoita potenssilauseke ensin tulomuodossa.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3d_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi3d_v" class="collapse">
+                            <ol class="a">
+                                <li> $\dfrac{8x^3}{27}$</li>
+                                <li> $\dfrac{16}{y^2}$</li>
+                                <li> $\dfrac{a^4}{b^4}$</li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d0050e-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3c">
+                                Osamäärän potenssi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi3c" class="collapse">
+                        <p> 
+                            Muodosta edellisen tehtävän avulla sääntö, jonka mukaan saadaan laskettua osamäärän  potenssi 
+                            $$\left(\dfrac{a}{b}\right)^n$$
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3c_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi3c_v" class="collapse">
+                            <p>
+                                Osamäärän potenssi on sama kuin potenssien osamäärä:
+                                $$
+                                \left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}
+                                $$
+                            </p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+            <p>
+                Potenssilausekkeiden sieventämisessä pääsee aina alkuun, kun muistaa potenssin määritelmän eli sopimuksen siitä, mitä potenssi tarkoittaa. Niin myös seuraavissa tehtävissä.
+            </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d005d6-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi9">
+                                Potenssin potenssi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi9" class="collapse">
+
+                        <p>
+                            Kirjoita potenssit ensin tulomuodossa ja lausu lopputulos taas potenssina:
+                        </p> 
+                        <ol class="a">
+                            <li> $\left(7^3\right)^2$</li>
+                            <li> $(a^2)^4$</li>
+                        </ol>
+                        <p>
+                            Tutki lähtötilannetta ja lopputulosta. Keksitkö säännön eksponentin muodostumiselle potenssin potenssissa? 
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi9_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi9_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    \begin{align*}
+                                    7^3 \cdot 7^3 &= (7 \cdot 7 \cdot 7) \cdot (7 \cdot 7 \cdot 7) \\
+                                    &= 7^6
+                                    \end{align*}
+                                </li>
+                                <li> 
+                                    \begin{align*}
+                                    a^2 \cdot a^2 \cdot a^2 \cdot a^2 &= aaaaaaaa \\
+                                    &= a^8
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d006a8-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi9b">
+                                Potenssin potenssi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi9b" class="collapse">
+                        <p> 
+                            Muodosta edellisen tehtävän avulla sääntö, jonka mukaan saadaan laskettua potenssin potenssi 
+                            $$(a^m)^n$$
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi9b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi9b_v" class="collapse">
+                            <p>
+                                Potenssin potenssissa eksponentit kerrotaan keskenään:
+                                $$
+                                (a^m)^n = a^{mn}
+                                $$
+                            </p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+            <p>
+                Edellä havaittuja potenssien laskusääntöjä voi käyttää myös toiseen suuntaan. Siis
+                \begin{align*}
+                a^nb^n &= (ab)^n \\[1mm]
+                \frac{a^n}{b^n} &= \left(\frac{a}{b}\right)^n \\[1mm]
+                a^{mn} &= (a^m)^n
+                \end{align*}
+                Seuraavaksi tutkitaan, mitä eksponenteille tapahtuu, jos kerrotaan tai jaetaan potensseja, joilla on sama kantaluku.
+            </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d00a5e-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi4">
+                                Samankantaisten potenssien tulo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi4" class="collapse">
+                        <p>
+                            Kirjoita ensin tulomuodossa ja sen jälkeen potenssimerkintää käyttäen:
+                        </p>
+                        <ol class="a">
+                            <li> $2^3\cdot 2^4$</li>
+                            <li> $a^5a^2$</li>
+                        </ol>
+                        <p>
+                            Tutki lähtötilannetta ja lopputulosta. Keksitkö säännön eksponentin muodostumiselle samankantaisten potenssien tulossa? 
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi4_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi4_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    \begin{align*}
+                                    2^3 \cdot 2^4 &= (2 \cdot 2 \cdot 2) \cdot (2 \cdot 2 \cdot 2 \cdot 2) \\
+                                    &= 2^7
+                                    \end{align*}
+                                </li>
+                                <li> 
+                                    \begin{align*}
+                                    a^5\cdot a^2 &= aaaaa \cdot aa \\
+                                    &= a^7
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d00b4e-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi4c">
+                                Samankantaisten potenssien osamäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi4c" class="collapse">
+                        <p>
+                            Kirjoita osoittaja ja nimittäjä ensin tulomuodossa ja supista. Kirjoita lopputulos potenssimerkintää käyttäen.
+                        </p>
+                        <ol class="a">
+                            <li> $\dfrac{9^5}{9^3}$</li>
+                            <li> $\dfrac{a^6}{a^2}$</li>
+                        </ol>
+                        <p>
+                            Tutki lähtötilannetta ja lopputulosta. Keksitkö säännön eksponentin muodostumiselle samankantaisten potenssien osamäärässä? 
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi4c_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi4c_v" class="collapse">
+                            <ol class="a"> 
+                                <li> $\dfrac{9 \cdot 9 \cdot 9 \cdot 9 \cdot 9}{9 \cdot 9 \cdot 9} = 9 \cdot 9 = 9^2$ </li>
+                                <li> $\dfrac{aaaaaa}{aa} = aaaa = a^4$ </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d00c16-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi4b">
+                                Samankantaisten potenssien tulo ja osamäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi4b" class="collapse">
+                        <p> 
+                            Muodosta edellisten tehtävien avulla sääntö, jonka mukaan saadaan laskettua samankantaisten potenssien
+                        </p>
+                        <ol class="a">
+                            <li> tulo $\ a^ma^n$ </li>
+                            <li> osamäärä $\ \dfrac{a^m}{a^n}$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi4b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi4b_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Samankantaisten potenssien tulossa eksponentit lasketaan yhteen:
+                                    $$a^ma^n = a^{m+n}$$ 
+                                </li>
+                                <li> 
+                                    Samankantaisten potenssien osamäärässä osoittajan eksponentista vähennetään nimittäjän eksponentti:
+                                    $$\dfrac{a^m}{a^n} = a^{m-n}$$ 
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#eksponenttiNolla">
+                    Negatiivinen eksponentti ja eksponentti nolla
+                </a>
+            </h1>
+        </header>
+        <div id="eksponenttiNolla" class="collapse">
+            <div class="teoria">
+                <p>
+                    Edellisessä kappaleessa sovittiin, mitä tarkoitetaan potenssilla $a^n$, missä $n$ on positiivinen kokonaisluku. Sen jälkeen tutkittiin, millaisia laskulakeja potenssilausekkeet noudattavat. Huomattiin esimerkiksi, että samankantaisten potenssien osamäärälle pätee sääntö
+                    $$\frac{a^m}{a^n} = a^{m-n}.$$
+                    Jos tässä luku $m$ sattuu olemaan pienempi kuin luku $n$, tuloksen eksponentti on negatiivinen. Esimerkiksi 
+                    $$\frac{a^3}{a^9} = a^{3-9} = a^{-6}.$$
+                    Tarvitaan sopimus myös siitä, mitä potenssilla tarkoitetaan tilanteessa, jossa eksponentti on negatiivinen kokonaisluku tai nolla.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: POTENSSI</h3>
+                    <p>
+                        Oletetaan, että $a \neq 0$ ja $n$ on positiivinen kokonaisluku. Potenssit $a^0$  ja $a^{-n}$ määritellään seuraavasti:
+                        \begin{align*}
+                        a^0 &= 1\\
+                        a^{-n} &= \dfrac{1}{a^n}
+                        \end{align*}
+                        Potenssi $a^{-n}$ on siis potenssin $a^n$ käänteisluku.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d00cde-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi13">
+                                Negatiivinen eksponentti ja eksponentti nolla
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi13" class="collapse">
+                        <p> Laske seuraavat potenssit yllä olevaa määritelmää käyttäen:
+                        </p>
+                        <ol class="a">
+                            <li> $4^0$</li>
+                            <li> $2^{-3}$</li>
+                            <li> $(-3)^{-2}$</li>
+                            <li> $5^{-3}$</li>
+                            <li> $7^{-1}$</li>
+                            <li> $(-6)^{-1}$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi13_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi13_v" class="collapse">
+                           <ol class="a">
+                                <li> $4^0 = 1$</li>
+                                <li> $2^{-3} = \dfrac{1}{8}$</li>
+                                <li> $(-3)^{-2} = \dfrac{1}{9}$</li>
+                                <li> $5^{-3} = \dfrac{1}{125}$</li>
+                                <li> $7^{-1} = \dfrac{1}{7}$</li>
+                                <li> $(-6)^{-1} = -\dfrac{1}{6}$</li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d00db0-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi14">
+                                Negatiivinen eksponentti ja eksponentti nolla
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi14" class="collapse">
+                        <p> Kirjoita seuraavat lausekkeet potenssimuodossa:
+                        </p>
+                        <ol class="a">
+                            <li> $\dfrac{1}{10^2}$</li>
+                            <li> $\dfrac{1}{a^3}$</li>
+                            <li> $\dfrac{1}{16}$</li>
+                        </ol>
+                        <p>
+                            Keksitkö kaksi erilaista tapaa ilmaista c-kohdan lausekkeen potenssimuodossa?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi14_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi14_v" class="collapse">
+                           <ol class="a">
+                                <li> $\dfrac{1}{10^2} = 10^{-2}$</li>
+                                <li> $\dfrac{1}{a^3} = a^{-3}$</li>
+                                <li> $\dfrac{1}{16} = 16^{-1} = 4^{-2} = 2^{-4}$</li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+            <p>
+                Edellä esitetystä potenssin määritelmästä seuraa erityisesti, että 
+                $$a^{-1} = \frac{1}{a^1} = \frac{1}{a}.$$
+                Potenssi $a^{-1}$ on siis luvun $a$ käänteisluku. 
+            </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d01184-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi14b">
+                                Eksponentti -1
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi14b" class="collapse">
+                        <p> Sievennä:
+                        </p>
+                        <ol class="a">
+                            <li> $4^{-1}$</li>
+                            <li> $(-15)^{-1}$</li>
+                            <li> $\left(\dfrac{1}{3}\right)^{-1}$</li>
+                            <li> $\left(-\dfrac{4}{9}\right)^{-1}$</li>
+                        </ol>
+                        <p>
+                            Kertaa tarvittaessa murtolukujen käänteislukuja koskeva teoreema 1 <a href="http://kisallioppiminen.fi/kurssit/may1/luvutLaskutoimitukset/">edellisestä luvusta</a>.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi14b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi14b_v" class="collapse">
+                           <ol class="a">
+                                <li> $4^{-1} = \dfrac{1}{4}$</li>
+                                <li> $(-15)^{-1} = -\dfrac{1}{15}$</li>
+                                <li> $\left(\dfrac{1}{3}\right)^{-1} = 3$</li>
+                                <li> $\left(-\dfrac{4}{9}\right)^{-1} = -\dfrac{9}{4}$</li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kun potenssi määriteltiin negatiivisten eksponenttien ja eksponentin nolla tapauksessa, tehtiin määritelmästä tarkoituksella sellainen, että aikaisemmin havaitut potenssien laskusäännöt toimivat edelleen. Nämä laskusäännöt on koottu seuraavaan teoreemaan. 
+                </p>
+
+                <div class="theorem" id="POTENSSIEN LASKUSÄÄNTÖJÄ">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Seuraavat potenssien laskusäännöt pätevät kaikilla kokonaisluvuilla $m$ ja $n$ sekä kaikilla nollasta poikkeavilla reaaliluvuilla $a$ ja $b$:
+                    <ol>
+                        <li>tulon potenssi on potenssien tulo: $$(ab)^n = a^nb^n$$</li>
+                        <li>osamäärän potenssi on potenssien osamäärä: $$\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$$</li>
+                        <li>potenssin potenssissa eksponentit kerrotaan keskenään: $$(a^m)^n = a^{mn}$$</li>
+                        <li>samankantaisten potenssien tulossa eksponentit lasketaan yhteen: $$a^m\cdot a^n = a^{m+n}$$</li>
+                        <li>samankantaisten potenssien osamäärässä osoittajan eksponentista vähennetään nimittäjän eksponentti: $$\dfrac{a^m}{a^n} = a^{m-n}.$$</li>
+                    </ol>
+                    </p>
+                </div>
+
+                <p>
+                    Potenssien laskusääntöjen hyvä hallitseminen on tärkeää, jotta jatkossa sievennykset sujuvat rutiinilla ja aivokapasiteettia vapautuu uusien, soveltavampien ongelmien ratkaisemiseen. Laskusääntöjen käyttöä harjoitellaan seuraavassa tehtävässä ja myös tehtäväsarjassa II, esimerkiksi pelin avulla tehtävässä 2.43. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d0126a-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi15">
+                                Potenssien laskusääntöjä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi15" class="collapse">
+                        <p>
+                            Sievennä potenssien laskusääntöjen avulla. Muokkaa vastaukset muotoon, jossa kaikki eksponentit ovat positiivisia.
+                        </p> 
+                        <ol class="a">
+                            <li> $(3a)^{-2}$ </li>
+                            <li> $\left(\dfrac{4b}{5}\right)^{-3}$</li>
+                            <li> $\left(c^{-6} \right)^{-7}$</li>
+                            <li> $x^{-10} \cdot 4x^8$ </li>
+                            <li> $\dfrac{15y^{-6}}{3y^{-7}}$ </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi15_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi15_v" class="collapse">
+                            <ol class="a">
+                                <li> $(3a)^{-2} = \dfrac{1}{9a^2}$ </li>
+                                <li> $\left(\dfrac{4b}{5}\right)^-3 = \dfrac{125}{64b^3}$</li>
+                                <li> $\left(c^{-6} \right)^{-7} = c^{42}$</li>
+                                <li> $x^{-10} \cdot 4x^8 = 4x^{-2} = \dfrac{4}{x^2}$ </li>
+                                <li> $\dfrac{15y^{-6}}{3y^{-7}} = 5y^{-6-(-7)} = 5y$ </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Seuraavassa tehtävässä jatketaan negatiivisten eksponenttien ominaisuuksien tutkimista.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d01788-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi19">
+                                Negatiivinen eksponentti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi19" class="collapse">
+                        <p>
+                            Tehtävänä on tutkia, miten potenssit 
+                            $$2^{-4} \quad \text{ ja } \quad \left(\dfrac{1}{2}\right)^4$$ 
+                            liittyvät toisiinsa.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Kirjoita näkyviin, mitä $2^{-4}$ tarkoittaa määritelmän mukaan.
+                            </li>
+                            <li> 
+                                Kirjoita $\left(\frac{1}{2}\right)^4$ tulomuodossa ja sievennä mahdollisimman pitkälle.
+                            </li>
+                            <li> 
+                                Vertaa a- ja b-kohdan tuloksia. Muodosta sääntö, joka liittää toisiinsa lausekkeet
+                                $$
+                                a^{-n} \quad \text{ ja } \quad \left(\dfrac{1}{a}\right)^n
+                                $$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi19_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi19_v" class="collapse">
+                           <ol class="a">
+                                <li> $2^{-4} = \dfrac{1}{2^4}$</li>
+                                <li> 
+                                    $\left(\dfrac{1}{2}\right)^4 = \dfrac{1}{2} \cdot \dfrac{1}{2} \cdot \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{1}{16}$
+                                </li>
+                                <li>
+                                    $a^{-n} = \left(\frac{1}{a}\right)^n$
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+            <p>
+                Edellisen tehtävän havainnot johtavat seuraavaan teoreemaan. Tällä kertaa myös teoreeman perustelu (eli todistus) on kirjoitettu näkyviin. Lue se huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+            </p>
+
+            <div class="theorem" id="NEGATIIVINEN EKSPONENTTI">
+                <h3>TEOREEMA</h3>
+                <p>
+                    Oletetaan, että $n$ on positiivinen kokonaisluku ja $a \neq 0$. Potenssi $a^{-n}$ on luvun $a$ käänteisluvun $n$:s potenssi eli
+                    $$a^{-n} = \left(\frac{1}{a}\right)^n$$
+                </p>
+                <div class="proof">
+                    <p>
+                        Perustelu: Potenssin määritelmän mukaan
+                        $$a^{-n} = \frac{1}{a^n}$$
+                        Toisaalta potenssin määritelmän mukaan
+                        $$\left(\frac{1}{a}\right)^n = \underbrace{\left(\frac{1}{a}\right) \cdots \left(\frac{1}{a}\right)}_\text{$n$ kpl} = \frac{1}{a^n}$$
+                        Siis 
+                        $$a^{-n} = \left(\frac{1}{a}\right)^n.$$
+                    </p>
+                </div>
+            </div>
+            </div>
+            <p>
+                Seuraavissa tehtävissä harjoitellaan yllä olevan teoreeman soveltamista. Kannattaa tarvittaessa kerrata murtolukujen käänteislukuja koskeva teoreema 1 <a href="http://kisallioppiminen.fi/kurssit/may1/luvutLaskutoimitukset/">edellisestä luvusta</a>.
+            </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d01882-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi20">
+                                Negatiivinen eksponentti 
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi20" class="collapse">
+                        <p> 
+                            Tehtävänä on määrittää potenssi 
+                            $$\left(\dfrac{4}{5}\right)^{-3}$$
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Muodosta kantaluvun $\dfrac{4}{5}$ käänteisluku. 
+                            </li>
+                            <li> Laske a-kohdassa muodostamasi luvun kolmas potenssi.</li>
+                            <li> Miten ratkaisun vaiheet liittyvät teoreemaan 2? Selitä omin sanoin.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi20_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi20_v" class="collapse">
+                           <ol class="a">
+                                <li> $\left(\dfrac{4}{5}\right)^{-1} = \dfrac{5}{4}$</li>
+                                <li> $\left(\dfrac{4}{5}\right)^{-3} = \left(\dfrac{5}{4}\right)^3 = \dfrac{125}{64}$</li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän havaintojen perusteella saadaan muotoiltua seuraava erityistapaus teoreemasta 4. Lue sen perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+                </p>
+
+                <div class="theorem" id="NEGATIIVINEN EKSPONENTTI">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että $n$ on positiivinen kokonaisluku. Oletetaan, että $a \neq 0$ ja $b \neq 0$. Tällöin
+                        $$\left(\dfrac{a}{b}\right)^{-n} = \left(\dfrac{b}{a}\right)^{n}$$
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Teoreeman 1 mukaan luvut
+                            $$
+                            \dfrac{a}{b} \quad \text{ ja } \quad \dfrac{b}{a}
+                            $$ 
+                            ovat toistensa käänteislukuja. Teoreeman 4 mukaan 
+                            $$\left(\dfrac{a}{b}\right)^{-n}$$
+                            on kantaluvun käänteisluvun $n$:s potenssi. Siis
+                            $$\left(\dfrac{a}{b}\right)^{-n} = \left(\dfrac{b}{a}\right)^{n}$$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d01954-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi21">
+                                Negatiivinen eksponentti 
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi21" class="collapse">
+                        <p> Laske seuraavat potenssit ja anna vastaukset murtolukuina:
+                        </p>
+                        <ol class="a">
+                            <li> $\left(\dfrac{7}{3}\right)^{-1}$ </li>
+                            <li> $\left(\dfrac{5}{8}\right)^{-2}$ </li>
+                            <li> $\left(\dfrac{3}{2}\right)^{-4}$. </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi21_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi21_v" class="collapse">
+                           <ol class="a">
+                                <li> $\left(\dfrac{7}{3}\right)^{-1} = \dfrac{3}{7}$ </li>
+                                <li> $\left(\dfrac{5}{8}\right)^{-2} = \dfrac{64}{25}$ </li>
+                                <li> $\left(\dfrac{3}{2}\right)^{-4} = \dfrac{16}{81}$. </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kymmenpotenssiluku">
+                    Kymmenpotenssimuoto ja merkitsevät numerot
+                </a>
+            </h1>
+        </header>
+        <div id="kymmenpotenssiluku" class="collapse">
+            <div class="teoria">
+                <p> 
+                    Kymmenpotenssimuotoa käytetään hyvin suurten tai pienten positiivisten lukujen merkisemiseen. Esimerkiksi Suomen väkiluku oli heinäkuussa 2016 noin $5{,}497$ miljoonaa eli $5{,}497 \cdot 10^6 = 5\,497\,000$. Yhden vesimolekyylin massa puolestaan on noin $2{,}9915 \cdot 10^{-23}$ grammaa. 
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KYMMENPOTENSSIMUOTO</h3>
+                    <p>
+                        Positiivisen luvun <em>kymmenpotenssimuoto</em> tarkoittaa luvun esittämistä muodossa $a\cdot 10^n$, missä $n$ on kokonaisluku ja kerroin $a$ on vähintään yksi ja pienempi kuin kymmenen: $1 \leq a < 10$.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d01e68-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi22">
+                                Kymmenen potenssit 
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi22" class="collapse">
+                        <p> Ilmaise seuraavat luvut muodossa $10^n$, missä $n$ on kokonaisluku:
+                        </p>
+                        <ol class="a">
+                            <li> $100$</li>
+                            <li> $1\,000$ </li>
+                            <li> $100\,000$ </li>
+                            <li> $1\,000\,000$. </li>
+                        </ol>
+                        <p>
+                            Vertaa eksponenttia $n$ ja alkuperäisen luvun nollien lukumäärää. Mitä havaitset?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi22_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi22_v" class="collapse">
+                           <ol class="a">
+                                <li> $100 = 10^2$</li>
+                                <li> $1\,000 = 10^3$ </li>
+                                <li> $100\,000 = 10^5$ </li>
+                                <li> $1\,000\,000 = 10^6$. </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d01f80-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi24">
+                                Kymmennen potenssit
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi24" class="collapse">
+                        <p> Ilmaise seuraavat luvut muodossa $10^n$, missä $n$ on kokonaisluku:
+                        </p>
+                        <ol class="a">
+                            <li> $0{,}1$</li>
+                            <li> $0{,}001$ </li>
+                            <li> $0{,}00001$. </li>
+                        </ol>
+                        <p>
+                            Vertaa eksponenttia $n$ ja alkuperäisen luvun desimaalipilkun jälkeisten numeroiden määrää. Mitä havaitset?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi24_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi24_v" class="collapse">
+                           <ol class="a">
+                                <li> $0{,}1 = 10^{-1}$</li>
+                                <li> $0{,}001 = 10^{-3}$ </li>
+                                <li> $0{,}00001 = 10^{-5}$. </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d02048-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi23">
+                                Kymmenpotenssimuoto 
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi23" class="collapse">
+                        <p> Ilmaise seuraavat etäisyydet kymmenpotenssimuodossa:
+                        </p>
+                        <ol class="a">
+                            <li> Kuun keskimääräinen etäisyys Maasta $384\,400$ km</li>
+                            <li> Maan keskimääräinen etäisyys Auringosta $150\,000\,000$ km</li>
+                            <li> Saturnuksen keskimääräinen etäisyys Auringosta $1\,427\,000\,000$ km. </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi23_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi23_v" class="collapse">
+                           <ol class="a">
+                                <li> $3{,}844 \cdot 10^{5}$ km</li>
+                                <li> $1{,}5 \cdot 10^{8}$ km </li>
+                                <li> $1{,}427 \cdot 10^{9}$ km. </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Edellisessä tehtävässä ilmaistiin erilaisia etäisyyksiä kymmenpotenssimuodossa. Kaikki niistä olivat jonkinlaisia likiarvoja. Mistä tietää, millä tarkkuudella nämä etäisyydet oli tehtävässä ilmoitettu? 
+                </p>
+                <p>
+                    Ilmoitettujen mittaustulosten tarkkuutta voi arvioida siitä, kuinka monta <em>merkitsevää numeroa</em> niissä on. Desimaalimuodossa ilmoitettussa luvussa merkitseviä ovat kaikki muut numerot paitsi luvun vasemmalla puolella olevat nollat. Esimerkiksi luvussa
+                    $$0{,}00000\textcolor{red}{508}$$
+                    on kolme merkitsevää numeroa ja luvussa
+                    $$\textcolor{red}{23{,}00046000}$$
+                    on kymmenen merkitsevää numeroa. 
+                </p>
+                <p>
+                    Kokonaislukuna ilmoitetussa luvussa merkitseviä ovat kaikki muut numerot paitsi luvun lopussa olevat nollat. Esimerkiksi luvussa
+                    $$\textcolor{red}{31}0\,000$$
+                    on kaksi merkitsevää numeroa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d02106-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi24a">
+                                Merkitsevät numerot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi24a" class="collapse">
+                        <p> 
+                            Kuinka monen merkitsevän numeron tarkkuudella seuraavat etäisyydet on ilmoitettu? Muuttuiko tarkkuus, kun muutit etäisyydet kymmenpotenssimuotoon edellisessä tehtävässä?
+                        </p>
+                        <ol class="a">
+                            <li> Kuun keskimääräinen etäisyys Maasta $384\,400$ km</li>
+                            <li> Maan keskimääräinen etäisyys Auringosta $150\,000\,000$ km</li>
+                            <li> Saturnuksen keskimääräinen etäisyys Auringosta $1\,427\,000\,000$ km. </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi24a_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi24a_v" class="collapse">
+                           <ol class="a">
+                                <li> Neljä merkitsevää numeroa. </li>
+                                <li> Kaksi merkitsevää numeroa. </li>
+                                <li> Neljä merkitsevää numeroa. </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d021ce-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi25">
+                                Kymmenpotenssimuoto 
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi25" class="collapse">
+                        <p> Ilmaise seuraavat aikuisille suositellut vuorokausiannokset kymmenpotenssimuodossa. Kuinka monta merkitsevää numeroa niissä on?
+                        </p>
+                        <ol class="a">
+                            <li> C-vitamiini $0{,}075$ grammaa</li>
+                            <li> $\text{B}_{12}$-vitamiini $0{,}0000024$ grammaa.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi25_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi25_v" class="collapse">
+                           <ol class="a">
+                                <li> $7{,}5 \cdot 10^{-2}$ grammaa, kaksi merkitsevää numeroa.</li>
+                                <li> $2{,}4 \cdot 10^{-6}$ grammaa, kaksi merkitsevää numeroa. </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#logaritmi1luku">
+                    Logaritmi ja eksponentin ratkaiseminen
+                </a>
+            </h1>
+        </header>
+        <div id="logaritmi1luku" class="collapse">
+            <div class="teoria">
+            <p>
+                Potenssin määritelmän mukaan $2^3 = 2\cdot 2 \cdot 2 = 8$. Jossain tilanteissa halutaan tarkastella erityisesti potenssilausekkeessa esiintyvää eksponenttia, joka on tässä tapauksessa $3$. Jos kantaluku (tässä tapauksessa $2$) ja potenssiin korotuksen tulos (tässä tapauksessa $8$) tiedetään, voidaan eksponentista puhua logaritmin avulla. Tässä tilanteessa voidaan sanoa, että
+                $$\log_2(8) = 3$$
+                eli luvun kahdeksan $2$-kantainen logaritmi on $3$. Logaritmi kertoo siis eksponentin arvon.
+            </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d0228c-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#logaritmi0">
+                                Eksponentin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="logaritmi0" class="collapse">
+                        <p> Päättele tai selvitä kokeilemalla, mikä eksponentin pitää olla, jotta yhtälö toteutuu:
+                        </p>
+                        <ol class="a">
+                            <li> $7^x = 49$</li>
+                            <li> $2^x = 32$</li>
+                            <li> $3^x = 27$.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#logaritmi0_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="logaritmi0_v" class="collapse">
+                           <ol class="a">
+                                <li> $x = 2$ </li>
+                                <li> $x = 5$ </li>
+                                <li> $x = 3$ </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+            <div class="definition">
+                <h3>MÄÄRITELMÄ: LOGARITMI</h3>
+                <p>
+                    Oletetaan, että kantaluku $k$ on positiivinen ja $k \neq 1$. Positiivisen luvun $a$ <em>$k$-kantainen logaritmi</em> tarkoittaa lukua $x$, jolla on ominaisuus $k^x = a$. Luvusta $x$ käytetään merkintää $\log_k(a)$.
+                </p>
+            </div>
+
+            <p> Edellisessä tehtävässä selvitit siis logaritmit $\log_7(49)$, $\log_2(32)$ ja $\log_3(27)$.</p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d0284a-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#logaritmi1">
+                                Logaritmi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="logaritmi1" class="collapse">
+                        <p> 
+                            Päättele seuraavien logaritmien arvot ratkaisemalla niitä vastaavat eksponenttiyhtälöt esimerkiksi kokeilemalla:
+                        </p>
+                        <ol class="a">
+                            <li> $\log_2(16) = x$, missä luku $x$ toteuttaa yhtälön $2^x = 16$</li>
+                            <li> $\log_5(25) = x$, missä luku $x$ toteuttaa yhtälön $5^x = 25$</li>
+                            <li> $\log_{10}(0{,}1) = x$, missä luku $x$ toteuttaa yhtälön $10^x = 0{,}1$.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#logaritmi1_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="logaritmi1_v" class="collapse">
+                           <ol class="a">
+                                <li> $\log_2(16) = 4$ </li>
+                                <li> $\log_5(25) = 2$ </li>
+                                <li> $\log_{10}(0{,}1) = -1$ </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d02a16-7dfa-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#logaritmi2">
+                                Logaritmi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="logaritmi2" class="collapse">
+                        <p> 
+                            Päättele seuraavien logaritmien arvot muodostamalla ja ratkaisemalla niitä vastaavat eksponenttiyhtälöt samaan tapaan kuin edellisessä tehtävässä.
+                        </p>
+                        <ol class="a">
+                            <li> $\log_3(9)$</li>
+                            <li> $\log_{10}(1\,000\,000)$</li>
+                            <li> $\log_7(1)$.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#logaritmi2_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="logaritmi2_v" class="collapse">
+                           <ol class="a">
+                                <li> $\log_3(9) = 2$</li>
+                                <li> $\log_{10}(1\,000\,000) = 6$</li>
+                                <li> $\log_7(1) = 0$.</li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+            <p>
+                Logaritmin avulla voidaan ilmaista sellaisiakin eksponentteja, jotka eivät ole kokonaislukuja. Esimerkiksi yhtälön $2^x = 10$ ratkaisu ei ole kokonaisluku, sillä $2^3 = 8 < 10$ ja $2^4 = 16 > 10$. Näistä tietoista voidaan päätellä, että luku $x$ on kolmea suurempi ja neljää pienempi eli $3 < x < 4$. Logaritmin määritelmän mukaan voidaan merkitä $x = \log_2(10)$. Laskimen tai tietokokeen avulla saadaan likiarvo $\log_2(10) \approx 3{,}32$.
+            </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d02b10-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#logaritmi3">
+                                Eksponenttiyhtälön ratkaisu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="logaritmi3" class="collapse">
+                        <p> 
+                            Kirjoita seuraavien eksponenttiyhtälöiden ratkaisut logaritmin avulla ja selvitä ratkaisujen likiarvot laskimella tai tietokoneella. Anna vastaus viiden merkitsevän numeron tarkkuudella.
+                        </p>
+                        <ol class="a">
+                            <li> $2^x = 100$</li>
+                            <li> $10^x = 2016$</li>
+                            <li> $3^x = 798$.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#logaritmi3_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="logaritmi3_v" class="collapse">
+                           <ol class="a">
+                                <li> $x = \log_2(100) \approx 6{,}6439$</li>
+                                <li> $x = \log_{10}(2016) \approx 3{,}3045$</li>
+                                <li> $x = \log_3(798) \approx 6{,}0823$.</li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+            <p>
+                Jos eksponenttiyhtälön molemmat puolet onnistutaan ilmaisemaan saman kantaluvun potensseina, onnistuu yhtälön ratkaiseminen potenssin laskusääntöjen avulla ilman logaritmia. Esimerkiksi yhtälö
+                $$5^x = 25^3$$
+                voidaan muuttaa muotoon
+                $$5^x = (5^2)^3,$$
+                sillä $25 = 5^2$. Sen jälkeen yhtälön oikea puoli voidaan sieventää:
+                $$5^x = 5^6.$$
+                Tästä voidaan päätellä, että yhtälön ratkaisu on $x = 6$.
+            </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="b0d02bd8-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#logaritmi4">
+                                Eksponenttiyhtälön ratkaisu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="logaritmi4" class="collapse">
+                        <p> 
+                            Ratkaise seuraavat eksponenttiyhtälöt ilman logaritmia:
+                        </p>
+                        <ol class="a">
+                            <li> $3^x = 9^5$</li>
+                            <li> $2^x = 16^7$</li>
+                            <li> $4^{3x} = 64^8$.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#logaritmi4_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="logaritmi4_v" class="collapse">
+                           <ol class="a">
+                                <li> $x = 2\cdot 5 = 10$</li>
+                                <li> $x = 4\cdot 7 = 28$</li>
+                                <li> $4^3 = 64$, joten $x = 8$.</li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="b0d02ca0-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL6">
+                            Potenssi
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL6">
+                    <p> 
+                        Luvun $a$ toista potenssia $a^2$ sanotaan luvun $a$ <em>neliöksi</em> ja luvun $a$ kolmatta potenssia $a^3$ sanotaan luvun $a$ <em>kuutioksi.</em> Mistä nämä nimitykset ovat tulleet? Selitä omin sanoin.
+                    </p>
+                    <img src="/kurssit/may1/kuvat/nelio.png" style="float: left; width: 40%; margin-right: 1%; margin-left: 9%; margin-bottom: 0.5em;">   
+                    <img src="/kurssit/may1/kuvat/kuutio.png" style="float: left; width: 40%; margin-right: 9%; margin-left: 1%; margin-bottom: 0.5em;">
+                    <p style="clear: both;">  
+                    </p>
+                    <p> Merkitse lausekkeena ja laske
+                    </p>
+                    <ol class="a">
+                        <li> luvun $5$ neliö</li>
+                        <li> luvun $5$ neliön vastaluku</li>    
+                        <li> luvun $-5$ neliö</li>          
+                        <li> luvun $-5$ kuutio</li>
+                        <li> luvun $5$ kuutio</li>
+                        <li> luvun $5$ kuution vastaluku.</li>
+                    </ol>
+                    <p>
+                    Mitkä lausekkeista ovat yhtä suuria? Kirjoita havaintosi näkyviin käyttäen luvun $5$ tilalla kirjainta $a$. Onko havainnoissasi kysymyksessä sattuma vai yleispätevä sääntö? 
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL6_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL6_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $5^2 = 25$ </li>
+                            <li> $-5^2 = -25$ </li>
+                            <li> $(-5)^2 = 25$ </li>
+                            <li> $(-5)^3 = -125$ </li>
+                            <li> $5^3 = 125$ </li>
+                            <li> $-5^3 = -125$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d02d72-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL7">
+                            Potenssi
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL7">
+                    <p> 
+                        Laske seuraavien lausekkeiden arvo:
+                    </p>
+                    <ol class="a">
+                        <li> $(7-4)^2$</li>
+                        <li> $7^2-4^2$</li>   
+                        <li> $7^2-2\cdot 7 \cdot 4 + 4^2$</li>         
+                        <li> $(7+4)(7-4)$</li>
+                    </ol>
+                    <p>
+                    Mitkä lausekkeista ovat yhtä suuria? Kirjoita havaintosi näkyviin käyttäen luvun $7$ tilalla kirjainta $a$ ja luvun 4 tilalla kirjainta $b$. Onko havainnoissasi kysymyksessä sattuma vai yleispätevä sääntö? 
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL7_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL7_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $9$ </li>
+                            <li> $33$ </li>
+                            <li> $9$ </li>
+                            <li> $33$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d02e3a-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL15">
+                            Potenssi
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL15">
+                    <p> Hyvin hajamielinen henkilö päätti aloittaa säästämisen vuonna 1970. Hän talletti kyseisen vuoden alussa 100 markkaa pankkitilille, jonka korko oli 2,5 % vuodessa, mutta unohti sitten koko asian. Kuinka suureksi talletus oli kasvanut
+                    </p>
+                    <ol class="a">
+                        <li> vuoden 1971 alkuun mennessä? </li>
+                        <li> vuoden 1972 alkuun mennessä? </li>
+                        <li> vuoden 2002 alkuun mennessä, jolloin euro otettiin käyttöön? Anna vastaus sekä markkoina että euroina (5,94573 markkaa vastasi yhtä euroa)</li>  
+                        <li> vuoden 2016 alkuun mennessä?</li>         
+                    </ol>
+                    <p>
+                    Oletetaan, että korkoprosentti pysyi koko ajan samana eli talletus $1{,}025$-kertaistui joka vuosi.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL15_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL15_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $102{,}50$ markkaa </li>
+                            <li> $105{,}06$ markkaa </li>
+                            <li> $220{,}38$ markkaa eli $37{,}07$ euroa </li>
+                            <li> $52{,}37$ euroa. </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d03204-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL15b">
+                            Potenssi
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL15b">
+                    <p> Edellisen tehtävän henkilön hajamielisyys johtui siitä, että hän oli hyvin kiinnostunut menneistä ajoista. Samaan aikaan kun hän päätti aloittaa säästämisen, hän ryhtyi tutkimaan esivanhempiaan. Piirrä kaavio, joka havainnollistaa hyvin hajamielisen henkilön vanhempia ja heidän vanhempiaan ja heidän vanhempiaan. Kuinka monta esivanhempaa tällä henkilöllä on, jos mennään taaksepäin
+                    </p>
+                    <ol class="a">
+                        <li> kaksi sukupolvea </li>
+                        <li> kolme sukupolvea </li>
+                        <li> kuusi sukupolvea</li>  
+                        <li> 20 sukupolvea?</li>         
+                    </ol>
+                    <p>
+                    Ilmaise vastaukset potenssimerkinnän avulla. 
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL15b_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL15b_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $4 = 2^2$ </li>
+                            <li> $8 = 2^3$ </li>
+                            <li> $2^6$ </li>
+                            <li> $2^{20}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d032ea-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL16">
+                            Negatiivinen eksponentti ja eksponentti nolla
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL16">
+                    <p> Palauta mieleesi negatiivisen eksponentin määritelmä ja eksponentin nolla määritelmä. Laske sen jälkeen
+                    <ol class="a">
+                        <li> $4^{-1}-2^{-3} + 2^{-1}$ </li>
+                        <li> $(-1)^4+\left(\dfrac{1}{2}\right)^{-1}$ </li>
+                        <li> $(-2)^{3}+ (-3)^{0}$</li>  
+                        <li> $(-3)^{2}-2^{0}$.</li>  
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL16_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL16_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $\frac{5}{8}$ </li>
+                            <li> $3$ </li>
+                            <li> $-7$ </li>
+                            <li> $8$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d033b2-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL17">
+                            Negatiivinen eksponentti ja eksponentti nolla
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL17">
+                    <p> 
+                    <ol class="a">
+                        <li> Laske $3\cdot 10^3 + 7 \cdot 10^1 + 4\cdot 10^0 + 1\cdot 10^{-1} + 5\cdot 10^{-3}$.</li>
+                        <li> Kirjoita luku $506{,}9$ kymmenen potenssien summana samaan tapaan kuin a-kohdassa. </li>
+                        <li> Keksitkö syyn, miksi käyttämäämme lukujärjestelmää sanotaan kymmenjärjestelmäksi?</li>
+                        <li> Tiedätkö muita esimerkiksi tietokoneiden käyttämiä lukujärjestelmiä?</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL17_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL17_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $3074{,}105$ </li>
+                            <li> $5\cdot 10^2 + 6\cdot 10^0 + 9\cdot 10^{-1}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d03470-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL18">
+                            Negatiivinen eksponentti
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL18">
+                    <p> Kaksi opiskelijaa yritti keksiä lausekkeita, jotka tarkoittavat samaa kuin lauseke 
+                        $$\dfrac{1}{5x^7}.$$
+                        Opiskelijat saivat ehdottaa sopivaa lauseketta vuorotellen. Heidän ehdotuksensa olivat seuraavat:
+                    </p>
+                    <p>
+                        A: $\quad 5x^{-7}$
+                    </p>
+                    <p>
+                        B: $\quad (5x)^{-7}$
+                    </p>
+                    <p>
+                        A: $\quad \dfrac{x^{-7}}{5}$
+                    </p>
+                    <p>
+                        B: $\quad 5^{-1}x^{-7}$ 
+                    </p>
+                    <p>
+                        A: $\quad (5x^7)^{-1}$
+                    </p>
+                    <p>
+                        B: $\quad \dfrac{1}{5}x^{-7}$ 
+                    </p>
+                    <p>
+                        Kumpi opiskelija vastasi ensimmäisenä oikein? Kummalla opiskelijalla oli yhteensä enemmän oikeita vastauksia? Mitkä vastauksista olivat oikein?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL18_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL18_v" class="collapse">
+                        <p>
+                            Opiskelija A vastasi ensimmäisenä oikein. Oikeita vastauksia kummallakin yhtä monta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d03542-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#potenssi6">
+                            Samankantaiset potenssit
+                        </a>
+                    </h1>
+                </header>
+                <div id="potenssi6">
+                    <p>
+                        Sievennä seuraavat lausekkeet:
+                    <ol class="a">   
+                        <li> $3^5\cdot 3^{10}\cdot 3^{25}$ </li>
+                        <li> $\left( \frac{2}{3}\right)^{-2}\cdot\left( \frac{2}{3}\right)^7\cdot\left( \frac{2}{3}\right)^{-11}\cdot \left( \frac{2}{3}\right)^5$</li>
+                        <li> $(-1)^{500} \cdot (-1)^{2015}$</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#potenssi6_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="potenssi6_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $3^{40}$ </li>
+                            <li> $\dfrac{3}{2}$ </li>
+                            <li> $-1$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d03a4c-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#potenssi8">
+                            Samankantaiset potenssit
+                        </a>
+                    </h1>
+                </header>
+                <div id="potenssi8">
+                    <p>
+                        Sievennä seuraavat lausekkeet:
+                    <ol class="a">   
+                        <li> $\dfrac{9^{216}}{9^{209}}$</li>
+                        <li> $\dfrac{101^{96}}{101^{100}}$</li>
+                        <li> $\dfrac{(-2)^{97}}{(-2)^{62}}.$</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL8_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL8_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $9^7$ </li>
+                            <li> $101^{-4}$ </li>
+                            <li> $(-2)^{35} = -2^{35}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d03b82-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL5">
+                            Potenssin potenssi ja samankantaiset potenssit
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL5">
+                    <p> 
+                        Ilmaise luvun $2$ potenssina:
+                    <ol class="a">
+                        <li> $16$ </li>
+                        <li> $2\cdot 8^5$</li>
+                        <li> $8^9 \cdot 16^7$</li>    
+                        <li> $\dfrac{32^{10}}{2^{25}}$</li>          
+                        <li> $\dfrac{16^{100}}{8^{70}}$.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL5_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL5_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $2^4$ </li>
+                            <li> $2^{16}$ </li>
+                            <li> $2^{55}$ </li>
+                            <li> $2^{25}$ </li>
+                            <li> $2^{190}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="b0d03c4a-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#Potenssi10">
+                            Potenssien tulo, osamäärä ja potenssin potenssi
+                        </a>
+                    </h1>
+                </header>
+
+                <div id="Potenssi10">
+
+                    <p>Laske:
+                    <ol class="a">
+                        <li> $40^9 \cdot 0{,}25^9$</li>
+                        <li> $\dfrac{8888888^2}{2222222^2}$</li>
+                        <li> $\dfrac{36^{801}}{6^{1600}}$</li>                   
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#Potenssi10_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="Potenssi10_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $1\,000\,000\,000$ </li>
+                            <li> $16$ </li>
+                            <li> $36$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="tehtava" id="b0d03d12-7dfa-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-target="#potenssipeli">
+                                Potenssien laskusäännöt
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="reaali2b">
+                    <p> 
+                        Harjoittele potenssien laskusääntöjä tämän <a href="https://www.geogebra.org/m/jKR8Up7F">pelin</a> avulla. Saat käyttää kynää ja paperia apuna. Pelin tavoitteena on saada kymmenen oikeaa vastausta peräkkäin. 
+                    </p>
+                    </div>
+                </div>
+
+            <div class="tehtava" id="b0d03dda-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL19">
+                            Potenssien laskusäännöt
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL19">
+                    <p>Sievennä:
+                    <ol class="a">
+                        <li> $(-4x^5)^2$</li>
+                        <li> $\dfrac{21x^{21}}{7x^7}$</li>
+                        <li> $-3x(-3x^6)^2$</li>                   
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL19_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL19_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $16x^{10}$ </li>
+                            <li> $3x^{14}$ </li>
+                            <li> $-27x^{13}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d03ea2-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL20">
+                            Potenssien laskusäännöt
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL20">
+                    <p> Selitä omin sanoin, mitä eroa a- ja b-kohtien lausekkeilla on. Sievennä ne sen jälkeen.
+                    <ol class="a">
+                        <li> $(5a)^3(-5a^3)$</li>
+                        <li> $(5a)^3-5a^3$</li>                  
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL20_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL20_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> tulo $-625a^6$ </li>
+                            <li> erotus $120a^3$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d04244-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL21">
+                            Potenssien laskusäännöt
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL21">
+                    <p> Sievennä:
+                    <ol class="a">
+                        <li> $ab(a^2b)^3$</li>
+                        <li> $\dfrac{(xy)^7}{xy^7}$</li>   
+                        <li> $\dfrac{(-a^3b^2)^9}{a(b^4)^7}$</li>                  
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL21_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL21_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $a^7b^4$ </li>
+                            <li> $x^6$ </li>
+                            <li> $\dfrac{-a^{26}}{b^{10}}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tehtava" id="b0d0432a-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL2">
+                            Eksponenttiyhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL2">
+                    <p> Mikä luku $x$ toteuttaa annetun yhtälön? 
+                    <ol class="a">
+                        <li> $2^x = 2$</li>
+                        <li> $2^x = \dfrac{1}{2}$</li>
+                        <li> $2^x = 8^2$</li>
+                        <li> $3^x = \dfrac{1}{3^5}$</li>            
+                        <li> $10^x = 1000$</li>
+                        <li> $10^x = 0{,}01$</li>
+                    </ol>
+                    [Lyhyt S2014/2]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL2_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL2_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $x = 1$ </li>
+                            <li> $x = -1$ </li>
+                            <li> $x = 6$ </li>
+                            <li> $x = -5$ </li>
+                            <li> $x = 3$ </li>
+                            <li> $x = -2$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d043f2-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL3">
+                            Kymmenpotenssimuoto ja merkitsevät numerot
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL3">
+                    <p> 
+                        Ilmaise seuraavat luonnonvakiot kymmenpotenssimuodossa neljän merkitsevän numeron tarkkuudella:
+                    <ol class="a">
+                        <li> valon nopeus tyhjiössä 299792458 m/s</li>
+                        <li> Stefan-Boltzmannin vakio 0,000000005670367 W/(m$^2$K$^4$)</li>    
+                        <li> ihannekaasun moolitilavuus normaalitilassa 0,022414 m$^3$</li>          
+                        <li> Rydbergin vakio 10973731 m$^{-1}$.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL3_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL3_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $2{,}998 \cdot 10^8$ m/s </li>
+                            <li> $5{,}670 \cdot 10^{-9}$ W/(m$^2$K$^4$)</li>
+                            <li> $2{,}241 \cdot 10^{-2}$ m$^3$ </li>
+                            <li> $1{,}097 \cdot 10^{7}$ m$^{-1}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d044b0-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL8b">
+                            Kymmenpotenssimuoto
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL8b">
+                    <p> 
+                        Luonnontieteissä ja tekniikassa käytetään positiivisille luvuille usein esitysmuotoa $a \cdot 10^n$, jossa eksponentti $n$ on jaollinen luvulla $3$. Kopioi alla oleva taulukko vihkoosi ja täydennä siihen näihin esitysmuotoihin liittyvät etuliitteet ja lyhenteet. Etsi tarvittavat tiedot esimerkiksi netistä.
+                    </p>
+                    <div align="center">
+                        <table style="width = 75%"> 
+                            <tr>
+                                <th>Kymmenen potenssi</th>
+                                <th>Etuliite</th>  
+                                <th>Lyhenne</th>     
+                            </tr>
+                            <tr>
+                                <td> $10^{12}$ </td>
+                                <td> tera- </td> 
+                                <td> </td>     
+                            </tr>
+                            <tr>
+                                <td> $10^{9}$ </td>
+                                <td> </td> 
+                                <td> G </td>     
+                            </tr>
+                            <tr>
+                                <td> $10^{6}$ </td>
+                                <td> </td> 
+                                <td> </td>     
+                            </tr>
+                            <tr>
+                                <td> $10^{3}$ </td>
+                                <td> </td> 
+                                <td> </td>     
+                            </tr>
+                            <tr>
+                                <td> $10^{-3}$ </td>
+                                <td> </td> 
+                                <td> </td>     
+                            </tr>
+                            <tr>
+                                <td> $10^{-6}$ </td>
+                                <td> </td> 
+                                <td> </td>     
+                            </tr>
+                            <tr>
+                                <td> $10^{-9}$ </td>
+                                <td> </td> 
+                                <td> </td>     
+                            </tr>
+                            <tr>
+                                <td> $10^{-12}$ </td>
+                                <td> piko- </td> 
+                                <td> </td>     
+                            </tr>
+                        </table> </div>
+                    <p> Ilmaise sopivan lyhenteen avulla
+                    <ol class="a">
+                        <li> keltaisen valon aallonpituus noin 0,00000058 m</li>
+                        <li> Katri Valan lämpöpumppulaitoksen lämmitysteho noin 90000000 W.</li>   
+                    </ol> 
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL8b_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL8b_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> 580 nm </li>
+                            <li> 90 MW</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d04578-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL9">
+                            Logaritmi
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL9">
+                    <p> Päättele seuraavien logaritmien arvot ratkaisemalla niitä vastaavat eksponenttiyhtälöt esimerkiksi kokeilemalla:
+                    <ol class="a">
+                        <li> $\log_4(64)$</li>
+                        <li> $\log_3(81)$</li>
+                        <li> $\log_{5}(0{,}04)$.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL9_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL9_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $3$ </li>
+                            <li> $4$ </li>
+                            <li> $-2$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d04636-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL10">
+                            Logaritmi
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL10">
+                    <p> Mikä luku $x$ toteuttaa annetun yhtälön?
+                    <ol class="a">
+                        <li> $\log_2(x) = 5$</li>
+                        <li> $\log_2(x) = 1$</li>
+                        <li> $\log_{10}(x) = 3$</li>
+                        <li> $\log_{10}(x) = 1$</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL10_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL10_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> 32 </li>
+                            <li> 2 </li>
+                            <li> 1000 </li>
+                            <li> 10 </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d046fe-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL11">
+                            Eksponenttiyhtälön ratkaisu
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL11">
+                    <p> Kirjoita seuraavien eksponenttiyhtälöiden ratkaisut logaritmin avulla ja selvitä ratkaisujen likiarvot laskimella tai tietokoneella. Anna vastaus kolmen merkitsevän numeron tarkkuudella.
+                    <ol class="a">
+                        <li> $3^x = 2$</li>
+                        <li> $6\cdot 5^x = 120$</li>
+                        <li> $2 \cdot 10^x  = 1234567890$.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL11_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL11_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $\log_3(2)$ </li>
+                            <li> $\log_5(20)$ </li>
+                            <li> $\log_{10}(617283945)$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d04a82-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL1">
+                            Eksponenttiyhtälön ratkaisu  
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL1">
+                    <p> Ratkaise yhtälö $2\cdot 3^x = 162 \quad$ [Lyhyt K2014/2c]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL1_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL1_v" class="collapse">
+                        <p>$x = 4$ 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>  
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="b0d04b4a-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL12">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL12">
+                    <p> Saat sähköpostin, jossa huijari lupaa kaksinkertaistaa sijoituksesi vuodessa, jos sijoitat vähintään 2500 euroa. Kuinka monen vuoden kuluttua tämä minimisijoitus olisi kasvanut yli miljoonan euron arvoiseksi? 
+                    </p>
+                    <p>
+                        Kirjoita näkyviin ratkaisussa käyttämäsi lausekkeet tai yhtälöt ja selitä lisäksi omin sanoin, miten päättelit.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL12_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL12_v" class="collapse">
+                        <p>
+                            Yhdeksän vuoden kuluttua.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d04c12-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL13">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL13">
+                    <p> Bakteeriviljelmän massa on nyt 5 mg ja massa kaksinkertaistuu aina kolmessa tunnissa. Kuinka pitkän ajan kuluttua viljelmän massa on
+                    </p>
+                    <ol class="a">
+                        <li> 640 mg</li>
+                        <li> yli 50 grammaa?</li>           
+                    </ol>
+                    <p>
+                        Kirjoita näkyviin ratkaisussa käyttämäsi lausekkeet tai yhtälöt ja selitä lisäksi omin sanoin, miten päättelit. Anna vastaukset tunnin tarkkuudella.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL13_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL13_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> 21 tunnin kuluttua </li>
+                            <li> 40 tunnin kuluttua (39 h 52 min) </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d04cda-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL4">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL4">
+                    <p> 
+                        Sievennä seuraavat lausekkeet. Muista potenssin määritelmä ja kertaa tarvittaessa potenssin laskusäännöt.
+                    <ol class="a">
+                        <li> $a^na^n$</li>
+                        <li> $\dfrac{a^{3n}}{a^3}$</li>    
+                        <li> $\dfrac{b^{2n+1}}{b^nb^n}$</li>          
+                        <li> $\dfrac{x^nx^n}{x^n+x^n}$</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL4_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL4_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $a^{2n}$ </li>
+                            <li> $a^{3(n-1)}$ </li>
+                            <li> $b$ </li>
+                            <li> $\dfrac{x^n}{2}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d04da2-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL4b">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL4b">
+                    <p> Laske lausekkeen $\dfrac{2^n4^{n+5}}{8^{n+1}}$ arvo, jos
+                    <ol class="a">
+                        <li> $n = 1$</li>
+                        <li> $n = 5$.</li>    
+                        <li> Mitä voisi epäillä edellisten kohtien perusteella? Osoita potenssien laskusääntöjen avulla, ettei kysymyksessä ollut sattuma.</li>          
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL4b_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL4b_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $2^7$ </li>
+                            <li> $2^7$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d04e6a-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL14">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL14">
+                    <p> Laske potenssit $10^3$, $10^6$ ja $10^9$. Kuinka monta numeroa niissä on?
+                    </p>
+                    <p>
+                        Ilmaise seuraavat luvut kymmenpotenssimuodossa kuuden numeron tarkkuudella. Kuinka monta numeroa näissä luvuissa on, jos ne kirjoitettaisiin näkyviin ilman kymmenpotenssimuotoa? Hyödynnä tehtävän alkuosan havaintojasi.
+                    <ol class="a">
+                        <li> $6^{10}$ </li>
+                        <li> $2^{55}$</li>
+                        <li> $3^{42}$</li>           
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL14_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL14_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $6{,}04662 \cdot 10^7$, kahdeksan numeroa </li>
+                            <li> $3{,}60288 \cdot 10^{16}$, 17 numeroa </li>
+                            <li> $1{,}09419 \cdot 10^{20}$, 21 numeroa </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d0525c-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL14b">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL14b">
+                    <p> Alla on ote Wikipedian CRP:tä koskevasta tiedosta. Vastaa sen perusteella seuraaviin kysymyksiin.
+                    <ol class="a">
+                        <li> Potilaan CRP-pitoisuus oli 40 klo 12:00. Kuinka suuri pitoisuus voi enintään olla klo 18:00? </li>
+                        <li> Potilaan CRP-pitoisuus oli 100 maanantaina klo 12:00. Milloin se voi aikaisintaan laskea arvoon 10? </li>
+                    </ol>
+                    </p>
+                    <p>
+                        <i>
+                            CRP:n pitoisuus veressä nousee bakteeri-infektioiden, muiden tulehdustilojen ja kudosvaurion yhteydessä nopeasti, jo muutaman tunnin kuluessa, ja pitoisuus voi kaksinkertaistua kahdeksan tunnin välein jopa 1000-kertaiseksi viitealueeseen verrattuna. Maksimitaso saavutetaan tyypillisesti noin 50 tunnissa. CRP nousee yleensä enemmän bakteerin aiheuttamissa tulehduksissa kuin virustulehduksissa, mutta kohonnut CRP ei ole minkään tietyn tulehdustilan merkki. Lievät tulehdukset ja virusinfektiot nostavat CRP:n tyypillisesti noin tasolle 10–50 mg/l, aktiiviset tulehdukset ja bakteeri-infektiot pitoisuuksiin 50–200 mg/l ja vakavat infektiot tai traumat tasolle >200 mg/l. CRP:n biologinen puoliintumisaika on 19 tuntia, joten tulehduksen rauhoituttua CRP-taso laskee nopeasti. CRP on siis herkkä, mutta epäspesifinen tulehdustilan indeksi.
+                        </i>
+                    </p>
+                    <p> [Lyhyt K2016/8]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL14b_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL14b_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $40 \cdot 2^{6/8} \approx 67{,}3$ </li>
+                            <li> torstaina klo 03:00. </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d05356-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL14c">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL14c">
+                    <p> Vieraalla planeetalla putoavan kappaleen kulkema matka $s$ on suoraan verrannollinen kuluneen ajan $t$ toiseen potenssiin kaavan $s = 10t^2$ mukaisesti. 
+                    <ol class="a">
+                        <li> Kopioi oheinen taulukko vastauspaperiisi ja täydennä tyhjät kohdat. </li>
+                        <li> Merkitse koordinaatistoon a-kohdan taulukosta pisteet, joiden koordinaatit ovat $(\lg t, \lg s)$. Mitä havaitset? Selitä. </li>
+                    </ol>
+                    </p>
+                    <div align="center">
+                        <table style="width = 75%"> 
+                            <tr>
+                                <th> $t$ </th>
+                                <th> $\lg t$ </th>
+                                <th> $\lg s$ </th> 
+                            </tr>
+                            <tr>
+                                <td> 1 </td>
+                                <td> 0 </td>
+                                <td> 1 </td> 
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td>  </td>
+                                <td>  </td> 
+                            </tr>
+                            <tr>
+                                <td> 4 </td>
+                                <td>  </td>
+                                <td>  </td>   
+                            </tr>
+                            <tr>
+                                <td> 10 </td>
+                                <td>  </td>
+                                <td>  </td>      
+                            </tr>
+                            <tr>
+                                <td> 100 </td>
+                                <td>  </td>
+                                <td>  </td>      
+                            </tr>
+                        </table> </div>
+                    <p> [Lyhyt K2016/12]
+                    </p>
+                    <p> Vihje: merkintä $\lg$ tarkoittaa kymmenkantaista logaritmia $\log_{10}$.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL14c_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL14c_v" class="collapse">
+                        <ol class="a">
+                            <li> <div align="center">
+                                    <table style="width = 75%"> 
+                                        <tr>
+                                            <th> $t$ </th>
+                                            <th> $\lg t$ </th>
+                                            <th> $\lg s$ </th> 
+                                        </tr>
+                                        <tr>
+                                            <td> 1 </td>
+                                            <td> 0 </td>
+                                            <td> 1 </td> 
+                                        </tr>
+                                        <tr>
+                                            <td> 2 </td>
+                                            <td> $0{,}30\ldots$ </td>
+                                            <td> $1{,}6\ldots$ </td> 
+                                        </tr>
+                                        <tr>
+                                            <td> 4 </td>
+                                            <td> $0{,}60\ldots$ </td>
+                                            <td> $2{,}2\ldots$ </td>  
+                                        </tr>
+                                        <tr>
+                                            <td> 10 </td>
+                                            <td> 1 </td>
+                                            <td> 3 </td>      
+                                        </tr>
+                                        <tr>
+                                            <td> 100 </td>
+                                            <td> 2 </td>
+                                            <td> 5 </td>      
+                                        </tr>
+                                    </table> </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d054e6-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL14d">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL14d">
+                    <p> Maanjäristyksen voimakkuus $M$ lasketaan kaavalla
+                        $$1{,}44M = \log_{10}E-5{,}24,$$ 
+                        jossa $E$ on järistyksessä vapautuva energia.
+                    <ol class="a">
+                        <li> Sendain lähellä vuonna 2011 sattuneen järistyksen voimakkuus oli $9{,}0$. Laske järistyksessä vapautunut energia kahden merkitsevän numeron tarkkuudella. </li>
+                        <li> Kobessa vuonna 1995 sattuneen järistyksen voimakkuus oli $6{,}8$. Kuinka moninkertainen oli Sendain järistyksessä vapautunut energia Koben järistykseen verrattuna? </li>
+                    </ol> 
+                    [Lyhyt K2012/10]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#PL14d_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="PL14d_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $E \approx 1{,}6 \cdot 10^{18}$ </li>
+                            <li> noin 1500-kertainen </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0d055e0-7dfa-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#PL22">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="PL21">
+                    <p> Summa, jossa kaikki yhteenlaskettavat ovat samoja, voidaan kirjoittaa tulona, kuten tämän luvun alussa todettiin. Siis esimerkiksi $5 + 5 + 5 = 3\cdot 5$ ja $8 + 8 = 2 \cdot 8$. Kokoamalla kaikki taulukkoon tällaiset tulot, joissa kumpikin tulon tekijä on enintään 10, saadaan muodostettua tuttu kertotaulu. Alla olevaan taulukkoon on täydennetty kertotaulun viisi ensimmäistä riviä.
+                    </p>
+                    <div align="center">
+                        <table style="width = 75%"> 
+                            <tr>
+                                <td> $\cdot$ </td>
+                                <td> $\phantom{,}$<b>1</b>$\phantom{,}$ </td>
+                                <td> $\phantom{,}$<b>2</b>$\phantom{,}$ </td> 
+                                <td> $\phantom{,}$<b>3</b>$\phantom{,}$ </td> 
+                                <td> $\phantom{,}$<b>4</b>$\phantom{,}$ </td>
+                                <td> $\phantom{,}$<b>5</b>$\phantom{,}$ </td>
+                                <td> $\phantom{,}$<b>6</b>$\phantom{,}$ </td>
+                                <td> $\phantom{,}$<b>7</b>$\phantom{,}$ </td>
+                                <td> $\phantom{,}$<b>8</b>$\phantom{,}$ </td>
+                                <td> $\phantom{,}$<b>9</b>$\phantom{,}$ </td>
+                                <td> <b>10</b> </td>    
+                            </tr>
+                            <tr>
+                                <td> <b>1</b></td>
+                                <td> 1 </td>
+                                <td> 2 </td> 
+                                <td> 3 </td> 
+                                <td> 4 </td>
+                                <td> 5 </td>
+                                <td> 6 </td>
+                                <td> 7 </td>
+                                <td> 8 </td>
+                                <td> 9 </td>
+                                <td> 10 </td>       
+                            </tr>
+                            <tr>
+                                <td> <b>2</b> </td>
+                                <td> 2 </td>
+                                <td> 4 </td> 
+                                <td> 6 </td> 
+                                <td> 8 </td>
+                                <td> 10 </td>
+                                <td> 12 </td>
+                                <td> 14 </td>
+                                <td> 16 </td>
+                                <td> 18 </td>
+                                <td> 20 </td>        
+                            </tr>
+                            <tr>
+                                <td> <b>3</b> </td>
+                                <td> 3 </td>
+                                <td> 6 </td> 
+                                <td> 9 </td> 
+                                <td> 12 </td>
+                                <td> 15 </td>
+                                <td> 18 </td>
+                                <td> 21 </td>
+                                <td> 24 </td>
+                                <td> 27 </td>
+                                <td> 30 </td>        
+                            </tr>
+                            <tr>
+                                <td> <b>4</b> </td>
+                                <td> 4 </td>
+                                <td> 8 </td> 
+                                <td> 12 </td> 
+                                <td> 16 </td>
+                                <td> 20 </td>
+                                <td> 24 </td>
+                                <td> 28 </td>
+                                <td> 32 </td>
+                                <td> 36 </td>
+                                <td> 40 </td>        
+                            </tr>
+                            <tr>
+                                <td> <b>5</b> </td>
+                                <td> 5 </td>
+                                <td> 10 </td> 
+                                <td> 15 </td> 
+                                <td> 20 </td>
+                                <td> 25 </td>
+                                <td> 30 </td>
+                                <td> 35 </td>
+                                <td> 40 </td>
+                                <td> 45 </td>
+                                <td> 50 </td>        
+                            </tr>
+                            <tr>
+                                <td> <b>6</b> </td>
+                                <td>  </td>
+                                <td>  </td> 
+                                <td>  </td> 
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>        
+                            </tr>
+                            <tr>
+                                <td> <b>7</b> </td>
+                                <td>  </td>
+                                <td>  </td> 
+                                <td>  </td> 
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>        
+                            </tr>
+                            <tr>
+                                <td> <b>8</b> </td>
+                                <td>  </td>
+                                <td>  </td> 
+                                <td>  </td> 
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>        
+                            </tr>
+                            <tr>
+                                <td> <b>9</b> </td>
+                                <td>  </td>
+                                <td>  </td> 
+                                <td>  </td> 
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>        
+                            </tr>
+                            <tr>
+                                <td> <b>10</b> </td>
+                                <td>  </td>
+                                <td>  </td> 
+                                <td>  </td> 
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>        
+                            </tr>
+
+                        </table> </div>
+                    <p> 
+                        Tulo, jossa kaikki tulon tekijät ovat samoja, voidaan vastaavasti kirjoittaa potenssina. Potenssien arvoista on siis mahdollista muodostaa vastaava "potenssitaulu". 
+                    </p>
+                    <div align="center">
+                        <table style="width = 75%"> 
+                            <tr>
+                                <td>  </td>
+                                <td> $\phantom{,}$<b>1</b>$\phantom{,}$ </td>
+                                <td> $\phantom{,}$<b>2</b>$\phantom{,}$ </td> 
+                                <td> $\phantom{,}$<b>3</b>$\phantom{,}$ </td> 
+                                <td> $\phantom{,}$<b>4</b>$\phantom{,}$ </td>
+                                <td> $\phantom{,}$<b>5</b>$\phantom{,}$ </td> 
+                            </tr>
+                            <tr>
+                                <td> <b>1</b></td>
+                                <td>  </td>
+                                <td>  </td> 
+                                <td>  </td> 
+                                <td>  </td>
+                                <td>  </td>
+                            </tr>
+                            <tr>
+                                <td> <b>2</b> </td>
+                                <td>  </td>
+                                <td>  </td> 
+                                <td>  </td> 
+                                <td> 16 </td>
+                                <td>  </td>
+                            </tr>
+                            <tr>
+                                <td> <b>3</b> </td>
+                                <td>  </td>
+                                <td>  </td> 
+                                <td>  </td> 
+                                <td>  </td>
+                                <td>  </td>     
+                            </tr>
+                            <tr>
+                                <td> <b>4</b> </td>
+                                <td>  </td>
+                                <td>  </td> 
+                                <td>  </td> 
+                                <td>  </td>
+                                <td>  </td>      
+                            </tr>
+                            <tr>
+                                <td> <b>5</b> </td>
+                                <td>  </td>
+                                <td>  </td> 
+                                <td>  </td> 
+                                <td>  </td>
+                                <td>  </td>       
+                            </tr>
+                        </table> </div>
+                    <p>
+                    <ol class="a">
+                        <li> Kopioi yllä oleva potenssitaulu vihkoosi ja täydennä siihen potenssien arvot.</li>
+                        <li> Vertaa kertotaulua ja potenssitaulua keskenään. Näkyykö siellä samoja lukuja? Missä kohdissa?</li>        
+                    </ol>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#L4itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="L4itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/1603">itsearviointitesti opetus.tv:n polku-palvelussa</a>. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+
+            </p>
+        </div>
+    </section>
+
+</article>
