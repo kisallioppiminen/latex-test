@@ -749,7 +749,7 @@ topnav: may1
                         </div>
                         <div class="teoria">
                             <p>
-                                Seuraavassa tehtävässä piirretään erilaisten eksponenttifunktioiden kuvaajia. Eksponenttifunktioiden avulla voidaan mallintaa ja analysoida esimerkiksi sähkövirtapiirejä, aineen radioaktiivista hajoamista, kappaleen jäähtymistä, tietynlaisten kemiallisten reaktioiden nopeutta, populaatioiden koon kasvua, tautien leviämistä, pääoman karttumista korkonkorkolaskennassa, pyramidihuijauksia <a href="https://en.wikipedia.org/wiki/Exponential_decay#Applications_and_examples">ja niin edelleen</a>.
+                                
                             </p>
                         </div>
                         <div class="tehtavat">
@@ -815,6 +815,350 @@ topnav: may1
                     </div>
                 </section>
 
+    
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl4">
+                     Ensimmäisen asteen yhtälö
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku1kpl4" class="collapse">
+            
+            <div class="teoria">
+                <p>
+                    Kun tutkitaan, missä kohdassa ensimmäisen asteen polynomifunktio saa tietyn arvon, päädytään ensimmäisen asteen yhtälöön. Esimerkiksi jos halutaan tietää, missä kohdassa funktio $f(x) = 2x + 1$ saa arvon $4$, päädytään tutkimaan yhtälöä
+                    $$f(x) = 4$$
+                    eli yhtälöä
+                    $$2x + 1 = 4.$$
+                    Tämä yhtälö voidaan ratkaista graafisesti piirtämällä funktion $f(x) = 2x + 1$ kuvaaja koordinaatistoon ja katsomalla, mikä kuvaajan piste on korkeudella 4:
+                <br>
+                    <img src="/kurssit/mab2/kuvat/MAB2kuva006.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                    Piirroksesta nähdään, että kuvaajan piste on korkeudella 4 kohdassa $x = 1{,}5$. Yhtälön ratkaisu on siis $x = 1{,}5$.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="810408a8-a087-47e7-881f-e292b74ebea8">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t113">
+                                Ensimmäisen asteen yhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t113" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista ensimmäisen asteen yhtälö
+                            $$-3x - 1 = 5$$
+                            graafisesti samaan tapaan kuin edellisessä esimerkissä.
+                        <ol class="a">
+                            <li> Piirrä koordinaatistoon funktion $f(x) = -3x-1$ kuvaaja ja tutki, missä kohdassa kuvaajan piste on korkeudella 5.</li>
+                            <li> Mikä on yhtälön ratkaisu?</li>
+                            <li> Tarkista tulos sijoittamalla se alkuperäisen yhtälön vasemmalle puolelle. Saatko tulokseksi yhtälön oikean puolen eli luvun $5$?</li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t113_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t113_v" class="collapse">
+                           <ol class="a">
+                                <li> <img src="/kurssit/mab2/kuvat/MAB2kuva007.png" max-width: 100%; width: auto; height: auto;/></li>
+                                <li> Yhtälön ratkaisu on $x = -2$.</li>
+                                <li> Kyllä, sillä $-3 \cdot (-2) -1 = 6 - 1 = 5$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
+                <!-- <div class="definition">
+                    <h3>MÄÄRITELMÄ: ENSIMMÄISEN ASTEEN YHTÄLÖ</h3>
+                    <p>
+                        <em>Ensimmäisen asteen yhtälö</em> tarkoittaa yhtälöä, joka voidaan esittää muodossa
+                        $$ax + b = 0,$$
+                        missä $a \neq 0$.
+                    </p>
+                </div> -->
+
+                <p>
+                    Ensimmäisen asteen yhtälöitä ovat sellaiset yhtälöt, jotka voidaan muokata muotoon
+                    $$
+                    ax + b = 0,
+                    $$
+                    missä $a \neq 0$. Tällaisen yhtälön ratkaisut ovat samat kuin ensimmäisen asteen polynomifunktion $$f(x) = ax + b$$ nollakohdat.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="316df42a-93b0-44b3-956a-b8a44a6669d3">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t117">
+                                Funktion nollakohdat
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t117" class="collapse">
+                        <img src="/kurssit/mab2/kuvat/MAB2kuva008.png" max-width: 100%; width: auto; height: auto;/>
+                        <p>
+                            Yllä on näkyvissä ensimmäisen asteen polynomifunktion 
+                            $$
+                            f(x) = -\dfrac{2}{3}x + \dfrac{8}{3}
+                            $$
+                            kuvaaja. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Päättele kuvaajan avulla, mikä on yhtälön
+                                $$
+                                -\dfrac{2}{3}x + \dfrac{8}{3} = 0
+                                $$
+                                ratkaisu.
+                            </li>
+                            <li>
+                                Tarkista ratkaisu sijoittamalla se yhtälön vasemmalle puolelle.
+                            </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t117_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t117_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Yhtälön 
+                                    $$
+                                    -\dfrac{2}{3}x + \dfrac{8}{3} = 0
+                                    $$
+                                    ratkaisu on funktion $f$ nollakohta $x = 4$. 
+                                </li>
+                                <li>
+                                    Jos $x = 4$, yhtälön vasen puoli on
+                                    $$
+                                    -\dfrac{2}{3} \cdot 4 + \dfrac{8}{3} = -\dfrac{8}{3} + \dfrac{8}{3} = 0.
+                                    $$
+                                    Yhtälön vasen ja oikea puoli ovat siis yhtä suuret. Tämä tarkoittaa, että $x = 4$ on todellakin yhtälön ratkaisu.
+                                </li>
+                            </ol>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
+                <p>
+                    Seuraavan määritelmän avulla voi aina tarkistaa, onko jokin luku yhtälön ratkaisu. Tarkistus on tehty näin myös edellisissä tehtävissä.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: YHTÄLÖN RATKAISU</h3>
+                    <p>
+                        Yhtälön <em>ratkaisu</em> eli <em>juuri</em> tarkoittaa lukua, joka muuttujan paikalle sijoitettuna tekee yhtälön vasemmasta ja oikeasta puolesta yhtä suuria.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="04a9e417-ecde-457b-95ae-bd694ed4e4b3">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t114">
+                                Yhtälön ratkaisu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t114" class="collapse">
+                        <p>
+                            Tutki sijoittamalla, ovatko seuraavat luvut yhtälön
+                            $$x^2 + 6x = 8x+3$$
+                            ratkaisuja. Laske erikseen yhtälön vasemman puolen arvo ja oikean puolen arvo ja vertaa tuloksia sen jälkeen.
+                        </p>
+                        <ol class="a">
+                            <li> $3$</li>
+                            <li> $1$ </li>
+                            <li> $-1$</li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t114_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t114_v" class="collapse">
+                            <ol class="a">
+                                <li> On ratkaisu, sillä yhtälön vasen ja oikea puoli saavat saman arvon $27$. </li>
+                                <li> Ei ole ratkaisu, sillä yhtälön vasen puoli saa arvon $7$ ja oikea arvon $11$.  </li>
+                                <li> On ratkaisu, sillä yhtälön vasen ja oikea puoli saavat saman arvon $-5$. Huomaa, että yhtälön vasen puoli on $(-1)^2 + 6 \cdot (-1) = 1 - 6 = -5$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Sijoittamalla voidaan tutkia, onko jokin yksittäinen luku tarkasteltavan yhtälön ratkaisu. Usein on kuitenkin tarpeen etsiä yhtälön kaikki ratkaisut tai selvittää, onko yhtälöllä ylipäätään olemassa ratkaisua. Yhtälön ratkaiseminen tarkoittaakin sitä, että etsitään yhtälön kaikki ratkaisut. Seuraavaksi harjoitellaan tekemään tämä ensimmäisen asteen yhtälön tapauksessa.
+                </p>
+
+                <p>
+                    Kun yhtälöä muokataan, on äärimmäisen tärkeää huolehtia siitä, että sen ratkaisut eivät muutu (muuten saadaan vääriä tuloksia). On mahdollista osoittaa, että seuraavat operaatiot eivät vaikuta yhtälön ratkaisuihin, joten niitä voidaan käyttää yhtälön muokkaamiseen:
+                <ol>
+                    <li> Yhtälön molemmille puolille voidaan lisätä sama luku tai lauseke.</li>
+                    <li> Yhtälön molemmilta puolilta voidaan vähentää sama luku tai lauseke.</li>
+                    <li> Yhtälön molemmat puolet voidaan kertoa tai jakaa samalla nollasta erovalla luvulla tai lausekkeella</li>
+                </ol>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b89cd0f2-bcc6-447e-9447-9988bfca39b2">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t115">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t115" class="collapse">
+                        <ol class="a">
+                            <li> Selitä omin sanoin, mitä eroa on lausekkeilla $x+2$ ja $2x$.</li>
+                            <li> Ratkaise yhtälö $x + 2 = 10$. Mitä edellä mainituista operaatioista 1-3 käytit?</li>
+                            <li> Ratkaise yhtälö $2x = 10$. Mitä edellä mainituista operaatioista 1-3 käytit? </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t115_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t115_v" class="collapse">
+                            <ol class="a">
+                                <li> Lauseke $x + 2$ on summa ja lauseke $2x$ on tulo. </li>
+                                <li> $x = 8$. Ainakin operaatiota 2 (yhtälön molemmilta puolilta vähennettiin luku 2).
+                                <li> $x = 5$. Ainakin operaatiota 3 (yhtälön molemmat puolet jaettiin luvulla 2). </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="4d1b67b5-4c51-485f-ac91-7cd8b2b6a93a">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t116">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t116" class="collapse">
+                        <ol class="a">
+                            <li> Selitä omin sanoin, mitä eroa on lausekkeilla $4(x+8)$ ja $4x + 8$. Kumpaa voisi sanoa summaksi? Entä kumpaa tuloksi?</li>
+                            <li> Ratkaise yhtälö $4x + 8 = 88$. Mitä edellä mainituista operaatioista 1-3 käytit ensimmäisenä?</li>
+                            <li> Ratkaise yhtälö $4(x+8) = 88$. Mitä edellä mainituista operaatioista 1-3 käytit ensimmäisenä? </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t116_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t116_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Lauseke $4(x+8)$ on lausekkeiden $4$ ja $x+8$ tulo. 
+                                    <br>
+                                    Lauseke $4x + 8$ on lausekkeiden $4x$ ja $8$ summa.
+                                </li>
+                                <li> $x = 20$. Operaatiota 2 (yhtälön molemmilta puolilta vähennettiin luku $8$).
+                                <li> $x = 14$. Operaatiota 3 (yhtälön molemmat puolet jaettiin luvulla $4$). </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+
+            <div class="teoria">
+                <p>
+                    Tämän kappaleen alussa ratkaistiin graafisesti funktion kuvaajan avulla yhtälö
+                    $$2x+1 = 4.$$
+                    Jos sama yhtälö ratkaistaan yhtälöä muokkaamalla, vähennetään aluksi yhtälön molemmilta puolilta luku $1$. Näin päädytään yhtälöön
+                    $$2x = 3.$$
+                    Sen jälkeen yhtälön molemmat puolet voidaan jakaa luvulla 2. Näin päädytään yhtälöön
+                    $$x = \dfrac{3}{2}.$$
+                    Koska käytettiin vain sallittuja operaatioita, löydettiin yhtälön ratkaisu. Ratkaisun voi lisäksi aina tarkistaa sijoittamalla alkuperäiseen yhtälöön:
+                    $$
+                    2 \cdot \dfrac{3}{2} + 1 = 3 + 1 = 4.
+                    $$
+                    Yhtälön vasemmasta puolesta saatiin yhtä suuri kuin yhtälön oikeasta puolesta, joten 
+                    $$
+                    x = \dfrac{3}{2}
+                    $$
+                    on yhtälön ratkaisu.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="462628f4-913f-4a68-9862-d72e30e6265c">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t118">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t118" class="collapse">
+                        <p> Ratkaise seuraavat yhtälöt:
+                        </p>
+                        <ol class="a">
+                            <li> $3x+4 = 2x-1$</li>
+                            <li> $2-(3x-1) = 3-(8x+1)$.</li>
+                        </ol>
+                        <p>
+                            Ohje: b-kohdassa aloita poistamalla sulut yhtälön vasemmalta ja oikealta puolelta.
+                        </p>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t118_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t118_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = -5$ </li>
+                                <li> $x = -\dfrac{1}{5}$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl4">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    
                 <section class="panel">
                     <header class="otsikko">
                         <h1>
