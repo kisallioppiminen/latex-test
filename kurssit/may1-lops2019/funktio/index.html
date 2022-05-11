@@ -1042,10 +1042,11 @@ topnav: may1
                         </p>
                         <ol class="a">
                             <li> $3x+4 = 2x-1$</li>
-                            <li> $2-(3x-1) = 3-(8x+1)$.</li>
+                            <li> $2-(3x-1) = 3+(2x+1)$.</li>
+                            <li> $3(2-x)=x+6$
                         </ol>
                         <p>
-                            Ohje: b-kohdassa aloita poistamalla sulut yhtälön vasemmalta ja oikealta puolelta.
+                            Ohje: b-kohdassa aloita poistamalla sulut yhtälön vasemmalta ja oikealta puolelta. Muista, että miinusmerkki sulkujen edessä vaikuttaa kaikkiin sulkujen sisällä oleviin termeihin.
                         </p>
                         <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAB2t118_v">
@@ -1056,6 +1057,7 @@ topnav: may1
                             <ol class="a">
                                 <li> $x = -5$ </li>
                                 <li> $x = -\dfrac{1}{5}$. </li>
+                                <li> $x=0$
                             </ol>
                         </div>
                     </div>
@@ -1071,6 +1073,252 @@ topnav: may1
     </section>
     
     
+  <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#2asteenPotenssifunktio">
+                    Toisen asteen potenssifunktio ja -yhtälö
+                </a>
+            </h1>
+        </header>
+        <div id="2asteenPotenssifunktio" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa tutustutaan niin sanottuun toisen asteen potenssifunktioon ja palautetaan mieleen, mitä luvun neliöjuuri tarkoittaa. Lisäksi ratkaistaan toisen asteen potenssiyhtälöitä.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: TOISEN ASTEEN POTENSSIFUNKTIO</h3>
+                    <p>
+                        Funktiota $f(x) = x^2$ sanotaan <em>toisen asteen potenssifunktioiksi</em>.
+                    </p>
+                </div>
+
+                <p>
+                    Toisen asteen potenssifunktion kuvaaja on piirretty alla olevaan kuvaan. Se on muodoltaan <em>paraabeli</em>.
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk1.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava first-exercise" id="5ed55bb3-b627-4422-8b35-dc2e49287dec">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf1">
+                                Toisen asteen potenssifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="pf1" class="collapse">
+                        <p> Päättele yllä olevan kuvaajan avulla vastaukset seuraaviin kysymyksiin:
+                        </p>
+                        <ol class="a">
+                            <li> Mikä on funktion $f(x) = x^2$ arvo kohdassa $x = -1$?</li>
+                            <li> Missä kohdissa funktio $f(x) = x^2$ saa arvon $4$?</li>
+                            <li> Mikä on funktion $f(x) = x^2$ pienin arvo?</li>
+                            <li> Kuinka monta ratkaisua on yhtälöllä $x^2 = 6$?</li>
+                            <li> Kuinka monta ratkaisua on yhtälöllä $x^2 = -1$?</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf1_v">
+                                Vastaus
+                            </a>
+                        </h2>
+                        <div id="pf1_v" class="collapse">
+                            <ol class="a">
+                                <li> $f(-1) = 1$</li>
+                                <li> Kohdassa $x = -2$ ja kohdassa $x = 2$. </li>
+                                <li> Pienin arvo on $0$. </li>
+                                <li> Kaksi ratkaisua. </li>
+                                <li> Ei yhtään ratkaisua. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Toisen asteen potenssifunktion $f(x) = x^2$ kuvaajasta nähdään, että yhtälöllä $x^2 = 7$ on kaksi ratkaisua:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk2.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Positiivista ratkaisua, joka on merkitty kuvaan kirjaimella $b$, sanotaan luvun $7$ neliöjuureksi. Luvun $7$ neliöjuuri on siis sellainen positiivinen luku, jonka toinen potenssi on seitsemän. Vastaavasti määritellään muidenkin epänegatiivisten lukujen neliöjuuret.
+                </p>
+                <p>
+                    Epänegatiivisia lukuja ovat luku nolla sekä kaikki positiiviset luvut. Luku $a$ on siis epänegatiivinen, jos ja vain jos $a \geq 0$. Negatiivisille luvuille neliöjuurta ei määritellä.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: NELIÖJUURI</h3>
+                    <p>
+                        Luvun $a \geq 0$ <em>neliöjuuri</em> tarkoittaa lukua $b \geq 0$, jolle pätee
+                        $$b^2 = a.$$
+                        Luvun $a$ neliöjuurelle käytetään merkintää $\sqrt{a}.$
+                    </p>
+                </div>
+
+                <p>
+                    Jos luvun $a$ neliöjuurelle käytetään merkintää $\sqrt{a}$, pätee sille siis määritelmän mukaan kaksi asiaa: $\sqrt{a} \geq 0$ ja $\left(\sqrt{a}\right)^2 = a$.
+                </p>
+
+                <p>
+                    Neliöjuuren merkintää käyttäen edellinen kuva näyttää tältä:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk3.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="6621f6a0-a4f2-4db9-9233-0b418a45bec4">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf2">
+                                Neliöjuuri
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="pf2" class="collapse">
+                        <p> Päättele seuraavien neliöjuurten arvo. Voit käyttää apuna yllä olevaa kuvaajaa.
+                        </p>
+                        <ol class="a">
+                            <li> $\sqrt{4}$</li>
+                            <li> $\sqrt{1}$</li>
+                            <li> $\sqrt{0}$</li>
+                            <li> $\sqrt{9}$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf2_v">
+                                Vastaus
+                            </a>
+                        </h2>
+                        <div id="pf2_v" class="collapse">
+                            <ol class="a">
+                                <li> $\sqrt{4} = 2$</li>
+                                <li> $\sqrt{1} = 1$</li>
+                                <li> $\sqrt{0} = 0$</li>
+                                <li> $\sqrt{9} = 3$</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="teoria">
+                <p>
+                    Toisen asteen potenssifunktion kuvaajan avulla voidaan ratkaista sellaisia toisen asteen yhtälöitä, jotka ovat muotoa $x^2 = a$. Esimerkiksi alla olevasta kuvasta nähdään, että yhtälöllä $x^2 = 7$ on kaksi ratkaisua: $x_1 = \sqrt{7}$ ja $x_2 = -\sqrt{7}$. Sama asia voidaan ilmaista myös sanomalla, että yhtälö $x^2 = 7$ toteutuu, jos ja vain jos $x = \sqrt{7}$ tai $x = -\sqrt{7}$.
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk4.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="9cd6fdd0-5101-45df-b863-76faa5c60f40">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf6">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="pf6" class="collapse">
+                        <p> 
+                            Päättele yllä olevan kuvaajan avulla, kuinka monta ratkaisua seuraavilla yhtälöillä on. Jos yhtälöllä on ratkaisu tai ratkaisuja, mitä ne ovat?
+                        </p>
+                        <ol class="a">
+                            <li> $x^2 = 0$</li>
+                            <li> $x^2 = 2$</li>
+                            <li> $x^2 = 5$</li>
+                            <li> $x^2 = -3$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf6_v">
+                                Vastaus
+                            </a>
+                        </h2>
+                        <div id="pf6_v" class="collapse">
+                            <ol class="a">
+                                <li> Yksi ratkaisu: $x = 0$</li>
+                                <li> Kaksi ratkaisua: $x = \sqrt{2}$ tai $x = -\sqrt{2}$</li>
+                                <li> Kaksi ratkaisua: $x = \sqrt{5}$ tai $x = -\sqrt{5}$</li>
+                                <li> Ei ratkaisua.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kaikki sellaiset toisen asteen yhtälöt, joissa esiintyy vain tuntemattoman toinen potenssi, saadaan ratkaistua samaan tapaan kuin edellä. Ensin yhtälö täytyy vain muuttaa muotoon $x^2 = a$. Tarkastellaan esimerkiksi yhtälöä $$4x^2 - 3 = 0.$$
+                    Kun sen molemmille puolille lisätään luku $3$, päädytään yhtälöön
+                    $$4x^2 = 3.$$
+                    Tämä yhtälön molemmat puolet voidaan jakaa luvulla $4$, jolloin saadaan yhtälö
+                    $$x^2 = \frac{3}{4}.$$
+                    Tämä yhtälö toteutuu, jos ja vain jos
+                    $$x = \sqrt{\frac{3}{4}} \quad \text{ tai } \quad x = -\sqrt{\frac{3}{4}}.$$
+                    Ratkaisun aikana tarkasteltuja yhtälöitä ja niiden ratkaisuja on havainnollistettu alla olevassa kuvassa. Huomaa, että kaikilla yhtälöillä on samat ratkaisut kuten pitääkin.
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk5.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="49e5ff15-be9f-428e-a380-7268d9f5bc9d">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf7">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="pf7" class="collapse">
+                        <p> Ratkaise seuraavat yhtälöt muuttamalla ne ensin muotoon $x^2 = a$ ja päättelemällä ratkaisut sen jälkeen.
+                        </p>
+                        <ol class="a">
+                            <li> $5x^2 - 100 = 0$</li>
+                            <li> $9x^2 - 4 = 0$</li>
+                            <li> $21 - 7x^2 = 0$</li>
+                            <li> $27 + 3x^2 = 0$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf7_v">
+                                Vastaus
+                            </a>
+                        </h2>
+                        <div id="pf7_v" class="collapse">
+                            <ol class="a">
+                                <li> Kaksi ratkaisua: $x = \sqrt{20} = 2\sqrt{5}$ tai $x = -\sqrt{20} = -2\sqrt{5}$</li>
+                                <li> Kaksi ratkaisua: $x = \dfrac{2}{3}$ tai $x = -\dfrac{2}{3}$</li>
+                                <li> Kaksi ratkaisua: $x = \sqrt{3}$ tai $x = -\sqrt{3}$</li>
+                                <li> Ei ratkaisua, sillä yhtälön vasen puoli aina suurempi tai yhtä suuri kuin 27.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
                 <section class="panel">
                     <header class="otsikko">
                         <h1>
