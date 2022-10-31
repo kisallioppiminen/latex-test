@@ -1,0 +1,18 @@
+header: 
+path: 
+navigation:
+  -
+    name: MAB2
+    path: /kurssit/mab2-lops2019/
+  -
+    name: 1. Ensimmäisen asteen yhtälö
+    path: /kurssit/mab2-lops2019/luku1/
+  -
+    name: 2. Yhtälöpari
+    path: /kurssit/mab2-lops2019/luku2/
+  -
+    name: 3. Verrannollisuus
+    path: /kurssit/mab2-lops2019/luku3/
+  -
+    name: 4. Toisen asteen yhtälö
+    path: /kurssit/mab2-lops2019/luku4/
