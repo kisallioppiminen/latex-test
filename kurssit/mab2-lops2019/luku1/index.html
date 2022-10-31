@@ -67,6 +67,221 @@ topnav: mab2
             </div>
         </div>
     </section>
+    
+      <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl3">
+                    Polynomien laskutoimituksia
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku1kpl3" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa palautetaan mieleen, miten polynomeilla lasketaan. Polynomi tarkoittaa lauseketta, joka on muodostettu muuttujista (eli kirjaimista) ja vakioista (eli luvuista) käyttämällä yhteen-, vähennys- ja kertolaskua. Esimerkiksi
+                    $$2x^3-5x^2 + 8x -3$$
+                    on polynomi, samoin
+                    $$7x^4-9.$$
+                    Polynomissa voi olla myös useampia muuttujia. Esimerkiksi
+                    $$5xy^2-3x+5y^3-3$$
+                    on kahden muuttujan polynomi. Tällä kurssilla keskitytään yhden muuttujan polynomeihin.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="f7f5da32-0311-4508-b452-59a246322bb7">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t108">
+                                Polynomit
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t108" class="collapse">
+                        <p> Mitkä seuraavista väitteistä ovat oikein? Perustele vastauksesi omin sanoin ja korjaa samalla väärät väitteet oikeiksi. Kertaa tarvittaessa polynomeihin liittyviä käsitteitä <a href="https://opetus.tv/maa/maa2/polynomien-peruskasitteet/"> Opetus.tv:n sivuilta</a>.
+                        </p>
+                        <ol class="a">
+                            <li> Polynomissa $-4x^2+8x-3$ on viisi termiä.</li>
+                            <li> Polynomin $7x^4-6x^3+4x$ toisen asteen termin kerroin on nolla.</li>
+                            <li> Polynomin $x^7-x+6$ aste on kolme.</li>
+                            <li> Polynomin $x^3-9x^2+4$ vakiotermi on $4$.</li>
+                            <li> Polynomi $3x^5-x^2$ on monomi.</li>
+                            <li> Lauseke $\dfrac{x^2}{4}-\dfrac{x}{2}$ on binomi.
+                            </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t108_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t108_v" class="collapse">
+                            <ol class="a">
+                                <li> Väärin, polynomissa on kolme termiä. </li>
+                                <li> Oikein, sillä sama polynomi voidaan kirjoittaa $7x^4-6x^3 + 0x^2 +4x$. </li>
+                                <li> Väärin, polynomin aste on 7. </li>
+                                <li> Oikein. </li>
+                                <li> Väärin, tämä polynomi on binomi. Monomiksi sanotaan polynomia, jossa on vain yksi termi. </li>
+                                <li> Oikein, sillä tämä lauseke voidaan kirjoittaa muodossa $\frac{1}{4}x^2 - \frac{1}{2}x$.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Polynomien yhteen- ja vähennyslaskussa yhdistetään samaa astetta olevat termit. Seuraavat laskut havainnollistavat ideaa:
+                </p>
+                <p>
+                    Reppureissaaja löytää lompakostaan 35 euroa ja 25 puntaa. Hänen kaverillaan on puolestaan taskussaan 15 euroa ja 7 puntaa. Kuinka paljon rahaa kaveruksilla on yhteensä?
+                    \begin{align*}
+                    &\quad (35 \,€ + 25 \,£)
+                    + (15 \,€ + 7 \,£) \\
+                    &= 50 \,€ + 32 \,£.
+                    \end{align*}
+                    Tässä laskettiin eurot yhteen keskenään ja punnat yhteen keskenään. Yhdistettiin siis ne luvut, joilla kirjainosa oli sama.
+                </p>
+                <p>
+                    Paluumatkalla kaverukset ostavat tuliaisia ja käyvät syömässä. Tähän kuluu yhteensä 40 euroa ja 27 puntaa. Kuinka paljon rahaa jää jäljelle?
+                    \begin{align*}
+                    &\quad (50 \,€ + 32 \,£) \textcolor{red}{-} (40 \,€ + 27 \,£) \\
+                    &= 50 \,€ + 32 \,£ \textcolor{red}{-} 40 \,€ \textcolor{red}{-} 27 \,£\\
+                    &= 10 \,€ + 5 \,£.
+                    \end{align*}
+                    Huomaa, että polynomien vähennyslaskussa jälkimmäisen polynomin jokainen merkki vaihtuu.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="0c221d16-5908-4491-94dc-951213ada480">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t109">
+                                Polynomien yhteen- ja vähennyslasku
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t109" class="collapse">
+                        <p> 
+                            Muodosta ja laske polynomien $x^2+3x-6$ ja $-4x^2+x-2$
+                        </p>
+                        <ol class="a">
+                            <li> summa</li>
+                            <li> erotus.</li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t109_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t109_v" class="collapse">
+                            <ol class="a">
+                                <li> $-3x^2+4x-8$ </li>
+                                <li> $5x^2+2x-4$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="4942eee7-08ae-4418-9584-5f258e9f1ce6">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t110">
+                                Polynomien yhteen- ja vähennyslasku
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t110" class="collapse">
+                        <p> 
+                            Muodosta ja laske polynomien $4x^3-2x^2+3x+1$ ja $-3x^2-3x+2$
+                        </p>
+                        <ol class="a">
+                            <li> summa</li>
+                            <li> erotus.</li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t110_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t110_v" class="collapse">
+                            <ol class="a">
+                                <li> $4x^3-5x^2+3$ </li>
+                                <li> $4x^3+x^2+6x-1$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kun polynomia kerrotaan luvulla, kerrotaan jokainen polynomin termi erikseen samaan tapaan kuin seuraavassa laskussa:
+                </p>
+                <p>
+                    Kun reppureissaaja ja hänen kaverinsa palasivat Suomeen, he päättivät lahjoittaa viidesosan jäljelle jääneistä rahoista hyväntekeväisyyteen ja jakaa loput rahoista tasan. Kuinka paljon he lahjoittivat hyväntekeväisyyteen?
+                    \begin{align*}
+                    \frac{1}{5} (10 \,€ + 5 \,£) &= \frac{1}{5} \cdot 10 \,€ + \frac{1}{5} \cdot 5 \,£\\[1mm]
+                    &= \frac{10}{5} \,€ + \frac{5}{5} \,£\\[1mm]
+                    &= 2 \,€ + 1 \,£
+                    \end{align*}
+                    Jos molemmissa tulon tekijöissä on kirjainosa, sievennetään lopputuloksen kirjainosa potenssin määritelmän ja laskusääntöjen mukaan. Esimerkiksi monomien $-2x^3$ ja $-4x^2$ tulo on
+                    \begin{align*}
+                    -2x^3\cdot (-4x^2) &= -2 \cdot (-4) \cdot xxxxx \\
+                    &= 8x^5
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="d0fbfff4-9ac2-4364-b162-b6b8747868dd">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t111">
+                                Monomin ja polynomin tulo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t111" class="collapse">
+                        <p> Laske seuraavat tulot:
+                        </p>
+                        <ol class="a">
+                            <li> $-3x^4 \cdot 5x^2$</li>
+                            <li> $4x(x-5)$ </li>
+                            <li> $-3x^2(-4x^2+x-2)$ </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t111_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t111_v" class="collapse">
+                            <ol class="a">
+                                <li> $-15x^6$ </li>
+                                <li> $4x^2-20x$  </li>
+                                <li> $12x^4 - 3x^3 + 6x^2$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+    
+    
+    
 
     <section class="panel">
         <header class="otsikko">
@@ -80,7 +295,8 @@ topnav: mab2
             
             <div class="teoria">
                 <p>
-                    Tämän kurssin aiheina ovat lausekkeet ja yhtälöt. Ensimmäinen päämäärä on oppia ratkaisemaan sujuvasti ensimmäisen asteen yhtälöitä. Tätä varten perehdymme tässä kappaleessa ensimmäisen asteen polynomifunktioihin. Niitä voidaan käyttää apuna, kun tutkitaan ensimmäisen asteen yhtälöiden ratkaisuja. 
+                    Tämän kurssin aiheina ovat lausekkeet ja yhtälöt. Ensimmäinen päämäärä on oppia ratkaisemaan sujuvasti ensimmäisen asteen yhtälöitä. Tätä varten perehdymme 
+                   ensimmäisen asteen polynomifunktioihin. Niitä voidaan käyttää apuna, kun tutkitaan ensimmäisen asteen yhtälöiden ratkaisuja. 
                 </p>
                 <p>
                     Aloitetaan palauttamalla mieleen, miten koordinaatiston pisteitä merkitään.
