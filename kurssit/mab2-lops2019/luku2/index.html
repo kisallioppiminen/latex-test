@@ -1,0 +1,2112 @@
+---
+title: MAB2 - Lausekkeet ja yhtälöt
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: mab2
+---
+
+<input type="hidden" id="chapterNumber" name="theoremStart" value="2"/>
+<input type="hidden" id="theoremStart" value="1"/>
+
+{% include bottomnav.html %}
+
+
+<article>
+    <section>
+        <header>
+            <h1>Yhtälöpari</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luvun2-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luvun2-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p> 
+                    Tämän luvun tavoitteena on, että hallitset yhtälöparin ratkaisemisen sekä kuvan avulla että käsin laskemalla. Osaat
+                </p>
+                <ul>
+                    <li> 
+                        ratkaista yhtälöparin graafisesti piirtämällä sopivan kuvan  
+                    </li>
+                    <li>
+                        tarkistaa sijoittamalla, että löydetty ratkaisu on oikea
+                    </li>
+                    <li>
+                        päätellä kuvan avulla, onko yhtälöparilla ratkaisuja ja kuinka monta niitä on
+                    </li>
+                    <li>
+                        ratkaista yhtälöparin käsin laskemalla
+                    </li>
+                    <li>
+                        ratkaista yhtälöparin tietokoneella tai laskimella
+                    </li>
+                    <li>
+                        mallintaa ja ratkaista sovellusongelmia yhtälöparin avulla.
+                    </li>
+                </ul> 
+            </div>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luvun2-tavoitteet">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2kpl1">
+                    Yhtälöparin ratkaiseminen graafisesti
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku2kpl1" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Edellisessä luvussa tarkasteltiin ensimmäisen asteen polynomifunktioita. Kun tutkittiin, missä kohdassa ensimmäisen asteen polynomifunktio saa tietyn arvon, päädyttiin ensimmäisen asteen yhtälöön. Kun tutkitaan, missä kohdassa kaksi ensimmäisen asteen polynomifunktiota saavat saman arvon, päädytään lineaariseen yhtälöpariin.
+                </p>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava first-exercise" id="63bc1bbc-d7f8-4db7-a101-c07a735b039e">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t201">
+                                Lineaarinen yhtälöpari
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t201" class="collapse">
+                        <img src="/kurssit/mab2/kuvat/MAB2kuva009.png" max-width: 100%; width: auto; height: auto;/>
+                        <p>
+                            Yllä on näkyvissä ensimmäisen asteen polynomifunktioiden $f(x) = x-1$ ja $g(x) = -2x + 11$ kuvaajat. 
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Päättele kuvan avulla, missä kohdassa funktiot $f$ ja $g$ saavat saman arvon. Toisin sanottuna etsi sellainen muuttujan $x$ arvo, jolla $f(x) = g(x)$.
+                            </li>
+                            <li> 
+                                Mikä on se arvo, jonka funktiot saavat samassa kohdassa?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t201_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t201_v" class="collapse">
+                           <ol class="a">
+                                <li> Funktiot saavat saman arvon kohdassa $x = 4$. </li>
+                                <li> Funktiot saavat kohdassa $x = 4$ arvon $3$. Toisin sanottuna $f(4) = 3$ ja $g(4) = 3$.</li>
+                           </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisessä tehtävässä ratkaistiin graafisesti yhtälöpari 
+                    $$
+                    \left\{\begin{aligned}
+                    y & = x-1 \\
+                    y & = -2x + 11
+                    \end{aligned}\right.
+                    $$
+                    Sen ratkaisu on lukupari $x = 4$ ja $y = 3$, sillä suorien leikkauspiste $(4,3)$ toteuttaa kummankin suoran yhtälön.
+                </p>
+                <img src="/kurssit/mab2/kuvat/MAB2kuva010.png" max-width: 100%; width: auto; height: auto;/>
+                <p>
+                    Graafisen ratkaisun voi tarkistaa sijoittamalla kuten seuraavassa tehtävässä tehdään.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="first-exercise tehtava" id="217d26a6-9a6a-11e8-9eb6-529269fb1459">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t202">
+                                Yhtälöpari
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t202" class="collapse">
+                        <p>
+                            Tarkista sijoittamalla, että lukupari $x = 4$ ja $y = 3$ toteuttaa yhtälöparin 
+                            $$
+                            \left\{\begin{aligned}
+                            y & = x-1 \\
+                            y & = -2x + 11
+                            \end{aligned}\right.
+                            $$
+                            molemmat yhtälöt.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t202_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t202_v" class="collapse">
+                           <p>
+                            Ensimmäisen yhtälön vasen puoli: $3$. <br>
+                            Ensimmäisen yhtälön oikea puoli: $4-1 = 3$. <br>
+                            Vasen ja oikea puoli ovat yhtä suuria, joten yhtälö toteutuu.
+                           </p>
+                           <p>
+                            Toisen yhtälön vasen puoli: $3$. <br>
+                            Toisen yhtälön oikea puoli: $-2 \cdot 4 + 11 = -8 + 11 = 3$. <br>
+                            Vasen ja oikea puoli ovat yhtä suuria, joten yhtälö toteutuu.
+                           </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="182aa790-e578-4940-bb3d-127dd7e4f61c">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t203">
+                                Yhtälöpari
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t203" class="collapse">
+                        <p>
+                            Opiskelija sai tehtäväkseen ratkaista yhtälöparin 
+                            $$
+                            \left\{\begin{aligned}
+                            x + 2y & = 5 \\
+                            2x - 3y & = 3.
+                            \end{aligned}\right.
+                            $$
+                            Hän piirsi Geogebralla kuvan, joka on näkyvissä alla. Päättele, mikä on yhtälöparin ratkaisu. Tarkista vastaus sijoittamalla. 
+                        </p>
+                        <img src="/kurssit/mab2/kuvat/MAB2kuva011.png" max-width: 100%; width: auto; height: auto;/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t203_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t203_v" class="collapse">
+                           <p>
+                                Yhtälöparin ratkaisu on $x = 3$ ja $y = 1$. 
+                           </p>
+                           <p>
+                                Tarkistus: <br>
+                                Ensimmäisen yhtälön vasen puoli: $3 + 2 \cdot 1 = 3 + 2 = 5$. <br>
+                                Ensimmäisen yhtälön oikea puoli: $5$.<br>
+                                Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.<br>
+                                Toisen yhtälön vasen puoli: $2 \cdot 3 - 3 \cdot 1 = 6 - 3 = 3$.<br>
+                                Toisen yhtälön oikea puoli: $3$.<br>
+                                Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.
+                           </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jos yhtälöparissa on suoran yhtälöitä muodossa
+                    $$
+                    y = ax + b
+                    $$
+                    voidaan piirtämisessä hyödyntää suoran jyrkkyyttä kuvaavaa kulmakerrointa $a$ ja vakiota $b$, joka ilmaisee suoran ja $y$-akselin leikkauspisteen korkeuden. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="da858cf8-6a1a-4732-8e59-818323b13a1b">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t204">
+                                Yhtälöpari
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t204" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista graafisesti yhtälöpari
+                            $$
+                            \left\{\begin{aligned}
+                            y & = 2x - 3 \\
+                            y & = 6 - x.
+                            \end{aligned}\right.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Päättele suoran $y = 2x - 3$ yhtälöstä, mikä on suoran kulmakerroin ja millä korkeudella suora leikkaa $y$-akselin. 
+                            </li>
+                            <li>
+                                Piirrä a-kohdan suora koordinaatistoon. Muista, että kulmakerroin ilmaisee, kuinka monta askelta suora nousee tai laskee, kun siirrytään yksi askel oikealle.
+                            </li>
+                            <li>
+                                Toinen tapa suoran piirtämiseen on seuraava: Keksi muuttujalle $x$ jokin arvo. Laske suoran $y = 6-x$ yhtälön avulla sitä vastaava $y$-koordinaatin arvo. Merkitse näin saamasi piste koordinaatistoon. Keksi sen jälkeen muuttujalle $x$ jotenkin toinen arvo ja laske jälleen vastaava $y$-koordinaatin arvo. Merkitse näin saamasi toinen piste koordinaatistoon. Piirrä näiden kahden pisteen kautta kulkeva suora.
+                            </li>
+                            <li>
+                                Päättele piirroksesi avulla, mikä on yhtälöparin ratkaisu. Tarkista sijoittamalla.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t204_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t204_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kulmakerroin on $2$. Vakio on $-3$ eli suora leikkaa $y$-akselin pisteessä $(0,-3)$.
+                                </li>
+                                <li>
+                                    Kulmakertoimesta nähdään, että suora nousee kaksi askelta aina, kun siirrytään koordinaatistossa yksi askel oikealle. Suora kulkee siis mm. pisteiden $(0,-3)$ ja $(1,-1)$ kautta.
+                                </li>
+                                <li>
+                                    Valitaan vaikka $x = 0$, jolloin $$y = 6 - 0 = 6.$$ Suoran piste on $(0,6)$.<br>
+                                    Valitaan vaikka $x = 2$, jolloin $$y = 6 - 2 = 4.$$ Suoran piste on $(2,4)$.
+                                </li>
+                                <li>
+                                    Yhtälöparin ratkaisu on lukupari $x = 3$ ja $y = 3$. 
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva012.png" max-width: 100%; width: auto; height: auto;/>
+                                    Tarkistus: <br>
+                                    Ensimmäisen yhtälön vasen puoli: $3$. <br>
+                                    Ensimmäisen yhtälön oikea puoli: $2 \cdot 3 - 3 = 6 - 3 = 3$.<br>
+                                    Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.<br>
+                                    Toisen yhtälön vasen puoli: $3$.<br>
+                                    Toisen yhtälön oikea puoli: $6 - 3 = 3$.<br>
+                                    Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Ensimmäisen asteen yhtälöparilla ei välttämättä ole lainkaan ratkaisuja. Seuraava tehtävä havainnollistaa asiaa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="302e811a-ba00-45cc-a256-cd7072d4cf02">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t205">
+                                Yhtälöpari
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t205" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Opiskelija A ratkaisi graafisesti yhtälöparin
+                                $$
+                                \left\{\begin{aligned}
+                                y & = 2x - 3 \\
+                                10x & = 5y + 5
+                                \end{aligned}\right.
+                                $$
+                                ja päätteli alla näkyvästä piirroksesta, että yhtälöparilla ei ole ratkaisua. Onko opiskelijan päättely oikein? Jos opiskelijan päättely ei ole oikein, anna hänelle ohje, mitä hänen kannattaa tehdä oikeaan johtopäätökseen pääsemiseksi.
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva015.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                Opiskelija B ratkaisi graafisesti yhtälöparin
+                                $$
+                                \left\{\begin{aligned}
+                                6x + 5y & = 3 \\
+                                4x & = 10 - 5y
+                                \end{aligned}\right.
+                                $$
+                                ja päätteli alla näkyvästä piirroksesta, että yhtälöparilla ei ole ratkaisua. Onko opiskelijan päättely oikein? Jos opiskelijan päättely ei ole oikein, anna hänelle ohje, mitä hänen kannattaa tehdä oikeaan johtopäätökseen pääsemiseksi.
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva014.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t205_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t205_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Opiskelijan johtopäätös on oikein. Kuvasta voi nimittäin nähdä, että suorat ovat yhdensuuntaiset. Sen vuoksi ne eivät leikkaa myöskään kuvan ulkopuolella. Yhtälöparilla ei siis ole ratkaisua.
+                                </li>
+                                <li>
+                                    Opiskelijan johtopäätös on väärin. Kuvasta voi nimittäin päätellä, että suorat leikkaavat toisensa jossain pisteessä kuvan ulkopuolella. Yhtälöparilla siis on ratkaisu, mutta sen löytämiseksi pitäisi piirtää isompi koordinaatisto.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisistä tehtävistä havaitaan, että lineaarisella yhtälöparilla voi olla tasan yksi ratkaisu tai ei yhtään ratkaisua. Kolmas mahdollinen tilanne on, että lineaarisella yhtälöparilla on äärettömän monta ratkaisua. Tällainen tilanne syntyy, jos yhtälöparin molemmat yhtälöt kuvaavat samaa suoraa. Silloin yhtälöparin ratkaisuja ovat kaikki suoran pisteet. Yhteenveto:
+                </p>
+                <ul>
+                    <li> 
+                        Jos suorat leikkaavat toisensa, ratkaisuja on täsmälleen yksi (suorien leikkauspiste): <br>
+                        <img src="/kurssit/mab2/kuvat/MAB2kuva016.png" max-width: 100%; width: auto; height: auto;/>
+                    </li>
+                    <li> 
+                        Jos suorat ovat yhdensuuntaiset, ratkaisuja ei ole: <br>
+                        <img src="/kurssit/mab2/kuvat/MAB2kuva017.png" max-width: 100%; width: auto; height: auto;/>
+                    </li>
+                    <li>
+                        Jos yhtälöt kuvaavat samaa suoraa, ratkaisuja ovat kaikki suoran pisteet: <br>
+                        <img src="/kurssit/mab2/kuvat/MAB2kuva018.png" max-width: 100%; width: auto; height: auto;/>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="a34acd4a-7097-4fdb-9059-ff6df7e1e0cc">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t206">
+                                Yhtälöpari
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t206" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista graafisesti yhtälöpari
+                            $$
+                            \left\{\begin{aligned}
+                            y & = 2x - 10 \\
+                            6x - 3y & = 30.
+                            \end{aligned}\right.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä sopiva kuva esimerkiksi Geogebralla ja päättele yhtälöparin ratkaisu sen avulla. 
+                            </li>
+                            <li>
+                                Onko lukupari $x = 5$ ja $y= 2$ yhtälöparin ratkaisu? Perustele omin sanoin tai laskemalla.
+                            </li>
+                            <li>
+                                Onko mahdollista valita muuttujalle $y$ sellainen arvo $y = b$, että lukupari $x = 5$ ja $y = b$ on yhtälöparin ratkaisu? Jos tämä on mahdollista, mikä on sopiva $b$?
+                            </li>
+                            <li>
+                                Keksi muuttujalle $x$ jokin arvo ja määritä sellainen muuttujan $y$ arvo, että lukupari $(x,y)$ on yhtälöparin ratkaisu. Mitä yhtälöä käytit?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t206_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t206_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Yhtälöparin ratkaisuja ovat kaikki suoran $y = 2x - 10$ pisteet, koska kuvasta nähdään, että kumpikin yhtälö kuvaa samaa suoraa:
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva019.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li>
+                                    Lukupari $x = 5$ ja $y = 2$ ei ole yhtälöparin ratkaisu, koska piste $(5,2)$ ei ole suoralla. Samaan johtopäätökseen voi päätyä myös sijoittamalla: Ensimmäisen yhtälön vasen puoli on $y = 2$ mutta oikea puoli on 
+                                    \begin{align*}
+                                    2x - 10 &= 2 \cdot 5 - 10 \\
+                                    &= 10 - 10 = 0.
+                                    \end{align*}
+                                    Yhtälö ei toteudu, koska sen vasen ja oikea puoli eivät ole yhtä suuret.
+                                </li>
+                                <li>
+                                    Suora kulkee pisteen $(5,0)$ kautta, joten lukupari $x = 5$ ja $y = 0$ on yhtälöparin ratkaisu. Sopivan muuttujan $y$ arvon voi selvittää myös laskemalla:
+                                    \begin{align*}
+                                    y &= 2x - 10 \\
+                                    &= 2 \cdot 5 - 10 \\
+                                    &= 10 - 10 = 0.
+                                    \end{align*}
+                                </li>
+                                <li>
+                                    Muuttujan $x$ arvoksi voi keksiä mitä vain. Muuttujan $y$ arvon saa sen jälkeen selville yhtälön $y = 2x - 10$ avulla.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtavat">
+                <div class="tehtava" id="e53d2a7c-05a8-47c5-b512-05fc93ecc71e">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t207">
+                                Yhtälöpari
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t207" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista graafisesti yhtälöpari
+                            $$
+                            \left\{\begin{aligned}
+                            x - 3y & = 9 \\
+                            2x + 4y & = 5.
+                            \end{aligned}\right.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä sopiva kuva esimerkiksi Geogebralla ja päättele yhtälöparin ratkaisu sen avulla. 
+                            </li>
+                            <li>
+                                Tarkista sijoittamalla, onko löytämäsi ratkaisu tarkka vai likimääräinen.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t207_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t207_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Yhtälöparin ratkaisu näyttää pelkän kuvan perusteella olevan likimain $x \approx 5{,}1$ ja $y \approx - 1{,}3$.
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva013.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li>
+                                    Tarkistus: <br>
+                                    Ensimmäisen yhtälön vasen puoli: 
+                                    \begin{align*}
+                                    5{,}1 - 3 \cdot (-1{,}3) &= 5{,}1 + 3{,}9 \\
+                                    &= 9.
+                                    \end{align*} 
+                                    Ensimmäisen yhtälön oikea puoli: $9$. Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.<br>
+                                    Toisen yhtälön vasen puoli: 
+                                    \begin{align*}
+                                    2 \cdot 5{,}1 + 4\cdot (-1{,}3) &= 10{,}2 - 5{,}2 \\
+                                    &= 5$
+                                    \end{align*}
+                                    Toisen yhtälön oikea puoli: $5$.<br>
+                                    Yhtälön vasen ja oikea puoli ovat yhtä suuret, joten yhtälö toteutuu.<br>
+                                    Kuvan avulla onnistuttiin löytämään tarkka ratkaisu.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Joissain tilanteissa yhtälöparin tarkan ratkaisun löytäminen piirroksen avulla ei ole mahdollista. Silloin tarvitaan muita ratkaisumenetelmiä. Seuraavassa kappaleessa opitaan ratkaisemaan yhtälöpari laskemalla eli algebrallisesti.
+                </p>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2kpl1">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2kpl2">
+                    Yhtälöparin ratkaiseminen algebrallisesti
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku2kpl2" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa opetellaan ratkaisemaan yhtälöpari sijoitusmenetelmällä. Tämän menetelmän avulla yhtälöparin tarkka ratkaisu löydetään silloinkin, kun se ei pelkän kuvan avulla onnistu. Esimerkiksi alla olevassa kuvassa suorien leikkauspisteen koordinaateille saadaan vain likimääräiset arvot $x \approx 1{,}7$ ja $y \approx -0{,}3$. 
+                </p>
+                <img src="/kurssit/mab2/kuvat/MAB2kuva020.png" max-width: 100%; width: auto; height: auto;/>
+                <p>
+                    Suorien leikkauspisteen tarkat koordinaatit saadaan ratkaisemalla yhtälöpari
+                    $$
+                    \left\{\begin{aligned}
+                    y & = x-2 \\
+                    y & = -2x+3.
+                    \end{aligned}\right.
+                    $$
+                    Ylemmässä yhtälössä $y$ on yksinään vasemmalla puolella. Yhtälö siis kertoo, miten $y$ voidaan ilmaista muuttujan $x$ avulla. Sijoitetaan tämä lauseke alempaan yhtälöön muuttujan $y$ paikalle. Näin saadaan uusi yhtälö, jossa on ainoana tuntemattomana $x$:
+                    $$
+                    x - 2 = -2x + 3.
+                    $$
+                    Tämä yhtälö voidaan ratkaista normaaliin tapaan:
+                    \begin{align*}
+                    x - 2 &= -2x + 3 \quad \mid {} + 2 \\[1mm]
+                    x &= -2x + 5 \quad \mid  {} + 2x \\[1mm]
+                    3x &= 5 \quad \mid \, : 3 \\[1mm]
+                    x &= \dfrac{5}{3}
+                    \end{align*}
+                    Kun $x$ on ratkaistu, otetaan ylempi yhtälö uudestaan käyttöön. Sen avulla saadaan laskettua muuttujan $y$ arvo:
+                    \begin{align*}
+                    y &= x-2 = \dfrac{5}{3} - 2 = \dfrac{5}{3} - \dfrac{3 \cdot 2}{3} \\[1mm]
+                    &= \dfrac{5-6}{3} = \dfrac{-1}{3}
+                    \end{align*}
+                    Yhtälöparin ratkaisu on siis
+                    $$
+                    x = \dfrac{5}{3} \ \text{ ja } \ y = -\dfrac{1}{3}.
+                    $$
+                    Nämä ovat suorien leikkauspisteen koordinaatit.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="1ff5038c-d6d9-4677-a99d-6272c57a13d5">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t208">
+                                Yhtälöpari
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t208" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista yhtälöpari
+                            $$
+                            \left\{\begin{aligned}
+                            y & = 6x-5 \\
+                            y & = -3x + 25.
+                            \end{aligned}\right.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Ylempi yhtälö kertoo, miten $y$ voidaan ilmaista muuttujan $x$ avulla. Sijoita tämä lauseke alempaan yhtälöön muuttujan $y$ paikalle. Millaisen yhtälön saat?
+                            </li>
+                            <li>
+                                Ratkaise a-kohdan yhtälöstä $x$.
+                            </li>
+                            <li>
+                                Ota ylempi yhtälö uudelleen käyttöön ja laske sen avulla muuttujan $y$ arvo. Mikä on yhtälöparin ratkaisu?
+                            </li>
+                            <li>
+                                Tarkista ratkaisusi järkevyys piirtämällä kuva suorista Geogebralla.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t208_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t208_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Yhtälö on $6x - 5 = -3x+25$.
+                                </li>
+                                <li>
+                                    $x = \dfrac{10}{3}$
+                                </li>
+                                <li>
+                                    $y = 6x - 5 = 6 \cdot \dfrac{10}{3} - 5 = 20 - 5 = 15$. Yhtälöparin ratkaisu on 
+                                    $$
+                                    x = \dfrac{10}{3} \ \text{ ja } \ y = 15.
+                                    $$
+                                </li>
+                                <li>
+                                    Huomaa, että alla olevaan kuvaan on sovitettu näkyviin juuri suorien leikkauspiste eivätkä koordinaattiakselit näy kokonaan:
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva021.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "teoria">
+                <p>
+                    Yhtälöparin yhtälöt eivät välttämättä ole valmiiksi sopivassa muodossa sijoittamista varten. Siinä tapauksessa pitää ensin valita toinen yhtälöistä ja muokata sitä niin, että toinen muuttuja on yksin yhtälön vasemmalla puolella. Tätä harjoitellaan seuraavassa tehtävässä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="7b071212-d867-4beb-bb6d-53ac56d93e41">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t209">
+                                Yhtälöpari
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t209" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista yhtälöpari
+                            $$
+                            \left\{\begin{aligned}
+                            y + 2x & = 5 \\
+                            3y - 4x & = 7.
+                            \end{aligned}\right.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Muokkaa ylempää yhtälöä niin, että sen vasemmalla puolella on pelkkä $y$. Millaisen yhtälön saat?
+                            </li>
+                            <li>
+                                Saamasi yhtälö kertoo, miten $y$ voidaan ilmaista muuttujan $x$ avulla. Sijoita tämä lauseke alempaan yhtälöön muuttujan $y$ paikalle. Millaisen yhtälön saat?
+                            </li>
+                            <li>
+                                Ratkaise b-kohdan yhtälöstä $x$. 
+                            </li>
+                            <li>
+                                Ota a-kohdan yhtälö uudelleen käyttöön ja laske sen avulla muuttujan $y$ arvo. Mikä on yhtälöparin ratkaisu?
+                            </li>
+                            <li>
+                                Tarkista ratkaisusi järkevyys piirtämällä kuva suorista Geogebralla.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t209_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t209_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Yhtälö on $y = 5-2x$.
+                                </li>
+                                <li>
+                                    Yhtälö on $3(5-2x) - 4x = 7$.
+                                </li>
+                                <li>
+                                    $x = \dfrac{4}{5} = 0{,}8.$
+                                </li>
+                                <li>
+                                    Sijoitetaan:
+                                    \begin{align*}
+                                    y &= 5 - 2x = 5 - 2 \cdot 0{,}8 \\
+                                    &= 5 - 1{,}6 = 3{,}4. 
+                                    \end{align*}
+                                    Yhtälöparin ratkaisu on 
+                                    $$
+                                    x = 0{,}8 \ \text{ ja } \ y = 3{,}4.
+                                    $$
+                                </li>
+                                <li>
+                                    Kuva: <br>
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva022.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kannattaa aina ensimmäiseksi katsoa, kumpi yhtälö on helpompi muokata muotoon, jossa toinen muuttuja on yksinään vasemmalla puolella. Joskus on helpompi muokata yhtälöä niin, että vasemmalle puolelle jää pelkkä $x$. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="063573ac-d442-426b-8796-a61b95423260">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t210">
+                                Yhtälöpari
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t210" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista yhtälöpari
+                            $$
+                            \left\{\begin{aligned}
+                            3y + 2x & = 2 \\
+                            2y + x & = -1.
+                            \end{aligned}\right.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Onko yhtälöparissa yhtälö, jossa toinen muuttujista esiintyy ilman kerrointa (eli kertoimella 1)? Valitse tämä yhtälö ja muokkaa sitä niin, että vasemmalle puolelle jää toinen muuttujista yksinään. Millaisen yhtälön saat?
+                            </li>
+                            <li>
+                                Jatka yhtälöparin ratkaisua normaaliin tapaan sijoittamalla. Mikä on yhtälöparin ratkaisu?
+                            </li>
+                            <li>
+                                Tarkista ratkaisusi järkevyys piirtämällä kuva suorista Geogebralla.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t210_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t210_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Alemmassa yhtälössä esiintyy pelkkä $x$. Yhtälö voidaan muokata muotoon $x = -1 - 2y$. 
+                                </li>
+                                <li>
+                                    Ylempi yhtälö saadaan sijoittamalla muotoon 
+                                    $$3y + 2(-1-2y) = 2.$$ 
+                                    Siitä saadaan ratkaistua välivaiheiden jälkeen $y = -4$. Muuttujan $x$ arvoksi saadaan 
+                                    \begin{align*}
+                                    x &= -1 - 2y \\
+                                    &= -1 - 2 \cdot (-4) \\
+                                    &= -1 + 8 = 7.
+                                    \end{align*}
+                                </li>
+                                <li>
+                                    Kuva: <br>
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva023.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2kpl2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2kpl3">
+                    Yhtälöparin sovelluksia
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku2kpl3" class="collapse">
+
+            <div class = "teoria">
+                <p>
+                    Jotkin käytännön ongelmat voidaan mallintaa ja ratkaista yhtälöparin avulla. Mallintamisen voi aloittaa kokoamalla kaikki tiedot esimerkiksi taulukkoon. Sen jälkeen pitää miettiä, mitä tietoja puuttuu. Tuntemattomia mutta tarpeellisia tietoja kannattaa merkitä muuttujakirjaimilla. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b6e3e327-db2e-4b83-a005-9bc8627d014f">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t211">
+                                Yhtälöpari sovellustehtävässä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t211" class="collapse">
+                        <p>
+                            Kahvila valmistaa omaa kahvisekoitustaan, johon käytetään kahvipapuja Etelä-Amerikasta ja Afrikasta. Etelä-Amerikassa tuotettu papulaatu EA maksaa 26,80 €/kg ja Afrikassa tuotettu papulaatu A maksaa 50,80 €/kg. Kahvila haluaa valmistaa yhden kilogramman sekoitusta, jonka hinnaksi tulee 34,00 euroa. Tehtävänä on selvittää, kuinka paljon kumpaakin papulaatua pitää sekoitukseen käyttää.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä vihkoosi alla oleva taulukko.
+                                <div align="center">
+                                    <table style="width = 95%">
+                                        <tr>
+                                            <th> Laatu </th>
+                                            <th> Määrä (kg) </th>
+                                            <th> Kilohinta (€/kg) </th>
+                                            <th> Hinta (€) </th>
+                                        </tr>
+                                        <tr>
+                                            <td> EA </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> A </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Sekoitus </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div> 
+                            </li>
+                            <li>
+                                Täydennä taulukkoon eri papulaatujen kilohinnat. Merkitse papulaadun EA määrää kirjaimella $x$ ja papulaadun A määrää kirjaimella $y$. Ilmaise sekoituksen määrä kirjainten $x$ ja $y$ avulla.
+                            </li>
+                            <li>
+                                Laske taulukkoon papulaatujen EA ja A hinnat. Vinkki: mieti, millä laskutoimituksella saat hinnan, kun tunnet määrän ja kilohinnan. Ilmaise sekoituksen hinta papulaatujen EA ja A hintojen avulla.
+                            </li>
+                            <li>
+                                Muodosta yhtälöpari tarkastelemalla sekoituksen määrää ja hintaa:
+                                <ul>
+                                    <li> Mikä on sekoituksen määrä taulukon mukaan? Miten paljon sekoitusta pitää olla? Millaisen yhtälön saat? </li>
+                                    <li> Mikä on sekoituksen hinta taulukon mukaan? Mikä sekoituksen hinnan pitää olla? Millaisen yhtälön saat? </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Ratkaise muodostamasi yhtälöpari. Kertaa tarvittaessa yhtälöparin ratkaiseminen tehtävästä 2.9. Kuinka paljon eri papulaatuja tarvitaan?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t211_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t211_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    
+                                </li>
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 95%">
+                                            <tr>
+                                                <th> Laatu </th>
+                                                <th> Määrä (kg) </th>
+                                                <th> Kilohinta (€/kg) </th>
+                                                <th> Hinta (€) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> EA </td>
+                                                <td> $x$ </td>
+                                                <td> $26{,}80$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                            <tr>
+                                                <td> A </td>
+                                                <td> $y$ </td>
+                                                <td> $50{,}80$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Sekoitus </td>
+                                                <td> $x + y$ </td>
+                                                <td> $34{,}00$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </li>
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 95%">
+                                            <tr>
+                                                <th> Laatu </th>
+                                                <th> Määrä (kg) </th>
+                                                <th> Kilohinta (€/kg) </th>
+                                                <th> Hinta (€) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> EA </td>
+                                                <td> $x$ </td>
+                                                <td> $26{,}80$ </td>
+                                                <td> $x \cdot 26{,}80$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> A </td>
+                                                <td> $y$ </td>
+                                                <td> $50{,}80$ </td>
+                                                <td> $y \cdot 50{,}80$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Sek. </td>
+                                                <td> $x + y$ </td>
+                                                <td> $34{,}00$ </td>
+                                                <td> $x \cdot 26{,}80 + y \cdot 50{,}80$ </td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </li>
+                                <li>
+                                    Sekoituksen määrästä saadaan yhtälö
+                                    $$
+                                    x + y = 1.
+                                    $$
+                                    Sekoituksen hinnasta saadaan yhtälö
+                                    $$
+                                    26{,}8x + 50{,}8y = 34.
+                                    $$
+                                    Yhtälöpari on siis 
+                                    $$
+                                    \left\{\begin{aligned}
+                                    x + y & = 1 \\
+                                    26{,}8x + 50{,}8y & = 34.
+                                    \end{aligned}\right.
+                                    $$
+                                </li>
+                                <li>
+                                    Yhtälöparin ratkaisuksi saadaan
+                                    $$
+                                    x = \dfrac{7}{10} = 0{,}7 \ \text{ ja } \ y = \dfrac{3}{10} = 0{,}3.
+                                    $$
+                                    Papulaatua EA tarvitaan siis 0,7 kg ja papulaatua A tarvitaan 0,3 kg.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="fcaf3f7e-be7d-4737-91de-e085ed181686">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t213">
+                                Yhtälöpari sovellustehtävässä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t213" class="collapse">
+                        <p>
+                            Iiris valmistaa puutarhansa omenista hilloa lahjaksi ystävilleen. Hän säilöö hillon 3 dl ja 5 dl purkkeihin. Hän valmistaa hilloa 14 litraa ja jakaa sen yhteensä 30 purkkiin. Tehtävänä on selvittää, kuinka monta pientä ja kuinka monta isoa purkkia hänen pitää käyttää. Jääkö jokin purkki vajaaksi?
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä vihkoosi alla oleva taulukko. Merkitse pienten purkkien määrää kirjaimella $x$ ja isompien purkkien määrää kirjaimella $y$. Ilmaise purkkien kokonaismäärä kirjainten $x$ ja $y$ avulla.
+                                <div align="center">
+                                    <table style="width = 95%">
+                                        <tr>
+                                            <th> Purkki </th>
+                                            <th> Lukumäärä </th>
+                                            <th> Hillon määrä (l) </th>
+                                        </tr>
+                                        <tr>
+                                            <td> 3 dl </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 5 dl </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Yht. </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div> 
+                            </li>
+                            <li>
+                                Laske taulukkoon purkeissa olevan hillon kokonaismäärät. Vinkki: mieti, millä laskutoimituksella saat hillon määrän, kun tunnet yhden purkin tilavuuden ja purkkien määrän. Ilmaise hillon kokonaismäärä eri kokoisten purkkien hillomäärien avulla.
+                            </li>
+                            <li>
+                                Muodosta yhtälöpari tarkastelemalla purkkien määrää ja hillon määrää:
+                                <ul>
+                                    <li> Mikä on purkkien määrä taulukon mukaan? Miten monta purkkia Iiris haluaa tehdä? Millaisen yhtälön saat? </li>
+                                    <li> Mikä on hillon määrä taulukon mukaan? Miten paljon hilloa Iiris valmisti? Millaisen yhtälön saat? </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Ratkaise muodostamasi yhtälöpari. Kertaa tarvittaessa yhtälöparin ratkaiseminen tehtävästä 2.9. Kuinka paljon eri kokoisia purkkeja tarvitaan?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t213_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t213_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 95%">
+                                            <tr>
+                                                <th> Purkki </th>
+                                                <th> Lukumäärä </th>
+                                                <th> Hillon määrä (l) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> 3 dl </td>
+                                                <td> $x$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 5 dl </td>
+                                                <td> $y$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Yht. </td>
+                                                <td> $x+y$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </li>
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 95%">
+                                            <tr>
+                                                <th> Purkki </th>
+                                                <th> Lukumäärä </th>
+                                                <th> Hillon määrä (l) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> 3 dl </td>
+                                                <td> $x$ </td>
+                                                <td> $x \cdot 0{,}3$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 5 dl </td>
+                                                <td> $y$ </td>
+                                                <td> $y \cdot 0{,}5$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Yht. </td>
+                                                <td> $x+y$ </td>
+                                                <td> $x \cdot 0{,}3 + y \cdot 0{,}5$ </td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </li>
+                                <li>
+                                    Purkkien määrästä saadaan yhtälö
+                                    $$
+                                    x + y = 30.
+                                    $$
+                                    Hillon määrästä saadaan yhtälö 
+                                    $$
+                                    0{,}3x + 0{,}5y = 14.
+                                    $$
+                                    Yhtälöpari on siis 
+                                    $$
+                                    \left\{\begin{aligned}
+                                    x + y & = 30 \\
+                                    0{,}3x + 0{,}5y & = 14.
+                                    \end{aligned}\right.
+                                    $$
+                                </li>
+                                <li>
+                                    Yhtälöparin ratkaisuksi saadaan
+                                    $$
+                                    x = 5 \ \text{ ja } \ y = 25.
+                                    $$
+                                    Pieniä 3 dl purkkeja tarvitaan siis 5 kpl ja isompia 5 dl purkkeja tarvitaan 25 kpl. Mikään purkki ei jää vajaaksi.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8c73c3b5-0ba2-41c7-970c-8c4f0d3ec86f">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t212">
+                                Yhtälöpari sovellustehtävässä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t212" class="collapse">
+                        <p>
+                            Suolahappoa käytetään mm. uima-allasveden pH:n säätämiseen ja rakennustyömailla betoniroiskeiden ja tiilien tai kivien puhdistukseen. Saatavilla on väkevää liuosta, jossa suolahappoa on 33 %, ja laimeaa liuosta, jossa suolahappoa on 1 %. Näistä halutaan valmistaa 10 litraa liuosta, jonka suolahappopitoisuus on 5 %. Tehtävänä on selvittää, kuinka paljon kumpaakin liuosta tarvitaan.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä vihkoosi alla oleva taulukko.
+                                <div align="center">
+                                    <table style="width = 95%">
+                                        <tr>
+                                            <th> Liuos </th>
+                                            <th> Pitoisuus (%) </th>
+                                            <th> Määrä (l) </th>
+                                            <th> Suolan määrä (l) </th>
+                                        </tr>
+                                        <tr>
+                                            <td> Väkevä </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Laimea </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Sekoitus </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div> 
+                            </li>
+                            <li>
+                                Täydennä taulukkoon eri liuosten suolahappopitoisuudet. Merkitse väkevän liuoksen määrää kirjaimella $x$ ja laimean liuoksen määrää kirjaimella $y$. Ilmaise sekoituksen määrä kirjainten $x$ ja $y$ avulla.
+                            </li>
+                            <li>
+                                Laske taulukkoon liuosten suolahapon määrät. Vinkki: mieti, millä laskutoimituksella saat suolahapon määrän, kun tunnet liuoksen kokonaismäärän ja suolahappopitoisuuden. Ilmaise sekoituksen suolahapon määrä väkevän ja laimean liuoksen suolahappomäärien avulla.
+                            </li>
+                            <li>
+                                Muodosta yhtälöpari tarkastelemalla sekoituksen määrää ja sen sisältämän suolahapon määrää:
+                                <ul>
+                                    <li> Mikä on sekoituksen määrä taulukon mukaan? Miten paljon sekoitusta pitää olla? Millaisen yhtälön saat? </li>
+                                    <li> Mikä on sekoituksen sisältämän suolahapon määrä taulukon mukaan? Mikä määrän pitää olla, jotta pitoisuus on oikea? Millaisen yhtälön saat? </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Ratkaise muodostamasi yhtälöpari. Kertaa tarvittaessa yhtälöparin ratkaiseminen tehtävästä 2.9. Kuinka paljon eri liuoksia tarvitaan?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t212_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t212_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    
+                                </li>
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 95%">
+                                            <tr>
+                                                <th> Liuos </th>
+                                                <th> Pitoisuus (%) </th>
+                                                <th> Määrä (l) </th>
+                                                <th> Suolan määrä (l) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> Väkevä </td>
+                                                <td> 33 % </td>
+                                                <td> $x$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Laimea </td>
+                                                <td> 1 % </td>
+                                                <td> $y$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Sekoitus </td>
+                                                <td> 5 % </td>
+                                                <td> $x+y$ </td>
+                                                <td>  </td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </li>
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 95%">
+                                            <tr>
+                                                <th> Liuos </th>
+                                                <th> Pitoisuus (%) </th>
+                                                <th> Määrä (l) </th>
+                                                <th> Suolan määrä (l) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> Väkevä </td>
+                                                <td> 33 % </td>
+                                                <td> $x$ </td>
+                                                <td> $0{,}33x$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Laimea </td>
+                                                <td> 1 % </td>
+                                                <td> $y$ </td>
+                                                <td> $0{,}01y$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Sekoitus </td>
+                                                <td> 5 % </td>
+                                                <td> $x+y$ </td>
+                                                <td> $0{,}33x + 0{,}01y$ </td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </li>
+                                <li>
+                                    Sekoituksen määrästä saadaan yhtälö
+                                    $$
+                                    x + y = 10.
+                                    $$
+                                    Sekoituksen sisältämän suolahapon määrästä saadaan yhtälö (huom. 10 litrassa sekoitusta pitää olla 5 % suolahappoa)
+                                    $$
+                                    0{,}33x + 0{,}01y = 0{,}05 \cdot 10.
+                                    $$
+                                    Yhtälöpari on siis 
+                                    $$
+                                    \left\{\begin{aligned}
+                                    x + y & = 10 \\
+                                    0{,}33x + 0{,}01y & = 0{,}5.
+                                    \end{aligned}\right.
+                                    $$
+                                </li>
+                                <li>
+                                    Yhtälöparin ratkaisuksi saadaan
+                                    $$
+                                    x = 1{,}25 \ \text{ ja } \ y = 8{,}75.
+                                    $$
+                                    Väkevää liuosta tarvitaan siis 1,25 litraa ja laimeaa liuosta 8,75 litraa.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2kpl3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAB2luku2-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="8bd656e3-3217-4715-bd43-6c9e1d11169c">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t201">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t201">
+                    <p>
+                        Tehtävänä on ratkaista graafisesti yhtälöpari
+                        $$
+                        \left\{\begin{aligned}
+                        2x + y & = 12 \\
+                        y & = x - 3.
+                        \end{aligned}\right.
+                        $$
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Piirrä yhtälöitä vastaavat suorat Geogebralla ja päättele yhtälön ratkaisu kuvan avulla.
+                        </li>
+                        <li>
+                            Tarkista sijoittamalla, onko ratkaisu tarkka vai likimääräinen.
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t201_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t201_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Ratkaisu on $x = 5$ ja $y = 2$. 
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva063.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                Sijoitetaan ensimmäisen yhtälön vasemmalle puolelle ja lasketaan:
+                                $$
+                                2x + y = 2 \cdot 5 + 1 = 10 + 2 = 12.
+                                $$
+                                Tuloksena yhtälön oikea puoli, joten yhtälö toteutuu.
+                                <br>
+                                Sijoitetaan toisen yhtälön oikealle puolelle ja lasketaan:
+                                $$
+                                x - 3 = 5 - 3 = 2.
+                                $$
+                                Tuloksena yhtälön oikea puoli, joten yhtälö toteutuu. Luvut $x = 5$ ja $y = 2$ toteuttavat molemmat yhtälöt, joten ratkaisu on tarkka.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="08a4037a-9059-4c46-a4ac-7f97d8aeb958">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t202">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t202">
+                    <p>
+                        Ratkaise yhtälöpari graafisesti ja tarkista sijoittamalla, onko ratkaisu tarkka vai likimääräinen.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            $$
+                            \left\{\begin{aligned}
+                            11x + 39y & = 152 \\
+                            -20x + 11y & = 135
+                            \end{aligned}\right.
+                            $$
+                        </li>
+                        <li>
+                            $$
+                            \left\{\begin{aligned}
+                            4x + 3y & = -2 \\
+                            5x + 2y & = 1
+                            \end{aligned}\right.
+                            $$
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t202_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t202_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Ratkaisu on $x = -4$ ja $y = 5$ kuvasta luettuna. 
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva063.png" max-width: 100%; width: auto; height: auto;/>
+                                <br>
+                                Sijoittamalla huomataan, että ratkaisu on likimääräinen:
+                                $$
+                                \left\{\begin{aligned}
+                                11 \cdot (-4) + 39 \cdot 5 & = 151 \approx 152 \\
+                                -20 \cdot (-4) + 11 \cdot 5 & = 135
+                                \end{aligned}\right.
+                                $$
+                                Siis yhtälöparin ratkaisu on $x \approx -4$ ja $y \approx 5$.
+                            </li>
+                            <li>
+                                Ratkaisu on $x = 1$ ja $y = -2$ kuvasta luettuna. 
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva065.png" max-width: 100%; width: auto; height: auto;/>
+                                <br>
+                                Sijoittamalla huomataan, että ratkaisu on tarkka.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="21602aa8-e6db-4854-9cb1-5e1432942468">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t204">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t204">
+                    <p>
+                        Taina ja Riina osallistuvat pyöräilyhaasteeseen, jossa parin pitää pyöräillä yhteensä 250 km. Riina lupaa pyöräillä 70 km enemmän kuin Taina. Kuinka pitkä matka kummankin pitää pyöräillä, jotta vaadittu matka täyttyy mutta ei ylity?
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Merkitse Tainan pyöräilymatkaa kirjaimella $x$ ja Riinan pyöräilymatkaa kirjaimella $y$. Millaisen yhtälön saat matkojen kokonaismäärästä?
+                        </li>
+                        <li>
+                            Millaisen yhtälön saat Riinan lupauksesta?
+                        </li>
+                        <li>
+                            Ratkaise muodostamasi yhtälöpari. Kuinka pitkät matkat Taina ja Riina pyöräilevät?
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t204_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t204_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $x + y = 250$
+                            </li>
+                            <li>
+                                $y = x + 70$
+                            </li>
+                            <li>
+                                Yhtälöparin ratkaisu on $x = 90$ ja $y = 160$. Siis Taina pyöräilee 90 km ja Riina 160 km.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="324bd062-c1fe-47af-a95c-15913d541d82">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t203">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t203">
+                    <p>
+                        Iltarastien tulosluettelosta nähtiin, että osallistujia oli ollut yhteensä 162. Järjestäjät laskivat, että karttojen myynti oli tuottanut rahaa 944 euroa. Aikuisten karttamaksu oli 7 € ja lasten 2 €. Tehtävänä on selvittää, kuinka monta lasta iltarasteille osallistui.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Merkitse lasten määrää kirjaimella $x$ ja aikuisten määrää kirjaimella $y$. Millaisen yhtälön saat osallistujien kokonaismäärästä?
+                        </li>
+                        <li>
+                            Millaisen yhtälön saat tapahtuman kokonaistuotosta?
+                        </li>
+                        <li>
+                            Ratkaise muodostamasi yhtälöpari. Kuinka monta lasta iltarasteille osallistui?
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t203_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t203_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $x + y = 162$
+                            </li>
+                            <li>
+                                $2x + 7y = 944$
+                            </li>
+                            <li>
+                                Yhtälöparin ratkaisu on $x = 38$ ja $y = 124$. Iltarasteille osallistui siis 38 lasta.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="1da9ba9c-e73d-4123-94db-46ba8c006f20">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t205">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t205">
+                    <p>
+                        Salibandyseura on tilaamassa mailoja. Käytettävissä on 500 euroa. Halvempi maila maksaa 26 € ja kalliimpi 30 €. Tarkoituksena on hankkia 18 mailaa. Kuinka monta kappaletta halvempaa ja kuinka monta kappaletta kalliimpaa mallia pitää tilata?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t205_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t205_v" class="collapse">
+                        <p>
+                            Halvempia mailoja 10 kpl ja kalliimpia 8 kpl. <br>
+                            Yhtälöpari on 
+                            $$
+                            \left\{\begin{aligned}
+                            x + y & = 18 \\
+                            26x + 30y & = 500.
+                            \end{aligned}\right.
+                            $$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="ee7ae744-7f43-4a4b-816e-1cb99aac482b">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t207">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t207">
+                    <p>
+                        Radiojuontaja kertoo, että hänen isoisänsä on neljä kertaa niin vanha kuin hänen serkkunsa. Lisäksi juontaja paljastaa, että serkun ja isoisän yhteenlaskettu ikä on 80 vuotta. Kysymys on, minkä ikäinen serkku on. Nopeimmin oikean vastauksen keksinyt voittaa liput festareille. Vastata saa vain kerran. Mitä vastaisit?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t207_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t207_v" class="collapse">
+                        <p>
+                            Serkku on 16-vuotias. <br>
+                            Yhtälöpari on 
+                            $$
+                            \left\{\begin{aligned}
+                            x + y & = 80 \\
+                            y & = 4x.
+                            \end{aligned}\right.
+                            $$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="e96b5e43-2bac-4a7c-be4c-cebdc82f9dc0">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t206">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t206">
+                    <p>
+                        Leikkaavatko seuraavien funktioiden kuvaajat toisensa? Jos leikkaavat, mitkä ovat leikkauspisteen koordinaatit?
+                        \begin{align*}
+                        f(x) &= 2x-7 \\[1mm]
+                        g(x) &= 5x - 58
+                        \end{align*}
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t206_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t206_v" class="collapse">
+                        <p>
+                            Kuvaajat leikkaavat pisteessä $(17,27)$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tehtava" id="aac778d2-8efd-4db6-8458-02abdb59d00d">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t205">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t205">
+                    <p>
+                        Ratkaise yhtälöpari
+                    </p>
+                    <ol class="a">
+                        <li>
+                            $$
+                            \left\{\begin{aligned}
+                            x + 2y & = -4 \\
+                            2x - y & = -3
+                            \end{aligned}\right.
+                            $$
+                        </li>
+                        <li>
+                            $$
+                            \left\{\begin{aligned}
+                            2x + y & = 4 \\
+                            -x + 2y & = 1.
+                            \end{aligned}\right.
+                            $$
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2012/1c &amp; S2013/2b]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t205_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t205_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $x = -2$ ja $y = -1$
+                            </li>
+                            <li>
+                                $x = \dfrac{7}{5} \  \text{ ja } \  y = \dfrac{6}{5}$
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="d0e936fa-90ed-4577-a929-0ee55912b59d">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t207">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t207">
+                    <p>
+                        Ratkaise yhtälöpari
+                    </p>
+                    <ol class="a">
+                        <li>
+                            $$
+                            \left\{\begin{aligned}
+                            x - 2y & = 0 \\
+                            x - 3y & = 1
+                            \end{aligned}\right.
+                            $$
+                        </li>
+                        <li>
+                            $$
+                            \left\{\begin{aligned}
+                            2x - y & = 1 \\
+                            x + y & = 8.
+                            \end{aligned}\right.
+                            $$
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2011/1c &amp; K2012/1c]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t207_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t207_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $x = -2$ ja $y = -1$
+                            </li>
+                            <li>
+                                $x = 3$ ja $y = 5$
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="c8ee5143-2948-473f-a675-dd6c61479bb1">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t202">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t202">
+                    <ol class="a">
+                        <li>
+                            Ratkaise yhtälöpari
+                            $$
+                            \left\{\begin{aligned}
+                            y - x + 1 & = 0, \\
+                            4y & = 12 - x.
+                            \end{aligned}\right.
+                            $$
+                        </li>
+                        <li>
+                            Missä pisteessä suorat 
+                            $x + 5y = 1$ ja 
+                            $x - 5y = 5$ 
+                            leikkaavat toisensa?
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2017/1b &amp; S2014/1]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t202_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t202_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Ratkaisu on 
+                                $x = \dfrac{16}{5} \  \text{ ja } \  y = \dfrac{11}{5}$.
+                            </li>
+                            <li> 
+                                Leikkauspisteen koordinaatit ovat $x = 3$ ja $y = -\dfrac{2}{5}$. 
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2-tehtavasarja2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                    
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAB2luku2-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="e58bf088-c5fe-4c2b-8488-e8f9906cb465">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t203">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t203">
+                    <p>
+                        Kiinalainen arvoitus 5 000 vuoden takaa: Häkissä on fasaaneja ja kaniineja. Niillä on yhteensä 35 päätä ja 94 jalkaa. Kuinka monta fasaania ja kuinka monta kaniinia häkissä on? 
+                        <br>
+                        [Lyhyt K2014/6]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t203_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t203_v" class="collapse">
+                        <p>
+                            Kaniineja on 12 ja fasaaneja 23.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="cbef874c-d45f-42ab-989e-f5a78bb05c95">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t204">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t204">
+                    <p>
+                        Helsingin kaupunki teetti ennusteen kaupungin väestönkasvusta vuodesta 2012 alkaen. Ennusteen mukaan asukasluku kasvaa lineaarisesti aikavälillä 2012−2030 niin, että kaupungissa on 607 417 asukasta vuoden 2014 alussa ja 629 894 asukasta vuoden 2018 alussa. Ennusteessa ei otettu huomioon mahdollisia kuntaliitoksia. 
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Ennusteen mukaan asukasluku $y$ toteuttaa yhtälön 
+                            $$
+                            y = a(x-2014) + b,
+                            $$
+                            kun $x$ on vuosiluku. Määritä vakioiden $a$ ja $b$ tarkat arvot käyttämällä yllä mainittuja tietoja.
+                        </li>
+                        <li>
+                            Kuinka paljon asukasluku kasvaa ennusteen mukaan aikavälillä 2014-2030? Anna vastaus 1000 asukkaan tarkkuudella.
+                        </li>
+                        <li>
+                            Piirrä asukasluvun $y$ kuvaaja välillä $2014 \leq x \leq 2030$.
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2014/14]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t204_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t204_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $a = 5619{,}25$ ja $b = 607417$.
+                            </li>
+                            <li>
+                                Asukasluku kasvaa noin 90 000 ihmisellä.
+                            </li>
+                            <li>
+                                Kuva:
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva062.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="174d10e5-9a4a-4648-88b4-0cfe1e93ab4a">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t208">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t208">
+                    <p>
+                        Millä vakion $a$ arvolla yhtälöparilla 
+                        $$
+                        \left\{\begin{aligned}
+                        2x + (a+1)y & = 5 \\
+                        3x + (a-2)y & = a
+                        \end{aligned}\right.
+                        $$
+                        ei ole ratkaisua?
+                        <br>
+                        [Lyhyt S2010/13]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t208_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t208_v" class="collapse">
+                        <p>
+                            $a = -7$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="e6363fc0-cb31-429e-8961-9f63ba8b02ac">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t209">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t209">
+                    <p>
+                        Kupari-nikkeliseoksessa on 75 % kuparia ja 25 % nikkeliä. Toisessa kupari-nikkeliseoksessa on kuparia 80 % ja nikkeliä 20 %. Näistä valmistetaan sulattamalla 300 g kupari-nikkeliseosta, jonka nikkelipitoisuus on 22 %. Kuinka paljon kumpaakin seosta tähän tarvitaan?
+                        <br>
+                        [Lyhyt S2008/6]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t209_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t209_v" class="collapse">
+                        <p>
+                            Ensimmäistä seosta tarvitaan 120 g ja toista seosta tarvitaan 180 g.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="8d6fffed-2e0d-4948-90c8-586603f320f7">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t210">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t210">
+                    <p>
+                        Keltaista ja sinistä väripigmenttiä käytettiin kahden erisävyisen vihreän maalin sekoittamiseen. Maaliin A tarvittiin litraa kohden 80 g keltaista pigmenttiä ja 110 g sinistä pigmenttiä, maaliin B vastaavasti 120 g keltaista ja 90 g sinistä pigmenttiä. Kuinka monta litraa kumpaakin maalia valmistettiin, kun keltaista pigmenttiä käytettiin 3,2 kg ja sinistä 3,5 kg?
+                        <br>
+                        [Lyhyt S2007/8]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t210_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t210_v" class="collapse">
+                        <p>
+                            Maalia A valmistettiin 22 litraa ja maalia B valmistettiin 12 litraa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="8b981e0f-4050-4c42-a21f-097ce458bbaa">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t211">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t211">
+                    <p>
+                        Lauralta kului koulumatkaan 15 minuuttia. Tavallisesti hän saapui kouluun kellon soidessa. Eräänä aamuna hän lähti kotoa 6 minuuttia tavallista myöhempään, ja vaikka hän kulki nopeammin, hän myöhästyi. Koulun kellon soidessa hänellä oli vielä 5 % matkasta jäljellä. Kuinka monta prosenttia tavallista nopeammin hän oli tällöin kulkenut?
+                        <br>
+                        [Lyhyt S2006/7]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t211_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t211_v" class="collapse">
+                        <p>
+                            Laura oli kulkenut noin 58 % tavallista nopeammin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="67b90213-ab4c-499f-8503-e2064dabf68a">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t212">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t212">
+                    <p>
+                        Lämpömittaria tutkittiin tarkkuusmittarin avulla. Kun lämpömittari näytti $−9{,}9 {}^\circ\text{C}$, oikea lämpötila oli $−9{,}2 {}^\circ\text{C}$. Kun lämpömittari näytti $18{,}5 {}^\circ\text{C}$, oikea lämpötila oli $18{,}1 {}^\circ\text{C}$. Oletetaan, että oikean lämpötilan ja lämpömittarin lukeman välinen riippuvuus on lineaarinen. 
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Johda lauseke, jolla oikea lämpötila $y$ voidaan laskea, kun lämpömittarin lukema $x$ tunnetaan. Ilmoita esiintyvät kertoimet neljän desimaalin tarkkuudella.
+                        </li>
+                        <li>
+                            Missä lämpötilassa lämpömittari näyttää aivan oikein?
+                        </li>
+                    </ol>
+                     <p>
+                        [Lyhyt K2005/12]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t212_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t212_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $y = 0{,}9613x + 0{,}3165$
+                            </li>
+                            <li>
+                                Noin lämpötilassa $8{,}2 {}^\circ\text{C}$.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="da728d30-54f5-47f6-afa7-b9f6d74bf520">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t213">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t213">
+                    <p>
+                        Lukion juhlasalissa, johon mahtuu 260 henkilöä, järjestetään esitelmätilaisuus. Rehtori kutsuu tilaisuuteen asiasta kiinnostuneita oppilaiden vanhempia sekä muita henkilöitä. Kokemuksesta hän tietää, että vanhemmista saapuu paikalle 65 % ja muista henkilöistä 45 %. Rehtori haluaa, että tulijoita olisi juuri salin kapasiteetin verran ja että kolme neljäsosaa läsnäolijoista olisi oppilaiden vanhempia. Kuinka monelle vanhemmalle ja kuinka monelle muulle henkilölle kutsu on lähetettävä?
+                        <br>
+                        [Lyhyt S2004/4]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t213_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t213_v" class="collapse">
+                        <p>
+                            Vanhempia on kutsuttava 300 ja muita henkilöitä 144.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="ac12d57d-6248-4b49-8003-9c0f3794bca8">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t214">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t214">
+                    <p>
+                        Potilas ostaa apteekista kahta lääkettä, joista toinen kuuluu peruskorvattaviin ja toinen erityiskorvattaviin lääkkeisiin. KELA maksaa peruskorvattavista lääkekuluista puolet 8,41 € ylittävästä osasta ja erityiskorvattavista lääkekuluista 75 % osasta, joka ylittää 4,20 €. Mitkä olivat lääkkeiden hinnat, kun ne yhteensä maksoivat 51,01 € ja potilaan maksettavaksi jäi yhteensä 23,16 €?
+                        <br>
+                        [Lyhyt K2003/4]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t214_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t214_v" class="collapse">
+                        <p>
+                            Peruskorvattavan lääkkeen hinta oli 12,21 euroa ja erityiskorvattavan 38,80 euroa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="cd0c922e-f947-4b7a-a77e-c9a0f2cf30fc">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t215">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t215">
+                    <p>
+                        Lentokone lähtee aikataulun mukaan paikasta A klo 14.10 ja saapuu paikkaan B klo 17.00. Paluumatkalle lentokone lähtee B:stä klo 18.55, ja se on perillä A:ssa seuraavana päivänä klo 8.45. Paluumatka kestää tunnin enemmän kuin menomatka. Paljonko kello on paikassa B lentokoneen saapuessa A:han? Kaikki ilmoitetut ajat ovat paikallisia aikoja.
+                        <br>
+                        [Lyhyt S2002/9]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t215_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t215_v" class="collapse">
+                        <p>
+                            Kun lentokone saapuu paikkaan A, kello on 3.45 paikassa B.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2-tehtavasarja3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2-itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku2-itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/2069 ">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+            </p>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2-itsearviointi">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+</article>

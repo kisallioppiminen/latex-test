@@ -1,0 +1,3102 @@
+---
+title: MAB2 - Lausekkeet ja yhtälöt
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: mab2
+---
+
+<input type="hidden" id="chapterNumber" name="theoremStart" value="4"/>
+<input type="hidden" id="theoremStart" value="1"/>
+
+{% include bottomnav.html %}
+
+
+<article>
+    <section>
+        <header>
+            <h1>Toisen asteen yhtälö</h1>
+        </header>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luvun4-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luvun4-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p> 
+                    Tämän luvun tavoitteena on, että ratkaiset sujuvasti toisen asteen yhtälöitä. Osaat
+                </p>
+                <ul>
+                    <li> 
+                        piirtää toisen asteen polynomifunktion kuvaajan ja määrittää funktion arvoja sen avulla
+                    </li>
+                    <li>
+                        päätellä toisen asteen polynomifunktion lausekkeesta, onko kuvaaja ylöspäin vai alaspäin aukeava paraabeli ja millä korkeudella se leikkaa $y$-akselin
+                    </li>
+                    <li>
+                        tutkia toisen asteen yhtälön ratkaisuja graafisesti ja määrittää luvun neliöjuuren 
+                    </li>
+                    <li>
+                        ratkaista toisen asteen yhtälön ratkaisukaavan avulla
+                    </li>
+                    <li>
+                        laskea polynomien tulon
+                    </li>
+                    <li>
+                        ratkaista vaillinaisia toisen asteen yhtälöitä myös neliöjuuren ja tulon nollasäännön avulla
+                    </li>
+                    <li>
+                        mallintaa ja ratkaista sovellusongelmia.
+                    </li>
+                </ul> 
+            </div>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luvun4-tavoitteet">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl1">
+                     Toisen asteen polynomifunktio
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku4kpl1" class="collapse">
+            
+            <div class="teoria">
+                <p>
+                    Kurssin alkupuolella perehdyttiin ensimmäisen asteen polynomifunktioihin, joiden kuvaaja on aina suora. Tässä kappaleessa tutustutaan toisen asteen polynomifunktioihin. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava first-exercise" id="f3e56167-0d44-4fec-a1f9-e24abe5e69dd">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t301">
+                                Toisen asteen polynomifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t301" class="collapse">
+                        <p> 
+                            Yksinkertaisin toisen asteen polynomifunktio on funktio $f(x) = x^2$. Sen kuvaaja on alla:
+                            <br>
+                            <img src="/kurssit/mab2/kuvat/MAB2kuva034.png" max-width: 100%; width: auto; height: auto;/>
+                            Päättele kuvaajan avulla vastaukset seuraaviin kysymyksiin:
+                        </p>
+                        <ol class="a">
+                            <li> Mikä on funktion $f(x) = x^2$ arvo kohdassa $x = -1$?</li>
+                            <li> Missä kohdissa funktio $f(x) = x^2$ saa arvon $4$?</li>
+                            <li> Mikä on funktion $f(x) = x^2$ pienin arvo?</li>
+                            <li> Kuinka monta ratkaisua on yhtälöllä $x^2 = 2$?</li>
+                            <li> Kuinka monta ratkaisua on yhtälöllä $x^2 = -1$?</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t301_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t301_v" class="collapse">
+                           <ol class="a">
+                                <li> $f(-1) = 1$</li>
+                                <li> Kohdassa $x = -2$ ja kohdassa $x = 2$. </li>
+                                <li> Pienin arvo on $0$. </li>
+                                <li> Kaksi ratkaisua, sillä kuvaaja käy korkeudella $2$ kahdessa eri kohdassa. </li>
+                                <li> Ei yhtään ratkaisua, sillä kuvaaja ei missään vaiheessa käy korkeudella $-1$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
+                <p>
+                    Seuraavassa määritelmässä sovitaan, millaisia funktioita kutsutaan toisen asteen polynomifunktioiksi. 
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: TOISEN ASTEEN POLYNOMIFUNKTIO</h3>
+                    <p>
+                        Funktiota $f$, joka on muotoa 
+                        $$f(x) = ax^2+bx+c,$$ missä $a\neq 0$, sanotaan <em>toisen asteen polynomifunktioksi</em>.
+                    </p>
+                </div>
+
+                <p>
+                    Huomaa, että kerroin $b$ ja vakio $c$ saattavat olla myös nollia. Esimerkiksi funktiot 
+                    $$g(x) = 5x^2-7 \quad \text{ja} \quad h(x) = x^2-4x$$ 
+                    ovat toisen asteen polynomifunktioita. Funktion $g$ tapauksessa kerroin $b = 0$ ja funktion $h$ tapauksessa vakio $c = 0$.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava first-exercise" id="f3e56167-0d44-4fec-a1f9-e24abe5e69dd">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t301b">
+                                Toisen asteen polynomifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t301b" class="collapse">
+                        <p> 
+                            Tutkitaan funktiota $f(x) = -0{,}25x^2 + x + 2$
+                        </p>
+                        <ol class="a">
+                            <li> Vertaa funktion lauseketta toisen asteen polynomifunktion määritelmään. Mikä tässä tapauksessa on määritelmän kerroin $a$? Entä $b$? Entä mikä on vakio $c$?</li>
+                            <li> Laske funktion arvo kohdassa $x = 6$ eli laske, mitä on $f(6)$.</li>
+                            <li> Laske $f(0)$.</li>
+                            <li> Päättele a- ja b-kohtien avulla kaksi pistettä, joiden kautta funktion $f$ kuvaaja kulkee. </li>
+                            <li> Piirrä funktion $f$ kuvaaja laskimella tai tietokoneella ja tarkista, päättelitkö c-kohdassa pisteet oikein.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t301b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t301b_v" class="collapse">
+                           <ol class="a">
+                                <li> $a = -0{,}25$ ja $b = 1$ ja $c = 2$.</li>
+                                <li> $f(6) = -1$ </li>
+                                <li> $f(0) = 2$ </li>
+                                <li> Pisteet ovat $(6,-1)$ ja $(0,2)$. </li>
+                                <li> <img src="/kurssit/mab2/kuvat/MAB2kuva035.png" max-width: 100%; width: auto; height: auto;/> </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="teoria">
+                <p>
+                    Toisen asteen polynomifunktion kuvaaja on aina muodoltaan <em>paraabeli</em>.
+                    Seuraavassa tehtävässä tutkitaan, miten kerroin $a$ ja vakiotermi $c$ vaikuttavat funktion kuvaajaan.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="first-exercise tehtava" id="e46330c5-e6b9-4130-aa80-0f17118c7e4e">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t302">
+                                Toisen asteen polynomifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t302" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa2/kuvat/TAk9.png" style="float: left; width: 60%; margin-left: 2%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/TAk10.png" style="float: left; width: 34%; margin-left: 1%; margin-right: 2%; margin-bottom: 0.5em;">
+                        <p style="clear: both;"></p>
+                        <p>
+                            <img src="/kurssit/maa2/kuvat/TAk11.png" style="float: left; width: 60%; margin-left: 2%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/TAk12.png" style="float: left; width: 34%; margin-left: 1%; margin-right: 2%; margin-bottom: 0.5em;">  </p>
+                        <p style="clear: both;"></p>
+                        <p>
+                            Yllä on näkyvissä toisen asteen polynomifunktioiden kuvaajia. Kopioi alla oleva taulukko vihkoosi ja täydennä se yhdistämällä oikea kuvaaja jokaiseen funktioon. Päättele sen jälkeen vastaukset alla oleviin kysymyksiin.
+                        </p>
+                        <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> Funktio </th>
+                                    <th> Kuvaaja </th>
+                                </tr>
+                                <tr>
+                                    <td> $\ f(x) = 0{,}5x^2-2 \ $ </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ g(x) = 0{,}25x^2+1 \ $ </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ h(x) = -2x^2+2 \ $ </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ k(x) = -3x^2+4 \ $ </td>
+                                    <td>  </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p> 
+                            Miten funktion $f(x) = ax^2 + c$ lausekkeesta voi päätellä,
+                        </p>
+                        <ol class="a">
+                            <li> onko kuvaaja ylöspäin aukeava paraabeli (kuten kuvissa A ja C) vai alaspäin aukeava paraabeli (kuten kuvissa B ja D)?</li>
+                            <li> millä korkeudella kuvaaja leikkaa $y$-akselin?</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t302_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t302_v" class="collapse">
+                           <div align="center">
+                                <table style="width = 75%">
+                                    <tr>
+                                        <th> Funktio </th>
+                                        <th> Kuvaaja </th>
+                                    </tr>
+                                    <tr>
+                                        <td> $\ f(x) = 0{,}5x^2-2 \ $ </td>
+                                        <td> A </td>
+                                    </tr>
+                                    <tr>
+                                        <td> $\ g(x) = 0{,}25x^2+1 \ $ </td>
+                                        <td> C </td>
+                                    </tr>
+                                    <tr>
+                                        <td> $\ h(x) = -2x^2+2 \ $ </td>
+                                        <td> D </td>
+                                    </tr>
+                                    <tr>
+                                        <td> $\ k(x) = -3x^2+4 \ $ </td>
+                                        <td> B </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <ol class="a">
+                                <li> Jos $a > 0$, kuvaaja on ylöspäin aukeava paraabeli. Jos $a < 0$, kuvaaja on alaspäin aukeava paraabeli. </li>
+                                <li> Vakio $c$ ilmaisee, millä korkeudella kuvaaja leikkaa $y$-akselin. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Toisen asteen polynomifunktion kuvaaja on aina paraabeli. Jos funktio on muotoa 
+                    $$f(x) = ax^2 + bx + c,$$ 
+                    missä $a \neq 0$, niin sen kuvaaja on paraabeli, jonka yhtälö on $$y = ax^2 + bx + c.$$ Vakio $c$ ilmaisee, millä korkeudella paraabeli leikkaa $y$-akselin. Kerroin $a$ puolestaan määrää sen, onko paraabeli ylös- vai alaspäin aukeava. Paraabeli  $y = ax^2 + bx + c$ on 
+                </p>
+                    <ul>
+                        <li>
+                            ylöspäin aukeava, jos $a > 0$
+                        </li>
+                        <li>
+                            alaspäin aukeava, jos $a < 0$.
+                        </li>
+                    </ul>
+                <p>
+                    Paraabelin <em>huipuksi</em> sanotaan alaspäin aukeavan paraabelin ylintä pistettä ja ylöspäin aukeavan paraabelin alinta pistettä:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/TAk13.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Paraabeli on symmetrinen huipun kautta kulkevan <em>symmetria-akselin</em> suhteen:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/TAk14.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="3f43151d-1dbe-4edf-a7bf-559d877b9f59">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste4">
+                                Toisen asteen polynomifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste4" class="collapse">
+                        <p>
+                            Toisen asteen polynomifunktiosta tiedetään, että se saa alla olevan taulukon mukaisia arvoja. Täydennä taulukkoon puuttuvat funktion arvot kuvaajan symmetrisyyttä hyödyntäen. Mikä on kuvaajan huipun $x$-koordinaatti?
+                        </p>
+                        <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> $\ \phantom{-}x \ $ </th>
+                                    <th> $\ \phantom{-}f(x) \ $ </th>
+                                </tr>
+                                <tr>
+                                    <td> $\, -4 \ $ </td>
+                                    <td> $\ \phantom{-}9 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\, -3 \ $ </td>
+                                    <td> $\ \phantom{-}5{,}25 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\, -2 \ $ </td>
+                                    <td> $\  \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}0 \ $ </td>
+                                    <td> $\, -3 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}2 \ $ </td>
+                                    <td> $\  \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}6 \ $ </td>
+                                    <td> $\, -6 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}8 \ $ </td>
+                                    <td> $\, -3 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}10 \ $ </td>
+                                    <td> $\ \phantom{-}2 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}11 \ $ </td>
+                                    <td> $\  \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}12 \ $ </td>
+                                    <td> $\  \ $ </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p>
+                            Vinkki: kuvaajan hahmotteleminen ruutupaperille voi auttaa päättelyssä.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste4_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste4_v" class="collapse">
+                            <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> $\ \phantom{-}x \ $ </th>
+                                    <th> $\ \phantom{-}f(x) \ $ </th>
+                                </tr>
+                                <tr>
+                                    <td> $\, -4 \ $ </td>
+                                    <td> $\ \phantom{-}9 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\, -3 \ $ </td>
+                                    <td> $\ \phantom{-}5{,}25 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\, -2 \ $ </td>
+                                    <td> $\  \phantom{-}2 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}0 \ $ </td>
+                                    <td> $\, -3 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}2 \ $ </td>
+                                    <td> $\, -6 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}6 \ $ </td>
+                                    <td> $\, -6 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}8 \ $ </td>
+                                    <td> $\, -3 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}10 \ $ </td>
+                                    <td> $\ \phantom{-}2 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}11 \ $ </td>
+                                    <td> $\ \phantom{-}5{,}25 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}12 \ $ </td>
+                                    <td> $\ \phantom{-}9 \ $ </td>
+                                </tr>
+                            </table>
+                            </div>
+                           <p>
+                            Huipun $x$-koordinaatti on $x = 4$.
+                           </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="c1fa92f7-7d32-4e8f-87d6-18b51f5dd801">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste5">
+                                Toisen asteen polynomifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste5" class="collapse">
+                        <p>
+                            Tässä tehtävässä tutkitaan funktiota $f(x) = 2x^2 - 6x - 3$.
+                        </p>
+                        <ol class="a">
+                            <li> Täydennä alla oleva taulukko laskemalla funktion $f$ arvoja:
+                                <div align="center">
+                                    <table style="width = 75%">
+                                        <tr>
+                                            <th> $\ \phantom{-}x \ $ </th>
+                                            <th> $\ \phantom{-}f(x) = 2x^2 - 6x - 3 \ $ </th>
+                                        </tr>
+                                        <tr>
+                                            <td> $\, -1 \ $ </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> $\ \phantom{-}0 \ $ </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> $\ \phantom{-}1 \ $ </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> $\ \phantom{-}2 \ $ </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> $\ \phantom{-}3 \ $ </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> $\ \phantom{-}4 \ $ </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li> Hahmottele funktion $f$ kuvaaja ruutupaperille ja päättele symmetrian avulla, mikä on funktion $f$ kuvaajan huipun $x$-koordinaatti.</li>
+                            <li> Määritä huipun $y$-koordinaatti laskemalla.</li>
+                            <li> Piirrä funktion $f$ kuvaaja laskimella ja tarkista, että edellisten kohtien tuloksesi ovat järkeviä.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste5_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste5_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                            <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> $\ \phantom{-}x \ $ </th>
+                                    <th> $\ \phantom{-}f(x) = 2x^2 - 6x - 3 \ $ </th>
+                                </tr>
+                                <tr>
+                                    <td> $\, -1 \ $ </td>
+                                    <td> $\ \phantom{-}5 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}0 \ $ </td>
+                                    <td> $\ -3 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}1 \ $ </td>
+                                    <td> $\ -7 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}2 \ $ </td>
+                                    <td> $\ -7 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}3 \ $ </td>
+                                    <td> $\ -3 \ $ </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ \phantom{-}4 \ $ </td>
+                                    <td> $\ \phantom{-}5 \ $ </td>
+                                </tr>
+                            </table>
+                            </div>
+                            </li>
+                            <li> Huipun $x$-koordinaatti on $x = 1{,}5$. </li>
+                            <li> Huipun $y$-koordinaatti on $y = f(1{,}5) = -7{,}5$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl1">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl2">
+                    Neliöjuuri yhtälön ratkaisuna
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku4kpl2" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Toisen asteen polynomifunktioiden avulla voidaan tutkia toisen asteen yhtälöiden ratkaisuja. Esimerkiksi toisen asteen polynomifunktion $f(x) = x^2$ kuvaajasta nähdään, että yhtälöllä $x^2 = 7$ on kaksi ratkaisua:
+                </p>
+                <p>
+                    <img src="/kurssit/maa2/kuvat/PFk2.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+                <p>
+                    Positiivista ratkaisua, joka on merkitty kuvaan kirjaimella $b$, sanotaan luvun $7$ neliöjuureksi. Luvun $7$ neliöjuuri on siis sellainen luku $b \geq 0$, jonka toinen potenssi on seitsemän eli $b^2 = 7$. 
+                </p>
+                <p>
+                    Muiden positiivisten lukujen neliöjuuret sekä nollan neliöjuuri määritellään vastaavalla tavalla kuin luvun 7 neliöjuuri. Negatiivisille luvuille neliöjuurta ei määritellä.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: NELIÖJUURI</h3>
+                    <p>
+                        Luvun $a \geq 0$ <em>neliöjuuri</em> tarkoittaa lukua $b \geq 0$, jolle pätee
+                        $$b^2 = a.$$
+                        Luvun $a$ neliöjuurelle käytetään merkintää $\sqrt{a}.$
+                    </p>
+                </div>
+
+                <p>
+                    Luvun $a$ neliöjuurelle pätee siis määritelmän mukaan kaksi asiaa: 
+                    $$\sqrt{a} \geq 0 \quad \text{ ja } \quad \left(\sqrt{a}\right)^2 = a.$$
+                    Neliöjuuren merkintää käyttäen edellinen kuva näyttää tältä:
+                    <br>
+                    <img src="/kurssit/maa2/kuvat/PFk3.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="e23ac628-2ca4-48db-b55f-0503c7f0c868">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf2">
+                                Neliöjuuri
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="pf2" class="collapse">
+                        <p> Päättele seuraavien neliöjuurten arvo. Voit käyttää apuna yllä olevaa kuvaajaa.
+                        </p>
+                        <ol class="a">
+                            <li> $\sqrt{4}$</li>
+                            <li> $\sqrt{1}$</li>
+                            <li> $\sqrt{0}$</li>
+                            <li> $\sqrt{9}$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf2_v">
+                                Vastaus
+                            </a>
+                        </h2>
+                        <div id="pf2_v" class="collapse">
+                            <ol class="a">
+                                <li> $\sqrt{4} = 2$</li>
+                                <li> $\sqrt{1} = 1$</li>
+                                <li> $\sqrt{0} = 0$</li>
+                                <li> $\sqrt{9} = 3$</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="557f605c-301d-4927-b1a2-ac7dbaa24099">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf6">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="pf6" class="collapse">
+                        <img src="/kurssit/mab2/kuvat/MAB2kuva036.png" max-width: 100%; width: auto; height: auto;/>
+                        <p> 
+                            Päättele yllä olevan kuvaajan avulla, kuinka monta ratkaisua seuraavilla yhtälöillä on. Jos yhtälöllä on ratkaisu tai ratkaisuja, mitä ne ovat? Ilmaise vastaukset tarvittaessa neliöjuuren avulla.
+                        </p>
+                        <ol class="a">
+                            <li> $x^2 = 0$</li>
+                            <li> $x^2 = 2$</li>
+                            <li> $x^2 = 5$</li>
+                            <li> $x^2 = -3$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf6_v">
+                                Vastaus
+                            </a>
+                        </h2>
+                        <div id="pf6_v" class="collapse">
+                            <ol class="a">
+                                <li> Yksi ratkaisu: yhtälö toteutuu, jos ja vain jos $x = 0$</li>
+                                <li> Kaksi ratkaisua: yhtälö toteutuu, jos ja vain jos $x = \sqrt{2}$ tai $x = -\sqrt{2}$</li>
+                                <li> Kaksi ratkaisua: yhtälö toteutuu, jos ja vain jos $x = \sqrt{5}$ tai $x = -\sqrt{5}$</li>
+                                <li> Ei ratkaisua.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Luvun $a$ neliöjuurelta vaaditaan määritelmän mukaan kaksi asiaa: sen pitää olla epänegatiivinen ja sen toisen potenssin pitää olla yhtä suuri kuin luku $a$. Esimerkiksi 
+                    $$\sqrt{\frac{1}{4}} = \frac{1}{2}$$
+                    sillä 
+                    $$\frac{1}{2} \geq 0 \ \text{ ja } \ \left(\frac{1}{2}\right)^2 = \frac{1}{2}\cdot \frac{1}{2} = \frac{1}{4}.$$ 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="d8460b50-5660-4a1a-884d-ac6edcb37c89">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf3">
+                                Neliöjuuri
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="pf3" class="collapse">
+                        <p> Määritä seuraavien neliöjuurten arvo kokeilemalla ja perustelemalla tulos sen jälkeen samaan tapaan kuin edellä.
+                        </p>
+                        <ol class="a">
+                            <li> $\sqrt{36}$</li>
+                            <li> $\sqrt{100}$</li>
+                            <li> $\sqrt{49}$</li>
+                            <li> $\sqrt{144}$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf3_v">
+                                Vastaus
+                            </a>
+                        </h2>
+                        <div id="pf3_v" class="collapse">
+                            <ol class="a">
+                                <li> $\sqrt{36} = 6$, sillä $6 \geq 0$ ja $6^2 = 36$ </li>
+                                <li> $\sqrt{100} = 10$, sillä $10 \geq 0$ ja $10^2 = 100$ </li>
+                                <li> $\sqrt{49} = 7$, sillä $7 \geq 0$ ja $7^2 = 49$ </li>
+                                <li> $\sqrt{144} = 12$, sillä $12 \geq 0$ ja $12^2 = 144$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Merkinnässä $\sqrt{a}$ neliöjuuren alla olevaa lukua $a$ sanotaan <em>juurrettavaksi</em>. Seuraavissa tehtävissä tutkitaan, mikä on neliöjuuren arvo siinä tapauksessa, että juurrettava on jonkin luvun toinen potenssi. Seuraavissa tehtävissä tutkitaan siis neliöjuuria, jotka ovat muotoa 
+                    $$
+                    \sqrt{c^2}
+                    $$
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="9afc97eb-1121-4064-a244-01fb47d3af6b">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf4">
+                                Neliöjuuri
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="pf4" class="collapse">
+                        <p> 
+                             Määritä seuraavien neliöjuurten arvo kokeilemalla ja perustelemalla tulos sen jälkeen samaan tapaan kuin edellä. Kannattaa aloittaa sieventämällä juurrettava.
+                        </p>
+                        <ol class="a">
+                            <li> $\sqrt{5^2}$</li>
+                            <li> $\sqrt{(-9)^2}$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf4_v">
+                                Vastaus
+                            </a>
+                        </h2>
+                        <div id="pf4_v" class="collapse">
+                            <ol class="a">
+                                <li> $\sqrt{5^2} = 5$</li>
+                                <li> $\sqrt{(-9)^2} = 9$</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="4783e3e5-2ee4-493f-b5a6-f94b03b255c7">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf5">
+                                Neliöjuuri
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="pf5" class="collapse">
+                        <p> 
+                            Tarkastele edellisen tehtävän vastauksiasi ja päättele niiden avulla, mikä ehto luvun $c$ pitää toteuttaa, jotta
+                        </p>
+                        <ol class="a">
+                            <li> $\sqrt{c^2} = c$</li>
+                            <li> $\sqrt{c^2} = -c$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#pf5_v">
+                                Vastaus
+                            </a>
+                        </h2>
+                        <div id="pf5_v" class="collapse">
+                            <ol class="a">
+                                <li> $c \geq 0$</li>
+                                <li> $c < 0$</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl3">
+                    Toisen asteen yhtälö
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku4kpl3" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Kun tutkitaan, missä kohdassa toisen asteen polynomifunktio saa tietyn arvon, päädytään toisen asteen yhtälöön. Esimerkiksi jos halutaan tietää, missä kohdassa funktio $f(x) = x^2 - 4x + 3$ saa arvon $3$, päädytään tutkimaan yhtälöä
+                    $$
+                    f(x) = 3
+                    $$
+                    eli yhtälöä
+                    $$
+                    x^2 - 4x + 3 = 3.
+                    $$
+                    Tämä yhtälö voidaan ratkaista graafisesti piirtämällä funktion $f(x) = x^2 - 4x + 3$ kuvaaja koordinaatistoon ja katsomalla, mitkä kuvaajan pisteet ovat korkeudella 3:
+                    <br>
+                    <img src="/kurssit/mab2/kuvat/MAB2kuva037.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Piirroksesta nähdään, että kuvaajan piste on korkeudella 3 kohdissa $x = 0$ ja $x = 4$. Yhtälö siis toteutuu, jos ja vain jos $x = 0$ tai $x = 4$. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="3a7c63ec-58ac-4485-9171-18fd0542b788">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste11">
+                                Toisen asteen yhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste11" class="collapse">
+                        <p> 
+                            Tehtävänä on ratkaista toisen asteen yhtälö
+                            $$
+                            -x^2 + 4x + 1 = 5
+                            $$
+                            graafisesti samaan tapaan kuin edellisessä esimerkissä.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Piirrä koordinaatistoon funktion $f(x) = -x^2 + 4x + 1$ kuvaaja ja tutki, missä kohdassa kuvaajan pisteet ovat korkeudella 5.
+                            </li>
+                            <li>  
+                                Kuinka monta ratkaisua yhtälöllä on? Luettele kaikki ratkaisut.
+                            </li>
+                            <li>
+                                Tarkista jokainen ratkaisu sijoittamalla se alkuperäisen yhtälön vasemmalle puolelle. Saatko tulokseksi yhtälön oikean puolen eli luvun 5?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste11_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste11_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kuva: <br>
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva038.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li>  
+                                    Yhtälöllä on tasan yksi ratkaisu $x = 2$.
+                                </li>
+                                <li> 
+                                    Yhtälön vasen puoli:
+                                    \begin{align*}
+                                    -2^2 + 4 \cdot 2 + 1 &= -4 + 8 + 1 \\
+                                    &= 5.
+                                    \end{align*}
+                                    Tulos on sama kuin yhtälön oikea puoli, joten $x = 2$ on todella yhtälön ratkaisu.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Toisen asteen yhtälöitä ovat sellaiset yhtälöt, jotka voidaan muokata muotoon
+                    $$ax^2 + bx + c = 0,$$
+                    missä $a \neq 0$. Tällaisen yhtälön ratkaisut ovat samat kuin toisen asteen polynomifunktion 
+                    $$
+                    f(x) = ax^2 + bx + c
+                    $$
+                    nollakohdat.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="1ed5b9c8-d02a-4835-b631-a01309dfe532">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste11b">
+                                Funktion nollakohdat
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste11b" class="collapse">
+                        <p> 
+                            Keksi esimerkki toisen asteen polynomifunktiosta, joka on muotoa
+                            $$
+                            f(x) = ax^2 + c
+                            $$
+                            ja jolla 
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                on kaksi nollakohtaa
+                            </li>
+                            <li>  
+                                on tasan yksi nollakohta
+                            </li>
+                            <li>
+                                ei ole yhtään nollakohtaa.
+                            </li>
+                        </ol>
+                        <p>
+                            Piirrä myös funktioiden kuvaajat.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste11b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste11b_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Esimerkiksi funktio 
+                                    $$f(x) = x^2 - 1$$
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva039.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li>  
+                                    Esimerkiksi funktio 
+                                    $$f(x) = x^2$$
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva040.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li> 
+                                    Esimerkiksi funktio 
+                                    $$f(x) = x^2 + 1$$
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva041.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Toisen asteen yhtälöiden ratkaisemiseen on onnistuttu kehittämään laskumenetelmä, jolla löydetään minkä tahansa toisen asteen yhtälön kaikkien ratkaisujen tarkat arvot. Selitys sille, miksi menetelmä toimii, löytyy <a href="http://kisallioppiminen.fi/kurssit/maa2/luku3/">MAA2-kurssin</a> kappaleesta Toisen asteen yhtälö. Menetelmä itsessään on seuraava:
+                </p>
+
+                <div class="theorem" id="TOISEN ASTEEN YHTÄLÖN RATKAISUKAAVA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Toisen asteen yhtälön 
+                        $$ax^2 + bx + c = 0$$
+                        ratkaisut saadaan kaavalla
+                        $$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}.$$
+                        Jos juurrettava on negatiivinen eli $b^2-4ac < 0$, ei yhtälöllä ole ratkaisuja.
+                    </p>
+                </div>
+
+                <p>
+                    Havainnollistetaan ratkaisukaavan käyttöä yhtälön
+                    $$
+                    3x + 10 = x^2 - 8
+                    $$
+                    avulla. Kaavan käytössä on seuraavat vaiheet:
+                </p>
+                <ul>
+                    <li>
+                        Muokataan yhtälö perusmuotoon $ax^2 + bx + c = 0$:
+                        \begin{align*}
+                        3x + 10 &= x^2 - 8 \qquad | {}+ 8 - x^2\\[1mm]
+                        3x + 18 - x^2 &= 0 \\[1mm]
+                        -x^2 + 3x + 18 &= 0
+                        \end{align*}
+                    </li>
+                    <li>
+                        Tunnistetaan kertoimet $a$ ja $b$ sekä vakio $c$:
+                        \begin{align*}
+                        \textcolor{red}{-}x^2 + \textcolor{blue}{3}x + \textcolor{magenta}{18} &= 0 \\
+                        \textcolor{red}{a}x^2 + \textcolor{blue}{b}x + \textcolor{magenta}{c} &= 0
+                        \end{align*}
+                        Tässä $a = -1$, $b = 3$ ja $c = 18$.
+                    </li>
+                    <li>
+                        Sijoitetaan luvut omille paikoilleen ratkaisukaavaan ja sievennetään:
+                        \begin{align*}
+                        x &= \frac{-\textcolor{blue}{b} \pm \sqrt{\textcolor{blue}{b}^2-4\textcolor{red}{a}\textcolor{magenta}{c} }}{2\textcolor{red}{a} } \\[2mm]
+                        &= \frac{-\textcolor{blue}{3} \pm \sqrt{\textcolor{blue}{3}^2-4 \cdot (\textcolor{red}{-1}) \cdot \textcolor{magenta}{18} }}{2 \cdot (\textcolor{red}{-1}) }\\[2mm]
+                        &= \frac{-3 \pm \sqrt{9 + 72}}{-2} \\[2mm]
+                        &= \frac{-3 \pm \sqrt{81}}{-2} \\[2mm]
+                        &= \frac{-3 \pm 9}{-2}
+                        \end{align*} 
+                    </li>
+                    <li>
+                        Tulkitaan tuloksesta ratkaisujen lukumäärä ja ilmoitetaan ratkaisut. Nyt ratkaisuja on kaksi kappaletta. Ratkaisut ovat
+                        \begin{align*}
+                        x_1 &= \frac{-3+9}{-2} = \dfrac{6}{-2} = -3 \\[2mm]
+                        x_2 &= \frac{-3-9}{-2} = \dfrac{-12}{-2} = 6
+                        \end{align*}
+                        Yhtälö siis toteutuu, jos ja vain jos $x = -3$ tai $x = 6$.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="2279d9b5-4a54-4b7d-ab30-ddfc00aa8bf8">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste21d">
+                                Toisen asteen yhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste21d" class="collapse">
+                        <p> 
+                            Ratkaise seuraavat toisen asteen yhtälöt ratkaisukaavan avulla:
+                        </p>
+                        <ol class="a">
+                            <li> $3x^2 - 7x + 4 = 0$ </li>
+                            <li> $x^2 - x - 2 = 0$</li>
+                            <li> $4x^2 + 1 = 4x$</li>
+                            <li> $4x^2 - 4x + 6 = x^2 - 3x + 5$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste21d_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste21d_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = \dfrac{4}{3} \ $ tai $\ x = 1$</li>
+                                <li> $x = -1 \ $ tai $\ x = 2$ </li>
+                                <li> $x = \dfrac{1}{2}$ </li>
+                                <li> 
+                                    Yhtälöllä ei ole ratkaisuja, koska neliöjuurimerkin alle juurrettavaksi tulee negatiivinen luku $-11$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Toisen asteen yhtälön  
+                    $$ax^2 + bx + c = 0$$ 
+                    ratkaisujen lukumäärä riippuu siitä, minkä merkkinen juurrettava ratkaisukaavaan tulee. Jos 
+                </p>
+                    <ul>
+                        <li>
+                            juurrettava on positiivinen, ratkaisuja on kaksi
+                        </li>
+                        <li>
+                            juurrettava on nolla, ratkaisuja on yksi
+                        </li>
+                        <li>
+                            juurrettava on negatiivinen, ratkaisuja ei ole.
+                        </li>
+                    </ul>
+                <p>
+                  Koska toisen asteen polynomifunktion kuvaaja on aina paraabeli, graafisestikin voidaan päätellä, että muita vaihtoehtoja ei ole:
+                </p>
+                <img src="/kurssit/mab2/kuvat/MAB2kuva042.png" max-width: 100%; width: auto; height: auto;/>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="9c45aa1f-a8df-4f52-b886-f3965e81f20e">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste21e">
+                                Toisen asteen yhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste21e" class="collapse">
+                        <p> 
+                            Tässä tehtävässä tutkitaan kolmella erilaisella tavalla, kuinka monta ratkaisua on yhtälöllä 
+                            $$
+                            4x^2 - 28x + 49 = 0.
+                            $$
+                            Selvitä ratkaisujen lukumäärä 
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                tutkimalla, onko ratkaisukaavassa juurrettava positiivinen, nolla vai negatiivinen 
+                            </li>
+                            <li> käyttämällä ratkaisukaavaa ja määrittämällä ratkaisut sen avulla </li>
+                            <li> graafisesti piirtämällä sopivan polynomifunktion kuvaaja. </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste21e_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste21e_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Juurrettava on nolla, joten ratkaisuja on yksi:
+                                    $$
+                                    b^2 - 4ac = (-28^2) - 4 \cdot 4 \cdot 49 = 0.
+                                    $$
+                                </li>
+                                <li> 
+                                    Ratkaisukaavan avulla saadaan: 
+                                    \begin{align*}
+                                    x &= \dfrac{-(-28) \pm \sqrt{(-28)^2 - 4 \cdot 4 \cdot 49} }{2 \cdot 4} \\[2mm]
+                                    &= \dfrac{28 \pm \sqrt{0} }{8} \\[2mm]
+                                    &= \dfrac{28}{8} = \dfrac{7}{2}
+                                    \end{align*}
+                                    eli ratkaisuja on yksi.
+                                </li>
+                                <li> 
+                                    Polynomifunktiolla $f(x) = 4x^2 - 28x + 49$ on tasan yksi nollakohta, joten yhtälöllä $4x^2 - 28x + 49 = 0$ on tasan yksi ratkaisu:
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva042.png" max-width: 100%; width: auto; height: auto;/> 
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jotta toisen asteen yhtälö saadaan muokattua perusmuotoon, täytyy joissakin tapauksissa laskea polynomien tulo. Palautetaan seuraavaksi mieleen, miten polynomeja kerrotaan keskenään.
+                </p>
+                <p>
+                    Kun polynomi kerrotaan luvulla, kerrotaan jokainen termi erikseen:
+                    $$
+                    \textcolor{blue}{2}(3x-4) = \textcolor{blue}{2} \cdot 3x - \textcolor{blue}{2}\cdot 4 = 6x - 8.
+                    $$
+                    Samalla tavalla toimiaan myös silloin, kun polynomi kerrotaan monomilla:
+                    $$
+                    \textcolor{blue}{2x}(3x-4) = \textcolor{blue}{2x} \cdot 3x - \textcolor{blue}{2x}\cdot 4 = 6x^2 - 8x.
+                    $$
+                </p>
+                <p>
+                    Kahden polynomin tulo lasketaan vaiheittain: otetaan ensimmäisen tulon tekijän
+                </p>
+                    <ul>
+                        <li>
+                            ensimmäinen termi ja kerrotaan sillä toisen tulon tekijän jokainen termi erikseen
+                        </li>
+                        <li>
+                            toinen termi ja kerrotaan sillä toisen tulon tekijän jokainen termi erikseen
+                        </li>
+                        <li>
+                            kolmas termi ja kerrotaan sillä toisen tulon tekijän jokainen termi erikseen.
+                        </li>
+                    </ul>
+                <p>
+                    Näin jatketaan, kunnes ensimmäisen tulon tekijän kaikki termit on käytetty. Esimerkiksi tulossa
+                    $$(2x-5)(3x-4)$$
+                    kerrotaan jälkimmäisen polynomin kaikki termit ensin monomilla $2x$ ja sen jälkeen monomilla $-5$:
+                    \begin{align*}
+                    (\textcolor{blue}{2x}\textcolor{red}{-5})(3x-4) &= \textcolor{blue}{2x} \cdot 3x - \textcolor{blue}{2x} \cdot 4 + (\textcolor{red}{-5}) \cdot 3x + (\textcolor{red}{-5}) \cdot (-4)  \\
+                    &= \textcolor{blue}{6x^2 - 8x}\textcolor{red}{-15x + 20} \\
+                    &= 6x^2 - 23x + 20
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="35102b66-4369-43f5-a248-fdc045d06e36">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#1aste16">
+                                Polynomien tulo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="1aste16" class="collapse">
+                        <p> Laske seuraavat tulot:
+                        </p>
+                        <ol class="a">
+                            <li> $x(7-5x)$</li>
+                            <li> $(x+2)(8x-1)$ </li>
+                            <li> $(4x+3)(4x-3)$ </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#1aste16_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="1aste16_v" class="collapse">
+                            <ol class="a">
+                                <li> $x(7-5x) = 7x-5x^2$ </li>
+                                <li> $(x+2)(8x-1) = 8x^2 + 15x - 2$ </li>
+                                <li> $(4x+3)(4x-3) = 16x^2 - 9$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Polynomien potenssit voidaan laskea muuttamalla ne ensin tulomuotoon. Esimerkiksi 
+                    \begin{align*}
+                    (x-5)^2 &= (x-5)(x-5) \\[1mm]
+                    &= x^2 - 5x - 5x + 25 \\[1mm]
+                    &= x^2 - 10x + 25.
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="ad21a01b-e8bf-4efd-a601-111340609b4b">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#1aste16b">
+                                Polynomien potenssi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="1aste16b" class="collapse">
+                        <p> 
+                            Laske seuraavat potenssit. Aloita kirjoittamalla lauseke tulomuodossa.
+                        </p>
+                        <ol class="a">
+                            <li> $(x+3)^2$</li>
+                            <li> $(2x-1)^2$ </li>
+                            <li> $(7-x)^2$ </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#1aste16b_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="1aste16b_v" class="collapse">
+                            <ol class="a">
+                                <li> $(x+3)^2 = x^2 + 6x + 9$</li>
+                                <li> $(2x-1)^2 = 4x^2 - 4x + 1$ </li>
+                                <li> $(7-x)^2 = 49 - 14x + x^2$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kaikki toisen asteen yhtälöt saa ratkaistua ratkaisukaavan avulla, kunhan ne aluksi muokkaa perusmuotoon $ax^2 + bx + c = 0$. Esimerkiksi yhtälön 
+                    $$x(2x-3)-3x(1-x) = -1$$ 
+                    tapauksessa ensin on laskettava kertolaskut:
+                    \begin{align*}
+                    x(2x-3)-3x(1-x) &= -1 \\
+                    2x^2-3x-3x+3x^2 &= -1 \\
+                    5x^2-6x + 1 &= 0\\
+                    \end{align*}
+                    Perusmuodosta voidaan tunnistaa, että $a = 5$, $b = -6$ ja $c = 1$. Tarkasteltu yhtälö siis toteutuu, jos ja vain jos
+                    \begin{align*}
+                    x &= \frac{-(-6) \pm \sqrt{(-6)^2-4\cdot 5 \cdot 1}}{2\cdot 5} \\[2mm]
+                    &= \frac{6 \pm \sqrt{16}}{10} = \frac{6 \pm 4}{10}
+                    \end{align*}
+                    Yhtälöllä on siis kaksi ratkaisua:
+                    <!-- eli $x = 1$ tai $x = \dfrac{1}{5}$. -->
+                    $$x_1 =  \frac{10}{10} = 1 \quad \text{ ja } \quad x_2 = \frac{2}{10} = \frac{1}{5}.$$
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b4425e72-1d28-4f3c-a3bf-0e639da8e1d0">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste21">
+                                Toisen asteen yhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste21" class="collapse">
+                        <p> 
+                            Ratkaise seuraavat toisen asteen yhtälöt. Muuta yhtälöt ensin perusmuotoon $ax^2+bx+c = 0$ ja tunnista, mitkä luvut vastaavat kirjaimia $a$, $b$ ja $c$. Huomioi myös etumerkit.
+                        </p>
+                        <ol class="a">
+                            <li> $7(x^2 + 1) = 50x$ </li>
+                            <li> $(-3x-1)(x-2) = 4$</li>
+                            <li> $(3x-1)(x+2) = 6x - 2$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste21_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste21_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = \dfrac{1}{7} \ $ tai $\ x = 7$</li>
+                                <li> $x = \dfrac{2}{3} \ $ tai $\ x = 1$ </li>
+                                <li> $x = 0 \ $ tai $\ x = \dfrac{1}{3}$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- <div class="teoria">
+                <p>
+                    Kaikki sellaiset toisen asteen yhtälöt, joissa esiintyy vain tuntemattoman toinen potenssi, saadaan ratkaistua samaan tapaan kuin edellä. Ensin yhtälö täytyy vain muuttaa muotoon $x^2 = a$. Tarkastellaan esimerkiksi yhtälöä $$4x^2 - 3 = 0.$$
+                    Kun sen molemmille puolille lisätään luku $3$, päädytään yhtälöön
+                    $$4x^2 = 3.$$
+                    Tämä yhtälön molemmat puolet voidaan jakaa luvulla $4$, jolloin saadaan yhtälö
+                    $$x^2 = \frac{3}{4}.$$
+                    Tämä yhtälö toteutuu, jos ja vain jos
+                    $$x = \sqrt{\frac{3}{4}} \quad \text{ tai } \quad x = -\sqrt{\frac{3}{4}}.$$
+                </p>
+            </div> -->
+
+
+            <div class="teoria">
+                <p>
+                    Toisen asteen yhtälö, jonka perusmuodossa kerroin $b = 0$ tai vakio $c = 0$, on nimeltään <em>vaillinainen toisen asteen yhtälö</em>. Tällaiset yhtälöt saadaan ratkaistua myös ilman ratkaisukaavaa. Jos $b = 0$ eli yhtälö on perusmuodossa
+                    $$ax^2 + c = 0,$$ 
+                    saadaan yhtälö muokattua muotoon 
+                    $$x^2 = \text{ vakio}$$ 
+                    ja ratkaistua neliöjuuren avulla. Esimerkiksi yhtälöä $3x^2 - 21 = 0$ voidaan muokata seuraavasti:
+                    \begin{align*}
+                    3x^2 - 21 &= 0 &\quad &\mid + 21 \\
+                    3x^2 &= 21 &\quad &\mid \ : 3 \\
+                    x^2 &= 7
+                    \end{align*}
+                    Tiedetään, että tällä yhtälöllä on kaksi ratkaisua. Ensinnäkin $\sqrt{7}$ toteuttaa yhtälön $x^2 = 7$, sillä neliöjuuren määritelmän mukaan $\sqrt{7}$ tarkoittaa sitä epänegatiivista lukua, jonka toinen potenssi on $7$. Lisäksi myös $-\sqrt{7}$ toteuttaa yhtälön $x^2 = 7$:
+                    <br>
+                    <img src="/kurssit/maa2/kuvat/TAk20.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Yhtälön ratkaisu näyttää siis välivaiheineen tältä:
+                    \begin{align*}
+                    3x^2 - 21 &= 0 \quad &\mid + 21 \\[1mm]
+                    3x^2 &= 21 \quad &\mid \ : 3 \\[1mm]
+                    x^2 &= 7 \\[1mm]
+                    x = \sqrt{7} \ \ &\text{tai } \ x = -\sqrt{7}
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8bf40060-4808-4e9d-a445-daebcc1f4486">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste13">
+                                Vaillinainen toisen asteen yhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste13" class="collapse">
+                        <p> 
+                            Ratkaise seuraavat yhtälöt muuttamalla ne ensin muotoon 
+                            $$x^2 = \text{ vakio}$$ 
+                            ja päättelemällä ratkaisut sen jälkeen.
+                        </p>
+                        <ol class="a">
+                            <li> $2x^2 = 50$</li>
+                            <li> $7x^2 - 14 = 0$ </li>
+                            <li> $3x^2 - 16 = 2x^2 + 20$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste13_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste13_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = -5 \ $ tai $\ x = 5$</li>
+                                <li> $x = \sqrt{2} \ $ tai $\ x = -\sqrt{2}$ </li>
+                                <li> $x = 6 \ $ tai $\ x = -6$</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl3a">
+                    Tulon nollasääntö
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku4kpl3a" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa tutustutaan tulon nollasääntöön. Sen avulla voidaan ratkaista sellaisia polynomiyhtälöitä, joissa yhtälön toisella puolella on polynomien tulo ja yhtälön toisella puolella $0$. Yksi tällainen yhtälö on esimerkiksi
+                    $$
+                    (x-2)(3x-4) = 0.
+                    $$
+                    Aloitetaan tutkimalla tilannetta, jossa tulon tekijänä on nolla.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="7ba3d312-0eb3-4ee4-9615-096cd9d77da6">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste14">
+                                Nolla tulon tekijänä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste14" class="collapse">
+                        <p>
+                            Laske tai päättele seuraavien tulojen arvo:
+                        </p>
+                        <ol class="a">
+                            <li> $2\cdot 5 \cdot 7 \cdot 0$</li>
+                            <li> $8 \cdot 13 \cdot 53 \cdot 0 \cdot 71$ </li>
+                            <li> $661 \cdot 433 \cdot 811 \cdot 0 \cdot 79 \cdot 227$</li>
+                        </ol>
+                        <p>
+                            Selitä omin sanoin, miksi tämän tehtävän voi ratkaista ilman laskuja.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste14_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste14_v" class="collapse">
+                            <p>
+                                Kaikkien tulojen arvo on nolla.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8585d707-f187-4ae8-aba5-10af4c93995b">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste15">
+                                Nolla tulon arvona
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste15" class="collapse">
+                        <p> 
+                            Tiedetään, että lukujen $a$ ja $b$ tulo on nolla eli $ab = 0$. Mitkä seuraavista väitteistä ovat tosia? Mitkä ovat epätosia? Perustele omin sanoin. 
+                        </p>
+                        <ol class="a">
+                            <li> On mahdollista, että $a \neq 0$ ja $b \neq 0$.</li>
+                            <li> Voidaan olla varmoja, että $a = 0$ ja $b = 0$.</li>
+                            <li> Voidaan olla varmoja, että $a = 0$ tai $b = 0$. </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste15_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste15_v" class="collapse">
+                            <ol class="a">
+                                <li> Väite on epätosi. </li>
+                                <li> Väite on epätosi. Esimerkiksi jos $a = 0$ ja $b = 1$, niin $ab = 0$.  </li>
+                                <li> Väite on tosi. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän pohdinnat johtavat seuraavaan teoreemaan eli tulon nollasääntöön. 
+                    Sen mukaan reaalilukujen tulo on nolla, jos ja vain jos ainakin yksi tulon tekijöistä on nolla.
+                </p>
+
+                <div class="theorem">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        $xy = 0$, jos ja vain jos $x = 0$ tai $y = 0$.
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Koska teoreeman tulos on kaksisuuntainen (jos ja vain jos), perustellaan se kahdessa osassa.
+                        <ul>
+                            <li> Oletetaan aluksi, että $xy = 0$. On kaksi mahdollisuutta: joko $x = 0$ tai $x \neq 0$. Tutkitaan molemmat:
+                                <ul>
+                                    <li> Jos $x = 0$, niin väite "$x = 0$ tai $y = 0$" on totta.</li>
+                                    <li> Jos $x \neq 0$, niin yhtälön $xy = 0$ molemmat puolet voidaan jakaa luvulla $x$. Näin päädytään yhtälöön $y = 0$. Siis väite "$x = 0$ tai $y = 0$" on totta.</li>
+                                </ul>
+                                Näin on näytetty, että jos $xy = 0$, niin $x = 0$ tai $y = 0$.
+                            <li> Oletetaan, että $x = 0$ tai $y = 0$. Tutkitaan molemmat mahdollisuudet:
+                                <ul>
+                                    <li> Jos $x = 0$, niin $xy = 0\cdot y = 0$. Siis $xy = 0$.</li>
+                                    <li> Jos $y = 0$, niin $xy = x \cdot 0 = 0$. Siis $xy = 0$.</li>
+                                </ul>
+                                Näin on näytetty, että jos $x = 0$ tai $y = 0$, niin $xy = 0$.
+                            </li>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <p>
+                    Tulon nollasääntöä voidaan käyttää tietynlaisten yhtälöiden ratkaisemiseen. Esimerkiksi yhtälö
+                    $$(x-2)(3x-4) = 0$$
+                    toteutuu, jos ja vain jos ainakin toinen sen vasemman puolen tekijöistä on nolla:
+                    \begin{align*}
+                    x-2 = 0 \quad &\text{ tai } \quad 3x-4 = 0 \\[1mm]
+                    x = 2 \quad &\text{ tai } \quad 3x = 4 \\[1mm]
+                    x = 2 \quad &\text{ tai } \quad x = \frac{4}{3}
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="96ce9788-8782-412d-a8fb-1aa11be78793">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste16">
+                                Tulon nollasääntö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste16" class="collapse">
+                        <p> Ratkaise seuraavat yhtälöt tulon nollasäännön avulla:
+                        </p>
+                        <ol class="a">
+                            <li> $(x-1)(x+5) = 0$</li>
+                            <li> $(x+7)(4x-32) = 0$ </li>
+                            <li> $(6-2x)(2x-1) = 0$. </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste16_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste16_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = 1 \ $ tai $\ x = -5$ </li>
+                                <li> $x = -7 \ $ tai $\ x = 8$ </li>
+                                <li> $x = 3 \ $ tai $\ x = \dfrac{1}{2}$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Tulon nollasäännön avulla saadaan ratkaistua kaikki vaillinaiset toisen asteen yhtälöt, jotka ovat muotoa
+                    $$ax^2 + bx = 0.$$ 
+                    Tällaisten yhtälöiden vasemmalta puolelta voidaan erottaa yhteinen tekijä $x$, minkä jälkeen yhtälön vasen puoli voidaan kirjoittaa tulona. Esimerkiksi yhtälö
+                    $$x^2-3x = 0$$
+                    voidaan kirjoittaa muodossa
+                    $$x(x-3) = 0.$$
+                    Tulon nollasäännön mukaan tämä yhtälö toteutuu, jos ja vain jos
+                    $$x = 0 \quad \text{ tai } \quad x - 3 = 0$$
+                    eli
+                    $$x = 0 \quad \text{ tai } \quad x = 3.$$
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="fda430a5-94f7-4e3f-83a2-18691ff11db9">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste17">
+                                Tulon nollasääntö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste17" class="collapse">
+                        <p>
+                            Erota yhteinen tekijä $x$ ja ratkaise sen jälkeen tulon nollasäännön avulla:
+                        </p>
+                        <ol class="a">
+                            <li> $x^2-4x = 0$</li>
+                            <li> $3x^2+15x = 0$ </li>
+                            <li> $2x^2 - x = 0$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste17_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste17_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = 0 \ $ tai $\ x = 4$</li>
+                                <li> $x = 0 \ $ tai $\ x = -5$ </li>
+                                <li> $x = 0 \ $ tai $\ x = \dfrac{1}{2}$</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl3a">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl5">
+                    Sovelluksia
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku4kpl5" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Materiaalin edellisissä luvuissa on ratkaistu joitakin käytännön ongelmia ensimmäisen asteen yhtälön, yhtälöparin ja verrantoyhtälön avulla. Joskus ongelman mallintaminen matemaattisesti johtaa toisen asteen yhtälöön. Seuraavassa tehtävässä on yksi esimerkki tällaisesta tilanteesta.
+                </p>
+            </div>
+            
+            <div class="tehtavat">
+                <div class="tehtava" id="0f1fc2ec-c0f3-4f19-b2e7-945ad8a18b77">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t420">
+                                Yhtälö sovellustehtävässä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t420" class="collapse">
+                        <p>
+                            Rivitalon pihalle rakennetaan suorakulmion muotoinen uima-allas, jonka pituus on 3,0 m ja leveys 2,5 m. Allas reunustetaan laatoituksella alla olevan kuvan mukaisesti. Laattoja saatiin tarjouksesta 20 neliömetrin verran. Tehtävänä on selvittää, kuinka leveä laatoituksesta voidaan tehdä. Kuvassa laatoituksen leveyttä on merkitty kirjaimella $x$.
+                        </p>
+                        <img src="/kurssit/mab2/kuvat/MAB2kuva044.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class="a">
+                            <li>
+                                Mikä on altaan ja laatoituksen yhteenlaskettu pituus? Entä leveys? Muodosta kummallekin sopiva lauseke.
+                            </li>
+                            <li>
+                                Mikä on altaan ja laatoituksen kokonaispinta-ala? Muodosta lauseke a-kohdan avulla.
+                            </li>
+                            <li>
+                                Laske altaan pinta-ala. 
+                            </li>
+                            <li>
+                                Muodosta lauseke laatoituksen pinta-alalle edellisten kohtien avulla.
+                            </li>
+                            <li>
+                                Muodosta yhtälö, josta voit ratkaista laatoituksen leveyden. Kuinka leveä laatoituksesta voidaan tehdä?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t420_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t420_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                                Pituus on $3 + 2x$ ja leveys on $2{,}5 + 2x$.
+                            </li>
+                            <li>
+                                Altaan ja laatoituksen kokonaispinta-ala on pituuden ja leveyden tulo
+                                $$
+                                7{,}5 + 11x + 4x^2
+                                $$
+                            </li>
+                            <li>
+                                Altaan pinta-ala on $$3\cdot 2{,}5 = 7{,}5$$ neliömetriä.
+                            </li>
+                            <li>
+                                Laatoituksen pinta-ala saadaan b- ja c-kohtien erotuksena:
+                                $$
+                                11x + 4x^2
+                                $$
+                            </li>
+                            <li>
+                                Yhtälö on 
+                                $$
+                                11x + 4x^2 = 20.
+                                $$
+                                Kun se muutetaan perusmuotoon ja ratkaistaan, saadaan ratkaisut $x_1 = -4$ ja $x_2 = 1{,}25$. Laatoituksen leveys ei voi olla negatiivinen, joten ratkaisu $x_1$ ei kelpaa. Siis laatoituksen leveys on 1,25 metriä.
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Yhtälön muodostaminen ei aina ole välttämätöntä tai luontevaa. Seuraavassa tehtävässä muodostetaan sen sijaan ilmiötä kuvaava funktio ja tutkitaan sen ominaisuuksia graafisesti.
+                </p>
+            </div>
+            
+            <div class="tehtavat">
+                <div class="tehtava" id="8218f649-99d7-427e-a218-5e9a7fe01967">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t421">
+                                Funktio sovellustehtävässä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t421" class="collapse">
+                        <p>
+                            Kesätapahtumaan suunnitellaan kahvin ja virvokkeiden myyntiä. Edellisten vuosien perusteella tiedetään, että jos kahvikupillisen hinta on 1,5 euroa, kupillisia menee kaupaksi noin 200 kappaletta. Arvoidaan, että jokainen 10 sentin hinnan korotus vähentää menekkiä aina viidellä kupillisella. Tehtävänä on selvittää, mikä kannattaa kahvikupillisen hinnaksi asettaa, jotta myyntitulo on mahdollisimman hyvä.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Muodosta lausekkeet kahvikupin hinnalle ja menekille täydentämällä seuraava päättely:
+                                <ul>
+                                    <li>
+                                        Jos hintaa korotetaan yhdellä kymmensenttisellä, uusi hinta on $\ldots$ ja menekki on $\ldots$
+                                    </li>
+                                    <li>
+                                        Jos hintaa korotetaan kahdella kymmensenttisellä, uusi hinta on $\ldots$ ja menekki on $\ldots$
+                                    </li>
+                                    <li>
+                                        Jos hintaa korotetaan kolmella kymmensenttisellä, uusi hinta on $\ldots$ ja menekki on $\ldots$
+                                    </li>
+                                    <li>
+                                        Jos hintaa korotetaan $x$ kymmensenttisellä, uusi hinta on $\ldots$ ja menekki on $\ldots$
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Muodosta lauseke funktiolle $f(x)$, joka ilmaisee myynnistä saatavan rahamäärän, kun hintaa on korotettu $x$ kymmensenttisellä.
+                            </li>
+                            <li>
+                                Piirrä funktion $f(x)$ kuvaaja esimerkiksi Geogebralla ja tutki graafisesti, mikä kannattaa kahvikupillisen hinnaksi asettaa, jotta myyntitulo olisi mahdollisimman hyvä. Perustele vastauksesi omin sanoin ja kuvan avulla. 
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t421_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t421_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    <ul>
+                                        <li>
+                                            Jos hintaa korotetaan yhdellä kymmensenttisellä, uusi hinta on $1{,}5 + 0{,}1$ euroa ja menekki on $200 - 5$ kupillista.
+                                        </li>
+                                        <li>
+                                            Jos hintaa korotetaan kahdella kymmensenttisellä, uusi hinta on $1{,}5 + \textcolor{blue}{2} \cdot 0{,}1$ euroa ja menekki on $200 - \textcolor{blue}{2}\cdot 5$ kupillista.
+                                        </li>
+                                        <li>
+                                            Jos hintaa korotetaan kolmella kymmensenttisellä, uusi hinta on $1{,}5 + \textcolor{blue}{3} \cdot 0{,}1$ euroa ja menekki on $200 - \textcolor{blue}{3}\cdot 5$ kupillista.
+                                        </li>
+                                        <li>
+                                            Jos hintaa korotetaan $x$ kymmensenttisellä, uusi hinta on $1{,}5 + \textcolor{blue}{x} \cdot 0{,}1$ euroa ja menekki on $200 - \textcolor{blue}{x}\cdot 5$ kupillista.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Myyntitulon ilmaisee funktio
+                                    \begin{align*}
+                                    f(x) &= (1{,}5 + 0{,}1x)(200 - 5x) \\[1mm]
+                                    &= 300 + 12{,}5x - 0{,}5x^2
+                                    \end{align*}
+                                </li>
+                                <li>
+                                    Funktion $f(x)$ kuvaaja:
+                                    <br>
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva045.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Kuvaajasta nähdään, että myyntitulo on suurimmillaan, kun korotus on noin $12{,}5 \cdot 0{,}1 = 1{,}25$ euroa. Kahvikupillisen hinta on tällöin n. $1{,}5 + 1{,}25 = 2{,}75$ euroa. Tämä on käytännön myyntiä ajatellen melko epäkäytännöllinen hinta (vaihtorahojen kannalta), joten korotukseksi voi harkita myös $10 \cdot 0{,}1 = 1$ euroa. Tällöin kahvikupillisen hinta on $1{,}5 + 1{,}0 = 2{,}5$ euroa, mutta myyntitulo on vain noin kolme euroa pienempi.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Seuraavassa tehtävässä yhdistyvät verrannollisuus ja toisen asteen yhtälön ratkaiseminen.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8ad68967-e561-4c62-8f27-f878c487a4f1">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t422">
+                                Yhtälö sovellustehtävässä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t422" class="collapse">
+                        <p>
+                            Poliisin tekninen tutkinta mittasi onnettomuuspaikalta 42 metrin pituiset jarrutusjäljet. Testissä vastaava auto pysähtyi 40 km/h nopeudesta 7 metrin matkalla. Tehtävänä on selvittää, millä nopeudella onnettomuusauto liikkui ennen jarrutuksen alkamista. Tiedetään, että jarrutusmatkan pituus on suoraan verrannollinen nopeuden neliöön eli toiseen potenssiin.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Kokoa tehtävässä annetut tiedot sopivaan taulukkoon.
+                                <br>
+                                Vinkki: kertaa tarvittaessa tehtävä 3.9.
+                            </li>
+                            <li>
+                                Muodosta taulukon avulla sopiva verrantoyhtälö ja ratkaise se. Mikä oli auton nopeus ennen jarrutuksen alkamista?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t422_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t422_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width = 90%">
+                                            <tr>
+                                                <th>  </th>
+                                                <th> Jarrutusmatka (m) </th>
+                                                <th> Nopeus<sup>2</sup> (km<sup>2</sup>/h<sup>2</sup>) </th>
+                                            </tr>
+                                            <tr>
+                                                <th> Onnettomuus </th>
+                                                <td> $42$ </td>
+                                                <td> $x^2$ </td>
+                                            </tr>
+                                            <tr>
+                                                <th> Testi </th>
+                                                <td> $7$ </td>
+                                                <td> $40^2 = 1600$ </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    Verrantoyhtälö on 
+                                    $$
+                                    \dfrac{x^2}{1600} = \dfrac{42}{7}
+                                    $$
+                                    Ratkaisuksi saadaan
+                                    $$
+                                    x^2 = 9600
+                                    $$
+                                    eli 
+                                    $x = \sqrt{9600} \approx 98$ tai $x = -\sqrt{9600} \approx -98$. Negatiivinen vastaus voidaan rajata pois, koska kysymyksessä on nopeus. Siis auton nopeus ennen jarrutuksen alkamista oli noin 98 km/h.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl5">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAB2luku4-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="13eb8c29-c670-41a6-ad08-f51e3f8b430a">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t403">
+                            Toisen asteen polynomifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t403">
+                    <p>
+                        Moottoritielle suunnitellaan kaksikaistaista tunnelia, jonka poikkileikkaus vastaa funktion $f(x) = 6-0{,}25x^2$ kuvaajan ja $x$-akselin rajaamaa aluetta (pituuden yksikkönä metri).
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä funktion $f$ kuvaaja laskimella tai tietokoneella. </li>
+                        <li> Suomessa kuorma-auton suurin sallittu korkeus on 4,4 m ja leveys 2,6 m. Mahtuisiko kaksi tällaista kuorma-autoa ajamaan vierekkäin suunnitellun tunnelin läpi? </li>
+                        <li> Millaisen rajoituksen asettaisit tunnelin kautta kulkevien ajoneuvojen korkeudelle, jos suurin sallittu leveys on 2,6 metriä?</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t403_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t403_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Kuva: 
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva066.png" max-width: 100%; width: auto; height: auto;/>
+                                <br>
+                            </li>
+                            <li> Ei, sillä $f(2{,}6) = 4{,}31 < 4,{4}$. Tunnelin katto on seinän vieressä liian matalalla. </li>
+                            <li> Esimerkiksi enintään 4,0 m.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="7a0d6b53-812f-4916-8f3f-d591f49062dd">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t409">
+                            Toisen asteen polynomifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t409">
+                    <p>
+                        Määritä funktion $f$ nollakohdat ja päättele, millä muuttujan $x$ arvoilla funktion $f$ arvot ovat positiivisia, jos
+                    </p>
+                    <ol class="a">
+                        <li> $f(x) = x^2-x-2$ </li>
+                        <li> $f(x) = x^2-8x+16$ </li>
+                        <li> $f(x) = (x+2)(3-x)$ </li>
+                    </ol>
+                    <p>
+                        Tarkista vastauksesi piirtämällä funktion $f$ kuvaaja.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t409_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t409_v" class="collapse">
+                        <ol class="a">
+                            <li> Nollakohdat $x_1 = -1$ ja $x_2 = 2$. Arvot positiivisia, jos ja vain jos $x < -1$ tai $x > 2$. </li>
+                            <li> Nollakohta $x = 4$. Arvot positiivisia, jos ja vain jos $x \neq 4$. </li>
+                            <li> Nollakohdat $x_1 = -2$ ja $x_2 = 3$. Arvot positiivisia, jos ja vain jos $-2 < x < 3$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="e576a7fd-7601-4eb2-bb8a-b210e5f8dc38">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t410">
+                            Neliöjuuri
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t410">
+                    <p>
+                        Päättele seuraavien neliöjuurten arvo käyttämättä laskimen neliöjuurinappulaa.
+                    </p>
+                    <ol class="a">
+                        <li> $\sqrt{81}$ </li>
+                        <li> $\sqrt{16}$ </li>
+                        <li> $\sqrt{64}$ </li>
+                        <li> $\sqrt{25}$ </li>
+                    </ol>
+                    <p>
+                        Voit tarkistaa tulokset laskimella.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t410_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t410_v" class="collapse">
+                        <ol class="a">
+                            <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$. </li>
+                            <li> $\sqrt{16} = 4$, sillä $4 \geq 0$ ja $4^2 = 16$. </li>
+                            <li> $\sqrt{64} = 8$, sillä $8 \geq 0$ ja $8^2 = 64$. </li>
+                            <li> $\sqrt{25} = 5$, sillä $5 \geq 0$ ja $5^2 = 25$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="9fd954a5-f1d5-4358-9071-5a6a201992cc">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t402">
+                            Neliöjuuri yhtälön ratkaisuna
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t402">
+                    <p> 
+                        Ratkaise seuraavat yhtälöt muuttamalla ne ensin muotoon 
+                        $$x^2 = \text{ vakio}$$ 
+                        ja päättelemällä ratkaisut sen jälkeen.
+                    </p>
+                    <ol class="a">
+                        <li> $5x^2 - 100 = 0$</li>
+                        <li> $9x^2 - 4 = 0$</li>
+                        <li> $21 - 7x^2 = 0$</li>
+                        <li> $27 + 3x^2 = 0$</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t402_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t402_v" class="collapse">
+                        <ol class="a">
+                            <li> Yhtälö toteutuu, jos ja vain jos $x = \sqrt{20} = 2\sqrt{5}$ tai $x = -\sqrt{20} = -2\sqrt{5}$</li>
+                            <li> Yhtälö toteutuu, jos ja vain jos $x = \dfrac{2}{3}$ tai $x = -\dfrac{2}{3}$</li>
+                            <li> Yhtälö toteutuu, jos ja vain jos $x = \sqrt{3}$ tai $x = -\sqrt{3}$</li>
+                            <li> Ei ratkaisua, sillä yhtälön vasen puoli aina suurempi tai yhtä suuri kuin 27, sillä termi 3x^2 ei koskaan ole negatiivinen. Yhtälön vasen puoli ei siis koskaan saa arvoa nolla. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="e6479002-438e-41d9-8d74-db2a5071b997">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t411">
+                            Neliöjuuri yhtälön ratkaisuna
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t411">
+                    <p>
+                        Ratkaise seuraavat yhtälöt. Jos yhtälöllä ei ole yhtään ratkaisua, selitä omin sanoin, miksi näin on.
+                    </p>
+                    <ol class="a">
+                        <li> $2x^2-2 = 0$ </li>
+                        <li> $x^2+5 = 0$ </li>
+                        <li> $8-x^2 = 0$ </li>
+                        <li> $-4x^2 = 0$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t411_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t411_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = 1\ $ tai $\ x = -1$ </li>
+                            <li> Yhtälöllä ei ole ratkaisua, sillä toinen potenssi ei koskaan ole negatiivinen. Mikään luku ei siis toteuta yhtälöä $x^2 = -5$. </li>
+                            <li> $x = \sqrt{8}\ $ tai $\ x = -\sqrt{8}$ </li>
+                            <li> $x = 0$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="84edbce8-57cf-491d-a303-0c2f870b72bc">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t405">
+                            Polynomien tulo
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t405">
+                    <p>
+                        Sievennä seuraavat lausekkeet:
+                    </p>
+                    <ol class="a">
+                        <li> $(3x+1)(3x-1)$ </li>
+                        <li> $(4x+5)^2$ </li>
+                        <li> $(6x-2)^2$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t405_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t405_v" class="collapse">
+                        <ol class="a">
+                            <li> $9x^2-1$ </li>
+                            <li> $16x^2+40x+25$ </li>
+                            <li> $36x^2-24x+4$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="7d8900a4-6267-4dd9-b345-1d03724362e7">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t412">
+                            Polynomien tulo
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t412">
+                    <p>
+                        Sievennä seuraavat lausekkeet:
+                    </p>
+                    <ol class="a">
+                        <li> $(x+2)(x^2-5x+4)$ </li>
+                        <li> $3x(x-6) - (x-2)(x-4)$ </li>
+                        <li> $\left(\dfrac{x}{2} + 1\right)\left(8x + \dfrac{1}{4}\right)$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t412_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t412_v" class="collapse">
+                        <ol class="a">
+                            <li> $x^3 - 3x^2 - 6x + 8$ </li>
+                            <li> $2x^2-12x-8$ </li>
+                            <li> $4x^2+ \dfrac{65}{8}x+\dfrac{1}{4}$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="41ec214c-f8a8-4b31-884f-2a557627fedb">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t401">
+                            Toisen asteen yhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t401">
+                    <p> 
+                        Ratkaise seuraavat toisen asteen yhtälöt:
+                    </p>
+                    <ol class="a">
+                        <li> $3x^2 - 7x + 4 = 0$ </li>
+                        <li> $x^2 + 2x - 9 = 3x - 7$</li>
+                        <li> $x^2 = 3x$</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t401_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t401_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = \dfrac{4}{3} \ $ tai $\ x = 1$</li>
+                            <li> $x = -1 \ $ tai $\ x = 2$ </li>
+                            <li> $x = 0 \ $ tai $\ x = 3$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="42c60f20-b050-4c0a-9bbb-4adb02af0b88">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t413">
+                            Toisen asteen yhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t413">
+                    <p> 
+                        Ratkaise seuraavat yhtälöt:
+                    </p>
+                    <ol class="a">
+                        <li> $\dfrac{1}{3}x^2 + \dfrac{1}{2}x = 0$ </li>
+                        <li> $\dfrac{2}{3}x^2 - \dfrac{5}{2}x = -\dfrac{7}{12}$</li>
+                        <li> $x + 3 = \dfrac{10}{x}$</li>
+                    </ol>
+                    <p>
+                        Vinkki: Jos kertoimet ovat murtolukuja, yksi strategia on kertoa yhtälön molemmat puolet sellaisella luvulla, jotka supistavat nimittäjät pois.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t413_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t413_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = 0 \ $ tai $\ x = -\dfrac{3}{2}$ </li>
+                            <li> $x = \dfrac{7}{2} \ $ tai $\ x = \dfrac{1}{4}$</li>
+                            <li> $x = 2 \ $ tai $\ x = -5$ </li>
+                            
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="db510021-ecc9-4e17-b41d-69901174ef77">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t408">
+                            Toisen asteen yhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t408">
+                    <p>
+                        Millä vakion $a$ arvolla
+                    </p>
+                    <ol class="a">
+                        <li> yhtälöllä $x^2 + ax + 3 = 0$ on tasan yksi ratkaisu? </li>
+                        <li> yhtälöllä $ax^2+2x+3 = 0$ on ainakin yksi ratkaisu? </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t408_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t408_v" class="collapse">
+                        <ol class="a">
+                            <li> $a = 2\sqrt{3}$ tai $a = -2\sqrt{3}$ </li>
+                            <li> $a \leq \frac{1}{3}$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="bb8c72c3-b7c0-40d3-930a-87db4396cdf4">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t404">
+                            Sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t404">
+                    <p>
+                        Hedelmiä, joiden hinta on 2 €/kg, myydään päivittäin 80 kg. Kauppias arvelee, että kilohinnan nostaminen 50 sentillä johtaa aina menekin pienenemiseen 5 kilogrammalla.
+                    </p>
+                    <ol class="a">
+                        <li> Mikä on päivittäisen myynnin kokonaisarvo, kun hedelmien hinta on 2 €/kg? </li>
+                        <li> Jos kilohintaa nostetaan $0{,}5x$ euroa, kuinka paljon hedelmiä myydään? </li>
+                        <li> Muodosta lauseke toisen asteen polynomifunktiolle $f(x)$, joka ilmaisee myynnin kokonaisarvon tilanteessa, jossa kilohintaa on nostettu $0{,}5x$ euroa. </li>
+                        <li> Määritä funktion $f$ nollakohdat ja päättele niiden avulla, mikä on funktion $f$ huipun $x$-koordinaatti. </li>
+                        <li> Mikä kilohinnan pitää olla, jotta myynnin kokonaisarvo on mahdollisimman suuri? Mikä tämä kokonaisarvo on?</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t404_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t404_v" class="collapse">
+                        <ol class="a">
+                            <li> 160 € </li>
+                            <li> $80-5x$ kilogrammaa </li>
+                            <li> $f(x) = (2+0{,}5x)(80-5x)$</li>
+                            <li> Nollakohdat $x_1 = -4$ ja $x_2 = 16$, huippu niiden puolivälissä eli $x = 6$ </li>
+                            <li> $2 + 0{,}5\cdot 6 = 5$ €/kg, myynnin kokonaisarvo $f(6) = 250$ euroa</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="a43d6e5e-5202-4d76-a2cd-9c214dec97a4">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t406">
+                            Sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t406">
+                    <p>
+                        Uudelle asuinalueelle halutaan kaavoittaa tontteja, joiden pinta-ala on $2600 \text{ m}^2$. Mikä pitää valita tontin leveydeksi, jos halutaan, että tontin pituus on 25 m suurempi kuin sen leveys?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t406_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t406_v" class="collapse">
+                        <p>
+                            Leveydeksi pitää valita 40 m. Yhtälö on $x(x + 25) = 2600$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="f2684aae-5bd7-4feb-b6d7-6e6c37975dcf">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t407">
+                            Sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t407">
+                    <p>
+                        Onko mahdollista jakaa luku 20 kahden kokonaisluvun summaksi niin, että
+                    </p>
+                    <ol class="a">
+                        <li> yhteenlaskettavien tulo on 96 </li>
+                        <li> yhteenlaskettavien tulo on 86 </li>
+                    </ol>
+                    <p>
+                        Keksi esimerkki tällaisista kokonaisluvuista tai perustele, ettei sellaisia ole olemassa.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t407_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t407_v" class="collapse">
+                        <ol class="a">
+                            <li> 8 ja 12 </li>
+                            <li> Ei ole mahdollista, sillä yhtälön $x(20-x) = 86$ ratkaisut eivät ole kokonaislukuja. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="94d8a1bb-38d6-45d1-b9e2-5eb65e056cd7">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t414">
+                            Sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t414">
+                    <p>
+                        Rakennuspiirustuksessa huoneen leveydeksi on merkitty $3{,}00 \text{ m}$ ja pituudeksi $5{,}00 \text{ m}$. Huonetta halutaan kuitenkin suurentaa niin, että sen pituus ja leveys kasvavat yhtä monta senttimetriä. Kuinka leveäksi huone voidaan tehdä, jos sen pinta-ala saa olla enintään $20 \text{ m}^2$? Anna vastaus senttimetrin tarkkuudella.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t414_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t414_v" class="collapse">
+                        <p>
+                            Enintään $3{,}58$ metriä leveäksi. Yhtälö on $(3 + x)(5 + x) = 20$, missä $x$ on pituuden ja leveyden lisäys metreinä.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="d031a849-c49b-4a98-8afd-c6bb02b5de95">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t415">
+                            Sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t415">
+                    <p>
+                        Joen rannalta halutaan aidata hevosille laidun. Aitamateriaalia on käytettävissä on 200 metriä.
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa2/kuvat/EAk17.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Muodosta funktio, joka ilmaisee laitumen pinta-alan, jos kummankin rantaan rajoittuvan sivun pituus on $x$. 
+                        </li>
+                        <li> 
+                            Millaiset laitumen mittojen pitäisi olla, jotta laitumen pinta-ala olisi $4200 \text{ m}^2$? 
+                        </li>
+                        <li> 
+                            Millaiset laitumen mitat ovat tilanteessa, jossa laitumen pinta-ala on mahdollisimman suuri? Mikä tämä pinta-ala on? <br>
+                            Vinkki: määritä a-kohdan funktion nollakohdat ja etsi niiden avulla symmetriaa hyödyntäen kohta, jossa funktio saa suurimman arvonsa.
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t415_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t415_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $f(x) = 200x - 2x^2$
+                            </li>
+                            <li> 
+                                Kaksi vaihtoehtoa: 
+                                <ul>
+                                    <li>
+                                        rantaan rajoittuvien sivujen pituus 70 m ja rannan suuntainen sivu 60 m
+                                    </li>
+                                    <li>
+                                        rantaan rajoittuvien sivujen pituus 30 m ja rannan suuntainen sivu 140 m.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li> Rantaan rajoittuvat sivut ovat 50 m ja rannan suuntainen sivu on 100 m. Pinta-ala $5000 \text{ m}^2$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4-tehtavasarja2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                    
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAB2luku4-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="5c391fcf-91e9-4ccc-8599-97879602212f">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t401">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t401">
+                    <ol class="a">
+                        <li>
+                            Hannele on ratkaissut yhtälön
+                            $$
+                            2(x^2 + x + 3) = 8(x + 1) + 2x^2,
+                            $$
+                            mutta välivaiheet ovat menneet sekaisin.
+                            Järjestä välivaiheet (B)–(F) niin, että ne muodostavat yhtälön loogisesti etenevän ratkaisun. Vastausta ei tarvitse perustella.
+                            <br>
+                            <img src="/kurssit/mab2/kuvat/MAB2kuva057.png" max-width: 100%; width: auto; height: auto;/>
+                        </li>
+                        <li>
+                            Myös Pauliinan laskun välivaiheet ovat menneet sekaisin, ja lisäksi mukaan on tullut yksi johonkin muuhun laskuun kuuluva välivaihe. Tehtävänä on valita alla olevista kohdista (B)–(F) neljä ja järjestää ne niin, että niistä muodostuu yhtälön
+                            $$
+                            20 + 4x = x^2 + 8
+                            $$
+                            ratkaisu. Vastausta ei tarvitse perustella. 
+                            <br>
+                            <img src="/kurssit/mab2/kuvat/MAB2kuva058.png" max-width: 100%; width: auto; height: auto;/>
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2017/3]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t401_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t401_v" class="collapse">
+                        <ol class="a">
+                            <li> A F C E D B G </li>
+                            <li> A B E F D G </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="a3355125-a48d-46f4-8c25-8ca906127b74">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t402">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t402">
+                    <ol class="a">
+                        <li>
+                            Ratkaise yhtälö 
+                            $$
+                            t^2 - \frac{5}{2}t + 1 = 0.
+                            $$
+                        </li>
+                        <li>
+                             Ratkaise yhtälö
+                             $$
+                             [f(x)]^2 - \frac{5}{2}f(x) + 1 = 0,
+                             $$
+                             missä $f(x)$ on kuvion funktio.
+                            <br>
+                            <img src="/kurssit/mab2/kuvat/MAB2kuva059.png" max-width: 100%; width: auto; height: auto;/>
+                            <br>
+                            Vinkki: Vertaa a- ja b-kohdan yhtälöitä. Pystytkö päättelemään funktion arvon $f(x)$, jolla b-kohdan yhtälö toteutuu? Funktion kuvaaja auttaa selvittämään, mikä on vastaava muuttujan $x$ arvo. (Muitakin ratkaisutapoja voi keksiä, tämä ei ole ainoa tapa.)
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2016/4]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t402_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t402_v" class="collapse">
+                        <ol class="a">
+                            <li> Yhtälö toteutuu, jos ja vain jos $t = \dfrac{1}{2}$ tai $t = 2$. </li>
+                            <li> Yhtälö toteutuu, jos ja vain jos $x = -1$ tai $x = 2$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tehtava" id="a24592cc-27c8-4000-afdc-1fa855e17391">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t403">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t403">
+                    <ol class="a">
+                        <li>
+                            Ratkaise yhtälö 
+                            $$
+                            x^2 - 2x = 0.
+                            $$
+                        </li>
+                        <li>
+                             Anna esimerkki toisen asteen yhtälöstä, jonka yksi juuri on $x = 1$.
+                        </li>
+   
+                    </ol>
+                    <p>
+                        [Lyhyt S2012/1a &amp; K2015/2b ]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t403_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t403_v" class="collapse">
+                        <ol class="a">
+                            <li> Yhtälö toteutuu, jos ja vain jos $x = 0$ tai $x = 2$. </li>
+                            <li> Esimerkiksi $x^2 = 1$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="9c490d1c-1fc3-4519-a429-4ee784edb078">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t404">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t404">
+                    <ol class="a">
+                        <li> 
+                            Millä vakion $a$ arvolla funktion 
+                            $$f(x) = ax^2-4x+8$$ 
+                            pienin arvo on $0$?
+                        </li>
+                        <li> 
+                            Millä vakion $b$ arvolla funktio 
+                            $$g(x) = bx^2-4x+8$$ 
+                            saa positiivisia arvoja täsmälleen silloin, kun $-2 < x < 1$?
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2014/10]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t404_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t404_v" class="collapse">
+                        <ol class="a">
+                            <li> $a = \frac{1}{2}$ </li>
+                            <li> $b = -4$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="db22fd18-3831-42f5-a7bb-f09976d0a58a">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t405">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t405">
+                    <ol class="a">
+                        <li> 
+                            Ratkaise yhtälö $$(x-2)^2 = 4.$$
+                        </li>
+                        <li>
+                            Laske lausekkeen 
+                            $$
+                            a(b-2) + (a-b)^2 - b(1-a)
+                            $$
+                            arvo, kun $a = 2$ ja $b = -2$.
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2013/1a &amp; 1c]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t405_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t405_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Yhtälö toteutuu, jos ja vain jos $x = 0$ tai $x = 4$. 
+                            </li>
+                            <li>
+                                Kysytty arvo on 6.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="7fa0899d-5330-43df-b320-a33a15280921">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t406">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t406">
+                    <p>
+                        Tarkastellaan paraabelia $$y = x^2 - 12x + 35.$$
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Missä pisteissä paraabeli leikkaa $x$-akselin?
+                        </li>
+                        <li> 
+                            Määritä paraabelin huipun koordinaatit.
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2012/4]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t406_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t406_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Pisteissä $(5,0)$ ja $(7,0)$.
+                            </li>
+                            <li>  
+                                Paraabelin huippu on pisteessä $(6,-1)$.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="59d348c8-3035-4aeb-a9cb-a0363f1123c4">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t407">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t407">
+                    <ol class="a">
+                        <li> 
+                            Määritä sellainen vakio $a$, että $x = 2$ toteuttaa yhtälön 
+                            $$x^2 - 4ax + 4a^2 = 0.$$ 
+                        </li>
+                        <li> 
+                            Ratkaise yhtälö 
+                            $$x^2 - 3(x+3) = 3x - 18.$$
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2011/3a &amp; S2011/1c]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t407_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t407_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                $a = 1$
+                            </li>
+                            <li>  
+                                $x = 3$
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="f5971c9d-f4f1-4893-a31b-12e4ff36fdca">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t408">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t408">
+                    <ol class="a">
+                        <li> 
+                            Tutki, millä muuttujan $x$ arvoilla polynomi 
+                            $$
+                            2x^2 + 5x - 3
+                            $$ 
+                            saa negatiivisia arvoja.
+                        </li>
+                        <li> 
+                            Ratkaise yhtälö 
+                            $$
+                            7x(3+7x) - 4 = 0.
+                            $$
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2009/3b &amp; K2007/1b]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t408_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t408_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Kyseinen polynomi saa negatiivisia arvoja, jos ja vain jos $-3 < x < \frac{1}{2}$.
+                            </li>
+                            <li>  
+                                Yhtälö toteutuu, jos ja vain jos $x = \frac{1}{7}$ tai $x = -\frac{4}{7}$.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="50b1cad2-bae5-475e-8f24-8ad52fc81505">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t409">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t409">
+                    <ol class="a">
+                        <li>
+                            Kaava
+                            $$
+                            (x+y)^2 = x^2 + y^2
+                            $$
+                            on yleensä väärä. Osoita, että jos kaava pätee, niin joko $x = 0$ tai $y = 0$ (tai molemmat).
+                        </li>
+                        <li>
+                            Myös kaava 
+                            $$
+                            (x-y)^2 = x^2 - y^2 
+                            $$
+                            on yleensä väärä. Anna esimerkki luvuista, joille tämä kaava pätee, mutta edellinen kaava ei päde.
+                        </li>
+                    </ol>
+                    <p> 
+                        [Lyhyt K2006/12]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t409_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t409_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Jos kaava pätee, saadaan pääteltyä seuraavasti:
+                                \begin{align*}
+                                (x+y)^2 &= x^2 + y^2 \\
+                                (x+y)(x+y) = x^2 + y^2 \\
+                                x^2 + 2xy + y^2 = x^2 + y^2 \\
+                                2xy &= 0 \\
+                                x = 0 \quad &\text{tai} \quad y = 0
+                                \end{align*}
+                                Viimeisessä vaiheessa käytettiin tulon nollasääntöä.
+                            </li>
+                            <li>  
+                                Esim. $x = 1$ ja $y = 1$. Tällöin $(x-y)^2 = (1-1)^2 = 0^2 = 0$ ja $x^2 - y^2 = 1^2 - 1^2 = 1-1 = 0$. Siis b-kohdan kaava pätee. Kuitenkin $(x+y)^2 = (1+1)^2 = 2^2 = 4$ mutta $x^2 + y^2 = 1^2 + 1^2 = 1+1 = 2$. Näin a-kohdan kaava ei päde.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="bd0e0201-b03a-40bd-87de-e0d5dc13146a">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t410">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t410">
+                    <p> 
+                        Olkoon 
+                        $$
+                        f(x) = x^2 - 3{,}1x - 1{,}4
+                        $$
+                        Laske funktion f nollakohdat ja tutki, millä välillä se saa negatiivisia arvoja.
+                        <br>
+                        [Lyhyt S2004/1]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t410_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t410_v" class="collapse">
+                        <p>
+                            Nollakohdat ovat $x_1 = -0{,}4$ ja $x_2 = 3{,}5$. Koska funktion kuvaaja on ylöspäin aukeava paraabeli, funktio saa negatiivisia arvoja välillä $\left]-0{,}4; 3{,}5\right[$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="5470aeec-9df4-473d-b810-134305976f4f">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t411">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t411">
+                    <p> 
+                        Määrittele, mitä tarkoitetaan neliöjuurella. Osoita tämän perusteella:
+                        $$
+                        \sqrt{14 - 6\sqrt{5}} = 3 - \sqrt{5}.
+                        $$
+                        <br>
+                        [Lyhyt K2004/10]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t411_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t411_v" class="collapse">
+                        <p>
+                            Luvun $b \geq$ neliöjuuri $a$ tarkoittaa lukua $a$, jolle pätee kaksi asiaa: 
+                            <ul>
+                                <li> $a \geq 0$ </li>
+                                <li> $a^2 = b$. </li>
+                            </ul>
+                            Koska $3 - \sqrt{5} > 0$ ja
+                            \begin{align*}
+                            (3 - \sqrt{5})^2 &= (3 - \sqrt{5})(3 - \sqrt{5}) \\
+                            &= 9 - 6\sqrt{5} + 5 \\
+                            &= 14 - 6\sqrt{5}
+                            \end{align*}
+                            niin luvun $14 - 6\sqrt{5}$ neliöjuuri on $3 - \sqrt{5}$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="04993ed3-00a1-4834-ae73-97c3ea090b72">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t412">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t412">
+                    <p> 
+                        Tutki, onko yhtälöillä
+                        $$
+                        \frac{3}{5}x + 2 = 1
+                        $$
+                        ja
+                        $$
+                        3x^2 - 7x - 20 = 0
+                        $$
+                        samoja ratkaisuja.
+                        <br>
+                        [Lyhyt S2000/1]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t412_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t412_v" class="collapse">
+                        <p>
+                             Yhtälöillä on yksi yhteinen ratkaisu $x = -\dfrac{5}{3}$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="bf0c30c4-39e8-433d-a510-dbdb30c46cb8">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t413">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t413">
+                    <p> 
+                        Ratkaise yhtälö
+                        $$
+                        \frac{2x}{2x+3} = \frac{2x+1}{8}
+                        $$
+                        <br>
+                        [Lyhyt K2000/2]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t413_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t413_v" class="collapse">
+                        <p>
+                             Yhtälö toteutuu, jos ja vain jos $x = \frac{1}{2}$ tai $x = \frac{3}{2}$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="19056cf2-bb9c-4787-9edd-f4defce1d513">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t414">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t414">
+                    <ol class="a">
+                        <li>
+                            Ratkaise yhtälö $x^2+6x = 2x^2+9$.
+                        </li>
+                        <li> 
+                            Ratkaise yhtälö $(x-4)^2 = (x-4)(x+4)$.
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä S2013/1a &amp; K2013/1a]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t414_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t414_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = 3$ </li>
+                            <li> $x = 4$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="20105067-dec0-4d6e-9fc4-3ae4c2dca815">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t415">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t415">
+                    <p>
+                        Millä vakion $a$ arvoilla funktion $f(x)=(1-a^2)x^2 - 3ax + 8$ kuvaaja on
+                    </p>
+                    <ol class="a">
+                        <li> alaspäin aukeava paraabeli </li>
+                        <li> ylöspäin aukeava paraabeli </li>
+                        <li> nouseva suora </li>
+                        <li> laskeva suora?</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t415_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t415_v" class="collapse">
+                        <ol class="a">
+                            <li> $a < -1$ tai $a > 1$ </li>
+                            <li> $-1 < a < 1$ </li>
+                            <li> $a = -1$ </li>
+                            <li> $a = 1$</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="06a4b8ee-33f0-448b-a19d-c5d5ec6cb315">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t416">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t416">
+                    <ol class="a">
+                        <li> Ratkaise yhtälö $(x-2)(x-3) = 6$. </li>
+                        <li> Missä pisteessä paraabelit $y = x^2+x+1$ ja $y = x^2 + 2x + 3$ leikkaavat?</li>
+                        <li> 
+                            Määritä kaikki luvut, jotka toteuttavat seuraavan ehdon: Luvun ja sen käänteisluvun keskiarvo on 4.
+                        </li>
+                    </ol>
+                    <p>
+                    [Pitkä S2014/1]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t416_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t416_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = 0$ tai $x = 5$ </li>
+                            <li> $(-2,3)$ </li>
+                            <li> $4 + \sqrt{15}$ ja $4 - \sqrt{15}$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4-tehtavasarja3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4-itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku4-itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/2076 ">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+            </p>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4-itsearviointi">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+</article>

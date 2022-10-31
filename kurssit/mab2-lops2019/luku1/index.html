@@ -1,0 +1,3608 @@
+---
+title: MAB2 - Lausekkeet ja yhtälöt
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: mab2
+---
+
+<input type="hidden" id="chapterNumber" name="theoremStart" value="1"/>
+<input type="hidden" id="theoremStart" value="1"/>
+
+{% include bottomnav.html %}
+
+
+<article>
+    <section>
+        <header>
+            <h1>Ensimmäisen asteen yhtälö</h1>
+        </header>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luvun1-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luvun1-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p> 
+                    Tämän luvun tavoitteena on, että ratkaiset sujuvasti ensimmäisen asteen yhtälöitä. Osaat
+                </p>
+                <ul>
+                    <li> 
+                        piirtää ensimmäisen asteen polynomifunktion kuvaajan ja määrittää funktion arvoja sen avulla
+                    </li>
+                    <li>
+                        päätellä ensimmäisen asteen polynomifunktion lausekkeesta, onko kuvaaja nouseva vai laskeva suora ja millä korkeudella se leikkaa $y$-akselin
+                    </li>
+                    <li>
+                        laskea polynomien summan ja erotuksen sekä monomien tulon
+                    </li>
+                    <li>
+                        tunnistaa lineaarisesti toisistaan riippuvat suureet ja selvittää niiden arvoja sekä graafisesti että laskennallisesti
+                    </li>
+                    <li>
+                        tutkia sijoittamalla, onko annettu luku yhtälön ratkaisu
+                    </li>
+                    <li>
+                        ratkaista ensimmäisen asteen yhtälön
+                    </li>
+                    <li>
+                        tulkita vastauksen myös tapauksissa, joissa yhtälöllä ei ole lainkaan ratkaisuja tai kaikki luvut ovat sen ratkaisuja
+                    </li>
+                    <li>
+                        mallintaa ja ratkaista sovellusongelmia.
+                    </li>
+                </ul> 
+            </div>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luvun1-tavoitteet">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl1">
+                     Ensimmäisen asteen polynomifunktio
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku1kpl1" class="collapse">
+            
+            <div class="teoria">
+                <p>
+                    Tämän kurssin aiheina ovat lausekkeet ja yhtälöt. Ensimmäinen päämäärä on oppia ratkaisemaan sujuvasti ensimmäisen asteen yhtälöitä. Tätä varten perehdymme tässä kappaleessa ensimmäisen asteen polynomifunktioihin. Niitä voidaan käyttää apuna, kun tutkitaan ensimmäisen asteen yhtälöiden ratkaisuja. 
+                </p>
+                <p>
+                    Aloitetaan palauttamalla mieleen, miten koordinaatiston pisteitä merkitään.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava first-exercise" id="c67ab3ff-b8d4-4af8-ba02-becbf5cf4419">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t101">
+                                Koordinaatisto
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t101" class="collapse">
+                        <img src="/kurssit/mab2/kuvat/MAB2kuva001.png" style="max-width: 100%; width: auto; height: auto;" />
+                        <p>
+                            Koordinaattiakselien leikkauspistettä eli origoa on yllä olevassa kuvassa merkitty kirjaimella $O$. 
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Tavoitteena on päästä origosta $O$ pisteeseen $A$. Kuinka monta yhden ruudun mittaista askelta pitää kulkea oikealle? Entä kuinka monta ylöspäin? Mitkä ovat pisteen $A$ koordinaatit?
+                            </li>
+                            <li> 
+                                Tavoitteena on päästä origosta pisteeseen $B$. Kuinka monta yhden ruudun mittaista askelta pitää kulkea oikealle? Entä kuinka monta alaspäin? Mitkä ovat pisteen $B$ koordinaatit? Miten ilmaistaan se, että pisteeseen $B$ päästäkseen pitää liikkua pystysuunnassa alaspäin eikä ylöspäin?
+                            </li>
+                            <li> 
+                                Mitkä ovat pisteen $C$ koordinaatit?
+                            </li>
+                            <li> 
+                                Mitkä ovat pisteen $D$ koordinaatit? 
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t101_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t101_v" class="collapse">
+                           <ol class="a">
+                                <li> Pitää kulkea 2 askelta oikealle ja 3 askelta ylöspäin. Pisteen $A$ koordinaatit ovat siten $(2,3)$. </li>
+                                <li> Pitää kulkea 3 askelta oikealle ja 1 askel alaspäin. Pisteen $B$ koordinaatit ovat siten $(3,-1)$. Miinusmerkillä ilmaistaan, että pystysuunnassa liikutaan alaspäin eikä ylöspäin.</li>
+                                <li> $C = (4,2)$</li>
+                                <li> $D = (-3,1)$</li>
+                           </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Koordinaatiston piste voidaan siis ilmaista lukuparina $(x,y)$. Ensimmäinen luku $x$ kertoo, missä piste sijaitsee $x$-akselin suunnassa origoon verrattuna. Toinen luku $y$ kertoo vastaavasti, missä piste sijaitsee $y$-akselin suunnassa origoon verrattuna. Näitä lukuja kutsutaan pisteen koordinaateiksi.
+                </p>
+
+                <p>
+                    Kun funktion kuvaaja piirretään koordinaatistoon, muuttujan arvot ovat $x$-akselilla ja funktion arvot ovat $y$-akselilla. Kuvaajan pisteen $y$-koordinaatti on aina sama kuin funktion arvo.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="c67ab3ff-b8d4-4af8-ba02-becbf5cf4419">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t102">
+                                Funktion kuvaajan tulkitseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t102" class="collapse">
+                        <img src="/kurssit/mab2/kuvat/MAB2kuva002.png" style="max-width: 100%; width: auto; height: auto;" />
+                        <p>
+                            Yllä on näkyvissä funktion $g$ kuvaaja. Päättele sen avulla vastaukset seuraaviin kysymyksiin:
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Mikä on funktion $g$ arvo kohdassa $x = 1$? Toisin sanottuna, mitä on $g(1)$?
+                            </li>
+                            <li> 
+                                Määritä $g(0)$.
+                            </li>
+                            <li> 
+                                Saako funktio $g$ jossain kohdassa arvon $4$? Toisin sanottuna, onko olemassa sellainen $x$, että $g(x) = 4$?
+                            </li>
+                            <li> 
+                                Onko olemassa sellainen $x$, että $g(x) = 0$?
+                            </li>
+                            
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t102_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t102_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Kuvaajan mukaan $g(1) = 2$, sillä kuvaaja kulkee pisteen $(1,2)$ kautta.
+                                </li>
+                                <li> 
+                                    Kuvaajan mukaan $g(0) = 1$, sillä kuvaaja kulkee pisteen $(0,1)$ kautta.
+                                </li>
+                                <li> 
+                                    Kohdassa $x = 3$ funktion arvo on $g(3) = 4$. Kuvaaja kulkee pisteen $(3,4)$ kautta.
+                                </li>
+                                <li> 
+                                    Kohdassa $x = -1$ funktion arvo on $g(-1) = 0$. Kuvaaja kulkee pisteen $(-1,0)$ kautta eli leikkaa $x$-akselin kohdassa $x = -1$.
+                                </li>
+                               
+                           </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän funktio on yksi esimerkki ensimmäisen asteen polynomifunktiosta. MAY1-kurssilta tuttu määritelmä kertoo tarkemmin, millaisia funktioita kutsutaan ensimmäisen asteen polynomifunktioiksi:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: ENSIMMÄISEN ASTEEN POLYNOMIFUNKTIO</h3>
+                    <p>
+                        Funktiota $f$, joka on muotoa 
+                        $$f(x) = ax+b,$$ 
+                        missä $a\neq 0$, sanotaan <em>ensimmäisen asteen polynomifunktioksi</em>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="3b06d1dc-9c97-415a-b7d0-d74704dc68d6">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t103">
+                                Ensimmäisen asteen polynomifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t103" class="collapse">
+                        <p>
+                            Tutkitaan funktiota $f(x) = 1{,}5x - 2$.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Vertaa funktion $f$ lauseketta ensimmäisen asteen polynomifunktion määritelmään. Mikä tässä tapauksessa on määritelmän kerroin $a$? Entä mikä on vakio $b$?
+                            </li>
+                            <li> 
+                                Laske funktion arvo kohdassa $x = 2$ eli laske, mitä on $f(2)$.
+                            </li>
+                            <li> 
+                                Laske $f(0)$.
+                            </li>
+                            <li> 
+                                Päättele a- ja b-kohtien avulla kaksi pistettä, joiden kautta funktion $f$ kuvaaja kulkee. 
+                            </li>
+                            <li>
+                                Piirrä funktion $f$ kuvaaja laskimella tai tietokoneella ja tarkista, päättelitkö c-kohdassa pisteet oikein. 
+                            </li>
+                        </ol>
+                        </p>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t103_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t103_v" class="collapse">
+                            <ol class="a">
+                                <li> $a = 1{,}5$ ja $b = -2$, huomaa miinusmerkki. </li>
+                                <li> $f(2) = 1$ </li>
+                                <li> $f(0) = -2$ </li>
+                                <li> Pisteet ovat $(2,1)$ ja $(0,-2)$. </li>
+                                <li>
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva004.png" style="max-width: 100%; width: auto; height: auto;" />
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="teoria">
+                <p>
+                    Funktion $f$ kuvaaja muodostuu pisteistä, joiden $y$-koordinaatti on funktion arvo.  Tämä voidaan ilmaista lyhyesti kirjoittamalla, että $y = f(x)$. Esimerkiksi alla olevassa kuvassa on ensimmäisen asteen polynomifunktion
+                    $$f(x) = -x + 3$$
+                    kuvaaja. Sen kuvaajan pisteet ovat muotoa
+                    $$\left(x, -x+3\right).$$
+                    Esimerkiksi piste $(2,-2+3) = (2,1)$ on funktion $f$ kuvaajan piste.
+                </p>
+                <img src="/kurssit/mab2/kuvat/MAB2kuva003.png" max-width: 100%; width: auto; height: auto;/>
+                <p>
+                    Kuvasta nähdään, että funktion $f(x) = -x + 3$ kuvaaja on suora. Tämän suoran yhtälö on 
+                    $$
+                    y = -x + 3.
+                    $$
+                    Se tarkoittaa, että suora muodostuu pisteistä, joiden $y$-koordinaatti on $-x+3$. 
+                </p>
+            </div> -->
+
+            <div class="tehtavat">
+                <div class="tehtava" id="848396de-3cbd-4a3f-94d7-b6bbf39cb80c">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t104">
+                                Ensimmäisen asteen polynomifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t104" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa2/kuvat/EAk4.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/EAk5.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">
+                        <p style="clear: both;"></p>
+                        <p>
+                            <img src="/kurssit/maa2/kuvat/EAk6.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/EAk7.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">  </p>
+                        <p style="clear: both;"></p>
+                        <p>
+                            Yllä on näkyvissä ensimmäisen asteen polynomifunktioiden kuvaajia. Kopioi alla oleva taulukko vihkoosi ja täydennä se yhdistämällä oikea kuvaaja jokaiseen funktioon. Päättele sen jälkeen vastaukset alla oleviin kysymyksiin.
+                        </p>
+                        <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> Funktio </th>
+                                    <th> Kuvaaja </th>
+                                </tr>
+                                <tr>
+                                    <td> $\ f(x) = 3x \ $ </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ g(x) = -2x-1 \ $ </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ h(x) = 0{,}5x+1 \ $ </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ k(x) = -x+2 \ $ </td>
+                                    <td>  </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p> Miten funktion $f(x) = ax + b$ lausekkeesta voi päätellä,
+                        <ol class="a">
+                            <li> onko kuvaaja nouseva suora (kuten kuvissa A ja C) vai laskeva suora (kuten kuvissa B ja D)?</li>
+                            <li> millä korkeudella kuvaaja leikkaa $y$-akselin?</li>
+                            <li> kuinka monta ruutua kuvaaja nousee tai laskee, kun siirrytään yhden ruudun verran oikealle?</li>
+                        </ol>
+                        </p>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t104_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t104_v" class="collapse">
+                            <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> Funktio </th>
+                                    <th> Kuvaaja </th>
+                                </tr>
+                                <tr>
+                                    <td> $\ f(x) = 3x \ $ </td>
+                                    <td>  &nbsp; C </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ g(x) = -2x-1 \ $ </td>
+                                    <td> &nbsp; D </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ h(x) = 0{,}5x+1 \ $ </td>
+                                    <td> &nbsp; A </td>
+                                </tr>
+                                <tr>
+                                    <td> $\ k(x) = -x+2 \ $ </td>
+                                    <td> &nbsp; B </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p> Funktion $f(x) = ax + b$ lausekkeesta voidaan päätellä seuraavaa:
+                        </p>
+                        <ol class="a">
+                            <li> Jos kerroin $a$ on positiivinen, kuvaaja on nouseva suora. Jos kerroin $a$ on negatiivinen, kuvaaja on laskeva suora. </li>
+                            <li> Vakiotermi $b$ ilmaisee, millä korkeudella kuvaaja leikkaa $y$-akselin. </li>
+                            <li> Kerroin $a$ ilmaisee, kuinka monta ruutua kuvaaja nousee tai laskee, kun siirrytään yhden ruudun verran oikealle. </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="teoria">
+                <p>
+                    Ensimmäisen asteen polynomifunktion kuvaaja on aina suora. Jos funktio on muotoa 
+                    $$f(x) = ax + b,$$ missä $a \neq 0$, niin sen kuvaaja on suora, jonka yhtälö on $$y = ax + b.$$ Vakio $b$ ilmaisee, millä korkeudella suora leikkaa $y$-akselin. Kerroin $a$ puolestaan on kyseisen suoran kulmakerroin.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KULMAKERROIN</h3>
+                    <p>
+                        Oletetaan, että $a \neq 0$ ja $b$ on mikä tahansa reaaliluku. Suoran yhtälössä $y = ax + b$ esiintyvä kerroin $a$ on suoran <em>kulmakerroin</em>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="d00eb03e-a5b7-45f5-83d4-530becd7de20">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t105">
+                                Kulmakerroin
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t105" class="collapse">
+                        <p>
+                            Laske funktion arvo kohdissa $x = 0$ ja $x = 1$ ja päättele, kuinka monta ruutua kuvaaja nousee tai laskee, kun siirrytään koordinaatistossa yhden ruudun verran oikealle. Selitä omin sanoin, miten suoran kulmakerroin kuvaa sitä, miten jyrkästi suora nousee tai laskee.
+                        <ol class="a">
+                            <li> $f(x) = 7x - 3$</li>
+                            <li> $g(x) = -5x + 8$ </li>
+                        </ol>
+                        </p>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t105_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t105_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kuvaaja nousee 7 ruutua, kun siirrytään yhden ruudun verran oikealle. Kuvaaja on suora $y = 7x - 3$, jonka kulmakerroin on 7.
+                                </li>
+                                <li> 
+                                    Kuvaaja laskee 5 ruutua, kun siirrytään yhden ruudun verran oikealle. Kuvaaja on suora $y = -5x + 8$, jonka kulmakerroin on $-5$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kuten edellisessä tehtävässä havaittiin, suora $y = ax + b$ on 
+                </p>
+                    <ul>
+                        <li>
+                            nouseva, jos $a > 0$ eli kulmakerroin on positiivinen
+                        </li>
+                        <li>
+                            laskeva, jos $a < 0$ eli kulmakerroin on negatiivinen.
+                        </li>
+                    </ul>
+                <p>
+                    Lisäksi kulmakerroin vaikuttaa suoran jyrkkyyteen: mitä lähempänä nollaa kulmakerroin on, sitä loivemmin suora nousee tai laskee.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="4d5030b1-87c5-4dc3-93da-4bee8f5e8178">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t106">
+                                Kuvaajan piirtäminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t106" class="collapse">
+                        <p>
+                            Koska ensimmäisen asteen polynomifunktion kuvaaja on aina suora, voi kuvaajan piirtää monella tavalla.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Piirrä funktion $f(x) = 2x-3$ kuvaaja seuraavasti: Määritä jotkin kaksi pistettä, joiden kautta kuvaaja kulkee. Piirrä näiden kautta kulkeva suora.
+                            </li>
+                            <li> 
+                                Piirrä funktion $g(x) = -x+4$ kuvaaja seuraavasti: Päättele funktion lausekkeesta, millä korkeudella kuvaaja leikkaa $y$-akselin ja mikä on kuvaajan kulmakerroin. Piirrä suora näiden tietojen avulla.
+                            </li>
+                            <li> 
+                                Tarkista piirrokset piirtämällä kumpikin kuvaaja laskimella tai tietokoneella.
+                            </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t106_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t106_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kuvaaja kulkee esimerkiksi pisteiden $(0,-3)$ ja $(1,-1)$ kautta.
+                                </li>
+                                <li> 
+                                    Kuvaaja leikkaa $y$-akselin korkeudella 4 eli pisteessä $(0,4)$. Kuvaajan kulmakerroin on $-1$. Kuvaaja siis laskee aina yhden ruudun, kun siirrytään yhden ruudun verran oikealle.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Niissä kohdissa, joissa funktion kuvaaja leikkaa vaakasuoran $x$-akselin, funktion arvo on nolla. Näitä kohtia kutsutaan funktion nollakohdiksi:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: FUNKTION NOLLAKOHTA</h3>
+                    <p>
+                        Funktion $f$ <em>nollakohta</em> tarkoittaa sellaista muuttujan $x$ arvoa, jolla funktio saa arvon nolla eli $f(x) = 0$.
+                    </p>
+                </div>
+
+                <p>
+                    Esimerkiksi alla olevan kuvan funktiolla $f$ on yksi nollakohta $x = 3$. 
+                </p>
+                <img src="/kurssit/mab2/kuvat/MAB2kuva005.png" max-width: 100%; width: auto; height: auto;/>
+                <p>
+                    Toisin sanottuna $f(x) = 0$, jos ja vain jos $x = 3$. Siis funktio saa arvon nolla, jos ja vain jos muuttujan arvo on 3.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="45d866cd-77fd-405b-a1c9-2be13cc11e50">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t107">
+                                Funktion nollakohdat
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t107" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa2/kuvat/EAk4.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/EAk5.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">
+                        <p style="clear: both;"></p>
+                        <p>
+                            <img src="/kurssit/maa2/kuvat/EAk6.png" style="float: left; width: 40%; margin-left: 9%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="/kurssit/maa2/kuvat/EAk7.png" style="float: left; width: 40%; margin-left: 1%; margin-right: 9%; margin-bottom: 0.5em;">  </p>
+                        <p style="clear: both;"></p>
+                        <p> Päättele, mitä ovat funktioiden nollakohdat kuvissa A-D.
+                        </p>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t107_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t107_v" class="collapse">
+                        <ol class="a">
+                            <li> Nollakohta $x = -2$. </li>
+                            <li> Nollakohta $x = 2$. </li>
+                            <li> Nollakohta $x = 0$. </li>
+                            <li> Nollakohta $x = -0{,}5$. Huomaa, että symmetrian avulla voi päätellä, että nollakohta on tasan $-0{,}5$. </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl1">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl1b">
+                    Lineaarinen riippuvuus
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku1kpl1b" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Ensimmäisen asteen polynomifunktioita voidaan käyttää monien arkisten ilmiöiden kuvaamiseen ja tutkimiseen. Seuraavassa tehtävässä on yksi esimerkki tällaisesta tilanteesta.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="45d866cd-77fd-405b-a1c9-2be13cc11e50">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t126">
+                                Lineaarinen riippuvuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t126" class="collapse">
+                        <p>
+                            Puhelinliittymän kuukausimaksu on 6 euroa ja puhelut maksavat 0,055 euroa/minuutti.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Kuinka paljon liittymä maksaa, jos kuukauden puheaika on 150 minuuttia?
+                            </li>
+                            <li>
+                                Muodosta funktio $f(x)$, joka ilmaisee liittymän kokonaiskustannukset kuukaudessa, jos puheaika on $x$ minuuttia.
+                            </li>
+                            <li>
+                                Piirrä funktion $f(x)$ kuvaaja koordinaatistoon esimerkiksi Geogebralla. 
+                            </li>
+                            <li>
+                                Muuta $x$- ja $y$-akselien asteikkojen suhde sopivaksi (esim. 10:1), jotta voit tutkia graafisesti, kuinka paljon puheaikaa saa 20,00 eurolla. Anna vastaus minuutin tarkkuudella.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t126_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t126_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $6 + 0{,}055 \cdot 150 = 14{,}25$ eli liittymä maksaa kuukaudessa 14,25 euroa, jos puheaika on 150 minuuttia.
+                                </li>
+                                <li>
+                                    $f(x) = 6 + 0{,}055x$
+                                </li>
+                                <li> Kuvaaja:
+                                    <br>
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva046.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li>
+                                    Kuva, jossa $x$- ja $y$-akselien suhde on 10:1, ja kuvaa on zoomattu:
+                                    <br>
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva047.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Kuvaajasta voidaan lukea, että 20,00 eurolla saa puheaikaa 254 minuuttia. Seuraava minuutti korottaa hinnan jo yli 20 euron.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisessä tehtävässä tarkasteltiin kahta suuretta: hintaa ja puheaikaa. <em>Suure</em> tarkoittaa ominaisuutta, joka voidaan mitata tai laskea tai muuten määrittää. Suure ilmaistaan lukuarvon ja yksikön avulla: puheaika on 150 min.  
+                </p>
+                <p>
+                    Tehtävässä havaittiin, että puheajan ja hinnan välistä riippuvuutta voidaan kuvata suoralla. Tämä havainto voidaan ottaa lähtökohdaksi, kun sovitaan, mitä tarkoitetaan sillä, että suureet riippuvat toisistaan lineaarisesti.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: LINEAARINEN RIIPPUVUUS</h3>
+                    <p>
+                        Suureet $x$ ja $y$ riipuvat toisistaan <em>lineaarisesti</em>, jos niiden välinen riippuvuus voidaan kuvata yhtälöllä 
+                        $$y = ax + b,$$
+                        missä $a \neq 0$. 
+                    </p>
+                </div>
+
+                <p>
+                    Lineaarista riippuvuutta kuvaa siis koordinaatistossa suora, jonka kulmakerroin on nollasta poikkeava. Lineaarista riippuvuutta voidaan mallintaa myös ensimmäisen asteen polynomifunktion 
+                    $$f(x) = ax + b$$
+                    avulla, sillä sen kuvaaja on aina tällainen suora.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="1ab47d7f-9981-4fb4-9061-52a4ec864117">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t125">
+                                Lineaarinen riippuvuus graafisesti
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t125" class="collapse">
+                        <p>
+                            Päättele kuvaajista, riipuvatko suureet $x$ ja $y$ toisistaan lineaarisesti. Selitä omin sanoin.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva031.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva049.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva048.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t125_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t125_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Suureet $x$ ja $y$ riippuvat toisistaan lineaarisesti. Niiden välistä riippuvuutta kuvaa origon kautta kulkeva suora, joka on muotoa $y = ax$. Kulmakerroin $a = 0{,}5$.
+                                </li>
+                                <li>
+                                    Suureet $x$ ja $y$ eivät riipu toisistaan lineaarisesti, koska kuvaaja ei ole suora.
+                                </li>
+                                <li>
+                                    Suureet $x$ ja $y$ riippuvat toisistaan lineaarisesti, sillä niiden välistä riippuvuutta kuvaa suora. Kulmakerroin $a = -2/3$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="fa2e1eed-e25c-4a7a-b684-1ca182cce405">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t124">
+                                Lineaarinen riippuvuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t124" class="collapse">
+                        <p>
+                            Taksimatkan hintaa (euroina) Helsingissä lauantai-iltana klo 19 kuvaa funktio 
+                            $$
+                            f(x) = 9{,}0 + 1{,}6x,
+                            $$
+                            missä $x$ on matkan pituus kilometreinä. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Laske $f(15)$ ja selitä omin sanoin, mitä tulos tarkoittaa.
+                            </li>
+                            <li>
+                                Piirrä funktion $f$ kuvaaja koordinaatistoon ja selvitä sen avulla, kuinka pitkän matkan taksilla voi ajaa 49 eurolla.
+                            </li>
+                            <li>
+                                Mikä on taksimatkan perusmaksu, jonka asiakas joutuu maksamaan matkan pituudesta riippumatta? Miten se näkyy funktion $f$ lausekkeessa? Entä kuvaajassa?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t124_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t124_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                                $f(15) = 9 + 1{,}6 \cdot 15 = 33$, joten 15 kilometrin taksimatka maksaa 33 euroa. 
+                            </li>
+                            <li>
+                                Jos käytettävissä on 49 euroa, taksilla voi ajaa 25 km:
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva050.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                Perusmaksu on 9,00 euroa. Se näkyy funktion lausekkeessa vakiona. Kuvaajassa perusmaksu on se korkeus, jolla kuvaaja leikkaa $y$-akselin:
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva051.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Käytännössä suureiden lineaarinen riippuvuus voidaan tunnistaa muodostamalla funktio, joka ilmaisee, miten toinen suure saadaan laskettua, jos toinen tunnetaan. Jos näin syntynyt funktio on ensimmäisen asteen polynomifunktio, riippuvat suureet toisistaan lineaarisesti.
+                </p>
+            </div>
+
+
+            <div class="tehtavat">
+                <div class="tehtava" id="f529c939-d0dc-4223-a41c-9b4ed4481ea0">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t123">
+                                Lineaarinen riippuvuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t123" class="collapse">
+                        <p>
+                            Perusterveen lapsen laskimonsisäisen nesteytyksen tarve arvoidaan perinteisesti käytetyn mallin mukaan seuraavasti: Jos lapsen paino on 10-20 kg, tarvitaan nestettä tunnissa 40 ml ja lisäksi 2 ml/kg jokaista 10 kg ylittävää kilogrammaa kohti. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Kuinka paljon nestettä tarvitsee tunnin aikana lapsi, joka painaa 13 kg?
+                            </li>
+                            <li>
+                                Muodosta funktio $f(x)$, joka ilmaisee tunnissa tarvittavan nestemäärän, kun lapsen paino on $10 + x$ kilogrammaa.
+                            </li>
+                            <li>
+                                Piirrä funktion $f$ kuvaaja. Minkä painoisen lapsen nesteytyksen tarve on 50 ml tunnissa?
+                            </li>
+                            <li>
+                                Kuvaajasta näkyy, miten tippapussin nestemäärä (ml) riippuu ajasta (h). Kysymyksessä on 15 kg painava lapsi. Milloin tippapussi on tyhjä? Kuinka paljon nestettä tippapussissa oli alunperin?
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva053.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t123_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t123_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Lapsi tarvii nestettä $40 + 3 \cdot 2 = 46$ millilitraa.
+                                </li>
+                                <li>
+                                    $f(x) = 40 + 2x$
+                                </li>
+                                <li>
+                                    Kuvaajasta nähdään, että 50 ml nestettä tunnissa tarvitsee lapsi, joka paino on $10 + 5 = 15$ kg.
+                                    <br>
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva052.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li>
+                                    Tippapussi on tyhjä 10 tunnin kuluttua. Nestettä oli alunperin 500 ml.
+                                    <br>
+                                    <img src="/kurssit/mab2/kuvat/MAB2kuva054.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl1b">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl3">
+                    Polynomien laskutoimituksia
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku1kpl3" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa palautetaan mieleen, miten polynomeilla lasketaan. Polynomi tarkoittaa lauseketta, joka on muodostettu muuttujista (eli kirjaimista) ja vakioista (eli luvuista) käyttämällä yhteen-, vähennys- ja kertolaskua. Esimerkiksi
+                    $$2x^3-5x^2 + 8x -3$$
+                    on polynomi, samoin
+                    $$7x^4-9.$$
+                    Polynomissa voi olla myös useampia muuttujia. Esimerkiksi
+                    $$5xy^2-3x+5y^3-3$$
+                    on kahden muuttujan polynomi. Tällä kurssilla keskitytään yhden muuttujan polynomeihin.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="f7f5da32-0311-4508-b452-59a246322bb7">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t108">
+                                Polynomit
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t108" class="collapse">
+                        <p> Mitkä seuraavista väitteistä ovat oikein? Perustele vastauksesi omin sanoin ja korjaa samalla väärät väitteet oikeiksi. Kertaa tarvittaessa polynomeihin liittyviä käsitteitä <a href="https://opetus.tv/maa/maa2/polynomien-peruskasitteet/"> Opetus.tv:n sivuilta</a>.
+                        </p>
+                        <ol class="a">
+                            <li> Polynomissa $-4x^2+8x-3$ on viisi termiä.</li>
+                            <li> Polynomin $7x^4-6x^3+4x$ toisen asteen termin kerroin on nolla.</li>
+                            <li> Polynomin $x^7-x+6$ aste on kolme.</li>
+                            <li> Polynomin $x^3-9x^2+4$ vakiotermi on $4$.</li>
+                            <li> Polynomi $3x^5-x^2$ on monomi.</li>
+                            <li> Lauseke $\dfrac{x^2}{4}-\dfrac{x}{2}$ on binomi.
+                            </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t108_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t108_v" class="collapse">
+                            <ol class="a">
+                                <li> Väärin, polynomissa on kolme termiä. </li>
+                                <li> Oikein, sillä sama polynomi voidaan kirjoittaa $7x^4-6x^3 + 0x^2 +4x$. </li>
+                                <li> Väärin, polynomin aste on 7. </li>
+                                <li> Oikein. </li>
+                                <li> Väärin, tämä polynomi on binomi. Monomiksi sanotaan polynomia, jossa on vain yksi termi. </li>
+                                <li> Oikein, sillä tämä lauseke voidaan kirjoittaa muodossa $\frac{1}{4}x^2 - \frac{1}{2}x$.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Polynomien yhteen- ja vähennyslaskussa yhdistetään samaa astetta olevat termit. Seuraavat laskut havainnollistavat ideaa:
+                </p>
+                <p>
+                    Reppureissaaja löytää lompakostaan 35 euroa ja 25 puntaa. Hänen kaverillaan on puolestaan taskussaan 15 euroa ja 7 puntaa. Kuinka paljon rahaa kaveruksilla on yhteensä?
+                    \begin{align*}
+                    &\quad (35 \,€ + 25 \,£)
+                    + (15 \,€ + 7 \,£) \\
+                    &= 50 \,€ + 32 \,£.
+                    \end{align*}
+                    Tässä laskettiin eurot yhteen keskenään ja punnat yhteen keskenään. Yhdistettiin siis ne luvut, joilla kirjainosa oli sama.
+                </p>
+                <p>
+                    Paluumatkalla kaverukset ostavat tuliaisia ja käyvät syömässä. Tähän kuluu yhteensä 40 euroa ja 27 puntaa. Kuinka paljon rahaa jää jäljelle?
+                    \begin{align*}
+                    &\quad (50 \,€ + 32 \,£) \textcolor{red}{-} (40 \,€ + 27 \,£) \\
+                    &= 50 \,€ + 32 \,£ \textcolor{red}{-} 40 \,€ \textcolor{red}{-} 27 \,£\\
+                    &= 10 \,€ + 5 \,£.
+                    \end{align*}
+                    Huomaa, että polynomien vähennyslaskussa jälkimmäisen polynomin jokainen merkki vaihtuu.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="0c221d16-5908-4491-94dc-951213ada480">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t109">
+                                Polynomien yhteen- ja vähennyslasku
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t109" class="collapse">
+                        <p> 
+                            Muodosta ja laske polynomien $x^2+3x-6$ ja $-4x^2+x-2$
+                        </p>
+                        <ol class="a">
+                            <li> summa</li>
+                            <li> erotus.</li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t109_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t109_v" class="collapse">
+                            <ol class="a">
+                                <li> $-3x^2+4x-8$ </li>
+                                <li> $5x^2+2x-4$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="4942eee7-08ae-4418-9584-5f258e9f1ce6">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t110">
+                                Polynomien yhteen- ja vähennyslasku
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t110" class="collapse">
+                        <p> 
+                            Muodosta ja laske polynomien $4x^3-2x^2+3x+1$ ja $-3x^2-3x+2$
+                        </p>
+                        <ol class="a">
+                            <li> summa</li>
+                            <li> erotus.</li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t110_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t110_v" class="collapse">
+                            <ol class="a">
+                                <li> $4x^3-5x^2+3$ </li>
+                                <li> $4x^3+x^2+6x-1$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kun polynomia kerrotaan luvulla, kerrotaan jokainen polynomin termi erikseen samaan tapaan kuin seuraavassa laskussa:
+                </p>
+                <p>
+                    Kun reppureissaaja ja hänen kaverinsa palasivat Suomeen, he päättivät lahjoittaa viidesosan jäljelle jääneistä rahoista hyväntekeväisyyteen ja jakaa loput rahoista tasan. Kuinka paljon he lahjoittivat hyväntekeväisyyteen?
+                    \begin{align*}
+                    \frac{1}{5} (10 \,€ + 5 \,£) &= \frac{1}{5} \cdot 10 \,€ + \frac{1}{5} \cdot 5 \,£\\[1mm]
+                    &= \frac{10}{5} \,€ + \frac{5}{5} \,£\\[1mm]
+                    &= 2 \,€ + 1 \,£
+                    \end{align*}
+                    Jos molemmissa tulon tekijöissä on kirjainosa, sievennetään lopputuloksen kirjainosa potenssin määritelmän ja laskusääntöjen mukaan. Esimerkiksi monomien $-2x^3$ ja $-4x^2$ tulo on
+                    \begin{align*}
+                    -2x^3\cdot (-4x^2) &= -2 \cdot (-4) \cdot xxxxx \\
+                    &= 8x^5
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="d0fbfff4-9ac2-4364-b162-b6b8747868dd">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t111">
+                                Monomin ja polynomin tulo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t111" class="collapse">
+                        <p> Laske seuraavat tulot:
+                        </p>
+                        <ol class="a">
+                            <li> $-3x^4 \cdot 5x^2$</li>
+                            <li> $4x(x-5)$ </li>
+                            <li> $-3x^2(-4x^2+x-2)$ </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t111_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t111_v" class="collapse">
+                            <ol class="a">
+                                <li> $-15x^6$ </li>
+                                <li> $4x^2-20x$  </li>
+                                <li> $12x^4 - 3x^3 + 6x^2$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Sellaiset murtolausekkeet, joiden osoittajana on polynomi ja nimittäjänä jokin luku, ovat itsekin polynomeja. Esimerkiksi murtolauseketta
+                    \begin{align*}
+                    \frac{x-2}{5}
+                    \end{align*}
+                    voidaan muokata tekemällä jakolasku termeittäin seuraavasti:
+                    \begin{align*}
+                    \frac{x-5}{4} &= \dfrac{x}{4}-\dfrac{5}{4} = \frac{1}{4}x - \frac{5}{4}
+                    \end{align*}
+                    Huomaa, että neljällä jakaminen vastaa yhdellä neljäsosalla kertomista. Viimeisestä muodosta nähdään, että kysymyksessä on ensimmäisen asteen polynomi.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="d44652ba-3673-48b4-8129-20edc5392b7d">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t121">
+                                Murtolausekkeesta polynomiksi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t121" class="collapse">
+                        <p> 
+                            Muokkaa murtolauseke polynomiksi tekemällä jakolasku termeittäin:
+                        </p>
+                        <ol class="a">
+                            <li> $\dfrac{15x - 3}{5}$ </li>
+                            <li> $\dfrac{4x + 6}{12}$</li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t121_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t121_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Tehdään jakolasku termeittäin:
+                                    \begin{align*}
+                                    \dfrac{15x - 3}{5} &= \dfrac{15x}{5} - \dfrac{3}{5} \\[1mm]
+                                    &= 3x - \dfrac{3}{5}
+                                    \end{align*}
+                                </li>
+                                <li> 
+                                    Tehdään jakolasku termeittäin ja supistetaan:
+                                    \begin{align*}
+                                    \dfrac{4x + 6}{12} &= \dfrac{4x}{12} + \dfrac{6}{12} \\[1mm]
+                                    &= \dfrac{x}{3} + \dfrac{1}{2} \\[1mm]
+                                    &= \dfrac{1}{3}x + \dfrac{1}{2}
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kun lasketaan murtolausekkeena kirjoitettujen polynomien summia ja erotuksia, pitää lausekkeet laventaa samannimisiksi samaan tapaan kuin murtoluvuilla laskettaessa. Lisäksi pitää huomata, että miinusmerkki murtolausekkeen edessä vaikuttaa koko osoittajaan. Esimerkiksi
+                    \begin{align*}
+                    \frac{5x-7}{2}\textcolor{red}{-}\frac{x-4}{3} &= \frac{\textcolor{blue}{3}(5x-7)}{\textcolor{blue}{3} \cdot 2}\textcolor{red}{-}\frac{\textcolor{blue}{2}(x-4)}{\textcolor{blue}{2} \cdot 3} \\[1mm]
+                    &= \frac{3(5x-7)}{6}\textcolor{red}{-}\frac{2(x-4)}{6} \\[1mm]
+                    &= \frac{3(5x-7)\textcolor{red}{-}2(x-4)}{6} \\[1mm]
+                    &= \frac{15x-21\textcolor{red}{-}2x\textcolor{red}{+}8}{6} \\[1mm]
+                    &= \frac{13x-13}{6} \\[1mm]
+                    &= \frac{13}{6}x - \frac{13}{6}
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="ea1bf31b-f515-43a6-a116-4351bb5ad7ce">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t122">
+                                Polynomien yhteen- ja vähennyslasku
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t122" class="collapse">
+                        <p> 
+                            Sievennä seuraavat lausekkeet. Huomaa, että murtolausekkeet ovat jo valmiiksi samannimisiä. 
+                        </p>
+                        <ol class="a">
+                            <li> $\dfrac{8x-11}{3} + \dfrac{4x - 7}{3}$ </li>
+                            <li> $\dfrac{7-5x}{8} - \dfrac{3x - 5}{8}$ </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t122_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t122_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    \begin{align*}
+                                    \dfrac{8x-11 + 4x - 7}{3} &= \dfrac{12x - 18}{3} \\[1mm]
+                                    &= 4x - 6
+                                    \end{align*}
+                                </li>
+                                <li> 
+                                    \begin{align*}
+                                    \dfrac{7-5x-(3x-5)}{8} &= \dfrac{7-5x-3x+5}{8} \\[1mm]
+                                    &= \dfrac{12-8x}{8} \\[1mm]
+                                    &= \dfrac{12}{8} - \dfrac{8x}{8} \\[1mm]
+                                    &= \dfrac{3}{2} - x  
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="0f8ad3af-ba53-48c7-82c2-db542c861c70">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t112">
+                                Polynomien yhteen- ja vähennyslasku
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t112" class="collapse">
+                        <p> 
+                            Laske 
+                        </p>
+                        <ol class="a">
+                            <li> $\dfrac{3x+1}{2} + \dfrac{x-4}{5}$ </li>
+                            <li> $\dfrac{3x+1}{2} - \dfrac{x-4}{5}$</li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t112_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t112_v" class="collapse">
+                            <ol class="a">
+                                <li> $\dfrac{17x-3}{10} = \dfrac{17}{10}x - \dfrac{3}{10}$ </li>
+                                <li> $\dfrac{13x+13}{10} = \dfrac{13}{10}x + \dfrac{13}{10}$  </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl3">
+                    Sulje kappale
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl4">
+                     Ensimmäisen asteen yhtälö
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku1kpl4" class="collapse">
+            
+            <div class="teoria">
+                <p>
+                    Kun tutkitaan, missä kohdassa ensimmäisen asteen polynomifunktio saa tietyn arvon, päädytään ensimmäisen asteen yhtälöön. Esimerkiksi jos halutaan tietää, missä kohdassa funktio $f(x) = 2x + 1$ saa arvon $4$, päädytään tutkimaan yhtälöä
+                    $$f(x) = 4$$
+                    eli yhtälöä
+                    $$2x + 1 = 4.$$
+                    Tämä yhtälö voidaan ratkaista graafisesti piirtämällä funktion $f(x) = 2x + 1$ kuvaaja koordinaatistoon ja katsomalla, mikä kuvaajan piste on korkeudella 4:
+                <br>
+                    <img src="/kurssit/mab2/kuvat/MAB2kuva006.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                    Piirroksesta nähdään, että kuvaajan piste on korkeudella 4 kohdassa $x = 1{,}5$. Yhtälön ratkaisu on siis $x = 1{,}5$.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="810408a8-a087-47e7-881f-e292b74ebea8">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t113">
+                                Ensimmäisen asteen yhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t113" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista ensimmäisen asteen yhtälö
+                            $$-3x - 1 = 5$$
+                            graafisesti samaan tapaan kuin edellisessä esimerkissä.
+                        <ol class="a">
+                            <li> Piirrä koordinaatistoon funktion $f(x) = -3x-1$ kuvaaja ja tutki, missä kohdassa kuvaajan piste on korkeudella 5.</li>
+                            <li> Mikä on yhtälön ratkaisu?</li>
+                            <li> Tarkista tulos sijoittamalla se alkuperäisen yhtälön vasemmalle puolelle. Saatko tulokseksi yhtälön oikean puolen eli luvun $5$?</li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t113_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB2t113_v" class="collapse">
+                           <ol class="a">
+                                <li> <img src="/kurssit/mab2/kuvat/MAB2kuva007.png" max-width: 100%; width: auto; height: auto;/></li>
+                                <li> Yhtälön ratkaisu on $x = -2$.</li>
+                                <li> Kyllä, sillä $-3 \cdot (-2) -1 = 6 - 1 = 5$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
+                <!-- <div class="definition">
+                    <h3>MÄÄRITELMÄ: ENSIMMÄISEN ASTEEN YHTÄLÖ</h3>
+                    <p>
+                        <em>Ensimmäisen asteen yhtälö</em> tarkoittaa yhtälöä, joka voidaan esittää muodossa
+                        $$ax + b = 0,$$
+                        missä $a \neq 0$.
+                    </p>
+                </div> -->
+
+                <p>
+                    Ensimmäisen asteen yhtälöitä ovat sellaiset yhtälöt, jotka voidaan muokata muotoon
+                    $$
+                    ax + b = 0,
+                    $$
+                    missä $a \neq 0$. Tällaisen yhtälön ratkaisut ovat samat kuin ensimmäisen asteen polynomifunktion $$f(x) = ax + b$$ nollakohdat.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="316df42a-93b0-44b3-956a-b8a44a6669d3">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t117">
+                                Funktion nollakohdat
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t117" class="collapse">
+                        <img src="/kurssit/mab2/kuvat/MAB2kuva008.png" max-width: 100%; width: auto; height: auto;/>
+                        <p>
+                            Yllä on näkyvissä ensimmäisen asteen polynomifunktion 
+                            $$
+                            f(x) = -\dfrac{2}{3}x + \dfrac{8}{3}
+                            $$
+                            kuvaaja. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Päättele kuvaajan avulla, mikä on yhtälön
+                                $$
+                                -\dfrac{2}{3}x + \dfrac{8}{3} = 0
+                                $$
+                                ratkaisu.
+                            </li>
+                            <li>
+                                Tarkista ratkaisu sijoittamalla se yhtälön vasemmalle puolelle.
+                            </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t117_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t117_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Yhtälön 
+                                    $$
+                                    -\dfrac{2}{3}x + \dfrac{8}{3} = 0
+                                    $$
+                                    ratkaisu on funktion $f$ nollakohta $x = 4$. 
+                                </li>
+                                <li>
+                                    Jos $x = 4$, yhtälön vasen puoli on
+                                    $$
+                                    -\dfrac{2}{3} \cdot 4 + \dfrac{8}{3} = -\dfrac{8}{3} + \dfrac{8}{3} = 0.
+                                    $$
+                                    Yhtälön vasen ja oikea puoli ovat siis yhtä suuret. Tämä tarkoittaa, että $x = 4$ on todellakin yhtälön ratkaisu.
+                                </li>
+                            </ol>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+
+                <p>
+                    Seuraavan määritelmän avulla voi aina tarkistaa, onko jokin luku yhtälön ratkaisu. Tarkistus on tehty näin myös edellisissä tehtävissä.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: YHTÄLÖN RATKAISU</h3>
+                    <p>
+                        Yhtälön <em>ratkaisu</em> eli <em>juuri</em> tarkoittaa lukua, joka muuttujan paikalle sijoitettuna tekee yhtälön vasemmasta ja oikeasta puolesta yhtä suuria.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="04a9e417-ecde-457b-95ae-bd694ed4e4b3">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t114">
+                                Yhtälön ratkaisu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t114" class="collapse">
+                        <p>
+                            Tutki sijoittamalla, ovatko seuraavat luvut yhtälön
+                            $$x^2 + 6x = 8x+3$$
+                            ratkaisuja. Laske erikseen yhtälön vasemman puolen arvo ja oikean puolen arvo ja vertaa tuloksia sen jälkeen.
+                        </p>
+                        <ol class="a">
+                            <li> $3$</li>
+                            <li> $1$ </li>
+                            <li> $-1$</li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t114_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t114_v" class="collapse">
+                            <ol class="a">
+                                <li> On ratkaisu, sillä yhtälön vasen ja oikea puoli saavat saman arvon $27$. </li>
+                                <li> Ei ole ratkaisu, sillä yhtälön vasen puoli saa arvon $7$ ja oikea arvon $11$.  </li>
+                                <li> On ratkaisu, sillä yhtälön vasen ja oikea puoli saavat saman arvon $-5$. Huomaa, että yhtälön vasen puoli on $(-1)^2 + 6 \cdot (-1) = 1 - 6 = -5$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Sijoittamalla voidaan tutkia, onko jokin yksittäinen luku tarkasteltavan yhtälön ratkaisu. Usein on kuitenkin tarpeen etsiä yhtälön kaikki ratkaisut tai selvittää, onko yhtälöllä ylipäätään olemassa ratkaisua. Yhtälön ratkaiseminen tarkoittaakin sitä, että etsitään yhtälön kaikki ratkaisut. Seuraavaksi harjoitellaan tekemään tämä ensimmäisen asteen yhtälön tapauksessa.
+                </p>
+
+                <p>
+                    Kun yhtälöä muokataan, on äärimmäisen tärkeää huolehtia siitä, että sen ratkaisut eivät muutu (muuten saadaan vääriä tuloksia). On mahdollista osoittaa, että seuraavat operaatiot eivät vaikuta yhtälön ratkaisuihin, joten niitä voidaan käyttää yhtälön muokkaamiseen:
+                <ol>
+                    <li> Yhtälön molemmille puolille voidaan lisätä sama luku tai lauseke.</li>
+                    <li> Yhtälön molemmilta puolilta voidaan vähentää sama luku tai lauseke.</li>
+                    <li> Yhtälön molemmat puolet voidaan kertoa tai jakaa samalla nollasta erovalla luvulla tai lausekkeella</li>
+                </ol>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b89cd0f2-bcc6-447e-9447-9988bfca39b2">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t115">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t115" class="collapse">
+                        <ol class="a">
+                            <li> Selitä omin sanoin, mitä eroa on lausekkeilla $x+2$ ja $2x$.</li>
+                            <li> Ratkaise yhtälö $x + 2 = 10$. Mitä edellä mainituista operaatioista 1-3 käytit?</li>
+                            <li> Ratkaise yhtälö $2x = 10$. Mitä edellä mainituista operaatioista 1-3 käytit? </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t115_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t115_v" class="collapse">
+                            <ol class="a">
+                                <li> Lauseke $x + 2$ on summa ja lauseke $2x$ on tulo. </li>
+                                <li> $x = 8$. Ainakin operaatiota 2 (yhtälön molemmilta puolilta vähennettiin luku 2).
+                                <li> $x = 5$. Ainakin operaatiota 3 (yhtälön molemmat puolet jaettiin luvulla 2). </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="4d1b67b5-4c51-485f-ac91-7cd8b2b6a93a">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t116">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t116" class="collapse">
+                        <ol class="a">
+                            <li> Selitä omin sanoin, mitä eroa on lausekkeilla $4(x+8)$ ja $4x + 8$. Kumpaa voisi sanoa summaksi? Entä kumpaa tuloksi?</li>
+                            <li> Ratkaise yhtälö $4x + 8 = 88$. Mitä edellä mainituista operaatioista 1-3 käytit ensimmäisenä?</li>
+                            <li> Ratkaise yhtälö $4(x+8) = 88$. Mitä edellä mainituista operaatioista 1-3 käytit ensimmäisenä? </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t116_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t116_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Lauseke $4(x+8)$ on lausekkeiden $4$ ja $x+8$ tulo. 
+                                    <br>
+                                    Lauseke $4x + 8$ on lausekkeiden $4x$ ja $8$ summa.
+                                </li>
+                                <li> $x = 20$. Operaatiota 2 (yhtälön molemmilta puolilta vähennettiin luku $8$).
+                                <li> $x = 14$. Operaatiota 3 (yhtälön molemmat puolet jaettiin luvulla $4$). </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+
+            <div class="teoria">
+                <p>
+                    Tämän kappaleen alussa ratkaistiin graafisesti funktion kuvaajan avulla yhtälö
+                    $$2x+1 = 4.$$
+                    Jos sama yhtälö ratkaistaan yhtälöä muokkaamalla, vähennetään aluksi yhtälön molemmilta puolilta luku $1$. Näin päädytään yhtälöön
+                    $$2x = 3.$$
+                    Sen jälkeen yhtälön molemmat puolet voidaan jakaa luvulla 2. Näin päädytään yhtälöön
+                    $$x = \dfrac{3}{2}.$$
+                    Koska käytettiin vain sallittuja operaatioita, löydettiin yhtälön ratkaisu. Ratkaisun voi lisäksi aina tarkistaa sijoittamalla alkuperäiseen yhtälöön:
+                    $$
+                    2 \cdot \dfrac{3}{2} + 1 = 3 + 1 = 4.
+                    $$
+                    Yhtälön vasemmasta puolesta saatiin yhtä suuri kuin yhtälön oikeasta puolesta, joten 
+                    $$
+                    x = \dfrac{3}{2}
+                    $$
+                    on yhtälön ratkaisu.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="462628f4-913f-4a68-9862-d72e30e6265c">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t118">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t118" class="collapse">
+                        <p> Ratkaise seuraavat yhtälöt:
+                        </p>
+                        <ol class="a">
+                            <li> $3x+4 = 2x-1$</li>
+                            <li> $2-(3x-1) = 3-(8x+1)$.</li>
+                        </ol>
+                        <p>
+                            Ohje: b-kohdassa aloita poistamalla sulut yhtälön vasemmalta ja oikealta puolelta.
+                        </p>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t118_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t118_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = -5$ </li>
+                                <li> $x = -\dfrac{1}{5}$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jos yhtälössä esiintyy murtolausekkeita, kannattaa niistä yrittää hankkiutua eroon mahdollisimman nopeasti. Yleispätevä tapa on kertoa yhtälön molemmat puolet kaikkien nimittäjien tulolla. Tarkastellaan esimerkiksi yhtälöä
+                    $$
+                    \dfrac{x}{3} - \dfrac{2-x}{4} = \dfrac{x-3}{2} + 2x.
+                    $$
+                    Yhtälössä on kolme erilaista nimittäjää: luvut 3, 4 ja 2.
+                    $$
+                    \dfrac{x}{\textcolor{blue}{3} } - \dfrac{2-x}{\textcolor{blue}{4} } = \dfrac{x-3}{\textcolor{blue}{2} } + 2x.
+                    $$
+                    Muodostetaan nimittäjien tulo $\textcolor{blue}{3 \cdot 4 \cdot 2} = \textcolor{red}{24}$ ja kerrotaan yhtälön molemmat puolet sillä:
+                    $$
+                    \dfrac{\textcolor{red}{24}x}{3} - \dfrac{\textcolor{red}{24}(2-x)}{4} = \dfrac{\textcolor{red}{24}(x-3)}{2} + \textcolor{red}{24} \cdot 2x.
+                    $$
+                    Jokainen yhteenlaskettava siis kerrotaan nimittäjien tulolla, tarvittaessa käytetään sulkuja. Sen jälkeen voidaan laskea jakolaskut, jolloin päästään nimittäjistä eroon:
+                    $$
+                    8x - 6(2-x) = 12(x-3) + 48x.
+                    $$
+                    Tästä eteenpäin yhtälön ratkaisu etenee normaalisti. Ensin sievennetään yhtälön vasen ja oikea puoli:
+                    \begin{align*}
+                    8x - 12 + 6x &= 12x - 36 + 48x \\[1mm]
+                    14x - 12 &= 60x - 36 \quad \textcolor{blue}{\mid + 12} \\[1mm]
+                    14x &= 60x - 24 \quad \textcolor{blue}{\mid -60x} \\[1mm]
+                    -46x &= -24 \phantom{ {} -2} \quad \, \textcolor{blue}{\mid \, : -46} \\[1mm]
+                    x &= \dfrac{-24}{-46} = \dfrac{12}{23}.
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="99e6d2dc-1595-4774-93b4-fdfaa5c7c5e3">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t119">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t119" class="collapse">
+                        <p> Ratkaise seuraavat yhtälöt:
+                        </p>
+                        <ol class="a">
+                            <li> $\dfrac{x}{4} = x + 1$</li>
+                            <li> $\dfrac{2x-1}{3} - \dfrac{x}{2} = 5x-1$ </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t119_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t119_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = -\dfrac{4}{3}$ </li>
+                                <li> $x = \dfrac{4}{29}$. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Yhtälön ulkonäöstä ei aina voi päätellä, onko kysymyksessä ensimmäisen asteen yhtälö. Esimerkiksi yhtälö
+                    $$5x-8x + 9 = 3(3-x)$$
+                    näyttää ensimmäisen asteen yhtälöltä, koska siinä esiintyy vain muuttujan $x$ ensimmäinen potenssi. Kun yhtälön vasen ja oikea puoli sievennetään, se saadaan muotoon
+                    $$-3x + 9 = 9-3x.$$
+                    Kun yhtälön molemmilta puolilta vähennetään luku $9$, päädytään yhtälöön
+                    $$-3x = -3x.$$
+                    Tästä nähdään, että yhtälö toteutuu, sijoitetaanpa muuttujan $x$ paikalle mikä tahansa luku. Tarkastellun yhtälön ratkaisuja ovat siis kaikki reaaliluvut.
+                </p>
+                <p>
+                    Jos yhtälön molemmille puolille lisätään vielä $3x$, päädytään yhtälöön
+                    $$0 = 0.$$
+                    Tämäkin yhtälö on tosi riippumatta muuttujan $x$ arvosta. Huomataan, että kysymyksessä ei ollut ensimmäisen asteen yhtälö, sillä tarkasteltua yhtälöä ei voinut esittää muodossa $ax+b = 0$, missä $a \neq 0$.
+                </p>
+                <p>
+                    Toinen esimerkki on yhtälö
+                    $$2(x+1) = -3x+1-(2-5x).$$
+                    Kun sen vasen ja oikea puoli sievennetään, yhtälö saadaan muotoon
+                    $$2x + 2 = 2x-1.$$
+                    Kun yhtälön molemmilta puolilta vähennetään $2x$, päädytään yhtälöön
+                    $$2 = -1.$$
+                    Huomataan, että tämä yhtälö on epätosi riippumatta muuttujan $x$ arvosta. Yhtälöllä ei siis ole yhtään ratkaisua.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="e870414f-66cd-4128-9263-04720ef6b240">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t120">
+                                Yhtälön ratkaiseminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t120" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Onko edellä tarkasteltu yhtälö 
+                                $$2(x+1) = -3x+1-(2-5x)$$ 
+                                ensimmäisen asteen yhtälö? Selitä omin sanoin.
+                            </li>
+                            <li> 
+                                Ratkaise yhtälö
+                                $$3x - \frac{1-2x}{2} = 4x.$$ 
+                            </li>
+                            <li> 
+                                Ratkaise yhtälö
+                                $$\frac{2x-1}{3} - \frac{x}{2} = \frac{x-2}{6}.$$ 
+                            </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t120_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t120_v" class="collapse">
+                            <ol class="a">
+                                <li> Tämä yhtälö ei ole ensimmäisen asteen yhtälö, sillä esimerkissä nähtiin, että sitä ei voida esittää muodossa $ax + b = 0$, missä $a \neq 0$.  </li>
+                                <li> Yhtälöllä ei ole yhtään ratkaisua, sillä se on yhtäpitävä yhtälön $-1 = 0$ kanssa. Tämä yhtälö on epätosi kaikilla muuttujan $x$ arvoilla. </li>
+                                <li> Kaikki luvut ovat tämän yhtälön ratkaisuja, sillä yhtälö on yhtäpitävä yhtälön $0 = 0$ kanssa. Tämä on tosi kaikilla muuttujan $x$ arvoilla. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl4">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl5">
+                     Yhtälön sovelluksia
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku1kpl5" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Monet käytännön ongelmat voidaan selvittää muodostamalla ja ratkaisemalla sopiva yhtälö. Aluksi kannattaa koota ja jäsentää kaikki ongelmaan liittyvät tiedot esimerkiksi taulukon muotoon. Sen jälkeen kannattaa miettiä, mitä halutaan saada selville. Jos tuntemattomia on vain yksi, merkitään sitä jollakin kirjaimella. Usein käytetään kirjainta $x$, mutta muitakin kirjaimia voi käyttää.  
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="42b70519-2397-46ac-8504-33378c04a415">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t127">
+                                Yhtälö sovellustehtävässä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t127" class="collapse">
+                        <p> 
+                            Puhelinliittymien A ja B hintatiedot on koottu alla olevaan taulukkoon. Tehtävänä on selvittää, mikä kuukausittaisen puheajan pitäisi olla, jotta liittymän A hankkiminen olisi taloudellisesti kannattavampaa kuin liittymän B hankkiminen. Ajatellaan, että liittymää käytetään yhden vuoden ajan.
+                            <div align="center">
+                                    <table style="width = 95%">
+                                        <tr>
+                                            <th> Liittymä </th>
+                                            <th> Avaus (€)</th>
+                                            <th> Kk-maksu (€/kk) </th>
+                                            <th> Puhelun hinta (€/min) </th>
+                                        </tr>
+                                        <tr>
+                                            <td> A </td>
+                                            <td> 5,00 </td>
+                                            <td> 6,00 </td>
+                                            <td> 0,055 </td>
+                                        </tr>
+                                        <tr>
+                                            <td> B </td>
+                                            <td> 3,90 </td>
+                                            <td> 4,90 </td>
+                                            <td> 0,07 </td>
+                                        </tr>
+                                    </table>
+                                </div> 
+                        <ol class="a">
+                            <li>
+                                Mitkä ovat liittymän A kustannukset ensimmäisen kuukauden aikana, jos puheaika on 180 minuuttia? Entä mitkä ovat liittymän A kustannukset vuodessa, jos puheaika on 180 minuuttia joka kuukausi?
+                            </li>
+                            <li>
+                                Mitkä ovat liittymän A kustannukset vuodessa, jos puheaika on $x$ minuuttia joka kuukausi? Muodosta ja sievennä lauseke. 
+                            </li>
+                            <li>
+                                Mitkä ovat liittymän B kustannukset vuodessa, jos puheaika on $x$ minuuttia joka kuukausi? Muodosta ja sievennä lauseke. 
+                            </li>
+                            <li>
+                                Muodosta b- ja c-kohtien avulla yhtälö, josta saat ratkaistua mikä on puheaika silloin, kun kummankin liittymän kustannukset ovat samat.
+                            </li>
+                            <li>
+                                Ratkaise d-kohdan yhtälö. Mikä kuukausittaisen puheajan pitäisi olla (minuutin tarkkuudella), jotta liittymän A hankkiminen olisi taloudellisesti kannattavampaa kuin liittymän B hankkiminen?
+                            </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t127_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t127_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                                Ensimmäisessä kuussa liittymän A kustannukset ovat 20,90 euroa, jos puheaika on 180 minuuttia. Vuodessa kustannuksia kertyy 195,80 euroa.
+                            </li>
+                            <li>
+                                Liittymän A kustannukset vuodessa ovat $77 + 0{,}66x$.
+                            </li>
+                            <li>
+                                Liittymän B kustannukset vuodessa ovat $62{,}7 + 0{,}84x$.
+                            </li>
+                            <li>
+                                Yhtälö on 
+                                $$
+                                62{,}7 + 0{,}84x = 77 + 0{,}66x.
+                                $$
+                                Ratkaisuksi saadaan 
+                                $$
+                                x = \dfrac{14{,}3}{0{,}18} \approx 79{,}4.
+                                $$
+                                Kuukausittaisen puheajan pitää olla vähintään 80 minuuttia, jotta liittymän A hankkiminen on taloudellisesti kannattavampaa kuin liittymän B hankkiminen.
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jos tuntemattomia on useita, pitää niistä valita yksi, jota merkitään kirjaimella. Valinta kannattaa tehdä niin, että muut tuntemattomat voidaan ilmaista saman kirjaimen avulla. Tätä havainnollistetaan seuraavassa tehtävässä. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="ff96253f-34de-4b19-88d0-863f9f984966">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t128">
+                                Yhtälö sovellustehtävässä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t128" class="collapse">
+                        <p> 
+                            Kiia, Ida ja Elias ostivat yhdessä kuuden euron arvan. Kiia osallistui arvan ostoon yhdellä eurolla, Ida kahdella ja Elias kolmella eurolla. He päättivät, että jakavat mahdollisen voiton sijoitusten suhteessa 1 : 2 : 3. Siis Ida saa kaksi kertaa sen mitä Kiia ja Elias saa kolme kertaa sen mitä Kiia. 
+                        </p>
+                        <p>
+                            Kaikkien yllätykseksi he voittivat arvalla 9000 euroa. Tehtävänä on selvittää, kuinka monta euroa kukin saa.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä vihkoosi alla oleva taulukko. 
+                                <div align="center">
+                                    <table style="width = 95%">
+                                        <tr>
+                                            <th> Henkilö </th>
+                                            <th> Osuus </th>
+                                        </tr>
+                                        <tr>
+                                            <td> Kiia </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Ida </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Elias </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Yht. </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div> 
+                            </li>
+                            <li>
+                                Merkitse Kiian osuutta kirjaimella $x$. Mikä on Idan osuus kirjaimen $x$ avulla ilmaistuna? Entä Eliaksen osuus? Täydennä ne taulukkoon. Ilmaise osuuksien yhteismäärä kirjaimen $x$ avulla. 
+                            </li>
+                            <li>
+                                Mikä on osuuksien yhteismäärä taulukon mukaan? Mikä on osuuksien yhteismäärä euroina? Millaisen yhtälön saat?
+                            </li>
+                            <li>
+                                Ratkaise muodostamasi yhtälö. Kuinka monta euroa kukin saa?
+                            </li>
+                            <li>
+                                Miten voit tarkistaa, että saamasi tulos on järkevä? Keksi ainakin yksi tapa ja selitä omin sanoin.
+                            </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t128_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t128_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                                
+                            </li>
+                            <li>
+                                Taulukko:
+                                <div align="center">
+                                    <table style="width = 95%">
+                                        <tr>
+                                            <th> Henkilö </th>
+                                            <th> Osuus </th>
+                                        </tr>
+                                        <tr>
+                                            <td> Kiia </td>
+                                            <td> $x$ </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Ida </td>
+                                            <td> $2x$ </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Elias </td>
+                                            <td> $3x$ </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Yht. </td>
+                                            <td> $6x$ </td>
+                                        </tr>
+                                    </table>
+                                </div> 
+                            </li>
+                            <li>
+                                Osuuksien yhteismäärästä saadaan yhtälö
+                                $$
+                                6x = 9000.
+                                $$
+                            </li>
+                            <li>
+                                Yhtälön ratkaisu on $x = 1500$. Voitto pitää siis jakaa seuraavasti: Kiian osuus $x = 1500$ euroa, Idan osuus $2x = 3000$ euroa ja Eliaksen osuus $3x = 4500$ euroa. 
+                            </li>
+                            <li>
+                                Voi tarkistaa, että osuuksien summa on 9000 euroa. Lisäksi voi tarkistaa, että Idan osuus on kaksi kertaa Kiian osuus ja että Eliaksen osuus on kolme kertaa Kiian osuus.
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="tehtavat">
+                <div class="tehtava" id="7d067576-a0a2-4bf8-90e9-80b1259564cf">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB2t129">
+                                Yhtälö sovellustehtävässä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB2t129" class="collapse">
+                        <p> 
+                            Vili lastaa veneen peräkärryyn ja lähtee kuljettamaan sitä Haminasta Turkuun nopeudella 80 km/h. Emma lähtee hänen peräänsä puoli tuntia myöhemmin henkilöautolla. Tehtävänä on selvittää, kuinka kauan Emman on ajettava nopeudella 100 km/h ennen kuin hän saa Vilin kiinni. Kuinka kaukana Haminasta he silloin ovat?
+                        <ol class="a">
+                            <li>
+                                Piirrä vihkoosi alla oleva taulukko. Täydennä taulukkoon kummankin nopeus. 
+                                <div align="center">
+                                    <table style="width = 95%">
+                                        <tr>
+                                            <th> Henkilö </th>
+                                            <th> Vili </th>
+                                            <th> Emma  </th>
+                                        </tr>
+                                        <tr>
+                                            <th> Nopeus (km/h) </th>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Etäisyys (km) Haminasta, kun Emma lähtee: </th>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Etäisyys (km) Haminasta, kun Emma ollut matkalla $x$ tuntia: </th>
+                                            <td> $\phantom{ 0{,}5 \cdot 80 }$ </td>
+                                            <td> $\phantom{ 0{,}5 \cdot 80 }$ </td>
+                                        </tr>
+                                    </table>
+                                </div> 
+                            </li>
+                            <li>
+                                Kuinka kauas Vili on ehtinyt, kun Emma lähtee liikkeelle?
+                                Entä kuinka kauas Vili on ehtinyt, kun Emma on ollut matkalla $x$ tuntia? Hyödynnä tietoa Vilin tuntinopeudesta. 
+                            </li>
+                            <li>
+                                Mikä on Emman etäisyys Haminasta, kun hän lähtee liikkeelle?
+                                Entä kuinka kauas Emma on ehtinyt, kun hän on ollut matkalla $x$ tuntia? 
+                            </li>
+                            <li>
+                                Emma saavuttaa Vilin, kun heidän etäisyytensä Haminasta on yhtä suuri. Muodosta taulukon avulla sopiva yhtälö ja ratkaise se. Kuinka kauan kestää, että Emma saa Vilin kiinni?
+                            </li>
+                            <li>
+                                Kuinka kaukana Haminasta he ovat silloin?
+                            </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2t129_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="MAB2t129_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                                Taulukko:
+                                <div align="center">
+                                    <table style="width = 95%">
+                                        <tr>
+                                            <th> Henkilö </th>
+                                            <th> Vili </th>
+                                            <th> Emma  </th>
+                                        </tr>
+                                        <tr>
+                                            <th> Nopeus (km/h) </th>
+                                            <td> 80  </td>
+                                            <td> 100 </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Etäisyys (km) Haminasta, kun Emma lähtee: </th>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Etäisyys (km) Haminasta, kun Emma ollut matkalla $x$ tuntia: </th>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div> 
+                            </li>
+                            <li>
+                                Taulukko:
+                                <div align="center">
+                                    <table style="width = 95%">
+                                        <tr>
+                                            <th> Henkilö </th>
+                                            <th> Vili </th>
+                                            <th> Emma  </th>
+                                        </tr>
+                                        <tr>
+                                            <th> Nopeus (km/h)</th>
+                                            <td> 80  </td>
+                                            <td> 100  </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Etäisyys (km) Haminasta, kun Emma lähtee: </th>
+                                            <td> $0{,}5 \cdot 80 = 40$ </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Etäisyys (km) Haminasta, kun Emma ollut matkalla $x$ tuntia: </th>
+                                            <td> $40 + 80x$ </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div> 
+                            </li>
+                            <li>
+                                Taulukko:
+                                <div align="center">
+                                    <table style="width = 95%">
+                                        <tr>
+                                            <th> Henkilö </th>
+                                            <th> Vili </th>
+                                            <th> Emma  </th>
+                                        </tr>
+                                        <tr>
+                                            <th> Nopeus (km/h) </th>
+                                            <td> 80 </td>
+                                            <td> 100 </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Etäisyys (km) Haminasta, kun Emma lähtee: </th>
+                                            <td> $0{,}5 \cdot 80 = 40$ </td>
+                                            <td> $0$ </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Etäisyys (km) Haminasta, kun Emma ollut matkalla $x$ tuntia: </th>
+                                            <td> $40 + 80x$ </td>
+                                            <td> $100x$ </td>
+                                        </tr>
+                                    </table>
+                                </div> 
+                            </li>
+                            <li>
+                                Yhtälö on 
+                                $$
+                                100x = 40 + 80x.
+                                $$
+                                Ratkaisuksi saadaan $x = 2$. Emma saa siis Vilin kiinni kahden tunnin kuluttua.
+                            </li>
+                            <li>
+                                Kun Emma on ollut matkalla 2 tuntia, hänen etäisyytensä Haminasta on $2 \cdot 100 = 200$ km.
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1kpl5">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAB2luku1-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="ee9e1b85-2b54-4819-bbeb-2d980b9ef2d2">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t103">
+                            Ensimmäisen asteen polynomifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t103">
+                    <p>
+                        Mitkä seuraavista pisteistä ovat funktion $f(x) = -3x+2$ kuvaajan pisteitä? Perustele vastauksesi sopivilla laskuilla ja tarkista tuloksesi piirtämällä funktion kuvaaja.
+                    </p>
+                    <ol class="a">
+                        <li> $(0,2)$ </li>
+                        <li> $(2,-3)$ </li>
+                        <li> $(1,-1)$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t103_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t103_v" class="collapse">
+                        <ol class="a">
+                            <li> On. </li>
+                            <li> Ei ole. </li>
+                            <li> On. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="3987ac99-d922-4f82-9b3e-475999fdc5ab">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t104">
+                            Ensimmäisen asteen polynomifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t104">
+                    <p>
+                        Olkoon $f(x) = -2x+5$. Määritä
+                    </p>
+                    <ol class="a">
+                        <li> funktion $f$ arvo kohdassa nolla </li>
+                        <li> funktion $f$ nollakohta </li>
+                        <li> piste, jossa funktion $f$ kuvaaja leikkaa $x$-akselin </li>
+                        <li> piste, jossa funktion $f$ kuvaaja leikkaa $y$-akselin. </li>
+                    </ol>
+                    <p>
+                        Vertaa kohtien (a)-(d) vastauksia toisiinsa. Selitä havaintosi omin sanoin.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t104_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t104_v" class="collapse">
+                        <ol class="a">
+                            <li> $f(0) = 5$ </li>
+                            <li> $x = \dfrac{5}{2}$ </li>
+                            <li> $\left(\dfrac{5}{2}, 0\right)$ </li>
+                            <li> $(0,5)$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="3cf48ef1-5dea-4535-a9eb-b733532180b1">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t105">
+                            Ensimmäisen asteen polynomifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t105">
+                    <p>
+                        Päättele, mistä ensimmäisen asteen polynomifunktiosta $f(x) = ax + b$ on kysymys. Toisin sanottuna päättele, mitkä ovat kertoimen $a$ ja vakion $b$ arvot. Kuvaajan hahmotteleminen voi auttaa päättelyssä.
+                    </p>
+                    <ol class="a">
+                        <li> Tiedetään, että $f(3) = 3$ ja funktion $f$ kuvaaja leikkaa $y$-akselin korkeudella $-3$. </li>
+                        <li> Tiedetään, että $f(1) = 2$ ja $f(2) = -1$. </li>
+                        <li> Tiedetään, että $f(0) = 2$ ja funktiolla $f$ on nollakohta $x = 4$. </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t105_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t105_v" class="collapse">
+                        <ol class="a">
+                            <li> $f(x) = 2x-3$ </li>
+                            <li> $f(x) = -3x+5$ </li>
+                            <li> $f(x) = -\dfrac{1}{2}x + 2$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="196adec0-86be-481f-bf0b-2f1135974f17">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t116">
+                            Ensimmäisen asteen polynomifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t116">
+                    <p> 
+                        Tutki funktiota $f(x) = ax + 3$.
+                    </p>
+                    <ol class="a">
+                        <li> Määritä se vakion $a$ arvo, jolla funktion $f$ nollakohta on $x = 4{,}5$. </li>
+                        <li> Onko olemassa sellainen piste $(x,y)$, jonka kautta funktion $f$ kuvaaja kulkee aina vakion $a$ arvosta riippumatta? Perustele vastauksesi omin sanoin ja sopivien laskujen tai piirrosten avulla.</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t116_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t116_v" class="collapse">
+                        <ol class="a">
+                            <li> $a = -\dfrac{2}{3}$ </li>
+                            <li> $(0,3)$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="d1151e5d-5d68-44ef-9943-a6346aafcb65">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t118">
+                            Lineaarinen riippuvuus
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t118">
+                    <p>
+                        Erään sähköyhtiön hinnasto on seuraava: sähkön myynnin perusmaksu on 3,84 €/kk ja sähköenergian hinta on 6,55 c/kWh. 
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Kuinka suuri on kuukauden sähkölasku, jos sähkönkulutus on 230 kilowattituntia kuukaudessa?
+                        </li>
+                        <li>
+                            Muodosta funktio $f(x)$, joka ilmaisee sähkölaskun suuruuden, jos sähkönkulutus on $x$ kWh kuukaudessa.
+                        </li>
+                        <li>
+                            Kilpailevan sähköyhtiön perusmaksu on 5,99 €/kk ja sähköenergian hinta on 4,69 c/kWh. Millä sähkönkulutuksella kummankin yhtiön lähettämä sähkölasku olisi yhtä suuri? Anna vastaus kilowattitunnin tarkkuudella.
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t118_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t118_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Sähkölasku on 18,91 euroa.
+                            </li>
+                            <li>
+                                $f(x) = 0{,}0655x + 3{,}84$
+                            </li>
+                            <li>
+                                Kulutuksen pitäisi olla noin 116 kWh kuukaudessa.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="d9e19f14-2da4-4453-8f11-aca4846c0779">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t120">
+                            Lineaarinen riippuvuus
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t120">
+                    <p>
+                        Kun seurattiin paistilämpömittarin lukemia, havaittiin, että paistin sisälämpötila nousi koko ajan tasaisesti siten, että viidessä minuutissa lämpötila kohosi $2 {}^\circ\text{C}$. Kello 15 lämpömittarin lukema oli $30 {}^\circ\text{C}$.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Mikä on paistin lämpötila puolen tunnin kuluttua?
+                        </li>
+                        <li>
+                            Muodosta funktio $f(x)$, joka ilmaisee paistin lämpötilan, kun kello kolmesta on kulunut $x$ minuuttia.
+                        </li>
+                        <li>
+                            Mihin aikaan paisti on kypsä? Ohjeen mukaan se on kypsä, kun sisälämpötila on $62 {}^\circ\text{C}$.
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t120_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t120_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Lämpötila on $42 {}^\circ\text{C}$.
+                            </li>
+                            <li>
+                                $f(x) = 30 + \dfrac{2}{5}x$ eli $f(x) = 30 + 0{,}4x$
+                            </li>
+                            <li>
+                                Paisti on kypsä klo 16.20 eli 80 minuutin kuluttua.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b725b3cb-2d69-4d6b-bc11-eae9fe4d0b4a">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t121">
+                            Lineaarinen riippuvuus
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t121">
+                    <p>
+                        Yhdysvalloissa käytetään lämpötila-asteikkona yleisesti Fahrenheit-asteikkoa. Fahrenheitasteet saadaan muunnettua celsiusasteiksi yhtälön
+                        $$
+                        y = \dfrac{5}{9}(x - 32)
+                        $$
+                        avulla. Tässä $x$ on lämpötila fahrenheitasteina ja $y$ on sama lämpötila celsiusasteina ilmaistuna.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Säätiedotus lupaa San Franciscoon enimmäkseen aurinkoista säätä ja lämpötilaksi $68 {}^\circ\text{F}$. Ilmaise lämpötila celsiusasteina.
+                        </li>
+                        <li>
+                           Kuinka kylmä Alaskassa on, jos lämpötila painuu alle nollan Fahrenheit-asteikolla?
+                        </li>
+                        <li>
+                            Missä lämpötilassa Celsius- ja Fahrenheit-asteikot näyttävät samaa lukemaa?
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t121_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t121_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Lämpötila on $20 {}^\circ\text{C}$.
+                            </li>
+                            <li>
+                                Noin $-17{,}8 {}^\circ\text{C}$.
+                            </li>
+                            <li>
+                                Lämpötilassa $-40 {}^\circ\text{C}$.
+                                <br>
+                                Yhtälö on 
+                                $$
+                                x = \dfrac{5}{9}(x - 32)
+                                $$
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="14ce02f3-d7da-4d52-becd-6c214ebd1127">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t106">
+                            Polynomien laskutoimituksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t106">
+                    <p>
+                        Sievennä seuraavat lausekkeet:
+                    </p>
+                    <ol class="a">
+                        <li> $(2x + 4) + (3x-8)$ </li>
+                        <li> $(x - 7) - (2x - 2)$ </li>
+                        <li> $x + 5x^2 - 3x^2 + 3x - x^2$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t106_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t106_v" class="collapse">
+                        <ol class="a">
+                            <li> $5x - 4$ </li>
+                            <li> $-x-5$ </li>
+                            <li> $4x + x^2$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="fbd9941a-3091-4cc7-ab1b-2add4362b74b">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t107">
+                            Polynomien laskutoimituksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t107">
+                    <p>
+                        Sievennä seuraavat lausekkeet:
+                    </p>
+                    <ol class="a">
+                        <li> $7 - 3(4x-2)$ </li>
+                        <li> $2(5y + 4) + 2(y + 9)$ </li>
+                        <li> $3(x - 2x^2)-(x + x^2) + 2(x + 3x^2)$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t107_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t107_v" class="collapse">
+                        <ol class="a">
+                            <li> $-12x + 13$ </li>
+                            <li> $12y + 26$ </li>
+                            <li> $4x - x^2$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="5a3d760c-d3fa-43f0-9eb9-34beaf0a67f0">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t109">
+                            Polynomien laskutoimituksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t109">
+                    <p>
+                        Sievennä seuraavat lausekkeet:
+                    </p>
+                    <ol class="a">
+                        <li> $5x(x-3)$ </li>
+                        <li> $-4x^2(8x-7x^3)$ </li>
+                        <li> $6a(1-9b)$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t109_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t109_v" class="collapse">
+                        <ol class="a">
+                            <li> $5x^2 - 15x$ </li>
+                            <li> $-32x^3 + 28x^5$ </li>
+                            <li> $6a - 54ab$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="9107583c-1b08-4e02-8045-18f38bac4f03">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t108">
+                            Polynomien laskutoimituksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t108">
+                    <p>
+                        Muokkaa murtolauseke polynomiksi tekemällä jakolasku termeittäin:
+                    </p>
+                    <ol class="a">
+                        <li> $\dfrac{15x + 10}{5}$ </li>
+                        <li> $\dfrac{20x^2 + 8x}{2x}$ </li>
+                        <li> $\dfrac{14x^4 + 7x^2}{7x^2}$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t108_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t108_v" class="collapse">
+                        <ol class="a">
+                            <li> $3x + 2$ </li>
+                            <li> $10x + 4$ </li>
+                            <li> $2x^2 + 1$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="45cca7be-369a-4f41-af35-e6c4c707c015">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t110">
+                            Polynomien laskutoimituksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t110">
+                    <p>
+                        Laske:
+                    </p>
+                    <ol class="a">
+                        <li> $\dfrac{3x + 3}{4} - \dfrac{5x-1}{12}$ </li>
+                        <li> $\dfrac{x}{3} - \dfrac{2-x}{4}$ </li>
+                        <li> $x - \dfrac{2(x-1)}{5}$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t110_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t110_v" class="collapse">
+                        <ol class="a">
+                            <li> $\dfrac{1}{3}x + \dfrac{5}{6}$ </li>
+                            <li> $\dfrac{7}{12}x - \dfrac{1}{2}$ </li>
+                            <li> $\dfrac{3}{5}x + \dfrac{2}{5}$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="432a1570-c2e7-4578-a51d-5e383fea09c4">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t114">
+                            Ensimmäisen asteen yhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t114">
+                    <p>
+                        Ratkaise yhtälöt:
+                    </p>
+                    <ol class="a">
+                        <li> $4x - 3 = 9$ </li>
+                        <li> $6x - 15 = 3x + 12$ </li>
+                        <li> $6 - 7x = 14 - 5x$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t114_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t114_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = 3$ </li>
+                            <li> $x = 9$ </li>
+                            <li> $x = -4$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="f5ddc137-8b3d-4906-a3cb-7cdd466aad3a">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t115">
+                            Ensimmäisen asteen yhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t115">
+                    <p>
+                        Ratkaise yhtälöt:
+                    </p>
+                    <ol class="a">
+                        <li> $3x-5(2x-6) = 0$ </li>
+                        <li> $\dfrac{2x-3}{4} = \dfrac{5x-6}{7}$ </li>
+                        <li> $3x - \dfrac{x-1}{2} = 4$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t115_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t115_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = \dfrac{30}{7}$ </li>
+                            <li> $x = \dfrac{1}{2}$ </li>
+                            <li> $x = \dfrac{7}{5}$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="c26a51a2-8084-4ecb-b1e4-de94acf11b7b">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t101">
+                            Ensimmäisen asteen yhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t101">
+                    <p>
+                        Ratkaise yhtälöt
+                    </p>
+                    <ol class="a">
+                        <li>
+                            $\dfrac{x + 2}{5} = \dfrac{x-3}{6}$
+                        </li>
+                        <li>
+                            $\dfrac{2}{3}x - 1 = \dfrac{2}{3}$
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2014/1a &amp; S2012/1b]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t101_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t101_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = -27$ </li>
+                            <li> $x = \dfrac{5}{2}$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="aa7e421d-bbcf-4e21-8f11-791822947f8f">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t117">
+                            Ensimmäisen asteen yhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t117">
+                    <p>
+                        Ratkaise yhtälöt
+                    </p>
+                    <ol class="a">
+                        <li>
+                            $3(2x-1) = 3x - 3$
+                        </li>
+                        <li>
+                            $4(3x+1) = 12x + 4$
+                        </li>
+                        <li>
+                            $2(5-x) = 5 - 2x$
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t117_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t117_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = 0$ </li>
+                            <li> Kaikki luvut toteuttavat yhtälön. </li>
+                            <li> Mikään luku ei toteuta yhtälöä eli yhtälöllä ei ole ratkaisua. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="9b2e21c1-adb9-4ffe-b87b-46162f6ad5cb">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t111">
+                            Yhtälön sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t111">
+                    <p>
+                        Anna, Benjamin ja Elisa jakavat 1800 euroa niin, että Anna saa 25 % enemmän kuin Benjamin ja Elisa saa 20 % enemmän kuin Anna. Kuinka paljon rahaa kukin saa?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t111_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t111_v" class="collapse">
+                        <p>
+                            Anna 600 €, Benjamin 480 € ja Elisa 720 €.
+                            <br>
+                            Jos Benjaminin saamaan rahasummaa merkitään kirjaimella $x$, yhtälö on 
+                            $$
+                            x + 1{,}25x + 1{,}20 \cdot 1{,}25x = 1800
+                            $$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="c98d19d6-de5b-4b24-a663-c82329c836c4">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t112">
+                            Yhtälön sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t112">
+                    <p>
+                        Suorakulmion muotoinen kenttä on aidattu 124 metriä pitkällä aidalla. Laske kentän pinta-ala, kun sen pituus on 8 m suurempi kuin leveys.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t112_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t112_v" class="collapse">
+                        <p>
+                            $945 \text{ m}^2$
+                            <br>
+                            Jos suorakulmion leveyttä merkitään kirjaimella $x$, saadaan yhtälö
+                            $$
+                            2x + 2(x + 8) = 124.
+                            $$
+                            Sen ratkaisuna saadaan suorakulmion leveys $x = 27$ metriä. Pituus on $x + 8 = 35$ metriä. Suorakulmion pinta-ala on sen leveyden ja pituuden tulo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="47a03141-5aa2-4f40-a488-938b8e231b53">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t113">
+                            Yhtälön sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t113">
+                    <p>
+                        Kaksi työntekijää otti urakakseen huolehtia rästiin jääneiden tilausten toimittamisen asiakkaille. Urakkapalkkioksi sovittiin 1800 euroa. Lisäksi sovittiin, että palkkio jaetaan työntekijöille heidän tekemiensä työtuntien mukaan ja viikonlopulle osuneista työtunneista saa kaksinkertaisen korvauksen. Työntekijälle A kertyi 45 työtuntia ja työntekijälle B 40 tuntia, joista 12 tuntia hän oli tehnyt viikonloppuisin. Miten urakkapalkkio piti jakaa työntekijöiden kesken?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t113_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t113_v" class="collapse">
+                        <p>
+                            Työntekijän A palkkio 835,05 euroa ja työntekijän B palkkio 964,95 euroa.
+                            <br>
+                            Jos merkitään yhden tunnin palkkiota kirjaimella $x$, saadaan yhtälö
+                            $$
+                            45x + 28x + 12 \cdot 2x = 1800.
+                            $$
+                            Tästä saadaan välivaiheiden jälkeen ratkaistua yhden tunnin palkkio 
+                            $$
+                            x = \dfrac{1800}{97} \approx 18{,}5567 \text{euroa}.
+                            $$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="f7946a09-ce51-4fb3-b783-e1777d337892">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t119">
+                            Yhtälön sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t119">
+                    <p>
+                        Kauppias maksoi tuotteesta 50 euroa. Kuinka suureksi hänen pitäisi asettaa myyntihinta, jotta hän voisi myydä tuotteen tarvittaessa 15 % alennuksella ja saada silti voittoa 10 % itse maksamastaan hinnasta?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t119_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t119_v" class="collapse">
+                        <p>
+                            Myyntihinnan pitää olla vähintään 64,71 euroa.
+                            <br>
+                            Voiton määrä on $0{,}1 \cdot 50 = 5$ euroa. Alennetun hinnan pitää siten olla 55 euroa. Jos merkitään myyntihintaa kirjaimella $x$, saadaan yhtälö
+                            $$
+                            0{,}85x = 55.
+                            $$
+                            Tästä saadaan 
+                            $$
+                            x = \dfrac{55}{0{,}85} \approx 64{,}71.
+                            $$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="tehtava" id="3987ac99-d922-4f82-9b3e-475999fdc5ab">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t102">
+                            Jotain
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t102">
+                    <ol class="a">
+                        <li>
+                            Missä pisteissä suora $y = -3x + 12$ leikkaa koordinaattiakselit?
+                        </li>
+                        <li>
+                            Laske lausekkeen
+                            $$
+                            \frac{x + 1}{y-1} + \frac{y-1}{x+1} 
+                            $$
+                            arvo, kun $x = \frac{1}{2}$ ja $y = \frac{3}{2}$.
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2013/2a &amp; S2014/1b]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t102_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t102_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Suoran ja $y$-akselin leikkauspiste on $(0,12)$. Suoran ja $x$-akselin leikkauspiste on $(4,0)$. 
+                            </li>
+                            <li> Kysytty arvo on $\dfrac{10}{3}$. </li>
+                            
+                        </ol>
+                    </div>
+                </div>
+            </div> -->
+
+            
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1-tehtavasarja2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                    
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAB2luku1-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="3c5d9f4d-df14-487d-8996-f45066d283b2">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t101">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t101">
+                    <p>
+                        Mauna Loa -observatoriossa Havaijilla on mitattu ilmakehän hiilidioksidipitoisuutta jo vuodesta 1958 alkaen. Maaliskuussa 1958 mittaukset osoittivat ilmakehän hiilidioksidipitoisuudeksi noin 316 ppm (parts per million eli miljoonasosaa). Maaliskuussa vuonna 2016 pitoisuudeksi mitattiin noin 405 ppm.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Kuinka monta prosenttia hiilidioksidin määrä ilmakehässä on lisääntynyt edellä mainittujen mittauskertojen välillä?
+                        </li>
+                        <li>
+                            Tutkija mallintaa hiilidioksidipitoisuuden kasvua suoralla $y = kt + 316$. Tässä $y$ kuvaa hiilidioksidipitoisuutta (yksikkönä ppm) ja $t$ kulunutta aikaa vuoden 1958 maaliskuusta alkaen (yksikkönä vuosi). Määritä se suoran kulmakerroin $k$, jolla malli antaa mitatun tuloksen maaliskuussa 2016.
+                        </li>
+                        <li>
+                            Minkä arvon b-kohdan mallisi antaa maaliskuun 2020 hiilidioksidipitoisuudelle?
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2018/5]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t101_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t101_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Noin 28 %.
+                            </li>
+                            <li>
+                                Kulmakerroin $k = 1{,}53448\ldots \approx 1{,}53$.
+                            </li>
+                            <li>
+                                Noin 411 ppm.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="40f3944a-14e0-4c6f-81ec-34ba742b5f71">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t102">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t102">
+                    <p>
+                        Kahden sähköyhtiön A ja B hinnoittelu perustuu kiinteään kuukausittaiseen perusmaksuun, johon lisätään sähkön kulutuksen mukainen lisämaksu. Yhtiöiden tarjoamat hinnat selviävät alla olevasta taulukosta.
+                    </p>
+                    <div align="center">
+                        <table style="width = 95%">
+                            <tr>
+                                <th> Yhtiö </th>
+                                <th> Perusmaksu €/kk </th>
+                                <th> Yksikköhinta snt/kWh  </th>
+                            </tr>
+                            <tr>
+                                <th> A </th>
+                                <td> 4,02 </td>
+                                <td> 6,62 </td>
+                            </tr>
+                            <tr>
+                                <th> B </th>
+                                <td> 3,75 </td>
+                                <td> 7,99 </td>
+                            </tr>
+                        </table>
+                    </div> 
+                    <ol class="a">
+                        <li>
+                            Muodosta lausekkeet $a(x)$ ja $b(x)$ kummankin yhtiön tarjoaman sähkön kokonaishinnalle, kun sähköä kuluu $x$ kWh ja aikavälinä on yksi kuukausi. </li>
+                        <li>
+                            Kuinka suuri täytyisi sähkönkulutuksen olla kuukausittain, jotta kokonaishinnat olisivat samat?
+                        </li>
+                        <li>
+                            Kuinka suuri on sähkön kokonaishintojen välinen ero vuoden aikana, jos sähköä kuluu 2000 kWh vuodessa?
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2015/6]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t102_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t102_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Lausekkeet:
+                                \begin{align*}
+                                a(x) &= 0{,}0662x + 4{,}02 \\
+                                b(x) &= 0{,}0799x + 3{,}75
+                                \end{align*}
+                            </li>
+                            <li>
+                                Kuukausikulutuksen tulisi olla noin 19,7 kWh.
+                            </li>
+                            <li>
+                                Vuoden aikana yhtiö B veloittaa 24,16 euroa enemmän.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="69bb9cbb-1b6d-4ceb-a8b9-18674d92e712">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t103">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t103">
+                    <p>
+                        Alla on kolmen suoran kuvaajat. Esitä niiden yhtälöt muodossa $y = kx + b$. Perusteluita ei tarvita.
+                    </p>
+                    <img src="/kurssit/mab2/kuvat/MAB2kuva060.png" max-width: 100%; width: auto; height: auto;/>
+                    <p>
+                        [Lyhyt K2015/1]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t103_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t103_v" class="collapse">
+                        <ul>
+                            <li> Suoran 1 yhtälön on $y = 2x$. </li>
+                            <li> Suoran 2 yhtälö on $y = -x + 1$. </li>
+                            <li> Suoran 3 yhtälö on $y = -\frac{1}{2}$. </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="0e16ecbb-a7a9-4623-a707-b4be3920878b">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t104">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t104">
+                    <p>
+                        Yksinkertaistetun mallin mukaan ilman lämpötila laskee lineaarisesti korkeuden $h$ suhteen noin 11 kilometriin saakka. Merenpinnan tasolla $h = 0$ keskilämpötila on $+15$ celsiusastetta ja 11 kilometrin korkeudella $-56$ celsiusastetta.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Kuinka monta astetta ilma jäähtyy, kun noustaan 5,0 kilometrin korkeudelta 1,0 kilometriä ylöspäin?
+                        </li>
+                        <li>
+                            Määritä ilman lämpötilan lauseke $T = T(h)$ korkeuden $h$ avulla lausuttuna ja piirrä sen kuvaaja $(h,T)$-koordinaatistoon, kun $0 \leq h \leq 11 \text{ km}$.
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2015/5]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t104_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t104_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Kun noustaan 11 km, ilma jäätyy 71 astetta. Kilometrin nousua kohti ilma jäähtyy 
+                                $$
+                                \frac{71}{11} \approx 6{,}5
+                                $$
+                                astetta.
+                            </li>
+                            <li>
+                                Ilman lämpötila korkeuden funktiona on 
+                                $$
+                                T(h) = -\dfrac{71}{11}h + 15,
+                                $$
+                                missä $0 \leq h \leq 11 \text{ km}$. Kuva:
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva061.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="a8ba5f9d-6479-4223-a0c2-75de12136342">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t105">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t105">
+                    <ol class="a">
+                        <li> 
+                            Ratkaise yhtälö 
+                            $$
+                            2(x+4) - 3(x-3) = 0.
+                            $$
+                        </li>
+                        <li>
+                            Sievennä lauseke 
+                            $$
+                            \dfrac{3a - 6a^2}{3a}
+                            $$
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2013/1a &amp; 1c]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t105_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t105_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                $x = 17$
+                            </li>
+                            <li>
+                                $\dfrac{3a - 6a^2}{3a} = 1 - 2a$
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="faab46b7-4b04-4991-9f63-ca121b189e39">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t106">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t106">
+                    <p>
+                        Yhtiö valmistaa kännykkäkoteloita, joiden valmistuskustannukset ovat 12,30 € kappale. Tämän lisäksi yhtiön kiinteät kustannukset ovat 98 000 euroa. Koteloita myydään aluksi 17,99 eurolla, mutta viimeiset 25 % myydään varaston tyhjentämiseksi 14,00 eurolla kappale. Oletetaan, että yhtiö saa myytyä kaikki kotelot. Tehtävässä ei oteta huomioon verotusta.
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Muodosta lauseke, joka kuvaa yhtiön kokonaiskustannuksia koteloiden valmistusmäärän $x$ avulla lausuttuna.
+                        </li>
+                        <li>
+                            Muodosta lauseke, joka kuvaa yhtiön saamaa voittoa valmistusmäärän $x$ avulla lausuttuna.
+                        </li>
+                        <li>
+                            Kuinka monta koteloa yhtiön täytyy valmistaa, jotta kiinteät kustannukset saadaan katettua yllä mainitulla hinnoittelustrategialla?
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2013/14]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t106_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t106_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                $98\,000 + 12{,}30x$
+                            </li>
+                            <li>
+                                $4{,}6925x - 98000$
+                            </li>
+                            <li>
+                                Koteloita täytyy valmistaa vähintään 20 885 kappaletta.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="4f85b69e-ce09-4138-90a3-042ed3ac7c46">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t107">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t107">
+                    <p>
+                        Aikuisen ihmisen sääriluun pituus $y$ riippuu henkilön pituudesta $x$ kaavojen  
+                        \begin{align*}
+                        y &= 0{,}43x - 27 \qquad \text{(nainen)} \\
+                        y &= 0{,}45x - 31 \qquad \text{(mies)}
+                        \end{align*}
+                        mukaisesti, kun yksikkönä on senttimetri.
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Arkeologi löytää naisen sääriluun, joka on 41 cm pitkä. Kuinka pitkä nainen oli?
+                        </li>
+                        <li>
+                            Kaivauksissa löytyneen miehen pituudeksi arvioidaan 175 cm. Miehen läheltä löytyy sääriluu, jonka pituus on 42 cm. Onko kyseessä saman henkilön sääriluu?
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2012/11]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t107_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t107_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Nainen oli n. 158 cm pitkä.
+                            </li>
+                            <li>
+                                Mallin mukaan miehen sääriluun pituus olisi n. 48 cm, joten kyseessä ei ole saman henkilön sääriluu.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="955f7ad9-0f98-4e42-9fea-edfedd6b39bc">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t108">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t108">
+                    <ol class="a">
+                        <li> 
+                            Funktion 
+                            $$
+                            f(x)  = \dfrac{3}{2}x + b
+                            $$
+                            nollakohta on $2$. Määritä vakion $b$ arvo.
+                        </li>
+                        <li>
+                            Missä pisteessä a-kohdan funktion kuvaaja leikkaa $y$-akselin?
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2012/4a &amp; 4b]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t108_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t108_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                $b = -3$
+                            </li>
+                            <li>
+                                Kuvaaja leikkaa $y$-akselin pisteessä $(0,-3)$.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="f2cd5577-331c-41c7-a9b2-64d425a58fee">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t109">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t109">
+                    <p>
+                        Ludwig van Beethoven, Wolfgang Amadeus Mozart ja Johann Sebastian Bach elivät yhteensä 156 vuotta. Bach eli yhdeksän vuotta vanhemmaksi kuin Beethoven, Mozart kuoli 21 vuotta nuorempana kuin Beethoven. Kuinka vanhoiksi säveltäjät elivät?
+                        <br>
+                        [Lyhyt S2011/4]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t109_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t109_v" class="collapse">
+                        <p>
+                            Beethoven eli 56-vuotiaaksi, Mozart 35-vuotiaaksi ja Bach 65-vuotiaaksi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b8f0c790-b039-4088-95cc-f8a600b8a816">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t110">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t110">
+                    <ol class="a">
+                        <li>
+                            Määritä lausekkeen
+                            $$
+                            x(4x - 2) - 3x(x-1) - x
+                            $$
+                            arvo, kun $x = -1$.
+                        </li>
+                        <li>
+                            Muuttujan arvo $x = 2$ toteuttaa yhtälön 
+                            $$
+                            x(x-5) + ax = 2.
+                            $$
+                            Määritä kerroin $a$.
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2015/2a &amp; 2c]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t110_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t110_v" class="collapse">
+                        <ol class="a">
+                            <li> Kysytty arvo on $1$. </li>
+                            <li> $a = 4$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="3bc75e9a-1dde-4f03-b2da-5df064d04f2f">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t111">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t111">
+                    <ol class="a">
+                        <li>
+                            Suoran kulmakerroin on $-\frac{1}{3}$, ja suora kulkee pisteen $(-1,2)$ kautta. Esitä suoran yhtälö muodossa
+                            $$
+                            y = kx + b.
+                            $$
+                        </li>
+                        <li>
+                            Millä muuttujan $x$ arvolla lausekkeet $2x + 3$ ja $-(x+3)$ saavat saman arvon?
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt K2009/3a &amp; S2013/1b]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t111_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t111_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                $-\dfrac{1}{3}x + \dfrac{5}{3}$ 
+                            </li>
+                            <li>  
+                                Lausekkeet saavat saman arvon, jos ja vain jos $x = -2$.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="339fa55e-3927-426c-8be8-3b05698073fd">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t112">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t112">
+                    <p>
+                        Kaupunkeja A ja B yhdistää 170 kilometriä pitkä maantie. Alpo lähtee A:sta klo 8.20 ajamaan kohti B:tä keskinopeudella 120 km/h. Berit lähtee B:stä klo 8.35 ajamaan kohti A:ta keskinopeudella 105 km/h. Kuinka kaukana A:sta ja mihin aikaan Alpo ja Berit kohtaavat? Muodosta sopiva yhtälö ja ratkaise se.
+                        <br>
+                        [Lyhyt K2009/5]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t112_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t112_v" class="collapse">
+                        <p>
+                            Alpo ja Berit kohtaavat klo 9.12, kun he ovat 104,7 km etäisyydellä kaupungista A.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="266fd118-de0c-4981-95c2-f75379d0c39b">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t113">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t113">
+                    <p>
+                        Millä vakion $a$ arvoilla suorat $y = −3x + 2$ ja $y = ax + 6$ erottavat $x$-akselista janan, jonka pituus on $3$?
+                        <br>
+                        [Lyhyt S2008/8]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t113_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t113_v" class="collapse">
+                        <p>
+                            Arvolla $a = −\frac{18}{11}$ ja arvolla $a = \frac{18}{7}$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b237630a-a228-40fc-9e01-bd89c458c8ef">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t114">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t114">
+                    <p>
+                        Henkilö osti 150 gramman erän maustettua teetä 3,30 eurolla ja halvempaa mustaa teetä, jonka hinta oli 5,50 e/kg. Kuinka monta grammaa mustaa teetä tulisi maustetee-erään lisätä, jotta sekoituksen kilohinta olisi puolet maustetun teen kilohinnasta?
+                        <br>
+                        [Lyhyt S2007/5]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t114_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t114_v" class="collapse">
+                        <p>
+                            Mustaa teetä tulisi lisätä 300 g.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="898ffbd1-9a18-4777-875a-46ad71c3246e">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t115">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t115">
+                    <p>
+                        Täyttäessään 20 vuotta Laura oli 25 prosenttia vanhempi kuin sisarensa Veera. Kuinka monta prosenttia sisartaan vanhempi Laura on täyttäessään 30 vuotta?
+                        <br>
+                        [Lyhyt K2007/9]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t115_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t115_v" class="collapse">
+                        <p>
+                            Laura on noin 15,4 % vanhempi kuin sisarensa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="05fcda60-463d-40f9-9a18-752022e14d93">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t116">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t116">
+                    <p>
+                        Autoilija ajoi 28 kilometriä pitkän tieosuuden nopeudella 80 km/h. Lopun matkasta hän ajoi moottoritietä pitkin. Millä keskinopeudella hän ajoi moottoritieosuuden, kun hän perille tultuaan totesi keskinopeuden koko 75 kilometrin ajomatkansa osalta olleen 100 km/h?
+                        <br>
+                        [Lyhyt K2006/6]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t116_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t116_v" class="collapse">
+                        <p>
+                            Keskinopeudella 117,5 km/h.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="e698b0d9-26c0-40c3-8b42-a501338f8e43">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t117">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t117">
+                    <p>
+                        Metsänomistaja teetti metsätöitä urakoitsijalla ja sopi alustavasti työn hinnaksi kuitupuun osalta 14 €/m<sup>3</sup> ja tukkipuun osalta 9,2 €/m<sup>3</sup>. Kuitupuuta kertyi 156 m<sup>3</sup> ja tukkipuuta 89,4 m<sup>3</sup>. Alustaviin hintoihin ei sisältynyt kuitenkaan arvonlisäveroa, vaikka metsänomistaja oli näin ymmärtänyt. Keskustelujen jälkeen osapuolet päätyivät sopimukseen, jonka mukaan urakoitsija alentaa ilmoittamiaan verottomia hintoja siten, että koko urakan osalta metsänomistajalle koituva lisämaksu tulee yhtä suureksi kuin urakoitsijan antama alennus. Kuinka paljon metsänomistaja maksoi teettämästään työstä arvonlisäveroineen? Arvonlisäveron suuruus on 22 % työn verottomasta hinnasta.
+                        <br>
+                        [Lyhyt S2004/7]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t117_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t117_v" class="collapse">
+                        <p>
+                            Metsänomistaja maksoi 3304,42 euroa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="8b06d990-a74c-4c5f-a7df-cf9c9d24163a">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t118">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t118">
+                    <p>
+                        Koulutuslinjalle hyväksytyistä 207 opiskelijasta oli naisopiskelijoita 25 % enemmän kuin miesopiskelijoita. Määritä nais- ja miesopiskelijoiden määrät muodostamalla sopiva yhtälö ja ratkaisemalla tämä.
+                        <br>
+                        [Lyhyt K2004/3]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t118_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t118_v" class="collapse">
+                        <p>
+                            Naisopiskelijoita oli 115 ja miesopiskelijoita 92.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="55fd57bc-0773-4c4b-94f6-9030c02fc3b4">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t119">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t119">
+                    <p>
+                        Ratkaise yhtälö 
+                        $$
+                        5(3x+1) - 4(3-2x) = 2x.
+                        $$
+                        Tutki, toteuttaako tämä ratkaisu myös yhtälön
+                        $$
+                        27x^3 - 54x + 17 = 0.
+                        $$
+                        [Lyhyt S2003/2]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t119_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t119_v" class="collapse">
+                        <p>
+                            Ratkaisu on $x = \frac{1}{3}$. Sijoittamalla huomataan, että se toteuttaa myös yhtälön 
+                            $$
+                            27x^3 - 54x + 17 = 0.
+                            $$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="efd22e98-1bf4-47e9-99f9-1a475fe83942">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s3t120">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s3t120">
+                    <p>
+                        Henkilöauto, jonka nopeus on 100 km/h, ryhtyy ohittamaan edessään olevaa nopeudella 80 km/h ajavaa henkilöautoa. Ohittaja siirtyy vasemmalle kaistalle ollessaan 40 metrin päässä ohitettavasta ja palaa oikealle kaistalle 60 metrin päähän ohitettavan eteen. Kuinka pitkän matkan ohittaja ajoi vasemmalla kaistalla, ja kuinka kauan tämä ohitus kesti? Autojen pituuksia ei oteta huomioon.
+                        <br>
+                        [Lyhyt S2003/11]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s3t120_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s3t120_v" class="collapse">
+                        <p>
+                            Ohittaja ajoi vasemmalla kaistalla 500 m. Ohitus kesti 18 s.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1-tehtavasarja3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1-itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="MAB2luku1-itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href=" http://polku.opetus.tv/node/2067">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+            </p>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku1-itsearviointi">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+</article>
