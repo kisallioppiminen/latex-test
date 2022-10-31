@@ -277,7 +277,125 @@ topnav: mab2
                 </div>
             </div>
     
-    
+    <div class="teoria">
+                <p>
+                    Jotta toisen asteen yhtälö saadaan muokattua perusmuotoon, täytyy joissakin tapauksissa laskea polynomien tulo. Palautetaan seuraavaksi mieleen, miten polynomeja kerrotaan keskenään.
+                </p>
+                <p>
+                    Kun polynomi kerrotaan luvulla, kerrotaan jokainen termi erikseen:
+                    $$
+                    \textcolor{blue}{2}(3x-4) = \textcolor{blue}{2} \cdot 3x - \textcolor{blue}{2}\cdot 4 = 6x - 8.
+                    $$
+                    Samalla tavalla toimiaan myös silloin, kun polynomi kerrotaan monomilla:
+                    $$
+                    \textcolor{blue}{2x}(3x-4) = \textcolor{blue}{2x} \cdot 3x - \textcolor{blue}{2x}\cdot 4 = 6x^2 - 8x.
+                    $$
+                </p>
+                <p>
+                    Kahden polynomin tulo lasketaan vaiheittain: otetaan ensimmäisen tulon tekijän
+                </p>
+                    <ul>
+                        <li>
+                            ensimmäinen termi ja kerrotaan sillä toisen tulon tekijän jokainen termi erikseen
+                        </li>
+                        <li>
+                            toinen termi ja kerrotaan sillä toisen tulon tekijän jokainen termi erikseen
+                        </li>
+                        <li>
+                            kolmas termi ja kerrotaan sillä toisen tulon tekijän jokainen termi erikseen.
+                        </li>
+                    </ul>
+                <p>
+                    Näin jatketaan, kunnes ensimmäisen tulon tekijän kaikki termit on käytetty. Esimerkiksi tulossa
+                    $$(2x-5)(3x-4)$$
+                    kerrotaan jälkimmäisen polynomin kaikki termit ensin monomilla $2x$ ja sen jälkeen monomilla $-5$:
+                    \begin{align*}
+                    (\textcolor{blue}{2x}\textcolor{red}{-5})(3x-4) &= \textcolor{blue}{2x} \cdot 3x - \textcolor{blue}{2x} \cdot 4 + (\textcolor{red}{-5}) \cdot 3x + (\textcolor{red}{-5}) \cdot (-4)  \\
+                    &= \textcolor{blue}{6x^2 - 8x}\textcolor{red}{-15x + 20} \\
+                    &= 6x^2 - 23x + 20
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="35102b66-4369-43f5-a248-fdc045d06e36">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#1aste16">
+                                Polynomien tulo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="1aste16" class="collapse">
+                        <p> Laske seuraavat tulot:
+                        </p>
+                        <ol class="a">
+                            <li> $x(7-5x)$</li>
+                            <li> $(x+2)(8x-1)$ </li>
+                            <li> $(4x+3)(4x-3)$ </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#1aste16_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="1aste16_v" class="collapse">
+                            <ol class="a">
+                                <li> $x(7-5x) = 7x-5x^2$ </li>
+                                <li> $(x+2)(8x-1) = 8x^2 + 15x - 2$ </li>
+                                <li> $(4x+3)(4x-3) = 16x^2 - 9$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Polynomien potenssit voidaan laskea muuttamalla ne ensin tulomuotoon. Esimerkiksi 
+                    \begin{align*}
+                    (x-5)^2 &= (x-5)(x-5) \\[1mm]
+                    &= x^2 - 5x - 5x + 25 \\[1mm]
+                    &= x^2 - 10x + 25.
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="ad21a01b-e8bf-4efd-a601-111340609b4b">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#1aste16b">
+                                Polynomien potenssi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="1aste16b" class="collapse">
+                        <p> 
+                            Laske seuraavat potenssit. Aloita kirjoittamalla lauseke tulomuodossa.
+                        </p>
+                        <ol class="a">
+                            <li> $(x+3)^2$</li>
+                            <li> $(2x-1)^2$ </li>
+                            <li> $(7-x)^2$ </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#1aste16b_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="1aste16b_v" class="collapse">
+                            <ol class="a">
+                                <li> $(x+3)^2 = x^2 + 6x + 9$</li>
+                                <li> $(2x-1)^2 = 4x^2 - 4x + 1$ </li>
+                                <li> $(7-x)^2 = 49 - 14x + x^2$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
     
     
     
