@@ -762,126 +762,6 @@ topnav: mab2-lops2019
 
             <div class="teoria">
                 <p>
-                    Jotta toisen asteen yhtälö saadaan muokattua perusmuotoon, täytyy joissakin tapauksissa laskea polynomien tulo. Palautetaan seuraavaksi mieleen, miten polynomeja kerrotaan keskenään.
-                </p>
-                <p>
-                    Kun polynomi kerrotaan luvulla, kerrotaan jokainen termi erikseen:
-                    $$
-                    \textcolor{blue}{2}(3x-4) = \textcolor{blue}{2} \cdot 3x - \textcolor{blue}{2}\cdot 4 = 6x - 8.
-                    $$
-                    Samalla tavalla toimiaan myös silloin, kun polynomi kerrotaan monomilla:
-                    $$
-                    \textcolor{blue}{2x}(3x-4) = \textcolor{blue}{2x} \cdot 3x - \textcolor{blue}{2x}\cdot 4 = 6x^2 - 8x.
-                    $$
-                </p>
-                <p>
-                    Kahden polynomin tulo lasketaan vaiheittain: otetaan ensimmäisen tulon tekijän
-                </p>
-                    <ul>
-                        <li>
-                            ensimmäinen termi ja kerrotaan sillä toisen tulon tekijän jokainen termi erikseen
-                        </li>
-                        <li>
-                            toinen termi ja kerrotaan sillä toisen tulon tekijän jokainen termi erikseen
-                        </li>
-                        <li>
-                            kolmas termi ja kerrotaan sillä toisen tulon tekijän jokainen termi erikseen.
-                        </li>
-                    </ul>
-                <p>
-                    Näin jatketaan, kunnes ensimmäisen tulon tekijän kaikki termit on käytetty. Esimerkiksi tulossa
-                    $$(2x-5)(3x-4)$$
-                    kerrotaan jälkimmäisen polynomin kaikki termit ensin monomilla $2x$ ja sen jälkeen monomilla $-5$:
-                    \begin{align*}
-                    (\textcolor{blue}{2x}\textcolor{red}{-5})(3x-4) &= \textcolor{blue}{2x} \cdot 3x - \textcolor{blue}{2x} \cdot 4 + (\textcolor{red}{-5}) \cdot 3x + (\textcolor{red}{-5}) \cdot (-4)  \\
-                    &= \textcolor{blue}{6x^2 - 8x}\textcolor{red}{-15x + 20} \\
-                    &= 6x^2 - 23x + 20
-                    \end{align*}
-                </p>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="35102b66-4369-43f5-a248-fdc045d06e36">
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#1aste16">
-                                Polynomien tulo
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="1aste16" class="collapse">
-                        <p> Laske seuraavat tulot:
-                        </p>
-                        <ol class="a">
-                            <li> $x(7-5x)$</li>
-                            <li> $(x+2)(8x-1)$ </li>
-                            <li> $(4x+3)(4x-3)$ </li>
-                        </ol>
-                        <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#1aste16_v">
-                            Vastaus
-                        </a>
-                        </h2>
-                        <div id="1aste16_v" class="collapse">
-                            <ol class="a">
-                                <li> $x(7-5x) = 7x-5x^2$ </li>
-                                <li> $(x+2)(8x-1) = 8x^2 + 15x - 2$ </li>
-                                <li> $(4x+3)(4x-3) = 16x^2 - 9$ </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="teoria">
-                <p>
-                    Polynomien potenssit voidaan laskea muuttamalla ne ensin tulomuotoon. Esimerkiksi 
-                    \begin{align*}
-                    (x-5)^2 &= (x-5)(x-5) \\[1mm]
-                    &= x^2 - 5x - 5x + 25 \\[1mm]
-                    &= x^2 - 10x + 25.
-                    \end{align*}
-                </p>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="ad21a01b-e8bf-4efd-a601-111340609b4b">
-                    <header>
-                        <h1>
-                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#1aste16b">
-                                Polynomien potenssi
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="1aste16b" class="collapse">
-                        <p> 
-                            Laske seuraavat potenssit. Aloita kirjoittamalla lauseke tulomuodossa.
-                        </p>
-                        <ol class="a">
-                            <li> $(x+3)^2$</li>
-                            <li> $(2x-1)^2$ </li>
-                            <li> $(7-x)^2$ </li>
-                        </ol>
-                        <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#1aste16b_v">
-                            Vastaus
-                        </a>
-                        </h2>
-                        <div id="1aste16b_v" class="collapse">
-                            <ol class="a">
-                                <li> $(x+3)^2 = x^2 + 6x + 9$</li>
-                                <li> $(2x-1)^2 = 4x^2 - 4x + 1$ </li>
-                                <li> $(7-x)^2 = 49 - 14x + x^2$ </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="teoria">
-                <p>
                     Kaikki toisen asteen yhtälöt saa ratkaistua ratkaisukaavan avulla, kunhan ne aluksi muokkaa perusmuotoon $ax^2 + bx + c = 0$. Esimerkiksi yhtälön 
                     $$x(2x-3)-3x(1-x) = -1$$ 
                     tapauksessa ensin on laskettava kertolaskut:
@@ -936,7 +816,40 @@ topnav: mab2-lops2019
                 </div>
             </div>
 
-            
+            <div class="tehtavat">
+                <div class="tehtava" id="b4425e72-1d28-4f3c-a3bf-0e639da8e1d0">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste2122">
+                                Teknsisen apuvälineen käyttö toisen asteen yhtälössä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste2122" class="collapse">
+                        <p> 
+                            Ratkaise seuraavat toisen asteen yhtälöt. Muuta yhtälöt ensin perusmuotoon $ax^2+bx+c = 0$ ja tunnista, mitkä luvut vastaavat kirjaimia $a$, $b$ ja $c$. Huomioi myös etumerkit.
+                        </p>
+                        <ol class="a">
+                            <li> $7(x^2 + 1) = 50x$ </li>
+                            <li> $(-3x-1)(x-2) = 4$</li>
+                            <li> $(3x-1)(x+2) = 6x - 2$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste2122_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste2122_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = \dfrac{1}{7} \ $ tai $\ x = 7$</li>
+                                <li> $x = \dfrac{2}{3} \ $ tai $\ x = 1$ </li>
+                                <li> $x = 0 \ $ tai $\ x = \dfrac{1}{3}$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- <div class="teoria">
                 <p>
                     Kaikki sellaiset toisen asteen yhtälöt, joissa esiintyy vain tuntemattoman toinen potenssi, saadaan ratkaistua samaan tapaan kuin edellä. Ensin yhtälö täytyy vain muuttaa muotoon $x^2 = a$. Tarkastellaan esimerkiksi yhtälöä $$4x^2 - 3 = 0.$$
@@ -1244,6 +1157,42 @@ topnav: mab2-lops2019
                     </div>
                 </div>
             </div>
+    
+            <div class="tehtavat">
+                <div class="tehtava" id="fda430a5-94f7-4e3f-83a2-18691ff11db9">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste1722">
+                                Vailinnainen toisen asteen yhtälö ratkisukaavalla
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="2aste1722" class="collapse">
+                        <p>
+                            Ratkaise seuraavat yhtälöt ratkaisukaavalla:
+                        </p>
+                        <ol class="a">
+                            <li> $x^2-4x = 0$</li>
+                            <li> $3x^2+15x = 0$ </li>
+                            <li> $2x^2 - x = 0$</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#2aste1722_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="2aste1722_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = 0 \ $ tai $\ x = 4$</li>
+                                <li> $x = 0 \ $ tai $\ x = -5$ </li>
+                                <li> $x = 0 \ $ tai $\ x = \dfrac{1}{2}$</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku4kpl3a">
@@ -1453,7 +1402,7 @@ topnav: mab2-lops2019
                             <li>
                                 Kokoa tehtävässä annetut tiedot sopivaan taulukkoon.
                                 <br>
-                                Vinkki: kertaa tarvittaessa tehtävä 3.9.
+                                Vinkki: kertaa tarvittaessa verrannollisuus <a href="http://kisallioppiminen.fi/kurssit/may1-lops2019/luku4/">moduulista MAY1</a>.
                             </li>
                             <li>
                                 Muodosta taulukon avulla sopiva verrantoyhtälö ja ratkaise se. Mikä oli auton nopeus ennen jarrutuksen alkamista?
