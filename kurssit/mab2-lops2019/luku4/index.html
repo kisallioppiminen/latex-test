@@ -1658,6 +1658,641 @@ topnav: mab2-lops2019
         </div>
     </section>
 
+ <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#aritmeettinen-summa">
+                    Aritmeettinen summa
+                </a>
+            </h1>
+        </header>
+        <div id="aritmeettinen-summa" class="collapse">
+            <div class="teoria">
+                <p>
+                    Edellä on tarkasteltu päättymättömiä lukujonoja. Joskus ilmiön mallintamiseen tai ongelman ratkaisemiseen tarvitaan vain äärellinen määrä lukuja lukujonon alkupäästä. Tällaisessa tilanteessa nämä luvut voidaan myös laskea yhteen tavalliseen tapaan. Toisin sanottuna voidaan muodostaa niiden summa. Jos tarkastellaan esimerkiksi lukujonoa $(a_n)$, jonka yleinen termi on $a_n = 2n-1$, voidaan laskea vaikkapa sen viiden ensimmäisen termin summa:
+                    $$
+                    \begin{align*}
+                    S_5 &= a_1 + a_2 + a_3 + a_4 + a_5 \\
+                    &= 1 + 3 + 5 + 7 + 9 \\
+                    &= 25.
+                    \end{align*}
+                    $$
+                    Erilaiset summat luokitellaan niitä vastaavan lukujonon mukaan. 
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: ARITMEETTINEN SUMMA</h3>
+                    <p>
+                        Summa 
+                        $$S_n = a_1 + \cdots + a_n$$ on <em>aritmeettinen</em>, jos ja vain jos vastaava lukujono $(a_n)$ on aritmeettinen.
+                    </p>
+                </div>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc698de-7df5-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb25">
+                                Aritmeettinen summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t-helloweb25" class="collapse">	
+                        <p>    
+                            Auditoriossa on yhteensä 13 penkkiriviä. Ensimmäisellä rivillä on 20 istuinta ja seuraavalla rivillä aina kaksi enemmän kuin edeltävällä. 
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monta istuinta on viimeisellä eli 13. rivillä?
+                            <li> Auditoriossa pidettävään tilaisuuteen on tulossa 400 henkilöä. Mahtuvatko kaikki tulijat istumaan? Perustele omin sanoin.
+                            <li> Miten aritmeettinen jono liittyy tähän tehtävään?
+                            <li> Miten aritmeettinen summa liittyy tähän tehtävään?
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb25_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t-helloweb25_v" class="collapse">
+                           <ol class="a">
+                                <li> 44 istuinta </li>
+                                <li> Auditoriossa on yhteensä 416 istuinta, joten kaikki tulijat mahtuvat istumaan.  
+                                </li>
+                                <li>
+                                    Auditorion eri rivien istuimien määrät muodostavat aritmeettisen lukujonon.
+                                </li>
+                                <li>
+                                    Auditorion istuimien kokonaismäärä on aritmeettinen summa.
+                                </li>
+                            </ol>  
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Koska aritmeettisessa summassa yhteenlaskettavia on äärellinen määrä, voi niiden järjestystä vaihtaa vapaasti. Laskut saattavat helpottua huomattavasti, jos yhteenlaskettavat ryhmittelee johonkin toiseen järjestykseen. Aritmeettisen summan tapauksessa erityisen kätevää on ryhmitellä yhteenlaskettavat pareiksi, joiden summa pysyy samana. Esimerkiksi edellä tarkasteltu summa voidaan ryhmitellä seuraavasti:
+                    $$
+                    \begin{align*}
+                    S_5 &= 1 + 3 + 5 + 7 + 9 \\
+                    &= (1+9) + (3+7) + 5 \\
+                    &= 10 + 10 + 5 = 25
+                    \end{align*}
+                    $$
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc69c9e-7df5-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb27">
+                                Aritmeettinen summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t-helloweb27" class="collapse">
+                        <p>
+                            Kuinka monta lukuparia muodostuu, jos yhteenlaskettavia on 
+                        </p>
+                        <ol class="a">
+                            <li> $6$</li>
+                            <li> $18$</li>
+                            <li> $15$</li>
+                            <li> $93$</li>
+                            <li> $191$?</li>
+                        </ol>
+                        <p>
+                            Saavatko kaikki yhteenlaskettavat itselleen aina parin? Jos eivät, millaisissa tapauksissa yksi jää ilman paria?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb27_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t-helloweb27_v" class="collapse">
+                           <ol class="a">
+                                <li> 3 </li>
+                                <li> 9 </li>
+                                <li> 7 paria, yksi jää parittomaksi </li>
+                                <li> 46 paria, yksi jää parittomaksi </li>
+                                <li> 95 paria, yksi jää parittomaksi</li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc69d8e-7df5-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb26">
+                                Aritmeettinen summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t-helloweb26" class="collapse">
+                        <p>
+                            Järjestä summassa esiintyvät luvut pareiksi niin, että jokaisen parin summa on sama. Laske sen jälkeen koko summa ilman apuvälineitä mahdollisimman pienellä vaivalla. Selitä, miten ajattelit.
+                        </p>
+                        <ol class="a">
+                            <li> $1+2+3+4+5+6+7+8+9+10$
+                            <li> $2+4+6+8+10+12+14+16+18$
+                            <li> $1+3+5+7+\ldots+95+97+99$ 
+                        </ol>
+                        <p>
+                        (Kohdan (c) summa on liian pitkä kirjoitettavaksi kokonaan näkyviin.)
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb26_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t-helloweb26_v" class="collapse">
+                           <ol class="a">
+                                <li>
+                                    \begin{align*} 
+                                    &\phantom{ {} = }(1+10)+(2+9)+(3+8)+(4+7)+(5+6)\\
+                                    &= 5 \cdot 11 = 55
+                                    \end{align*} 
+                                </li>
+                                <li> 
+                                    \begin{align*} 
+                                    &\phantom{ {} = }(2+18)+(4+16)+(6+14)+(8+12)+10\\
+                                    &= 4 \cdot 20 + 10 = 90
+                                    \end{align*}  
+                                </li>
+                                <li> $25 \cdot 100 = 2500$ </li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän ratkaisun idea voidaan yleistää kaikille aritmeettisille summille, kuten seuraava teoreema osoittaa. Lue teoreeman perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+                </p>
+
+                <div class="theorem" id="ARITMEETTINEN SUMMA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Aritmeettinen summa $S_n = a_1 + \cdots + a_n$ lasketaan niin, että termien lukumäärällä kerrotaan summan ensimmäisen ja viimeisen termin keskiarvo eli 
+                        $$a_1 + \cdots + a_n = n \frac{a_1+a_n}{2}.$$
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Kirjoitetaan summa kahteen kertaan, ensin alusta loppuun ja sitten lopusta alkuun:
+                            $$
+                            \begin{align*}
+                            S_n &= a_1 + a_2 + a_3 + \cdots + a_{n-2} + a_{n-1} + a_n \\
+                            S_n &= a_n + a_{n-1} + a_{n-2} + \cdots + a_3 + a_2 + a_1
+                            \end{align*}
+                            $$
+                            Kun nämä lasketaan puolittain yhteen, saadaan
+                            $$2S_n = (a_1 + a_n) + (a_2 + a_{n-1}) + (a_3 + a_{n-2}) + \cdots + (a_n + a_1).$$
+                            Tässä summassa kaikki sulkujen sisällä olevat lausekkeet ovat yhtä suuria kuin $a_1 + a_n$. Aritmeettisen lukujonon määritelmän nojalla nimittäin esimerkiksi
+                            $$
+                            \begin{align*}
+                            a_2 + a_{n-1} &= (a_1 + d) + a_{n-1} \\
+                            &= a_1 + (a_{n-1} + d) \\
+                            &= a_1 + a_n
+                            \end{align*}
+                            $$
+                            ja sen vuoksi myös
+                            $$
+                            \begin{align*}
+                            a_3 + a_{n-2} &= (a_2 + d) + a_{n-2} \\
+                            &= a_2 + (a_{n-2} + d) \\
+                            &= a_2 + a_{n-1} \\
+                            &= a_1 + a_n.
+                            \end{align*}
+                            $$
+                            Näitä yhteenlaskettavia on $n$ kappaletta, joten voidaan päätellä, että 
+                            $$2S_n = n(a_1 + a_n).$$
+                            Siten
+                            $$S_n = \frac{n(a_1+a_n)}{2}.$$
+                        </p>
+                    </div>
+                </div>
+
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan äskeisen teoreeman soveltamista.
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc69e4c-7df5-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb30">
+                                Aritmeettinen summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t-helloweb30" class="collapse">
+                        <ol class="a">
+                            <li> Mitä tietoja tarvitset, jotta voit laskea aritmeettisen summan edellä esitetyn teoreeman avulla?
+                            <li> Laske summa $2+5+8+\ldots+26+29$ aritmeettisen summan kaavalla eli edellä esitetyn teoreeman avulla.
+                            <li> Aritmeettisen jonon $(a_n)$ yleinen jäsen on $a_n=3n+1$. Laske tämän jonon kahdenkymmenen ensimmäisen jäsenen summa.
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb30_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t-helloweb30_v" class="collapse">
+                           <ol class="a">
+                                <li>
+                                </li>
+                                <li> 
+                                    $$
+                                    \frac{10 \cdot (2 + 29)}{2} = 155
+                                    $$
+                                </li>
+                                <li> 
+                                    $$
+                                    \frac{20 \cdot (4 + 61)}{2} = 650
+                                    $$ 
+                                </li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc69f14-7df5-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb31b">
+                                Aritmeettinen summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t-helloweb31b" class="collapse">
+                        <p> 
+                            Tasaisesti viettävään rinteeseen rakennetaan aita, jonka pituus on $126$ metriä. Aidan yläreunan halutaan olevan vaakasuorassa. Aitaan tulee tolppa molempiin päihin ja aina $1{,}5$ metrin välein. Matalimman tolpan korkeus on $0{,}75$ m ja korkeimman tolpan korkeus $2{,}43$ m. 
+                        </p>
+                        <ol class="a">
+                            <li> Laske aitatolppien lukumäärä.
+                            <li> Laske, kuinka paljon seuraava tolppa on edellistä pidempi, olettaen, että tolppien pituus kasvaa tasaisesti. 
+                            <li> Kuinka monta metriä aitatolppiin käytettävää puuta tarvitaan aidan rakentamiseen? Miten voit tässä hyödyntää aritmeettisen summan kaavaa?
+                            <li> Kuinka monta metriä aitatolppiin käytettävää puuta tarvitaan, jos aidasta päätetään säästösyistä rakentaa vain 75 metriä matalammasta päästä alkaen?</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb31b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t-helloweb31b_v" class="collapse">
+                           <ol class="a">
+                                <li>
+                                    Aitatolppia tarvitaan 85 kpl.
+                                </li>
+                                <li> 
+                                    Seuraava tolppa on aina 0,02 m eli 2 cm edellistä pidempi.
+                                </li>
+                                <li> 
+                                    $$
+                                    \frac{85 \cdot (0{,}75 + 2{,}43)}{2} = 135{,}15,
+                                    $$ 
+                                    joten puuta tarvitaan 136 metriä.
+                                </li>
+                                <li> 
+                                    $$
+                                    \frac{51 \cdot (0{,}75 + 1{,}75)}{2} = 63{,}75,
+                                    $$ 
+                                    joten puuta tarvitaan 64 metriä.
+                                </li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+ <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#aritmeettinen-summa">
+                    Aritmeettinen summa
+                </a>
+            </h1>
+        </header>
+        <div id="aritmeettinen-summa" class="collapse">
+            <div class="teoria">
+                <p>
+                    Edellä on tarkasteltu päättymättömiä lukujonoja. Joskus ilmiön mallintamiseen tai ongelman ratkaisemiseen tarvitaan vain äärellinen määrä lukuja lukujonon alkupäästä. Tällaisessa tilanteessa nämä luvut voidaan myös laskea yhteen tavalliseen tapaan. Toisin sanottuna voidaan muodostaa niiden summa. Jos tarkastellaan esimerkiksi lukujonoa $(a_n)$, jonka yleinen termi on $a_n = 2n-1$, voidaan laskea vaikkapa sen viiden ensimmäisen termin summa:
+                    $$
+                    \begin{align*}
+                    S_5 &= a_1 + a_2 + a_3 + a_4 + a_5 \\
+                    &= 1 + 3 + 5 + 7 + 9 \\
+                    &= 25.
+                    \end{align*}
+                    $$
+                    Erilaiset summat luokitellaan niitä vastaavan lukujonon mukaan. 
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: ARITMEETTINEN SUMMA</h3>
+                    <p>
+                        Summa 
+                        $$S_n = a_1 + \cdots + a_n$$ on <em>aritmeettinen</em>, jos ja vain jos vastaava lukujono $(a_n)$ on aritmeettinen.
+                    </p>
+                </div>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc698de-7df5-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb25">
+                                Aritmeettinen summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t-helloweb25" class="collapse">	
+                        <p>    
+                            Auditoriossa on yhteensä 13 penkkiriviä. Ensimmäisellä rivillä on 20 istuinta ja seuraavalla rivillä aina kaksi enemmän kuin edeltävällä. 
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monta istuinta on viimeisellä eli 13. rivillä?
+                            <li> Auditoriossa pidettävään tilaisuuteen on tulossa 400 henkilöä. Mahtuvatko kaikki tulijat istumaan? Perustele omin sanoin.
+                            <li> Miten aritmeettinen jono liittyy tähän tehtävään?
+                            <li> Miten aritmeettinen summa liittyy tähän tehtävään?
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb25_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t-helloweb25_v" class="collapse">
+                           <ol class="a">
+                                <li> 44 istuinta </li>
+                                <li> Auditoriossa on yhteensä 416 istuinta, joten kaikki tulijat mahtuvat istumaan.  
+                                </li>
+                                <li>
+                                    Auditorion eri rivien istuimien määrät muodostavat aritmeettisen lukujonon.
+                                </li>
+                                <li>
+                                    Auditorion istuimien kokonaismäärä on aritmeettinen summa.
+                                </li>
+                            </ol>  
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Koska aritmeettisessa summassa yhteenlaskettavia on äärellinen määrä, voi niiden järjestystä vaihtaa vapaasti. Laskut saattavat helpottua huomattavasti, jos yhteenlaskettavat ryhmittelee johonkin toiseen järjestykseen. Aritmeettisen summan tapauksessa erityisen kätevää on ryhmitellä yhteenlaskettavat pareiksi, joiden summa pysyy samana. Esimerkiksi edellä tarkasteltu summa voidaan ryhmitellä seuraavasti:
+                    $$
+                    \begin{align*}
+                    S_5 &= 1 + 3 + 5 + 7 + 9 \\
+                    &= (1+9) + (3+7) + 5 \\
+                    &= 10 + 10 + 5 = 25
+                    \end{align*}
+                    $$
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc69c9e-7df5-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb27">
+                                Aritmeettinen summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t-helloweb27" class="collapse">
+                        <p>
+                            Kuinka monta lukuparia muodostuu, jos yhteenlaskettavia on 
+                        </p>
+                        <ol class="a">
+                            <li> $6$</li>
+                            <li> $18$</li>
+                            <li> $15$</li>
+                            <li> $93$</li>
+                            <li> $191$?</li>
+                        </ol>
+                        <p>
+                            Saavatko kaikki yhteenlaskettavat itselleen aina parin? Jos eivät, millaisissa tapauksissa yksi jää ilman paria?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb27_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t-helloweb27_v" class="collapse">
+                           <ol class="a">
+                                <li> 3 </li>
+                                <li> 9 </li>
+                                <li> 7 paria, yksi jää parittomaksi </li>
+                                <li> 46 paria, yksi jää parittomaksi </li>
+                                <li> 95 paria, yksi jää parittomaksi</li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc69d8e-7df5-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb26">
+                                Aritmeettinen summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t-helloweb26" class="collapse">
+                        <p>
+                            Järjestä summassa esiintyvät luvut pareiksi niin, että jokaisen parin summa on sama. Laske sen jälkeen koko summa ilman apuvälineitä mahdollisimman pienellä vaivalla. Selitä, miten ajattelit.
+                        </p>
+                        <ol class="a">
+                            <li> $1+2+3+4+5+6+7+8+9+10$
+                            <li> $2+4+6+8+10+12+14+16+18$
+                            <li> $1+3+5+7+\ldots+95+97+99$ 
+                        </ol>
+                        <p>
+                        (Kohdan (c) summa on liian pitkä kirjoitettavaksi kokonaan näkyviin.)
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb26_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t-helloweb26_v" class="collapse">
+                           <ol class="a">
+                                <li>
+                                    \begin{align*} 
+                                    &\phantom{ {} = }(1+10)+(2+9)+(3+8)+(4+7)+(5+6)\\
+                                    &= 5 \cdot 11 = 55
+                                    \end{align*} 
+                                </li>
+                                <li> 
+                                    \begin{align*} 
+                                    &\phantom{ {} = }(2+18)+(4+16)+(6+14)+(8+12)+10\\
+                                    &= 4 \cdot 20 + 10 = 90
+                                    \end{align*}  
+                                </li>
+                                <li> $25 \cdot 100 = 2500$ </li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän ratkaisun idea voidaan yleistää kaikille aritmeettisille summille, kuten seuraava teoreema osoittaa. Lue teoreeman perustelu huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+                </p>
+
+                <div class="theorem" id="ARITMEETTINEN SUMMA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Aritmeettinen summa $S_n = a_1 + \cdots + a_n$ lasketaan niin, että termien lukumäärällä kerrotaan summan ensimmäisen ja viimeisen termin keskiarvo eli 
+                        $$a_1 + \cdots + a_n = n \frac{a_1+a_n}{2}.$$
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Kirjoitetaan summa kahteen kertaan, ensin alusta loppuun ja sitten lopusta alkuun:
+                            $$
+                            \begin{align*}
+                            S_n &= a_1 + a_2 + a_3 + \cdots + a_{n-2} + a_{n-1} + a_n \\
+                            S_n &= a_n + a_{n-1} + a_{n-2} + \cdots + a_3 + a_2 + a_1
+                            \end{align*}
+                            $$
+                            Kun nämä lasketaan puolittain yhteen, saadaan
+                            $$2S_n = (a_1 + a_n) + (a_2 + a_{n-1}) + (a_3 + a_{n-2}) + \cdots + (a_n + a_1).$$
+                            Tässä summassa kaikki sulkujen sisällä olevat lausekkeet ovat yhtä suuria kuin $a_1 + a_n$. Aritmeettisen lukujonon määritelmän nojalla nimittäin esimerkiksi
+                            $$
+                            \begin{align*}
+                            a_2 + a_{n-1} &= (a_1 + d) + a_{n-1} \\
+                            &= a_1 + (a_{n-1} + d) \\
+                            &= a_1 + a_n
+                            \end{align*}
+                            $$
+                            ja sen vuoksi myös
+                            $$
+                            \begin{align*}
+                            a_3 + a_{n-2} &= (a_2 + d) + a_{n-2} \\
+                            &= a_2 + (a_{n-2} + d) \\
+                            &= a_2 + a_{n-1} \\
+                            &= a_1 + a_n.
+                            \end{align*}
+                            $$
+                            Näitä yhteenlaskettavia on $n$ kappaletta, joten voidaan päätellä, että 
+                            $$2S_n = n(a_1 + a_n).$$
+                            Siten
+                            $$S_n = \frac{n(a_1+a_n)}{2}.$$
+                        </p>
+                    </div>
+                </div>
+
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan äskeisen teoreeman soveltamista.
+                </p>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc69e4c-7df5-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb30">
+                                Aritmeettinen summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t-helloweb30" class="collapse">
+                        <ol class="a">
+                            <li> Mitä tietoja tarvitset, jotta voit laskea aritmeettisen summan edellä esitetyn teoreeman avulla?
+                            <li> Laske summa $2+5+8+\ldots+26+29$ aritmeettisen summan kaavalla eli edellä esitetyn teoreeman avulla.
+                            <li> Aritmeettisen jonon $(a_n)$ yleinen jäsen on $a_n=3n+1$. Laske tämän jonon kahdenkymmenen ensimmäisen jäsenen summa.
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb30_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t-helloweb30_v" class="collapse">
+                           <ol class="a">
+                                <li>
+                                </li>
+                                <li> 
+                                    $$
+                                    \frac{10 \cdot (2 + 29)}{2} = 155
+                                    $$
+                                </li>
+                                <li> 
+                                    $$
+                                    \frac{20 \cdot (4 + 61)}{2} = 650
+                                    $$ 
+                                </li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc69f14-7df5-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb31b">
+                                Aritmeettinen summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t-helloweb31b" class="collapse">
+                        <p> 
+                            Tasaisesti viettävään rinteeseen rakennetaan aita, jonka pituus on $126$ metriä. Aidan yläreunan halutaan olevan vaakasuorassa. Aitaan tulee tolppa molempiin päihin ja aina $1{,}5$ metrin välein. Matalimman tolpan korkeus on $0{,}75$ m ja korkeimman tolpan korkeus $2{,}43$ m. 
+                        </p>
+                        <ol class="a">
+                            <li> Laske aitatolppien lukumäärä.
+                            <li> Laske, kuinka paljon seuraava tolppa on edellistä pidempi, olettaen, että tolppien pituus kasvaa tasaisesti. 
+                            <li> Kuinka monta metriä aitatolppiin käytettävää puuta tarvitaan aidan rakentamiseen? Miten voit tässä hyödyntää aritmeettisen summan kaavaa?
+                            <li> Kuinka monta metriä aitatolppiin käytettävää puuta tarvitaan, jos aidasta päätetään säästösyistä rakentaa vain 75 metriä matalammasta päästä alkaen?</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb31b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t-helloweb31b_v" class="collapse">
+                           <ol class="a">
+                                <li>
+                                    Aitatolppia tarvitaan 85 kpl.
+                                </li>
+                                <li> 
+                                    Seuraava tolppa on aina 0,02 m eli 2 cm edellistä pidempi.
+                                </li>
+                                <li> 
+                                    $$
+                                    \frac{85 \cdot (0{,}75 + 2{,}43)}{2} = 135{,}15,
+                                    $$ 
+                                    joten puuta tarvitaan 136 metriä.
+                                </li>
+                                <li> 
+                                    $$
+                                    \frac{51 \cdot (0{,}75 + 1{,}75)}{2} = 63{,}75,
+                                    $$ 
+                                    joten puuta tarvitaan 64 metriä.
+                                </li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
     <section class="panel">
         <header class="otsikko">
             <h1>
