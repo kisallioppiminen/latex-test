@@ -168,60 +168,7 @@ topnav: mab2-lops2019
                     </div>
                 </div>
             </div>
-            <div class="teoria">
-                <p>
-                    Joskus lukujonoon liittyvä sääntö voidaan esittää niin, että sen avulla voidaan laskea jonon mikä tahansa jäsen, jos vain tiedetään, kuinka mones jäsen on kysymyksessä. Jos esimerkiksi tiedetään, että lukujonon $(a_n)$ <em>yleinen jäsen</em> on $a_n = 2n-1$, voidaan laskea, että esimerkiksi
-                    $$
-                    \begin{align*}
-                    a_{\textcolor{blue}{1}} &= 2\cdot \textcolor{blue}{1} - 1 = 2-1 = 1 \\
-                    a_{\textcolor{blue}{2}} &= 2\cdot \textcolor{blue}{2} - 1 = 4-1 = 3 \\
-                    a_{\textcolor{blue}{3}} &= 2\cdot \textcolor{blue}{3} - 1 = 6-1 = 5 \\
-                    a_{\textcolor{blue}{50}} &= 2\cdot \textcolor{blue}{50} - 1 = 100-1 = 99 \\
-                    a_{\textcolor{blue}{1000}} &= 2\cdot \textcolor{blue}{1000} - 1 = 2000-1 = 1999
-                    \end{align*}
-                    $$
-                    Tällaisessa tilanteessa sanotaan, että lukujono on määritelty <em>analyyttisesti</em>.
-                </p>
-            </div>
-            <div class="tehtavat">
-                <div class="tehtava" id="8dc683a8-7df5-11e7-bb31-be2e44b06b34">
-
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb2">
-                                Lukujonon jäsenen määrittäminen
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="t-helloweb2" class="collapse">
-                        <p>
-                            Tarkastellaan lukujonoa $(a_n)$, jonka jäsenet ovat muotoa $a_n=4n+2$ kaikilla positiivisilla kokonaisluvuilla $n$. Määritä 
-                        </p>
-                        <ol class="a">
-                            <li> $a_1$</li>
-                            <li> $a_2$</li>
-                            <li> $a_{100}$.</li>
-                        </ol>
-                        <p>
-                            Mihin seuraavista lukualueista tämän jonon kaikki jäsenet kuuluvat? Luonnollisten lukujen joukko $\N$, kokonaislukujen joukko $\Z$, rationaalilukujen joukko $\Q$. Mikä näistä on pienin lukualue, johon kaikki jonon jäsenet kuuluvat?
-                        </p>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb2_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="t-helloweb2_v" class="collapse">
-                           <ol class="a">
-                                <li> $a_1 = 6$</li>
-                                <li> $a_2 = 10$</li>
-                                <li> $a_{100} = 402$ </li>
-                            </ol>
-                            <p> Jonon kaikki jäsenet kuuluvat kaikkiin tehtävässä mainittuihin lukujoukkoihin. Pienin lukualue, johon jonon kaikki jäsenet kuuluvat, on luonnollisten lukujen joukko.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            
             <div class="tehtavat">
                 <div class="tehtava" id="8dc6847a-7df5-11e7-bb31-be2e44b06b34">
 
@@ -1897,175 +1844,6 @@ topnav: mab2-lops2019
                 Syötetään laskimeen aluksi alkuarvo 2 ja painetaan enter. Syötetään tämän jälkeen rekursiokaava niin, että korvataan edeltävä jäsen $a_{n-1}$ ans-näppäimellä. Painetaan tämän jälkeen enter ja saadaan jonon toinen jäsen, joka on tässä tapauksessa $\frac{3}{2}$. Tässä laskin syötti ans-napin kohdalle siis luvun 2. Kun tämän jälkeen painetaan taas enter, saadaan jonon kolmas jäsen, joka tässä tapauksessa on $\frac{5}{4}$. Taulukoidaan kaikki jäsenet paperille näkyviin ja jatketaan enter-napin painamista, kunnes saadaan jonon kymmenes jäsen. Jonon kymmenenneksi jäseneksi saadaan tällä tavalla $\frac{513}{512}$.
             </p>
 
-
-            <div class="tehtava" id="8dc6b6a2-7df5-11e7-bb31-be2e44b06b34">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#t-helloweb10">
-                            Rekursiivinen lukujono
-                        </a>
-                    </h1>
-                </header>
-                <div id="t-helloweb10" >
-                    <p>
-                        Tutki jonoa $(a_n)$, jolle
-                        $$
-                        \begin{equation*}
-                        \left\{
-                        \begin{array}{ll}
-                        a_1&=3\\
-                        a_n&=a_{n-1}+4 \ \text{ kaikilla } n=2, 3, 4\ldots
-                        \end{array}
-                        \right.
-                        \end{equation*}
-                        $$
-                    </p>
-                    <ol class="a"> 
-                        <li> Määritä laskimen avulla lukujonon jäsenet 9. jäseneen asti ja kokoa ne taulukkoon.
-                        <li> Tutki laskimen avulla, kuinka moni jonon jäsenistä on pienempi kuin luku 100.
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#helloweb10_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="helloweb10_v" class="collapse">
-                        <ol class="a">
-                            <li> 3, 7, 11, 15, 19, 23, 27, 31, 35.</li>
-                            <li> 25 jäsentä on pienempiä kuin luku 100.</li> 
-                        </ol>
-                    </div>   
-                </div>
-            </div>
-
-            <div class="tehtava" id="8dc6bfc6-7df5-11e7-bb31-be2e44b06b34">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a  data-target="#t-helloweb11">
-                            Lukujonon määrittely
-                        </a>
-                    </h1>
-                </header>
-                <div id="t-helloweb11" >
-                    <p>
-                        Lukujonon $(a_n)$ ensimmäinen jäsen on 3, <em>kolmas</em> jäsen on 27 ja neljäs jäsen on 81. 
-                    </p>
-                    <ol class="a">
-                        <li> Päättele, mikä on lukujonon toinen jäsen $a_2$.</li>
-                        <li> Keksi sääntö, miten jäsen $a_n$ saadaan lausuttua edellisen jäsenen $a_{n-1}$ avulla. Toisin sanottuna määrittele lukujono $(a_n)$ rekursiivisesti.</li>
-                        <li> Keksi sääntö, miten jäsen $a_n$ saadaan lausuttua järjestysnumeron $n$ avulla. Toisin sanottuna määrittele lukujono $(a_n)$ analyyttisesti.</li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#helloweb11_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="helloweb11_v" class="collapse">
-                        <ol class="a">
-                            <li> 9</li>
-                            <li> $a_1 = 3$ ja $a_n = 3a_{n-1}$.</li>
-                            <li> $a_n = 3^n$</li> 
-                        </ol>
-                    </div>   
-                </div>
-            </div>
-
-
-            <div class="tehtava" id="8dc6c138-7df5-11e7-bb31-be2e44b06b34">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#t-helloweb13">
-                            Lukujonon määrittely
-                        </a>
-                    </h1>
-                </header>
-                <div id="t-helloweb13" >
-                    <p>
-                        Tarkastele parillisten positiivisten kokonaislukujen $2$, $4$, $6$, $\ldots$ muodostamaa lukujonoa $(a_n)$.
-                    </p>
-                    <ol class="a">
-                        <li> Keksi sääntö, miten jäsen $a_n$ saadaan lausuttua edellisen jäsenen $a_{n-1}$ avulla. Toisin sanottuna määrittele lukujono $(a_n)$ rekursiivisesti.</li>
-                        <li> Keksi sääntö, miten jäsen $a_n$ saadaan lausuttua järjestysnumeron $n$ avulla. Toisin sanottuna määrittele lukujono $(a_n)$ analyyttisesti.</li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#helloweb13_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="helloweb13_v" class="collapse">
-                        <ol class="a">
-                            <li> $a_1 = 2$ ja $a_n = a_{n-1}+2$.</li>
-                            <li> $a_n = 2n$</li> 
-                        </ol>
-                    </div>   
-                </div>
-            </div>
-
-
-            <div class="tehtava" id="8dc6c214-7df5-11e7-bb31-be2e44b06b34">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#t-helloweb14">
-                            Lukujonon määrittely
-                        </a>
-                    </h1>
-                </header>
-                <div id="t-helloweb14">
-                    <p>
-                        Tarkastele parittomien positiivisten kokonaislukujen $1$, $3$, $5$, $\ldots$ muodostamaa lukujonoa $(b_n)$.
-                    </p>
-                    <ol class="a">
-                        <li> Keksi sääntö, miten jäsen $b_n$ saadaan lausuttua edellisen jäsenen $b_{n-1}$ avulla. Toisin sanottuna määrittele lukujono $(b_n)$ rekursiivisesti.</li>
-                        <li> Keksi sääntö, miten jäsen $b_n$ saadaan lausuttua järjestysnumeron $n$ avulla. Toisin sanottuna määrittele lukujono $(b_n)$ analyyttisesti.</li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#helloweb14_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="helloweb14_v" class="collapse">
-                        <ol class="a">
-                            <li> $b_1 = 1$ ja $b_n = b_{n-1}+2$.</li>
-                            <li> $b_n = 2n-1$</li> 
-                        </ol>
-                    </div>   
-                </div>
-            </div>
-            <div class="tehtava" id="8dc6c2e6-7df5-11e7-bb31-be2e44b06b34">
-
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#t-helloweb16">
-                            Lukujono
-                        </a>
-                    </h1>
-                </header>
-                <div id="t-helloweb16" >
-                    <p>
-                        Henkilö aloittaa lenkkeilyharrastuksen. Ensimmäinen lenkki on kilometrin mittainen ja seuraava lenkki aina 200 metriä pidempi kuin edellinen.
-                    </p>
-                    <ol class="a">
-                        <li> Kuinka pitkä on henkilön seitsemäs lenkki? </li>
-                        <li> Määrittele rekursiivisesti jono $(a_n)$, missä $a_n$ on $n$:ntenä päivänä tehdyn lenkin pituus.</li>
-                        <li> Määrittele analyyttisesti jono $(a_n)$, missä $a_n$ on $n$:ntenä päivänä tehdyn lenkin pituus.</li>
-                        <li> Jos henkilö käy lenkillä kolme kertaa viikossa, kuinka monennella viikolla hän juoksee ensimmäisen kerran vähintään maratonin mittaisen lenkin (42,195 km)?</li>
-                    </ol>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#helloweb16_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="helloweb16_v" class="collapse">
-                        <ol class="a">
-                            <li> 2200 m</li>
-                            <li> $a_1 = 1000$ ja $a_n = a_{n-1} + 200$</li> 
-                            <li> $a_n = 1000 + 200(n-1)$</li>
-                            <li> 69. viikolla.</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
             <div class="tehtava" id="8dc6c5e8-7df5-11e7-bb31-be2e44b06b34">
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
@@ -2425,6 +2203,227 @@ topnav: mab2-lops2019
                 </div>
             </div>
 
+
+            <div class="tehtava" id="8dc6b6a2-7df5-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-helloweb10">
+                            Rekursiivinen lukujono
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-helloweb10" >
+                    <p>
+                        Tutki jonoa $(a_n)$, jolle
+                        $$
+                        \begin{equation*}
+                        \left\{
+                        \begin{array}{ll}
+                        a_1&=3\\
+                        a_n&=a_{n-1}+4 \ \text{ kaikilla } n=2, 3, 4\ldots
+                        \end{array}
+                        \right.
+                        \end{equation*}
+                        $$
+                    </p>
+                    <ol class="a"> 
+                        <li> Määritä laskimen avulla lukujonon jäsenet 9. jäseneen asti ja kokoa ne taulukkoon.
+                        <li> Tutki laskimen avulla, kuinka moni jonon jäsenistä on pienempi kuin luku 100.
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#helloweb10_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="helloweb10_v" class="collapse">
+                        <ol class="a">
+                            <li> 3, 7, 11, 15, 19, 23, 27, 31, 35.</li>
+                            <li> 25 jäsentä on pienempiä kuin luku 100.</li> 
+                        </ol>
+                    </div>   
+                </div>
+            </div>
+            
+            <div class="tehtavat">
+                <div class="tehtava" id="8dc683a8-7df5-11e7-bb31-be2e44b06b34">
+
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb2">
+                                Lukujonon jäsenen määrittäminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="t-helloweb2" class="collapse">
+                <p>
+                    Joskus lukujonoon liittyvä sääntö voidaan esittää niin, että sen avulla voidaan laskea jonon mikä tahansa jäsen, jos vain tiedetään, kuinka mones jäsen on kysymyksessä. Jos esimerkiksi tiedetään, että lukujonon $(a_n)$ <em>yleinen jäsen</em> on $a_n = 2n-1$, voidaan laskea, että esimerkiksi
+                    $$
+                    \begin{align*}
+                    a_{\textcolor{blue}{1}} &= 2\cdot \textcolor{blue}{1} - 1 = 2-1 = 1 \\
+                    a_{\textcolor{blue}{2}} &= 2\cdot \textcolor{blue}{2} - 1 = 4-1 = 3 \\
+                    a_{\textcolor{blue}{3}} &= 2\cdot \textcolor{blue}{3} - 1 = 6-1 = 5 \\
+                    a_{\textcolor{blue}{50}} &= 2\cdot \textcolor{blue}{50} - 1 = 100-1 = 99 \\
+                    a_{\textcolor{blue}{1000}} &= 2\cdot \textcolor{blue}{1000} - 1 = 2000-1 = 1999
+                    \end{align*}
+                    $$
+                    Tällaisessa tilanteessa sanotaan, että lukujono on määritelty <em>analyyttisesti</em>.
+                </p>       
+                        <p>
+                            Tarkastellaan lukujonoa $(a_n)$, jonka jäsenet ovat muotoa $a_n=4n+2$ kaikilla positiivisilla kokonaisluvuilla $n$. Määritä 
+                        </p>
+                        <ol class="a">
+                            <li> $a_1$</li>
+                            <li> $a_2$</li>
+                            <li> $a_{100}$.</li>
+                        </ol>
+                        <p>
+                            Mihin seuraavista lukualueista tämän jonon kaikki jäsenet kuuluvat? Luonnollisten lukujen joukko $\N$, kokonaislukujen joukko $\Z$, rationaalilukujen joukko $\Q$. Mikä näistä on pienin lukualue, johon kaikki jonon jäsenet kuuluvat?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb2_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t-helloweb2_v" class="collapse">
+                           <ol class="a">
+                                <li> $a_1 = 6$</li>
+                                <li> $a_2 = 10$</li>
+                                <li> $a_{100} = 402$ </li>
+                            </ol>
+                            <p> Jonon kaikki jäsenet kuuluvat kaikkiin tehtävässä mainittuihin lukujoukkoihin. Pienin lukualue, johon jonon kaikki jäsenet kuuluvat, on luonnollisten lukujen joukko.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="8dc6bfc6-7df5-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a  data-target="#t-helloweb11">
+                            Lukujonon määrittely
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-helloweb11" >
+                    <p>
+                        Lukujonon $(a_n)$ ensimmäinen jäsen on 3, <em>kolmas</em> jäsen on 27 ja neljäs jäsen on 81. 
+                    </p>
+                    <ol class="a">
+                        <li> Päättele, mikä on lukujonon toinen jäsen $a_2$.</li>
+                        <li> Keksi sääntö, miten jäsen $a_n$ saadaan lausuttua edellisen jäsenen $a_{n-1}$ avulla. Toisin sanottuna määrittele lukujono $(a_n)$ rekursiivisesti.</li>
+                        <li> Keksi sääntö, miten jäsen $a_n$ saadaan lausuttua järjestysnumeron $n$ avulla. Toisin sanottuna määrittele lukujono $(a_n)$ analyyttisesti.</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#helloweb11_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="helloweb11_v" class="collapse">
+                        <ol class="a">
+                            <li> 9</li>
+                            <li> $a_1 = 3$ ja $a_n = 3a_{n-1}$.</li>
+                            <li> $a_n = 3^n$</li> 
+                        </ol>
+                    </div>   
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="8dc6c138-7df5-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-helloweb13">
+                            Lukujonon määrittely
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-helloweb13" >
+                    <p>
+                        Tarkastele parillisten positiivisten kokonaislukujen $2$, $4$, $6$, $\ldots$ muodostamaa lukujonoa $(a_n)$.
+                    </p>
+                    <ol class="a">
+                        <li> Keksi sääntö, miten jäsen $a_n$ saadaan lausuttua edellisen jäsenen $a_{n-1}$ avulla. Toisin sanottuna määrittele lukujono $(a_n)$ rekursiivisesti.</li>
+                        <li> Keksi sääntö, miten jäsen $a_n$ saadaan lausuttua järjestysnumeron $n$ avulla. Toisin sanottuna määrittele lukujono $(a_n)$ analyyttisesti.</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#helloweb13_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="helloweb13_v" class="collapse">
+                        <ol class="a">
+                            <li> $a_1 = 2$ ja $a_n = a_{n-1}+2$.</li>
+                            <li> $a_n = 2n$</li> 
+                        </ol>
+                    </div>   
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="8dc6c214-7df5-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-helloweb14">
+                            Lukujonon määrittely
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-helloweb14">
+                    <p>
+                        Tarkastele parittomien positiivisten kokonaislukujen $1$, $3$, $5$, $\ldots$ muodostamaa lukujonoa $(b_n)$.
+                    </p>
+                    <ol class="a">
+                        <li> Keksi sääntö, miten jäsen $b_n$ saadaan lausuttua edellisen jäsenen $b_{n-1}$ avulla. Toisin sanottuna määrittele lukujono $(b_n)$ rekursiivisesti.</li>
+                        <li> Keksi sääntö, miten jäsen $b_n$ saadaan lausuttua järjestysnumeron $n$ avulla. Toisin sanottuna määrittele lukujono $(b_n)$ analyyttisesti.</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#helloweb14_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="helloweb14_v" class="collapse">
+                        <ol class="a">
+                            <li> $b_1 = 1$ ja $b_n = b_{n-1}+2$.</li>
+                            <li> $b_n = 2n-1$</li> 
+                        </ol>
+                    </div>   
+                </div>
+            </div>
+            <div class="tehtava" id="8dc6c2e6-7df5-11e7-bb31-be2e44b06b34">
+
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#t-helloweb16">
+                            Lukujono
+                        </a>
+                    </h1>
+                </header>
+                <div id="t-helloweb16" >
+                    <p>
+                        Henkilö aloittaa lenkkeilyharrastuksen. Ensimmäinen lenkki on kilometrin mittainen ja seuraava lenkki aina 200 metriä pidempi kuin edellinen.
+                    </p>
+                    <ol class="a">
+                        <li> Kuinka pitkä on henkilön seitsemäs lenkki? </li>
+                        <li> Määrittele rekursiivisesti jono $(a_n)$, missä $a_n$ on $n$:ntenä päivänä tehdyn lenkin pituus.</li>
+                        <li> Määrittele analyyttisesti jono $(a_n)$, missä $a_n$ on $n$:ntenä päivänä tehdyn lenkin pituus.</li>
+                        <li> Jos henkilö käy lenkillä kolme kertaa viikossa, kuinka monennella viikolla hän juoksee ensimmäisen kerran vähintään maratonin mittaisen lenkin (42,195 km)?</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#helloweb16_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="helloweb16_v" class="collapse">
+                        <ol class="a">
+                            <li> 2200 m</li>
+                            <li> $a_1 = 1000$ ja $a_n = a_{n-1} + 200$</li> 
+                            <li> $a_n = 1000 + 200(n-1)$</li>
+                            <li> 69. viikolla.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
 
             <div class="tehtava" id="dc9c7d0e-7df8-11e7-bb31-be2e44b06b34">
                 <header>
