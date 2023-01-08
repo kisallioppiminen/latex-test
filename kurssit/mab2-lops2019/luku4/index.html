@@ -33,7 +33,7 @@ topnav: mab2-lops2019
                     Tämän luvun tavoitteena on, että tunnet lukujonon käsitteen ja osaat mallintaa erilaisia käytännön tilanteita aritmeettisen ja geometrisen lukujonon ja summan avulla. Osaat 
                 <ul>
                     <li> määrittää analyyttisesti tai rekursiivisesti määritellyn lukujonon jäseniä ja tutkia, onko jokin luku annetun lukujonon jäsen</li>
-                    <li> käyttää laskinta lukujonojen tutkimiseen</li>
+                    <li> käyttää teknisiä apuvälineitä lukujonojen ja summien tutkimisessa</li>
                     <li> tunnistaa aritmeettisen ja geometrisen lukujonon</li>
                     <li> muodostaa lausekkeen sekä aritmeettisen että geometrisen lukujonon yleiselle jäsenelle</li>
                     <li> laskea aritmeettisen ja geometrisen summan.</li>
@@ -84,14 +84,7 @@ topnav: mab2-lops2019
                     </div>
                 </div>
             </div>
-            <!-- <p>
-                Edellisessä tehtävässä a-kohdassa tarkastellun jonon jäsenet ovat luonnollisia lukuja. <em>Luonnollisten lukujen joukkoa</em> merkitään symbolilla $\N$. Siihen kuuluvat luvut $0$, $1$, $2$, $3$ ja niin edelleen. Voidaan merkitä, että 
-                $$\N = \{0,1,2,3, \ldots\}.$$
-                Edellisen tehtävän b-kohdan jonon jäsenistä vain osa on luonnollisia lukuja. Esimerkiksi jonon toinen jäsen $-2$ ei ole luonnollinen luku eli $-2 \not\in \N$. Kaikki b-kohdan jonon jäsenet kuuluvat kuitenkin kokonaislukujen joukkoon. Sitä merkitään symbolilla $\Z$. <em>Kokonaislukujen joukko</em> sisältää kaikki luonnolliset luvut ja niiden vastaluvut. Lyhyesti merkittynä
-                $$\Z = \{0,1,-1,2,-2,3,-3,\ldots\}.$$
-                Edellisen tehtävän c-kohdassa tarkastellun jonon jäsenistä vain osa on kokonaislukuja. Esimerkiksi jonon kolmas jäsen $\frac{1}{3}$ ei ole kokonaisluku, mikä voidaan merkitä $\frac{1}{3}\not\in \Z$. Kaikki tämän jonon jäsenet ovat kuitenkin rationaalilukuja, sillä ne voidaan esittää murtolukumuodossa. Esimerkiksi jonon ensimmäinen jäsen $1$ voidaan kirjoittaa vaikkapa muodossa $\frac{1}{1}$ tai muodossa $\frac{2}{2}$. <em>Rationaalilukujen joukon</em> $\Q$ muodostavat kaikki sellaiset luvut, jotka voidaan kirjoittaa murtolukumuodossa. Tämä voidaan ilmaista myös kirjoittamalla
-                $$\Q = \left\{ \frac{m}{n} \mid m, n \in \Z \text{ ja } n \neq 0 \right\}.$$
-            </p> -->
+
             <div class="teoria">
                 <p>
                     Joskus lukujonosta on helpompi puhua, jos sille annetaan nimi. Voidaan esimerkiksi puhua lukujonosta $(a_n)$ tai lukujonosta $(b_n)$ tai lukujonosta $(x_n)$. Tässä merkinnässä sulut kertovat sen, että puhutaan koko lukujonosta eikä yksittäisestä jonon jäsenestä. 
@@ -396,54 +389,6 @@ topnav: mab2-lops2019
                                <p>
                                     $a_2 = 7$, $a_3 = 11$, $a_4 = 15$, $a_5 = 19$ ja $a_6 = 23$.
                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tehtavat">
-                    <div class="tehtava" id="8dc68efc-7df5-11e7-bb31-be2e44b06b34">
-
-                        <header>
-                            <h1>                            <div class="checkbox-group"></div>
-                                <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb6">
-                                    Rekursiivisen lukujonon jäsenen määrittäminen
-                                </a>
-                            </h1>
-                        </header>
-                        <div id="t-helloweb6" class="collapse">
-                            <p>
-                                Lukujonon $(a_n)$ ensimmäinen jäsen on 1 ja toinen jäsen on 19. Seuraavat jäsenet saadaan laskemalla kahden edellisen jäsenen keskiarvo. Lukujono voidaan siis määritellä seuraavasti:
-                                $$
-                                \begin{equation*}
-                                \left\{
-                                \begin{array}{ll}
-                                a_1&=1\\ 
-                                a_2&=19\\
-                                a_n&=\dfrac{a_{n-2}+a_{n-1}}{2}, \quad n=3,4,\ldots.
-                                \end{array}
-                                \right.
-                                \end{equation*}
-                                $$
-                            </p>
-                            <ol class="a">
-                                <li> Määritä $a_3$ ja $a_4$.</li>
-                                <li> Miksi rekursiokaavaa 
-                                    $$a_n=\dfrac{a_{n-2}+a_{n-1}}{2}$$    
-                                    voi käyttää vasta järjestysnumerosta $n=3$ alkaen eikä $n=2$ alkaen?</li>
-                            </ol>  
-                            <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb6_v">
-                                VASTAUS
-                            </a>
-                            </h2>
-                            <div id="t-helloweb6_v" class="collapse">
-                               <ol class="a">
-                                    <li> $a_3 = 10$ ja $a_4 = 14{,}5$.</li>
-                                    <li> 
-                                        Kaavassa tarvitaan kaksi edellistä jäsentä. Jos $n = 2$, osoittajaan tulee termit $a_1$ ja $a_0$, joista jälkimmäinen eli $a_0$ ei ole määritelty.
-                                    </li>
-                                </ol>  
                             </div>
                         </div>
                     </div>
@@ -1696,44 +1641,35 @@ topnav: mab2-lops2019
         <div id="teknisen-apuvalineen-kaytto" class="collapse">
             <div class="teoria">
                 <p>
-                    Edellä on tarkasteltu päättymättömiä lukujonoja. Joskus ilmiön mallintamiseen tai ongelman ratkaisemiseen tarvitaan vain äärellinen määrä lukuja lukujonon alkupäästä. Tällaisessa tilanteessa nämä luvut voidaan myös laskea yhteen tavalliseen tapaan. Toisin sanottuna voidaan muodostaa niiden summa. Jos tarkastellaan esimerkiksi lukujonoa $(a_n)$, jonka yleinen termi on $a_n = 2n-1$, voidaan laskea vaikkapa sen viiden ensimmäisen termin summa:
-                    $$
-                    \begin{align*}
-                    S_5 &= a_1 + a_2 + a_3 + a_4 + a_5 \\
-                    &= 1 + 3 + 5 + 7 + 9 \\
-                    &= 25.
-                    \end{align*}
-                    $$
-                    Erilaiset summat luokitellaan niitä vastaavan lukujonon mukaan. 
+                    Seuraavaksi harjoitellaan teknisen apuvälineen käyttöä lukujonoissa ja summissa.
                 </p>
-
-                <div class="definition">
-                    <h3>MÄÄRITELMÄ: ARITMEETTINEN SUMMA</h3>
-                    <p>
-                        Summa 
-                        $$S_n = a_1 + \cdots + a_n$$ on <em>aritmeettinen</em>, jos ja vain jos vastaava lukujono $(a_n)$ on aritmeettinen.
-                    </p>
-                </div>
             </div>
             <div class="tehtavat">
                 <div class="tehtava" id="8dc698de-7df5-11e7-bb31-be2e44b06b34">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#tehtava1000000001">
-                                Aritmeettinen summa
+                                Teknisen apuvälineen käyttö
                             </a>
                         </h1>
                     </header>
                     <div id="tehtava1000000001" class="collapse">	
-                        <p>    
-                            Auditoriossa on yhteensä 13 penkkiriviä. Ensimmäisellä rivillä on 20 istuinta ja seuraavalla rivillä aina kaksi enemmän kuin edeltävällä. 
-                        </p>
+                        <p>Tutkitaan aritmeettista lukujunoa 7, 10, 13, ...</p>
+                        <p>Tehtävänä on laskea lukujonon 30 jästentä yhteen jonon alusta alkaen.</p>
                         <ol class="a">
-                            <li> Kuinka monta istuinta on viimeisellä eli 13. rivillä?
-                            <li> Auditoriossa pidettävään tilaisuuteen on tulossa 400 henkilöä. Mahtuvatko kaikki tulijat istumaan? Perustele omin sanoin.
-                            <li> Miten aritmeettinen jono liittyy tähän tehtävään?
-                            <li> Miten aritmeettinen summa liittyy tähän tehtävään?
+                            <li> 
+                                Lasketaan summa ensin käyttäen summakaavaa $S_n = n\cdot \dfrac{a_1+a_n}{2}$.<br /><br />
+                                Mitä lukujonosta täytyy tietää, jotta summan saa laskettua?<br />
+                                Onko kaikki tarvittavat asiat tiedossa? Mikä kolmesta tiedosta puuttuu?<br />
+                                Selvitä tarvittavat tiedot, sijoita ne kaavaan ja laske summa.
+                            </li>
+                            <li> 
+                                Lasketaan summa ensin käyttäen taulukkolaskentaa. Tämän voi tehdä esim. Geogebralla, LibreOfficella tai TI Nspirellä. Kätetään tällä kertaa Nspireä.<br /><br />
+                                Katso <a href="https://www.youtube.com/watch?v=wBY2sgVYgEQ">oheinen videoa</a> ja kirjoita sen jälkeen TI Nspirellä tehtävänannon lukujonon 30 ensimmäistä jäsentä samaan tapaan kuin videossa on tehty.<br /><br />
+                                Kirjoita lukujonojen termien alla olevaan soluun (pitäisi olla B31) =sum() ja maalaa lukujonon jäsenet. Paita enter. Satko saman vastauksen kuin a-kohdassa?
+                            </li>
                         </ol>
+                        
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#tehtava1000000001_v">
                                 VASTAUS
@@ -1741,67 +1677,87 @@ topnav: mab2-lops2019
                         </h2>
                         <div id="tehtava1000000001_v" class="collapse">
                            <ol class="a">
-                                <li> 44 istuinta </li>
-                                <li> Auditoriossa on yhteensä 416 istuinta, joten kaikki tulijat mahtuvat istumaan.  
-                                </li>
-                                <li>
-                                    Auditorion eri rivien istuimien määrät muodostavat aritmeettisen lukujonon.
-                                </li>
-                                <li>
-                                    Auditorion istuimien kokonaismäärä on aritmeettinen summa.
+                                <li>Lukujonosta täytyy tietää ensimmäinen ja viimeinen yhteenlaskettava sekä yhteenlaskettavien lukumäärä. <br /><br />
+                                    Ensimmäinen jäsen on $a_1=7$ ja yhteenlaskettavien lukumäärä on $n=30$, mutta viimeinen yhteenlaskettava eli $a_30$ puuttuu. 
+                                    Yleisen jäsenen avulla saadaan $a_30=94$. 
+                                    $$S_{30}=30\cdot \dfrac{7+94}{2}=1515$$
                                 </li>
                             </ol>  
                         </div>  
                     </div>
                 </div>
-            </div>
-           
-            <div class="tehtavat">
-                <div class="tehtava" id="8dc69f14-7df5-11e7-bb31-be2e44b06b34">
 
+                <div class="tehtava" id="8dc69f14-7df5-11e7-bb31-be2e44b06b34">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#tehtava1000000002">
-                                Aritmeettinen summa
+                                Teknisen apuvälineen käyttö
                             </a>
                         </h1>
                     </header>
                     <div id="tehtava1000000002" class="collapse">
-                        <p> 
-                            Tasaisesti viettävään rinteeseen rakennetaan aita, jonka pituus on $126$ metriä. Aidan yläreunan halutaan olevan vaakasuorassa. Aitaan tulee tolppa molempiin päihin ja aina $1{,}5$ metrin välein. Matalimman tolpan korkeus on $0{,}75$ m ja korkeimman tolpan korkeus $2{,}43$ m. 
-                        </p>
+                        <p>Tutkitaan geometrista lukujunoa 2, 6, 18, ...</p>
+                        <p>Tehtävänä on laskea lukujonon 30 jästentä yhteen jonon alusta alkaen.</p>
+                        
                         <ol class="a">
-                            <li> Laske aitatolppien lukumäärä.
-                            <li> Laske, kuinka paljon seuraava tolppa on edellistä pidempi, olettaen, että tolppien pituus kasvaa tasaisesti. 
-                            <li> Kuinka monta metriä aitatolppiin käytettävää puuta tarvitaan aidan rakentamiseen? Miten voit tässä hyödyntää aritmeettisen summan kaavaa?
-                            <li> Kuinka monta metriä aitatolppiin käytettävää puuta tarvitaan, jos aidasta päätetään säästösyistä rakentaa vain 75 metriä matalammasta päästä alkaen?</li>
+                            <li> 
+                                Lasketaan summa ensin käyttäen summakaavaa $S_n = a_1\cdot \dfrac{1-q^n}{1-q}$.<br /><br />
+                                Mitä lukujonosta täytyy tietää, jotta summan saa laskettua?<br />
+                                Onko kaikki tarvittavat asiat tiedossa? Jos ei, niin selvitä ne.<br />
+                                Sijoita $a_1$, $q$ ja $n$ kaavaan ja laske summa.
+                            </li>
+                            <li> 
+                                Laske summa käyttäen TI Nspiren taulukkolaskentaa (Listat ja taulukot -sovellus) samaan tapaan kuin edellsiessä tehtävässä.<br /><br />                         
+                                Vihje: Levennä b-saraketta jotta näet vastauksen, koska summassa on 15 numeroa.
+                            </li>
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#tehtava1000000002_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="ttehtava1000000002_v" class="collapse">
+                        <div id="tehtava1000000002_v" class="collapse">
                            <ol class="a">
                                 <li>
-                                    Aitatolppia tarvitaan 85 kpl.
-                                </li>
-                                <li> 
-                                    Seuraava tolppa on aina 0,02 m eli 2 cm edellistä pidempi.
-                                </li>
-                                <li> 
-                                    $$
-                                    \frac{85 \cdot (0{,}75 + 2{,}43)}{2} = 135{,}15,
-                                    $$ 
-                                    joten puuta tarvitaan 136 metriä.
-                                </li>
-                                <li> 
-                                    $$
-                                    \frac{51 \cdot (0{,}75 + 1{,}75)}{2} = 63{,}75,
-                                    $$ 
-                                    joten puuta tarvitaan 64 metriä.
-                                </li>
+                                    Lukujonosta tarvitaan ensimmäinen yhteenlaskettava, lukujonon suhdeluku ja yhteenlaskettavien lukumäärä. <br /><br />
+                                    Ensimmäinen yhteenlaskettava on $a_1=2$, yhteenlaskettavien lukumäärä on $n=30$, mutta suhdeluku $q$ puuttuu. Se saadaan minkä tahansa kahden peräkkäisen jäsenen suhteesta, esim. $q=a_2/a_1=6/2=3$.
+                                    $$S_30=2\cdot\dfrac{1-3^30}{1-3}=205891132094648$$
+
+                                </li>        
                             </ol>  
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tehtava" id="dc9c7d0e-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#lukujono2_6">
+                                Lukujonon piirtäminen teknisellä apuvälineellä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="lukujono2_6" class="collapse">
+                        <p> 
+                            Katso <a href="https://www.youtube.com/watch?v=Z61VQagD7Wg">oheinen video</a>. Piirrä seuraavat lukujonot ja selvitä taulukon avulla lukujonon 10. jäsen.
+                        </p>
+                        <ol class="a">
+                            <li> $a_n=3n-1$</li>
+                            <li> $a_n=5\cdot \left( \dfrac{1}{2} \right)^{n-1}$</li>
+                        </ol>
+                        <p>
+                            Tutki, ovatko nämä lukujonot aritmeettisia tai geometrisia.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#lukujono2_6_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="lukujono2_6_v" class="collapse">
+                            <ol class="a">
+                                <li> Aritmeettinen</li>
+                                <li> Geometrinen</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -1825,107 +1781,77 @@ topnav: mab2-lops2019
         <div id="sovelluksia" class="collapse">
             <div class="teoria">
                 <p>
-                    Edellä on tarkasteltu päättymättömiä lukujonoja. Joskus ilmiön mallintamiseen tai ongelman ratkaisemiseen tarvitaan vain äärellinen määrä lukuja lukujonon alkupäästä. Tällaisessa tilanteessa nämä luvut voidaan myös laskea yhteen tavalliseen tapaan. Toisin sanottuna voidaan muodostaa niiden summa. Jos tarkastellaan esimerkiksi lukujonoa $(a_n)$, jonka yleinen termi on $a_n = 2n-1$, voidaan laskea vaikkapa sen viiden ensimmäisen termin summa:
-                    $$
-                    \begin{align*}
-                    S_5 &= a_1 + a_2 + a_3 + a_4 + a_5 \\
-                    &= 1 + 3 + 5 + 7 + 9 \\
-                    &= 25.
-                    \end{align*}
-                    $$
-                    Erilaiset summat luokitellaan niitä vastaavan lukujonon mukaan. 
+                    Lopuksi harjoitellaan sovellustehtävien ratkaisemista, jolloin olennaista on tunnistaa, onko kyseessä jono- vai summatehtävä ja onko kyseessä aritmeettinen jono vai geometrinen jono. Tehtävissä voi käyttää teknisiä apuvälineitä apuna samaan tapaan kuin edellä on harjoiteltu.
                 </p>
-
+            </div>    
+            
             <div class="tehtavat">
                 <div class="tehtava" id="8dc698de-7df5-11e7-bb31-be2e44b06b34">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#tehtv123456">
-                                Aritmeettinen summa
+                                Sovelluksia
                             </a>
                         </h1>
                     </header>
                     <div id="tehtv123456" class="collapse">	
                         <p>    
-                            Auditoriossa on yhteensä 13 penkkiriviä. Ensimmäisellä rivillä on 20 istuinta ja seuraavalla rivillä aina kaksi enemmän kuin edeltävällä. 
+                            Auditorion ensimmäisellä rivillä on 14 istuinta ja seuraavalla rivillä aina 2 istuinta enemmän. Kuinka monta istuinta auditoriossa yhteensä on, kun viimeisellä rivillä on 38 istuinta? </p>
                         </p>
-                        <ol class="a">
-                            <li> Kuinka monta istuinta on viimeisellä eli 13. rivillä?
-                            <li> Auditoriossa pidettävään tilaisuuteen on tulossa 400 henkilöä. Mahtuvatko kaikki tulijat istumaan? Perustele omin sanoin.
-                            <li> Miten aritmeettinen jono liittyy tähän tehtävään?
-                            <li> Miten aritmeettinen summa liittyy tähän tehtävään?
-                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#tehtv123456_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="tehtv123456_v" class="collapse">
-                           <ol class="a">
-                                <li> 44 istuinta </li>
-                                <li> Auditoriossa on yhteensä 416 istuinta, joten kaikki tulijat mahtuvat istumaan.  
-                                </li>
-                                <li>
-                                    Auditorion eri rivien istuimien määrät muodostavat aritmeettisen lukujonon.
-                                </li>
-                                <li>
-                                    Auditorion istuimien kokonaismäärä on aritmeettinen summa.
-                                </li>
-                            </ol>  
+                            <p>338 istuinta. Onnistuitko ratkaisemaan tehtävän aritmeettisena summana?</p> 
                         </div>  
                     </div>
                 </div>
-            </div>
-            
-            <div class="tehtavat">
-                <div class="tehtava" id="8dc69f14-7df5-11e7-bb31-be2e44b06b34">
 
+                <div class="tehtava" id="dc9c8844-7df8-11e7-bb31-be2e44b06b34">
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb31b">
-                                Aritmeettinen summa
+                            <a data-toggle="collapse" class="collapsed" data-target="#lukujono3_2">
+                                Sovelluksia
                             </a>
                         </h1>
                     </header>
-                    <div id="t-helloweb31b" class="collapse">
+                    <div id="lukujono3_2" class="collapse">
                         <p> 
-                            Tasaisesti viettävään rinteeseen rakennetaan aita, jonka pituus on $126$ metriä. Aidan yläreunan halutaan olevan vaakasuorassa. Aitaan tulee tolppa molempiin päihin ja aina $1{,}5$ metrin välein. Matalimman tolpan korkeus on $0{,}75$ m ja korkeimman tolpan korkeus $2{,}43$ m. 
+                            Pyramidihuijari avaa pankkitilin ja siirtää ensimmäisessä vaiheessa tilille 100 €. Tämän jälkeen hän houkuttelee mukaan kolme sijoittajaa, joista jokainen siirtää toisessa vaiheessa huijarin tilille 100 €. Kolmannessa vaiheessa kukin näistä kolmesta houkuttelee edelleen mukaan kolme uutta sijoittajaa, joista jokainen siirtää 100 € huijarin tilille. Huijaus jatkuu saman kaavan mukaisesti. Kuinka monen vaiheen jälkeen tilillä oleva summa ylittää Suomen valtion vuoden 2013 talousarvion, joka on 54,1 miljardia euroa? [Lyhyt K2014/8] 
                         </p>
-                        <ol class="a">
-                            <li> Laske aitatolppien lukumäärä.
-                            <li> Laske, kuinka paljon seuraava tolppa on edellistä pidempi, olettaen, että tolppien pituus kasvaa tasaisesti. 
-                            <li> Kuinka monta metriä aitatolppiin käytettävää puuta tarvitaan aidan rakentamiseen? Miten voit tässä hyödyntää aritmeettisen summan kaavaa?
-                            <li> Kuinka monta metriä aitatolppiin käytettävää puuta tarvitaan, jos aidasta päätetään säästösyistä rakentaa vain 75 metriä matalammasta päästä alkaen?</li>
-                        </ol>
                         <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t-helloweb31b_v">
+                            <a data-toggle="collapse" class="collapsed" data-target="#lukujono3_2_v">
                                 VASTAUS
                             </a>
                         </h2>
-                        <div id="t-helloweb31b_v" class="collapse">
-                           <ol class="a">
-                                <li>
-                                    Aitatolppia tarvitaan 85 kpl.
-                                </li>
-                                <li> 
-                                    Seuraava tolppa on aina 0,02 m eli 2 cm edellistä pidempi.
-                                </li>
-                                <li> 
-                                    $$
-                                    \frac{85 \cdot (0{,}75 + 2{,}43)}{2} = 135{,}15,
-                                    $$ 
-                                    joten puuta tarvitaan 136 metriä.
-                                </li>
-                                <li> 
-                                    $$
-                                    \frac{51 \cdot (0{,}75 + 1{,}75)}{2} = 63{,}75,
-                                    $$ 
-                                    joten puuta tarvitaan 64 metriä.
-                                </li>
-                            </ol>  
+                        <div id="lukujono3_2_v" class="collapse">
+                            <p>19 vaiheen jälkeen.</p>
                         </div>
                     </div>
                 </div>
+
+                <div class="tehtava" id="dc9c933e-7df8-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#lukujono3_5">
+                                Sovelluksia
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="lukujono3_5" class="collapse">
+                        <p> Aritmeettisen jonon ensimmäinen termi on 10 ja toinen termi 12. Geometrisen jonon ensimmäinen termi on 2 ja suhdeluku $q=\frac{21}{20}$. Monennestako termistä lähtien geometrisen jonon termi on suurempi kuin vastaava aritmeettisen jonon termi? [Mukaellen Lyhyt K2011/13] </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#lukujono3_5_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="lukujono3_5_v" class="collapse">
+                            <p>96. termistä lähtien.</p>
+                        </div>
+                    </div>
+                </div> 
             </div>
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#sovelluksia">
@@ -1934,7 +1860,6 @@ topnav: mab2-lops2019
             </div>
         </div>
     </section>
-
 
     <section class="panel">
         <header class="otsikko">
@@ -2236,27 +2161,6 @@ topnav: mab2-lops2019
                     </h2>
                     <div id="helloweb31_v" class="collapse">
                         <p>650</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="8dc6c908-7df5-11e7-bb31-be2e44b06b34">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#lukujono3_1a">
-                            Aritmeettinen summa
-                        </a>
-                    </h1>
-                </header>
-                <div id="lukujono3_1a">
-                    <p> Auditorion ensimmäisellä rivillä on 14 istuinta ja seuraavalla rivillä aina 2 istuinta enemmän. Kuinka monta istuinta auditoriossa yhteensä on, kun viimeisellä rivillä on 38 istuinta? </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#lukujono3_1a_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="lukujono3_1a_v" class="collapse">
-                        <p>338 istuinta. Onnistuitko ratkaisemaan tehtävän aritmeettisena summana?</p>
                     </div>
                 </div>
             </div>
@@ -2701,46 +2605,7 @@ topnav: mab2-lops2019
                         </ol>
                     </div>
                 </div>
-            </div>
-
-            <div class="tehtava" id="dc9c7d0e-7df8-11e7-bb31-be2e44b06b34">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#lukujono2_6">
-                            Lukujonon piirtäminen laskimella
-                        </a>
-                    </h1>
-                </header>
-                <div id="lukujono2_6">
-                    <p> 
-                        Selvitä, miten voit piirtää laskimellasi lukujonon ja tarkastella sen arvoja taulukosta. Esimerkiksi TI Nspire CAS CX -laskimella se onnistuu Kuvaajat-sovelluksessa valitsemalla Kuvaajan syöttö/muokkaus -kohdasta Sekvenssi. Taulukon, johon laskin automaattisesti laskee lukujonon arvoja näkyviin, saa komennolla Ctrl+T. Lisätietoja TI Nspire:n laskimesta löytyy esimerkiksi <a href="http://nspire.fi/author/markku-parkkonen/">täältä</a> Opetusvinkistä 2/2016.
-                    <br>  
-                        Piirrä seuraavat lukujonot:
-                    </p>
-                    <ol class="a">
-                        <li> $a_n=3n-1$</li>
-                        <li> $a_n=5\cdot \left( \dfrac{1}{2} \right)^{n-1}$</li>
-                        <li> $a_1=3$ ja $a_n=\dfrac{3a_{n-1}}{2}-\dfrac{1}{a_{n-1}}$ kaikilla kokonaisluvuilla $n \geq 2$.</li>
-                    </ol>
-                    <p>
-                        Tutki, ovatko nämä lukujonot aritmeettisia tai geometrisia.
-                    </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#lukujono2_6_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="lukujono2_6_v" class="collapse">
-                        <p>
-                        <ol class="a">
-                            <li> Aritmeettinen</li>
-                            <li> Geometrinen</li>
-                            <li> Ei kumpikaan</li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            </div>                         
             <!-- Tähän loppui piilotus -->
 
             <div class="close-section">
@@ -2851,32 +2716,6 @@ topnav: mab2-lops2019
                             <li> Ei.</li>
                         </ol>
                     </div>   
-                </div>
-            </div>
-
-            <div class="tehtava" id="dc9c8844-7df8-11e7-bb31-be2e44b06b34">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#lukujono3_2">
-
-                        </a>
-                    </h1>
-                </header>
-                <div id="lukujono3_2">
-                    <p> 
-                        Pyramidihuijari avaa pankkitilin ja siirtää ensimmäisessä vaiheessa tilille 100 €. Tämän jälkeen hän houkuttelee mukaan kolme sijoittajaa, joista jokainen siirtää toisessa vaiheessa huijarin tilille 100 €. Kolmannessa vaiheessa kukin näistä kolmesta houkuttelee edelleen mukaan kolme uutta sijoittajaa, joista jokainen siirtää 100 € huijarin tilille. Huijaus jatkuu saman kaavan mukaisesti. Kuinka monen vaiheen jälkeen tilillä oleva summa ylittää Suomen valtion vuoden 2013 talousarvion, joka on 54,1 miljardia euroa? [Lyhyt K2014/8] 
-                    </p>
-                    <p>
-                        Vihje: Hahmottele paperille, miten huijaus etenee, esimerkiksi piirtämällä puumalli. Muodostava tarvittava yhtälö ja ratkaise yhtälö laskimella.
-                    </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#lukujono3_2_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="lukujono3_2_v" class="collapse">
-                        <p>19 vaiheen jälkeen.</p>
-                    </div>
                 </div>
             </div>
 
@@ -2996,27 +2835,6 @@ topnav: mab2-lops2019
 
                     </div>
 
-                </div>
-            </div>
-
-            <div class="tehtava" id="dc9c933e-7df8-11e7-bb31-be2e44b06b34">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#lukujono3_5">
-
-                        </a>
-                    </h1>
-                </header>
-                <div id="lukujono3_5">
-                    <p> Aritmeettisen jonon ensimmäinen termi on 10 ja toinen termi 12. Geometrisen jonon ensimmäinen termi on 2 ja suhdeluku $q=\frac{21}{20}$. Monennestako termistä lähtien geometrisen jonon termi on suurempi kuin vastaava aritmeettisen jonon termi? Muodosta tarvittava epäyhtälö ja etsi sille ratkaisu kokeilemalla. [Lyhyt K2011/13] </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#lukujono3_5_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="lukujono3_5_v" class="collapse">
-                        <p>96. termistä lähtien.</p>
-                    </div>
                 </div>
             </div>
 
