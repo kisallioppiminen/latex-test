@@ -1,0 +1,2674 @@
+---
+title: MAB3 - Geometria
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: mab3-lops2019
+---
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th {
+        padding: 5px;
+    }
+</style>
+
+{% include bottomnav.html %}
+
+<input type="hidden" id="chapterNumber" value="1"/>
+
+<article>
+    <section>
+        <header>
+            <h1>Kolmio</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun2-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="luvun2-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p>
+                    Tämän luvun tavoitteena on, että osaat ratkaista erilaisia geometrisia ongelmia kolmioiden avulla. Osaat
+                </p>
+                <ul>
+                    <li> laskea kolmion pinta-alan</li>
+                    <li> tunnistaa vierus- ja ristikulmat sekä samankohtaiset kulmat ja päätellä niiden suuruuden</li>
+                    <li> perustella kolmioiden yhdenmuotoisuuden ja hyödyntää sitä geometristen ongelmien ratkaisussa</li>
+                    <li> määrittää kolmioiden sivujen pituuksia ja kulmien suuruuksia Pythagoraan lauseen sekä trigonometristen suhteiden avulla.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#ala">
+                    Kolmion pinta-ala ja kulmat
+                </a>
+            </h1>
+        </header>
+        <div id="ala" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Kolmioita voidaan käyttää apuna monien geometristen ongelmien ratkaisemisessa. Tässä luvussa perehdytään kolmioiden geometrisiin ominaisuuksiin. Aloitetaan tutkimalla, miten kolmion pinta-ala lasketaan.
+                </p>
+
+                <p>
+                    Kolmion pinta-alan laskemiseksi tarvitaan sopimus siitä, mitä pinta-alalla ylipäätään tarkoitetaan. Lähtökohdaksi voidaan ottaa suorakulmion pinta-ala. 
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SUORAKULMION PINTA-ALA</h3>
+                    <p>
+                        Suorakulmion <em>pinta-ala</em> on samasta kärjestä alkavien sivujen pituuksien tulo; alla olevan kuvion merkinnöillä siis $ab$.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/suoraK04.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+
+                <div class="tehtava first-exercise" id="044c3a11-29a5-4f93-a11a-68843ced59ab">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01">
+                                Suorakulmion pinta-ala
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio01" class="collapse">
+                        <p>
+                            Kansainvälisissä aikuisten jalkapallo-otteluissa kentän leveyden on oltava vähintään 64 m ja enintään 75 m. Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
+                        <ol class="a">
+                            <li> 
+                                Piirrä mallikuva suurimmasta ja pienimmästä jalkapallokentästä. Merkitse kuvioihin tunnetut mitat. 
+                            </li>
+                            <li> Laske suurimman ja pienimmän jalkapallokentän pinta-alojen erotus. </li>
+                            <li> Kuinka monta prosenttia suurin mahdollinen kenttä on isompi kuin pienin mahdollinen kenttä? </li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio01_v" class="collapse">
+                            <ol class="a">
+                                <li> Mallikuvat:
+                                    <br>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva015.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Pinta-alojen erotus on $1\,850 \text{ m}^2$. Suurimman kentän pinta-ala on $8\,250 \text{ m}^2$ ja pienimmän $6\,400 \text{ m}^2$.
+                                </li>
+                                <li> Noin 29 %. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Suorakulmion pinta-alan avulla saadaan pääteltyä, miten kolmion pinta-ala lasketaan. Seuraavissa tehtävissä tutkitaan kahta erilaista tapausta.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="56b70eed-20da-4ce2-9ee2-3f58241167bb">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01b">
+                                Kolmion pinta-ala
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio01b" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/suoraK17.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>
+                        <ol class="a">
+                            <li> Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi. </li>
+                            <li> Muodosta suorakulmion pinta-alan lauseke. </li>
+                            <li> Päättele kolmion pinta-ala.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio01b_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kuva: <br>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva001.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Suorakulmion pinta-ala on $ah$.
+                                </li>
+                                <li> 
+                                    Kolmion pinta-ala on puolet suorakulmion pinta-alasta eli 
+                                    $$
+                                    \dfrac{ah}{2}
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="0ea924e0-e78a-4ea6-a489-8303a4849a51">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01c">
+                                Kolmion pinta-ala
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio01c" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/suoraK05.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi.
+                                <br> Vinkki: voit esimerkiksi soveltaa edellisen tehtävän ideaa kumpaankin kuvassa näkyvään suorakulmaiseen kolmioon.</li>
+                            <li> Muodosta suorakulmion pinta-alan lauseke. </li>
+                            <li> Päättele kolmion pinta-ala.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01c_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio01c_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kuva: <br>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Suorakulmion pinta-ala on sivujen pituuksien tulo $ah$.
+                                </li>
+                                <li> 
+                                    Kolmion pinta-ala on puolet suorakulmion pinta-alasta eli 
+                                    $$
+                                    \dfrac{ah}{2}
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisten tehtävien havainnot johtavat seuraavaan teoreemaan. Lue teoreema ja sen perustelu huolellisesti. Mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+                </p>
+
+                <div class="theorem" id="KOLMION PINTA-ALA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kolmion pinta-ala on puolet sen kannan ja korkeuden tulosta; alla olevan kuvion merkinnöillä
+                        $$\dfrac{ah}{2}$$
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/suoraK05.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Kolmion korkeusjanan toinen päätepiste voi sijaita <br>
+                            1. kolmion sivun päätepisteessä <br>
+                            2. kolmion sivulla <br>
+                            3. kolmion sivun jatkeella.<br>
+                            Kaksi ensimmäistä tapausta on jo käsitelty tehtävissä. Tutkitaan vielä kolmas tapaus.
+                            Jos kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivun jatkeella, voidaan kolmio täydentää alla olevan kuvan mukaisesti suorakulmaiseksi kolmioksi, jonka pinta-ala on
+                            $$\frac{(a+x)h}{2}.$$
+                            <img src="/kurssit/maa3/kuvat/suoraK08.png" style="max-width: 100%; width: auto; height: auto;" />
+                            <br>
+                            Alkuperäisen kolmion pinta-ala saadaan tästä vähentämällä pienemmän suorakulmaisen kolmion pinta-ala:
+                            \begin{align*}
+                            \frac{(a+x)h}{2} - \frac{xh}{2} &= \frac{ah + xh - xh}{2} \\[1mm]
+                            &= \frac{ah}{2}
+                            \end{align*}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="1210dee0-5eb9-43dd-a895-ba59b40104ff">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio02">
+                                Kolmion pinta-ala
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio02" class="collapse">
+                        <p>
+                            Harjakattoisen omakotitalon pituus on 10 m ja leveys 6 m. Ensimmäisen kerroksen korkeus on 3 m ja toisen kerroksen päätykolmioiden korkeus 2,5 m. Talo aiotaan maalata. Maalin menekiksi arvioidaan yksi litra 6,5 neliömetriä kohti. Tehtävänä on laskea, kuinka paljon maalia tarvitaan, jos talo maalataan kaksi kertaa (pohjamaalaus ja pintamaalaus). Ikkunoita ei laskelmassa oteta huomioon.<br>
+                            <img src="/kurssit/maa3/kuvat/talo.jpg" style="max-width: 100%; width: auto; height: auto;"/>
+                        <ol class="a">
+                            <li> 
+                                Piirrä mallikuva talon päädystä ja talon sivuseinästä. Merkitse kuviin kaikki tiedossa olevat mitat.
+                            </li>
+                            <li> Laske talon seinien kokonaispinta-ala.</li>
+                            <li> Kuinka paljon maalia kannattaa ostaa talon maalaamista varten?</li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio02_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio02_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Mallikuva: <br>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva003.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> Seinien kokonaispinta-ala on $111 \text{ m}^2$. </li>
+                                <li> Maalia kannattaa ostaa noin 34-35 litraa (ikkunoita ei huomioitu laskelmassa, joten tulosta ei välttämättä tarvitse pyöristää ylöspäin). </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Palautetaan kappaleen lopuksi vielä mieleen joidenkin kulmien nimityksiä.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SUORA KULMA JA OIKOKULMA</h3>
+                    <p>
+                        <em>Suora kulma</em> tarkoittaa kulmaa, jonka suuruus on $90^\circ$.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/suoraK09.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        <em>Oikokulma</em> tarkoittaa kulmaa, jonka suuruus on $180^\circ$.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/suoraK10.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="teoria">
+                <p>
+                    On mahdollista perustella yleispätevästi, että kolmion kulmien summa on aina $180^\circ$. Perusteluun syvennytään myöhemmin tässä luvussa, mutta tämä hyvin käyttökelpoinen tieto kannattaa painaa mieleen jo nyt. 
+                </p>
+
+                <div class="theorem" id="KOLMION KULMIEN SUMMA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kolmion kulmien summa on $180^\circ$.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="4b1fe401-9177-4e3d-ba73-db896723a2fb">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio06">
+                                Kolmion kulmien summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio06" class="collapse">
+                        <p>
+                            Päättele kulman $\alpha$ suuruus:
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                <img src="/kurssit/mab3/kuvat/MAB3kuva006.png" style="max-width: 100%; width: auto; height: auto;"/> 
+                            </li>
+                            <li> 
+                                <img src="/kurssit/mab3/kuvat/MAB3kuva007.png" style="max-width: 100%; width: auto; height: auto;"/>  
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio06_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio06_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $\alpha = 78^\circ$
+                                </li>
+                                <li> 
+                                    $\alpha = 36^\circ$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#suorakulmainen">
+                    Suorakulmainen kolmio
+                </a>
+            </h1>
+        </header>
+        <div id="suorakulmainen" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Suorakulmainen kolmio tarkoittaa kolmiota, jossa on suora kulma eli 90 asteen kulma. Yksi suorakulmainen kolmio on kuvattuna alla.
+                    <br> <img src="/kurssit/maa3/kuvat/suoraK28.png" style="max-width: 100%; width: auto; height: auto"/>
+                    <br>
+                    Suorakulmaisen kolmion pisintä sivua sanotaan <em>hypotenuusaksi</em> ja lyhyitä sivuja <em>kateeteiksi</em>. Yllä olevan suorakulmaisen kolmion hypotenuusan pituus on 5 ja kateettien pituudet ovat 3 ja 4.
+                </p>
+                <p>
+                    Suorakulmaisen kolmion hypotenuusan pituus ja kateettien pituudet liittyvät toisiinsa niin sanotun Pythagoraan lauseen kautta:
+                </p>
+
+                <div class="theorem" id="PYTHAGORAAN LAUSE">
+                    <h3>TEOREEMA </h3>
+                    <p>
+                        Suorakulmaisen kolmion kateettien neliöiden summa on yhtä suuri kuin hypotenuusan neliö, eli alla olevan kuvan merkinnöillä
+                        $$a^2 + b^2 = c^2$$
+                    </p>
+                    <img src="/kurssit/maa3/kuvat/suoraK02.png" style="max-width: 100%; width: auto; height: auto;"/>
+                </div>
+
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan Pythagoraan lauseen soveltamista.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="fb4fd575-ecdf-4e2a-b86e-5920058e2f80">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio10a">
+                                Pythagoraan lause
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio10a" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/vinoK30.png" style="max-width: 100%; width: auto; height: auto"/>
+                        </p>
+                        <p>  Tehtävänä on selvittää yllä olevan kolmion hypotenuusan pituus.
+                        <ol class="a">
+                            <li>
+                                Muodosta kolmion sivujen pituuksien välille Pythagoraan lauseen mukainen yhtälö. Ratkaise tästä yhtälöstä tuntemattoman sivun pituuden neliö eli $x^2$.
+                            </li>
+                            <li>
+                                Edellisessä kohdassa olet päätynyt toisen asteen yhtälöön $x^2 = s$, joita ratkaistiin <a href="/kurssit/mab2/luku4/">kurssilla MAB2</a>. Jos vakio $s$ on positiivinen eli $s > 0$, tällä yhtälöllä on kaksi ratkaisua. Mitkä nämä ratkaisut ovat a-kohdan yhtälön tapauksessa? Selitä omin sanoin, miksi vain toinen niistä voi olla kysytty kolmion sivun pituus.
+                            </li>
+                            <li>
+                                Mikä on yllä olevan kolmion hypotenuusan pituus? Anna vastauksen tarkka arvo ja likiarvo kahden merkisevän numeron tarkkuudella.
+                            </li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio10a_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio10a_v" class="collapse">
+                            <ol class="a">
+                                <li> $x^2 = 5^2 + 7^2$ eli $x^2 = 74$</li>
+                                <li> Ratkaisut ovat $x_1 = \sqrt{74}$ ja $x_2 = -\sqrt{74}$. Hypotenuusan pituus ei voi olla negatiivinen, joten vain positiivinen ratkaisu kelpaa. </li>
+                                <li> $x = \sqrt{74} \approx 8{,}6$.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="2a60e3b0-aa13-4e02-b959-29ed658511c7">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio10a2">
+                                Pythagoraan lause
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio10a2" class="collapse">
+                        <img src="/kurssit/maa3/kuvat/vinoK31.png" style="max-width: 100%; width: auto; height: auto"/>
+                        <p>  
+                            Tehtävänä on selvittää yllä olevan kolmion tuntemattoman sivun pituus.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Merkitse tuntemattoman sivun pituutta jollakin kirjaimella.
+                                Muodosta kolmion sivujen pituuksien välille Pythagoraan lauseen mukainen yhtälö. Ratkaise tästä yhtälöstä tuntemattoman sivun pituuden neliö.
+                            </li>
+                            <li>
+                                Edellisessä kohdassa olet päätynyt toisen asteen yhtälöön. Ratkaise tästä yhtälöstä tuntemattoman sivun pituus. Anna vastaus kahden merkisevän numeron tarkkuudella.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio10a2_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio10a2_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Pythagoraan lauseen mukainen yhtälö on $x^2 + 6{,}2^2 = 15{,}0^2$. Tästä saadaan $x^2 = 186{,}56$. 
+                                </li>
+                                <li> 
+                                    Kolmion kolmannen sivun pituus on noin 14 cm. Tulos saadaan neliöjuuren avulla: $x = \sqrt{186{,}56} \approx 13{,}66$. Huomaa, että negatiivinen ratkaisu $x = -\sqrt{186{,}56}$ ei kelpaa, koska kysymyksessä on kolmion sivun pituus.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Seuraavan pohdintatehtävän ratkaisu osoittaa, että Pythagoraan lause pätee mille tahansa suorakulmaiselle kolmiolle.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="d57a853e-0e53-4c68-bc30-415620267cc3">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio09">
+                                Suorakulmaiset kolmiot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio09" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Neljä samanlaista suorakulmaista kolmiota asetellaan neliön muotoon kuten alla olevassa kuvassa. Miten voidaan päätellä, että keskelle jäävän valkoisen nelikulmion kaikki kulmat ovat suoria kulmia?
+                                <br> Vihje: kolmion kulmien summa (teoreema 2).
+                                <br> <img src="/kurssit/maa3/kuvat/suoraK25.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                            <li> Muodosta lauseke ylläolevan valkoisen neliön pinta-alalle. </li>
+                            <li> 
+                                Samat suorakulmaiset kolmiot järjestetään uudelleen kuten alla olevassa kuvassa. Muodosta lauseke valkoisen alueen pinta-alalle.
+                                <br> <img src="/kurssit/maa3/kuvat/suoraK26.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                            <li> 
+                                Vertaa b- ja c-kohtien tuloksia. Millaisen yhtälön saat suorakulmaisen kolmion kateettien pituuksien ja hypotenuusan pituuden välille?
+                                <br> <img src="/kurssit/maa3/kuvat/suoraK27.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio09_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio09_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva014.png" style="max-width: 100%; width: auto; height: auto"/>
+                                    <br>
+                                    Kolmion kulmien summa on $180^\circ$, joten yhdestä pienestä suorakulmaisesta kolmiosta voidaan päätellä, että  
+                                    $$\alpha + \beta + 90^\circ = 180^\circ.$$
+                                    Tästä seuraa, että
+                                    $$
+                                    \alpha + \beta = 90^\circ.
+                                    $$
+                                    Valkoisen nelikulmion kulma muodostaa oikokulman yhdessä kulmien $\alpha$ ja $\beta$ kanssa. Valkoisen nelikulmion kulma on siis 
+                                    $$
+                                    180^\circ - (\alpha + \beta) = 90^\circ.
+                                    $$
+                                </li>
+                                <li> Valkoisen neliön pinta-ala on $c^2$. </li>
+                                <li> Valkoisen alueen pinta-ala on $a^2 + b^2$. </li>
+                                <li> 
+                                    Valkoisen alueen pinta-alan suuruus ei muutu, joten saadaan yhtälö
+                                    $$
+                                    a^2 + b^2 = c^2.
+                                    $$ 
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Pythagoraan lausetta voidaan käyttää erilaisten arkipäiväistenkin ongelmien selvittämiseen. Seuraavissa tehtävissä on tästä kaksi esimerkkiä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b1b4cd15-59f1-49bd-8797-d0c5150b6c67">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio10">
+                                Pythagoraan lause
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio10" class="collapse">
+                        <p>  
+                            Puiston reunassa on kävelytie oheisen kuvan mukaisesti. Pisteestä $A$ pisteeseen $B$ pääsee myös oikopolkua suoraan metsän läpi. Oikopolku on merkitty kuvaan katkoviivalla.<br>
+                            <img src="/kurssit/mab3/kuvat/MAB3kuva022.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Kuinka monta prosenttia lyhyemmän matkan oikopolkua käyttävä henkilö kulkee verrattuna kävelytietä kulkevaan?
+                            </li>
+                            <li>
+                                Henkilöt X ja Y lähtevät yhtä aikaa pisteestä $A$ kohti pistettä $B$. Henkilö X kulkee ripeästi kävelytietä vauhdilla 9 min/km ja henkilö Y oikaisee metsäpolun kautta rauhallisempaa 11 min/km vauhtia. Kuinka monta minuuttia heillä kuluu matkaan? Kumpi on aikaisemmin perillä?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio10_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio10_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Noin 25,4 % lyhyemmän matkan. (Oikopolun pituus noin 251,3 metriä, kävelytien kokonaispituus 337 metriä.)
+                                </li>
+                                <li> 
+                                    Henkilö Y on aikaisemmin perillä, sillä hänellä kuluu matkaan noin 2,76 minuuttia eli 2 min 46 s. Henkilöllä X matkaan kuluu noin 3 minuuttia. (Häneltä kuluisi yhteen kilometriin 9 min, joten 337 metrin matkaan häneltä kuluu 
+                                    $$\dfrac{337}{1000} \cdot 9 = 3{,}033$$
+                                    minuuttia.)
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="0830a0f8-ff4c-447e-8aed-97a2926f51aa">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio10b">
+                                Pythagoraan lause
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio10b" class="collapse">
+                        <p>  
+                            Hissin oviaukon korkeus on 2,00 metriä ja hissikorin pituus oviaukosta peräseinään on 1,40 metriä. Tehtävänä on selvitää, mikä hissin oven leveyden pitäisi vähintään olla, jotta 2,30 m pitkä ja 1,20 metriä leveä kipsilevy mahtuisi hissiin.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä kuva hissin oviaukosta edestäpäin katsottuna. Merkitse piirrokseen oviaukon mitat. Merkitse oviaukon leveyttä jollakin kirjaimella.
+                            </li>
+                            <li>
+                                Missä asennossa kipsilevy kannattaa siirtää hissiin? Täydennä piirrosta ja merkitse siihen kipsilevyn mitta.
+                            </li>
+                            <li>
+                                Muodosta sopiva yhtälö ja ratkaise hissin oven leveys. Mikä on järkevä tarkkuus vastaukselle?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio10b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio10b_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva018.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva019.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Yhtälö on 
+                                    $$
+                                    2^2 + x^2 = 2{,}3^2
+                                    $$
+                                    Oven vähimmäisleveys on $\sqrt{1{,}29} \text{ m} \approx 1{,}14 \text{ m}$. Vastaus kannattaa antaa senttimetrin tarkkuudella kuten lähtöarvotkin.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Pythagoraan lauseen avulla saadaan aina ratkaistua suorakulmaisen kolmion kolmas sivu, jos kahden sivun pituus tunnetaan. Sivujen pituuksien avulla voidaan puolestaan selvittää suorakulmaisen kolmion terävien kulmien suuruus. Apuna käytetään sivujen pituuksien suhteita, jotka on nimetty seuraavasti: 
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SINI, KOSINI JA TANGENTTI</h3>
+                    <p>
+                        Suorakulmaisessa kolmiossa terävän kulman $\alpha$ sini, kosini ja tangetti tarkoittavat kolmion sivujen pituuksien suhteita:
+                        \begin{align*}
+                        \sin \alpha &= \dfrac{\text{ kulman vastainen kateetti }}{\text{ hypotenuusa }} \\[2mm]
+                        \cos \alpha &= \dfrac{\text{ kulman viereinen kateetti }}{\text{ hypotenuusa }} \\[2mm]
+                        \tan \alpha &= \dfrac{\text{ kulman vastainen kateetti }}{\text{ kulman viereinen kateetti }}
+                        \end{align*}
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/suoraK03.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        Yllä olevan kuvion merkinnöillä
+                        \begin{align*}
+                        \sin \alpha &= \dfrac{a}{c} \\[1mm]
+                        \cos \alpha &= \dfrac{b}{c} \\[1mm]
+                        \tan \alpha &= \dfrac{a}{b}
+                        \end{align*}
+                    </p>
+                </div>
+
+                <p>
+                    Kulman sini on siis luku, joka ilmaisee, miten pitkä kulman vastainen kateetti on hypotenuusaan verrattuna. Vastaavasti kulman kosini ilmaisee, miten pitkä kulman viereinen kateetti on hypotenuusaan verrattuna. Seuraavassa tehtävässä lasketaan näitä pituuksien suhteita yhden kolmion tapauksessa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="eee5b2de-57af-4f73-8fe5-8a8b648250de">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio11">
+                                TRIGONOMETRISET SUHTEET
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio11" class="collapse">
+                        <img src="/kurssit/maa3/kuvat/suoraK33.png" style="max-width: 90%; width: auto; height: auto;"/>
+                        <p>  
+                            Suorakulmaisen kolmion hypotenuusan pituus on 10 ja kateettien pituudet ovat 6 ja 8 yllä olevan kuvan mukaisesti. Määritä seuraavat sivujen suhteet:
+                        </p>
+                        <ol class="a">
+                            <li>
+                                $\sin \alpha$
+                            </li>
+                            <li>
+                                $\cos \alpha$
+                            </li>
+                            <li>
+                                $\tan \alpha$
+                            </li>
+                            <li>
+                                $\sin \beta$
+                            </li>
+                            <li>
+                                $\cos \beta$
+                            </li>
+                            <li>
+                                $\tan \beta$
+                            </li>
+                        </ol>
+                        <p>
+                            Anna vastaukset supistettuina murtolukuina ja desimaalilukumuodossa.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio11_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio11_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $\sin \alpha = \dfrac{3}{5} = 0{,}6$
+                                </li>
+                                <li>
+                                    $\cos \alpha = \dfrac{4}{5} = 0{,}8$
+                                </li>
+                                <li>
+                                    $\tan \alpha = \dfrac{3}{4} = 0{,}75$
+                                </li>
+                                <li>
+                                    $\sin \beta = \dfrac{4}{5} = 0{,}8$
+                                </li>
+                                <li>
+                                    $\cos \beta = \dfrac{3}{5} = 0{,}6$
+                                </li>
+                                <li>
+                                    $\tan \beta = \dfrac{4}{3} \approx 1{,}33$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jos trigonometrisen suhteen arvo tiedetään, voidaan sen avulla muodostaa esimerkki vastaavasti suorakulmaisesta kolmiosta. Esimerkiksi jos 
+                    $$
+                    \sin \alpha = \dfrac{4}{9}
+                    $$
+                    niin yksi esimerkki vastaavasta suorakulmaisesta kolmiosta on sellainen, jossa hypotenuusan pituus on 9 ja kulman $\alpha$ vastaisen kateetin pituus on 4. Kolmion kolmannen sivun pituus saadaan selville Pythagoraan lauseella.
+                    <br>
+                    <img src="/kurssit/mab3/kuvat/MAB3kuva023.png" style="max-width: 100%; width: auto; height: auto;"/>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="e5b8eedc-3369-436d-ae8f-e72c1743835e">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio12">
+                                TRIGONOMETRISET SUHTEET
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio12" class="collapse">
+                        <p>  
+                            Suorakulmaisessa kolmiossa terävän kulman $\alpha$ tangetti on $5:12$ eli
+                            $$\tan \alpha = \frac{5}{12}$$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Keksi esimerkki suorakulmaisesta kolmiosta, jossa on tällainen terävä kulma. Mitkä ovat keksimäsi suorakulmaisen kolmion kateettien pituudet?
+                            </li>
+                            <li>
+                                Laske keksimäsi suorakulmaisen kolmion hypotenuusan pituus.
+                            </li>
+                            <li>
+                                Keksi esimerkki toisesta suorakulmaisesta kolmiosta, jossa on samanlainen kulma $\alpha$. Selitä omin sanoin, miten ajattelit.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio12_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio12_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Esimerkiksi kolmio, jonka kateettien pituudet ovat 5 ja 12.
+                                </li>
+                                <li>
+                                    Hypotenuusan pituus saadaan yhtälöstä
+                                    $$
+                                    x^2 = 5^2 + 12^2.
+                                    $$
+                                    Hypotenuusan pituus on 13.
+                                </li>
+                                <li>
+                                    Esimerkiksi kolmio,jonka kateettien pituudet ovat 10 ja 24. Kasvatetaan kolmion kaikkien sivujen pituudet kaksinkertaisiksi, jolloin kolmion sivujen suhteet pysyvät samoina.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jossain tapauksissa on mahdollista päätellä kuviosta sekä kulman suuruus että sen sinin, kosinin ja tangentin arvot. Yksi esimerkki tällaisesta tilanteesta on seuraavassa tehtävässä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="e6d96f5e-fec4-478b-9da5-878a3061be1d">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio13">
+                                TRIGONOMETRISET SUHTEET
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio13" class="collapse">
+                        <p>
+                            Tarkastele alla olevaa neliötä, joka on jaettu lävistäjällä kahdeksi suorakulmaiseksi kolmioksi.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/suoraK34.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Laske suorakulmaisen kolmion hypotenuusan pituus.
+                            </li>
+                            <li>
+                                Päättele kulman $\alpha$ suuruus kolmion symmetrian avulla.
+                                <br>
+                                Vihje: teoreema 2.
+                            </li>
+                            <li>
+                                Määritä kolmion sivujen pituuksien avulla $\sin \alpha$, $\cos \alpha$ ja $\tan \alpha$.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio13_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio13_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Hypotenuusan pituus saadaan yhtälöstä
+                                    $$
+                                    x^2 = 1^2 + 1^2.
+                                    $$
+                                    Hypotenuusan pituus on $x = \sqrt{2}$.
+                                </li>
+                                <li>
+                                    Kolmion kulmien summa on 
+                                    $$
+                                    \alpha + \alpha + 90^\circ = 180^\circ.
+                                    $$
+                                    Tästä saadaan 
+                                    $2\alpha = 90^\circ$
+                                    eli $\alpha = 45^\circ$.
+                                </li>
+                                <li>
+                                    $\sin \alpha = \dfrac{1}{\sqrt{2}}$, $\cos \alpha = \dfrac{1}{\sqrt{2}}$ ja $\tan \alpha = 1$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän perusteella voidaan laatia seuraava taulukko:
+                </p>
+                <div align="center">
+                    <table style="width = 80%">
+                        <tr>
+                            <td> Kulma $\alpha$ </td>
+                            <td> $\sin \alpha$ </td>
+                            <td> $\cos \alpha$ </td>
+                            <td> $\tan \alpha$ </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center; vertical-align:middle"> $45^\circ$ </td>
+                            <td style="text-align:center"> $\dfrac{1}{\sqrt{2}}$ </td>
+                            <td style="text-align:center"> $\dfrac{1}{\sqrt{2}}$ </td>
+                            <td style="text-align:center; vertical-align:middle"> $1$ </td>
+                        </tr>
+                    </table>
+                </div>
+                <p>
+                    Jokaista terävää kulmaa vastaa yksi sinin, kosinin ja tangentin arvo. Esimerkiksi yllä olevasta taulukosta nähdään, että
+                    $$\cos 45^\circ = \dfrac{1}{\sqrt{2}}.$$
+                </p>
+                <p>
+                    Toisaalta jokaista (suorakulmaisessa kolmiossa mahdollista) trigonometristä suhdetta vastaa yksi terävä kulma. Esimerkiksi yllä olevan taulukon avulla voidaan päätellä, että jos $\tan \beta = 1$, niin $\beta = 45^\circ$.
+                </p>
+                <p>
+                    Laskinten ja tietokoneiden avulla tämä siirtyminen kulman ja trigonometristen suhteiden välillä voidaan tehdä ilman taulukoiden käyttöä. Annettua kulmaa vastaava trigonometrinen suhde sini, kosini tai tangentti saadaan laskimella käyttämällä nappulaa $\bbox[3px,border:2px solid black]{\texttt{sin}\phantom{i}}\ $, $\ \bbox[3px,border:2px solid black]{\texttt{cos}\phantom{i}}\ $ tai $\ \bbox[3px,border:2px solid black]{\texttt{tan}\phantom{i}}\ $. Trigonometrista suhdetta vastaava kulma saadaan nappuloilla $\bbox[3px,border:2px solid black]{\texttt{sin}^{-1}}\ $, $\ \bbox[3px,border:2px solid black]{\texttt{cos}^{-1}}\ $ ja $\ \bbox[3px,border:2px solid black]{\texttt{tan}^{-1}}\ $.
+                </p>
+                <p>
+                    Siirtymistä kulman ja trigonometristen suhteiden välillä kumpaankin suuntaan harjoitellaan seuraavassa tehtävässä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="0bdab449-c2ce-4cb0-bd4d-36a752529763">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio14">
+                                KULMAT JA TRIGONOMETRISET SUHTEET
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio14" class="collapse">
+                        <p>
+                            Kopioi alla oleva taulukko vihkoosi ja täydennä siihen puuttuvat tiedot laskimen avulla tarkkoina arvoina tai kolmen merkitsevän numeron tarkkuudella:
+                        </p>
+                        <div align="center">
+                            <table style="width = 80%">
+                                <tr>
+                                    <td> Kulma $\alpha$ </td>
+                                    <td> $\sin \alpha$ </td>
+                                    <td> $\cos \alpha$ </td>
+                                    <td> $\tan \alpha$ </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center; vertical-align:middle"> $10^\circ$ </td>
+                                    <td style="text-align:center"> $\phantom{\dfrac{1}{2}}$ </td>
+                                    <td style="text-align:center">  </td>
+                                    <td style="text-align:center">  </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center">  </td>
+                                    <td style="text-align:center"> $\dfrac{1}{2}$ </td>
+                                    <td style="text-align:center">  </td>
+                                    <td style="text-align:center">  </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center">  </td>
+                                    <td style="text-align:center">  </td>
+                                    <td style="text-align:center"> $\dfrac{1}{\sqrt{2}}$ </td>
+                                    <td style="text-align:center">  </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center">  </td>
+                                    <td style="text-align:center"> $\phantom{\dfrac{1}{2}}$ </td>
+                                    <td style="text-align:center">  </td>
+                                    <td style="text-align:center; vertical-align:middle"> $\sqrt{3}$ </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center; vertical-align:middle"> $80^\circ$ </td>
+                                    <td style="text-align:center"> $\phantom{\dfrac{1}{2}}$ </td>
+                                    <td style="text-align:center">  </td>
+                                    <td style="text-align:center">  </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p>
+                            Löydätkö taulukosta kulmia, joiden summa on $90^\circ$? Vertaa tällaisten kulmien sinejä ja kosinejä toisiinsa. Mitä havaitset?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio14_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio14_v" class="collapse">
+                            <div align="center">
+                                <table style="width = 80%">
+                                    <tr>
+                                        <td> Kulma $\alpha$ </td>
+                                        <td> $\sin \alpha$ </td>
+                                        <td> $\cos \alpha$ </td>
+                                        <td> $\tan \alpha$ </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center; vertical-align:middle"> $10^\circ$ </td>
+                                        <td style="text-align:center"> $0{,}174$ </td>
+                                        <td style="text-align:center"> $0{,}985$ </td>
+                                        <td style="text-align:center"> $0{,}176$ </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center"> $30^\circ$ </td>
+                                        <td style="text-align:center"> $\dfrac{1}{2}$ </td>
+                                        <td style="text-align:center"> $\dfrac{\sqrt{3}}{2}$ </td>
+                                        <td style="text-align:center"> $\dfrac{1}{\sqrt{3}}$ </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center"> $45^\circ$ </td>
+                                        <td style="text-align:center"> $\dfrac{1}{\sqrt{2}}$ </td>
+                                        <td style="text-align:center"> $\dfrac{1}{\sqrt{2}}$ </td>
+                                        <td style="text-align:center"> $1$ </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center"> $60^\circ$ </td>
+                                        <td style="text-align:center"> $\dfrac{\sqrt{3}}{2}$ </td>
+                                        <td style="text-align:center"> $\dfrac{1}{2}$ </td>
+                                        <td style="text-align:center; vertical-align:middle"> $\sqrt{3}$ </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center; vertical-align:middle"> $80^\circ$ </td>
+                                        <td style="text-align:center"> $0{,}985$ </td>
+                                        <td style="text-align:center"> $0{,}174$ </td>
+                                        <td style="text-align:center"> $5{,}67$ </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p>
+                                Taulukosta nähdään, että jos $\alpha + \beta = 90^\circ$, niin $\sin \alpha = \cos \beta$ ja $\cos \alpha = \sin \beta$.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan selvittämään suorakulmaisen kolmion tuntemattomat sivujen pituudet ja kulmat trigonometristen suhteiden ja Pythagoraan lauseen avulla. Kolmion kulmien summa (teoreema 2) on sekin hyödyllinen tieto.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="304a923d-59d1-409a-a605-c1eb5099e7d8">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio15">
+                                KULMAT JA TRIGONOMETRISET SUHTEET
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio15" class="collapse">
+                        <p>
+                            Tarkastele alla olevaa suorakulmaista kolmiota.
+                        </p>
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/suoraK35.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>
+                        <ol class="a">
+                            <li> Selvitä toisen kateetin pituus (tarkka arvo). </li>
+                            <li> Selvitä kulman $\alpha$ suuruus jonkin trigonometrisen suhteen avulla. Anna vastaus kolmen merkitsevän numeron tarkkuudella. </li>
+                            <li> Selvitä kulman $\beta$ suuruus. </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio15_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio15_v" class="collapse">
+                            <ol class="a">
+                                <li> $\sqrt{40} = 2\sqrt{10}$
+                                </li>
+                                <li> $\alpha \approx 25{,}4^\circ$
+                                </li>
+                                <li> $\beta \approx 64{,}6^\circ$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="4d92efd6-528c-4114-a252-914ef02f2910">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio16">
+                                KULMAT JA TRIGONOMETRISET SUHTEET
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio16" class="collapse">
+                        <p>
+                            Tarkastele alla olevaa suorakulmaista kolmiota.
+                        </p>
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/suoraK36.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>
+                        <ol class="a">
+                            <li> Ilmaise $\sin 42^\circ$ kolmion sivujen suhteena. Ratkaise tästä yhtälöstä kateetin $a$ pituus kolmen merkitsevän numeron tarkkuudella. </li>
+                            <li> Ilmaise $\cos 42^\circ$ kolmion sivujen suhteena. Ratkaise tästä yhtälöstä kateetin $b$ pituus kolmen merkitsevän numeron tarkkuudella.  </li>
+                            <li> Selvitä kulman $\beta$ suuruus. </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio16_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio16_v" class="collapse">
+                            <ol class="a">
+                                <li> $a \approx 10{,}0$
+                                </li>
+                                <li> $b \approx 11{,}1$
+                                </li>
+                                <li> $\beta = 48^\circ$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Seuraavassa tehtävässä käytetään trigonometrisia suhteita mäen kaltevuuskulman selvittämiseen. Tieliikenteessä poikkeuksellisen jyrkistä mäistä varoitetaan omalla varoitusmerkillään.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="0a3d907d-0faa-4c7e-a999-b3c0ab4a7c9c">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio17">
+                                KULMAT JA TRIGONOMETRISET SUHTEET
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio17" class="collapse">
+                        <p>
+                            Laskettelurinteen pituus on 1300 metriä ja korkeusero 262 metriä. Tehtävänä on laskea mäen rinteen keskimääräinen kaltevuuskulma (vaakatasoon verrattuna).
+                        </p>
+                        <ol class="a">
+                            <li> Piirrä mallikuva, jossa rinteen poikkileikkaus sivusta katsottuna on suorakulmainen kolmio. Merkitse kuvaan rinteen mitat. </li>
+                            <li> Ratkaise rinteen kaltevuuskulma sopivan trigonometrisen suhteen avulla. Anna vastaus kahden merkitsevän numeron tarkkuudella.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio17_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio17_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva021.png" style="max-width: 100%; width: auto; height: auto"/>
+                                </li>
+                                <li> 
+                                    Rinteen kaltevuuskulma on noin 12 astetta. Vastaus löydetään esimerkiksi ratkaisemalla yhtälö
+                                    $$
+                                    \sin \alpha = \dfrac{262}{1300}.
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria"> 
+                <p>
+                    Tässä kappaleessa on opiskeltu suorakulmaisen kolmion geometriaa. Kaikista kolmioista ei kuitenkaan pysty silmämääräisesti näkemään, ovatko ne suorakulmaisia vai eivät. Miten esimerkiksi voidaan selvittää, onko alla oleva kolmio suorakulmainen vai ei?
+                    <br>
+                    <img src="/kurssit/mab3/kuvat/MAB3kuva028.png" style="max-width: 100%; width: auto; height: auto"/>
+                    <br>
+                    Asian selvittämiseen voidaan käyttää niin sanottua Pythagoraan lauseen käänteislausetta:
+                </p>
+
+                <div class="theorem" id="PYTHAGORAAN KÄÄNTEISLAUSE">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jos kolmion sivun pituudet toteuttavat yhtälön 
+                        $$
+                        a^2 + b^2 = c^2
+                        $$
+                        niin kolmio on suorakulmainen. 
+                    </p>
+                    <img src="/kurssit/maa3/kuvat/suoraK02.png" style="max-width: 100%; width: auto; height: auto;"/>
+                </div>
+
+                <p>
+                    Esimerkin kolmion kateettien neliöiden summaksi saadaan
+                    $$
+                    3^2 + 5^2 = 9 + 25 = 34.
+                    $$
+                    Tämä on erisuuri kuin hypotenuusan neliö $6^2 = 36$, joten $a^2 + b^2 \neq c^2$. Kolmio ei siis ole suorakulmainen, vaikka se silmämääräisesti sellaiselta saattaa näyttääkin.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="30a616a9-f83d-4148-b077-f1bb715d2152">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio177">
+                                PYTHAGORAAN KÄÄNTEISLAUSE
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio177" class="collapse">
+                        <p>
+                            Tutki, ovatko seuraavat kolmiot suorakulmaisia:
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Kolmio, jonka sivujen pituudet ovat 60 mm, 91 mm ja 109 mm.
+                            </li>
+                            <li> 
+                                <img src="/kurssit/mab3/kuvat/MAB3kuva029.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio177_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio177_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kolmio on suorakulmainen, sillä kateettien neliöiden summa on hypotenuusan neliö:
+                                    $$
+                                    60^2 + 91^2 = 11881 = 109^2.
+                                    $$
+                                </li>
+                                <li> 
+                                    Kolmio ei ole suorakulmainen, sillä kateettien neliöiden summa on erisuuri kuin hypotenuusan neliö:
+                                    $$
+                                    8^2 + 9^2 = 145 \neq 144 = 12^2.
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kulmat">
+                    Erilaisia kulmia
+                </a>
+            </h1>
+        </header>
+        <div id="kulmat" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa tutustutaan erityyppisiin kulmiin, joiden tunteminen helpottaa geometristen päättelyiden tekemistä. Ensimmäisenä opitaan vieruskulman ja ristikulman käsitteet.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="fa546986-574c-4e63-9139-f6de916cdf20">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio03">
+                                Vieruskulmat
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio03" class="collapse">
+                        <p>
+                            Kulmat, joiden toinen kylki on yhteinen ja toiset kyljet muodostavat suoran, ovat <em>vieruskulmia</em>.
+                        </p>
+                        <img src="/kurssit/maa3/kuvat/suoraK13.png" style="max-width: 100%; width: auto; height: auto"/>
+                        <ol class="a">
+                            <li> Päättele kulman $\alpha$ suuruus alla olevassa kuvassa.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK11.png" style="max-width: 100%; width: auto; height: auto;"/> 
+                            </li>
+                            <li> Päättele kulman $\beta$ suuruus alla olevassa kuvassa.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK12.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                            <li> Mitä voit päätellä vieruskulmien summasta yleisesti?
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK13.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio03_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio03_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $\alpha = 35^\circ$
+                                </li>
+                                <li> 
+                                    $\beta = 120^\circ$ 
+                                </li>
+                                <li>  
+                                    Vieruskulmat muodostavat yhdessä oikokulman, joten vieruskulmien summa on $180^\circ$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="91066901-9e2e-4e09-bfa8-945a2597bf4b">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio04">
+                                Ristikulmat
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio04" class="collapse">
+                        <p>
+                            Kun kaksi suoraa leikkaa toisensa, muodostuvat vastakkaiset kulmat ovat <em>ristikulmia</em>.
+                        </p>
+                        <img src="/kurssit/maa3/kuvat/suoraK16.png" style="max-width: 100%; width: auto; height: auto"/>
+                        <p>
+                            Tässä tehtävässä päätellään ristikulman suuruus vieruskulmaa apuna käyttäen.
+                        </p>
+                        <ol class="a">
+                            <li> Päättele kulman $\gamma$ suuruus alla olevassa kuvassa.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK14.png" style="max-width: 100%; width: auto; height: auto;"/> 
+                            </li>
+                            <li> Päättele kulman $\beta$ suuruus alla olevassa kuvassa.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK15.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                            <li> Mitä voit päätellä ristikulmista yleisesti?
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/suoraK16.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio04_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio04_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $\gamma = 130^\circ$ (vieruskulma)
+                                </li>
+                                <li> 
+                                    $\beta = 50^\circ$ (kulman gamma vieruskulma)
+                                </li>
+                                <li>  
+                                    Ristikulmat ovat yhtä suuria keskenään.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kulmalla on aina oikea ja vasen kylki. Nämä voidaan tunnistaa seuraavasti: Ajatellaan, että seisotaan kulman kärkipisteessä ja katsotaan kulman aukeamaa kohti. Tällöin kulman $\textcolor{blue}{\textbf{oikea}}$ kylki on oikealla puolella ja $\textcolor{red}{\textbf{vasen}}$ kylki on vasemmalla puolella:
+                </p>
+                <img src="/kurssit/mab3/kuvat/MAB3kuva004.png" style="max-width: 100%; width: auto; height: auto;"/>
+                <p>
+                    Jos suora leikkaa kahta muuta suoraa, syntyy niin sanottuja <em>samankohtaisia kulmia</em>. Samankohtaisuus tarkoittaa sitä, että kulmien <em>samanniminen</em> kylki (siis molemmilla oikea kylki tai molemmilla vasen kylki), on samalla suoralla.
+                </p>
+                <img src="/kurssit/maa3/kuvat/suoraK19.png" style="max-width: 100%; width: auto; height: auto"/>
+                <p>
+                    Jos kaksi muuta suoraa ovat keskenään yhdensuuntaisia, kuten yllä olevassa kuvassa, syntyvät samankohtaiset kulmat ovat yhtä suuria. Esimerkiksi yllä olevassa kuvassa kulmat $\alpha$ ja $\alpha'$ ovat samankohtaisia, sillä niiden $\textcolor{red}{\textbf{vasen}}$ kylki on samalla suoralla. Koska niiden $\textcolor{blue}{\textbf{oikeat}}$ kyljet ovat yhdensuuntaiset, ovat kulmat $\alpha$ ja $\alpha'$ yhtä suuret.
+                </p>
+                <!-- <p>
+                    Kulmien $\alpha$ ja $\alpha'$ ristikulmat $\beta$ ja $\beta'$ ovat nekin samankohtaisia kulmien $\alpha$ ja $\alpha'$ kanssa, sillä niidenkin $\textcolor{red}{\textbf{vasemmat}}$ kyljet ovat samalla suoralla ja $\textcolor{blue}{\textbf{oikeat}}$ kyljet ovat yhdensuuntaiset.
+                </p>
+                <p>
+                    <img src="/kurssit/maa3/kuvat/suoraK20.png" style="max-width: 100%; width: auto; height: auto"/>
+                </p>  -->
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="accfd8e2-b4e2-4aad-bc2e-daaf735d24d4">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio05">
+                                Samankohtaiset kulmat
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio05" class="collapse">
+                        <p>
+                            Alla mustalla piirretyt kaksi suoraa ovat keskenään yhdensuuntaiset.
+                        </p>
+                        <img src="/kurssit/maa3/kuvat/suoraK21.png" style="max-width: 100%; width: auto; height: auto"/>
+                        <ol class="a">
+                            <li> Piirrä yllä oleva kuva vihkoosi ja merkitse siihen kulman $\alpha$ ristikulma. </li>
+                            <li> Etsi kuvasta mahdollisimman monta kulmaa, jotka ovat samankohtaisia kulman $\alpha$ kanssa.
+                                <br> Vinkki: etsi kulmia, joiden oikea kylki on sinisellä suoralla.</li>
+                            <li> Ovatko kulmat $\alpha$ ja $\beta$ samankohtaisia? Entä kulmat $\alpha$ ja $\gamma$?</li>
+                            <li> Tiedetään, että $\alpha = 133^\circ$. Päättele kulmien $\beta$ ja $\gamma$ suuruus. </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio05_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio05_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kulman $\alpha$ kanssa samankohtaisia ovat kulmat $\gamma$, $\delta$ ja $\theta$. Kulma $\delta$ on kulman $\alpha$ ristikulma.
+                                    <br>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva005.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Kulmat $\alpha$ ja $\beta$ eivät ole samankohtaisia mutta kulmat $\alpha$ ja $\gamma$ ovat.
+                                </li>
+                                <li>  
+                                    $\beta = 47^\circ$ ja $\gamma = 133^\circ$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Ristikulmien ja samankohtaisten kulmien avulla voidaan näyttää oikeaksi teoreeman 2 tulos: kolmion kulmien summa on aina $180^\circ$. Tämä tehdään seuraavassa pohdintatehtävässä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="c2083e96-1ca0-4b12-b393-a584db33049d">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio066">
+                                Kolmion kulmien summa
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio066" class="collapse">
+                        <p>
+                            Tässä tehtävässä perustellaan, että kolmion kulmien summa on $180^\circ$. Merkitään kolmion kulmia $\alpha$, $\beta$ ja $\gamma$. 
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Jatketaan kolmion kahta sivua kuten alla olevassa kuvassa. Minkä suuruinen kulma $x$ on verrattuna kolmion kulmiin $\alpha$, $\beta$ ja $\gamma$? Miksi?
+                                <br>
+                                <img src="/kurssit/mab3/kuvat/MAB3kuva024.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                            <li> 
+                                Piirretään kulman $\beta$ kärjen kautta jana, joka on yhdensuuntainen kolmion kannan kanssa samaan tapaan kuin alla olevassa kuvassa. Minkä suuruinen kulma $y$ on verrattuna kolmion kulmiin $\alpha$, $\beta$ ja $\gamma$? Miksi?
+                                <br>
+                                <img src="/kurssit/mab3/kuvat/MAB3kuva025.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                            <li> 
+                                Minkä suuruinen kulma $z$ on verrattuna kolmion kulmiin $\alpha$, $\beta$ ja $\gamma$? Miksi?
+                                <br>
+                                <img src="/kurssit/mab3/kuvat/MAB3kuva026.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                            <li>
+                                Mitä voit päätellä summasta $x + y + z$? Miten se liittyy alkuperäisen kolmion kulmien summaan $\alpha + \beta + \gamma$?
+                                <br>
+                                <img src="/kurssit/mab3/kuvat/MAB3kuva027.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio066_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio066_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kulmat $x$ ja $\beta$ ovat ristikulmia, joten $x = \beta$.
+                                </li>
+                                <li>
+                                    Kulmat $y$ ja $\gamma$ ovat samankohtaisia, sillä niiden oikeat kyljet ovat samalla suoralla. Lisäksi niiden vasemmat kyljet ovat yhdensuuntaiset, joten $y = \gamma$.
+                                </li>
+                                <li>
+                                    Kulmat $z$ ja $\alpha$ ovat samankohtaisia, sillä niiden vasemmat kyljet ovat samalla suoralla. Lisäksi niiden oikeat kyljet ovat yhdensuuntaiset, joten $z = \alpha$.
+                                </li>
+                                <li>
+                                    Kulmat $x$, $y$ ja $z$ muodostavat yhdessä oikokulman, joten niiden summa on $180^\circ$. Edellisten kohtien perusteella toisaalta $x + y + z = \alpha + \beta + \gamma$, joten myös $\alpha + \beta + \gamma = 180^\circ$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#K_yhdenmuotoisuus">
+                    Kolmioiden yhdenmuotoisuus
+                </a>
+            </h1>
+        </header>
+        <div id="K_yhdenmuotoisuus" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Kolmioita voidaan luokitella niiden muodon mukaan. Esimerkiksi alla olevan kuvan kolmiot ovat eri kokoisia ja eri asennossa, mutta kuitenkin muodoltaan samanlaisia. Tällaisia kolmioita sanotaan <em>yhdenmuotoisiksi</em>.
+                    <br>
+                    <img src="/kurssit/mab3/kuvat/MAB3kuva008.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Tarkemmin kolmioiden yhdenmuotoisuus määritellään niin sanottujen <em>vastinkulmien</em> ja <em>vastinsivujen</em> avulla. Esimerkiksi yllä kulman $\textcolor{blue}{\sphericalangle BAC}$ vastinkulma on $\textcolor{blue}{\sphericalangle KJL}$, sillä ne molemmat ovat kolmioiden lyhimpien sivujen vastaisia kulmia. Sivun $\textcolor{magenta}{AB}$ vastinsivu on puolestaan $\textcolor{magenta}{JK}$, sillä ne ovat kolmioiden pisimmät sivut.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="bbd970da-e20d-4b4a-be6d-944df67b36c4">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio06b">
+                                Vastinkulmat ja vastinsivut
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio06b" class="collapse">
+                        <p>
+                            Jatka yllä olevan kuvan tarkastelua.
+                        </p>
+                        <ol class="a">
+                            <li> Mikä on sivun $BC$ vastinsivu?</li>
+                            <li> Mikä on kulman $\sphericalangle JLK$ vastinkulma? </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio06b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio06b_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Sivun $BC$ vastinsivu on $KL$. Ne ovat kolmioiden lyhyimmät sivut.
+                                </li>
+                                <li> 
+                                    Kulman $\sphericalangle JLK$ vastinkulma on $\sphericalangle ACB$. Ne ovat kolmioiden pisimmät sivun vastaiset kulmat.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KOLMIOIDEN YHDENMUOTOISUUS</h3>
+                    <p>
+                        Kolmiot ovat <em>yhdenmuotoiset</em>, jos ne toteuttavat seuraavat ehdot:
+                    <ul>
+                        <li> kulma ja sen vastinkulma ovat aina yhtä suuret </li>
+                        <li> suhde
+                            $$\frac{\text{ vastinsivun pituus }}{\text{ sivun pituus }}$$
+                            on vakio. </li>
+                    </ul>
+                    </p>
+                </div>
+
+                <p>
+                    Yhdenmuotoisissa kolmioissa vastinsivun pituuden suhde sivun pituuteen on siis aina sama riippumatta siitä, mitä kolmion sivua tarkastellaan. 
+                </p>
+                <img src="/kurssit/mab3/kuvat/MAB3kuva012.png" style="max-width: 100%; width: auto; height: auto"/>
+                <p>
+                    Esimerkiksi yllä olevassa kuvassa kolmion $DEF$ sivun pituuden suhde kolmion $\textcolor{blue}{ABC}$ sivun pituuteen on aina 3:
+                    \begin{align*}
+                    \frac{DE}{\textcolor{blue}{AB}} &= \frac{6}{2} = 3 \\[2mm]
+                    \frac{DF}{\textcolor{blue}{AC}} &= \frac{3\sqrt{5}}{\sqrt{5}} = 3 \\[2mm]
+                    \frac{EF}{\textcolor{blue}{BC}} &= \frac{3}{1} = 3.
+                    \end{align*}
+                    Kolmio $DEF$ saadaan siis kolmiosta $\textcolor{blue}{ABC}$ kasvattamalla kaikkien sivujen mitat kolminkertaisiksi.
+                </p>  
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="49db1aef-0e61-458a-8fb4-8d2821769c55">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio07">
+                                Yhdenmuotoiset kolmiot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio07" class="collapse">
+                        <img src="/kurssit/mab3/kuvat/MAB3kuva009.png" style="max-width: 100%; width: auto; height: auto"/>
+                        <p>
+                            Yllä on näkyvissä kaksi kolmiota.
+                        </p>
+                        <ol class="a">
+                            <li> Päättele, miten suuri kulma $\gamma$ on. Vinkki: teoreema 2. </li>
+                            <li> Päättele, miten suuri kulma $\delta$ on. </li>
+                            <li> Mistä olisit voinut jo etukäteen päätellä, että kulmat $\gamma$ ja $\delta$ ovat yhtä suuret? </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio07_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio07_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kolmion kulmien summa on $180^\circ$, joten voidaan päätellä, että $\gamma = 21^\circ$.
+                                </li>
+                                <li>
+                                    $\delta = 21^\circ$. 
+                                </li>
+                                <li> 
+                                    Kummassakin kolmiossa on yksi 34 asteen kulma ja yksi 125 asteen kulma. Koska kolmion kulmien summa on aina 180 astetta, täytyy myös kolmioiden kolmansien kulmien olla yhtä suuria.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    On mahdollista osoittaa, että jos kolmion kaksi kulmaa ovat yhtä suuret kuin niiden vastinkulmat toisessa kolmiossa, niin yhdenmuotoisuuden määritelmän molemmat ehdot täyttyvät ja kolmiot ovat yhdenmuotoiset. Perustelu on sen verran työläs, että siihen ei tällä kurssilla syvennytä.
+                </p>
+
+                <div class="theorem" id="KOLMIOIDEN YHDENMUOTOISUUSLAUSE KK">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jos kolmiossa on kaksi kulmaa, jotka ovat yhtä suuret kuin toisen kolmion kaksi kulmaa, niin kolmiot ovat yhdenmuotoiset.
+                    </p>
+                </div>
+            </div>
+
+            <div class="teoria"> 
+                <p>
+                    Tarkastellaan kahta suorakulmaista kolmiota, joissa on yhtä suuri terävä kulma $\alpha$. Nämä kolmiot ovat yhdenmuotoiset KK-lauseen (teoreema 5) nojalla, koska niissä on kaksi yhtä suurta kulmaa: suora kulma sekä kulma $\alpha$.
+                </p>
+                <img src="/kurssit/mab3/kuvat/MAB3kuva020.png" style="max-width: 100%; width: auto; height: auto"/>
+                <p>
+                    Koska kolmiot ovat yhdenmuotoiset, on suhde
+                    $$\frac{\text{ vastinsivun pituus } }{\text{ sivun pituus } }$$
+                    sama riippumatta siitä, mitä kolmion sivua tarkastellaan. Tästä seuraa, että kolmion sivujen suhteet ovat molemmissa kolmioissa samat. Kulman sini, kosini tai tangentti ei siis riipu kolmion koosta.
+                </p>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kolmioiden yhdenmuotoisuutta voidaan hyödyntää monissa geometrisissa päättelyissä. Seuraava esimerkki havainnollistaa asiaa.
+                </p>
+                <img src="/kurssit/mab3/kuvat/MAB3kuva010.png" style="max-width: 100%; width: auto; height: auto"/>
+                <p>
+                    Yllä olevassa kuvassa janat $AB$ ja $CD$ ovat yhdensuuntaisia eli $AB \parallel CD$. Päätellään KK-lauseen (teoreema 3) avulla, että kolmiot $OAB$ ja $OCD$ ovat yhdenmuotoisia:
+                </p>
+                <ul>
+                    <li> Kolmioilla $OAB$ ja $OCD$ on yhteinen kulma $O$. </li>
+                    <li> Kulmat $\sphericalangle BAO$ ja $\sphericalangle DCO$ ovat samankohtaisia, koska niiden $\textcolor{red}{\textbf{vasen}}$ kylki on samalla suoralla. Lisäksi niiden $\textcolor{blue}{\textbf{oikeat}}$ kyljet $AB$ ja $CD$ ovat yhdensuuntaisia, joten kulmat $\sphericalangle BAO$ ja $\sphericalangle DCO$ ovat yhtä suuria.</li>
+                    <li> Koska kolmiossa $OAB$ on kaksi kulmaa, jotka ovat yhtä suuria kuin niiden vastinkulmat kolmiossa $OCD$, niin kolmiot ovat yhdenmuotoiset KK-lauseen nojalla.</li>
+                </ul>
+                <p>
+                    Kolmioiden yhdenmuotoisuuden avulla voidaan päätellä kuvion osien pituuksia, jos osa niistä tunnetaan. Alla kuvatussa tilanteessa janan $OB$ pituus $x$ voidaan selvittää <a href="http://kisallioppiminen.fi/kurssit/mab2/luku3/">MAB2-kurssilta</a> tutun verrannon avulla.
+                </p>
+                <img src="/kurssit/mab3/kuvat/MAB3kuva011.png" style="max-width: 100%; width: auto; height: auto"/>
+                <p>
+                    Tarkastellaan kolmion $OAB$ sivuja ja niiden vastinsivuja kolmiossa $OCD$. Kootaan tiedot taulukkoon:
+                </p>
+                <div align="center">
+                    <table style="width = 90%">
+                        <tr>
+                            <th> Sivu </th>
+                            <th> Pituus </th>
+                            <th> Vastinsivu </th>
+                            <th> Pituus </th>
+                        </tr>
+                        <tr>
+                            <td> $OB$ </td>
+                            <td> $x$ </td>
+                            <td> $OD$ </td>
+                            <td> $x + 4$ </td>
+                        </tr>
+                        <tr>
+                            <td> $OA$ </td>
+                            <td> $5$ </td>
+                            <td> $OC$ </td>
+                            <td> $8$ </td>
+                        </tr>
+                        <tr>
+                            <td> $AB$ </td>
+                            <td>  </td>
+                            <td> $CD$ </td>
+                            <td> $6$ </td>
+                        </tr>
+                    </table>
+                </div>
+                <p>
+                    Koska kolmiot ovat yhdenmuotoisia, sivun pituuden suhde vastinsivun pituuteen on sama riippumatta siitä, mitä sivua tarkastellaan. Havaitaan, että taulukon kahden ylimmän rivin tiedoista saadaan muodostettua verranto
+                    $$\frac{x}{x+4} = \frac{5}{8}.$$
+                    Ratkaistaan tämä yhtälö kertomalla ensin yhtälön molemmat puolet nimittäjillä:
+                    \begin{align*}
+                    \frac{x}{x+4} &= \frac{5}{8} &\quad &\mid \cdot \, (x+4) \\[1mm]
+                    x &= \frac{5}{8}(x+4) &\quad &\mid \cdot \, 8 \\[1mm]
+                    8x &= 5(x+4) & & \\[1mm]
+                    8x &= 5x + 20  &\quad &\mid -5x \\[1mm]
+                    3x &= 20  &\quad &\mid \, : 3 \\[1mm]
+                    x &= \frac{20}{3}
+                    \end{align*}
+                    Sivun $OB$ pituus on siis 
+                    $$\frac{20}{3} = 6\frac{2}{3}.$$
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8c7d569e-8b2b-440b-8626-e717cb5cf174">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio08a">
+                                Kolmioiden yhdenmuotoisuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio08a" class="collapse">
+                        <img src="/kurssit/mab3/kuvat/MAB3kuva013.png" style="max-width: 100%; width: auto; height: auto"/>
+                        <p>
+                            Tarkastellaan edelleen yllä olevaa kuvaa, jossa kolmiot $OAB$ ja $OCD$ ovat yhdenmuotoisia. Selvitä sivun $AB$ pituus verrannon avulla samaan tapaan kuin edellä tehtiin.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio08a_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio08a_v" class="collapse">
+                            <p>
+                                Sivun $AB$ pituus on $\dfrac{15}{4} = 3{,}75$.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="5c523b38-5b30-4b12-ad04-1f7e853d3c81">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio08">
+                                Kolmioiden yhdenmuotoisuus
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio08" class="collapse">
+                        <img src="/kurssit/maa3/kuvat/suoraK24.png" style="max-width: 100%; width: auto; height: auto"/>
+                        <p>
+                            Yllä olevassa kuvassa janat $AB$ ja $CD$ ovat yhdensuuntaisia eli $AB \parallel CD$.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Selitä omin sanoin, mistä syystä kolmiot $OAB$ ja $OCD$ ovat yhdenmuotoisia.
+                                <br> Vinkki: Kertaa tarvittaessa, mitä tarkoitetaan vieruskulmilla, ristikulmilla ja samankohtaisilla kulmilla (tehtävät 1.5-1.7). Muista myös teoreema 3.
+                            </li>
+                            <li> 
+                                Selvitä janan $CD$ pituus sopivan verrannon avulla. Arvioi kuvan avulla, onko tuloksesi suuruusluokaltaan järkevä.
+                            </li>
+                            <li> 
+                                Selvitä janan $OA$ pituus sopivan verrannon avulla. Arvioi kuvan avulla, onko tuloksesi suuruusluokaltaan järkevä.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio08_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio08_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Kulmat $\sphericalangle AOB$ ja $\sphericalangle COD$ ovat ristikulmia, joten ne ovat yhtä suuret. Kulmat $\sphericalangle BAO$ ja $\sphericalangle DCO$ ovat samankohtaisia, sillä kummankin vasen kylki on janalla $AC$. Lisäksi niiden oikeat kyljet ovat yhdensuuntaiset, joten kulmat $\sphericalangle BAO$ ja $\sphericalangle DCO$ ovat yhtä suuret. Koska kolmiossa $OAB$ on kaksi kulmaa, jotka ovat yhtä suuret kuin kolmion $OCD$ kaksi kulmaa, kolmiot ovat yhdenmuotoiset KK-lauseen nojalla.
+                                </li>
+                                <li> Janan $CD$ pituus on $\dfrac{10}{3} = 3\dfrac{1}{3}$.</li>
+                                <li> Janan $OA$ pituus on $\dfrac{12}{5} = 2{,}4$.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    
+
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku1-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="04dbc02e-e426-4024-9549-463568d4fbaf">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS203">
+                            Kolmion pinta-ala
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS203">
+                    <p>
+                        Halutaan piirtää kolmio, jonka korkeus on kolminkertainen kantaan verrattuna ja jonka pinta-ala on 24 cm$^2$.
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva. Merkitse kolmion kannan pituutta jollakin kirjaimella. Miten saat ilmaistua kolmion korkeuden samaa kirjainta käyttäen? </li>
+                        <li> Muodosta sopiva yhtälö ja määritä kolmion kannan pituus. Laske sitä vastaava kolmion korkeus. </li>
+                        <li> Piirrä kaksi erilaista kolmiota, jotka täyttävät tehtävän vaatimukset. </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS203_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS203_v" class="collapse">
+                        <ol class="a">
+                            <li> Olkoon kanta esimerkiksi $a$, jolloin korkeus on $3a$.</li>
+                            <li> Korkeus 12 cm. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="eaecb02a-bcf7-453e-ba30-104c7b4de5ac">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS204">
+                            Kolmion pinta-ala
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS204">
+                    <p>
+                        <em>Tasakylkinen kolmio</em> tarkoittaa kolmiota, jossa on kaksi yhtä pitkää sivua. Symmetrian vuoksi tasakylkisen kolmion korkeusjana jakaa kannan kahteen yhtä pitkään osaan ja <em>kantakulmat</em> ovat yhtä suuret.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/vinoK36.png" style="max-width: 100%; width: auto; height: auto"/>
+                    </p>
+                    <p>
+                        Tiedetään, että tasakylkisen kolmion kanta on puolet kolmion korkeudesta ja että kolmion pinta-ala on 27,0 cm$^2$. Tehtävänä on määrittää kolmion kaikkien sivujen pituudet.
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva. Merkitse kolmion korkeutta jollakin kirjaimella. Miten saat ilmaistua kannan pituuden samaa kirjainta käyttäen? </li>
+                        <li> Määritä kolmion korkeus ja kannan pituus. </li>
+                        <li> Määritä kolmion kylkien pituus.</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS204_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS204_v" class="collapse">
+                        <ol class="a">
+                            <li> Olkoon korkeus esimerkiksi $h$, jolloin kanta on $\frac{1}{2}h$. </li>
+                            <li> Korkeus noin $10{,}4 \text{ cm}$ ja kanta noin $5{,}20 \text{ cm}$.</li>
+                            <li> Kumpikin kylki noin $10{,}7 \text{ cm}$.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="9dcbd875-085c-4251-92b3-3094b6d55602">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS201">
+                            Kulmat
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS201">
+                    <p>
+                        Päättele kulmien $\alpha$ ja $\beta$ suuruudet ja perustele vastauksesi.
+                    </p>
+                    <ol class="a">
+                        <li> <img src="/kurssit/maa3/kuvat/vinoK32.png" style="max-width: 100%; width: auto; height: auto"/> </li>
+                        <li> Suorat $L_1$ ja $L_2$ ovat yhdensuuntaiset.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/vinoK33.png" style="max-width: 100%; width: auto; height: auto"/> </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS201_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS201_v" class="collapse">
+                        <ol class="a">
+                            <li> $\alpha = 43^\circ$ (vieruskulma) ja $\beta = 137^\circ$ (ristikulma) </li>
+                            <li> $\alpha = 37^\circ$ (samankohtaiset kulmat) ja $\beta = 143^\circ$ (vieruskulma)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="bdc3bbdf-f99b-492a-a5f3-5b6cd437fc72">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS202">
+                            Kulmat
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS202">
+                    <ol class="a">
+                        <li>
+                            Päättele kulman $\alpha$ suuruus.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/vinoK34.png" style="max-width: 100%; width: auto; height: auto"/> </li>
+                        <li>
+                            Päättele kulmien $\beta$, $\gamma$ ja $\delta$ suuruudet
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/vinoK35.png" style="max-width: 100%; width: auto; height: auto"/> </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS202_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS202_v" class="collapse">
+                        <ol class="a">
+                            <li> $\alpha = 119^\circ$ ($\alpha + 27^\circ = 146^\circ$, ristikulmat) </li>
+                            <li> $\beta = 51{,}1^\circ$ (kolmion kulmien summa), $\delta = 60^\circ$ (samankohtaiset kulmat), $\gamma = 68{,}9^\circ$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="beac28c7-e5a1-474b-b1dd-cc0c0b626c23">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS205">
+                            Kolmioiden yhdenmuotoisuus
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS205">
+                    <p>
+                        Tasaiselle kentälle pystytetyn lipputangon varjon pituudeksi mitattiin 9,6 metriä. Lipputangon korkeuden määrittämiseksi sen viereen pystytettiin 1,50 metrin pituinen keppi, jonka varjon pituudeksi mitattiin 1,25 metriä.
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat. </li>
+                        <li> Määritä lipputangon korkeus. </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS205_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS205_v" class="collapse">
+                        <ol class="a">
+                            <li> </li>
+                            <li> Noin 11,5 metriä. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="4fb4d403-6fda-4998-9ca3-39187bd0bdcf">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS206">
+                            Kolmioiden yhdenmuotoisuus
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS206">
+                    <p>
+                        Juhlasalin valaisimen etäisyyttä lattiasta arvioitiin pitelemällä sen alla vaakasuorassa 25 cm pituista viivotinta 20 cm etäisyydellä lattiasta. Viivottimen varjoksi mitattiin 27 cm.
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat. </li>
+                        <li> Mikä oli valaisimen etäisyys lattiasta? </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS206_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS206_v" class="collapse">
+                        <ol class="a">
+                            <li> </li>
+                            <li> Noin 2,7 metriä. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="c578d7bf-67b2-49e5-92c7-7e557bafbe16">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS208">
+                            KOLMIOIDEN YHDENMUOTOISUUS
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS208">
+                    <p>
+                        Suorakulmaisen kolmion kateettien pituus on 6 cm ja 8 cm. Kolmion sisään on piirretty neliö, jonka kaksi sivua on kateeteilla ja yksi kärki hypotenuusalla. Tehtävänä on laskea neliön sivun pituus.
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat. Merkitse neliön sivun pituutta jollakin kirjaimella. </li>
+                        <li> Piirroksessa on näkyvissä kaksi pienempää suorakulmaista kolmiota. Valitse niistä toinen ja ilmaise sen kateettisen pituudet ison kolmion kateettien ja neliön sivun pituuden avulla. </li>
+                        <li> Muodosta sopiva verrantoyhtälö ja ratkaise neliön sivun pituus. Anna tarkka arvo ja likiarvo yhden desimaalin tarkkuudella. </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS208_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS208_v" class="collapse">
+                        <ol class="a">
+                            <li> </li>
+                            <li>  </li>
+                            <li> $\frac{24}{7} \text{ cm} \approx 3{,}4 \text{ cm}$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="64957829-4368-47ba-b7b1-b679c2634a15">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS209">
+                            SUORAKULMAINEN KOLMIO
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS209">
+                    <p>
+                        Henkilö oli unohtanut avaimet kotiin, mutta muisti jättäneensä yläkerran ikkunan auki. Kun 3,8 m pitkät tikapuut asetettiin ikkunan alareunaa vasten, tikkaiden alapään etäisyydeksi talon seinästä mitattiin 1,4 metriä.
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat. </li>
+                        <li> Kuinka korkealla ikkunan alareuna oli? </li>
+                        <li> Työterveyslaitos antaa seuraavia <a href="http://www.ttl.fi/fi/toimialat/rakennus/turvapakki/putoamissuojaus/tikkaat/sivut/default.aspx">ohjeita</a> tikkaiden käyttöön: "Tikkaat, jotka sijoitetaan jyrkempään kuin 70° kulmaan tulee varustaa kaatumisenestolaitteilla. Kaatuminen voidaan estää tikkaan päähän asennettavilla koukuilla tai sitomalla tikkaat rakenteisiin. Tikkaita ei saa myöskään käyttää loivemmassa kuin 60° kulmassa ilman erikoistoimia. Tikkaiden asianmukainen kiinnitys yläpäästä rakenteisiin estää tehokkaasti myös liukumista." Laske tikkaiden kaltevuuskulma tehtävän tilanteessa. Olisiko tässä tilanteessa ollut syytä varautua tikkaiden kaatumiseen tai luisumiseen? </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS209_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS209_v" class="collapse">
+                        <ol class="a">
+                            <li> </li>
+                            <li> Noin 3,5 metrin korkeudessa. </li>
+                            <li> Kaltevuuskulma on noin $68^\circ$, joten erillisiä varotoimenpiteitä ei tarvita.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="dec48245-a256-4437-9bf3-8ad425f65434">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS210">
+                            SUORAKULMAINEN KOLMIO
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS210">
+                    <p>
+                        Seikkailijan pitää vuolaasti virtaava joki liu'ulla, joka on kiinnitetty 30 metriä pitkään vaakasuoraan vaijeriin. Seikkailijan paino venyttää vaijeria, jolloin hän laskeutuu lähemmäs vedenpintaa, alimmilleen vaijerin keskikohdassa. Jos seikkailijan vauhti ei riitä vastarannalle asti, hinaa siellä odottava henkilö hänet perille apuköyden avulla. Vaijerin venymäksi on ilmoitettu enintään 200 kilogramman kuormilla 0,125 %. Tehtävänä on laskea, miten paljon vaijerin keskikohta lasketuu vaakatasosta.
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat. Laske myös vaijerin pituus venytettynä. </li>
+                        <li> Miten paljon vaijerin keskikohta lasketutuu vaakatasoon verrattuna? </li>
+                        <li> Kuinka korkealle vaakasuora vaijeri pitäisi kiinnittää, jotta seikkailija pääsisi vastarannalle kuivana? Liuku, jolla seikkailija istuu, roikkuu 120 cm vaijerin alapuolella. </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS210_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS210_v" class="collapse">
+                        <ol class="a">
+                            <li> Vaijerin pituus venytettynä 30,0375 metriä. </li>
+                            <li> Vaijerin keskikohta laskeutuu noin 75 cm. </li>
+                            <li> Vähintään 1,95 cm korkeudelle veden pinnasta (olettaen, että seikkailija nostaa jalkansa ylös liu'ulla istuessaan). </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="83fb76e6-736b-46c2-966f-dc9f0879ba38">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS212">
+                            SUORAKULMAINEN KOLMIO
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS212">
+                    <p>
+                        Kun 2700 mm pitkän ja 50 mm paksun lattialistan toinen pää oli nurkassa samaan tapaan kuin alla olevassa kuvassa, jäi toinen pää vastapäiselle seinälle 35,0 cm korkeudelle. Tehtävänä on selvittää, miten paljon listaa pitää lyhentää.
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa3/kuvat/vinoK39.png" style="max-width: 100%; width: auto; height: auto"/>
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat.</li>
+                        <li> Tunnista kuvasta kaksi suorakulmaista kolmiota, joista on apua tehtävän ratkaisemisessa. Ovatko nämä kolmiot yhdenmuotoisia? </li>
+                        <li> Kuinka paljon listaa pitää lyhentää, jotta se on sopivan mittainen? Anna vastaus millimetrin tarkkuudella. </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS212_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS212_v" class="collapse">
+                        <ol class="a">
+                            <li> </li>
+                            <li> </li>
+                            <li> Noin 16 mm. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="c98c4503-ee85-427c-8ac7-1fa1d7a4eec3">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS213">
+                            SUORAKULMAINEN KOLMIO
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS213">
+                    <p>
+                        Ranskassa Atlantin rannikolla Saint Malossa vedenpinnan korkeus voi vaihdella nousu- ja laskuveden välillä jopa yli yhdeksän metriä.
+                    </p>
+                    <ol class="a">
+                        <li> Vesirajan mitattiin siirtyneen rannalla 62 metriä nousu- ja laskuveden välillä, kun ilmoitettu vedenkorkeuden muutos oli 4,31 metriä. Mikä oli rannan keskimääräinen kaltevuuskulma? </li>
+                        <li> Kuinka paljon vesiraja siirtyy, jos vedenkorkeus muuttuu 9,85 metriä? Oletetaan, että ranta viettää tasaisesti niin, että kaltevuuskulma on likimain vakio. </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS213_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS213_v" class="collapse">
+                        <ol class="a">
+                            <li> Noin $4{,}0^\circ$. </li>
+                            <li> Kahden merkitsevän numeron tarkkuudella noin 140 metriä. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="c92b87cc-7757-4568-a1a6-2093b1b196f3">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS214">
+                            SUORAKULMAINEN KOLMIO
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS214">
+                    <p>
+                        Sienestäjä kävi tarkastamassa kolme salaista sieniapajaansa kävelemällä metsäautotien päästä  ensin 400 m etelään, sitten 950 m itään ja vielä 1 200 m etelään. Tehtävänä on selvittää, mihin kompassisuuntaan hänen pitää kulkea viimeisestä sienipaikasta, jos hän haluaa päästä suoraan takaisin lähtöpaikkaansa mahdollisimman lyhyttä reittiä. Kompassisuunta ilmaistaan asteina pohjoisesta myötäpäivään lukien.
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat. Täydennä piirros sopivaksi suorakulmaiseksi kolmioksi. </li>
+                        <li> Mihin kompassisuuntaan sienestäjän pitää kulkea, jotta hän pääsisi suoraan takaisin lähtöpaikkaansa?</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS214_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS214_v" class="collapse">
+                        <ol class="a">
+                            <li> </li>
+                            <li> Kompassisuunta on noin $329^\circ$ eli luoteen ja pohjoisen väliin. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="af202199-8804-45c9-9ce2-48570324608a">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS215">
+                            SUORAKULMAINEN KOLMIO
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS215">
+                    <p>
+                        Bengtskärin majakan huipulla seisova henkilö havaitsee suoraan etelässä purjeveneen ja hylkeen. Purjevene näkyy $5^\circ$ ja hylje $25^\circ$ vaakatason alapuolella. Henkilön pää on suunnilleen majakan valon korkeudella eli noin 51 metriä merenpinnan yläpuolella. Tehtävänä on selvittää purjeveneen etäisyys hylkeestä.
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä mallikuva sekä purjeveneen että hylkeen sijainnista majakkaan verrattuna eli yhteensä kaksi mallikuvaa. </li>
+                        <li> Mikä on purjeveneen etäisyys majakasta?</li>
+                        <li> Mikä on purjeveneen etäisyys hylkeestä?</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS215_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS215_v" class="collapse">
+                        <ol class="a">
+                            <li> Purjeveneen etäisyys majakasta on noin 580 metriä.</li>
+                            <li> Purjeveneen etäisyys hylkeestä on noin 470 metriä. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="543c235a-8d86-47a9-b639-a52a22223abe">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS216">
+                            SUORAKULMAINEN KOLMIO
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS216">
+                    <p>
+                        Autoilijoita saatetaan varoittaa jyrkästä mäestä liikennemerkillä. Merkissä ilmoitetaan mäen kaltevuus suhteena
+                        $$\frac{\text{ korkeuden muutos }}{\text{ vaakasuora siirtymä }}$$
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa3/kuvat/merkki.png" style="max-width: 100%; width: auto; height: auto"/>
+                    </p>
+                    <ol class="a">
+                        <li> Selvitä mäen kaltevuuskulma asteina yllä olevan liikennemerkin tapauksessa. Muista piirtää mallikuva. </li>
+                        <li> Lenkkeilijä juoksee mäen rinteen tietä pitkin ja mittaa matkaksi gps-kellonsa avulla 500 metriä. Kuinka korkea mäki tämän perusteella on? Oletetaan, että mäelle nouseva tie ei mutkittele.</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS216_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS216_v" class="collapse">
+                        <ol class="a">
+                            <li> Mäen kaltevuuskulma on noin $4^\circ$. </li>
+                            <li> Mäen korkeus on noin 35 metriä. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku1-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="64ab37d5-f1ed-48ec-a982-64896d6f21c9">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#skkS301">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="skkS301">
+                    <p>
+                    <ol class="a">
+                        <li> Suorakulmaisen kolmion hypotenuusan pituus on 5 ja toisen kateetin pituus 2. Laske toisen kateetin pituus. </li>
+                        <li> Laske neliön piiri, kun sen lävistäjän pituus on 6.</li>
+                    </ol>
+                    [Pitkä S2011/1b &amp; S2015/1b]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#skkS301_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="skkS301_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> $\sqrt{21}$ </li>
+                            <li> $12\sqrt{2}$ </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            
+
+
+           
+
+            <div class="tehtava" id="ecbf0128-eb1c-4df4-835e-106ff4cca2a5">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS303">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS303">
+                    <p>
+                        Laske oheisen kuvan suorakulmaisen kolmion $ABC$ pinta‐alan tarkka arvo.
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa3/kuvat/tasoK02.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <p>
+                        [Pitkä K2013/4]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS303_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS303_v" class="collapse">
+                        <p>
+                            $5\sqrt{21}$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="931f5e4d-c405-4f4e-8dd4-f67f74d010e8">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#skkS303">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="skkS303">
+                    <p> Suorakulmaisessa kolmiossa $ABC$ kateetin $AB$ pituus on 4,4 cm ja hypotenuusan $AC$ pituus 8,1 cm. 
+                    <ol class="a">
+                        <li> Laske kateetin $BC$ pituus. </li>
+                        <li> Laske kolmion terävien kulmien suuruudet 0,1 asteen tarkkuudella.</li>
+                        <li> Laske kolmion pinta-ala 0,1 neliösenttimetrin tarkkuudella.</li>
+                    </ol>
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa3/kuvat/suoraK01.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <p>
+                        [Lyhyt K2015/4]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#skkS303_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="skkS303_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> 6,8 cm </li>
+                            <li> $57{,}1^\circ$ </li>
+                            <li> $15{,}0 \text{ cm}^2$</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="8542a8ff-0946-446a-8929-ee6fbd25cdc3">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#skkS304">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="skkS304">
+                    <p> Liito-oravan vaakasuora siirtymä suoraviivaisessa liidossa on parhaimmillaan 3,3-kertainen korkeuden vähenemiseen verrattuna.  
+                    <ol class="a">
+                        <li>  Huippukuntoinen liito-orava aikoo liitää 60 metriä leveän aukion yli. Kuinka korkealta puusta sen täytyy ponnistaa, jotta se laskeutuisi aukion toisella puolella olevaan puuhun yhden metrin korkeudelle? Anna vastaus metrin tarkkuudella. </li>
+                        <li> Kuinka suuressa kulmassa vaakatasoon nähden a-kohdan liito-orava liitää? Anna vastaus asteen tarkkuudella. </li>
+                    </ol>
+                    [Lyhyt S2014/6]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#skkS304_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="skkS304_v" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li> 19 m </li>
+                            <li> $17^\circ$ alaviistoon</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="f8dbd840-8b70-4c11-b21a-8a62df6d7135">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS301">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS301">
+                    <p>
+                        Tasakylkisen suorakulmaisen kolmion kateetin pituus on $a$. Kolmion sisälle asetetaan kuvion mukaisesti pienempi tasakylkinen kolmio, jonka yksi kärki sijaitsee alkuperäisen kolmion hypotenuusalla. Lisäksi jana $AB$ on hypotenuusan suuntainen. Määritä pienemmän kolmion suurin mahdollinen pinta‐ala.
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa3/kuvat/vinoK01.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <p>
+                        [Pitkä S2015/7]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS301_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS301_v" class="collapse">
+                        <p>
+                            $\frac{1}{8}a^2$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+           
+
+           
+
+            <div class="tehtava" id="9eb7c455-4585-407f-9ad2-244bc434adbe">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS306">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS306">
+                    <p>
+                        Alla olevassa kuviossa on silityslauta sivusta katsottuna. Siihen liittyvät mitat on merkitty kuvioon. Laske silityslaudan korkeus lattiasta.
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa3/kuvat/tasoK04.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <p>
+                        [Lyhyt S2015/5]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS306_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS306_v" class="collapse">
+                        <p>
+                            84 cm
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="66e975a9-2cc4-439e-a745-debf33730c4f">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS307">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS307">
+                    <p>
+                        Kuinka monta prosenttia alla olevan suorakulmion pinta-alasta on väritetty siniseksi?
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa3/kuvat/vinoK37.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS307_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS307_v" class="collapse">
+                        <p>
+                            37,5 %.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="9761054b-32db-427e-aef6-b288e13e63a9">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS207">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS207">
+                    <p>
+                        Vartiotornin korkeus on 15 metriä. Tornista 30 metrin etäisyydellä on 2,5 metriä korkea muuri. Muurin takana piileksii 185 cm pitkä henkilö. Kuinka kaukana muurista hän voi liikkua niin, ettei häntä havaita vartiotornista?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS207_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS207_v" class="collapse">
+                        <p> Enintään 1,56 metrin etäisyydellä.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="cf5689e5-77d3-49e2-aef5-cd241e9301c2">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#vkkS211">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="vkkS211">
+                    <p>
+                        Topi haluaa järjestää huoneensa uudelleen. Onko hänen mahdollista raahata 209 cm pitkä ja 106 cm leveä sänky huoneen 2,3 m pitkän päätyseinän vierestä toisen seinän viereen sänkyä kallistamatta?
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa3/kuvat/vinoK38.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#vkkS211_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="vkkS211_v" class="collapse">
+                        <p>
+                            Sängyn lävistäjä on noin 234 cm, joten se on suurempi kuin huoneen leveys (230 cm). Sänky ei siten mahdu pyörähtämään huoneessa poikittain.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="365eadad-c485-4980-936a-7f58f892478d">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS308">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS308">
+                    <p>
+                        Lentokone lähestyy Oulunsalon kenttää kolmen asteen kulmassa maahan nähden. Kiitoradan pituus on 2,5 km, ja kone koskettaa kiitorataa 300 metrin päässä sen alkupäästä. Kuinka kaukana kiitoradan alkupäästä (vaakasuoraan ajateltuna) kone oli 500 jalan korkeudessa (1 jalka = 0,3048 m)? Kuinka kauan tästä kului maakosketukseen, jos lentokoneen lähestymisnopeus ilman suhteen oli 270 km/h? Oletetaan, että sää oli tyyni.
+                        <br>
+                        [Lyhyt K2007/7]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS308_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS308_v" class="collapse">
+                        <p>
+                            Etäisyys oli noin 2600 m ja aikaa kului noin 39 sekuntia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="c3e6009d-dc5c-4f7f-ac49-0dfa6e4c6489">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS309">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS309">
+                    <p>
+                        Suunnistusradan ensimmäinen rasti oli lähtöpaikalta 950 metriä eteläkaakkoon (kompassisuunta 157,5 astetta). Lähdettyään ensimmäiseltä rastilta ja juostuaan 400 metriä suunnistaja tuli suoralle pohjois-etelä-suuntaiselle tielle, jonka varrella lähtöpaikka oli. Kuinka kaukana suunnistaja oli lähtöpaikalta?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS309_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS309_v" class="collapse">
+                        <p>
+                            Suunnistajan etäisyys lähtöpaikasta oli noin 710 metriä tai noin 1040 metriä.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#L2itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="L2itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="http://polku.opetus.tv/node/2086">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
+            </p>
+        </div>
+    </section>
+
+</article>
