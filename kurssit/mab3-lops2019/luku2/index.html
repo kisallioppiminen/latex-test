@@ -1,0 +1,2926 @@
+---
+title: MAB3 - Geometria
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: mab3-lops2019
+---
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th {
+        padding: 5px;
+    }
+</style>
+
+{% include bottomnav.html %}
+
+<input type="hidden" id="chapterNumber" value="2"/>
+<input type="hidden" id="theoremStart" value="10"/>
+
+<article>
+    <section>
+        <header>
+            <h1> Tasogeometriaa </h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun3-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="luvun3-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p>
+                    Tämän luvun tavoitteena on, että harjaannut ratkaisemaan erilaisia tasogeometrian ongelmia. Sovellat edellisessä luvussa oppimaasi kolmioiden geometriaa muiden monikulmioiden tutkimiseen ja perehdyt ympyrän geometrisiin ominaisuuksiin. Osaat
+                <ul>
+                    <li> osaat tehdä yksikkömuunnoksia </li>
+                    <li> laskea suunnikkaan ja puolisuunnikkaan pinta-alan sekä monikulmion kulmien summan</li>
+                    <li> selvittää säännöllisiin monikulmioihin liittyviä kulmia, sivujen pituuksia ja pinta-aloja</li>
+                    <li> päätellä etäisyyksiä ja pituuksia mittakaavan avulla</li>
+                    <li> määrittää kuvion pinta-alan yhdenmuotoisuussuhdetta käyttäen</li>
+                    <li> laskea ympyrän pinta-alan ja kehän pituuden </li>
+                    <li> määrittää ympyrän sektorin ja segmentin pinta-alan sekä kaaren pituuden</li>
+                    <li> käyttää ympyrän keskuskulmaa ja tangettikulmaa geometristen ongelmien ratkaisemiseen</li>
+                    <li> soveltaa geometrian taitoja koordinaatistossa.</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </section>
+
+ <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#yksikkömuunnokset">
+                    Yksikkömuunnokset
+                </a>
+            </h1>
+        </header>
+        <div id="yksikkömuunnokset" class="collapse">
+            
+            <div class="tehtavat">
+
+                <div class="tehtava first-exercise" id="ac9801d0-f89b-45b2-8e1c-bb00cf5a3b1a">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso01">
+                                MERKITSEVÄT NUMEROT
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso01" class="collapse">
+                     
+                        <p>  Kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/may1/potenssiLogaritmi/">MAY1-kurssin 2. luvusta</a> merkitsevät numerot. Ilmoita seuraaavissa tilanteissa merkitsevien numeroiden lukumäärä.
+                        <ol class="a">
+                            <li>
+                               $3400$ 
+                            </li>
+                            <li>
+                              $125$
+                            </li>
+                             <li>
+                              $10103$
+                            </li>
+                             <li>
+                              $1{,}06$
+                            </li>
+                             <li>
+                              $3{,}400$
+                            </li>
+                             <li>
+                              $0{,}0078$
+                            </li>
+                        </ol>
+                        </p>
+                <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso03_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso03_v" class="collapse">
+                            <ol class="a">
+                                <li>2 </li>
+                                <li> 3</li>
+                                <li> 5</li>
+                                <li> 3</li>
+                                <li> 4</li>
+                                <li> 2</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="teoria">
+                <p>
+                    Kun ratkaistaan tehtäviä, joissa esiintyy yksiköitä, pitää aluksi varmistaa, että esimerkiksi kaikki pituusyksiköt ovat samoja. Esimerkiksi voidaan laskea $2 \text{ m}+5\text{ m}=7 \text{ m}$, mutta ei voida laskea, mitä on $2\text{ m}^2+5\text{ m}$. Periaate yksikkömuunnoksissa on, että pituuksissa suhdeluku on 10, pinta-aloissa 100 ja tilavuuksissa 1000. Suhdeluku tarkoittaa lukua, jolla kerrotaan tai jaetaan muutettavaa lukua siirryttäessä asteikossa yhden yksikön verran. Esimerkiksi pinta-aloissa suhdeluku on 100, eli $5 \text{ cm}^2=5\cdot100 \text{ mm}^2=500 \text{ mm}^2$. Syvennä tarvittaessa osaamistasi eri asteikoista <a href="https://www.youtube.com/watch?v=jfLfj_mM8ns">opetus.tv:n sivuilta</a>.  
+                </p>
+            
+            </div>
+
+<div class="tehtavat">
+
+                <div class="tehtava" id="d4069d5b-7759-4251-ba80-0ced0faf8f7f">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso01d">
+                                YKSIKKÖMUUNNOKSET
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso01d" class="collapse">
+                     
+                        <p>  
+                            Kopioi alla olevat kohdat vihkoosi ja kirjoita luvun perään oikea yksikkö.
+                        <ol class="a">
+                            <li>
+                               $4500 \text{ mm}=4{,}5 $
+                            </li>
+                            <li>
+                              $123000 \text{ cm}=1{,}23$
+                            </li>
+                             <li>
+                              $6\cdot10^{-4}\text{ km}=6$
+                            </li>
+                          
+                            
+                        </ol>
+                        </p>
+                <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso03d_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso03d_v" class="collapse">
+                            <ol class="a">
+                                <li>m </li>
+                                <li> km</li>
+                                <li> dm</li>
+                               
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<div class="tehtavat">
+
+                <div class="tehtava" id="8bb25774-2d70-48c0-b60d-69bc8d221eef">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso01c">
+                                YKSIKKÖMUUNNOKSET
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso01c" class="collapse">
+                     
+                        <p>  
+                            Kopioi alla olevat kohdat vihkoosi ja kirjoita luvun perään oikea yksikkö.
+                        <ol class="a">
+                            <li>
+                               $0{,}0018 \text{ m}^2=18 $
+                            </li>
+                            <li>
+                              $5{,}3\cdot 10^3 \text{a}=53$
+                            </li>
+                             <li>
+                              $85000000\text{ m}^2=85$
+                            </li>
+                          
+                            
+                        </ol>
+                        </p>
+                <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso03c_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso03c_v" class="collapse">
+                            <ol class="a">
+                                <li>cm$^2$ </li>
+                                <li> ha</li>
+                                <li> km$^2$</li>
+                               
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<div class="tehtavat">
+
+                <div class="tehtava" id="a4a3bf69-7dc7-4876-a977-f90dba65b44e">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso01b">
+                                YKSIKKÖMUUNNOKSET
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso01b" class="collapse">
+                     
+                        <p>  
+                            Muunna suluissa olevaan yksikköön.
+                        <ol class="a">
+                            <li>
+                               $920 \text{ cm}^3 \, (\text{dm}^3) $
+                            </li>
+                            <li>
+                              $108 \text{ cl} \, (\text{l})$
+                            </li>
+                             <li>
+                              $0{,}07\text{ m}^3 \, (\text{dl})$
+                            </li>
+                          
+                            
+                        </ol>
+                        </p>
+                <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso03b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso03b_v" class="collapse">
+                            <ol class="a">
+                                <li>$0{,}92 \text{ dm}^3$ </li>
+                                <li> $1{,}08 \text{ l}$</li>
+                                <li> $700 \text{ dl}$</li>
+                               
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+     </div>
+            </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#monikulmiot">
+                    Monikulmioita
+                </a>
+            </h1>
+        </header>
+        <div id="monikulmiot" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Edellisessä luvussa perehdyttiin kolmioiden geometriaan. Tässä kappaleessa hyödynnetään kolmioista opittuja asioita, kun tutkitaan muiden monikulmioiden ominaisuuksia. Aloitetaan sopimalla, mitä tarkoitetaan suunnikkaalla ja puolisuunnikkaalla.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SUUNNIKAS JA PUOLISUUNNIKAS</h3>
+                    <p>
+                        <em>Suunnikas</em> on nelikulmio, jonka vastakkaiset sivut ovat yhdensuuntaiset.
+                        <br>
+                        <em>Puolisuunnikas</em> on nelikulmio, jossa on kaksi keskenään yhdensuuntaista sivua.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+
+                <div class="tehtava" id="9474336d-185b-4e56-9e4f-aefe592aa8c8">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso01ji">
+                                SUUNNIKAS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso01ji" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/tasoK07.png" style="max-width: 100%; width: auto; height: auto"/>
+                        </p>
+                        <p>  Tehtävänä on johtaa lauseke suunnikkaan pinta-alalle.
+                        <ol class="a">
+                            <li>
+                                Piirrä vihkoosi suunnikas samaan tapaan kuin yllä olevassa kuvassa. Jaa suunnikas kahdeksi kolmioksi piirtämällä sille lävistäjä.
+                            </li>
+                            <li>
+                                Muodosta lauseke kummankin kolmion pinta-alalle ja laske suunnikkaan pinta-ala niiden avulla.
+                            </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="bb40f434-a489-4200-92cd-f219e6deda76">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso02">
+                                PUOLISUUNNIKAS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso02" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/tasoK08.png" style="max-width: 100%; width: auto; height: auto"/>
+                        </p>
+                        <p>  Tehtävänä on johtaa lauseke puolisuunnikkaan pinta-alalle.
+                        <ol class="a">
+                            <li>
+                                Piirrä vihkoosi puolisuunnikas samaan tapaan kuin yllä olevassa kuvassa. Jaa suunnikas kahdeksi kolmioksi piirtämällä sille lävistäjä.
+                            </li>
+                            <li>
+                                Muodosta lauseke kummankin kolmion pinta-alalle ja laske puolisuunnikkaan pinta-ala niiden avulla.
+                            </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria"><p>
+                Edellisten tehtävien tulokset voidaan koota seuraavaksi teoreemaksi:
+            </p>
+
+                <div class="theorem" id="SUUNNIKAS JA PUOLISUUNNIKAS">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Suunnikkaan pinta-ala on sivun pituuden ja sivulle tai sivun jatkeelle piirretyn korkeuden tulo. Se saadaan myös kertomalla suunnikkaan sivujen pituuksien tulo niiden välisen kulman sinillä. Alla olevan kuvan merkinnöillä suunnikkaan pinta-ala on siis
+                        $$ah = ac\sin\beta$$
+                        <img src="/kurssit/maa3/kuvat/tasoK09b.png" style="max-width: 100%; width: auto; height: auto"/>
+                        <br>
+                        Puolisuunnikkaan pinta-ala on yhdensuuntaisten sivujen pituuksien keskiarvon ja korkeuden tulo eli alla olevan kuvan merkinnöillä
+                        $$\frac{a+b}{2}\cdot h$$
+                        <img src="/kurssit/maa3/kuvat/tasoK10.png" style="max-width: 100%; width: auto; height: auto"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Teoreema on perusteltu yllä olevissa tehtävissä. Huomaa, että suunnikas ja puolisuunnikas voidaan aina jakaa kahdeksi kolmioksi, joiden korkeus on $h$. Esimerkiksi
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK11.png" style="max-width: 100%; width: auto; height: auto"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+ <div class="tehtavat">
+                <div class="tehtava" id="28ae3752-c654-478f-8dc5-361ee05645fb">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso03a">
+                                PUOLISUUNNIKAS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso03a" class="collapse">
+                        <p>  Suunnikkaan sivujen pituudet ovat 4 cm ja 10 cm ja niiden välinen terävä kulma on $60^{\circ}$. Tehtävänä on laskea suunnikkaan pinta-ala.
+                        <ol class="a">
+                            <li>
+                                Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat.
+                            </li>
+                            <li>
+                                Selvitä suunnikkaan korkeus suorakulmaisen kolmion avulla. 
+                            </li>
+                            <li> Laske suunnikkaan pinta-ala.</li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso03_va">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso03_va" class="collapse">
+                            <ol class="a">
+                                <li> $h=2\sqrt{3}=3{,}46\ldots$</li>
+                                <li> $A=34{,}6\ldots\approx 35$ cm$^2$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="a0189ea0-19f2-4934-8687-d91f08de9d8a">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso03">
+                                PUOLISUUNNIKAS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso03" class="collapse">
+                        <p>  Puolisuunnikkaan muotoisen tontin yhdensuuntaiset sivut rajautuvat tiehen ja puistoon. Tien puoleisen sivun pituus on 30 m ja puiston puoleisen sivun pituus on 54 m. Tien ja puiston välinen etäisyys on 35 m. Tehtävänä on laskea tontin pinta-ala.
+                        <ol class="a">
+                            <li>
+                                Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat.
+                            </li>
+                            <li>
+                                Laske tontin pinta-ala. Ilmoita tulos sekä neliömetreinä että aareina. Kertaa tarvittaessa pinta-alayksiköt esimerkiksi netistä.
+                            </li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso03_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso03_v" class="collapse">
+                            <ol class="a">
+                                <li> </li>
+                                <li> Tontin pinta-ala on $1470 \text{ m}^2 = 14{,}70 \text{ a}.$</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="teoria">
+                <p>
+                    Edellisessä luvussa osoitettiin, että kolmion kulmien summa on aina $180^\circ$. Kolmioiden avulla voidaan laskea myös muiden monikulmioiden kulmien summia.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="7d03f487-54dd-4122-8428-0d3f43d5263e">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso12">
+                                MONIKULMION KULMIEN SUMMA
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso12" class="collapse">
+                        <p>
+                            Tässä tehtävässä jaetaan monikulmioita kolmioiksi lävistäjien avulla. Monikulmion <em>lävistäjä</em> tarkoittaa janaa, joka yhdistää monikulmion kaksi sellaista kärkeä, jotka eivät ole vierekkäisiä.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä vihkoosi jokin mahdollisimman omituisen muotoinen nelikulmio. Voit katsoa ideoita alla olevista nelikulmioista.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/tasoK17.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                            <li>
+                                Jaa piirtämäsi nelikulmio kahdeksi kolmioksi piirtämällä sille lävistäjä, joka on kokonaan nelikulmion sisällä. Päättele, mikä on nelikulmion kulmien summa.
+                            </li>
+                            <li>
+                                Piirrä vihkoosi jokin mahdollisimman omituisen muotoinen viisikulmio.
+                            </li>
+                            <li>
+                                Jaa piirtämäsi viisikulmio kolmioiksi piirtämällä sille samasta kärjestä lähteviä lävistäjiä, jotka ovat kokonaan viisikulmion sisällä. Päättele, mikä on viisikulmion kulmien summa.
+                            </li>
+                            <li>
+                                Keksi sääntö, miten $n$-kulmion kulmien summa saadaan kulmasta $180^\circ$.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+          
+
+            <div class="teoria">
+                <p>
+                    Voidaan osoittaa, että edellisten tehtävien havainnot pitävät paikkansa yleisesti. Perustelu on kuitenkin sen verran monimutkainen, ettei siihen perehdytä tässä.                 </p>
+
+                <div class="theorem" id="MONIKULMION KULMIEN SUMMA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jos monikulmiossa on $n$ kärkeä eli kysymyksessä on $n$-kulmio, sen kulmien summa on $(n-2)\cdot 180^\circ$.
+                    </p>
+                </div>
+
+                <p>
+                    Monikulmioita voidaan luokitella niiden eri ominaisuuksien mukaan. Edellä on tarkasteltu esimerkiksi kolmioita, nelikulmioita ja viisikulmioita, eli on luokittelu on tehty monikulmion kulmien lukumäärän mukaan. Seuraavaksi tutustutaan toisenlaiseen monikulmioiden luokkaan: säännöllisiin monikulmioihin.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SÄÄNNÖLLINEN MONIKULMIO</h3>
+                    <p>
+                        Monikulmio, jonka kaikki sivut ovat yhtä pitkät ja kaikki kulmat yhtä suuret, on <em>säännöllinen monikulmio</em>.
+                    </p>
+                </div>
+
+                <p>
+                    Yksinkertaisin säännöllinen monikulmio on niin sanottu <em>tasasivuinen kolmio</em>. Sitä tutkitaan seuraavissa tehtävissä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="984c3bcf-3a38-4320-82d7-d4cda606e6d8">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso14">
+                                TASASIVUINEN KOLMIO
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso14" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Piirrä vihkoosi tasasivuinen kolmio, jonka sivun pituus on 5 cm, seuraavan ohjeen mukaan:
+                                <ul>
+                                    <li> piirrä viivottimen avulla jana, jonka pituus on 5 cm</li>
+                                    <li> piirrä harpin avulla ympyrä, jonka keskipiste on janan jompi kumpi pää ja jonka säde on 5 cm</li>
+                                    <li> piirrä vastaava ympyrä kuin edellisessä kohdassa, mutta vaihda keskipisteeksi janan toinen pää </li>
+                                    <li> valitse toinen ympyröiden leikkauspisteistä kolmion kolmanneksi kärjeksi.</li>
+                                </ul>
+                                <img src="/kurssit/maa3/kuvat/tasoK19.png" style="max-width: 100%; width: auto; height: auto"/>
+                            </li>
+                            <li>
+                                Päättele, miten suuria ovat tasasivuisen kolmion kulmat.
+                                <br>Vinkki: säännöllisen monikulmion määritelmä ja teoreema 2.
+                            </li>
+                        </ol>
+                        
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso04_v1">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso04_v1" class="collapse">
+                            <ol class="a">
+                                <li>  </li>
+                                <li> Kulmat ovat $60^{\circ}$, koska kolmion kulmien summa on $180^{\circ}$ ja säännöllisessä monikulmiossa kaikki kulmat ovat yhtä suuria.</li>
+                            </ol>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="09b8a88a-51c2-4c0f-95d6-5e6c34a86619">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso15">
+                                TASASIVUINEN KOLMIO
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso15" class="collapse">
+                        <p>
+                            Alla on näkyvissä tasasivuinen kolmio $ABC$, jonka korkeusjana jakaa sen kahdeksi pienemmäksi suorakulmaiseksi kolmioksi.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK21.png" style="max-width: 100%; width: auto; height: auto"/>
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Tunnista suorakulmaisista kolmioista $ADC$ ja $BDC$ kaksi kulmaa, jotka ovat niissä varmasti yhtä suuria. Perustele omin sanoin. Miksi tästä seuraa, että myös kolmannet kulmat ovat keskenään yhtä suuria?
+                            </li>
+                            <li>
+                                Tunnista suorakulmaisista kolmioista $ADC$ ja $BDC$ kaksi sivua, jotka ovat niissä varmasti yhtä pitkiä. Perustele omin sanoin. Voiko kolmas sivu olla eri pituinen kolmioissa $ADC$ ja $BDC$?
+                                <br>
+                                Vinkki: Pythagoraan lause.
+                            </li>
+                        </ol>
+                        
+                         <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso04_v2">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso04_v2" class="collapse">
+                            <ol class="a">
+                                <li>  </li>
+                                <li> Kolmannetkin sivut ovat yhtä pitkät, koska kolmiot ovat yhdenmuotoiset ja yhdenmuotoisuusssuhde on 1:1 kahden muun sivun ollessa yhtä pitkiä.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="02bea365-c667-4b57-9b31-b778a54e8778">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso16">
+                                TASASIVUINEN KOLMIO
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso16" class="collapse">
+                        <p>
+                            Alla on näkyvissä tasasivuinen kolmio, jonka sivujen pituus on 2. Korkeusjana jakaa sen kahdeksi pienemmäksi suorakulmaiseksi kolmioksi.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK20.png" style="max-width: 100%; width: auto; height: auto"/>
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Päättele kulman $\alpha$ suuruus.
+                              
+                            </li>
+                            <li>
+                                Päättele kulman $\beta$ suuruus.
+                            </li>
+                            <li>
+                                Päättele suorakulmaisen kolmion kateetin pituus $x$ edellisen tehtävän b-kohdan havaintojen avulla.
+                            </li>
+                            <li>
+                                Ratkaise korkeus $h$.
+                            </li>
+                           
+                        </ol>
+                         <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso04_v3">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso04_v3" class="collapse">
+                            <ol class="a">
+                                <li>  $\alpha=60^{\circ}$</li>
+                                <li> $\beta=30^{\circ}$</li>
+                                <li> $x=\frac{1}{2}\cdot 2=1$   </li>
+                                <li> $h=\sqrt{2^2-1^2}=\sqrt{3}$</li>
+                            </ol>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Säännöllinen monikulmio, jossa on neljä kulmaa, on nimeltään <em>neliö</em>.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="7aadc306-2805-4093-90b7-fb6a03e66f26">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso17">
+                                NELIÖ
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso17" class="collapse">
+                        <p>
+                            Alla on näkyvissä neliö, jonka sivujen pituus on 1. Lävistäjä jakaa sen kahdeksi suorakulmaiseksi kolmioksi.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK22.png" style="max-width: 100%; width: auto; height: auto"/>
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Ratkaise lävistäjän pituus $x$.
+                            </li>
+                            <li>
+                                Ratkaise kulman $\alpha$ suuruus esimerkiksi sopivan trigonometrisen suhteen avulla.
+                            </li>
+                           
+                        </ol>
+                        
+                         <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso04_v1r">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso04_v1r" class="collapse">
+                            <ol class="a">
+                                <li> $x=\sqrt{2}$ </li>
+                                <li> Esimerkiksi $\tan \alpha=1,$ josta $\alpha=45^{\circ}$.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+               Tasasivuisen kolmion ja neliön lisäksi muita säännöllisiä monikulmioita ovat säännöllinen viisikulmio, säännöllinen kuusikulmion ja niin edelleen.
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/tasoK23.png" style="max-width: 100%; width: auto; height: auto"/>
+                </p>
+
+              
+
+               
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#yhdenmuotoisuus">
+                    Yhdenmuotoisuus
+                </a>
+            </h1>
+        </header>
+        <div id="yhdenmuotoisuus" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Kolmioita käsittelevässä luvussa määriteltiin, mitä tarkoitetaan yhdenmuotoisilla kolmioilla. Yhdenmuotoisuuden käsite voidaan laajentaa muihinkin tasokuvioihin. Kuviot, jotka saadaan toisistaan siirtämällä, kiertämällä, peilaamalla, suurentamalla tai pienentämällä, ovat yhdenmuotoiset.
+                </p>
+                <p>
+                    <img src="/kurssit/maa3/kuvat/tasoK06.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KUVIOIDEN YHDENMUOTOISUUS JA MITTAKAAVA</h3>
+                    <p>
+                        Kuviot ovat <em>yhdenmuotoiset</em>, jos ne toteuttavat seuraavat ehdot:
+                    </p>
+                    <ul>
+                        <li> kulma ja sen vastinkulma ovat aina yhtä suuret </li>
+                        <li> suhde
+                            $$\frac{\text{ vastinjanan pituus }}{\text{ janan pituus }}$$
+                            on sama riippumatta siitä, mitä kuvion janaa tarkastellaan.</li>
+                    </ul>
+                    <p>
+                        Jos kuviot ovat yhdenmuotoiset, <em>yhdenmuotoisuussuhde</em> eli <em>mittakaava</em> tarkoittaa edellä mainittua suhdetta
+                        $$\frac{\text{ vastinjanan pituus }}{\text{ janan pituus }}$$
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="f158ca1f-fc84-4f33-891f-261cd832b704">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso04">
+                                YHDENMUOTOISUUS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso04" class="collapse">
+                        <p>
+                        <ol class="a">
+                            <li>
+                                Alla on näkyvissä tähti ja sen pienennös. Määritä kuvioiden yhdenmuotoisuussuhde.
+                                <br>
+                                <img src="/kurssit/maa3/kuvat/tasoK12.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                Taiteilija maalasi samasta aiheesta sekä seinämaalauksen (freskon) että taulun. Molemmat olivat suorakulmion muotoisia. Seinämaalauksen leveys oli 6,87 m ja korkeus 3,55 m. Taulun leveys oli 128 cm ja korkeus 89 cm. Olivatko seinämaalaus ja taulu yhdenmuotoiset?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso04_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso04_v" class="collapse">
+                            <ol class="a">
+                                <li> Yhdenmuotoisuussuhde on $\dfrac{0{,}5 \text{ cm}}{2 \text{ cm}} = \dfrac{1}{4}$ eli $1 : 4$. </li>
+                                <li> Eivät olleet.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="318b6021-b391-4288-9e4b-734903004e15">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso05">
+                                YHDENMUOTOISUUS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso05" class="collapse">
+                        <p>  Mitkä seuraavista tasokuvioista ovat aina yhdenmuotoisia? Tarkista kuvioiden nimitysten merkitys tarvittaessa esimerkiksi netistä.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                suunnikas
+                            </li>
+                            <li>
+                                neliö
+                            </li>
+                            <li>
+                                tasakylkinen kolmio
+                            </li>
+                            <li>
+                                tasasivuinen kolmio
+                            </li>
+                            <li>
+                                ympyrä
+                            </li>
+                        </ol>
+                        <p>
+                            Jos kuviot ovat aina yhdenmuotoisia, piirrä kuvio ja sen suurennos mittakaavassa $2:1$. Jos kuviot eivät ole aina yhdenmuotoisia, piirrä esimerkki kahdesta kuviosta, jotka eivät ole yhdenmuotoisia.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso05_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso05_v" class="collapse">
+                            <p> Kaikki neliöt ovat keskenään yhdenmuotoisia, samoin kaikki tasasivuiset kolmiot ja kaikki ympyrät. Suunnikkaista ja tasakylkisistä kolmioista on mahdollista keksiä esimerkkejä, jotka eivät ole keskenään yhdenmuotoisia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Erityisesti karttojen ja rakennuspiirrustusten tapauksessa yhdenmuotoisuussuhdetta kutsutaan mittakaavaksi. Yhdenmuotoisuuden määritelmässä esiintyvä suhde
+                    $$\frac{\text{ vastinjanan pituus }}{\text{ janan pituus }}$$
+                    tulkitaan näissä tapauksissa niin, että vastinjanan pituus tarkoittaa pituutta kuvassa ja janan pituus vastaavaa pituutta luonnossa. Kartan tai rakennuspiirustuksen mittakaava on siis
+                    $$\frac{\text{ pituus kuvassa }}{\text{ pituus luonnossa }}$$
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="8ccd9290-9777-4a77-b5af-7020e41cb43c">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso06">
+                                YHDENMUOTOISUUSSUHDE
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso06" class="collapse">
+                        <p>  Jyväskylän ja Pieksämäen välinen etäisyys on linnuntietä noin 73 km. Kuinka pitkä tämä matka on kartalla, jonka mittakaava on
+                        </p>
+                        <ol class="a">
+                            <li>
+                                $1 : 200\,000$ (maantiekartta)
+                            </li>
+                            <li>
+                                $1 : 500\,000$ (ilmailukartta)?
+                            </li>
+                        </ol>
+                        <p>Vinkki: aloita muodostamalla verrantoyhtälö.</p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso06_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso06_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    36,5 cm
+                                </li>
+                                <li>
+                                    14,6 cm.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="a48e5dc8-1bf6-43f9-931e-045864c31541">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso07">
+                                YHDENMUOTOISUUSSUHDE
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso07" class="collapse">
+                        <p>  Mitä etäisyyttä luonnossa vastaa 4,5 cm kartalla, jonka mittakaava on
+                        </p>
+                        <ol class="a">
+                            <li>
+                                $1 : 10\,000$ (suunnistuskartta)
+                            </li>
+                            <li>
+                                $1 : 25\,000$ (peruskartta)?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso07_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso07_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    450 m
+                                </li>
+                                <li>
+                                    1125 m.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Tutkitaan seuraavaksi, miten yhdenmuotoisten kuvioiden pinta-alat liittyvät toisiinsa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="9f465276-aa34-47b7-987e-04aec9cf81eb">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso08">
+                                YHDENMUOTOISUUS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso08" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/tasoK13.png" max-width: 100%; width: auto; height: auto;/>
+                            <br>
+                            Tarkastellaan yllä olevia yhdenmuotoisia suorakulmioita.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Määritä suorakulmioiden yhdenmuotoisuussuhde.
+                            </li>
+                            <li>
+                                Laske isomman suorakulmion toinen sivu ja kummankin suorakulmion pinta-ala.
+                            </li>
+                            <li>
+                                Laske suorakulmioiden pinta-alojen suhde. Vertaa sitä yhdenmuotoisuussuhteeseen. Miten ne liittyvät toisiinsa?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso08_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso08_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Suhde on $1:3$.
+                                </li>
+                                <li>
+                                    Isomman suorakulmion toinen sivu 7,5 cm. Pinta-alat $22{,}5 \text{ cm}^2$ ja $2{,}5 \text{ cm}^2$.
+                                </li>
+                                <li>
+                                    Pinta-alojen suhde on
+                                    $$\frac{2{,}5 \text{ cm}^2}{22{,}5 \text{ cm}^2} = \frac{1}{9}$$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän havainnot voidaan yleistää kaikille tasokuvioille. Yleistys perustuu siihen, että jokainen tasokuvio, jolla on pinta-ala, voidaan täyttää miten tahansa tarkasti suorakulmioilla ottamalla käyttöön aina vain pienempiä suorakulmioita. Tämän osoittaminen täsmällisesti on kuitenkin niin työlästä, että seuraava teoreema otetaan käyttöön ilman tarkempaa perustelua.
+                </p>
+
+                <div class="theorem" id="YHDENMUOTOISTEN KUVIOIDEN PINTA-ALALAUSE">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jos kuviot ovat yhdenmuotoiset suhteessa $m : n$, niin kuvioiden pinta-alojen suhde on
+                        $$\frac{A_1}{A_2} = \left(\frac{m}{n}\right)^2$$
+                    </p>
+                </div>
+
+                <p>
+                    Yhdenmuotoisten kuvioiden pinta-alojen suhde on siis yhdenmuotoisuussuhteen eli mittakaavan neliö.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="03f6d203-e5b9-4457-a7a1-f31a7901452a">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso10">
+                                YHDENMUOTOISUUS JA PINTA-ALA
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso10" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Kaksi kuvakehystä ovat yhdenmuotoiset yhdenmuotoisuussuhteella $3:4$. Mikä on suureman kehyksen koko, kun pienemmän koko on 20 cm$^2$?
+                            </li>
+                            <li>
+                                Lemmenjoen kansallispuiston pinta-ala on $2\,850 \text{ km}^2$. Kuinka suurta pinta-alaa tämä vastaa kartalla, jonka mittakaava on $1: 400\,000$? Anna vastaus neliösenttimetreinä.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso10_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso10_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                   Suuremman koko on noin $36$ cm$^2$.
+                                </li>
+                                <li>
+                                    Pinta-ala on noin $178 \text{ cm}^2$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#ympyra">
+                    Ympyrä
+                </a>
+            </h1>
+        </header>
+        <div id="ympyra" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa tutkitaan ympyrän geometrisia ominaisuuksia. Aloitetaan määrittelemällä, mitä tarkoitetaan ympyrällä ja joillakin siihen liittyvillä käsitteillä.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: YMPYRÄ</h3>
+                    <p>
+                        Tason pisteet, jotka ovat vakioetäisyydellä kiinteästä pisteestä, muodostavat <em>ympyrän</em> eli <em>ympyräviivan</em>. Kiinteä piste on ympyrän <em>keskipiste</em> ja vakioetäisyys sen <em>säde</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK28.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        <em>Jänne</em> on ympyrän kahden pisteen välinen jana. <em>Halkaisija</em> on ympyrän keskipisteen kautta kulkeva jänne.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK29.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
+
+                <p>
+                    Nimitystä ympyrä käytetään toisinaan myös ympyräviivan sisään jäävästä tasoalueesta. Ympyräviivaa itseään kutsutaan tällöin usein ympyrän <em>kehäksi</em>.
+                </p>
+
+                <p>
+                    Ympyrän kehän pituutta voidaan arvioida säännöllisten monikulmioiden avulla piirtämällä monikulmiot sekä ympyrän sisä- että ulkopuolelle alla olevien kuvien mukaisesti. Mitä enemmän kulmia monikulmioissa on, sitä tarkemmin niiden piirit arvioivat ympyrän kehän pituutta.
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/tasoK30.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Tällä tavalla voidaan arvioida myös ympyrän kehän pituuden suhdetta ympyrän halkaisijaan. Tämä suhde ei riipu ympyrän koosta vaan on sama kaikilla ympyröillä. Kysymyksessä onkin yksi kuuluisimmista matemaattisista vakioista. Sitä merkitään kirjaimella $\pi$ (pii).
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: LUKU $\pi$</h3>
+                    <p>
+                        Luku $\pi$ on ympyrän kehän pituuden $p$ suhde halkaisijan pituuteen $d$:
+                        $$\pi = \frac{p}{d}$$
+                        <img src="/kurssit/maa3/kuvat/tasoK31.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
+
+                <p>
+                    Luku $\pi$ on irrationaaliluku, eli sitä ei voi kirjoittaa murtolukumuodossa. Tästä seuraa, että ympyrän kehän pituus $p$ ja halkaisija $d$ eivät voi olla yhtä aikaa rationaalilukuja, vaan ainakin toinen niistä on aina irrationaalinen.
+                </p>
+                <p>
+                    Luvun $\pi$ viisidesimaalinen likiarvo on $3{,}14159$. Vuonna 2013 Alexander Yee ja Shigeru Kondo selvittivät tietokoneen avulla likiarvon yli <a href="http://www.numberworld.org/misc_runs/pi-12t/">12,1 biljoonan desimaalin tarkkuudella</a> (12 100 000 000 050 ensimmäistä desimaalia).
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="71dcad31-2e16-4186-96ae-f8d83167810a">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso19">
+                                YMPYRÄN KEHÄN PITUUS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso19" class="collapse">
+                        <p>
+                            Tässä tehtävässä käytetään luvun $\pi$ määritelmää ympyrän kehän pituuden selvittämiseen.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Ympyrän halkaisija on 15,0 cm. Laske sen kehän pituus ja anna vastaus kolmen merkitsevän numeron tarkkuudella.
+                            </li>
+                            <li>
+                                Muodosta yhtälö, jonka avulla saat laskettua ympyrän kehän pituuden $p$, jos tiedät ympyrän säteen $r$.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso19_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso19_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kehän pituus on noin 47,1 cm.
+                                </li>
+                                <li>
+                                    $p = 2\pi r$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Ympyrän pinta-alaa voidaan arvioida monin tavoin. Yksi mahdollisuus on piirtää säännölliset monikulmiot sekä ympyrän sisä- että ulkopuolelle samaan tapaan kuin kehän pituutta arvoidessa. Seuraavassa tehtävässä tutustutaan toisenlaiseen tapaan järkeillä ympyrän pinta-ala.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b1815879-6cb9-4d18-b7c6-8087a7a0d52e">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso20">
+                                YMPYRÄN PINTA-ALA
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso20" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/tasoK32.png" max-width: 100%; width: auto; height: auto;/>
+                            <br>
+                            Yllä olevassa kuvassa ympyrä on jaettu ohuisiin ympyrärenkaan muotoisiin osiin. Kun ympyrä leikataan punaista viivaa pitkin ja jokainen ohut ympyrärengas taivutetaan auki, muodostuu kuvassa näkyvä kolmion muotoinen kuvio.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Mikä on ympyrän kehän pituus, jos ympyrän säde on $r$?
+                                <br>
+                                Vinkki: tehtävä 2.19.
+                            </li>
+                            <li>
+                                Ilmaise yllä olevan kolmion kanta ja korkeus alkuperäisen ympyrän säteen $r$ avulla.
+                            </li>
+                            <li>
+                                Muodosta lauseke kolmion pinta-alalle. Miten se liittyy alkuperäisen ympyrän pinta-alaan? Selitä omin sanoin.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Yllä olevien tehtävien tuloksista saadaan seuraava teoreema:
+                </p>
+
+
+                <div class="theorem" id="YMPYRÄN PINTA-ALA JA KEHÄN PITUUS">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Ympyrän pinta-ala $A$ ja kehän pituus $p$ riippuvat ympyrän säteestä $r$ seuraavasti:
+                        \begin{align*}
+                        A &= \pi r^2 \\
+                        p &= 2\pi r
+                        \end{align*}
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: yllä olevissa tehtävissä.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="b1ed967e-9229-4507-a144-77a0dc861e8f">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso21">
+                                YMPYRÄN PINTA-ALA
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso21" class="collapse">
+                        <p>
+                            Käytettävissä on rakennustarvikkeet 80 metrin aitaa varten. Tehtävänä on selvittää, kannattaako aitauksesta rakentaa ympyrän vai neliön muotoinen, jos aitauksen pinta-alan halutaan olevan mahdollisimman suuri. Lisäksi pitää selvittää, kuinka iso ero näillä kahdella vaihtoehdolla on.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä kummastakin vaihtoehdosta mallikuva ja merkitse siihen tunnetut tai helposti pääteltävissä olevat mitat.
+                            </li>
+                            <li>
+                                Kuinka suuri on 80 metriä pitkällä aidalla aidatun neliön muotoisen alueen pinta-ala?
+                            </li>
+                            <li>
+                                Kuinka suuri on 80 metriä pitkällä aidalla aidatun ympyrän muotoisen alueen pinta-ala?
+                            </li>
+                            <li>
+                                Kuinka monta prosenttia isomman alueen pinta-ala on suurempi kuin pienemmän alueen pinta-ala?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso21_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso21_v" class="collapse">
+                            <ol class="a">
+                                <li> </li>
+                                <li> $400 \text{ m}^2$ </li>
+                                <li> Noin $509 \text{ m}^2$. </li>
+                                <li> Noin 27,3 %. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Siirrytään nyt tutkimaan erilaisia ympyrän osia. Aloitetaan määrittelemällä, mitä tarkoitetaan ympryrän keskuskulmalla.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KESKUSKULMA</h3>
+                    <p>
+                        Kulma, jonka kärki on ympyrän keskipisteessä, on <em>keskuskulma</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK33.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
+
+                <p>
+                    Keskuskulman suuruus voi olla mitä tahansa nollakulman ja täyden kulman väliltä.
+                </p>
+                <p>
+                    Keskuskulman avulla määritellään kaaren ja sektorin käsitteet:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KAARI, SEKTORI JA SEGMENTTI</h3>
+                    <p>
+                        Keskuskulman kyljet rajaavat ympyrän kehältä <em>kaaren</em> ja ympyrän sisältä <em>sektorin</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK35.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Kaari ja sen päätepisteitä yhdistävä jänne rajaavat ympyrän sisältä <em>segmentin</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK36.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="1dae6718-9f7e-4fed-abbd-aae43628c093">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso22">
+                                KAARI JA SEKTORI
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso22" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/tasoK37.png" max-width: 100%; width: auto; height: auto;/>
+                            <br>
+                            Alla olevassa taulukossa on lueteltu joitakin ympyrän keskuskulmia $\alpha$. Piirrä vastaava taulukko vihkoosi ja täydennä siihen puuttuvat tiedot: keskuskulman suhde täyteen kulmaan (supistetussa murtolukumuodossa) sekä keskuskulmaa vastaava kaaren osuus ympyrän kehästä ja keskuskulmaa vastaavan sektorin osuus ympyrän pinta-alasta. Voit käyttää päättelyssä apuna esimerkiksi yllä olevaa kuvaa.
+                        </p>
+                        <div align="center">
+                            <table style="width = 90%">
+                                <tr>
+                                    <td style="vertical-align:middle"> $\alpha$ </td>
+                                    <td style="vertical-align:middle"> $\dfrac{\alpha}{360^\circ}$ </td>
+                                    <td> Kaaren osuus ympyrän kehästä</td>
+                                    <td> Sektorin osuus ympyrän pinta-alasta</td>
+                                </tr>
+                                <tr>
+                                    <td> $180^\circ$ </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $120^\circ$ </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $\phantom{1}90^\circ$ </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $\phantom{1}60^\circ$ </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $\phantom{1}45^\circ$ </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $\phantom{1}36^\circ$ </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $\phantom{1}30^\circ$ </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Tehtävässä 2.22 havaittiin, että ympyrän kaaren pituus ja sektorin pinta-ala voidaan päätellä laskemalla niitä vastaavan keskuskulman $\alpha$ suhde täyskulmaan eli
+                    $$\frac{\alpha}{360^\circ}$$
+                    ja ottamalla tämän suhteen mukainen osuus ympyrän kehän pituudesta ja ympyrän pinta-alasta. Tämä havainto johtaa seuraavaan teoreemaan, jonka yksityiskohtaisempi perustelu sivuutetaan.
+                </p>
+
+                <div class="theorem" id="KAAREN PITUUS JA SEKTORIN PINTA-ALA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kaaren pituus $b$ ja sektorin pinta-ala $A_S$ riippuvat keskuskulmasta $\alpha$ ja ympyrän säteestä $r$ seuraavasti:
+                        \begin{align*}
+                        b &= \dfrac{\alpha}{360^\circ} \cdot 2\pi r \\[1mm]
+                        A_S &= \dfrac{\alpha}{360^\circ} \cdot \pi r^2
+                        \end{align*}
+                    </p>
+                </div>
+            </div>
+            <div class="tehtavat">
+                <div class="tehtava" id="0f499459-1d9d-4bfd-8452-2f9dc5f7f516">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso23">
+                                KAARI JA SEKTORI
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso23" class="collapse">
+                        <p>
+                            Alla on kuvattu yleisurheilukentän juoksuratojen sisäpuolinen alue. Päädyt ovat puoliympyrän muotoiset. Kaarteen pituus on 115,61 metriä.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK38.png" max-width: 100%; width: auto; height: auto;/>
+                            <br>
+                            Tehtävänä on selvittää, miten suuri osuus tästä alueesta on varattava keihäänheiton alastuloalueelle. Suositusten mukaan keihäänheiton alastuloalueen pituus on kansainvälisissä kilpailuissa 105 metriä. Heittosektorin keskuskulman suuruus on $29^\circ$.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Laske juoksuratojen sisäpuolisen alueen pinta-ala.
+                                <br>
+                                Vinkki: Aloita selvittämällä päädyn puoliympyrän säde.
+                            </li>
+                            <li>
+                                Laske keihäänheiton heittosektorin pinta-ala. Kuinka monta prosenttia se on juoksuratojen sisäpuolisen alueen pinta-alasta?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso23_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso23_v" class="collapse">
+                            <ol class="a">
+                                <li> Pinta-ala on noin $10\,465 \text{ m}^2$. (Päädyn puoliympyrän säde on noin 36,80 m.) </li>
+                                <li> Heittosektorin pinta-ala on noin $2\,790 \text{ m}^2$. Se on noin 26,7 % juoksuratojen sisäpuolisen alueen pinta-alasta. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Segmentin pinta-ala saadaan laskettua sektorin pinta-alan sekä säteiden ja jänteen rajaaman niin sanotun <em>keskuskolmion</em> pinta-alan avulla:
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/tasoK39.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="9b757129-c1ca-4ccf-b227-f6f5b2cc64cb">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso24">
+                                SEGMENTIN PINTA-ALA
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso24" class="collapse">
+                        <p>
+                            Ympyrän säde on 6. Tehtävänä on määrittää $70^\circ$ keskuskulmaa vastaavan segmentin pinta-ala.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä tilanteesta mallikuva harpin ja kolmioviivaimen avulla.
+                            </li>
+                            <li>
+                                Laske $70^\circ$ keskuskulmaa vastaavan sektorin pinta-ala.
+                            </li>
+                            <li>
+                                Merkitse mallikuvaan kaikki keskuskolmion sivujen pituudet ja kulmat, jotka tiedät tai pystyt päättelemään vähällä vaivalla. Palauta mieleesi, millä eri tavoilla kolmion pinta-alan voi laskea.
+                               
+                            </li>
+                            <li>
+                                Laske keskuskolmion pinta-ala.
+                            </li>
+                            <li>
+                                Laske segmentin pinta-ala.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso24_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso24_v" class="collapse">
+                            <ol class="a">
+                                <li> </li>
+                                <li> Sektorin pinta-ala on $7\pi \approx 21{,}99$. </li>
+                                <li> </li>
+                                <li> Keskuskolmion pinta-ala on noin 16,91.</li>
+                                <li> Segmentin pinta-ala on noin 5,08.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="a3c471d2-2802-40b7-99da-2d90d207ba11">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso25">
+                                KAARI, SEKTORI JA SEGMENTTI
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso25" class="collapse">
+                        <p>
+                            New Yorkin ja Los Angelesin välinen etäisyys on linnuntietä noin 3 900 km. Tehtävänä on selvittää, kuinka paljon lyhyempi matka olisi, jos kaupungit yhdistettäisiin suoralla tunnelilla. Maapallon säde on noin 6 370 km.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä tilanteesta mallikuva (maapallon poikkileikkaus) harpin ja kolmioviivaimen avulla. Merkitse kuvaan kaikki tunnetut mitat.
+                            </li>
+                            <li>
+                                Laske maapallon ympärysmitta. Selvitä, mikä on New Yorkin ja Los Angelesin välistä etäisyyttä vastaavan keskuskulman suuruus.
+                            </li>
+                            <li>
+                                Laske suoran tunnelin pituus. Kuinka paljon matka lyhenisi linnuntiehen verrattuna?
+                               
+                            </li>
+                            <li>
+                                Kuinka syvällä maan pinnan alla tunneli kulkisi syvimmässä kohdassaan?
+                                <br>
+                                Vinkki: pääset alkuun jakamalla keskuskolmion kahdeksi suorakulmaiseksi kolmioksi ja hyödyntämällä sopivaa trigonometrista suhdetta.
+                            </li>
+                            <li>
+                                Mitä sanoisit ihmiselle, joka ehdottaa tällaisen tunnelin rakentamista?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso25_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso25_v" class="collapse">
+                            <ol class="a">
+                                <li> </li>
+                                <li> Maapallon ympärysmitta on noin 40 000 km ja kysytty keskuskulma noin $35{,}1^\circ$. </li>
+                                <li> Tunnelin pituus olisi noin 3 840 km, joten matka lyhenisi noin 1,5 %.</li>
+                                <li> Tunneli kulkisi syvimmillään noin 296 km maanpinnan alapuolella. </li>
+                                <li> </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Ympyrällä ja suoralla voi olla kaksi yhteistä pistettä, yksi yhteinen piste tai ei yhtään yhteistä pistettä. Jos yhteisiä pisteitä on kaksi, jakaa suora ympyrän kahteen segmenttiin. Jos yhteisiä pisteitä on vain yksi, suoraa kutsutaan ympyrän <em>tangentiksi</em>.
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/tasoK40.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: YMPYRÄN TANGENTTI</h3>
+                    <p>
+                        Suora, joka kohtaa ympyrän vain yhdessä pisteessä, on ympyrän <em>tangentti</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK41.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
+
+                <p>
+                    Seuraavassa teoreemassa osoitetaan, että ympyrän tangentti muodostaa aina suoran kulman sivuamispisteeseen piirretyn säteen kanssa. Lue teoreema ja sen perustelu huolellisesti. Mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+                </p>
+
+                <div class="theorem" id="YMPYRÄN TANGENTTI">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Ympyrän tangentti on kohtisuorassa sivuamispisteeseen piirrettyä sädettä vastaan.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK42.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Käytetään niin sanottua <em>epäsuoraa päättelyä:</em> Tutkitaan, mitä seuraa, jos teoreema ei pidäkään paikkaansa. Siis mitä seuraa siitä, jos ympyrän tangentti ei olekaan kohtisuorassa sivuamispisteeseen piirrettyä sädettä vastaan?
+                        </p>
+                        <p>
+                            Olkoon ympyrän keskipiste $O$ ja tangentin sivuamispiste $P$. Piirretään ympyrän keskipisteen kautta suora, joka on kohtisuorassa tangenttia vastaan:
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK43.png" max-width: 100%; width: auto; height: auto;/>
+                            <br>
+                            Merkitään tämän suoran ja tangentin leikkauspistettä kirjaimella $Q$. Koska nyt tutkitaan tilannetta, jossa tangentti ja säde $OP$ eivät ole toisiaan vastaan kohtisuorassa, voidaan olla varmoja, että $Q \neq P$.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK44.png" max-width: 100%; width: auto; height: auto;/>
+                            <br>
+                            Tutkitaan tarkemmin kolmiota $OPQ$. Suorat on piirretty niin, että kulma $Q$ on suora kulma. Silloin jana $OP$ on suorakulmaisen kolmion $OPQ$ hypotenuusa. Siten jana $OQ$ on lyhyempi kuin jana $OP$.
+                        </p>
+                        <p>
+                            Toisaalta piste $Q$ on ympyrän ulkopuolella (vrt. ylempi kuva), joten janan $OQ$ pituus on suurempi kuin ympyrän säde. Janan $OP$ pituus taas on sama kuin ympyrän säde. Siten jana $OQ$ on pitempi kuin jana $OP$.
+                        </p>
+                        <p>
+                            Näin on päädytty ristiriitaan: jana $OQ$ on yhtä aikaa lyhyempi ja pitempi kuin jana $OP$. Tähän päädyttiin tilanteessa, jossa teoreema ei pitänyt paikkaansa. Voidaan päätellä, että tällainen tilanne on mahdoton. Siis teoreeman täytyy olla tosi.
+                        </p>
+                    </div>
+                </div>
+
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan soveltamaan teoreeman 15 tulosta.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="64570bed-d43e-4227-80de-8f122a0f2656">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso26">
+                                TANGENTTI
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso26" class="collapse">
+                        <p>
+                            Maapallon kaarevan muodon vuoksi kirkkaallakaan säällä ei ole mahdollista nähdä miten tahansa kaukana olevia kohteita, sillä ne jäävät horisontin alapuolelle. Tässä tehtävässä arvioidaan, miten kauas Tallinnan televisiotornista on mahdollista nähdä kirkkaalla säällä.
+                        </p>
+                        <p>
+                            Tallinnan tv-tornin näköalatasanne ulottuu noin 194 metrin korkeudelle merenpinnasta. Maapallon säde on noin 6 370 km.
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK45.png" max-width: 100%; width: auto; height: auto;/>
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Yllä on näkyvissä osa maapallon poikkileikkauksesta. Piirrä vihkoosi vastaava mallikuva ja merkitse siihen kaikki tunnetut mitat.
+                            </li>
+                            <li>
+                                Selvitä keskuskulman suuruus sopivan trigonometrisen suhteen avulla.
+                            </li>
+                            <li>
+                                Laske keskuskulmaa vastaavan kaaren pituus (horisontin etäisyys maanpintaa pitkin). Miten kauas Tallinnan televisiotornista on mahdollista nähdä kirkkaalla säällä?
+                            </li>
+                            <li>
+                                Selitä omin sanoin, miten ympyrän tangetti liittyy tähän tehtävään.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso26_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso26_v" class="collapse">
+                            <ol class="a">
+                                <li> </li>
+                                <li> Keskuskulma on noin $0{,}447^\circ$. </li>
+                                <li> Noin 50 km päähän.</li>
+                                <li> </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="354c2043-c48f-4319-80f9-f95efdacd963">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso29">
+                                TANGENTTI
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso29" class="collapse">
+                        <p>
+                            Kansainvälinen avaruusasema ISS kiertää maapalloa noin 400 km korkeudessa. Tehtävänä on selvittää, missä kulmassa maapallo näkyy avaruusasemalta. Pitää siis määrittää sen kulman suuruus, jonka kärki on avaruusasemalla ja jonka kyljet ovat maapallon poikkileikkausympyrän tangetteja:
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK49.png" max-width: 100%; width: auto; height: auto;/>
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä vihkoosi tilanteesta mallikuva kuten yllä. Täydennä kuvaa seuraavasti:
+                                <ul>
+                                    <li> piirrä jana avaruusasemasta maapallon keskipisteeseen </li>
+                                    <li> piirrä janat maapallon keskipisteestä kummankin tangentin sivuamispisteeseen.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Merkitse mallikuvaan kaikki tunnetut tai pääteltävissä olevat etäisyydet ja kulmat. Maapallon säde on noin 6370 km.
+                               
+                            </li>
+                            <li>
+                                Missä kulmassa maapallo näkyy avaruusasemalta?
+                                <br>
+                                Vinkki: selvitä ensin kysytyn kulman puolikas sopivan trigonometrisen suhteen avulla.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso29_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso29_v" class="collapse">
+                            <ol class="a">
+                                <li> </li>
+                                <li> </li>
+                                <li> Noin $140^\circ$ kulmassa.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="5e120ccf-f1b0-4e92-83d8-6022abcd3f0e">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso30">
+                                TANGENTTI
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso30" class="collapse">
+                        <p>
+                            Jatkoa edelliseen tehtävään. Kansainvälinen avaruusasema ISS kiertää maapalloa noin 400 km korkeudessa. Edellisessä tehtävässä selvitit, missä kulmassa maapallo näkyy avaruusasemalta. Nyt tehtävänä on selvittää, miten kaukana toisistaan kaksi kohdetta maan pinnalla voivat olla, jos ne on mahdollista nähdä avaruusasemalta yhtä aikaa. Pitää siis määrittää tangenttien sivuamispisteiden määräämän kaaren pituus:
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK49.png" max-width: 100%; width: auto; height: auto;/>
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Hyödynnä edellisessä tehtävässä piirtämääsi mallikuvaa ja päättele kaarta vastaavan keskuskulman suuruus.
+                            </li>
+                            <li>
+                                Miten kaukana toisistaan kaksi kohdetta maan pinnalla voivat olla, jos ne on mahdollista nähdä avaruusasemalta yhtä aikaa?
+                                <br>
+                                Onko avaruusasemalta mahdollista nähdä koko Afrikka yhdessä silmänräpäyksessä? Afrikan läntisimmästä kohdasta Senegalissa on noin 7400 km sen itäisimpään kohtaan Somaliassa.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso30_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso30_v" class="collapse">
+                            <ol class="a">
+                                <li> Keskuskulma on noin $40^\circ$. </li>
+                                <li> Avaruusasemalta on mahdollista nähdä yhtä aikaa kohteet, joiden etäisyys on enintään noin 4 400 km. Koko Afrikkaa ei siis ole mahdollista nähdä yhdessä silmänräpäyksessä.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisissä tehtävissä tutkittiin ympyrän ulkopuolella sijaitsevasta pisteestä ympyrälle piirrettyjen tangenttien välistä kulmaa. Tätä kulmaa on tapana kutsua <em>tangenttikulmaksi</em>.
+                </p>
+                <p>
+                    Tangettikulman tarkasssa määritelmässä käytetään <em>kulman aukeaman</em> käsitettä. Kulman aukeama tarkoittaa kulman rajaamaa tason osaa, josta alla olevassa kuvassa on näkyvissä pieni pala:
+                    <br>
+                    <img src="/kurssit/maa3/kuvat/tasoK64.png" max-width: 100%; width: auto; height: auto;/>
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: TANGENTTIKULMA</h3>
+                    <p>
+                        Ympyrän kahden tangentin leikkauspisteeseen muodostuva kulma, jonka aukeamaan ympyrä sisältyy, on <em>tangenttikulma</em>.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK62.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                </div>
+
+                <p>
+                    Seuraavassa tehtävässä tutkitaan, miten tangenttikulma ja sitä vastaava keskuskulma liittyvät toisiinsa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="7b2c6ea0-977a-41c5-85c3-71b0221b5dd9">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso30b">
+                                TANGENTTIKULMA
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso30b" class="collapse">
+                        <p>
+                            Alla on näkyvissä tangenttikulma ja sitä vastaava keskuskulma. Mitä voit päätellä niiden summasta $\alpha + \beta$?
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK63.png" max-width: 100%; width: auto; height: auto;/>
+                            <br>
+                            Vinkki: teoreemat 11 &amp; 15.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Tehtävän 2.29 tuloksena saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="TANGENTTIKULMA JA KESKUSKULMA">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Tangenttikulman ja sitä vastaavan keskuskulman summa on oikokulma.
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: yllä olevassa tehtävässä.
+                        </p>
+                    </div>
+                </div>
+
+               
+        </div>
+    </section>
+
+        <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#Koordinaatisto">
+                    Koordinaatisto
+                </a>
+            </h1>
+        </header>
+        <div id="Koordinaatisto" class="collapse">
+         
+             <div class="teoria">
+                <p>
+                    Geometrisia kuvioita voidaan tarkastella myös koordinaatistossa. Mab2–kurssin alussa on jo puhuttu $xy$-koordinaatistosta. Voit halutessasi kerrata sieltä, miten esimerkiksi pisteitä merkitään koordinaatistoon. Aloitetaan tutkimalla janaa xy-koordinaatistossa.  
+                </p>
+            
+            </div>
+            
+            <div class="tehtavat">
+
+                <div class="tehtava" id="baee4ef0-bdcc-475a-89d8-169f10dbde9c">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso01r">
+                                JANAN PITUUS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso01r" class="collapse">
+                     
+                        <p> Tehtävässä johdetaan kaava janan pituudelle. Tavoitteena on laskea pisteiden $A=(1,3)$ ja $B=(4,-1)$ välisen janan pituus. Avaa Geogebra. Jos et ole ladannut sitä vielä omalle koneellesi, tee se osoitteessa geogebra.org. Suositeltava versio on Classic 5.
+                        <ol class="a">
+                            <li>
+                               Piirrä Geogebralla pisteet $A=(1,3)$ ja $B=(4,-1)$. Yhdistä nämä janalla. 
+                            </li>
+                            <li>
+                              Lisää kuvaan piste $C=(1,-1)$ ja täydennä kuvaan kolmio $ABC$. Kolmio on suorakulmainen. Varmista tämä laskemalla Geogebralla kolmion suurimman kulman suuruus.
+                            </li>
+                             <li>
+                              Arvioi kuvan perusteella kolmion korkeus eli janan $AC$ pituus. Miten saisit laskettua janan pituuden tarkan arvon pisteiden $A$ ja $C$  koordinaattien avulla? 
+                            </li>
+                             <li>
+                              Arvioi kuvan perusteella kolmion kanta eli janan $BC$ pituus. Miten saisit laskettua janan pituuden tarkan arvon pisteiden $B$ ja $C$  koordinaattien avulla? 
+                            </li>
+                             <li>
+                              Tiedät nyt suorakulmaisen kolmion kateettien pituudet. Laske niiden avulla hypotenuusan eli janan $AB$ pituus. 
+                            </li>
+                            
+                        </ol>
+                        </p>
+                <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso03p_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso03p_v" class="collapse">
+                            <ol class="a">
+                                <li> \,  </li>
+                                <li> \, </li>
+                                <li> Kolmion korkeus on 4. Koska jana on $y$-akselin suuntainen, saadaan sen pituus laskemalla pisteiden $y$-koordinaattien erotus, eli $|AC|=3-(-1)=4.$</li>
+                                <li> Kolmion kanta on 3. Koska jana on $x$-akselin suuntainen, saadaan sen pituus laskemalla pisteiden $x$-koordinaattien erotus, eli $|BC|=4-1=3.$</li>
+                                <li> $|AB|=\sqrt{3^2+4^2}=\sqrt{25}=5$.</li>
+                               
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           <p>
+               Edellisessä tehtävässä huomattiin, että koordinaatistossa mikä tahansa jana voidaan täydentää suorakulmaiseksi kolmioksi ja janan pituus saadaan Pythagoraan lauseella. Tuloksesta saadaan teoreema.
+            </p>
+
+             <div class="theorem" id="JANAN PITUUS">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Olkoon janan päätepisteet ovat $A=(x_1,y_1)$ ja $B=(x_2,y_2)$. Janan pituus on tällöin $d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}.$
+                        
+                
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: edellisessä tehtävässä.
+                        </p>
+                        
+                    </div>
+                </div>
+            
+<div class="tehtavat">
+
+                <div class="tehtava" id="1e772ac8-44dd-4b27-9d44-b9accc311f52">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso01q">
+                               JANAN PITUUS
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso01q" class="collapse">
+                     
+                        <p>  
+                           Laske janan $AB$ pituus. Tarkista Geogebralla.
+                        <ol class="a">
+                            <li>
+                               $A=(1,3) $ ja $B=(4,5)$
+                            </li>
+                            <li>
+                              $A=(\frac{1}{2},-2)$ ja $B=(2,-\frac{3}{4})$
+                            </li>
+                           
+                          
+                            
+                        </ol>
+                        </p>
+                
+                    </div>
+                </div>
+            </div>
+
+
+<div class="tehtavat">
+
+                <div class="tehtava" id="5b853a34-1e1c-4881-b5a6-2499a2fa8852">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso01y">
+                                JANAN KESKIPISTE
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso01y" class="collapse">
+                     
+                        <p>  
+                            Tehtävän tavoitteena on johtaa kaava janan keskipisteen koordinaateille. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                               Piirrä Geogebralla suorakulmainen kolmio, jonka kärjet ovat pisteissä $A=(1,2), B=(5,4)$ ja $C=(5,2)$. 
+                            </li>
+                            <li>
+                             Määritä Geogebran keskipiste -työkalulla (löytyy piste-työkalun alta) janojen $AB, AC$ ja $BC$ keskipisteet.
+                            </li>
+                             <li>
+                             Tutki yksitellen edellisen kohdan keskipisteen koordinaatteja sekä janan päätepisteiden koordinaatteja. Keksitkö säännön, miten janan keskipisteen koordinaatit saa selville janan päätepisteiden koordinaattien avulla?
+                            </li>
+                          
+                            
+                        </ol>
+                        
+               
+                    </div>
+                </div>
+            </div>
+<p>
+   Edellisen tehtävän perusteella saadaan tulos janan keskipisteelle. 
+</p>    
+
+  <div class="theorem" id="JANAN KESKIPISTE">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Olkoon janan päätepisteet ovat $A=(x_1,y_1)$ ja $B=(x_2,y_2)$. Janan keskipisteen koordinaatit ovat tällöin janan päätepisteiden koordinaattien keskiarvot eli keskipiste $M$ on $M=\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)$.
+                        
+                
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: edellisessä tehtävässä.
+                        </p>
+                        
+                    </div>
+                </div>
+<p>
+    Varmista vielä, että löydät janaan liittyvät kaavat MAOL-taulukkokirjasta ja ymmärrät, mitä mikäkin merkintä kaavassa tarkoittaa.
+    <br>
+    Tutkitaan seuraavaksi monikulmion pinta-alan laskemista koordinaatistossa. Tehtävässä tarkastellaan kolmiota, mutta samaa ajatusta voi hyödyntää muihinkin monikulmioihin.
+</p>
+<div class="tehtavat">
+
+                <div class="tehtava" id="885ccded-ae13-46eb-b51e-5277d8860bb2">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso01t">
+                                MONIKULMION PINTA-ALA KOORDINAATISTOSSA
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso01t" class="collapse">
+                     
+                        <p>  
+                            Tutkitaan kolmiota, jonka kärkipisteet ovat $A=(-3,1), B=(3,3)$ ja $C=(4,-1)$. 
+                        <ol class="a">
+                            <li>
+                                Piirrä kyseinen kolmio Geogebran monikulmio -työkalulla.
+                            </li>
+                            <li>Geogegran algebraikkunaan tulee suoraan näkyviin kolmion pinta-alan likiarvo. Mikä se on?
+                            </li>
+                             <li>
+                              Luvussa 1 opittiin, että kolmion pinta-alan voi laskea, kun tunnetaan sen kanta ja korkeus. Nyt kuitenkin korkeusjanan pituuden laskeminen on työlästä, koska korkeusjanan toista päätepistettä ei tiedetä. Hyödynnetään siksi koordinaatiston tarjoamaa apukeinoa. 
+                                 <br>
+                                 Piirrä kolmion ABC ympärille suorakulmio niin, että kolmion kärkipiste $C$ on myös suorakulmion kärkipiste ja kolmion kaksi muuta kärkeä koskettavat jotakin suorakulmion sivua. Mitkä ovat suorakulmion kärkipisteiden koordinaatit? Entä suorakulmion sivujen pituudet? Laske suorakulmion pinta-ala.
+                            </li>
+                          <li>
+                              Suorakulmion sisällä on nyt kolme suorakulmaista kolmiota ja lisäksi kolmio $ABC$. Laske suorakulmaisten kolmioiden pinta-alat ja näiiden avulla kolmion $ABC$ pinta-ala.
+                            </li>
+                            <li>
+                                Varmista, että edellisen kohdan vastaus on likimäärin sama kuin Geogebran antama pinta-ala.
+                            </li>
+                        </ol>
+                        </p>
+                   </div>
+                </div>
+            </div>
+                    
+                    <p>
+                        Tutkitaan lopuksi ympyrää koordinaatistossa. Voit tarvittaessa kerrata ympyrään liittyviä kaavoja ylempää luvusta 2.
+                    </p>
+                    <div class="tehtavat">
+
+                <div class="tehtava" id="db2e9ceb-a802-4fd4-8cdb-2c71192d9467">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso01v">
+                                YMPYRÄ KOORDINAATISTOSSA
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="taso01v" class="collapse">
+                     
+                        <p>  
+                            Tutkitaan ympyrää, jonka halkaisijan päätepisteet ovat $A=(-3,4)$ ja $B=(7,-2)$. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Laske ympyrän keskipisteen koordinaatit sekä ympyrän säde. Laske ympyrän pinta-ala.
+                            </li>
+                            <li>
+                                Piirrä pisteet $A$ ja $B$ Geogebralla ja määritä keskpiste -työkalulla ympyrän keskipiste. Piirrä Geogebralla kuvaan ympyrä ja säde. Algebraikkunasta näet säteen likiarvon. Varmista, että laskemasi ympyrän säde on oikein. 
+                            </li>
+                             <li>
+                             Piirrä ympyrälle tangentti pisteeseen $B=(7,-2)$. Tangentti kulkee myös pisteen $D=(10,3)$ kautta. Täydennä kuvaan kolmio $BCD$. Laske kolmion $BCD$ sivujen pituudet, kulmien suuruudet ja kolmion pinta-ala. Tarkista lopuksi Geogebran avulla, että tuloksesi ovat oikein.
+                            </li>
+                          
+                        </ol>
+                         <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#taso30_u">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="taso30_u" class="collapse">
+                            <ol class="a">
+                                <li> a) Janan keskipisteen laskukaavalla saadaan ympyrän keskipisteeksi $(2,1)$. Janan pituuden laskukaavalla saadaan säteen pituudeksi $\sqrt{34}\approx 5{,83}$. Kolmion pinta-ala on $43\pi\approx 107$.</li>
+                                <li> c) $|BC|=\sqrt{34}\approx5{,}83$, $|CD|=\sqrt{68}\approx 8{,}25$,  $|BD|=\sqrt{34}\approx 5{,}83$. Tangentti on kohtisuorassa sivuamispisteeseen piirretyn säteen kanssa, joten kulma $\angle B=90^{\circ}$. Koska kolmio on tasakylkinen, ovat kaksi muuta kulmaa keskenään yhtä suuria. Kolmion kulmien summa on $180$ astetta, joten kolmion kaksi muuta kulmaa ovat molemmat suuruudeltaan $45^{\circ}$.</li>
+                            </ol>
+                        </div>
+                        
+                    
+                    
+                    </div>
+                </div>
+            </div>
+
+     </div>
+            </section>
+        
+        
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku2-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku2-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="6249be17-2bde-4d85-95ec-85e4a21e49e7">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS201">
+                            MONIKULMIOT
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS201">
+                    <p>
+                        Laske alla olevan monikulmion piiri.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK59.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Vinkki: Mieti, miten voit muokata monikulmiota yksinkertaisemmaksi niin, että sen piiri kuitenkin säilyy samana.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS201_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS201_v" class="collapse">
+                        <p>
+                            Piiri on 52,0 cm.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="6f1e6923-6e69-4030-bbf6-1f86bcf36e6e">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS202">
+                            MONIKULMIOT
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS202">
+                    <p>
+                        Laske alla olevan monikulmion pinta-ala.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK60.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS202_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS202_v" class="collapse">
+                        <p>
+                            Pinta-ala on 150.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="49a56f53-3a09-48d0-ae12-5133f82fdc1e">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS202b">
+                            MONIKULMIOT
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS202b">
+                    <p>
+                        Janat $BC$, $FE$ ja $AD$ ovat kaikki keskenään yhdensuuntaisia eli $BC \parallel FE \parallel AD$.  Laske monikulmion pinta-ala.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK61.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS202b_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS202b_v" class="collapse">
+                        <p>
+                            Pinta-ala on 576.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="d5dcc036-0d5a-4d3d-bda0-0c2ec5d58cbd">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS203">
+                            MONIKULMIOT
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS203">
+                    <p>
+                        Uuteen lounaskahvilaan suunnitellaan sisustusta. Aikomuksena on hankkia neliönmuotoisia pöytiä, joihin kuhunkin mahtuu neljä henkilöä syömään. Lounaskahvilan tarjottimet ovat muodoltaan suorakulmioita, joiden sivut ovat 30 cm ja 40 cm. Pöydät halutaan mitoittaa niin, että niille mahtuu neljä tarjotinta kokonaisuudessaan.
+                    <ol class="a">
+                        <li> Kuinka pieniä pöydät voivat pienimmillään olla? Anna vastauksena pöytäneliön sivun pituus senttimetrin tarkkuudella. </li>
+                        <li> Kuinka monta prosenttia tällaisen pöydän pinta-alasta jää tyhjäksi, jos pöydän ääressä ruokailee neljä henkeä, joilla jokaisella on oma tarjotin?</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS203_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS203_v" class="collapse">
+                        <ol class="a">
+                            <li> 70 cm </li>
+                            <li> Noin 2,0 %.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="tehtava" id="103596bd-aa10-48fe-9c80-65221a0e7924">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS205">
+                            MONIKULMIOT
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS205">
+                    <p>
+                        Suunnitteilla olevan harjakattoisen pihavaraston leveys on 2,0 m ja pituus 2,5 m. Sen pääty muodostuu suorakulmiosta, jonka leveys on 2,0 m ja korkeus 2,1 m, sekä tasakylkisestä kolmiosta, jonka korkeus on 0,7 m. Pihavaraston katon lappeiden tulee ulottua kauttaaltaan 20 cm seinien yli. Kuinka paljon peltiä täytyy varata katon rakentamiseen?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS205_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS205_v" class="collapse">
+                        <p>
+                            Vähintään $8{,}24 \text{ m}^2$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="ee4c15f1-7b68-4faa-84a6-78ceea0031a2">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS206">
+                            MONIKULMIOT
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS206">
+                    <p>
+                        Kuvassa näkyvä nelikulmio $ABCD$ on neliö, ja kolmio $ABE$ on tasasivuinen. Tehtävänä on selvittää kulman $\alpha$ suuruus.
+                    <ol class="a">
+                        <li> Tunnista kuvasta kaikki janat, jotka ovat yhtä pitkiä kuin neliön sivu. Minkä kulmien suuruudet saat pääteltyä tämän tiedon avulla? </li>
+                        <li> Päättele kulman $\alpha$ suuruus. </li>
+                    </ol>
+                    <img src="/kurssit/maa3/kuvat/tasoK65.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS206_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS206_v" class="collapse">
+                        <ol class="a">
+                            <li>  </li>
+                            <li> $\alpha = 150^\circ$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+           
+
+            <div class="tehtava" id="9d2907de-980e-4f0d-9536-36144bbedd3b">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS222">
+                            MONIKULMIOT
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS222">
+                    <p> Tiedetään, että säännöllisen kuusikulmion piiri on 24. Selvitä
+                    <ol class="a">
+                        <li> kuusikulmion kulman suuruus </li>
+                        <li> kuusikulmion keskipisteen etäisyys kuusikulmion kärjestä </li>
+                        <li> kuusikulmion pinta-ala.</li>
+                    </ol>
+                    
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS222_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS222_v" class="collapse">
+                        <ol class="a">
+                            <li> $120^\circ$ </li>
+                            <li> $4$ </li>
+                            <li> $24\sqrt{3}$</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="266a96d7-a849-41c8-81f8-49774a8ff76c">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS223">
+                            MONIKULMIOT
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS223">
+                    <p>
+                        <em>Monikulmion sisään piirretty ympyrä</em> tarkoittaa ympyrää, joka sivuaa monikulmion jokaista sivua. <em>Monikulmion ympäri piirretty ympyrä</em> tarkoittaa ympyrää, joka kulkee monikulmion jokaisen kärjen kautta.
+                    </p>
+                    <p>
+                        Neliön sivun pituus on 8. Tehtävänä on selvittää sen sisään ja ympäri piirrettyjen ympyröiden säteet.
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva. </li>
+                        <li> Mikä on neliön sisään piirretyn ympyrän säde? </li>
+                        <li> Mikä on neliön ympäri piirretyn ympyrän säde? </li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS223_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS223_v" class="collapse">
+                        <ol class="a">
+                            <li>  </li>
+                            <li> Neliön sisään piirretyn ympyrän säde on $4$. </li>
+                            <li> Neliön ympäri piirretyn ympyrän säde on $4\sqrt{2}$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+           
+
+            <div class="tehtava" id="358ed970-d1cc-4e9e-a4b7-b7eed6cfc023">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS208">
+                            YHDENMUOTOISUUS
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS208">
+                    <p>
+                        Kaikkien A-sarjan paperiarkkien A0, A1, A2, A3, A4 jne. muoto on valittu niin, että se toteuttaa seuraavan ehdon: Jos valittu arkki (esimerkiksi A3) puolitetaan keskeltä lyhyemmän sivun suuntaisesti, niin näin saatu pienempi arkki (esimerkin tapauksessa A4) on yhdenmuotoinen alkuperäisen arkin kanssa.
+                    <ol class="a">
+                        <li> A3-arkin lyhyemmän sivun pituus on 297 mm. Kuinka pitkä arkin pitempi sivu on? </li>
+                        <li> A3-arkki pienennetään kopiokoneella A4-kokoon. Kuinka monta prosenttia arkille kirjoitetun tekstin kirjainten korkeus pienenee? </li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS208_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS208_v" class="collapse">
+                        <ol class="a">
+                            <li> 420 mm </li>
+                            <li> Noin 29 %. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="bc81ae58-eb87-4e81-8c76-56b61c7df968">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS209">
+                            YHDENMUOTOISUUS
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS209">
+                    <p>
+                        Suorakulmion muotoisen puisen levyn sivut ovat 12 cm ja 40 cm. Levy halutaan sahata lyhyemmän sivun suuntaisesti kahteen keskenään yhdenmuotoiseen osaan. Tehtävänä on selvittää, miten sahaaminen pitää tehdä.
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva. Mieti, millä eri tavoin yhdenmuotoiset osat voivat sijaita levyssä. Piirrä kaikista oleellisesti erilaisista vaihtoehdoista oma mallikuvansa. </li>
+                        <li> Millä tavalla sahaaminen pitää suorittaa? Anna vastauksena syntyvien yhdenmuotoisten palojen mitat.  </li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS209_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS209_v" class="collapse">
+                        <ol class="a">
+                            <li>  </li>
+                            <li> Vaihtoehto 1: molempien palojen sivujen pituudet 12 cm ja 20 cm.
+                                <br>
+                                Vaihtoehto 2: isomman palan sivujen pituudet 36 cm ja 12 cm, pienemmän palan sivujen pituudet 12 cm ja 4 cm. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b64bc17d-cb2f-49fd-8b47-000ef97a53b3">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS210">
+                            YHDENMUOTOISUUS
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS210">
+                    <p>
+                        Miten kuvion pinta-ala muuttuu, jos kuvion mitat
+                    <ol class="a">
+                        <li> suurennetaan viisinkertaiseksi </li>
+                        <li> pienennetään puoleen? </li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS210_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS210_v" class="collapse">
+                        <ol class="a">
+                            <li> Kasvaa 25-kertaiseksi. </li>
+                            <li> Pienenee neljäsosaan. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="8da4004d-57a9-43ac-bc50-17400b2a8648">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS211">
+                            YHDENMUOTOISUUS
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS211">
+                    <p>
+                        Miten kuvion mittoja tulee muuttaa, jotta sen pinta-ala
+                    <ol class="a">
+                        <li> kasvaisi kaksinkertaiseksi </li>
+                        <li> pienenisi sadasosaan? </li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS211_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS211_v" class="collapse">
+                        <ol class="a">
+                            <li> Kasvattaa kertoimella $\sqrt{2}$. </li>
+                            <li> Pienentää kymmenesosaan alkuperäisestä. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="a2f067eb-f3f1-4304-97f1-7ee8e3c56fe0">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS212">
+                            YHDENMUOTOISUUS
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS212">
+                    <p>
+                        <img src="/kurssit/maa3/kuvat/tasoK66.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <ol class="a">
+                        <li> Mikä on pienten valkoisten ympyröiden yhteenlasketun pinta-alan suhde ison ympyrän pinta-alaan? </li>
+                        <li> Miten voit ratkaista tehtävän käyttämättä ympyrän pinta-alan kaavaa? </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS212_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS212_v" class="collapse">
+                        <ol class="a">
+                            <li> Suhde on $\frac{7}{9}$. </li>
+                            <li> Selvitä pienen ja ison ympyrän yhdenmuotoisuussuhde esimerkiksi niiden säteitä tai halkaisijoita vertaamalla. Laske yhdenmuotoisuuden avulla pienen ja ison ympyrän pinta-alojen suhde. Muodosta kysytty suhde tämän avulla. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b07670fa-8a26-4181-9308-e3c9e7e2828b">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS213">
+                            YHDENMUOTOISUUS
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS213">
+                    <p>
+                        Kolmion muotoisen metsäpalstan $ABC$ pinta-ala on 231 hehtaaria. Perinnönjaon yhteydessä palsta päätetään jakaa kahdella sivun $BC$ suuntaisella linjalla kolmeen osaan niin, että linjojen väliin jäävän puolisuunnikkaan muotoisen osan pinta-ala on $\frac{3}{7}$ alkuperäisen metsäpalstan pinta-alasta ja kaksi muuta osaa ovat keskenään yhtä suuria. Määritä linjojen aloituskohdat palstan sivulla $AB$, jonka pituus on 1,45 km.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK67.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS213_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS213_v" class="collapse">
+                        <p>
+                            Ensimmäisen linjan aloituspiste sivulla $AB$ noin 775 metriä pisteestä $A$. Toisen linjan aloituspiste sivulla $AB$ noin 1225 metriä pisteestä $A$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="70a4e9d9-77d5-4393-9347-1ce6b04d3047">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS214">
+                            YHDENMUOTOISUUS
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS214">
+                    <p>
+                        Jo antiikin ajan kreikkalaiset pitivät esteettisesti miellyttävänä suorakulmiota, jonka muoto toteuttaa seuraavan ehdon: Jos suorakulmion päädystä erotetaan neliö, jonka sivu on yhtä pitkä kuin suorakulmion lyhyempi sivu, niin jäljelle jäävä suorakulmio on yhdenmuotoinen alkuperäisen suorakulmion kanssa. Tällaista suorakulmiota sanotaan <em>kultaiseksi suorakulmioksi</em>. Yksi esimerkki on näkyvissä alla.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK68.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        Tehtävänä on selvittää kultaisen suorakulmion lyhyemmän sivun pituus, jos sen pitemmän sivun pituus on 1.
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva ja merkitse siihen tunnetut mitat. Piirrä kuvaan näkyviin myös neliö, josta ehdossa puhutaan. Merkitse sen sivun pituutta jollakin kirjaimella. </li>
+                        <li> Muodosta lauseke kuvassa näkyvän pienen suorakulmion lyhyemmän sivun pituudelle. </li>
+                        <li> Muodosta yhdenmuotoisuuden avulla verrantoyhtälö. Mikä on alkuperäisen kultaisen suorakulmion lyhyemmän sivun pituus?</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS214_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS214_v" class="collapse">
+                        <ol class="a">
+                            <li>  </li>
+                            <li> Jos neliön sivun pituus on esimerkiksi $x$, niin pienen suorakulmion lyhyemmän sivun pituus on $1-x$. </li>
+                            <li> $\dfrac{\sqrt{5} - 1}{2}$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="19c94cfd-deb9-4696-89db-8f9f40960bad">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS215">
+                            YMPYRÄ
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS215">
+                    <p>
+                        Kahden euron kolikon halkaisija on 25,75 mm. Neljä tällaista kahden euron kolikkoa on asetettu pöydälle. Ne sivuavat toisiaan niin, että kolikkojen keskipisteet muodostavat neliön. Kuinka suuri tyhjä tila jää kolikkojen keskelle?
+                        <br>
+                        Vinkki: Piirrä tilanteesta mallikuva ja yhdistä kolikkojen keskipisteet toisiinsa niin, että muodostuu neliö. Tarkastele tätä neliötä.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS215_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS215_v" class="collapse">
+                        <p>
+                            Noin $142{,}3 \text{ mm}^2$ eli noin $1{,}423 \text{ cm}^2$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="7b984f07-7f8e-4bc1-8b82-0e3dade5286f">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS216">
+                            YMPYRÄ
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS216">
+                    <p>
+                        Alla olevien kuvien kaaret on piirretty neliön kärki keskipisteenä ja neliön sivu $a$ säteenä. Ilmaise väritetyn alueen pinta-ala neliön sivun $a$ lausekkeena ja määritä pinta-alan suhde neliön pinta-alaan.
+                    </p>
+                    <ol class="a">
+                        <li> <img src="/kurssit/maa3/kuvat/tasoK69.png" max-width: 100%; width: auto; height: auto;/> </li>
+                        <li> <img src="/kurssit/maa3/kuvat/tasoK70.png" max-width: 100%; width: auto; height: auto;/> </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS216_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS216_v" class="collapse">
+                        <ol class="a">
+                            <li> Suhde on $1 - \dfrac{\pi}{4}$. </li>
+                            <li> Suhde on $\dfrac{\pi}{2} - 1$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="09b19762-32a5-432e-9520-2ea4810f0e98">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS217">
+                            YMPYRÄ
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS217">
+                    <p>
+                        Koira kytketään pihatalkoiden ajaksi 5 metrin pituisella juoksunarulla vajan seinään metrin etäisyydelle vajan nurkasta (kuvassa pisteellä merkittyyn kohtaan). Tehtävänä on selvittää, miten suurella alueella koira voi talkoiden aikana jaloitella.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK71.png" max-width: 100%; width: auto; height: auto;/>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva. Hahmottele, millaisista erilaisista ympyrän osista koiran mahdollinen jaloittelualue muodostuu. </li>
+                        <li> Miten suurella alueella koira voi talkoiden aikana jaloitella? </li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS217_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS217_v" class="collapse">
+                        <ol class="a">
+                            <li>  </li>
+                            <li> Noin 58 neliömetrin alueella. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b7a4d0ab-e193-41aa-8b2a-afcb6b76a922">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS218">
+                            YMPYRÄ
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS218">
+                    <p>
+                        Ympyrän säde on 6,3 cm. Ympyrään on piirretty segmentti, jonka rajaavat ympyrän 15,2 cm pitkä kaari ja kaaren päätepisteitä yhdistävä jänne. Tehtävänä on laskea segmentin pinta-ala.
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat. </li>
+                        <li> Mikä on ympyrän kehän pituus? </li>
+                        <li> Mitä tietoja tarvitset segmentin pinta-alan laskemiseen? Mitä tietoja pystyt päättelemään tuntemiesi mittojen avulla?</li>
+                        <li> Mikä on segmentin pinta-ala? Anna vastaus kahden merkitsevän numeron tarkkuudella.</li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS218_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS218_v" class="collapse">
+                        <ol class="a">
+                            <li>  </li>
+                            <li> Ympyrän kehän pituus on noin 39,6 cm. </li>
+                            <li>  </li>
+                            <li> Segmentin pinta-ala on noin $35 \text{ cm}^2$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="2069a616-5f39-4467-b182-1858a458c5a3">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS219">
+                            YMPYRÄ
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS219">
+                    <p>
+                        Suunnilleen ympyränmuotoisen lammen halkaisija on noin 50 metriä. Tehtävänä on selvittää, kuinka pitkä matka pisteestä $A$ on pisteeseen $B$ lyhintä mahdollista reittiä pitkin.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/tasoK72.png" max-width: 100%; width: auto; height: auto;/>
+                    <ol class="a">
+                        <li> Keksi ainakin kaksi mahdollista reittiä ja piirrä niistä mallikuvat. Kumpi reiteistä on lyhyempi? Miksi?  </li>
+                        <li> Piirrä mallikuva lyhyimmästä mahdollisesta reitistä ja täydennä kuvaa niin, että voit hyödyntää kolmioiden geometriaa. </li>
+                        <li> Kuinka pitkä matka pisteestä $A$ on pisteeseen $B$ lyhintä mahdollista reittiä pitkin? </li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS219_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS219_v" class="collapse">
+                        <ol class="a">
+                            <li>  </li>
+                            <li>  </li>
+                            <li> Noin 109 metriä (60 m + 49 m). </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="819e2fd7-fad9-4f02-8548-2481031aa1a0">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS221">
+                            YMPYRÄ
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS221">
+                    <p>
+                        Pyöreään torniin, jonka halkaisija on 6,5 metriä, on maalattu 8,5 metriä leveä taideteos. Tehtävänä on selvittää, miltä etäisyydeltä teoksen voi nähdä koko leveydeltään.
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva ylhäältäpäin katsottuna. Merkitse siihen kaikki tunnetut mitat. </li>
+                        <li> Täydennä kuvaa niin, että voit hyödyntää ratkaisussa kolmioiden geometriaa. </li>
+                        <li> Miltä etäisyydeltä teoksen voi nähdä koko leveydeltään? </li>
+                    </ol>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS221_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS221_v" class="collapse">
+                        <ol class="a">
+                            <li>  </li>
+                            <li>  </li>
+                            <li> Noin 18,5 metrin etäisyydeltä. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="67ceb611-ca07-4c69-9d25-51a58ba40b8f">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS220">
+                            YMPYRÄ
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS220">
+                    <p>
+                        Lentokone on Kajaanin yläpuolella 1,9 km korkeudella. Voidaanko lentokoneesta kirkkaalla ilmalla nähdä Pohjanlahti? Pohjanlahden lyhin etäisyys Kajaanista on noin 130 km. (Maapallon säde on noin 6370 km.)
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS220_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS220_v" class="collapse">
+                        <p>
+                            Tämän yksinkertaistetun mallin mukaan lentokoneesta voidaan nähdä noin 160 km päähän (kahden merkitsevän numeron tarkkuudella). Pohjanlahti on siis mahdollista nähdä.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="38bc0b94-8464-471d-8811-5ce7d802db86">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS225">
+                            YMPYRÄ
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS225">
+                    <p>
+                        Saat kaveriltasi valkoisen paperin, johon on piirretty yksi ympyrä eikä mitään muuta. Selitä, miten voit pelkän kolmioviivaimen, kynän ja matematiikan avulla määrittää ympyrän
+                    <ol class="a">
+                        <li> halkaisijan </li>
+                        <li> keskipisteen. </li>
+                    </ol>
+                    <img src="/kurssit/maa3/kuvat/tasoK73.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS225_v">
+                            Vinkki
+                        </a>
+                    </h2>
+                    <div id="tasoS225_v" class="collapse">
+                        <ol class="a">
+                            <li> Teoreema 18. </li>
+                            <li>  </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+           
+
+            
+
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku2-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku2-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+           
+
+
+            <div class="tehtava" id="cdbc2781-319a-4c75-8cb1-d1e8eee82306">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS304">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS304">
+                    <p>
+                        Suorakulmaisen kolmion $ABC$ kateettien pituudet ovat $AB = 3$ ja $BC = 4$. Ympyrän keskipiste sijaitsee pidemmällä kateetilla. Lisäksi ympyrä kulkee pisteen $B$ kautta ja sivuaa kolmion hypotenuusaa. Määritä ympyrän säde.
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa3/kuvat/tasoK05.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <p>
+                        [Lyhyt S2015/12]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS304_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS304_v" class="collapse">
+                        <p>
+                            $\frac{3}{2}$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="bd23057d-b923-4cac-a872-0fe8df02e079">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#tasoS305">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="tasoS305">
+                    <ol class="a">
+                        <li>
+                            Suunnikkaan sisälle piirretään pienempi suunnikas, jonka kärjet ovat alkuperäisen suunnikkaan sivujen keskipisteissä. Laske pienen suunnikkaan pinta‐ala käyttämällä kuvioon merkittyjä pituuksia.
+                            <br>
+                            [Lyhyt S2015/2]
+                            <br>
+                            <img src="/kurssit/maa3/kuvat/tasoK03.png" max-width: 100%; width: auto; height: auto;/>
+                        </li>
+                        <li>
+                            Harjoittele Geogebran tai TI-Nspiren käyttöä piirtämällä tehtävässä tarkastellut suunnikkaat. Samalla saat tarkistettua, saitko a-kohdasta oikean tuloksen. Katso tarvittaessa mallia Geogebran käyttöön tästä <a href="https://youtu.be/wsDr0pafc2g" target="_blank">videosta</a> ja TI-Nspiren käyttöön tästä <a href="https://youtu.be/ImzGafnbPlc" target="_blank">videosta</a>.
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#tasoS305_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="tasoS305_v" class="collapse">
+                        <ol class="a">
+                            <li> $4 \text{ cm}^2$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            
+
+     
+
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#L3itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="L3itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="https://polku.opetus.tv/node/2102">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
+            </p>
+        </div>
+    </section>
+
+</article>
