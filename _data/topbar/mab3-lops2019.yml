@@ -3,13 +3,13 @@ path:
 navigation:
   -
     name: MAB3
-    path: /kurssit/mab3/
+    path: /kurssit/mab3-lops2019/
   -
     name: 1. Kolmio
-    path: /kurssit/mab3/luku1/
+    path: /kurssit/mab3-lops2019/luku1/
   -
     name: 2. Tasogeometriaa
-    path: /kurssit/mab3/luku2/
+    path: /kurssit/mab3-lops2019/luku2/
   -
     name: 3. Avaruusgeometriaa
-    path: /kurssit/mab3/luku3/
+    path: /kurssit/mab3-lops2019/luku3/
