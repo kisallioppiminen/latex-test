@@ -1,0 +1,15 @@
+header: 
+path: 
+navigation:
+  -
+    name: MAB4
+    path: /kurssit/mab4-lops2019/
+  -
+    name: 1. Lineaarinen malli
+    path: /kurssit/mab4-lops2019/luku1/
+  -
+    name: 2. Eksponentiaalinen malli
+    path: /kurssit/mab4-lops2019/luku2/
+  -
+    name: 3. Matemaattinen mallintaminen
+    path: /kurssit/mab4-lops2019/luku3/
