@@ -1,0 +1,3290 @@
+---
+title: MAB4 - Matemaattisia malleja
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: mab4
+---
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th {
+        padding: 5px;
+    }
+</style>
+
+{% include bottomnav.html %}
+<input type="hidden" id="theoremStart" value="6"/>
+<input type="hidden" id="chapterNumber" value="2"/>
+
+<article>
+    <section>
+        <header>
+            <h1>Eksponentiaalinen malli</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun2-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="luvun2-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p>
+                    Tämän luvun tavoitteena on, että tunnet eksponentiaalisen mallin ominaisuudet ja osaat käyttää sitä erilaisten ilmiöiden kuvaamiseen ja ennusteiden tekemiseen. Osaat
+                </p>
+                <ul>
+                    <li>
+                        määrittää muutoskertoimen, jos muutoksen suuruus on ilmaistu prosentteina, ja käyttää muutoskertoimia peräkkäisten muutosten mallintamiseen
+                    </li>
+                    <li> 
+                        kuvata eksponentiaalista kasvua ja vähenemistä eksponenttifunktioiden avulla 
+                    </li>
+                    <li> 
+                        ratkaista eksponenttiyhtälön logaritmin avulla 
+                    </li>
+                    <li> 
+                        ratkaista potenssiyhtälön juurten avulla
+                    </li>
+                    <li> 
+                        tunnistaa geometrisen lukujonon ja määrittää lausekkeen sen yleiselle jäsenelle 
+                    </li>
+                    <li> 
+                        mallintaa ja ratkaista sovellusongelmia. 
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl20">
+                    Eksponentiaalinen malli
+                </a>
+            </h1>
+        </header>
+        <div id="kpl20" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä luvussa tutustutaan niin sanottuun eksponentiaaliseen malliin. Matematiikassa eksponentiaalisella mallilla kuvataan ilmiöitä, joissa muutos on kiihtyvää tai hidastuvaa niin, että tietyllä ajanjaksolla muutos on aina yhtä monta prosenttia muuttuvan suureen senhetkisestä arvosta. Eksponentiaalinen kasvu siis tarkoittaa, että mitä suurempi suureen arvo on, sitä nopeammin se myös kasvaa.
+                </p>
+                <p>
+                    Eksponentiaalisen mallin käyttö vaatii usein muutosprosentteihin liittyvää päättelyä ja laskemista. Seuraavissa tehtävissä palautetaan mieleen muutosprosenttien matematiikkaa, jota harjoiteltiin jo kurssissa <a href="http://kisallioppiminen.fi/kurssit/may1/prosenttilaskenta/">MAY1</a> (PÄIVITYS UUTEEN MAY1).
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava first-exercise" id="55384736-41ae-4e17-917f-bb2f1ace3d93">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB4t200">
+                                Muutoskerroin
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB4t200" class="collapse">
+                        <p>
+                            Tuotteen hinta on alun perin $a$. Kuinka monta prosenttia ja mihin suuntaan hinta on muuttunut, jos uusi hinta on 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                $1{,}30a$
+                            </li>
+                            <li>
+                                $0{,}72a$
+                            </li>
+                            <li>
+                                $1{,}002a$
+                            </li>
+                            <li>
+                                $2{,}5a$
+                            </li>
+                            <li>
+                                $0{,}05a$
+                            </li>
+                        </ol>
+                        <p>
+                            Vinkki: voit tarkistaa päättelysi myös käyttämällä kirjaimen $a$ tilalla jotain oikeaa lukua.
+                        </p>
+
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB4t200_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB4t200_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Tuotteen hinta on noussut $30\ \%$.
+                                </li>
+                                <li>
+                                    Tuotteen hinta on laskenut $28\ \%$. (Tuotteen hinnasta on jäljellä $72\ \%$ alkuperäisestä, joten hinta on laskenut $1 - 0{,}72 = 0{,}28 = 28\ \%$.)
+                                </li>
+                                <li>
+                                    Tuotteen hinta on noussut $0{,}2\ \%$.
+                                </li>
+                                <li>
+                                    Tuotteen hinta on noussut $150\ \%$. (Tuotteen hinnan kaksinkertaistuminen vastaa $100\ \%$ hinnannousua, joten 2,5-kertaistuminen vastaa $150\ \%$ hinnannousua.)
+                                </li>
+                                <li>
+                                    Tuotteen hinta on laskenut $95\ \%$. (Tuotteen hinnasta on jäljellä $5\ \%$ alkuperäisestä, joten hinta on laskenut $1 - 0{,}05 = 0{,}95 = 95\ \%$.)
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="0704bfb8-5d2a-43af-b3b3-1e8407a8cd44">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB4t201">
+                                Muutoskerroin
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB4t201" class="collapse">
+                        <p>
+                            Muodosta muutoskerroin eli prosenttikerroin tilanteessa, jossa junamatkustajien määrä 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                kasvaa 45 %
+                            </li>
+                            <li>
+                                kaksinkertaistuu
+                            </li>
+                            <li>
+                                vähenee 35 %
+                            </li>
+                            <li>
+                                puoliintuu
+                            </li>
+                            <li>
+                                kolminkertaistuu.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB4t201_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB4t201_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                                1,45
+                            </li>
+                            <li>
+                                2
+                            </li>
+                            <li>
+                                0,65
+                            </li>
+                            <li>
+                                0,5
+                            </li>
+                            <li>
+                                3
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Eksponenttista mallia noudattavilla ilmiöillä muutos tietyllä ajanjaksolla on aina yhtä monta prosenttia muuttuvan suureen senhetkisestä arvosta. Esimerkiksi kofeiinin määrä elimistössä pienenee aina viidessä tunnissa 50 % senhetkisestä määrästä, ellei henkilö nauti lisää kahvia tai muuta kofeiinia sisältävää. Viiden tunnin jaksot muodostavat siis peräkkäisten muutosten sarjan, jossa muutosprosentti pysyy koko ajan samana. Peräkkäisiin muutoksiin liittyvää prosenttilaskentaa kerrataan seuraavissa tehtävissä. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="0c206b39-677e-43b8-b46b-64643dcc16ef">
+                    <header>
+                       <h1>
+                           <div class="checkbox-group"></div>
+                           <a data-toggle="collapse" class="collapsed" data-target="#0c206b39-677e-43b8-b46b-64643dcc16ef_target">
+                              Peräkkäiset muutokset
+                            </a>
+                       </h1>
+                    </header>
+                    <div id="0c206b39-677e-43b8-b46b-64643dcc16ef_target" class="collapse">
+                        <p>
+                            Valokuvausliike myy tiettyä järjestelmäkameraa 1000 euron hintaan. Summer Sale -kesäalennusmyynnissä hintaa alennetaan 20 prosenttia. Myöhemmin syksyllä, kun uudempi malli tulee myyntiin, hintaa lasketaan vielä 30 prosenttia.  
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Mikä on alennettu hinta ensimmäisen alennuksen jälkeen?
+                            </li>
+                            <li>
+                                Mikä on alennettu hinta toisen alennuksen jälkeen?
+                            </li>
+                            <li>
+                                Kyseisen kameramallin kysyntä kasvaa uudemmasta mallista huolimatta, joten varaston huvetessa kauppias nostaa hintaa seuraavan vuoden alussa 20 prosenttia. Kuinka monta prosenttia uusi hinta on alkuperäisestä hinnasta? 
+                                <br>
+                                Vinkki: laske muutoskertoimien tulo.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#0c206b39-677e-43b8-b46b-64643dcc16ef_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="0c206b39-677e-43b8-b46b-64643dcc16ef_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $0{,}8 \cdot 1000 = 800$ euroa
+                                </li>
+                                <li>
+                                    $0{,}7 \cdot 800 = 560$ euroa
+                                </li>
+                                <li>
+                                    Muutosta vastaava kerroin on 
+                                    $$
+                                    1{,}2 \cdot 0{,}7 \cdot 0{,}8 = 0{,}672.
+                                    $$ 
+                                    Uusi hinta on siis 67,2 % alkuperäisestä hinnasta. Samaan tulokseen pääsee myös laskemalla uuden hinnan
+                                    $$
+                                    1{,}2 \cdot 560 \ \euro  = 672 \ \euro
+                                    $$
+                                    ja vertaamalla sitä alkuperäiseen
+                                    $$
+                                    \dfrac{672  \ \euro }{1000  \ \euro } = 0{,}672 = 67{,}2\ \%.
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+
+             <div class="tehtavat">
+                 <div class="tehtava" id="d14a545b-5649-4ac4-8066-5a095c78c93e">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#d14a545b-5649-4ac4-8066-5a095c78c93e_target">
+                                Peräkkäiset muutokset
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="d14a545b-5649-4ac4-8066-5a095c78c93e_target" class="collapse">
+                        <p>
+                            Pankkitilin todellinen vuosikorko on 1,5 %. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Mikä on vastaava muutoskerroin?
+                            </li>
+                            <li>
+                                Kuinka paljon tilillä on rahaa vuoden kuluttua talletuksesta, jos talletettu rahamäärä on $a$ euroa?
+                            </li>
+                            <li>
+                                Entä kahden vuoden kuluttua, jos muita talletuksia ei tehdä?
+                            </li>
+                            <li>
+                                Entä kolmen vuoden kuluttua?
+                            </li>
+                            <li>
+                                Entä $x$ vuoden kuluttua?
+                            </li>
+                            <li>
+                                Käytä e-kohdan lauseketta ja laske, kuinka paljon tilillä on rahaa 15 vuoden kuluttua talletuksesta, jos talletettu rahamäärä on 2000 euroa.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#d14a545b-5649-4ac4-8066-5a095c78c93e_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="d14a545b-5649-4ac4-8066-5a095c78c93e_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $1{,}015$
+                                </li>
+                                <li>
+                                    $1{,}015a$
+                                </li>
+                                <li>
+                                    $1{,}015 \cdot 1{,}015a = 1{,}015^2\cdot a$
+                                </li>
+                                <li>
+                                    $1{,}015^3\cdot a$
+                                </li>
+                                <li>
+                                    $1{,}015^x \cdot a$
+                                </li>
+                                <li>
+                                    $1{,}015^{15} \cdot 2000 \ \euro \approx 2500{,}46 \ \euro$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Eksponentiaalisena mallina voi toimia jokin eksponenttifunktio tai geometrinen lukujono. Mallinnuksen yhteydessä saatetaan päätyä ratkaisemaan eksponentti- tai potenssiyhtälöitä. Näihin liittyviä asioita opiskellaan ja kerrataan seuraavissa kappaleissa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="325f4ba7-c374-4868-a58e-ce25c054b883">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#325f4ba7-c374-4868-a58e-ce25c054b883_target">
+                                Eksponentiaalinen malli
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="325f4ba7-c374-4868-a58e-ce25c054b883_target" class="collapse">
+                        <p>
+                            Alla on mallinnettu koordinaatistossa kolmea erilaista ilmiötä. 
+                        </p>
+                        <ol>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva051.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva052.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva053.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                        </ol>
+                        <ol class="a">
+                            <li>
+                                Yhdistä ilmiö sopivaan kuvaan:
+                                <div align="center">
+                                    <table style="width = 75%">
+
+                                        <tr>
+                                            <th> Ilmiö </th>
+                                            <th> Kuva </th>
+                                        </tr>
+                                        <tr>
+                                            <td> Bakteerien määrä optimaalisissa olosuhteissa </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Elimistössä olevan särkylääkkeen määrä, kun huippupitoisuus on saavutettu </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Sijoius, joka kasvaa kuukausittain korkoa korolle </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li> 
+                                Yhdistä eksponentiaalinen malli sopivaan kuvaan:
+                                <div align="center">
+                                    <table style="width = 75%">
+
+                                        <tr>
+                                            <th> Malli </th>
+                                            <th> Kuva(t) </th>
+                                        </tr>
+                                        <tr>
+                                            <td> Eksponenttifunktio</td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Geometrinen lukujono </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#325f4ba7-c374-4868-a58e-ce25c054b883_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="325f4ba7-c374-4868-a58e-ce25c054b883_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    <div align="center">
+                                        <table style="width = 75%">
+
+                                            <tr>
+                                                <th> Ilmiö </th>
+                                                <th> Kuva </th>
+                                            </tr>
+                                            <tr>
+                                                <td> Bakteerien määrä optimaalisissa olosuhteissa </td>
+                                                <td> 2 </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Elimistössä olevan kofeiinin määrä kahvitauon jälkeen </td>
+                                                <td> 3 </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Talletus, joka kasvaa vuosittain korkoa korolle </td>
+                                                <td> 1 </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li> 
+                                    <div align="center">
+                                        <table style="width = 75%">
+
+                                            <tr>
+                                                <th> Malli </th>
+                                                <th> Kuva(t) </th>
+                                            </tr>
+                                            <tr>
+                                                <td> Eksponenttifunktio</td>
+                                                <td> 2, 3 </td>
+                                            </tr>
+                                            <tr>
+                                                <td> Geometrinen lukujono </td>
+                                                <td> 1 </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl20">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl21">
+                    Eksponenttifunktio
+                </a>
+            </h1>
+        </header>
+        <div id="kpl21" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Eksponentiaalista kasvua tai vähenemistä kuvataan usein eksponenttifunktioiden avulla. Niiden avulla voidaan mallintaa ja analysoida esimerkiksi sähkövirtapiirejä, aineen radioaktiivista hajoamista, kappaleen jäähtymistä, tietynlaisten kemiallisten reaktioiden nopeutta, populaatioiden koon kasvua, tautien leviämistä, pääoman karttumista korkonkorkolaskennassa, pyramidihuijauksia <a href="https://en.wikipedia.org/wiki/Exponential_decay#Applications_and_examples">ja niin edelleen</a>.
+                </p>
+                <p>
+                   Kirjataan näkyviin, mitä sanalla ekponenttifunktio oikeastaan tarkoitetaan:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: EKSPONENTTIFUNKTIO</h3>
+                    <p>
+                        Oletetaan, että $k \neq 1$ on positiivinen reaaliluku. Funktioita, jotka ovat muotoa $$f(x) = k^x,$$ 
+                        sanotaan <em>eksponenttifunktioiksi</em>.
+                    </p>
+                </div>                
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="3b93059c-e6e2-4256-93cb-081b0cf28cd1">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB4t202">
+                                Eksponenttifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAB4t202" class="collapse">
+                        <p>
+                            Tutkitaan funktiota $f(x) = 0{,}5^x$.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä funktion kuvaaja esimerkiksi Geogebralla tai jollakin muulla laskinohjelmalla. Millaista muutosta tämä funktio kuvaa?
+                            </li>
+                            <li>
+                                Täydennä seuraava taulukko a-kohdan kuvaajan tai laskimen avulla:
+                                <div align="center">
+                                    <table style="width = 75%">
+                                        <tr>
+                                            <th> $x$ </th>
+                                            <td> $-3$</td>
+                                            <td> $-2$</td>
+                                            <td> $-1$</td>
+                                            <td> $\phantom{-}0\phantom{-}$</td>
+                                            <td> $\phantom{-}1\phantom{-}$</td>
+                                            <td> $\phantom{-}2\phantom{-}$</td>
+                                            <td> $\phantom{-}3\phantom{-}$ </td>
+                                        </tr>
+                                        <tr>
+                                            <th> $f(x)$ </th>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                Mitä funktion arvolle tapahtuu, kun muuttujan eli $x$:n arvo kasvaa yhdellä? Keksitkö säännönmukaisuuden?
+                            </li>
+                            <li>
+                                Miten c-kohdan havainto liittyy eksponenttifunktion $f(x) = 0{,}5^x$ kantalukuun $0{,}5$?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAB4t202_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAB4t202_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Funktio kuvaa eksponentiaalista vähenemistä:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva054.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li>
+                                    <div align="center">
+                                        <table style="width = 75%">
+                                            <tr>
+                                                <th> $x$ </th>
+                                                <td> $-3$</td>
+                                                <td> $-2$</td>
+                                                <td> $-1$</td>
+                                                <td> $\phantom{-}0\phantom{-}$</td>
+                                                <td> $\phantom{-}1\phantom{-}$</td>
+                                                <td> $\phantom{-}2\phantom{-}$</td>
+                                                <td> $\phantom{-}3\phantom{-}$ </td>
+                                            </tr>
+                                            <tr>
+                                                <th> $f(x)$ </th>
+                                                <td> $8$ </td>
+                                                <td> $4$ </td>
+                                                <td> $2$ </td>
+                                                <td> $1$ </td>
+                                                <td> $0{,}5$ </td>
+                                                <td> $0{,}25$ </td>
+                                                <td> $0{,}125$ </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    Funktion arvo pienenee aina puoleen, kun muuttujan arvo kasvaa yhdellä.
+                                </li>
+                                <li>
+                                    Kun muuttujan arvo kasvaa yhdellä, funktion arvo pienee puoleen eli uusi arvo on 0,5-kertainen edelliseen arvoon verrattuna. Kerroin on sama kuin eksponenttifunktion $f(x) = 0{,}5^x$ kantaluku.
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="936478b1-cf3b-4a42-83b6-5bc33126227e">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#936478b1-cf3b-4a42-83b6-5bc33126227e_target">
+                            Eksponenttifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="936478b1-cf3b-4a42-83b6-5bc33126227e_target" class="collapse">
+                        <p>
+                            Tutkitaan funktiota $g(x) = 3^x$.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Piirrä funktion kuvaaja esimerkiksi Geogebralla tai jollakin muulla laskinohjelmalla. Millaista muutosta tämä funktio kuvaa?
+                            </li>
+                            <li>
+                                Täydennä seuraava taulukko a-kohdan kuvaajan tai laskimen avulla:
+                                <div align="center">
+                                    <table style="width = 75%">
+                                        <tr>
+                                            <th> $x$ </th>
+                                            <td> $-1$</td>
+                                            <td> $\phantom{-}0\phantom{-}$</td>
+                                            <td> $\phantom{-}1\phantom{-}$</td>
+                                            <td> $\phantom{-}2\phantom{-}$</td>
+                                        </tr>
+                                        <tr>
+                                            <th> $g(x)$ </th>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                Mitä funktion arvolle tapahtuu, kun muuttujan eli $x$:n arvo kasvaa yhdellä? Keksitkö säännönmukaisuuden?
+                            </li>
+                            <li>
+                                Miten c-kohdan havainto liittyy eksponenttifunktion $g(x) = 3^x$ kantalukuun $3$?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#936478b1-cf3b-4a42-83b6-5bc33126227e_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="936478b1-cf3b-4a42-83b6-5bc33126227e_target_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Funktio kuvaa eksponentiaalista kasvamista:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva055.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li>
+                                    <div align="center">
+                                        <table style="width = 75%">
+                                            <tr>
+                                                <th> $x$ </th>
+                                                <td> $-1$</td>
+                                                <td> $\phantom{-}0\phantom{-}$</td>
+                                                <td> $\phantom{-}1\phantom{-}$</td>
+                                                <td> $\phantom{-}2\phantom{-}$</td>
+                                            </tr>
+                                            <tr>
+                                                <th> $g(x)$ </th>
+                                                <td> $\frac{1}{3}$ </td>
+                                                <td> $1$ </td>
+                                                <td> $3$ </td>
+                                                <td> $9$ </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    Funktion arvo kasvaa aina kolminkertaiseksi, kun muuttujan arvo kasvaa yhdellä.
+                                </li>
+                                <li>
+                                    Kun muuttujan arvo kasvaa yhdellä, funktion arvo kolminkertaistuu. Kerroin on sama kuin eksponenttifunktion $g(x) = 3^x$ kantaluku.
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+             <div class="teoria">
+                <p>
+                    Seuraavassa tehtävässä tutkitaan vielä tarkemmin eksponenttifunktioiden ominaisuuksia. 
+                </p>
+             </div>
+
+
+            <div class="tehtavat">
+                <div class="tehtava" id="e8e3a4c0-0a02-4038-88cf-74c7c5cee8bf">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#e8e3a4c0-0a02-4038-88cf-74c7c5cee8bf_target">
+                            Eksponenttifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="e8e3a4c0-0a02-4038-88cf-74c7c5cee8bf_target" class="collapse">
+                        <p>
+                            Piirrä Geogebralla tai jollakin toisella laskinohjelmistolla erilaisten eksponenttifunktioiden $f(x) = k^x$ kuvaajia valitsemalla kantaluvuksi $k$ muutamia erilaisia positiivisia reaalilukuja. Tutki tilannetta, jossa $0 < k < 1$, ja tilannetta, jossa $k > 1$. Tutki ja piirrä kuvaajia niin paljon, että saat pääteltyä vastaukset seuraaviin kysymyksiin:
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Millainen kuvaaja on, jos kantaluvulle pätee $k > 1$? Millaista eksponentiaalista muutosta funktio tällöin kuvaa? 
+                            </li>
+                            <li>
+                                Millainen kuvaaja on, jos kantaluvulle pätee $0 < k < 1$? Millaista eksponentiaalista muutosta funktio tällöin kuvaa? 
+                            </li>
+                            <li>
+                                Millainen kuvaaja on, jos kantaluvulle pätee $k = 1$? Mikä funktio on tässä tapauksessa kysymyksessä?
+                            </li>
+                            <li>
+                                Mitä voit sanoa eksponenttifunktioiden määrittelyjoukosta? Toisin sanottuna, voidaanko eksponenttifunktioiden arvo laskea millä tahansa muuttujan arvolla?
+                            </li>
+                            <li>
+                                Mitä voit sanoa eksponenttifunktioiden arvoista? Saavatko ne sekä positiivisia että negatiivisia arvoja? 
+                            </li>
+                            <li>
+                                Tutki kuvaajien avulla, mitä voit sanoa eksponenttifunktioiden arvosta kohdassa $x = 0$. Riippuuko arvo kantaluvusta $k$? 
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#e8e3a4c0-0a02-4038-88cf-74c7c5cee8bf_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="e8e3a4c0-0a02-4038-88cf-74c7c5cee8bf_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Jos kantaluvulle pätee $k > 1$, niin kuvaaja on nouseva käyrä. Funktio kuvaa eksponentiaalista kasvamista.
+                                </li>
+                                <li>
+                                    Jos kantaluvulle pätee $0 < k < 1$, niin kuvaaja on laskeva käyrä. Funktio kuvaa eksponentiaalista vähenemistä.
+                                </li>
+                                <li>
+                                    Jos kantaluvulle pätee $k = 1$, niin kuvaaja on $x$-akselin suuntainen suora. Funktio on vakiofunktio $f(x) = 1$. 
+                                </li>
+                                <li>
+                                    Eksponenttifunktiot on määritelty kaikilla muuttujan arvoilla eli niiden arvo voidaan laskea, olipa muuttujan $x$ arvo mikä hyvänsä.
+                                </li>
+                                <li>
+                                    Eksponenttifunktiot saavat vain positiivisia arvoja eli niiden kuvaajat pysyttelevät $x$-akselin yläpuolella (lähestyvät kyllä $x$-akselia mutta eivät koskaan saavuta sitä).
+                                </li>
+                                <li>
+                                    Eksponenttifunktiot saavat kohdassa $x = 0$ arvon $1$. Niiden kuvaajat kulkevat siis $y$-akselin pisteen $(0,1)$ kautta riippumatta kantaluvun $k$ arvosta.
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän havainnot voidaan osoittaa yleispäteviksi, joten kootaan ne vielä teoreemaksi:
+                </p>
+                
+                <div class="theorem" id="EKSPONENTTIFUNKTIO">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Olkoon $k > 0$. Eksponenttifunktio $f(x) = k^x$ on määritelty kaikilla muuttujan $x$ arvoilla. Funktion arvot ovat positiivisia eli kuvaaja pysyttelee $x$-akselin yläpuolella. Kuvaajan muoto riippuu kantaluvusta $k$:
+                    </p>
+                    <ul>
+                        <li>
+                            Jos $k > 1$, kuvaaja on nouseva käyrä.
+                            <br>
+                            <img src="/kurssit/mab4/kuvat/MAB4kuva056.png" max-width: 100%; width: auto; height: auto;/>
+                        </li>
+                        <li>
+                            Jos $0 < k < 1$, kuvaaja on laskeva käyrä.
+                            <br>
+                            <img src="/kurssit/mab4/kuvat/MAB4kuva057.png" max-width: 100%; width: auto; height: auto;/>
+                        </li>
+                        <li>
+                            Jos $k = 1$, kysymyksessä on vakiofunktio $f(x) = 1$.
+                            <br>
+                            <img src="/kurssit/mab4/kuvat/MAB4kuva058.png" max-width: 100%; width: auto; height: auto;/>
+                        </li>
+                    </ul>
+                    <p>
+                        Kaikissa tapauksissa $f(0) = 1$ eli kuvaaja leikkaa $y$-akselin korkeudella $1$ ja kulkee siis pisteen $(0,1)$ kautta.  
+                    </p>
+                </div>
+
+                <p>
+                    Kun eksponenttifunktion avulla mallinnetaan eksponentiaalista kasvua tai vähenemistä, täytyy funktio usein kertoa jollakin positiivisella vakiolla $c$, jotta alkutilanteen $x = 0$ arvo saadaan oikeaksi. Esimerkiksi alla vasemmalla on eksponenttifunktion $g(x) = 1{,}6^x$ kuvaaja ja oikealla on funktion $h(x) = 1{,}6^x \cdot 3$ kuvaaja. 
+                    <br>
+                    <img src="/kurssit/mab4/kuvat/MAB4kuva059.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Seuraavassa tehtävässä tutkitaan funktioiden $f(x) = k^x \cdot c$ kuvaajia ja harjoitellaan tunnistamaan, miten kantaluku $k$ ja vakio $c$ vaikuttavat kuvaajan muotoon ja sijaintiin koordinaatistossa.
+                </p>
+            </div>
+
+            
+            <div class="tehtavat">
+                <div class="tehtava" id="9d3c57c7-39f5-414a-bb21-eaeb0f32c3c5">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#9d3c57c7-39f5-414a-bb21-eaeb0f32c3c5_target">
+                            Eksponentiaalinen malli
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="9d3c57c7-39f5-414a-bb21-eaeb0f32c3c5_target" class="collapse">
+                        <p>
+                           Täydennä alla oleva taulukko yhdistämällä kuvaaja (1-5) oikeaan funktioon. Taulukossa on yksi ylimääräinen funktio.
+                        </p>
+                        <p>
+                           Vinkki: Mieti, millainen kantaluku $k$ on, jos kuvaaja on laskeva tai nouseva käyrä. Mieti, miten kantaluvun suuruus vaikuttaa kuvaajaan. Miten voit hyödyntää $y$-akselin leikkauspistettä oikean funktion valitsemisessa?
+                        </p>
+                        <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> Funktio </th>
+                                    <th> Kuvaaja </th>
+                                </tr>
+                                <tr>
+                                    <td> $f(x) = 1{,}3^x \cdot 40\phantom{0}$ </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $f(x) = 1{,}3^x \cdot 100$ </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $f(x) = 0{,}7^x \cdot 40\phantom{0}$ </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $f(x) = 0{,}3^x \cdot 40\phantom{0}$ </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $f(x) = 0{,}3^x \cdot 100$ </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $f(x) = 2^x \cdot 10\phantom{00}$ </td>
+                                    <td>  </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <ol>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva064.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva061.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva065.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva062.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva063.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#9d3c57c7-39f5-414a-bb21-eaeb0f32c3c5_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="9d3c57c7-39f5-414a-bb21-eaeb0f32c3c5_target_v" class="collapse">
+                            <div align="center">
+                                <table style="width = 75%">
+                                    <tr>
+                                        <th> Funktio </th>
+                                        <th> Kuvaaja </th>
+                                    </tr>
+                                    <tr>
+                                        <td> $f(x) = 1{,}3^x \cdot 40$ </td>
+                                        <td> 4 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> $f(x) = 1{,}3^x \cdot 100$ </td>
+                                        <td> 1 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> $f(x) = 0{,}7^x \cdot 40$ </td>
+                                        <td> 5 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> $f(x) = 0{,}3^x \cdot 40$ </td>
+                                        <td> 2 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> $f(x) = 0{,}3^x \cdot 100$ </td>
+                                        <td> - </td>
+                                    </tr>
+                                    <tr>
+                                        <td> $f(x) = 2^x \cdot 10$ </td>
+                                        <td> 3 </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p>
+                                Huomaa, että mitä lähempänä ykköstä kantaluku on, sitä loivemmin kuvaaja kaartuu. Tämä auttaa yhdistämään kuvaajat 2 ja 5 oikeaan funktioon. Muiden kohdalla voi päätellä sen mukaan, onko kantaluku suurempi vai pienempi kuin 1 ja millä korkeudella kuvaaja leikkaa $y$-akselin.
+                            </p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan eksponentiaalisen mallin käyttöä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="94aba037-068c-4880-9b5a-8f41777e7744">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#94aba037-068c-4880-9b5a-8f41777e7744_target">
+                                Eksponentiaalinen malli
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="94aba037-068c-4880-9b5a-8f41777e7744_target" class="collapse">
+                        <p>
+                            Tilin todellinen vuosikorko on 0,8 %. Pekka tallettaa vuoden 2019 alussa tilille 1500 euroa.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Muodosta funktio, joka kuvaa tilillä olevaa rahamäärää vuoden alussa koronmaksun jälkeen, kun vuoden 2019 alusta on kulunut $x$ vuotta.
+                                <br>
+                                Vinkki: kertaa tarvittaessa tehtävä 2.4.
+                            </li>
+                            <li>
+                                Laske a-kohdan funktion avulla, kuinka paljon rahaa tilillä on vuoden 2040 alussa, jos muita talletuksia ei ole tehty.
+                            </li>
+                            <li>
+                                Piirrä funktion kuvaaja esimerkiksi Geogebralla ja tutki sen avulla, milloin tilin saldo saavuttaa 2000 euron rajan.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#94aba037-068c-4880-9b5a-8f41777e7744_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="94aba037-068c-4880-9b5a-8f41777e7744_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $f(x) = 1{,}008^x \cdot 1500$
+                                </li>
+                                <li>
+                                    $f(21) = 1{,}008^{21} \cdot 1500 \approx 1773{,}22$ euroa.
+                                </li>
+                                <li>
+                                    Kuvaajasta voidaan lukea, että tilin saldo saavuttaa 2000 euron rajan, kun vuoden 2019 alusta on kulunut noin 36 vuotta eli suunnilleen vuoden 2055 alussa. 
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva066.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Huomaa, että kuvaajan avulla on vaikea päätellä ajankohtaa tarkasti. Laskemalla a-kohdan funktion arvot $f(36)$ ja $f(37)$ huomaa, että tilin saldo ylittää 2000 euron rajan vasta vuoden 2056 alussa koronmaksun jälkeen.
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="a8eb96a4-7baa-42f0-9f2e-873bb4db95c9">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#a8eb96a4-7baa-42f0-9f2e-873bb4db95c9_target">
+                                Eksponentiaalinen malli
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="a8eb96a4-7baa-42f0-9f2e-873bb4db95c9_target" class="collapse">
+                        <p>
+                            Erään kunnan asukasluku vähenee keskimäärin 6 prosenttia vuodessa. Vuoden 2019 alussa asukasluku oli 17500. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Muodosta funktio, joka kuvaa kunnan asukaslukua, kun vuoden 2019 alusta on kulunut $x$ vuotta.
+                            </li>
+                            <li>
+                                Kuinka paljon asukkaita kunnassa olisi tämän mallin mukaan vuoden 2030 alussa?
+                            </li>
+                            <li>
+                                Kuinka paljon asukkaita kunnassa oli tämän mallin mukaan vuoden 2000 alussa? 
+                                <br>
+                                Vinkki: jos menet ajassa taaksepäin, eksponentti on negatiivinen.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#a8eb96a4-7baa-42f0-9f2e-873bb4db95c9_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="a8eb96a4-7baa-42f0-9f2e-873bb4db95c9_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $f(x) = 0{,}94^x \cdot 17500$.
+                                </li>
+                                <li>
+                                    $f(11) = 0{,}94^{11} \cdot 17500 \approx 8860$. 
+                                    <br>
+                                    Huom. $2030 - 2019 = 11$.
+                                </li>
+                                <li>
+                                    $f(-19) = 0{,}94^{-19} \cdot 17500 \approx 56700$. 
+                                    <br>
+                                    Huom. $2000-2019 = - 19$.
+                                </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl21">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl22">
+                    Eksponenttiyhtälöt ja logaritmit
+                </a>
+            </h1>
+        </header>
+        <div id="kpl22" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Kun tutkitaan, missä kohdassa eksponenttifunktio saa tietyn arvon, päädytään eksponenttiyhtälöön. Esimerkiksi jos halutaan tietää, missä kohdassa funktio $f(x) = 1{,}5^x$ saa arvon $4$, päädytään tutkimaan yhtälöä
+                    $$f(x) = 4$$
+                    eli yhtälöä
+                    $$1{,}5^x = 4.$$
+                    Tämä yhtälö voidaan ratkaista graafisesti piirtämällä funktion $f(x) = 1{,}5^x$ kuvaaja koordinaatistoon ja katsomalla, mikä kuvaajan piste on korkeudella 4:
+                <br>
+                    <img src="/kurssit/mab4/kuvat/MAB4kuva067.png" max-width: 100%; width: auto; height: auto;/>
+                <br>
+                    Piirroksesta nähdään, että kuvaajan piste on korkeudella 4 likimain kohdassa $x \approx 3{,}4$. Tarkemmin asia voidaan ilmaista logaritmin avulla.                 </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: LOGARITMI</h3>
+                    <p>
+                        Oletetaan, että kantaluku $k$ on positiivinen ja $k \neq 1$. Positiivisen luvun $a$ <em>$k$-kantainen logaritmi</em> tarkoittaa lukua $x$, jolla on ominaisuus $k^x = a$. Luvusta $x$ käytetään merkintää $\log_k(a)$.
+                    </p>
+                </div>
+
+                <p>
+                    Eksponenttiyhtälön ratkaisu eli tuntematon eksponentti voidaan siis ilmaista logaritmin avulla. Esimerkiksi yhtälön
+                    $$1{,}5^x = 4$$
+                    ratkaisu on 
+                    $$x = \log_{1{,}5}(4).$$
+                    Tietokoneella tai nykyaikaisella laskimella saadaan logaritmille tarkempi likiarvo kuin kuvasta:
+                    $$x = \log_{1{,}5}(4) \approx 3{,}4190226.$$
+                </p>
+                <p>
+                    Joillekin logaritmeille voidaan päätellä tarkka arvo muistelemalla kertotaulua ja lukujen potensseja. Esimerkiksi 
+                    $$\log_7(49) = 2, \text{ sillä } 7^2 = 49.$$ 
+                    Toisaalta 
+                    $$\log_{10}(1000) = 3, \text{ sillä } 10^3 = 1000.$$ 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="d7ec5177-12c8-4bee-8216-b2cf863910ad">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#d7ec5177-12c8-4bee-8216-b2cf863910ad_target">
+                                Eksponenttiyhtälön ratkaisu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="d7ec5177-12c8-4bee-8216-b2cf863910ad_target" class="collapse">
+                        <p> 
+                            Päättele tai selvitä kokeilemalla, mikä eksponentin pitää olla, jotta yhtälö toteutuu. Ilmaise vastaus myös logaritmin avulla muodossa $x = \log_k(a) = b$. 
+                        </p>
+                        <ol class="a">
+                            <li> $3^x = 9$</li>
+                            <li> $2^x = 16$</li>
+                            <li> $5^x = 125$.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#d7ec5177-12c8-4bee-8216-b2cf863910ad_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="d7ec5177-12c8-4bee-8216-b2cf863910ad_target_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = \log_3(9) = 2$ </li>
+                                <li> $x = \log_2(16) = 4$ </li>
+                                <li> $x = \log_5(125) = 3$ </li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p>
+                    Usein eksponenttiyhtälön ratkaisun tarkka arvo voidaan ilmaista vain logaritmin avulla. Monilla nykyaikaisilla teknisillä apuvälineillä (esim. Geogebralla) logaritmille saa laskettua likiarvon, olipa kantalukuna $k \neq 1$ mikä tahansa positiivinen luku.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="e7fe0f40-16a9-4a38-89b1-93a7c7ffe15e">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#e7fe0f40-16a9-4a38-89b1-93a7c7ffe15e_target">
+                                Eksponenttiyhtälön ratkaisu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="e7fe0f40-16a9-4a38-89b1-93a7c7ffe15e_target" class="collapse">
+                        <p> 
+                            Kirjoita seuraavien eksponenttiyhtälöiden ratkaisut logaritmin avulla ja selvitä ratkaisujen likiarvot laskinohjelmistolla (SpeedCrunch). Esimerkiksi luvun 8 2-kantainen logaritmi kirjoitetaan SpeedCrunchiin muodossa log(2;8). Anna vastaus viiden merkitsevän numeron tarkkuudella. 
+                        </p>
+                        <ol class="a">
+                            <li> $2^x = 40$</li>
+                            <li> $1{,}05^x = 2$</li>
+                            <li> $0{,}75^x = 10$.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#e7fe0f40-16a9-4a38-89b1-93a7c7ffe15e_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="e7fe0f40-16a9-4a38-89b1-93a7c7ffe15e_target_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = \log_2(40) \approx 5{,}3219$</li>
+                                <li> $x = \log_{ 1{,}05 }(2) \approx 14{,}207$</li>
+                                <li> $x = \log_{ 0{,}75 }(10) \approx -8{,}0039$.</li>
+                            </ol>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Eksponentiaaliseen malliin liittyvissä sovelluksissa eksponenttiyhtälö esiintyy harvoin perusmuodossaan
+                    $$
+                    k^x = a.
+                    $$
+                    Tavallisimmin yhtälössä on mukana jokin kerroin, joka täytyy jakaa pois ennen kuin yhtälön voi ratkaista logaritmin avulla. Esimerkiksi jos tutkitaan, milloin 5,4 % vuosituottoa mainostavaan rahastoon sijoitettu 500 euroa on kasvanut 750 euroksi, päädytään yhtälöön
+                    $$
+                    1{,}054^x \cdot 500 = 750.
+                    $$
+                    Tämän yhtälön ratkaisemisessa ensimmäinen vaihe on jakaa yhtälön molemmat puolet luvulla 500, jolloin yhtälö saadaan perusmuotoon:
+                    \begin{align*}
+                    1{,}054^x \cdot 500 &= 750 \hspace{8.5mm} \mid {} : 500 \\
+                    1{,}054^x &= 1{,}5 \\
+                    x &= \log_{1{,}054}(1{,}5) \approx 7{,}7
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="7ca9c66a-5bab-4ac9-a949-e4f30f485bac">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#7ca9c66a-5bab-4ac9-a949-e4f30f485bac_target">
+                                Eksponenttiyhtälön ratkaisu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="7ca9c66a-5bab-4ac9-a949-e4f30f485bac_target" class="collapse">
+                        <p>
+                            Muokkaa yhtälöt muotoon $k^x = a$ ja ratkaise ne sen jälkeen logaritmin avulla. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                $1{,}2^x \cdot 300 = 495$
+                            </li>
+                            <li>
+                                $18 + 0{,}98^x \cdot 77 = 60$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#7ca9c66a-5bab-4ac9-a949-e4f30f485bac_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="7ca9c66a-5bab-4ac9-a949-e4f30f485bac_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $x = \log_{1{,}2}(1{,}65) \approx 2{,}75$
+                                </li>
+                                <li>
+                                    $x = \log_{0{,}98}\left(\frac{42}{77}\right) \approx 30{,}0$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Monissa vanhoissa laskimissa likiarvo on mahdollista saada vain 10-kantaisesta ja $e$-kantaisesta logaritmista. (Tässä luku $e \approx 2{,}718$ on niin sanottu Neperin luku, josta voit lukea lisää <a href="http://kisallioppiminen.fi/kurssit/maa8/luku2/">MAA8-kurssin</a> kappaleesta Kantalukuna Neperin luku.)
+                </p>
+                <p>
+                    Minkä tahansa logaritmin likiarvo on kuitenkin mahdollista selvittää vanhanmallisella funktiolaskimella tekemällä logaritmille kantaluvun vaihto. Jos halutaan likiarvo logaritmille $\log_k(a)$ mutta sitä ei saada suoraan, voidaan valita mikä tahansa muu positiivinen kantaluku $b \neq 1$ ja laskea kahden $b$-kantaisen logaritmin osamäärä: 
+
+                    <div class="theorem" id="KANTALUVUN VAIHTO">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että $k \neq 1$ ja $b \neq 1$ ovat positiivisia reaalilukuja. Näitä kantalukuja vastaavilla logaritmeilla on yhteys
+                        $$
+                        \log_k (a) = \dfrac{\log_b (a)}{\log_b (k)}.
+                        $$
+                    </p>
+                    </div>
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="09c1fdad-e477-4bab-a5cc-581fe8496759">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#09c1fdad-e477-4bab-a5cc-581fe8496759_target">
+                                Logaritmin kantaluvun vaihto
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="09c1fdad-e477-4bab-a5cc-581fe8496759_target" class="collapse">
+                        <p>
+                            Ilmaise logaritmi 10-kantaisten logaritmien osamääränä ja laske sen likiarvo. Pyöristä lopputulos kolmen merkitsevän numeron tarkkuuteen.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                $\log_2(100)$
+                            </li>
+                            <li>
+                                $\log_{1{,}015}(1{,}5)$
+                            </li>
+                        </ol>
+                        <p>
+                            Miten voit tarkistaa, että vastaus on järkevä?
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#09c1fdad-e477-4bab-a5cc-581fe8496759_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="09c1fdad-e477-4bab-a5cc-581fe8496759_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $\log_2(100) = \dfrac{\log_{10} (100)}{\log_{10}(2)} \approx 6{,}64$.
+                                </li>
+                                <li>
+                                    $\log_{1{,}015}(1{,}5) = \dfrac{\log_{10} (1{,}5)}{\log_{10}(1{,}015)} \approx 27{,}2$.
+                                </li>
+                            </ol>
+                            <p>
+                                Tuloksen voi tarkistaa potenssiin korotuksen avulla: $2^{6{,}64} \approx 100$ ja $1{,}015^{27{,}2} \approx 1{,}5$.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jos eksponenttiyhtälön molemmat puolet onnistutaan ilmaisemaan saman kantaluvun potensseina, onnistuu yhtälön ratkaiseminen potenssin laskusääntöjen avulla ilman logaritmia. Esimerkiksi yhtälö
+                    $$3^{x-8} = 9$$
+                    voidaan muuttaa muotoon
+                    $$3^{x-8} = 3^2,$$
+                    sillä $9 = 3^2$. 
+                    Tästä voidaan päätellä, että eksponentit ovat yhtä suuret:
+                    $$x-8 = 2.$$
+                    Siis yhtälön ratkaisu on $x = 10$.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="5c8c5426-b4f9-4e15-9069-120827a4fac9">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#5c8c5426-b4f9-4e15-9069-120827a4fac9_target">
+                                Eksponenttiyhtälön ratkaisu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="5c8c5426-b4f9-4e15-9069-120827a4fac9_target" class="collapse">
+                        <p> 
+                            Ratkaise seuraavat eksponenttiyhtälöt ilman logaritmia. Ilmaise yhtälön kumpikin puoli saman kantaluvun potenssina ja päättele ratkaisu vertaamalla eksponentteja.
+                        </p>
+                        <ol class="a">
+                            <li> $2^{x+7} = 8$</li>
+                            <li> $10^{4x} = 1\,000\,000$</li>
+                            <li> $4^x = 16^5$.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#5c8c5426-b4f9-4e15-9069-120827a4fac9_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="5c8c5426-b4f9-4e15-9069-120827a4fac9_target_v" class="collapse">
+                            <ol class="a">
+                                <li> $x = -4$</li>
+                                <li> $x = 1{,}5$</li>
+                                <li> $x = 2\cdot 5 = 10$</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl22">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl23">
+                    Potenssiyhtälöt ja juuret
+                </a>
+            </h1>
+        </header>
+        <div id="kpl23" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Eksponentiaalisen mallin soveltaminen voi johtaa myös niin sanottuun potenssiyhtälöön. Jos  kantaluku on tuntematon ja eksponentti on jokin kokonaisluku $n \geq 2$, päädytään potenssiyhtälöön
+                    $$x^n = a.$$ 
+                    Potenssiyhtälöitä ovat siis esimerkiksi yhtälöt $x^2 = 16$ ja $x^3 = -8$. Kuvasta alla vasemmalla nähdään, että toisen asteen yhtälöllä 
+                    $$x^2 = 16$$ 
+                    on kaksi ratkaisua: yhtälö toteutuu, jos $x = -4$ tai $x = 4$.
+                    Kuvasta alla oikealla nähdään, että kolmannen asteen yhtälöllä 
+                    $$x^3 = -8$$ 
+                    on yksi ratkaisu: $x = -2$.
+                    <br>
+                    <img src="/kurssit/mab4/kuvat/MAB4kuva068.png" max-width: 100%; width: auto; height: auto;/>
+                <p>
+            </div>
+
+<!--                 <p>
+                    Luvun $7$ neliöjuurelle pätee määritelmän mukaan kaksi asiaa: 
+                    $$\sqrt{7} \geq 0 \quad \text{ ja } \quad \left(\sqrt{7}\right)^2 = 7.$$
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: NELIÖJUURI</h3>
+                    <p>
+                        Luvun $a \geq 0$ <em>neliöjuuri</em> tarkoittaa lukua $b \geq 0$, jolle pätee
+                        $$b^2 = a.$$
+                        Luvun $a$ neliöjuurelle käytetään merkintää $\sqrt{a}.$
+                    </p>
+                </div> -->
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dd3bcfae-4759-4684-85c8-79f9a12e0d78">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#dd3bcfae-4759-4684-85c8-79f9a12e0d78_target">
+                                Potenssiyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="dd3bcfae-4759-4684-85c8-79f9a12e0d78_target" class="collapse">
+                        <p>
+                           Täydennä alla oleva taulukko yhdistämällä kuva (1-4) oikeaan yhtälöön. Päättele lisäksi yhtälön ratkaisujen lukumäärä.
+                        </p>
+                        <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> Yhtälö </th>
+                                    <th> Kuva </th>
+                                    <th> Ratkaisujen lkm </th>
+                                </tr>
+                                <tr>
+                                    <td> $x^2 = 0$ </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $x^4 = 2$ </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $x^5 = 1$ </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td> $x^6 = -1$ </td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <ol>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva069.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva072.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva071.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva070.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#dd3bcfae-4759-4684-85c8-79f9a12e0d78_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="dd3bcfae-4759-4684-85c8-79f9a12e0d78_target_v" class="collapse">
+                            <div align="center">
+                                <table style="width = 75%">
+                                    <tr>
+                                        <th> Yhtälö </th>
+                                        <th> Kuva </th>
+                                        <th> Ratkaisujen lkm </th>
+                                    </tr>
+                                    <tr>
+                                        <td> $x^2 = 0$ </td>
+                                        <td> 4 </td>
+                                        <td> 1 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> $x^4 = 2$ </td>
+                                        <td> 1 </td>
+                                        <td> 2 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> $x^5 = 1$ </td>
+                                        <td> 2 </td>
+                                        <td> 1 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> $x^6 = -1$ </td>
+                                        <td> 3 </td>
+                                        <td> 0 </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="dbc101c3-9ce6-487f-9e8b-98f40306d6a5">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#dbc101c3-9ce6-487f-9e8b-98f40306d6a5_target">
+                                Potenssiyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="dbc101c3-9ce6-487f-9e8b-98f40306d6a5_target" class="collapse">
+                        <p>
+                            Tutki edellisen tehtävän taulukkoa ja päättele vastaukset seuraaviin kysymyksiin. Voit myös piirtää potenssifunktioiden $f(x) = x^n$ kuvaajia eksponentin $n$ erilaisilla kokonaislukuarvoilla ja käyttää kuvaajia apuna päättelyssä.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Mitä voit sanoa potenssiyhtälön $x^n = a$ ratkaisujen määrästä, jos eksponentti $n$ on pariton ja vähintään $3$ (eli $3$, $5$, $7$, $\ldots$)?
+                            </li>
+                            <li>
+                                Mitä voit sanoa potenssiyhtälön $x^n = a$ ratkaisujen määrästä, jos eksponentti $n$ on parillinen ja vähintään $2$ (eli $2$, $4$, $6$, $\ldots$) ja 
+                                <ul>
+                                    <li> vakio $a > 0$ </li>
+                                    <li> vakio $a = 0$ </li>
+                                    <li> vakio $a < 0$? </li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#dbc101c3-9ce6-487f-9e8b-98f40306d6a5_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="dbc101c3-9ce6-487f-9e8b-98f40306d6a5_target_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                                Jos eksponentti $n \geq 3$ on pariton, niin yhtälöllä $x^n = a$ on tasan yksi ratkaisu.
+                            </li>
+                            <li>
+                                Jos eksponentti $n \geq 2$ on parillinen, niin yhtälöllä $x^n = a$ 
+                                <ul>
+                                    <li> on kaksi ratkaisua, jos vakio $a > 0$ </li>
+                                    <li> on yksi ratkaisu, jos vakio $a = 0$ </li>
+                                    <li> ei ole yhtään ratkaisua, jos vakio $a < 0$. </li>
+                                </ul>
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kuten edellisissä tehtävissä havaittiin, potenssiyhtälöiden ratkaisujen määrä riippuu vastaavien potenssifunktioiden $f(x) = x^n$ kuvaajien muodosta. Jos eksponentti $n$ on parillinen, kuvaaja muistuttaa muodoltaan U-kirjainta ja ratkaisuja on 0-2 kappaletta vakion $a$ arvosta riippuen. Jos eksponentti $n$ on pariton, kuvaaja muistuttaa X-kirjaimen toista vinoviivaa ja ratkaisuja on aina yksi. Tämä voidaan osoittaa yleispätevästi, joten saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="POTENSSIYHTÄLÖN RATKAISUJEN LUKUMÄÄRÄ">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Potenssiyhtälön $x^n = a$ ratkaisujen määrä riippuu eksponentista $n$ ja vakiosta $a$ seuraavasti:
+                    </p>
+                    <ul>
+                        <li> 
+                            Jos eksponentti $n \geq 3$ on pariton (eli $3$, $5$, $7$, $\ldots$), yhtälöllä $x^n = a$ on aina yksi ratkaisu.
+                        </li>
+                        <li>
+                            Jos eksponentti $n \geq 2$ on parillinen (eli $2$, $4$, $6$, $\ldots$), yhtälöllä $x^n = a$
+                            <ul>
+                                <li> on kaksi ratkaisua, jos vakio $a > 0$ </li>
+                                <li> on yksi ratkaisu, jos vakio $a = 0$ </li>
+                                <li> ei ole yhtään ratkaisua, jos vakio $a < 0$. </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </div>
+
+                <!-- <p>
+                    Esimerkiksi yhtälöllä $x^4 = 3$ on kaksi ratkaisua, joita merkitään $\sqrt[4]{3}$ ja $-\sqrt[4]{3}$:
+                    <br>
+                    <img src="/kurssit/maa2/kuvat/KAk10.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Esimerkiksi yhtälöllä $x^3 = 3$ on vain yksi ratkaisu, jota merkitään $\sqrt[3]{3}$:
+                    <br>
+                    <img src="/kurssit/maa2/kuvat/KAk11.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Kummassakin tapauksessa ratkaisut ilmaistaan juurten avulla.
+                </p> -->
+
+                <p>
+                    Potenssiyhtälöiden ratkaisut ilmaistaan niin sanottujen juurten avulla. 
+                    Toisen asteen potenssiyhtälö opittiin ratkaisemaan neliöjuuren avulla kurssissa <a href="http://kisallioppiminen.fi/kurssit/mab2/luku4/">MAY1</a> (PÄIVITYS UUTEEN MAY1). Esimerkiksi yhtälöllä $$x^2 = 3$$ on kaksi ratkaisua. Positiivista ratkaisua merkitään $\sqrt{3}$. Symmetrian vuoksi toinen ratkaisu on sen vastaluku $-\sqrt{3}$.
+                    <br>
+                    <img src="/kurssit/mab4/kuvat/MAB4kuva073.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Sama käytäntö on voimassa myös muilla potenssiyhtälöillä, joilla on kaksi ratkaisua. Positiivinen ratkaisu voidaan ilmaista juuren avulla ja negatiivinen ratkaisu on sen vastaluku. Tarkemmin juuret määritellään seuraavasti:
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: N:S JUURI</h3>
+                    <ul>
+                        <li> 
+                            Jos $n \geq 2$ on parillinen kokonaisluku ja $a \geq 0$, luvun $a$ <em>$n$:s juuri</em> $\sqrt[n]{a}$ tarkoittaa yhtälön
+                            $$x^n = a$$
+                            positiivista ratkaisua.
+                        </li>
+                        <li> 
+                            Jos $n \geq 3$ on pariton kokonaisluku, luvun $a$ <em>$n$:s juuri</em> $\sqrt[n]{a}$ tarkoittaa yhtälön
+                            $$x^n = a$$
+                            ainoaa ratkaisua.
+                        </li>
+                    </ul>
+                </div>
+
+                <p>
+                    Parillisten juurten tapauksessa määritelmässä on syytä kiinnittää huomiota kahteen asiaan:
+                </p>
+                <ul>
+                    <li>
+                        Jos $n$ on parillinen, $n$:s juuri $\sqrt[n]{a}$ on määritelty vain siinä tapauksessa, että juurrettava $a$ on epänegatiivinen eli $a \geq 0$. Tämä johtuu siitä, että jos juurrettava on negatiivinen eli $a < 0$, ei yhtälöllä $x^n  = a$ ole yhtään ratkaisua eikä $n$:s juuri sen vuoksi ole määritelty.
+                    </li>
+                    <li>
+                        Jos $n$ on parillinen, $n$:s juuri $\sqrt[n]{a}$ tarkoittaa yhtälön $x^n = a$ positiivista ratkaisua. Siis aina $\sqrt[n]{a} \geq 0$. 
+                    </li>
+                </ul>
+                <p>
+                    Parittomilla juurilla tilanne on yksinkertaisempi: ne ovat aina määriteltyjä ja niiden arvo voi olla positiviinen tai negatiivinen.
+                </p>
+            </div>
+            
+            <div class="tehtavat">
+                <div class="tehtava" id="584c5349-a0fc-483d-b529-97c68684eb3f">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#584c5349-a0fc-483d-b529-97c68684eb3f_target">
+                                Juuret
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="584c5349-a0fc-483d-b529-97c68684eb3f_target" class="collapse">
+                        <p>
+                            Mitkä seuraavista väitteistä ovat tosia? Mitkä ovat epätosia? Perustele vastauksesi juurten määritelmän avulla. Saat käyttää apuna potenssiin korotusta mutta et laskimen tai muun teknisen apuvälineen juurinappulaa.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                $\sqrt[4]{625} = 5$
+                            </li>
+                            <li>
+                                $\sqrt[3]{-216} = -6$
+                            </li>
+                            <li>
+                                $\sqrt[8]{256} = -2$
+                            </li>
+                            <li>
+                                $\sqrt{-225} = 15$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#584c5349-a0fc-483d-b529-97c68684eb3f_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="584c5349-a0fc-483d-b529-97c68684eb3f_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Väite $\sqrt[4]{625} = 5$ on tosi, sillä luku $5$ on positiivinen ja toteuttaa yhtälön $x^4 = 625$. Tämä nähdään laskemalla potenssi $5^4$.
+                                </li>
+                                <li>
+                                    Väite $\sqrt[3]{-216} = -6$ on tosi, sillä luku $-6$ toteuttaa yhtälön $x^3 = -216$. Tämä nähdään laskemalla potenssi $(-6)^3$.
+                                </li>
+                                <li>
+                                    Väite $\sqrt[8]{256} = -2$ on epätosi, koska parillinen juuri ei koskaan ole negatiivinen. Tässä kuitenkin $-2$ on negatiivinen, joten se ei voi olla minkään luvun 8. juuri.
+                                </li>
+                                <li>
+                                    Väite $\sqrt{-225} = 15$ on epätosi, sillä $\sqrt{-225}$ ei ole määritelty. Tämä johtuu siitä, että yhtälöllä $x^2 = -225$ ei ole yhtään ratkaisua, koska funktio $f(x) = x^2$ saa vain epänegatiivisia arvoja.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Toiselle ja kolmannelle juurelle käytetään usein omia nimityksiään, jotka liittyvät pinta-alaan ja tilavuuteen:
+                </p>
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: NELIÖJUURI JA KUUTIOJUURI</h3>
+                    <ul>
+                        <li> 
+                            Luvun $a$ toinen juuri $\sqrt[2]{a}$ on nimeltään luvun $a$ <em>neliöjuuri</em>. Sitä merkitään lyhyesti $\sqrt{a}$.
+                        </li>
+                        <li> 
+                            Luvun $a$ kolmas juuri $\sqrt[3]{a}$ on nimeltään luvun $a$ <em>kuutiojuuri</em>.
+                        </li>
+                    </ul>
+                    <img src="/kurssit/mab4/kuvat/MAB4kuva074.png" max-width: 100%; width: auto; height: auto;/>
+                </div>
+
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan potenssiyhtälöiden ratkaisemista juurten avulla.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="67bf055b-c1fc-45b7-90bf-0fc3d6d41fbc">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#67bf055b-c1fc-45b7-90bf-0fc3d6d41fbc_target">
+                                Potenssiyhtälön ratkaisu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="67bf055b-c1fc-45b7-90bf-0fc3d6d41fbc_target" class="collapse">
+                        <p>
+                            Ratkaise seuraavat potenssiyhtälöt. Ilmaise ratkaisut juurten avulla ja sievennettynä.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                $x^3 = -343$
+                            </li>
+                            <li>
+                                $x^4 = 14641$
+                            </li>
+                            <li>
+                                $x^8 = 6561$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#67bf055b-c1fc-45b7-90bf-0fc3d6d41fbc_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="67bf055b-c1fc-45b7-90bf-0fc3d6d41fbc_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Eksponentti on pariton, joten yhtälöllä on yksi ratkaisu $x = \sqrt[3]{-343} = -7$
+                                </li>
+                                <li>
+                                    Eksponentti on parillinen, joten yhtälöllä on kaksi ratkaisua: $x_1 = \sqrt[4]{14641} = 11$ ja $x_2 = -\sqrt[4]{14641} = -11$.
+                                </li>
+                                <li>
+                                    Eksponentti on parillinen, joten yhtälöllä on kaksi ratkaisua. Yhtälö toteutuu, jos $x = \sqrt[8]{6561} = 3$ tai $x = -\sqrt[8]{6561} = -3$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Eksponentiaaliseen malliin liittyvissä sovelluksissa potenssiyhtälökin esiintyy harvoin perusmuodossaan
+                    $$
+                    x^n = a.
+                    $$
+                    Seuraavassa tehtävässä harjoitellaan yhtälön ratkaisemista tilanteessa, jossa yhtälö täytyy ensin muokata perusmuotoon ja ratkaista juurten avulla sen jälkeen.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="d3374562-49f9-4695-94e7-59418a4a96bf">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#d3374562-49f9-4695-94e7-59418a4a96bf_target">
+                                Potenssiyhtälön ratkaisu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="d3374562-49f9-4695-94e7-59418a4a96bf_target" class="collapse">
+                        <p>
+                            Ratkaise seuraavat yhtälöt. Anna vastauksena ratkaisujen tarkat arvot ja likiarvot kolmen merkitsevän numeron tarkkuudella.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                $9x^6 = 37800$
+                            </li>
+                            <li>
+                                $21x^3 + 840 = 0$
+                            </li>
+                            <li>
+                                $x^5 - 81x = 0$
+                            </li>
+                        </ol>
+                        <p>
+                            Vinkki c-kohtaan: erota aluksi yhteinen tekijä ja käytä tulon nollasääntöä (<a href="http://kisallioppiminen.fi/kurssit/mab2/luku4/">MAB2</a>).
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#d3374562-49f9-4695-94e7-59418a4a96bf_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="d3374562-49f9-4695-94e7-59418a4a96bf_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $x = \sqrt[6]{4200} \approx 4{,}02$ tai $x = -\sqrt[6]{4200} \approx -4{,}02$
+                                </li>
+                                <li>
+                                    $x = \sqrt[3]{-40} \approx -3{,}42$
+                                </li>
+                                <li>
+                                    $x = 0$ tai $x = \sqrt[4]{81} = 3$ tai $x = -\sqrt[4]{81} = -3$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Monissa sovellustehtävissä potenssiyhtälön ratkaisuista osa täytyy sulkea pois, koska ne eivät tule kysymykseen sovelluksen tilanteessa. Yksi esimerkki tällaisesta tilanteesta on seuraavassa tehtävässä.
+                </p>
+            </div>
+                
+            <div class="tehtavat">
+                <div class="tehtava" id="7845360d-badd-4f56-b8be-90620244e597">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#7845360d-badd-4f56-b8be-90620244e597_target">
+                                Potenssiyhtälön ratkaisu
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="7845360d-badd-4f56-b8be-90620244e597_target" class="collapse">
+                        <p>
+                            Kauppias haluaa vähentää muovikassien kulutusta kaupassaan niin, että liikkeestä ostettujen tai saatujen muovikassien määrä vähenee kuudessa vuodessa (2019-2025) kymmeneen prosenttiin vuoden 2019 alun määrästä. Tavoitteena on siis, että vuoden 2025 lopussa muovikassien kulutus on vain 10 % vuoden 2019 alun määrästä.
+                        </p>
+                        <p>
+                            Tehtävänä on selvittää, mikä pitäisi vuotuisen vähennystavoitteen olla, jotta tavoitteeseen päästään. Oletetaan, että muovikassien kulutusta onnistutaan pienentämään joka vuosi yhtä monta prosenttia.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Hahmota tilannetta aluksi laskemalla kulutuksen määrä jossakin esimerkkitilanteessa. Esimerkiksi jos vuoden 2019 alussa muovikasseja kuluu 1000 kpl/kk ja kulutus vähentyy 20 % joka vuosi, kuinka paljon muovikasseja kuluu kuuden vuoden kuluttua? Mikä on laskussa käyttämäsi muutoskerroin?
+                            </li>
+                            <li>
+                                Merkitse muovikassien määrää vuoden 2019 alussa esimerkiksi kirjaimella $m$. Mikä on tavoitteen mukainen muovikassien määrä vuoden 2025 lopussa?
+                            </li>
+                            <li>
+                                Merkitse tuntematonta vuosittaista muutoskerrointa esimerkiksi kirjaimella $x$ tai kirjaimella $k$. Muodosta edellisten kohtien avulla yhtälö, joka ilmaisee, että kuudessa vuodessa alkuperäinen määrä vähenee 10 prosenttiin alkuperäisestä määrästä.
+                            </li>
+                            <li>
+                                Ratkaise $c$-kohdan yhtälö. Kuinka monta ratkaisua sillä on? Mitkä niistä ovat tehtävän tilanteen kannalta merkityksellisiä?
+                            </li>
+                            <li>
+                                Mikä vuotuisen vähennystavoitteen pitäisi olla?
+                            </li>   
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#7845360d-badd-4f56-b8be-90620244e597_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="7845360d-badd-4f56-b8be-90620244e597_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $0{,}8^6 \cdot 1000 = 262{,}144$ eli muovikassien määrä on kuuden vuoden kuluttua noin 262 kpl. Muutoskerroin on $0{,}80$.
+                                </li>
+                                <li>
+                                    Jos muovikassien määrä vuoden 2019 alussa on $m$, niin sen pitäisi olla vuoden 2025 lopussa $0{,}10m$ eli 10 prosenttia alkuperäisestä määrästä.
+                                </li>
+                                <li>
+                                    Yhtälö on 
+                                    $$
+                                    x^6 \cdot m = 0{,}1m
+                                    $$
+                                    tai toisilla merkinnöillä
+                                    $$
+                                    k^6 \cdot m = 0{,}1m.
+                                    $$
+                                </li>
+                                <li>
+                                    Yhtälö toteutuu, jos ja vain jos 
+                                    $x = \sqrt[6]{0{,}1} \approx 0{,}68$ tai $x = -\sqrt[6]{0{,}1} \approx -0{,}68$. Yhtälöllä on siis kaksi ratkaisua. Koska $x$ on vuosittaista vähennystä kuvaava muutoskerroin, vain positiivisella ratkaisulla on merkitystä tehtävän kannalta. Muutoskerroin $x \approx 0{,}68$ vastaa 32 % vähennystä. (Huom. $1 - 0{,}68 = 0{,}32$.)
+                                </li>
+                                <li>
+                                    Vuosittaisen vähennystavoitteen pitäisi olla noin 32 %.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl23">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl24">
+                    Geometrinen lukujono
+                </a>
+            </h1>
+        </header>
+        <div id="kpl24" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Eksponenttifunktioita vastaavan tärkeän lukujonojen luokan muodostavat geometriset lukujonot. Myös niiden avulla voidaan mallintaa ja kuvata eksponentiaalista kasvua tai vähenemistä. Geometrisia lukujonoja tutkittiin jo kurssissa <a href="http://kisallioppiminen.fi/kurssit/may1/lukujonotSummat/">MAB02</a> (PÄIVITYS UUTEEN MAB02).
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: GEOMETRINEN LUKUJONO</h3>
+                    <p>
+                        Lukujono $(a_n)$ on <em>geometrinen</em>, jos ja vain jos sen kahden peräkkäisen jäsenen suhde eli osamäärä on aina sama. Toisin sanottuna jos on olemassa sellainen luku $q$, että
+                        $$\frac{a_{n+1}}{a_n} = q$$
+                        kaikilla positiivisilla kokonaisluvuilla $n$. <br>
+                        Suhde $q$ on nimeltään jonon <em>suhdeluku</em>.
+                    </p>
+                </div>  
+
+                <p>
+                    Se, että lukujono on geometrinen, voidaan siis osoittaa tutkimalla peräkkäisten jäsenten $a_{n+1}$ ja $a_n$ suhdetta. Tarkastellaan esimerkiksi jonoa $(a_n)$, jolla $a_n = 5 \cdot 2^n$. Sen peräkkäisten jäsenten suhde on 
+                    $$
+                    \begin{align*}
+                    \frac{\textcolor{red}{a_{n+1}}}{\textcolor{blue}{a_n}} &= \frac{\textcolor{red}{5 \cdot 2^{n+1}}}{\textcolor{blue}{5 \cdot 2^n}} \\[1mm]
+                    &= \frac{\textcolor{red}{5 \cdot 2^{n}\cdot 2}}{\textcolor{blue}{5 \cdot 2^n}} \\[1mm]
+                    &= 2.
+                    \end{align*}$$
+                    Huomataan, että peräkkäisten jäsenten suhde on aina $2$, joten jono $(a_n)$ on geometrinen.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="698c11de-616d-4106-a48f-5e65b693d1dc">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#698c11de-616d-4106-a48f-5e65b693d1dc_target">
+                                Geometrinen lukujono
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="698c11de-616d-4106-a48f-5e65b693d1dc_target" class="collapse">
+                        <p>
+                            Tutki, voiko lukujono olla geometrinen. Jos kysymyksessä on geometrisen lukujonon alku, mitkä ovat jonon kolme seuraavaa jäsentä?
+                        </p>
+                        <ol class="a">
+                            <li> $62$, $50$, $40$, $\ldots$
+                            <li> $1000$, $1100$, $1210$, $\ldots$
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#698c11de-616d-4106-a48f-5e65b693d1dc_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="698c11de-616d-4106-a48f-5e65b693d1dc_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $a_2 : a_1 \approx 0{,}81$ ja $a_3 : a_2 = 0{,}8$, joten lukujono ei ole geometrinen.
+                                </li>
+                                <li> 
+                                    Jonon peräkkäisten jäsenten suhde on vakio $1{,}1$, joten jono voi olla geometrinen. Siinä tapauksessa seuraavat jäsenet ovat $1331$; $1464{,}1$ ja $1610{,}51$.
+                                </li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="teoria">
+                <p>
+                    MAB02-kurssissa opittiin, että geometrisen jonon jäsenet pystytään laskemaan, jos tiedetään jonon ensimmäinen jäsen ja suhdeluku. Kerrataan siihen liittyvä teoreema. 
+                </p>
+
+                <div class="theorem" id="GEOMETRISEN JONON JÄSENET">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Geometrisen jonon $(a_n)$ jäsenet saadaan laskettua, jos tiedetään jonon ensimmäinen jäsen $a_1$ ja jonon suhdeluku $q$, sillä kaikilla positiivisilla kokonaisluvuilla $n$ pätee
+                        $$a_n = a_1q^{n-1}.$$
+                    </p>
+                </div>
+
+                <p>
+                    Teoreeman avulla saadaan lauseke geometrisen jonon niin sanotulle <em>yleiselle jäsenelle</em> $a_n$. Esimerkiksi geometrisen jonon $2$, $6$, $18$, $\ldots$ yleinen jäsen on $a_n = 2 \cdot 3^{n-1}$.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="aede279d-5bfc-437f-b4a7-d692adcf080f">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#aede279d-5bfc-437f-b4a7-d692adcf080f_target">
+                                Geometrinen lukujono
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="aede279d-5bfc-437f-b4a7-d692adcf080f_target" class="collapse">
+                        <p>
+                            Geometrisen lukujonon $(a_n)$ kaksi ensimmäistä jäsentä ovat $a_1 = 250$ ja $a_2 = 225$. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Muodosta lauseke jonon yleiselle jäsenelle $a_n$ teoreeman 9 avulla.
+                            </li>
+                            <li> 
+                                Määritä jonon 38. jäsen $a_{33}$ kahden desimaalin tarkkuudella.
+                            </li>
+                        </ol>   
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#aede279d-5bfc-437f-b4a7-d692adcf080f_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="aede279d-5bfc-437f-b4a7-d692adcf080f_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $a_n = 250 \cdot 0{,}9^{n-1}$
+                                </li>
+                                <li> 
+                                    $a_{33} = 250 \cdot 0{,}9^{37} \approx 5{,}07$ 
+                                </li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="cb85fb95-344b-422b-9d7d-a10335b181df">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#cb85fb95-344b-422b-9d7d-a10335b181df_target">
+                                Geometrinen lukujono
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="cb85fb95-344b-422b-9d7d-a10335b181df_target" class="collapse">
+                        <p>
+                            Geometrisen lukujonon ensimmäinen jäsen on $0{,}4$ ja neljäs jäsen on $10{,}8$.  
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Päättele, mikä on jonon suhdeluku.
+                            </li>
+                            <li> 
+                                Muodosta lauseke jonon yleiselle jäsenelle $a_n$.
+                            </li>
+                            <li>
+                                Onko luku 784,8 lukujonon jäsen? Entä luku 2624,4?
+                            </li>
+                            <li>
+                                Kuinka moni lukujonon jäsen on pienempi kuin 100 000?
+                            </li>
+                        </ol>   
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#cb85fb95-344b-422b-9d7d-a10335b181df_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="cb85fb95-344b-422b-9d7d-a10335b181df_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Suhdeluku $q = 3$. Tämän voi päätellä esimerkiksi seuraavasti: osamäärä $a_4 : a_1 = 27$ muodostuu suhdeluvun kolmannesta potenssista $q \cdot q \cdot q$ (välissä ovat jäsenet $a_2$ ja $a_3$), joten $q = \sqrt[3]{27} = 3$. 
+                                </li>
+                                <li> 
+                                    $a_n = 0{,}4 \cdot 3^{n-1}$
+                                </li>
+                                <li> 
+                                    Luku 784,8 ei ole lukujonon jäsen. Yhtälön $0{,}4 \cdot 3^{n-1} = 784{,}8$ ratkaisuksi ei saada kokonaislukua vaan $n = 1 + \log_3(1962) \approx 7{,}1$. Lasketaan, että $a_{7} = 291{,}6$ ja $a_{8} = 874{,}8$.
+                                    <br>
+                                    Luku 2624,4 on lukujonon 9. jäsen. Tämän voi selvittää esimerkiksi ratkaisemalla yhtälön $a_n = 2624{,}4$ eli yhtälön $0{,}4 \cdot 3^{n-1} = 2624{,}4$. Sen ratkaisu on $n = 9$.
+                                </li>
+                                <li>
+                                    Lukujonon jäsenistä 12 on pienempiä kuin 100 000. Yhtälön $a_n = 100\,000$ eli yhtälön $0{,}4 \cdot 3^{n-1} = 100\,000$ ratkaisuksi saadaan $n = 1 + \log_3(250\,000) \approx 12{,}3$. Lasketaan, että $a_{12} = 70858{,}8$ ja $a_{13} = 212576{,}4$. 
+                                </li>
+                            </ol>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl24">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl25">
+                    Eksponentiaalisen mallin sovelluksia
+                </a>
+            </h1>
+        </header>
+        <div id="kpl25" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Tässä kappaleessa harjoitellaan edellä opiskeltujen erilaisten eksponentiaalisten mallien soveltamista. Ensimmäisissä tehtävissä harjoitellaan muodostamaan eksponentiaalinen malli samassa tilanteessa kahdella erilaisella tavalla. Jatkossa voit käyttää tapaa, joka on sinulle luontevampi.
+                </p>                
+            </div>
+    
+            <div class="tehtavat">
+                <div class="tehtava" id="29487c0d-bf83-4bef-93b4-7d1e9071b1ea">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#29487c0d-bf83-4bef-93b4-7d1e9071b1ea_target">
+                                Eksponentiaalinen malli
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="29487c0d-bf83-4bef-93b4-7d1e9071b1ea_target" class="collapse">
+                        <p>
+                            Radioaktiivista ainetta jodi-131 syntyy uraanin fissiossa ja onnettomuustilanteissa sitä voi levitä ydinvoimaloista ympäristöön. Tätä niin sanottua radiojodia käytetään myös kilpirauhassyövän hoitoon. 
+                        </p>
+                        <p>
+                            Tässä tehtävässä muodostetaan radiojodin hajoamista kuvaava eksponentiaalinen malli ja lasketaan, kuinka monta prosenttia radiojodista on jäljellä 30 päivän kuluttua. 
+                        </p>
+                        <p>
+                            Radiojodin puoliintumisaika on melko tarkasti 8 vuorokautta, eli jäljellä olevan radiojodin määrä puoliintuu aina 8 vuorokauden kuluessa.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Täydennä alla oleva taulukko. Päättele sen avulla, mikä on sopiva muutoskerroin $k$. 
+                                <div align="center">
+                                    <table style="width = 75%">
+                                        <tr>
+                                            <th> Vuorokausia </th>
+                                            <td> 0 </td>
+                                            <td> 8 </td>
+                                            <td> 16 </td>
+                                            <td> 24 </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Radiojodin määrä </th>
+                                            <td> $a$ </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                Muodostetaan eksponenttifunktio $f(x) = k^x$, jonka kantalukuna on a-kohdassa löydetty muutoskerroin $k$. Kuinka pitkä aika vastaa muuttujan arvoa $x = 1$? Entä arvoa $x = 2{,}5$?
+                            </li>
+                            <li>
+                                Kohdassa (b) huomataan, että eksponenttifunktio $f(x) = k^x$ ei suoraan kelpaa jodi-131:n hajoamisen malliksi, jos halutaan, että muuttuja ilmaisee vuorokausien määrää. Täydennä alla oleva taulukko päättelemällä säännönmukaisuus vuorokausien määrän ja eksponentin välillä. Viimeisestä sarakkeesta saat lausekkeen sopivalle eksponentille.
+                                <div align="center">
+                                    <table style="width = 75%">
+                                        <tr>
+                                            <th> Vuorokausia </th>
+                                            <td> 8 </td>
+                                            <td> 16 </td>
+                                            <td> 24 </td>
+                                            <td> $x$ </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Eksponentti </th>
+                                            <td> $1$ </td>
+                                            <td> $2$ </td>
+                                            <td>  </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                             </li>
+                             <li>
+                                Kirjoita lauseke radiojodin hajoamista kuvaavalle eksponenttifunktiolle $f(x)$. Laske, kuinka monta prosenttia radiojodista on jäljellä 30 vuorokauden kuluttua.
+                             </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#29487c0d-bf83-4bef-93b4-7d1e9071b1ea_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="29487c0d-bf83-4bef-93b4-7d1e9071b1ea_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Sopiva muutoskerroin $k = \frac{1}{2} = 0{,}5$. 
+                                    <div align="center">
+                                        <table style="width = 75%">
+                                            <tr>
+                                                <th> Vuorokausia </th>
+                                                <td> 0 </td>
+                                                <td> 8 </td>
+                                                <td> 16 </td>
+                                                <td> 24 </td>
+                                            </tr>
+                                            <tr>
+                                                <th> Radiojodin määrä </th>
+                                                <td> $a$ </td>
+                                                <td> $\frac{1}{2}a$ </td>
+                                                <td> $\frac{1}{4}a$ </td>
+                                                <td> $\frac{1}{8}a$ </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    Eksponenttifunktio on $f(x) = 0{,}5^x$. Koska $f(1) = 0{,}5$, vastaa muuttujan arvo $x=1$ yhtä puoliintumisaikaa eli 8 vuorokautta. Vastaavasti muuttujan arvo $x = 2{,}5$ vastaa 2,5-kertaista puoliintumisaikaa eli $16 + 4 = 10$ vuorokautta. 
+                                </li>
+                                <li>
+                                    <div align="center">
+                                        <table style="width = 75%">
+                                            <tr>
+                                                <th> Vuorokausia </th>
+                                                <td> 8 </td>
+                                                <td> 16 </td>
+                                                <td> 24 </td>
+                                                <td> $x$ </td>
+                                            </tr>
+                                            <tr>
+                                                <th> Eksponentti </th>
+                                                <td> $\frac{8}{8} = 1$ </td>
+                                                <td> $\frac{16}{8} = 2$ </td>
+                                                <td> $\frac{24}{8} = 3$ </td>
+                                                <td> $\frac{x}{8}$ </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                 </li>
+                                 <li>
+                                    Eksponenttifunktion lauseke on $f(x) = 0{,}5^{\frac{x}{8}}$.
+                                    <br>
+                                    Radiojodista on 30 vuorokauden kuluttua jäljellä 
+                                    $$f(30) = 0{,}5^{\frac{30}{8}} = 0{,}5^{3{,}75} \approx 0{,}074$$
+                                    eli noin 7,4 %. 
+                                 </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="tehtavat">
+                <div class="tehtava" id="e7e3f6e3-e9fe-4c93-afe1-43501f1f64a3">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#e7e3f6e3-e9fe-4c93-afe1-43501f1f64a3_target">
+                                Eksponentiaalinen malli
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="e7e3f6e3-e9fe-4c93-afe1-43501f1f64a3_target" class="collapse">
+                        <p>
+                            Radioaktiivista ainetta jodi-131 syntyy uraanin fissiossa ja onnettomuustilanteissa sitä voi levitä ydinvoimaloista ympäristöön. Tätä niin sanottua radiojodia käytetään myös kilpirauhassyövän hoitoon. 
+                        </p>
+                        <p>
+                            Tässä tehtävässä muodostetaan radiojodin hajoamista kuvaava eksponentiaalinen malli ja lasketaan, kuinka nopeasti radiojodin määrä pienenee 20 %. 
+                        </p>
+                        <p>
+                            Radiojodin puoliintumisaika on melko tarkasti 8 vuorokautta, eli jäljellä olevan radiojodin määrä puoliintuu aina 8 vuorokauden kuluessa.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Jos radiojodin määrä alkuhetkellä on $a$, kuinka paljon sitä on jäljellä 8 vuorokauden kuluttua?
+                            </li>
+                            <li>
+                                Jokaisen vuorokauden aikana radiojodin määrä pienenee aina yhtä monta prosenttia. Olkoon vastaava muutoskerroin $k$. Muodosta muutoskertoimen $k$ ja alkuperäisen määrän $a$ avulla lauseke, joka ilmaisee radiojodin määrän 8 vuorokauden kuluttua.
+                            </li>
+                            <li>
+                                Muodosta a- ja b-kohtien avulla yhtälö, jossa radiojodin määrä 8 vuorokauden kuluttua on ilmaistu kahdella erilaisella tavalla. Ratkaise yhtälöstä tuntematon kantaluku $k$ kolmen merkitsevän numeron tarkkuudella. Kuinka monta ratkaisua yhtälöllä on? Ovatko ne kaikki mielekkäitä tehtävän kannalta?
+                            </li>
+                            <li>
+                                Kirjoita lauseke radiojodin hajoamista kuvaavalle eksponenttifunktiolle $f(x)$. Laske, kuinka monta prosenttia radiojodista on jäljellä 30 vuorokauden kuluttua. Saatko saman tuloksen kuin tehtävässä 2.27?
+                            </li>
+                            <li>
+                                Muodosta sopiva yhtälö ja selvitä, kuinka nopeasti radiojodin määrä pienenee 20 %.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#e7e3f6e3-e9fe-4c93-afe1-43501f1f64a3_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="e7e3f6e3-e9fe-4c93-afe1-43501f1f64a3_v" class="collapse">
+                            <ol class="a">
+                            <li>
+                                Kahdeksan vuorokauden kuluttua radiojodia on jäljellä $0{,}5a$.
+                            </li>
+                            <li>
+                                Kahdeksan vuorokauden kuluttua radiojodia on jäljellä $k^8\cdot a$.
+                            </li>
+                            <li>
+                                Yhtälö on 
+                                $$
+                                k^8\cdot a = 0{,}5a.
+                                $$
+                                Koska alkuperäinen määrä $a \neq 0$, voidaan yhtälön molemmat puolet jakaa sillä ja saadaan yhtälö
+                                $$
+                                k^8 = 0{,}5.
+                                $$
+                                Sillä on ratkaisut $k_1 = \sqrt[8]{0{,}5}$ ja $k_2 = -\sqrt[8]{0{,}5}$. Vain positiivinen ratkaisu on tehtävän kannalta mielekäs, koska $k$ on muutoskerroin.
+                                Siis
+                                $$
+                                k \approx 0{,}917.
+                                $$
+                            </li>
+                            <li>
+                                Eksponenttifunktion lauseke on $f(x) = 0{,}917^x$. 
+                                <br>
+                                Radiojodista on 30 vuorokauden kuluttua jäljellä 
+                                $$f(30) = 0{,}917^{30} \approx 0{,}074$$
+                                eli noin 7,4 %. 
+                                Tulos on sama kuin tehtävässä 2.27.
+                            </li>
+                            <li>
+                                Yhtälö on 
+                                $$
+                                0{,}917^x = 0{,}80.
+                                $$
+                                Sen ratkaisu on 
+                                $$
+                                x = \log_{0{,}917}(0{,}80) = \dfrac{\log_{10}(0{,}80)}{\log_{10}(0{,}917)} \approx 2{,}58 
+                                $$
+                                Siis noin 2,58 vuorokautta eli noin 2 vuorokautta ja 14 tuntia. 
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan eksponentiaalisen mallin soveltamisen lisäksi sähköisen ratkaisun tekemistä TI-Nspire-ohjelmalla.
+                </p>
+            </div>
+    
+            <div class="tehtavat">
+                <div class="tehtava" id="283d8cab-25a0-4bb3-9124-9f711dacb5dc">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#283d8cab-25a0-4bb3-9124-9f711dacb5dc_target">
+                                Eksponentiaalinen malli
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="283d8cab-25a0-4bb3-9124-9f711dacb5dc_target" class="collapse">
+                        <p>
+                            Erään asunnon hinnan kehitystä eräässä kasvukeskuksessa kuvaa funktio 
+                            $$
+                            f(x) = 1{,}015^x \cdot 200\,000,
+                            $$
+                            jossa $x$ on aika vuosina vuoden 2019 alusta alkaen. Tässä tehtävässä tutkitaan asunnon hinnan kehitystä.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Määrittele funktio TI-Nspire-ohjelman muistiinpanot-sovelluksessa komennolla f(x):= funktion lauseke.
+                            </li>
+                            <li>
+                                Jaa asiakirja-alue puoliksi ja piirrä toiselle puolelle funktion kuvaaja. Tällöin riittää lausekkeen kohdalle kirjoittaa pelkkä f(x), koska lauseke on jo laskinohjelmiston muistissa.
+                            </li>
+                            <li>
+                                Laske muistiinpanot-sovelluksen puolella, mikä mallin mukaan on asunnon hinta vuonna 2031. 
+                            </li>
+                            <li>
+                                Ratkaise sopivan yhtälön avulla, milloin asunnon hinta ensimmäisen kerran ylittää 270 000 euroa.
+                            </li>
+                            <li>
+                                Tarkista kuvaajasta, että c- ja d-kohtien tulokset ovat järkeviä ja yhdenmukaisia funktion kuvaajan kanssa.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#283d8cab-25a0-4bb3-9124-9f711dacb5dc_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="283d8cab-25a0-4bb3-9124-9f711dacb5dc_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    
+                                </li>
+                                <li>
+                                    Funktion kuvaaja:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva075.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li>
+                                    $f(12) = 1{,}015^{12} \cdot 200\,000 \approx 239 000$ euroa
+                                </li>
+                                <li>
+                                    Yhtälön 
+                                    $$
+                                    1{,}015^{x} \cdot 200\,000 = 270\,000 
+                                    $$
+                                    ratkaisuna saadaan $x \approx 20{,}1$, joten asunnon hinta ylittää 270 000 euron rajan vuoden 2039 aikana.
+                                </li>
+                                <li>
+                                    
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="a18f5f26-e40d-443f-8060-e74faf2bb0a8">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#a18f5f26-e40d-443f-8060-e74faf2bb0a8_target">
+                                Eksponentiaalinen malli
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="a18f5f26-e40d-443f-8060-e74faf2bb0a8_target" class="collapse">
+                        <p>
+                            Euroopan unionissa pyritään vähentämään uusien autojen päästöjä 37,5 % vuodesta 2021 vuoteen 2030. Kuvataan tilannetta mallilla, jossa päästöjä onnistutaan vähentämään joka vuosi yhtä monta prosenttia senhetkisestä määrästä.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Kirjoita TI-Nspire-ohjelman muistiinpanot-sovellukseen tehtävän olennaiset tiedot: Kuinka monta prosenttia vuoden 2030 päästöjen tavoitemäärä on vuoden 2021 päästöjen määrästä? Kuinka monen vuoden aikana päästövähennys tapahtuu?
+                            </li>
+                            <li>
+                                Muodosta muistiinpanot-sovelluksessa yhtälö, josta voit ratkaista vuosittaista vähennystä kuvaavan muutoskertoimen $k$.
+                            </li>
+                            <li>
+                                Muodosta päästöjen määrää kuvaava eksponentiaalinen malli.
+                            </li>
+                            <li>
+                                Jos vuodesta 2021 vuoteen 2025 päästöjä onnistutaan vähentämään 15 %, onko kokonaistavoitteeseen mahdollista päästä samalla vähennystahdilla? Perustele vastauksesi.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#a18f5f26-e40d-443f-8060-e74faf2bb0a8_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="a18f5f26-e40d-443f-8060-e74faf2bb0a8_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Vuoden 2030 päästöjen määrä on 62,5 % vuoden 2021 päästöjen määrästä. Päästövähennys tapahtuu 9 vuoden aikana.
+                                </li>
+                                <li>
+                                    $k^9 = 0{,}625$, joten $k = \sqrt[9]{0{,}625} \approx 0{,}949$.
+                                </li>
+                                <li>
+                                    Päästöjen määrää kuvaa funktio $f(x) = 0{,}949^x \cdot a$, missä $a$ on päästöjen määrä vuonna 2021.
+                                </li>
+                                <li>
+                                    Mallin mukaan vuonna 2025 päästöjen pitäisi olla $f(4) = 0{,}949^4 \cdot a \approx 0{,}81a$ eli vähennyksen pitäisi olla noin 19 %. Jos todellinen päästövähennys on vain 15 %, tavoitteeseen ei päästä samalla tahdilla vaan tahtia pitäisi kiristää. 
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="5f41fa62-0a53-4a2e-97dc-2b813a9e64b1">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#5f41fa62-0a53-4a2e-97dc-2b813a9e64b1_target">
+                                Eksponentiaalinen malli
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="5f41fa62-0a53-4a2e-97dc-2b813a9e64b1_target" class="collapse">
+                        <p>
+                            Eräässä kunnassa havaittiin, että kunnallistekniikkaa ja ympäristöasioita hoitavan viraston miespuoliset työntekijät ansaitsivat vuonna 2018 keskimäärin 2700 euroa ja naispuoliset työntekijät samoissa tehtävissä keskimäärin 2295 euroa. Eroa päätettiin pyrkiä tasoittamaan niin, että naisten palkkoja korotetaan vuosittain 4 % ja miesten palkkoja 2 %. Tehtävänä on selvittää, kuinka monessa vuodessa tällä menettelyllä päästään samaan palkkatasoon naisten ja miesten välillä.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Muodosta yleinen jäsen lukujonolle $(a_n)$, joka kuvaa naisten palkkojen kehitystä, ja lukujonolle $(b_n)$, joka kuvaa miesten palkkojen kehitystä. Mitä kirjain $n$ ilmaisee?
+                            </li>
+                            <li>
+                                Muodosta yhtälö, josta saat ratkaistua, kuinka monen korotuksen jälkeen palkat ovat mahdollisimman lähellä toisiaan. Ratkaise yhtälö sopivalla apuvälineellä tai käsin. Kuinka monta korotuskertaa tarvitaan, jotta palkat ovat mahdollisimman lähellä toisiaan?
+                            </li>
+                            <li>
+                                Minkä suuruisia naisten ja miesten palkat ovat tässä mallissa silloin, kun ne ovat mahdollisimman lähellä toisiaan?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#5f41fa62-0a53-4a2e-97dc-2b813a9e64b1_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="5f41fa62-0a53-4a2e-97dc-2b813a9e64b1_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    $a_n = 2295 \cdot 1{,}04^{n}$ ja $b_n = 2700 \cdot 1{,}02^n$, missä $n$ ilmaisee, kuinka monta vuotta on kulunut vuodesta 2018.
+                                </li>
+                                <li>
+                                    Yhtälön 
+                                    $$2295 \cdot 1{,}04^{n} = 2700 \cdot 1{,}02^n$$ 
+                                    ratkaisuna saadaan $n \approx 8{,}4$. Korotuksia tarvitaan siis 8 kappaletta. Palkkatasa-arvo on tämän mallin mukaan lähimpänä vuonna 2026.
+                                </li>
+                                <li>
+                                    Naisten palkka on $a_8 = 2295 \cdot 1{,}04^{8} \approx 3141$ euroa ja miesten palkka $b_8 = 2700 \cdot 1{,}02^8 \approx 3163$ euroa. Palkkojen ero on siis noin 22 euroa. Jos korotuksia jatketaan, huomataan, että 9. korotuksen jälkeen palkkojen ero on jo noin 40 euroa naisten eduksi.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl25">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+        <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku3-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku3-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+
+            <div class="tehtava" id="9ca9ebe5-d5f9-4520-8844-16bd00de4e91">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#9ca9ebe5-d5f9-4520-8844-16bd00de4e91_target">
+                            Eksponenttifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="9ca9ebe5-d5f9-4520-8844-16bd00de4e91_target">
+                    <p>
+                        Erään rahaston todellinen tuotto-odotus on vuodessa 4,5 %. Muodosta funktio, joka kuvaa rahastossa olevaa rahamäärää t vuoden kuluttua talletuksen laittamisesta, kun talletuksen suuruus on 800 euroa. Laske talletuksen suuruus 8 vuoden kuluttua talletuksen alkamisesta. 
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#9ca9ebe5-d5f9-4520-8844-16bd00de4e91_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="9ca9ebe5-d5f9-4520-8844-16bd00de4e91_v" class="collapse">
+                        <p> 
+						$f(t)=1,045^t \cdot 800$, 8 vuoden kuluttua talletuksen arvo on 1137,68 euroa.
+						</p>
+					</div>
+                </div>
+            </div> 
+
+            <div class="tehtava" id="c00e032a-e748-43fd-bde7-243f6cae33f6">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#c00e032a-e748-43fd-bde7-243f6cae33f6_target">
+                            Eksponenttifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="c00e032a-e748-43fd-bde7-243f6cae33f6_target">
+                    <p>
+                        Maija suunnittelee ensiasunnon ostamista 10 vuoden kuluttua. Hän haluaa, että omaa pääomaa asuntoon on tällöin 9000 euroa, mikä on noin 5 prosenttia arvioidun asunnon hinnasta. Kuinka paljon Maijan pitäisi sijoittaa rahastoon nyt, kun rahaston tuotto-odotus on 4,7 % vuodessa, jos muita sijoituksia ei 10 vuoden aikana tehdä?
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#c00e032a-e748-43fd-bde7-243f6cae33f6_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="c00e032a-e748-43fd-bde7-243f6cae33f6_v" class="collapse">
+                        <p> 
+						Noin 5700 euroa. Ratkaistaan yhtälö $1,047^{10} \cdot x = 9000$.
+						</p>
+					</div>
+
+                </div>
+            </div>
+            <div class="tehtava" id="0c8f810d-f914-4bd2-b8d6-33805896b4a4">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#0c8f810d-f914-4bd2-b8d6-33805896b4a4_target">
+                            Eksponenttifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="0c8f810d-f914-4bd2-b8d6-33805896b4a4_target">
+                    <p>
+                        Perhe suunnittelee aloittavansa säästämisen vähentämällä kuukausittaisia menojaan aina yhdellä prosentilla kahden vuoden ajan. Kuinka monta prosenttia alkuperäisiin menoihin nähden perhe saisi säästöön viimeisenä säästökuukautena? Onko säästämissuunnitelma realistinen?
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#0c8f810d-f914-4bd2-b8d6-33805896b4a4_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="0c8f810d-f914-4bd2-b8d6-33805896b4a4_v" class="collapse">
+                        <p> 
+						Noin 21 %. Koska asumismenot ovat suurin kuluerä menoissa ja niistä on kohtuullisen vaikeaa säästää on viidenneksen säästämistavoite epärealistinen.
+						</p>
+					</div>
+                </div>
+            </div>
+            <div class="tehtava" id="2cd10cf2-f9aa-4897-b73f-f10265cfa320">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#2cd10cf2-f9aa-4897-b73f-f10265cfa320_target">
+                            Eksponenttifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="2cd10cf2-f9aa-4897-b73f-f10265cfa320_target">
+                    <p>
+                        Erään eläinlajin määrä vuonna 2018 oli 2500 yksilöä ja vuonna 2019 2900 yksillöä. Muodosta yksilöiden määrää kuvaava funktio, jos oletetaan, että kasvu on eksponentiaalista. Kuinka paljon yksilöitä olisi vuonna 2030? Kuinka paljon yksilöitä olisi ollut vuonna 2000?
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#2cd10cf2-f9aa-4897-b73f-f10265cfa320_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="2cd10cf2-f9aa-4897-b73f-f10265cfa320_v" class="collapse">
+                        <p> 
+						$f(x)=\left(\frac{29}{25}\right)^x \cdot 2500$, missä $x$ on aika vuosina vuodesta 2018 alkaen. Vuonna 2030 yksilöitä olisi noin 15000. Vuonna 2000 yksilöitä olisi ollut noin 170 ($f(-18)=172,86\ldots$).
+						</p>
+					</div>
+                </div>
+            </div>
+            <div class="tehtava" id="fac73ff4-04ec-43a1-80cb-e5b4c135c0b2">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#fac73ff4-04ec-43a1-80cb-e5b4c135c0b2_target">
+                            Eksponenttifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="fac73ff4-04ec-43a1-80cb-e5b4c135c0b2_target">
+                    <p>
+                        Asuntojen hintaa Helsingissä kuvaa likimain funktio $f(x)=1,024^x \cdot a$, missä a on asunnon hinta vuoden 2019 alussa. Kuinka monta prosenttia vuoden 2021 alussa ostettu asunto olisi kallistunut vuoden 2030 alkuun mennessä?
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#fac73ff4-04ec-43a1-80cb-e5b4c135c0b2_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="fac73ff4-04ec-43a1-80cb-e5b4c135c0b2_v" class="collapse">
+                        <p> 
+						Noin 24 %.
+						</p>
+					</div>
+                </div>
+            </div>
+            <div class="tehtava" id="95d58162-138d-4ce3-9775-d27141d8c134">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#95d58162-138d-4ce3-9775-d27141d8c134_target">
+                            Eksponenttifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="95d58162-138d-4ce3-9775-d27141d8c134_target">
+                    <p>
+                        Ohessa on erään eksponenttifunktion kuvaaja. Muodosta kuvaajan avulla funktion lauseke ja perustele, miksi se toimii. Vihje: Liukusäätimellä onnistut haarukoimaan kantalukua mukavasti. Yritä myös keksiä, miten voisit ratkaista kantaluvun yhtälön avulla. 
+                    </p>
+					<img src="/kurssit/mab4/kuvat/eksponenttifunktio-tehtava.png" max-width: 100%; width: auto; height: auto;/>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#95d58162-138d-4ce3-9775-d27141d8c134_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="95d58162-138d-4ce3-9775-d27141d8c134_v" class="collapse">
+                        <p> 
+						$f(x)=1,5^x \cdot 20$. Vakiokerroin kuvaa eksponenttifunktion $y$-akselin leikkauspisteen $y$-koordinaattia. 
+						Kantaluvun saa selville esim. ratkomalla yhtälön $x^1 \cdot 20 = 30$ tai $x^2 \cdot 20 = 45$.
+						</p>
+					</div>
+				</div>
+            </div>
+            <div class="tehtava" id="fb152582-c79a-4ee1-b3c8-27e8b5d85e5b">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#fb152582-c79a-4ee1-b3c8-27e8b5d85e5b_target">
+                            Eksponenttifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="fb152582-c79a-4ee1-b3c8-27e8b5d85e5b_target">
+                    <p>
+                        Keksi tehtävänanto, jonka ratkaisu olisi ohessa oleva eksponentiaalinen malli.
+					</p>
+					<ol class="a">
+						<li>$f(t)=1,035^x \cdot 2500$</li>
+						<li>$g(x)=0,7^x \cdot a$</li>
+						<li>$h(x)=3^x$</li>
+					</ol>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#fb152582-c79a-4ee1-b3c8-27e8b5d85e5b_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="fb152582-c79a-4ee1-b3c8-27e8b5d85e5b_v" class="collapse">
+                        <p> 
+						Esimerkiksi:</p>
+						<ol class="a">
+						<li>Muodosta funktio, joka kuvaa tilillä olevaa rahamäärää $x$ vuoden kuluttua talletuksen aloittamisesta, kun kun vuosikorko on 3,5 % ja talletettava summa on 2500 euroa.</li>
+					</ol>
+					</div>
+                </div>
+            </div>
+            <div class="tehtava" id="b43a4f14-ab45-4a02-b2bf-4bb179329c80">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#b43a4f14-ab45-4a02-b2bf-4bb179329c80_target">
+                            Eksponenttiyhtälöt ja logaritmi
+                        </a>
+                    </h1>
+                </header>
+                <div id="b43a4f14-ab45-4a02-b2bf-4bb179329c80_target">
+                    <p>
+                        Ratkaise yhtälö A-osan tapaan.
+                    </p>
+					<ol class="a">
+						<li>$2 \cdot 3^x=18$</li>
+						<li>$\frac{4^x}{5}=2$</li>
+						<li>$2^{x+1}=8^x$</li>
+					</ol>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#b43a4f14-ab45-4a02-b2bf-4bb179329c80_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="b43a4f14-ab45-4a02-b2bf-4bb179329c80_v" class="collapse">
+						<ol class="a">
+						<li>$x=2$</li>
+						<li>$x=\log_4(10)$</li>
+						<li>$x=\frac{1}{2}$</li>
+					</ol>
+					</div>
+                </div>
+            </div>
+            <div class="tehtava" id="1b76171c-4293-45b9-aa87-a3969b77b16c">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#1b76171c-4293-45b9-aa87-a3969b77b16c_target">
+                            Eksponenttiyhtälöt ja logaritmi
+                        </a>
+                    </h1>
+                </header>
+                <div id="1b76171c-4293-45b9-aa87-a3969b77b16c_target">
+                    <p>
+                        Ratkaise seuraavat yhtälöt graafisesti eli piirtämällä sopivien funktioiden kuvaajat.
+                    </p>
+					<ol class="a">
+						<li>$3^x=20$</li>
+						<li>$25 \cdot 1,3^x=100$</li>
+						<li>$\frac{3^x}{5}=7$</li>
+					</ol>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#1b76171c-4293-45b9-aa87-a3969b77b16c_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="1b76171c-4293-45b9-aa87-a3969b77b16c_v" class="collapse">
+					<p>
+					Kuvaajien avulla saadaan likimääräiset ratkaisut
+					</p>
+						<ol class="a">
+						<li>$x\approx 2,7$</li>
+						<li>$x\approx 5,3$</li>
+						<li>$x\approx 3,2$</li>
+					</ol>
+					</div>
+                </div>
+            </div>
+            <div class="tehtava" id="f0be9f5a-4ef6-48fc-8aec-331234249424">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#f0be9f5a-4ef6-48fc-8aec-331234249424_target">
+                            Eksponenttiyhtälöt ja logaritmi
+                        </a>
+                    </h1>
+                </header>
+                <div id="f0be9f5a-4ef6-48fc-8aec-331234249424_target">
+                    <p>
+                        Säästötilillä olevaa rahamäärää kuvaa funktio $f(x)=2000 \cdot 1,0065^x$, missä $x$ on vuosien lukumäärä vuodesta 2019 alkaen. Milloin tilillä on ensimmäisen kerran rahaa yli 3000 euroa?
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#f0be9f5a-4ef6-48fc-8aec-331234249424_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="f0be9f5a-4ef6-48fc-8aec-331234249424_v" class="collapse">
+					<p>
+					Vuonna 2082.
+					</p>
+					</div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="73e49782-13d4-4e4b-a0e2-7f7226269bce">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#73e49782-13d4-4e4b-a0e2-7f7226269bce_target">
+                             Eksponenttiyhtälöt ja logaritmi
+                        </a>
+                    </h1>
+                </header>
+                <div id="73e49782-13d4-4e4b-a0e2-7f7226269bce_target">
+                    <p>
+                        Nuoret perustavat kahvilan kesälomansa ajaksi. He laittavat mainoksen kahvilastaan neljälle kaverilleen, joista kukin laittaa mainoksen eteenpäin taas neljälle kaverilleen tunnin kuluttua mainoksen saamisesta. Näin mainoksen jakaminen jatkuu. Kuinka monen tunnin kuluttua mainoksen laittamisesta 10000 ihmistä on nähnyt mainoksen, kun oletetaan, että mainos ei mene samalle henkilölle useaan kertaan?
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#73e49782-13d4-4e4b-a0e2-7f7226269bce_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="73e49782-13d4-4e4b-a0e2-7f7226269bce_v" class="collapse">
+					<p>
+					Seitsemän tunnin kuluttua. Kyseessä on geometrinen summa.
+					</p>
+					</div>
+                </div>
+            </div>
+ 
+            <div class="tehtava" id="bcb100f9-0f8d-4e14-9501-2d435be1dddd">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#bcb100f9-0f8d-4e14-9501-2d435be1dddd_target">
+                            Eksponenttiyhtälöt ja logaritmi
+                        </a>
+                    </h1>
+                </header>
+                <div id="bcb100f9-0f8d-4e14-9501-2d435be1dddd_target">
+                    <p>
+                        EU on linjannut päästötavoitteissa, että kasvihuonepäästöjä tulisi vähentää 40 % vuoden 1990 tasosta vuoteen 2030 mennessä. Jos tavoite saavutetaan, niin milloin kasvihuonepäästöjen määrä on puolet vuoden 1990 tasosta?
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#bcb100f9-0f8d-4e14-9501-2d435be1dddd_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="bcb100f9-0f8d-4e14-9501-2d435be1dddd_v" class="collapse">
+					<p>
+					Vuoden 2044 aikana. 
+					</p>
+					</div>
+                </div>
+            </div>
+            <div class="tehtava" id="ef1302e8-4e1b-4dac-8549-336bdc7a5a41">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#ef1302e8-4e1b-4dac-8549-336bdc7a5a41_target">
+                            Eksponenttiyhtälöt ja logaritmi
+                        </a>
+                    </h1>
+                </header>
+                <div id="ef1302e8-4e1b-4dac-8549-336bdc7a5a41_target">
+                    <p>
+                        Useissa rahapeleissä on niin sanottu tuplausmahdollisuus: jos arvaa kortin suuruusluokan oikein, tuplaa voittosummansa, ja jos väärin, niin menettää voittosummansa. Paula voitti hedelmäpelissä 4 euroa. Kuinka monta kertaa hänen tuplauksensa onnistui, kun lopullinen voittosumma oli 128 euroa?
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#ef1302e8-4e1b-4dac-8549-336bdc7a5a41_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="ef1302e8-4e1b-4dac-8549-336bdc7a5a41_v" class="collapse">
+					<p>
+					Viisi kertaa. 
+					</p>
+					</div>
+                </div>
+            </div>
+			            <div class="tehtava" id="c7a9cda5-9c5a-4dac-a7a1-d771fa38ce1a">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#c7a9cda5-9c5a-4dac-a7a1-d771fa38ce1a">
+                            Potenssiyhtälöt
+                        </a>
+                    </h1>
+                </header>
+                <div id="c7a9cda5-9c5a-4dac-a7a1-d771fa38ce1a_target">
+                    <p>
+                        Ratkaise yhtälöt A-osan tapaan.
+                    </p>
+					<ol class="a">
+						<li>$3x^5=8$</li>
+						<li>$\frac{x^4}{3}=6$</li>
+						<li>$k^7 \cdot 8000=16000$</li>
+						<li>$p^8 \cdot 4-20=4$</li>
+					</ol>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#c7a9cda5-9c5a-4dac-a7a1-d771fa38ce1a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="c7a9cda5-9c5a-4dac-a7a1-d771fa38ce1a_v" class="collapse">
+					<ol class="a">
+						<li>$x=\sqrt[5]{\frac{8}{3}}$</li>
+						<li>$x=\pm\sqrt[4]{18}$</li>
+						<li>$k=\sqrt[7]{2}$</li>
+						<li>$p=\pm\sqrt[8]{6}$</li>
+					</ol>
+					</div>
+                </div>
+            </div>
+            <div class="tehtava" id="ccb4490e-c271-435b-8bd2-029371e32cb8">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#ccb4490e-c271-435b-8bd2-029371e32cb8_target">
+                            Potenssiyhtälöt
+                        </a>
+                    </h1>
+                </header>
+                <div id="ccb4490e-c271-435b-8bd2-029371e32cb8_target">
+                    <p>
+                        Osakkeen hinta muuttuu viikon aikana seuraavasti: +1,5 %, -0,8 %, +2,8 %, +0,2 %, -4,5 %. 
+                    </p>
+					<ol class="a">
+						<li>Kuinka monta prosenttia kokonaismuutos oli ja mihin suuntaan?</li>
+						<li>Kuinka monta prosenttia muutos oli keskimäärin päivässä, jos oletetaan muutoksen pysyvän suhteellisesta samanlaisena?</li>
+					</ol>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#ccb4490e-c271-435b-8bd2-029371e32cb8_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="ccb4490e-c271-435b-8bd2-029371e32cb8_v" class="collapse">
+					<ol class="a">
+						<li>1,0 % laski</li>
+						<li>0,2 %. Ratkaisu saadaan yhtälöstä $k^5=0,99047\ldots$</li>
+					</ol>
+					</div>
+                </div>
+            </div>
+            <div class="tehtava" id="d6427d99-5ee6-4b6d-872d-d2255c97722a">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#d6427d99-5ee6-4b6d-872d-d2255c97722a_target">
+                            Potenssiyhtälöt
+                        </a>
+                    </h1>
+                </header>
+                <div id="d6427d99-5ee6-4b6d-872d-d2255c97722a_target">
+                    <p>
+                        City-kanit olivat Helsingissä ongelma 2000-luvun alkupuolella. Vuonna 2007 kaneja oli 2000 kappaletta ja vuonna 2009 7000 kappaletta. Kuinka monta prosenttia kanien määrä kasvoi vuodessa, kun oletetaan kasvun olleen prosentuaalisesti samansuuruista?
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#d6427d99-5ee6-4b6d-872d-d2255c97722a_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="d6427d99-5ee6-4b6d-872d-d2255c97722a_v" class="collapse">
+					<p>
+					87 %
+					</p>
+					</div>
+                </div>
+            </div>
+            <div class="tehtava" id="0f628efe-b49f-4261-a19f-bcbc7ea13f1c">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#0f628efe-b49f-4261-a19f-bcbc7ea13f1c_target">
+                            Potenssiyhtälöt
+                        </a>
+                    </h1>
+                </header>
+                <div id="0f628efe-b49f-4261-a19f-bcbc7ea13f1c_target">
+                    <p>
+                        Markku osti sijoitusasunnon vuonna 2000 150000 eurolla. Vuonna 2019 hän myi sen 320000 eurolla. Mikä oli keskimääräinen vuotuinen kasvuprosentti asunnon hinnassa?
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#0f628efe-b49f-4261-a19f-bcbc7ea13f1c_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="0f628efe-b49f-4261-a19f-bcbc7ea13f1c_v" class="collapse">
+					<p>
+					4,1 %
+					</p>
+					</div>
+                </div>
+            </div>
+            <div class="tehtava" id="0245a770-ccde-43b5-bf60-12f696fa29fd">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#0245a770-ccde-43b5-bf60-12f696fa29fd_target">
+                            Potenssiyhtälöt
+                        </a>
+                    </h1>
+                </header>
+                <div id="0245a770-ccde-43b5-bf60-12f696fa29fd_target">
+                    <p>
+                        Tshernobylin ydinvoimalaonnettomuus tapahtui vuonna 1986. Vuonna 2019 arvioitiin, että Suomessa onnettomuuden seurauksena ollut säteily on puolittunut. Kuinka monta prosenttia säteilystä poistuu vuodessa? Milloin säteilyn määrä on enää kolmasosan onnettomuuden jälkeisestä määrästä?
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#0245a770-ccde-43b5-bf60-12f696fa29fd_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="0245a770-ccde-43b5-bf60-12f696fa29fd_v" class="collapse">
+					<p>
+					2,1 %, vuonna 2030
+					</p>
+					</div>
+                </div>
+            </div>
+            
+            <div class="tehtava" id="e0c310b0-3464-4b0e-ba89-b5ef536e4ed9">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#e0c310b0-3464-4b0e-ba89-b5ef536e4ed9_target">
+                            Geometrinen lukujono
+                        </a>
+                    </h1>
+                </header>
+                <div id="e0c310b0-3464-4b0e-ba89-b5ef536e4ed9_target">
+                    <p>
+                        Lukujonon 3. jäsen on 5 ja 7. jäsen on 80. Muodosta jonon yleinen jäsen. Huomaa kaksi eri vaihtoehtoa. 
+                    </p>
+					<h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#e0c310b0-3464-4b0e-ba89-b5ef536e4ed9_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="e0c310b0-3464-4b0e-ba89-b5ef536e4ed9_v" class="collapse">
+					<p>
+					$a_n=\frac{5}{4}\cdot 2^{n-1}$ tai $a_n=\frac{5}{4}\cdot (-2)^{n-1}$
+					</p>
+					</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku3-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku3-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="a9f1a013-5c68-4446-b91e-c7cd184b9376">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#a9f1a013-5c68-4446-b91e-c7cd184b9376_target">
+                            [Lyhyt matematiikka, kevät 2018, tehtävä 10.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="a9f1a013-5c68-4446-b91e-c7cd184b9376_target">
+                    <p>
+                        Iiris on löytänyt uuden autonsa arvon alenemista kuvaavan taulukon. Hän syöttää tiedot
+						ohjelmaan, joka piirtää auton arvoa kuvaavat pisteet ajan funktiona yhden vuoden välein.
+						Auton ostaminen tapahtuu taulukossa vuonna 0.
+					</p>
+					<img src="/kurssit/mab4/kuvat/k2018t10.png" max-width: 100%; width: auto; height: auto;/>
+					<ol class="a">
+						<li>Selitä sanallisesti, millä tavalla auton arvo näyttää alenevan ajan funktiona.</li>
+						<li>Muodosta kaava, joka kuvaa sitä, miten taulukon lukuarvot on laskettu. Voit käyttää muotoa $a_n = f(n)$ olevaa lukujonoa, kun $a_n$ on auton arvo vuonna $n$.</li>
+						<li>Kuinka monen vuoden jälkeen auton ostamisesta sen arvo on kaavasi mukaan laskenut alle 2 000 euron?</li>
+					</ol>
+				</div>
+            </div>
+			<div class="tehtava" id="4893d769-93cc-4c7e-88ab-9058ef237c42">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#4893d769-93cc-4c7e-88ab-9058ef237c42_target">
+                            [Lyhyt matematiikka, syksy 2017, tehtävä 9.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="4893d769-93cc-4c7e-88ab-9058ef237c42_target">
+                    <p>
+                        Säätiö haluaa tukea internet-turvallisuutta seitsemän vuoden aikana yhteensä 800 000
+						eurolla. Rahat jaetaan niin, että jaettava summa kasvaa edellisestä vuodesta aina yhtä
+						monta prosenttia.
+					</p>
+					<ol class="a">
+						<li>Oletetaan, että jaettavan summan vuotuinen kasvuprosentti on 10. Mikä pitää ensimmäisenä vuonna jaettavan summan olla, jotta koko 800 000 tulee seitsemässä vuodessa jaetuksi?</li>
+						<li>Oletetaan, että ensimmäisenä vuonna jaetaan 70 000 euroa. Mikä pitää vuotuisen kasvuprosentin olla, jotta koko 800 000 euroa tulee seitsemässä vuodessa jaetuksi?</li>
+						<li>Muodosta kysymykseen liittyvä yhtälö ja ratkaise se esimerkiksi kokeilemalla. Anna vastaus yhden prosenttiyksikön tarkkuudella.</li>
+					</ol>
+                </div>
+            </div>
+			<div class="tehtava" id="582694f8-10cb-4698-b2ae-5143d61f27fc">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#582694f8-10cb-4698-b2ae-5143d61f27fc_target">
+                            [Lyhyt matematiikka, kevät 2017, tehtävä 13.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="582694f8-10cb-4698-b2ae-5143d61f27fc_target">
+                    <p>
+                        Eksponentiaalista mallia voidaan käyttää monien luonnontieteen ilmiöiden kuvaamiseen.
+					</p>
+					<ol class="a">
+						<li>Anna esimerkki ilmiöstä, jonka kuvaamiseen malli soveltuu.</li>
+						<li>Anna esimerkki ilmiöstä, jonka kuvaamiseen malli ei sovellu.</li>
+					</ol>
+					<p>
+						Mallin soveltuvuus ja soveltumattomuus pitää perustella.
+                    </p>
+                </div>
+            </div>
+			<div class="tehtava" id="be08222f-0699-4528-a0ab-3105cd205a05">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#be08222f-0699-4528-a0ab-3105cd205a05_target">
+                            [Lyhyt matematiikka, kevät 2015, tehtävä 8.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="be08222f-0699-4528-a0ab-3105cd205a05_target">
+                    <p>
+                        Ravintoliuoksessa kasvatettavan bakteeripopulaation yksilömäärä $N(t)$ kasvaa eksponentiaalisen mallin $N(t)=1000 \cdot 1,25^t$, mukaisesti, kun aika $t$ ilmoitetaan tunteina.
+                    </p>
+					<ol class="a">
+						<li>Mikä on populaation koko 24 tunnin kuluttua? Anna vastaus tuhannen bakteerin tarkkuudella.</li>
+						<li>Kuinka monta prosenttia populaatio kasvaa jokaisen tunnin aikana?</li>
+						<li>Kuinka monta tuntia kestää, että populaation koko ylittää miljoonan?</li>
+					</ol>
+                </div>
+            </div>
+			<div class="tehtava" id="af6d8732-cf4b-11e9-bb65-2a2ae2dbcce4">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#af6d8732-cf4b-11e9-bb65-2a2ae2dbcce4_target">
+                            [Lyhyt matematiikka, syksy 2014, tehtävä 2.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="af6d8732-cf4b-11e9-bb65-2a2ae2dbcce4_target">
+                    <p>
+                        Mikä luku $x$ toteuttaa annetun yhtälön?
+                    </p>
+					<ol class="a">
+						<li>$2^x = 2$</li>
+						<li>$2^x=\frac{1}{2}$</li>
+						<li>$2^x=8^2$</li>
+						<li>$3^x=\frac{1}{3^5}$</li>
+						<li>$10^x=1000$</li>
+						<li>$10^x=0,01.</li>
+					</ol>
+                </div>
+            </div>
+			<div class="tehtava" id="af6df258-cf4b-11e9-bb65-2a2ae2dbcce4">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#faf6df258-cf4b-11e9-bb65-2a2ae2dbcce4_target">
+                            [Lyhyt matematiikka, syksy 2012, tehtävä 12.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="af6df258-cf4b-11e9-bb65-2a2ae2dbcce4_target">
+                    <p>
+                        Maailman väkiluvun kasvua kuvataan usein eksponentiaalisen mallin avulla. Vuonna 2004
+						väkiluku oli 6,4 miljardia ja vuonna 2010 noin 6,8 miljardia. Minä vuonna väkiluku ylittää
+						mallin mukaan 10 miljardin rajan?
+                    </p>
+                </div>
+            </div>
+			<div class="tehtava" id="af6df456-cf4b-11e9-bb65-2a2ae2dbcce4">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#af6df456-cf4b-11e9-bb65-2a2ae2dbcce4_target">
+                            [Lyhyt matematiikka, syksy 2014, tehtävä 12.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="af6df456-cf4b-11e9-bb65-2a2ae2dbcce4_target">
+                    <p>
+                        Yhdistyneet kansakunnat asetti vuosituhannen vaihteessa yhdeksi tavoitteekseen, että
+						maailman hiilidioksidipäästöt olisivat vuonna 2015 merkittävästi pienemmät kuin vuonna
+						1990. Tavoite ei näytä toteutuvan, sillä vuosina 1990−2008 päästöjen määrä kasvoi 39 %.
+						Oletetaan, että päästöjen vuotuinen kasvuprosentti on ollut aikavälillä 1990−2008 vakio.
+						Kuinka monta prosenttia päästöt kasvavat yhteensä vuosina 1990−2015, jos niiden vuotuinen kasvuprosentti pysyy edelleen samana? Anna vastaus prosenttiyksikön tarkkuudella.
+                    </p>
+                </div>
+            </div>
+			<div class="tehtava" id="af6df5be-cf4b-11e9-bb65-2a2ae2dbcce4">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#faf6df5be-cf4b-11e9-bb65-2a2ae2dbcce4_target">
+                            [Lyhyt matematiikka, syksy 2013, tehtävä 10.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="af6df5be-cf4b-11e9-bb65-2a2ae2dbcce4_target">
+                    <p>
+                        Maalämpöpumppuja myyvän yrityksen liikevaihto kymmenkertaistui kahdessakymmenessä
+						vuodessa. Kuinka monta prosenttia liikevaihto kasvoi vuodessa, kun vuotuinen kasvuprosentti pysyi koko ajan samana? Anna vastaus prosentin kymmenesosan tarkkuudella.
+                    </p>
+                </div>
+            </div>
+			<div class="tehtava" id="af6df708-cf4b-11e9-bb65-2a2ae2dbcce4">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#af6df708-cf4b-11e9-bb65-2a2ae2dbcce4_target">
+                            [Lyhyt matematiikka, kevät 2013, tehtävä 8.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="af6df708-cf4b-11e9-bb65-2a2ae2dbcce4_target">
+                    <p>
+                        <em>(Tehtävästä on jätetty pois kuvituksena toiminut taulukko.)</em>
+                    </p>
+					<p>
+                        Vuonna 2005 yksityishenkilöiden maksuhäiriöiden lukumäärä Suomessa oli 422 500, ja vuonna 2011 se oli 1 460 500.
+                    </p>
+					<ol class="a">
+						<li>Kuinka monta prosenttia maksuhäiriöiden lukumäärä kasvoi tällä aikavälillä? Anna vastaus prosentin tarkkuudella.</li>
+						<li>Vuonna 2011 ministeriö asetti tavoitteeksi vähentää maksuhäiriöiden määrän neljässä vuodessa takaisin vuoden 2005 tasolle. Kuinka monta prosenttia määrä vähenee vuodessa, kun vuotuinen vähenemisprosentti on sama? Anna vastaus prosentin kymmenesosan tarkkuudella.</li>
+					</ol>
+				</div>
+            </div>
+			
+			
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#L2itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="L2itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä seuraavat tehtävät.
+            </p>
+
+		<p>
+                1. Ratkaise A-osan tapaan ja kirjoita ratkaisu Abitin editorilla osoitteessa <a href="https://kaava.mafynetti.fi">kaava.mafynetti.fi. </a>.<br>
+			 Ratkaise alla olevat yhtälöt. Kohdissa a, b ja d anna vastauksena tarkan arvon lisäksi likiarvo kolmen merkitsevän numeron tarkkuudella.
+            </p>        
+            <ol class="a">
+                <li>$2x^4-10=0=0$</li>
+		    <li> $\dfrac{x^5}{3}+2=0$</li>
+		    <li>$2^{x-2}=8$</li>
+		<li> $2\cdot 3^x=16$</li>
+		   
+            </ol>
+		<p> TÄHÄN PISTEYTYS, KATSO MAB2 LOPS2019 LUKU 2. </p>
+		
+            <p>2. Ratkaise B-osan tapaan ja kirjoita ratkaisu TI Nspiren Muistiinpanot -sovelluksella. <br />
+                   Asuntojen hinnat kasvavat pääkaupunkiseudulla noin 1,7 % vuodessa. 
+            <ol class="a">
+               <li>Muodosta malli, joka kuvaa asunnon hintaa x vuoden kuluttua vuodesta 2019, kun vuonna 2019 asunnon hinta oli 200 000 euroa.</li>
+               <li> Mikä on asunnon hinta vuonna 2030?</li>
+		    <li> Milloin asunnon arvo ylittää 250 000 euroa?</li>
+            </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2itsearviointi1_v">
+                            Pisteytys (LIITÄ TÄHÄN OHJE)
+                        </a>
+                        </h2>
+                      
+                      
+                </li>
+            </ol>  
+
+        </div>
+    </section>
+
+</article>

@@ -1,0 +1,994 @@
+---
+title: MAB4 - Matemaattisia malleja
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: mab4
+---
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th {
+        padding: 5px;
+    }
+</style>
+
+{% include bottomnav.html %}
+<input type="hidden" id="theoremStart" value="10"/>
+<input type="hidden" id="chapterNumber" value="3"/>
+
+<article>
+    <section>
+        <header>
+            <h1>Matemaattinen mallintaminen</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun3-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="luvun3-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p>
+                    Tämän luvun tavoitteena on, että tutustut matemaattiseen mallintamiseen sovellustilanteissa. Osaat
+                </p>
+                <ul>
+                    <li>
+                        tulkita annettua mallia ja tehdä ennusteita sen pohjalta
+                    </li>
+                    <li> 
+                        päätellä, mikä on mallin sovellusalue
+                    </li>
+                    <li>
+                        havainnollistaa mittaustuloksia koordinaatistossa
+                    </li>
+                    <li>
+                        sovittaa laskentaohjelmiston avulla havaintopisteisiin sopivan käyrän, joka voi olla jonkin polynomi- tai eksponenttifunktion kuvaaja, ja tehdä johtopäätöksiä sen pohjalta.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl31">
+                    Mallin tulkinta
+                </a>
+            </h1>
+        </header>
+        <div id="kpl31" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Luvuissa 1 ja 2 on tutustuttu kahteen erilaiseen matemaattiseen malliin: lineaariseen malliin ja eksponentiaaliseen malliin. Yleisesti ottaen matemaattinen malli tarkoittaa sääntöä, jota tarkasteltavaan ilmiöön liittyvät havainnot noudattavat. Malli on usein yksinkertaistus tilanteesta eikä vastaa täysin todellisuutta. Mallin avulla ilmiötä voidaan kuitenkin ymmärtää ja ennustaa, ja mallin yksinkertaisuus on myös etu, koska se helpottaa mallin käyttöä. 
+                </p>
+
+                <p>
+                    Matemaattiseen mallintamiseen liitty oleellisena osana mallin hyvyyden ja sovellusalueen arviointi: Miten hyviä ennusteita malli tuottaa? Millä muuttujan arvoilla mallia voidaan soveltaa? Sovellusalueen ulkopuolella malli voi antaa järjettömiä tuloksia, vaikka muuten se kuvaisi ilmiötä hyvin.
+                </p>
+
+                <p>
+                    Matemaattisen mallinnuksen merkitys on nykyisessä yhteiskunnassa koko ajan kasvamassa. Matemaattisia malleja hyödynnetään lähes jokaisella alalla: tekniikassa, luonnontieteissä, lääketieteessä, psykologiassa, taloudessa, politiikassa, ympäristönsuojelussa, erilaisissa medioissa ja niin edelleen.
+                </p>
+
+                <p>
+                    Tässä luvussa jatketaan mallien tulkitsemista sekä opetellaan yksinkertaisissa tilanteissa sovittamaan havaintoaineistoon mahdollisimman sopiva malli.
+                </p>
+                
+            </div>
+
+            <div class="tehtavat">
+
+                <div class="tehtava first-exercise" id="044c3a11-29a5-4f93-a11a-68843ced59ab">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01">
+                                Mallin tulkinta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio01" class="collapse">
+                        <p>
+                            Alla on kuvattu arktisen alueen jääpeitteen laajuuden keskiarvo (miljoonina neliökilometreinä) vuoden aikana. Keskiarvot on laskettu vuosilta 1979-1990 (oranssi käyrä) ja 2011-2018 (sininen käyrä). Lähde: <a href="http://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/">NSIDC</a>.
+                        </p>
+                        <img src="/kurssit/mab4/kuvat/arctic-sea-ice-extent.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class="a">
+                            <li>
+                                Milloin jääpeite on laajimmillaan? Kuinka paljon keskimääräisen jääpeitteen laajuuden maksimiarvo on pienentynyt vuosista 1979-1990 vuosiin 2011-2018?
+                            </li> 
+                            <li>
+                                Milloin jääpeite on pienimmillään? Kuinka paljon keskimääräisen jääpeitteen laajuuden minimiarvo on pienentynyt vuosista 1979-1990 vuosiin 2011-2018?
+                            </li>
+                            <li>
+                                Kuinka pitkän ajan vuosien 2011-2018 jääpeitteen laajuus oli alle vuosien 1979-1990 minimilaajuuden?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio01_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Vuosina 1979-1990 jääpeite oli keskimäärin laajimmillaan maaliskuun alkupuolella ja sen laajuus oli noin 16 miljoonaa neliökilometriä. Vuosina 2011-2018 jääpeite oli keskimäärin laajimmillaan maaliskuun puolivälissä ja sen laajuus oli vajaa 15 miljoonaa neliökilometriä. Laajuuden maksimiarvo on siis pienentynyt reilun miljoona neliökilometriä.
+                                </li> 
+                                <li>
+                                    Jääpeite on keskimäärin pienimmillään syyskuun puolivälissä.
+                                    Vuosina 1979-1990 laajuus oli pienimmillään noin 7 miljoonaa neliökilometriä ja vuosina 2011-2018 vajaa 5 miljoonaa neliökilometriä. Laajuuden minimiarvo on siis pienentynyt yli 2 miljoonaa neliökilometriä.
+                                </li>
+                                <li>
+                                    Vuosien 2011-2018 jääpeitteen laajuus oli alle vuosien 1979-1990 minimilaajuuden reilut 2,5 kuukautta (elokuun alusta yli lokakuun puolivälin).
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisessä tehtävässä jääpeitteen laajuuden muuttumista mallinnettiin tutkimalla kahden eri ajanjakson keskiarvoja, jolloin pitkän aikavälin kehitys saatiin näkyviin vuosittaisesta vaihtelusta huolimatta.
+                </p>
+                <p>
+                    Seuraavassa tehtävässä mallinnetaan sillan rakenteita koordinaatiston ja toisen asteen polynomifunktioiden avulla. Toisen asteen polynomifunktioihin tutustuttiin kurssilla <a href="/kurssit/mab2/luku4/">MAB2</a> (PÄIVITYS UUTEEN MAB02).
+                </p>
+            </div>
+
+
+            <div class="tehtavat">
+                <div class="tehtava" id="56b70eed-20da-4ce2-9ee2-3f58241167bb">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01b">
+                                Mallin tulkinta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio01b" class="collapse">
+                        <p>
+                            Kaarisilta Sydney Harbour Bridge valmistui vuonna 1932. Alla olevassa kuvassa siltaa on mallinnettu 2. asteen polynomifunktioilla 
+                            \begin{align*}
+                            f(x) &= -0{,}16x^2 + 1{,}12x - 0{,}72 \\
+                            g(x) &= -0{,}10x^2 + 0{,}71x + 0{,}18
+                            \end{align*}
+                            Koordinaatistossa 1 yksikkö vastaa luonnossa 100 metriä. 
+                        </p>
+                       <img src="/kurssit/mab4/kuvat/MAB4kuva076.png" max-width: 100%; width: auto; height: auto;/> 
+                       <p>
+                            Päättele kuvasta tai laske funktioiden avulla vastaukset seuraaviin kysymyksiin:
+                       </p>
+                       <ol class="a">
+                            <li>
+                                Kuinka korkealla on siltarakennelman korkein kohta?
+                            </li>
+                            <li>
+                                Mikä on sillan alituskorkeus? Toisin sanottuna kuinka suuri laiva mahtuu sillan ali?
+                            </li>
+                            <li>
+                                Kuinka korkealla on sillan yläosa siinä kohdassa, jossa sillan alempi kaari leikkaa sillan vaakasuoran osan?
+                            </li>
+                            <li>
+                                Kuinka leveä on sillan alempi kaari merenpinnan tasolla?
+                            </li>
+                            <li>
+                                Millä muuttujan arvoilla funktiota $g(x) = -0{,}10x^2 + 0{,}71x + 0{,}18$ voidaan kuvan mukaan käyttää sillan ylemmän kaaren mallina?
+                            </li>
+                       </ol>
+                       
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio01b_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kuvan mukaan korkein kohta on 138 metrin korkeudessa.
+                                </li>
+                                <li>
+                                    Kuvan mukaan sillan alituskorkeus on 49 metriä.
+                                </li>
+                                <li>
+                                    Kohdassa $x = 1{,}36$ ylempää kaarta mallintava funktio saa arvon 
+                                    $$
+                                    g(x) = -0{,}10\cdot 1{,}36^2 + 0{,}71 \cdot 1{,}36 + 0{,}18 \approx 0{,}96
+                                    $$
+                                    eli ylempi kaari on noin 96 metrin kokeudessa.
+                                </li>
+                                <li>
+                                    Sillan alemman kaaren leveys merenpinnan tasolla on kuvan mukaan noin 
+                                    $$
+                                    6{,}07 - 0{,}72 = 5{,}35
+                                    $$
+                                    eli noin 535 metriä.
+                                </li>
+                                <li>
+                                    Funktio sopii malliksi, kun $0{,}72 \leq x \leq 6{,}1$.
+                                </li>
+                           </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisissä tehtävissä mallin tulkintaa tehtiin jonkinlaisen graafisen esityksen pohjalta. Seuraavassa tehtävässä mallina on yksittäinen funktio.
+                </p>
+            </div>
+
+            <div class="tehtavat">  
+                <div class="tehtava" id="57f3c161-4780-4d2f-8898-0a51492e23d5">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#57f3c161-4780-4d2f-8898-0a51492e23d5_target">
+                                Mallin tulkinta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="57f3c161-4780-4d2f-8898-0a51492e23d5_target" class="collapse">
+                        <p>
+                            Erääseen hätäkeskukseen tulee keskimäärin 30 puhelua tunnissa. Todennäköisyyttä, että kahden peräkkäisen puhelun välissä kuluu yli $x$ minuuttia, voidaan tällaisessa tilanteessa mallintaa funktiolla
+                            $$
+                            f(x) = e^{-0{,}5x}
+                            $$
+                            missä kantaluku $e = 2{,}7182818\ldots$ on niin sanottu <a href="https://fi.wikipedia.org/wiki/Neperin_luku">Neperin luku</a>. Laskimiin ja tietokoneisiin Neperin luvun arvo on yleensä ohjelmoitu valmiiksi ja se löytyy nappulasta $e$.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Millä todennäköisyydellä kahden peräkkäisen puhelun välissä kuluu yli minuutti? Anna vastaus myös prosentteina.
+                            </li>
+                            <li>
+                                Millä todennäköisyydellä kahden peräkkäisen puhelun välissä kuluu yli 5 minuuttia? Anna vastaus myös prosentteina.
+                            </li>
+                            <li>
+                                Miten tämä malli liittyy <a href="/kurssit/mab4/luku2/">luvun 2</a> asioihin? Selitä omin sanoin.
+                            </li>
+                            <li>
+                                Millaisilla muuttujan $x$ arvoilla mallia voidaan soveltaa?
+                            </li>
+                            <li>
+                                Piirrä funktion $f$ kuvaaja esimerkiksi geogebralla. Määritä sen avulla sellainen muuttujan arvo $a$, että 50 % todennäköisyydellä kahden puhelun välissä kuluu yli $a$ minuuttia. 
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#57f3c161-4780-4d2f-8898-0a51492e23d5_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="57f3c161-4780-4d2f-8898-0a51492e23d5_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Todennäköisyys, että peräkkäisten puhelujen välissä kuluu yli minuutti, on $f(1) = e^{-0{,}5 \cdot 1} = e^{-0{,}5} \approx 0{,}607$ eli noin 60,7 %.
+                                </li>
+                                <li>
+                                    Todennäköisyys, että peräkkäisten puhelujen välissä kuluu yli 5 minuuttia, on $f(5) = e^{-0{,}5 \cdot 5} = e^{-2{,}5} \approx 0{,}082$ eli noin 8,2 %.
+                                </li>
+                                <li>
+                                    Kysymyksessä on eksponentiaalisen vähenemisen malli. Todennäköisyys, että kahden peräkkäisen puhelun välissä kuluu yli $x$ minuuttia pienenee eksponentiaalisesti, kun $x$ kasvaa.
+                                </li>
+                                <li>
+                                    Koska $x$ kuvaa puheluiden välistä aikaa minuutteina, sen täytyy olla positiivinen (tai nolla). Mallia voidaan siis soveltaa, kun $x \geq 0$. 
+                                </li>
+                                <li>
+                                    Kuva:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva077.png" max-width: 100%; width: auto; height: auto;/> 
+                                    <br>
+                                    Jos $a = 1{,}39$ minuuttia eli $1$ min ja $0{,}39 \cdot 60 \approx 23$ sekuntia, niin 50 % todennäköisyydellä kahden puhelun välissä kuluu yli $a$ minuuttia. 
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl32">
+                    Mallin sovittaminen mittaustuloksiin
+                </a>
+            </h1>
+        </header>
+        <div id="kpl32" class="collapse">
+
+            <div class="teoria">
+                <p>
+                   Käytännön tilanteissa matemaattinen mallintaminen alkaa usein jonkinlaisesta mittaamisesta tai havaintoarvojen keräämisestä. Havaintoarvoja vastaavat pisteet voidaan sijoittaa koordinaatistoon. Laskentaohjelmilla voidaan tutkia, millaiselle suoralle tai käyrälle havaintopisteet asettuvat parhaiten. Näin voidaan löytää tarkasteltavalle ilmiölle matemaattinen malli. 
+                </p>
+            </div>
+
+            <div class="tehtavat">      
+                <div class="tehtava" id="3d93e159-264c-454d-b09d-23de907b5993">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#3d93e159-264c-454d-b09d-23de907b5993_target">
+                                Mallin sovittaminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="3d93e159-264c-454d-b09d-23de907b5993_target" class="collapse">
+                        <p>
+                            Asunnonvälittäjä keräsi tietokannasta erään postinumeroalueen kaikkien vuokrattavana olevien 1-3 huoneen asuntojen vuokrahinnat sekä pinta-alat. Hän naputteli tiedot taulukkolaskentaohjelmaan ja sovitti ohjelman avulla havaintopisteisiin suoran:
+                        </p>
+                        <img src="/kurssit/mab4/kuvat/MAB4kuva080.png" max-width: 100%; width: auto; height: auto;/> 
+                        <ol class="a">
+                            <li>
+                                Mikä olisi tämän mallin mukaan alueen hintatason mukainen vuokra 45 neliömetrin asunnolle?
+                            </li>
+                            <li>
+                                Arvioi kuvan perusteella, mikä on tämän mallin sovellusalue.
+                            </li>
+                            <li>
+                                Toinen asunnonvälittäjä keräsi aineistoon myös kaikki vähintään 4 huoneen vuokra-asuntojen tiedot. Hän sovitti taulukkolaskentaohjelman avulla havaintopisteisiin 2. asteen polynomin:
+                                <br>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva081.png" max-width: 90%; width: auto; height: auto;/> 
+                                <br>
+                                ja 4. asteen polynomin:
+                                <br>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva082.png" max-width: 90%; width: auto; height: auto;/> 
+                                <br>
+                                Kumpi mielestäsi mallintaa paremmin asuntojen vuokria?
+                            </li>
+                            <li>
+                                Mikä olisi valitsemasi mallin mukainen vuokra 65 neliömetrin asunnolle?
+                            </li>
+                        </ol>
+
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#3d93e159-264c-454d-b09d-23de907b5993_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="3d93e159-264c-454d-b09d-23de907b5993_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Noin 950 euroa kuukaudessa.
+                                </li>
+                                <li>
+                                    Malli soveltuu melko hyvin noin 20-60 neliömetrin asunnoille. Suurimpien yli 70 neliömetrin asuntojen vuokrat eivät asetu kovin lähelle suoraa, joten voi olla, että suurempien asuntojen vuokria kuvaisi paremmin jokin toinen malli. Toisaalta nämä kaksi havaintopistettä voivat olla jollakin tavalla poikkeuksellisia.
+                                </li>
+                                <li>
+                                    Toisen asteen polynomi mallintaa vuokria luultavasti paremmin sekä kaikkein pienimmissä että kaikkein suurimmissa asunnoissa. Neljännen asteen polynomilla arvot (eli asuntojen vuokrat) pienenevät sekä pienten että suurimpien asuntojen kohdalla liian nopeasti.
+                                </li>
+                                <li>
+                                    Jos hintaa mallinnetaan 2. asteen polynomilla, vuokra 65 neliömetrin asunnolle on noin 1150 euroa.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p>
+                    Seuraavissa tehtävässä harjoitellaan sovittamaan mittauspisteisiin sopiva käyrä laskentaohjelmiston avulla.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="3cd5e28f-646a-426c-aca9-85309a3a6c46">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#3cd5e28f-646a-426c-aca9-85309a3a6c46_target">
+                                Mallin sovittaminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="3cd5e28f-646a-426c-aca9-85309a3a6c46_target" class="collapse">
+                        <p>
+                            Pesäpallon heittoa tutkittiin kuvaamalla pallon lentorataa high speed -kameralla. Kuvista mitattiin pallon sijainti vaaka- ja pystysuunnassa 0,1 sekunnin välein, jolloin saatiin seuraavat tulokset (metreinä):
+                        </p>
+                        <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> Vaakasijainti: </th>
+                                    <th> Pystysijainti: </th>
+                                </tr>
+                                <tr>
+                                    <td> 0 </td>
+                                    <td> 1,79 </td>
+                                </tr>
+                                <tr>
+                                    <td> 3,1 </td>
+                                    <td> 2,32 </td>
+                                </tr>
+                                <tr>
+                                    <td> 6,2 </td>
+                                    <td> 2,67 </td>
+                                </tr>
+                                <tr>
+                                    <td> 9,2 </td>
+                                    <td> 2,86 </td>
+                                </tr>
+                                <tr>
+                                    <td> 12,2 </td>
+                                    <td> 3,02 </td>
+                                </tr>
+                                <tr>
+                                    <td> 15,3 </td>
+                                    <td> 3,16 </td>
+                                </tr>
+                                <tr>
+                                    <td> 18,3 </td>
+                                    <td> 3,03 </td>
+                                </tr>
+                                <tr>
+                                    <td> 21,4 </td>
+                                    <td> 2,96 </td>
+                                </tr>
+                                <tr>
+                                    <td> 24,4 </td>
+                                    <td> 2,70 </td>
+                                </tr>
+                                <tr>
+                                    <td> 27,5 </td>
+                                    <td> 2,36 </td>
+                                </tr>
+                                <tr>
+                                    <td> 30,5 </td>
+                                    <td> 1,97 </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <ol class="a">
+                            <li>
+                                Havainnollista mittaustuloksia piirtämällä pallon vaaka- ja pystysijaintia kuvaavat pisteet $(x,y)$-koordinaatistoon. Voit käyttää taulukkolaskentaohjelmaa tai esimerkiksi Geogebraa. Katso tarvittaessa ohjevideo Geogebran käyttöön tästä: https://watch.screencastify.com/v/FRdQuKj7fBVukBcSmGd7 (KORJAA TÄMÄ JÄRKEVÄKSI LINKIKSI.)
+                            </li>
+                            <li>
+                                Sovita ohjelman avulla mittauspisteisiin oman harkintasi mukaan 1. tai 2. asteen polynomifunktio (suora tai paraabeli). 
+                            </li>
+                            <li>
+                                Mikä oli heiton pituus?
+                            </li>
+                            <li>
+                                Mikä oli pallon vaakasuuntainen nopeus?
+                                <br>
+                                Vinkki: Pallon sijainti määritettiin 0,1 sekunnin välein, joten voit selvittää, kuinka pitkän matkan pallo kulki esimerkiksi yhden sekunnin aikana.
+                            </li>
+                            <li>
+                                Mikä on heittoa kuvaavan mallin sovellusalue? Toisin sanottuna millä muuttujan $x$ arvoilla mittauspisteisiin sovitettu funktio kuvaa pallon sijaintia oikein?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#3cd5e28f-646a-426c-aca9-85309a3a6c46_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="3cd5e28f-646a-426c-aca9-85309a3a6c46_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Pisteet koordinaatistossa Geogebralla:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva084.png" max-width: 90%; width: auto; height: auto;/> 
+                                </li>
+                                <li>
+                                    Toisen asteen polynomifunktion sovittaminen Geogebralla:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva083.png" max-width: 90%; width: auto; height: auto;/> 
+                                </li>
+                                <li>
+                                    Heiton pituus oli noin 40 metriä.
+                                </li>
+                                <li>
+                                    Pallon vaakasuuntainen nopeus oli noin 30,5 m/s eli noin $60 \cdot 30{,}5 = 1830$ m/min eli noin $60 \cdot 1830 = 109800$ m/h eli 109,8 km/h.
+                                </li>
+                                <li>
+                                    Mallin sovellusalue on $0 \leq x \leq 40$. Huomaa, että  Geogebrassa pyöristystarkkuudeksi kannattaa valita esimerkiksi 10 desimaalia, jotta funktion lausekkeen kertoimien likiarvot ovat riittävän tarkat. Jos pyöristys on liian suurpiirteinen, funktion lauseke sellaisenaan antaa vääriä tuloksia.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="25fe4839-2b2b-4358-ac17-f71a84f20668">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#25fe4839-2b2b-4358-ac17-f71a84f20668_target">
+                                Mallin sovittaminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="25fe4839-2b2b-4358-ac17-f71a84f20668_target" class="collapse">
+                        <p>
+                            Tilastokeskuksen mukaan Suomen väestön määrä oli 1900-luvulla seuraava:
+                        </p>
+                        <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> Vuosi: </th>
+                                    <th> Väestö (miljoonaa henkeä): </th>
+                                </tr>
+                                <tr>
+                                    <td> 1900 </td>
+                                    <td> 2,66 </td>
+                                </tr>
+                                <tr>
+                                    <td> 1910 </td>
+                                    <td> 2,94 </td>
+                                </tr>
+                                <tr>
+                                    <td> 1920 </td>
+                                    <td> 3,15 </td>
+                                </tr>
+                                <tr>
+                                    <td> 1930 </td>
+                                    <td> 3,46 </td>
+                                </tr>
+                                <tr>
+                                    <td> 1940 </td>
+                                    <td> 3,70 </td>
+                                </tr>
+                                <tr>
+                                    <td> 1950 </td>
+                                    <td> 4,03 </td>
+                                </tr>
+                                <tr>
+                                    <td> 1960 </td>
+                                    <td> 4,45 </td>
+                                </tr>
+                                <tr>
+                                    <td> 1970 </td>
+                                    <td> 4,60 </td>
+                                </tr>
+                                <tr>
+                                    <td> 1980 </td>
+                                    <td> 4,79 </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <ol class="a">
+                            <li>
+                                Havainnollista väestönkehitystä piirtämällä havaintopisteet $(x,y)$-koordinaatistoon. Voit käyttää taulukkolaskentaohjelmaa tai esimerkiksi Geogebraa.
+                            </li>
+                            <li>
+                                Voiko väestönkasvua mallintaa lineaarisella tai eksponentiaalisella mallilla? Sovita ohjelman avulla havaintopisteisiin sopiva funktio.
+                            </li>
+                            <li>
+                                Mikä on valitsemasi mallin mukainen ennuste Suomen väestön määrälle vuonna 2000? Entä vuonna 2050?
+                            </li>
+                            <li>
+                                Vertaa mallin antamia tuloksia vuoden 2000 väestömäärään, joka oli 5,18 miljoonaa, ja Tilastokeskuksen vuoden 2050 ennusteeseen, joka on 5,53 miljoonaa. Keksitkö syitä, miksi käyttämäsi mallin tulokset poikkeavat näistä?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#25fe4839-2b2b-4358-ac17-f71a84f20668_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="25fe4839-2b2b-4358-ac17-f71a84f20668_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Pisteet koordinaatistossa ja suoran sovittaminen Geogebralla:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva085.png" max-width: 90%; width: auto; height: auto;/> 
+                                    <br>
+                                    Huomaa, että vuosilukuja on yksinkertaisuuden vuoksi kuvattu $x$-akselilla niin, että vuotta 1900 vastaa 0, vuotta 1910 vastaa 1, vuotta 1920 vastaa 2 ja niin edelleen. Pystyakselilla yksikkönä on miljoona, eli esimerkiksi luku 2,66 vastaa 2,66 miljoonaa.
+                                </li>
+                                <li>
+                                    Lineaarinen malli on näistä kahdesta vaihtoehdosta sopivampi, koska väestö Suomessa tuskin kasvaa eksponentiaalisesti. 
+                                    <br>
+                                    Havaintopisteisiin sovitettu suora, jolta on poimittu c-kohdassa kysytyt tiedot:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva086.png" max-width: 90%; width: auto; height: auto;/> 
+                                </li>
+                                <li>
+                                    Lineaarisen mallin mukaan väestö vuonna 2000 on 5,42 miljoonaa henkeä ja vuonna 2050 puolestaan 6,81 miljoonaa henkeä. 
+                                </li>
+                                <li>
+                                    Mallin antama ennuste vuodelle 2000 vastaa toteutunutta väestönkehitystä melko hyvin, vaikka onkin noin 4,6 % suurempi kuin todellinen väestömäärä. Mallin antama ennuste vuodelle 2050 on huomattavan suuri verrattuna Tilastokeskuksen ennusteeseen. Todellisuudessa ikäluokat ovat näillä näkymin pienenemässä, joten kasvu ei tulevaisuudessa ole lineaarista vaan hitaampaa.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="692b3cc4-5992-487b-80e8-29fff1d4fc26">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#692b3cc4-5992-487b-80e8-29fff1d4fc26_target">
+                                Mallin sovittaminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="692b3cc4-5992-487b-80e8-29fff1d4fc26_target" class="collapse">
+                        <p>
+                            Polonium-210 on hyvin radioaktiivinen alkuaine, joka on ihmiselle erittäin myrkyllistä päästessään kehoon esimerkiksi ruoan, juoman tai hengitysilman mukana. Se on myös hyvin harvinainen aine, jonka tuottaminen on vaikeaa ja jota esiintyy luonnossa hyvin vähän. Julkisuutta polonium-210 sai vuonna 2006, kun venäläinen entinen KGB-agentti Alexander Litvinenko myrkytettiin kuoliaaksi poloniumilla. 
+                        </p>
+                        <p>
+                            Laboratoriossa tutkitiin polonium-210-näytteen radioaktiivista hajoamista. Alla olevassa taulukossa on jäljellä olevan polonium-210:n massa 30 vuorokauden välein mitattuna.
+                        </p>
+                        <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> Aika (vrk) </th>
+                                    <th> Massa (mg): </th>
+                                </tr>
+                                <tr>
+                                    <td> 0 </td>
+                                    <td> 20,0 </td>
+                                </tr>
+                                <tr>
+                                    <td> 30 </td>
+                                    <td> 17,2 </td>
+                                </tr>
+                                <tr>
+                                    <td> 60 </td>
+                                    <td> 14,8 </td>
+                                </tr>
+                                <tr>
+                                    <td> 90 </td>
+                                    <td> 12,8 </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <ol class="a">
+                            <li>
+                                Havainnollista polonium-210:n hajoamista piirtämällä mittaustulokset $(x,y)$-koordinaatistoon. Voit käyttää taulukkolaskentaohjelmaa tai esimerkiksi Geogebraa.
+                            </li>
+                            <li>
+                                Voiko hajoamista mallintaa lineaarisella tai eksponentiaalisella mallilla? Sovita ohjelman avulla mittauspisteisiin sopiva funktio. 
+                            </li>
+                            <li>
+                                Mikä on polonium-210:n puoliintumisaika? Puoliintumisaika tarkoittaa aikaa, jossa aineen massa puoliintuu.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#692b3cc4-5992-487b-80e8-29fff1d4fc26_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="692b3cc4-5992-487b-80e8-29fff1d4fc26_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Pisteet koordinaatistossa ja eksponenttifunktion sovittaminen Geogebralla:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva087.png" max-width: 90%; width: auto; height: auto;/> 
+                                    <br>
+                                    Huomaa, että vuorokausia on yksinkertaisuuden vuoksi kuvattu $x$-akselilla niin, että 30 vuorokautta vastaa 3, 60 vuorokautta vastaa 6 ja niin edelleen. 
+                                </li>
+                                <li>
+                                    Kokeilemalla huomaa, että mittauspisteet asettuvat paremmin eksponenttifunktion kuvaajalle kuin suoralle, vaikka ero ei ole suuri. 
+                                    <br>
+                                    Havaintopisteisiin sovitetun eksponenttifunktion kuvaaja, jolta on poimittu c-kohdassa kysytyt tiedot:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva088.png" max-width: 90%; width: auto; height: auto;/> 
+                                </li>
+                                <li>
+                                    Eksponentiaalisen vähenemisen mallin mukaisesti polonium-210:n puoliintumisaika on $13{,}95 \cdot 10 = 139{,}5$ vuorokautta. (Wikipedian mukaan puoliintumisaika on 138,376 vuorokautta, joten tehtävän mittaustuloksista saadaan sille varsin hyvä likiarvo.) 
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku3-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku3-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+         <div class="tehtava" id="f2ebda69-84f5-4416-bab4-0781e29c5347">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#f2ebda69-84f5-4416-bab4-0781e29c5347_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="f2ebda69-84f5-4416-bab4-0781e29c5347_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="2060f977-ede5-4bd8-b591-7eb6a2aff94d">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#2060f977-ede5-4bd8-b591-7eb6a2aff94d_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="2060f977-ede5-4bd8-b591-7eb6a2aff94d_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="1c965d15-306d-43dd-9f01-282d5f38164d">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#1c965d15-306d-43dd-9f01-282d5f38164d_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="1c965d15-306d-43dd-9f01-282d5f38164d_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="7766b1d3-3bde-4e51-9aeb-8a039096b07a">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#7766b1d3-3bde-4e51-9aeb-8a039096b07a_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="7766b1d3-3bde-4e51-9aeb-8a039096b07a_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="50d4e281-79aa-43ff-a6c6-905649b22004">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#50d4e281-79aa-43ff-a6c6-905649b22004_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="50d4e281-79aa-43ff-a6c6-905649b22004_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="3ac573e3-9981-4cab-9cde-aa2067c3031f">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#3ac573e3-9981-4cab-9cde-aa2067c3031f_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="3ac573e3-9981-4cab-9cde-aa2067c3031f_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="1585b972-88be-4674-84bb-d6098a53b70a">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#1585b972-88be-4674-84bb-d6098a53b70a_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="1585b972-88be-4674-84bb-d6098a53b70a_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="7dc21e5d-1e22-4320-bf9d-c5966a7cba22">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#7dc21e5d-1e22-4320-bf9d-c5966a7cba22_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="7dc21e5d-1e22-4320-bf9d-c5966a7cba22_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="bb412111-a9e7-4add-a790-cd57363b1114">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#bb412111-a9e7-4add-a790-cd57363b1114_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="bb412111-a9e7-4add-a790-cd57363b1114_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="c13df322-c0a5-4810-a0b3-ac7171c4b282">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#c13df322-c0a5-4810-a0b3-ac7171c4b282_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="c13df322-c0a5-4810-a0b3-ac7171c4b282_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+
+ 
+            
+            
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku3-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku3-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="e7f11c81-58d3-4274-b418-ac0673c79c08">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#e7f11c81-58d3-4274-b418-ac0673c79c08_target">
+                            Suomen väestön rakenne. [Lyhyt matematiikka, syksy 2019, tehtävä 13.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="e7f11c81-58d3-4274-b418-ac0673c79c08_target">
+                    <p>
+                        Aineisto:<br />
+						<strong>13.A Taulukko: Suomen väestön rakenne.</strong>
+						<br /> <br />
+						Avaa aineisto LibreOffice Calc -ohjelmaan napsauttamalla alla olevaa linkkiä. <br />
+
+						<a href="/kurssit/mab4/kuvat/13A.ods">13A.ods</a> (LibreOffice Calc) <br />
+
+						Lähde: Tilastokeskus. https://www.tilastokeskus.fi/tup/suoluk/suoluk_vaesto.html. Viitattu 25.5.2018.
+					</p>
+					<p>
+						Aineistossa 13.A on esitetty Suomen väestön rakenne. Laske 15–64-vuotiaiden asukkaiden lukumäärät vuosina 1900, 1950, 1990, 2000, 2010 ja 2016. Sovita laskemaasi aineistoon lineaarinen malli $f(x)$ ja toisen asteen polynomi $g(x)$. Ennusta molempien mallien avulla Suomen 15–64-vuotiaiden lukumäärät vuosina 2035 ja 2350 ja pohdi ennusteiden mielekkyyttä.
+                    </p>
+                </div>  
+            </div>
+            <div class="tehtava" id="224a8d01-49b0-412c-8a5b-a54a2fd02f04">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#224a8d01-49b0-412c-8a5b-a54a2fd02f04_target">
+                           Puun kasvu.  [Lyhyt matematiikka, kevät 2019, tehtävä 6.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="224a8d01-49b0-412c-8a5b-a54a2fd02f04_target">
+                    <p>
+                        Metsäntutkija mallintaa puun kasvua. Mallissa puunrunko ajatellaan suoraksi ympyräpohjaiseksi kartioksi. Ajanhetkellä $t=0$ puunrunko on korkeudeltaan 6 metriä ja tyvestä halkaisijaltaan 8 cm paksu. Joka vuosi puu kasvaa pituutta 45 cm ja tyven halkaisija kasvaa 0,6 cm. Muodosta funktio, joka kuvaa puunrungon tilavuutta ajan funktiona. Mikä on rungon tilavuus 20 vuoden kuluttua?
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="419d7d96-59e8-44d8-81b2-ce001f3e1d9b">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#419d7d96-59e8-44d8-81b2-ce001f3e1d9b_target">
+                            Miten vauva kasvaa?  [Lyhyt matematiikka, kevät 2019, tehtävä 6.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="419d7d96-59e8-44d8-81b2-ce001f3e1d9b_target">
+                    <p>
+                        Vauvan painon voidaan arvioida kasvavan $q^3$-kertaiseksi, kun vauvan pituus kasvaa $q$-kertaiseksi. Tämä perustuu siihen, että vauva on kolmiulotteinen ja kasvua tapahtuu suurin piirtein yhtä paljon jokaiseen suuntaan. Oletetaan, että vauva on syntyessään 52 cm pitkä ja painaa 4,0 kilogrammaa.
+                    </p>
+					<p>10.1. Arvioi vauvan painoa tällä menetelmällä, kun vauvan pituus on 55, 60, 65 ja 70 cm.</p>
+					<p>10.2. Piirrä kuvaaja, josta ilmenevät syntymämitat ja kohdassa 10.1. lasketut tiedot.</p>
+					<p>10.3. Voiko samaa arviointitapaa käyttää aikuiseksi asti? Valota esimerkeillä ja perustele, miksi uskot menetelmän toimivan tai olevan toimimatta.</p>
+                </div>
+            </div>
+            <div class="tehtava" id="8fd343cf-f93b-4d64-853e-fe147ae4e714">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#8fd343cf-f93b-4d64-853e-fe147ae4e714_target">
+                            [Lyhyt matematiikka, kevät 2018, tehtävä 5.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="8fd343cf-f93b-4d64-853e-fe147ae4e714_target">
+                    <p>
+                        Mene YLE:n <a href="https://yle.fi/aihe/artikkeli/2018/03/07/2018-kevat-matematiikka-lyhyt-oppimaara">Abitreenien-sivulle</a> ja etsi ja tee ylioppilastutkinnon lyhyen matematiikan kevään 2018 kokeen tehtävä 5. 
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="32992c2c-b85f-4732-a877-f64cc1f1a9f2">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#32992c2c-b85f-4732-a877-f64cc1f1a9f2_target">
+                            [Lyhyt matematiikka, syksy 2017, tehtävä 6.]
+                        </a>
+                    </h1>
+                </header>
+                <div id="32992c2c-b85f-4732-a877-f64cc1f1a9f2_target">
+                    <p>
+					Suomalaisen liigajoukkueen johto pohtii vuotuisen päätapahtumansa lippujen hinnoittelua. 
+					Aikaisempien vuosien perusteella he arvioivat, että katsojia tulee 3 000, jos lipun
+                    hinta on 15 euroa. Jokaista yhden euron hinnankorotusta kohti katsojien määrä vähenee
+					sadalla, ja vastaavasti yhden euron hinnanalennuksesta katsojamäärä kasvaa sadalla.
+					Millä lipun hinnalla saadaan suurimmat lipputulot? Kuinka paljon lipputuloja tällöin
+					saadaan? Anna vastaukset yhden sentin tarkkuudella.
+                    </p>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#L3itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="L3itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="https://polku.opetus.tv/node/2120">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
+            </p>
+        </div>
+    </section>
+
+</article>
